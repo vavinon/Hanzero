@@ -1,0 +1,151 @@
+{
+  "unit_id": "tier1_u10",
+  "tier": 1,
+  "unit_number": 10,
+  "title": {
+    "zh": "酒店入住与登机试炼",
+    "th": "โรงแรม & เที่ยวบิน (Hotel Check-in & Airport Grand Boss)",
+    "en": "Hotel Check-in & Flight Boarding"
+  },
+  "description": "เช็กอินโรงแรม ขอรหัส Wi-Fi ไปสนามบิน โหลดกระเป๋า พิชิต Tier 1 Grand Boss Quest!",
+  "lessons": [
+    {
+      "lesson_id": "t1_u10_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "酒店入住与房卡",
+        "th": "เช็กอินโรงแรม ขอคีย์การ์ดและรหัส Wi-Fi",
+        "en": "Hotel Check-in & Wi-Fi"
+      },
+      "can_do": {
+        "th": "เช็กอินที่เคาน์เตอร์โรงแรมและขอรหัสผ่าน Wi-Fi เป็นภาษาจีนได้",
+        "en": "Check in at a hotel and ask for Wi-Fi credentials"
+      },
+      "baby_step_goal": "จำคำว่า 预订 (yùdìng - จองไว้แล้ว) และ 密码 (mìmǎ - รหัสผ่าน)",
+      "vocabulary": [
+        {
+          "id": "hsk1_0090",
+          "hanzi": "房间",
+          "pinyin": "fángjiān",
+          "pinyin_tone": "fang2jian1",
+          "meaning_th": "ห้องพัก",
+          "meaning_en": "room",
+          "radical": "户 / 门",
+          "radical_name_th": "ประตูห้อง",
+          "stroke_count": 15,
+          "kid_mnemonic": "เปิดประตูเข้าห้องพักอันแสนสบาย",
+          "body_gesture": "ทำท่าบิดลูกบิดประตูห้อง"
+        },
+        {
+          "id": "hsk1_0091",
+          "hanzi": "房卡",
+          "pinyin": "fángkǎ",
+          "pinyin_tone": "fang2ka3",
+          "meaning_th": "คีย์การ์ดห้องพัก",
+          "meaning_en": "room keycard",
+          "radical": "户",
+          "radical_name_th": "การ์ดห้อง",
+          "stroke_count": 13,
+          "kid_mnemonic": "การ์ดแบนๆ แตะเปิดประตูห้อง",
+          "body_gesture": "ทำท่าแตะคีย์การ์ด ติ๊ด!"
+        },
+        {
+          "id": "hsk1_0092",
+          "hanzi": "密码",
+          "pinyin": "mìmǎ",
+          "pinyin_tone": "mi4ma3",
+          "meaning_th": "รหัสผ่าน",
+          "meaning_en": "password / code",
+          "radical": "宀 / 石",
+          "radical_name_th": "ความลับ + ตัวเลข",
+          "stroke_count": 20,
+          "kid_mnemonic": "ตัวเลขลับที่เก็บไว้ในห้อง = รหัสผ่าน",
+          "body_gesture": "ทำมือกดแป้นพิมพ์ตัวเลข"
+        },
+        {
+          "id": "hsk1_0093",
+          "hanzi": "机场",
+          "pinyin": "jīchǎng",
+          "pinyin_tone": "ji1chang3",
+          "meaning_th": "สนามบิน",
+          "meaning_en": "airport",
+          "radical": "木 / 土",
+          "radical_name_th": "เครื่องบิน + ลานกว้าง",
+          "stroke_count": 13,
+          "kid_mnemonic": "ลานกว้าง (场) สำหรับเครื่องบิน (机) บินขึ้นฟ้า",
+          "body_gesture": "กางแขนสองข้างบินเหมือนเครื่องบิน"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรถามรหัส Wi-Fi: Wi-Fi 密码是多少？",
+        "explanation_th": "พูดคำว่า Wi-Fi แล้วตามด้วย 密码是多少？ (mìmǎ shì duōshao? - รหัสผ่านคือเท่าไหร่?) พนักงานจะเขียนรหัสให้ทันที",
+        "patterns": [
+          {
+            "formula": "请问，Wi-Fi 密码是多少？",
+            "pinyin": "Qǐngwèn, Wi-Fi mìmǎ shì duōshao?",
+            "th": "ขอถามหน่อยครับ รหัส Wi-Fi คืออะไรครับ?"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "พนักงานต้อนรับ 👩‍💼",
+          "zh": "您好！请问有预订吗？",
+          "pinyin": "Nín hǎo! Qǐngwèn yǒu yùdìng ma?",
+          "th": "สวัสดีค่ะ ไม่ทราบว่าจองห้องไว้ไหมคะ?"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "您好！我有预订，这是我的护照。",
+          "pinyin": "Nín hǎo! Wǒ yǒu yùdìng, zhè shì wǒ de hùzhào.",
+          "th": "สวัสดีครับ ผมจองไว้แล้ว นี่คือพาสปอร์ตของผมครับ"
+        },
+        {
+          "speaker_name": "พนักงานต้อนรับ 👩‍💼",
+          "zh": "好的，这是您的房卡。Wi-Fi 密码在卡上。",
+          "pinyin": "Hǎo de, zhè shì nín de fángkǎ. Wi-Fi mìmǎ zài kǎ shang.",
+          "th": "เรียบร้อยค่ะ นี่คือคีย์การ์ดของคุณ รหัส Wi-Fi อยู่บนการ์ดนะคะ"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "非常感谢！再见！",
+          "pinyin": "Fēicháng gǎnxiè! Zàijiàn!",
+          "th": "ขอบคุณมากๆ ครับ ลาก่อนครับ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "เมื่อต้องการถามรหัสผ่าน Wi-Fi คำว่า 'รหัสผ่าน' ในภาษาจีนคือคำใด?",
+          "options": [
+            "房间 (fángjiān)",
+            "房卡 (fángkǎ)",
+            "密码 (mìmǎ)",
+            "机场 (jīchǎng)"
+          ],
+          "correct_index": 2,
+          "explanation_th": "密码 (mìmǎ) แปลว่า 'รหัสผ่าน'",
+          "encouragement": "ถูกต้อง! เชื่อมต่ออินเทอร์เน็ตได้ฉลุย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเดินทางมาถึงสนามบินต้าซิงในกรุงปักกิ่งหลังจบทริป 3 วัน 2 คืน กำลังเช็กอินโหลดกระเป๋า เจ้าหน้าที่ขอดูหนังสือเดินทางพร้อมส่งยิ้มหวาน คุณควรยื่นพาสปอร์ตพร้อมกล่าวอย่างไร?",
+        "options": [
+          "我要吃米饭！",
+          "您好，这是我的护照，谢谢！ (Nín hǎo, zhè shì wǒ de hùzhào, xièxie!)",
+          "不要！",
+          "多少钱？"
+        ],
+        "correct_index": 1,
+        "explanation_th": "กล่าวทักทายอย่างสุภาพ '您好，这是我的护照，谢谢！' เจ้าหน้าที่จะออกบอร์ดดิ้งพาสให้อย่างรวดเร็ว!",
+        "encouragement": "🎉 มหัศจรรย์มาก! คุณผ่านการทดสอบเอาชีวิตรอดครบทุกสถานการณ์ใน Tier 1 แล้ว!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t1_grand_master",
+        "badge_name": "มหาบัณฑิตนักสำรวจ Tier 1 🌿🏆✨",
+        "message_th": "ยินดีด้วยอย่างยิ่งจากหัวใจ! คุณพิชิตทั้ง 10 ยูนิตของ Tier 1: Explorer สำเร็จแล้ว สามารถทักทาย สั่งอาหาร ซื้อของ ถามทาง แนะนำครอบครัว บอกสภาพอากาศ และเช็กอินโรงแรมในประเทศจีนได้อย่างมั่นใจ 100%!",
+        "xp_reward": 300
+      }
+    }
+  ]
+}

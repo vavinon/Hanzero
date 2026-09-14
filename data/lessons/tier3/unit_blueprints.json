@@ -1,0 +1,327 @@
+{
+  "tier_id": "tier3",
+  "tier_number": 3,
+  "name": {
+    "zh": "大师级：职场商务与文化深度 (HSK 5-6)",
+    "th": "Tier 3: Master (ผู้เชี่ยวชาญการทำงาน & วัฒนธรรม)",
+    "en": "Tier 3: Master (Professional & Cultural Fluency)"
+  },
+  "description": "ทำงานร่วมกับคนจีน เจรจาธุรกิจ เข้าใจกระแสสังคมอย่างลึกซึ้ง และดูซีรีส์จีนได้โดยไม่ต้องพึ่งพาซับไตเติล",
+  "total_units": 20,
+  "units": [
+    {
+      "unit_id": "tier3_u01",
+      "unit_number": 1,
+      "title": {
+        "zh": "职场邮件与正式沟通",
+        "th": "การเขียนอีเมลและการสื่อสารทางการในองค์กร",
+        "en": "Business Email & Formal Communication"
+      },
+      "icon": "✉️",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "尊敬的",
+          "pinyin": "zūnjìng de",
+          "meaning_th": "กราบเรียน / เรียนท่าน...ที่เคารพ"
+        },
+        {
+          "hanzi": "汇报",
+          "pinyin": "huìbào",
+          "meaning_th": "รายงานผลการปฏิบัติงาน"
+        },
+        {
+          "hanzi": "附件",
+          "pinyin": "fùjiàn",
+          "meaning_th": "ไฟล์แนบเอกสาร"
+        },
+        {
+          "hanzi": "查收",
+          "pinyin": "cháshōu",
+          "meaning_th": "โปรดตรวจสอบและรับเอกสาร"
+        },
+        {
+          "hanzi": "顺祝商祺",
+          "pinyin": "shùnzhù shāngqí",
+          "meaning_th": "ขออวยพรให้กิจการเจริญรุ่งเรือง (คำลงท้ายจดหมายธุรกิจ)"
+        }
+      ],
+      "grammar_point": "โครงสร้างจดหมายทางการจีน: คำขึ้นต้นเกียรติยศ + เนื้อหาความคืบหน้า + ขอคำชี้แนะ + คำอวยพรมงคลสี่พยางค์",
+      "sample_dialogue": {
+        "speaker_a": "พนักงาน 🧑‍💼: 尊敬的张总，本周的项目进展报告已作为附件发送，请查收。",
+        "speaker_b": "ผู้จัดการ 👨‍💼: 收到，辛苦了，明天上午十点开会讨论。"
+      }
+    },
+    {
+      "unit_id": "tier3_u02",
+      "unit_number": 2,
+      "title": {
+        "zh": "商业会议与项目展示",
+        "th": "การประชุมธุรกิจและการนำเสนองาน (Pitching)",
+        "en": "Business Meetings & Pitching"
+      },
+      "icon": "📊",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "市场份额",
+          "pinyin": "shìchǎng fèn'é",
+          "meaning_th": "ส่วนแบ่งการตลาด"
+        },
+        {
+          "hanzi": "核心优势",
+          "pinyin": "héxīn yōushì",
+          "meaning_th": "จุดเด่นและข้อได้เปรียบหลัก"
+        },
+        {
+          "hanzi": "投资回报率",
+          "pinyin": "tóuzī huíbàolǜ",
+          "meaning_th": "ผลตอบแทนจากการลงทุน (ROI)"
+        }
+      ],
+      "grammar_point": "การใช้สำนวนเชื่อมโยงตรรกะ '基于上述分析，我们建议...' (จากบทวิเคราะห์ข้างต้น ทางเราขอเสนอแนะว่า...)",
+      "sample_dialogue": {
+        "speaker_a": "ผู้บรรยาย 🧑‍💼: 如图所示，该产品在东南亚市场的增长潜力巨大。",
+        "speaker_b": "นักลงทุน 👩‍💼: 这个方案很有前瞻性，我们非常感兴趣。"
+      }
+    },
+    {
+      "unit_id": "tier3_u03",
+      "unit_number": 3,
+      "title": {
+        "zh": "商务谈判与价格磋商",
+        "th": "การเจรจาต่อรองราคาและเงื่อนไขการค้า",
+        "en": "Commercial Negotiations"
+      },
+      "icon": "🤝",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u04",
+      "unit_number": 4,
+      "title": {
+        "zh": "商业合同与条款解读",
+        "th": "สัญญาและข้อตกลงทางการค้า",
+        "en": "Contracts & Agreements"
+      },
+      "icon": "📜",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u05",
+      "unit_number": 5,
+      "title": {
+        "zh": "电商营销与直播带货",
+        "th": "การตลาดอีคอมเมิร์ซและการไลฟ์ขายของ",
+        "en": "E-Commerce & Live Streaming"
+      },
+      "icon": "📈",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u06",
+      "unit_number": 6,
+      "title": {
+        "zh": "常用成语与文化典故",
+        "th": "สำนวนจีนคลาสสิกที่ใช้ในชีวิตประจำวัน (成语)",
+        "en": "Essential Idioms & Cultural Stories"
+      },
+      "icon": "📖",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u07",
+      "unit_number": 7,
+      "title": {
+        "zh": "互联网流行语与社会风潮",
+        "th": "คำสแลงอินเทอร์เน็ตและกระแสสังคมร่วมสมัย",
+        "en": "Internet Slang & Social Trends"
+      },
+      "icon": "🔥",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u08",
+      "unit_number": 8,
+      "title": {
+        "zh": "科技创新与经济新闻",
+        "th": "ข่าวเศรษฐกิจและเทคโนโลยีจีน",
+        "en": "Tech Innovation & Financial News"
+      },
+      "icon": "🤖",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u09",
+      "unit_number": 9,
+      "title": {
+        "zh": "影视文艺与深度评论",
+        "th": "การวิพากษ์ภาพยนตร์และวรรณกรรมร่วมสมัย",
+        "en": "Cinema & Cultural Criticism"
+      },
+      "icon": "🎬",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u10",
+      "unit_number": 10,
+      "title": {
+        "zh": "八大菜系与饮食哲学",
+        "th": "อาหารและปรัชญา 8 สำรับใหญ่ของจีน",
+        "en": "The 8 Culinary Traditions"
+      },
+      "icon": "🍲",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u11",
+      "unit_number": 11,
+      "title": {
+        "zh": "职场文化与社会心态",
+        "th": "วัฒนธรรมการทำงานในจีน (996, 内卷, 躺平)",
+        "en": "Workplace Dynamics (996, Involuted)"
+      },
+      "icon": "🏢",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u12",
+      "unit_number": 12,
+      "title": {
+        "zh": "生态文明与地理全貌",
+        "th": "ภูมิศาสตร์จีนและการอนุรักษ์สิ่งแวดล้อม",
+        "en": "Geography & Ecology"
+      },
+      "icon": "🗺️",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u13",
+      "unit_number": 13,
+      "title": {
+        "zh": "人际网络与关系艺术",
+        "th": "ศิลปะการสร้างเครือข่ายสัมพันธ์ (关系 - Guānxi)",
+        "en": "Networking & Guanxi Mastery"
+      },
+      "icon": "🌐",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u14",
+      "unit_number": 14,
+      "title": {
+        "zh": "酒桌礼仪与商务宴请",
+        "th": "มารยาทบนโต๊ะอาหารและการเลี้ยงรับรองทางธุรกิจ",
+        "en": "Banqueting & Dining Etiquette"
+      },
+      "icon": "🍶",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u15",
+      "unit_number": 15,
+      "title": {
+        "zh": "消费者心理与市场洞察",
+        "th": "การวิเคราะห์พฤติกรรมผู้บริโภคชาวจีน",
+        "en": "Consumer Insights"
+      },
+      "icon": "🛒",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u16",
+      "unit_number": 16,
+      "title": {
+        "zh": "中医养生与传统智慧",
+        "th": "การแพทย์แผนจีนและศาสตร์การดูแลสุขภาพ",
+        "en": "Traditional Chinese Medicine (TCM)"
+      },
+      "icon": "🌿",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u17",
+      "unit_number": 17,
+      "title": {
+        "zh": "当代音乐与流行艺术",
+        "th": "ดนตรีและศิลปะร่วมสมัยของจีน",
+        "en": "Contemporary Music & Arts"
+      },
+      "icon": "🎵",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u18",
+      "unit_number": 18,
+      "title": {
+        "zh": "人力资源与团队建设",
+        "th": "การบริหารจัดการทรัพยากรบุคคลในองค์กรจีน",
+        "en": "HR Management & Team Building"
+      },
+      "icon": "👥",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u19",
+      "unit_number": 19,
+      "title": {
+        "zh": "公众演讲与表达技巧",
+        "th": "การพูดในที่สาธารณะและการกล่าวสุนทรพจน์",
+        "en": "Public Speaking & Oratory"
+      },
+      "icon": "🎙️",
+      "estimated_minutes": 30,
+      "xp_reward": 250,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier3_u20",
+      "unit_number": 20,
+      "title": {
+        "zh": "广交会国际商务巅峰战",
+        "th": "Tier 3 Grand Quest: ปิดดีลการค้างานแคนตันแฟร์",
+        "en": "Tier 3 Grand Quest: Closing Global Deals at Canton Fair"
+      },
+      "icon": "👑",
+      "estimated_minutes": 35,
+      "xp_reward": 500,
+      "status": "blueprint"
+    }
+  ]
+}

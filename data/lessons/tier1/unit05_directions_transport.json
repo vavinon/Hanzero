@@ -1,0 +1,162 @@
+{
+  "unit_id": "tier1_u05",
+  "tier": 1,
+  "unit_number": 5,
+  "title": {
+    "zh": "问路与市内交通",
+    "th": "การเดินทาง & ทิศทาง (Directions & Transit)",
+    "en": "Directions & Transit"
+  },
+  "description": "อยู่ที่ไหน เลี้ยวซ้าย เลี้ยวขวา นั่งรถไฟใต้ดิน และบอกคนขับแท็กซี่อย่างมั่นใจ",
+  "lessons": [
+    {
+      "lesson_id": "t1_u05_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "洗手间在哪里？",
+        "th": "ห้องน้ำอยู่ที่ไหน? ประโยคถามทางรอดชีวิต",
+        "en": "Where is the Restroom?"
+      },
+      "can_do": {
+        "th": "ถามตำแหน่งสถานที่สำคัญด้วยสูตร '[สถานที่] + 在哪里？' ได้",
+        "en": "Ask locations using [Place] + zài nǎlǐ?"
+      },
+      "baby_step_goal": "ท่องสูตร: อยากไปไหน ให้พูดชื่อที่นั้น แล้วตามด้วย 在哪儿 (ไจ้หน่าร์?)",
+      "vocabulary": [
+        {
+          "id": "hsk1_0040",
+          "hanzi": "在",
+          "pinyin": "zài",
+          "pinyin_tone": "zai4",
+          "meaning_th": "อยู่, ที่",
+          "meaning_en": "at / in / located at",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน",
+          "stroke_count": 6,
+          "kid_mnemonic": "คนยืนอยู่บนผืนดิน (土) = อยู่ที่นี่",
+          "body_gesture": "ชี้นิ้วลงพื้นหนักแน่น"
+        },
+        {
+          "id": "hsk1_0041",
+          "hanzi": "哪儿 / 哪里",
+          "pinyin": "nǎr / nǎlǐ",
+          "pinyin_tone": "nar3 / na3li3",
+          "meaning_th": "ที่ไหน",
+          "meaning_en": "where",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก",
+          "stroke_count": 9,
+          "kid_mnemonic": "อ้าปาก (口) ร้องถามหาว่าอยู่ที่ไหนนะ?",
+          "body_gesture": "เอามือป้องหน้ามองหาซ้ายขวา"
+        },
+        {
+          "id": "hsk1_0042",
+          "hanzi": "这儿 / 那儿",
+          "pinyin": "zhèr / nàr",
+          "pinyin_tone": "zher4 / nar4",
+          "meaning_th": "ที่นี่ / ที่นั่น",
+          "meaning_en": "here / there",
+          "radical": "辶",
+          "radical_name_th": "หมวดการเดิน",
+          "stroke_count": 9,
+          "kid_mnemonic": "ที่นี่ใกล้ๆ / ที่นั่นไกลออกไป",
+          "body_gesture": "ชี้ใกล้ตัว (ที่นี่) และชี้ไกลตัว (ที่นั่น)"
+        },
+        {
+          "id": "hsk1_0043",
+          "hanzi": "去",
+          "pinyin": "qù",
+          "pinyin_tone": "qu4",
+          "meaning_th": "ไป",
+          "meaning_en": "to go",
+          "radical": "厶",
+          "radical_name_th": "หมวดส่วนตัว",
+          "stroke_count": 5,
+          "kid_mnemonic": "ก้าวเท้าออกจากดินแดนเดิม มุ่งหน้าไปข้างหน้า",
+          "body_gesture": "ก้าวขาไปข้างหน้าหนึ่งก้าว"
+        },
+        {
+          "id": "hsk1_0044",
+          "hanzi": "车站",
+          "pinyin": "chēzhàn",
+          "pinyin_tone": "che1zhan4",
+          "meaning_th": "สถานีรถ, ป้ายรถเมล์",
+          "meaning_en": "station / stop",
+          "radical": "车 / 立",
+          "radical_name_th": "รถ + ยืน",
+          "stroke_count": 9,
+          "kid_mnemonic": "รถ (车) มายืนจอดนิ่ง (站) = ป้ายสถานีรถ",
+          "body_gesture": "ทำมือเหมือนคนจับห่วงบนรถเมล์"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรถามหาตำแหน่ง: [สถานที่] + 在哪儿？",
+        "explanation_th": "แค่วางชื่อสถานที่ไว้ข้างหน้า แล้วตามด้วย 在哪儿 (zài nǎr?) จะแปลว่า '...อยู่ที่ไหน?' ทันที!",
+        "patterns": [
+          {
+            "formula": "车站 在哪儿？",
+            "pinyin": "Chēzhàn zài nǎr?",
+            "th": "สถานีรถอยู่ที่ไหนครับ?"
+          },
+          {
+            "formula": "洗手间 在哪儿？",
+            "pinyin": "Xǐshǒujiān zài nǎr?",
+            "th": "ห้องน้ำอยู่ที่ไหนครับ?"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "请问，车站在哪儿？",
+          "pinyin": "Qǐngwèn, chēzhàn zài nǎr?",
+          "th": "ขอถามหน่อยครับ สถานีรถอยู่ที่ไหนครับ?"
+        },
+        {
+          "speaker_name": "พลเมืองใจดี 👨",
+          "zh": "车站在那儿！",
+          "pinyin": "Chēzhàn zài nàr!",
+          "th": "สถานีรถอยู่ตรงโน้นครับ!"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "谢谢您！再见！",
+          "pinyin": "Xièxie nín! Zàijiàn!",
+          "th": "ขอบคุณมากครับ ลาก่อนครับ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยคถามว่า 'สถานีรถอยู่ที่ไหน?':",
+          "tokens": [
+            "在哪儿？",
+            "车站"
+          ],
+          "correct_sequence": [
+            "车站",
+            "在哪儿？"
+          ],
+          "pinyin": "Chēzhàn zài nǎr?",
+          "meaning_th": "สถานีรถอยู่ที่ไหน?"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเพิ่งลงจากรถไฟใต้ดินที่สถานี People's Square ต้องการหาทางไปสถานีรถเมล์เพื่อต่อรถ จะถามเจ้าหน้าที่รักษาความปลอดภัยอย่างไร?",
+        "options": [
+          "你好，这个多少钱？",
+          "你好，车站在哪儿？ (Nǐ hǎo, chēzhàn zài nǎr?)",
+          "我要吃面条！",
+          "再见！"
+        ],
+        "correct_index": 1,
+        "explanation_th": "พูดว่า '你好，车站在哪儿？' เจ้าหน้าที่จะชี้ทางไปป้ายรถเมล์ให้คุณทันที!",
+        "encouragement": "เก่งมาก! เดินทางในเมืองจีนได้อย่างคล่องแคล่วไม่มีหลงทาง!"
+      },
+      "cheer_trophy": {
+        "badge_name": "เข็มทิศทองคำนำทาง 🧭🚇",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

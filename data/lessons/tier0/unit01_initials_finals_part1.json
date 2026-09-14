@@ -1,0 +1,262 @@
+{
+  "unit_id": "tier0_u01",
+  "tier": 0,
+  "unit_number": 1,
+  "title": {
+    "zh": "唇齿音与单韵母 (一)",
+    "th": "เสียงริมฝีปาก & ฟัน (b, p, m, f, d, t, n, l) + สระ (a, o, e)",
+    "en": "Labial & Dental Initials + Simple Finals (a, o, e)"
+  },
+  "description": "ก้าวแรกของการออกเสียงภาษาจีน: อ้าปากกว้าง ห่อปากกลม เปรียบเทียบเสียงกับภาษาไทยอย่างเป็นธรรมชาติ",
+  "archetype": "phonetic_and_stroke",
+  "lessons": [
+    {
+      "lesson_id": "t0_u01_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "单韵母 a, o, e",
+        "th": "3 สระมหัศจรรย์: a, o, e",
+        "en": "Simple Finals a, o, e"
+      },
+      "can_do": {
+        "th": "อ้าปากออกเสียงสระ a, o, e ได้ถูกต้องตามรูปปากมาตรฐาน",
+        "en": "Pronounce simple finals a, o, e accurately"
+      },
+      "baby_step_goal": "จำรูปปาก 3 ท่า: ปากกว้างหาหมอ (a), ปากกลมไก่ขัน (o), และปากยิ้มกว้าง (e)",
+      "sound_cards": [
+        {
+          "symbol": "a",
+          "type": "final",
+          "thai_approx": "อา",
+          "mouth_shape": "อ้าปากกว้างเต็มที่ ลิ้นวางราบ",
+          "kid_mnemonic": "เหมือนเวลาคุณหมอบอกให้ 'อ้าปากซิ... อาาา'",
+          "body_gesture": "กางสองมือออกข้างๆ กว้างๆ",
+          "example_word": {
+            "hanzi": "啊",
+            "pinyin": "ā",
+            "meaning_th": "อา (เสียงอุทาน)"
+          }
+        },
+        {
+          "symbol": "o",
+          "type": "final",
+          "thai_approx": "โอ / ออ",
+          "mouth_shape": "ห่อริมฝีปากให้เป็นวงกลมมน",
+          "kid_mnemonic": "ไก่โต้งโก่งคอขันตอนเช้า 'โอ๊ก โอ๊ก โอ่'",
+          "body_gesture": "ทำมือสองข้างประกบเป็นรูปวงกลมหน้าปาก",
+          "example_word": {
+            "hanzi": "窝",
+            "pinyin": "wō",
+            "meaning_th": "รังนก"
+          }
+        },
+        {
+          "symbol": "e",
+          "type": "final",
+          "thai_approx": "เออ (กึ่งเออ-เออะ)",
+          "mouth_shape": "ฉีกยิ้มมุมปากสองข้าง ลิ้นถอยหลังเล็กน้อย",
+          "kid_mnemonic": "ยิ้มเห็นฟันเหมือนห่านขาวกำลังร้อง 'เอออออ'",
+          "body_gesture": "ใช้นิ้วชี้สองข้างชี้ที่มุมปากยิ้มแฉ่ง",
+          "example_word": {
+            "hanzi": "鹅",
+            "pinyin": "é",
+            "meaning_th": "ห่านขาว"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "mouth_shape_match",
+          "question_th": "เมื่อต้องการออกเสียงสระ 'a' ควรทำรูปปากอย่างไร?",
+          "options": [
+            "ห่อปากกลมจิ๋ว",
+            "อ้าปากกว้างที่สุดเหมือนหาหมอ",
+            "กัดฟันแน่นๆ",
+            "ยิ้มมุมปากแคบๆ"
+          ],
+          "correct_index": 1,
+          "explanation_th": "สระ 'a' ต้องอ้าปากกว้าง ลิ้นวางสบายๆ ลมเปล่งจากคอ",
+          "encouragement": "ยอดเยี่ยมมาก! อ้าปากกว้างพูดเสียงใสปิ๊ง!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "นักร้องเสียงใส a-o-e 🌱",
+        "xp_reward": 30
+      }
+    },
+    {
+      "lesson_id": "t0_u01_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "声母 b, p, m, f",
+        "th": "4 พยัญชนะริมฝีปาก (b, p, m, f)",
+        "en": "Labial Initials b, p, m, f"
+      },
+      "can_do": {
+        "th": "แยกแยะความต่างระหว่างเสียงลมไม่พ่น (b) กับพ่นลมแรง (p) ได้",
+        "en": "Differentiate unaspirated b and aspirated p"
+      },
+      "baby_step_goal": "เอากระดาษมาวางหน้าปาก แล้วดูว่ากระดาษปลิวหรือไม่ปลิว!",
+      "sound_cards": [
+        {
+          "symbol": "b",
+          "type": "initial",
+          "thai_approx": "ป (ไม่พ่นลม)",
+          "mouth_shape": "ริมฝีปากบนล่างประกบกันแน่น แล้วเปิดออกแบบเบาๆ",
+          "kid_mnemonic": "ป.ปลาตากลม กระดาษหน้าปาก 'ไม่ปลิว'",
+          "body_gesture": "กำมือแน่นไว้ที่ปากแล้วแบมือเบาๆ",
+          "example_word": {
+            "hanzi": "八",
+            "pinyin": "bā",
+            "meaning_th": "เลขแปด"
+          }
+        },
+        {
+          "symbol": "p",
+          "type": "initial",
+          "thai_approx": "พ (พ่นลมแรง!)",
+          "mouth_shape": "ประกบริมฝีปากแล้วพ่นลมระเบิดออกมาเต็มที่",
+          "kid_mnemonic": "พ่นลมพรวด! กระดาษหน้าปาก 'ปลิวพึ่บพั่บ'",
+          "body_gesture": "เป่าลมใส่ฝ่ามือตัวเองเพื่อเช็คลมร้อนพุ่ง",
+          "example_word": {
+            "hanzi": "爬",
+            "pinyin": "pá",
+            "meaning_th": "ปีนเขา"
+          }
+        },
+        {
+          "symbol": "m",
+          "type": "initial",
+          "thai_approx": "ม (เสียงขึ้นจมูก)",
+          "mouth_shape": "ปิดปาก แล้วส่งเสียงสั่นสะเทือนขึ้นจมูก",
+          "kid_mnemonic": "แม่ทำอาหารอร่อย ส่งเสียง 'อื้มมมม'",
+          "body_gesture": "ลูบท้องวนๆ แสดงความเอร็ดอร่อย",
+          "example_word": {
+            "hanzi": "妈",
+            "pinyin": "mā",
+            "meaning_th": "แม่"
+          }
+        },
+        {
+          "symbol": "f",
+          "type": "initial",
+          "thai_approx": "ฟ (ฟันบนแตะปากล่าง)",
+          "mouth_shape": "ฟันบนแตะริมฝีปากล่างเบาๆ แล้วพ่นลมผ่านซอกฟัน",
+          "kid_mnemonic": "ฟันกระต่ายแตะปากล่าง พ่นลมฟู่ๆ",
+          "body_gesture": "ทำฟันกระต่ายน่ารัก",
+          "example_word": {
+            "hanzi": "发",
+            "pinyin": "fā",
+            "meaning_th": "ส่งออก / ร่ำรวย"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "พยัญชนะตัวใดต้อง 'พ่นลมแรง' จนกระดาษปลิว?",
+          "options": [
+            "b (ป)",
+            "p (พ)",
+            "m (ม)",
+            "f (ฟ)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "p เป็นเสียงพ่นลมแรง (Aspirated) ลมจะพุ่งออกมาเต็มแรง",
+          "encouragement": "เก่งมาก! ลมพ่นพรวด พริ้วไหวเป๊ะเวอร์!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "ยอดนักพ่นลม b-p-m-f 💨",
+        "xp_reward": 30
+      }
+    },
+    {
+      "lesson_id": "t0_u01_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "声母 d, t, n, l",
+        "th": "4 พยัญชนะปลายลิ้นแตะฟันบน (d, t, n, l)",
+        "en": "Alveolar Initials d, t, n, l"
+      },
+      "can_do": {
+        "th": "ใช้ปลายลิ้นแตะปุ่มเหงือกบนเพื่อออกเสียง d, t, n, l ได้อย่างเป็นธรรมชาติ",
+        "en": "Pronounce d, t, n, l with tongue tip touching alveolar ridge"
+      },
+      "baby_step_goal": "กระดิกปลายลิ้นแตะหลังฟันบนเป็นจังหวะเคาะกลอง!",
+      "sound_cards": [
+        {
+          "symbol": "d",
+          "type": "initial",
+          "thai_approx": "ต (ไม่พ่นลม)",
+          "mouth_shape": "ปลายลิ้นแตะหลังฟันบน แล้วดีดออกเบาๆ",
+          "kid_mnemonic": "เสียงกลอง ตีกลองดัง ตึง! ตึง! ตึง!",
+          "body_gesture": "ทำท่าตีกลองด้วยสองมือ",
+          "example_word": {
+            "hanzi": "大",
+            "pinyin": "dà",
+            "meaning_th": "ใหญ่"
+          }
+        },
+        {
+          "symbol": "t",
+          "type": "initial",
+          "thai_approx": "ท (พ่นลมแรง)",
+          "mouth_shape": "ปลายลิ้นแตะหลังฟันบน แล้วดีดออกพร้อมพ่นลมพุ่ง",
+          "kid_mnemonic": "กระต่ายกระโดด ทะลุฟ้า ทึ้งๆ!",
+          "body_gesture": "ดีดนิ้วโป้งขึ้นฟ้าพ่นลม",
+          "example_word": {
+            "hanzi": "他",
+            "pinyin": "tā",
+            "meaning_th": "เขา (ผู้ชาย)"
+          }
+        },
+        {
+          "symbol": "n",
+          "type": "initial",
+          "thai_approx": "น (เสียงขึ้นจมูก)",
+          "mouth_shape": "ปลายลิ้นกั้นลม เสียงกังวานออกทางจมูก",
+          "kid_mnemonic": "คุณหนูน่ารัก ร้องเพลง นกน้อย",
+          "body_gesture": "เอานิ้วแตะสันจมูกเบาๆ รับรู้แรงสั่นสะเทือน",
+          "example_word": {
+            "hanzi": "你",
+            "pinyin": "nǐ",
+            "meaning_th": "เธอ"
+          }
+        },
+        {
+          "symbol": "l",
+          "type": "initial",
+          "thai_approx": "ล (ลมออกข้างลิ้น)",
+          "mouth_shape": "ปลายลิ้นแตะหลังฟันบน ลมไหลออกสองข้างลิ้น",
+          "kid_mnemonic": "ลิงโลดเต้น ลั้ลลา ลั้ลลา",
+          "body_gesture": "แกว่งแขนซ้ายขวาร่าเริง",
+          "example_word": {
+            "hanzi": "乐",
+            "pinyin": "lè",
+            "meaning_th": "มีความสุข"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "พยัญชนะ 'd' ในภาษาจีน ออกเสียงเทียบเคียงกับพยัญชนะไทยตัวใด?",
+          "options": [
+            "ด.เด็ก",
+            "ต.เต่า",
+            "ท.ทหาร",
+            "บ.ใบไม้"
+          ],
+          "correct_index": 1,
+          "explanation_th": "'d' ในพินอินเทียบเท่ากับเสียง ต.เต่า (เสียงไม่พ่นลม)",
+          "encouragement": "ถูกต้องนะคร้าบ! จำไว้ว่า d คือ ต.เต่า ไม่ใช่ ด.เด็ก นะคนเก่ง!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "มือกลองปลายลิ้น d-t-n-l 🥁",
+        "xp_reward": 40
+      }
+    }
+  ]
+}

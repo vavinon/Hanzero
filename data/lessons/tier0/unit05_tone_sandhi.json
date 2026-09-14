@@ -1,0 +1,121 @@
+{
+  "unit_id": "tier0_u05",
+  "tier": 0,
+  "unit_number": 5,
+  "title": {
+    "zh": "变调的秘密",
+    "th": "กฎการผันเสียงสำคัญ (Tone Sandhi: 3+3, 一, 不)",
+    "en": "Tone Sandhi Rules"
+  },
+  "description": "ไขปริศนาทำไมเขียนอย่างแต่อ่านอีกอย่าง? เรียนรู้ 3 กฎทองของการผันเสียงธรรมชาติ",
+  "archetype": "phonetic_and_stroke",
+  "lessons": [
+    {
+      "lesson_id": "t0_u05_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "第三声相连变调",
+        "th": "กฎเสียง 3 + 3 ➔ 2 + 3 (คลื่นสไลเดอร์)",
+        "en": "Third Tone Sandhi"
+      },
+      "can_do": {
+        "th": "ผันเสียงคำที่เสียง 3 ชนกันได้อย่างเป็นอัตโนมัติ เช่น 你好, 我也",
+        "en": "Apply 3rd tone change automatically in speech"
+      },
+      "baby_step_goal": "ท่องไว้: สไลด์ขึ้นแล้วค่อยลง (หนี ↗️ ห่าว ↘️↗️)",
+      "tone_rules": [
+        {
+          "name": "3 + 3 ➔ 2 + 3",
+          "explanation_th": "เมื่อเสียง 3 สองตัวอยู่ติดกัน ตัวหน้าจะผันเป็นเสียง 2 เสมอ เพื่อไม่ให้ลิ้นเหนื่อย",
+          "examples": [
+            {
+              "written": "你好 (nǐ hǎo)",
+              "spoken": "ní hǎo",
+              "meaning_th": "สวัสดี"
+            },
+            {
+              "written": "我也 (wǒ yě)",
+              "spoken": "wó yě",
+              "meaning_th": "ฉันก็ด้วย"
+            }
+          ]
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '你好' เขียนพินอิน nǐ + hǎo แต่อ่านออกเสียงจริงอย่างไร?",
+          "options": [
+            "nī hǎo (เสียง 1 + 3)",
+            "ní hǎo (เสียง 2 + 3)",
+            "nǐ hào (เสียง 3 + 4)",
+            "nǐ hǎo (เสียง 3 ทั้งคู่)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "ตัวหน้าจะผันเสียงเป็นเสียง 2 กลายเป็น 'ní hǎo' (หนีห่าว)",
+          "encouragement": "ยอดเยี่ยมมาก! กฎนี้ทำให้พูดคล่องเหมือนคนจีนแท้ๆ เลย!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "คลื่นวิเศษ 3+3 🌊",
+        "xp_reward": 35
+      }
+    },
+    {
+      "lesson_id": "t0_u05_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "不和一的变调",
+        "th": "กฎแปลงร่างของ '不' (ไม่) และ '一' (หนึ่ง)",
+        "en": "Tone Changes of 不 and 一"
+      },
+      "can_do": {
+        "th": "เปลี่ยนเสียง '不' (bù) เป็น 'bú' เมื่ออยู่หน้าเสียง 4 เช่น 不客气, 不是",
+        "en": "Change bù to bú in front of 4th tones"
+      },
+      "baby_step_goal": "จำง่ายๆ: เสียง 4 ชนเสียง 4 ไม่ได้! ตัวหน้าต้องหลบขึ้นฟ้าเป็นเสียง 2 ทันที!",
+      "tone_rules": [
+        {
+          "name": "不 (bù) + เสียง 4 ➔ bú + เสียง 4",
+          "explanation_th": "คำว่า 不 เดิมเป็นเสียง 4 แต่ถ้าตามด้วยเสียง 4 ตัว 不 จะผันเป็นเสียง 2 ทันที",
+          "examples": [
+            {
+              "written": "不是 (bù shì)",
+              "spoken": "bú shì",
+              "meaning_th": "ไม่ใช่"
+            },
+            {
+              "written": "不要 (bù yào)",
+              "spoken": "bú yào",
+              "meaning_th": "ไม่เอา"
+            },
+            {
+              "written": "不客气 (bù kèqi)",
+              "spoken": "bú kèqi",
+              "meaning_th": "ไม่เป็นไร"
+            }
+          ]
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "เมื่อพูดคำว่า '不是' (ไม่ใช่) คำว่า '不' จะออกเสียงวรรณยุกต์ใด?",
+          "options": [
+            "เสียง 1 (bū)",
+            "เสียง 2 (bú)",
+            "เสียง 3 (bǔ)",
+            "เสียง 4 (bù)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "เมื่ออยู่หน้าเสียง 4 (shì) ตัว 不 จะผันเป็นเสียง 2 ออกเสียงว่า 'bú shì'",
+          "encouragement": "ถูกเผงเลย! แปลงร่างคล่องแคล่วมาก!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "นักเล่นแร่แปรเสียง 不 & 一 🪄",
+        "xp_reward": 35
+      }
+    }
+  ]
+}

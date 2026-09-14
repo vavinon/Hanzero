@@ -1,0 +1,499 @@
+{
+  "project": "Hanzero",
+  "version": "1.0.0",
+  "last_updated": "2026-09-14",
+  "total_tiers": 5,
+  "tiers": [
+    {
+      "tier_id": "tier0",
+      "tier_number": 0,
+      "name": {
+        "zh": "幼苗级：拼音与部首",
+        "th": "Tier 0: Seed (ต้นกล้าแรกผลิ)",
+        "en": "Tier 0: Seed (Phonetics & Radicals)"
+      },
+      "hsk_level": "Pre-HSK",
+      "tagline_th": "ถอดรหัสระบบเสียงพินอินและ 8 เส้นขีดอักษรจีน ปูรากฐานมั่นคง 100%",
+      "theme": {
+        "color_primary": "#10B981",
+        "color_secondary": "#059669",
+        "color_bg": "#ECFDF5",
+        "badge_icon": "🌱"
+      },
+      "total_units": 10,
+      "units": [
+        {
+          "unit_id": "tier0_u01",
+          "unit_number": 1,
+          "title": {
+            "zh": "唇齿音与单韵母 (一)",
+            "th": "เสียงริมฝีปาก & ฟัน (b, p, m, f, d, t, n, l) + สระ (a, o, e)",
+            "en": "Labial & Dental Initials + Simple Finals (a, o, e)"
+          },
+          "description_th": "ฝึกออกเสียงริมฝีปาก ปากกว้าง ปากกลม สระ a, o, e พร้อมจับจังหวะเปรียบเทียบเสียงภาษาไทย",
+          "icon": "👄",
+          "estimated_minutes": 15,
+          "xp_reward": 100,
+          "lesson_count": 3,
+          "prerequisite_unit_id": null,
+          "status": "ready",
+          "file": "tier0/unit01_initials_finals_part1.json"
+        },
+        {
+          "unit_id": "tier0_u02",
+          "unit_number": 2,
+          "title": {
+            "zh": "舌根音与单韵母 (二)",
+            "th": "เสียงโคนลิ้น & ลมพ่น (g, k, h, j, q, x) + สระ (i, u, ü)",
+            "en": "Velar & Palatal Initials + Simple Finals (i, u, ü)"
+          },
+          "description_th": "ไขปริศนาสระมหัศจรรย์ ü ปากจิ๋ว และกลุ่มพยัญชนะพ่นลมที่คนไทยมักสับสน",
+          "icon": "💨",
+          "estimated_minutes": 15,
+          "xp_reward": 100,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u01",
+          "status": "ready",
+          "file": "tier0/unit02_initials_finals_part2.json"
+        },
+        {
+          "unit_id": "tier0_u03",
+          "unit_number": 3,
+          "title": {
+            "zh": "声调魔法与轻声",
+            "th": "4 วรรณยุกต์ & เสียงเบา (ā, á, ǎ, à, a)",
+            "en": "4 Tones & Neutral Tone Mastery"
+          },
+          "description_th": "ท่องแดนสวนสนุกสไลเดอร์กับ 4 ระดับเสียง และเสียงเบาสบายๆ ผันเสียงไม่เพี้ยน",
+          "icon": "🎢",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u02",
+          "status": "ready",
+          "file": "tier0/unit03_tones_mastery.json"
+        },
+        {
+          "unit_id": "tier0_u04",
+          "unit_number": 4,
+          "title": {
+            "zh": "翘舌音与平舌音对决",
+            "th": "ลิ้นม้วน (zh, ch, sh, r) vs ลิ้นแบนชิดฟัน (z, c, s)",
+            "en": "Retroflex vs Dental Sibilants"
+          },
+          "description_th": "ด่านปราบเซียนยอดฮิต! ปรับตำแหน่งลิ้นให้เป๊ะ ไม่ต้องกลัวลิ้นพันกันอีกต่อไป",
+          "icon": "👅",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u03",
+          "status": "ready",
+          "file": "tier0/unit04_retroflex_vs_dental.json"
+        },
+        {
+          "unit_id": "tier0_u05",
+          "unit_number": 5,
+          "title": {
+            "zh": "变调的秘密",
+            "th": "กฎการผันเสียงสำคัญ (Tone Sandhi: 3+3, กฎของ 一 และ 不)",
+            "en": "Tone Sandhi Rules"
+          },
+          "description_th": "ทำไมเขียนอย่างแต่อ่านอีกอย่าง? คลายข้อข้องใจกฎการเปลี่ยนเสียงให้พูดเป็นธรรมชาติ",
+          "icon": "🔄",
+          "estimated_minutes": 15,
+          "xp_reward": 100,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u04",
+          "status": "ready",
+          "file": "tier0/unit05_tone_sandhi.json"
+        },
+        {
+          "unit_id": "tier0_u06",
+          "unit_number": 6,
+          "title": {
+            "zh": "汉字八大基本笔画",
+            "th": "8 เส้นขีดพื้นฐาน & 7 กฎลำดับขีด",
+            "en": "8 Basic Strokes & Stroke Order Rules"
+          },
+          "description_th": "เปลี่ยนตัวอักษรจีนที่น่ากลัวให้เป็นบล็อกต่อเลโก้ สนุกกับทิศทางลากเส้นที่ถูกต้อง",
+          "icon": "✍️",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u05",
+          "status": "ready",
+          "file": "tier0/unit06_stroke_basics.json"
+        },
+        {
+          "unit_id": "tier0_u07",
+          "unit_number": 7,
+          "title": {
+            "zh": "人体与情感部首",
+            "th": "หมวดนำมนุษย์ & อารมณ์ (亻, 女, 子, 口, 忄, 扌, 目, 讠)",
+            "en": "Human & Emotional Radicals"
+          },
+          "description_th": "จำตัวอักษรจีนจากเงาร่างกายคน หัวใจ และคำพูด เดาความหมายศัพท์ได้ทันทีที่เห็น",
+          "icon": "🧑‍🤝‍🧑",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u06",
+          "status": "ready",
+          "file": "tier0/unit07_human_radicals.json"
+        },
+        {
+          "unit_id": "tier0_u08",
+          "unit_number": 8,
+          "title": {
+            "zh": "自然与五行部首",
+            "th": "หมวดนำธรรมชาติ & ธาตุทั้ง 5 (氵, 火/灬, 木, 日, 土, 艹)",
+            "en": "Nature & Elemental Radicals"
+          },
+          "description_th": "เปิดตามองโลกธรรมชาติ: สายน้ำ กองไฟ ต้นไม้ แสงอาทิตย์ และพงหญ้าในตัวอักษรจีน",
+          "icon": "🌊",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u07",
+          "status": "ready",
+          "file": "tier0/unit08_nature_radicals.json"
+        },
+        {
+          "unit_id": "tier0_u09",
+          "unit_number": 9,
+          "title": {
+            "zh": "空间与物品部首",
+            "th": "หมวดนำสถานที่ & สิ่งของ (辶, 宀, 门, 饣, 贝, 刂)",
+            "en": "Spatial & Object Radicals"
+          },
+          "description_th": "ท่องเมืองอักษรจีน: หลังคาบ้าน ประตู การเดินทาง ของกิน เงินทอง และมีดพก",
+          "icon": "🏠",
+          "estimated_minutes": 20,
+          "xp_reward": 120,
+          "lesson_count": 3,
+          "prerequisite_unit_id": "tier0_u08",
+          "status": "ready",
+          "file": "tier0/unit09_object_radicals.json"
+        },
+        {
+          "unit_id": "tier0_u10",
+          "unit_number": 10,
+          "title": {
+            "zh": "幼苗破土毕业试炼",
+            "th": "Tier 0 Boss Quest: ถอดรหัสเสียงและแกะรอย 10 อักษรแรก",
+            "en": "Tier 0 Boss Quest: The Seed Graduation"
+          },
+          "description_th": "ประลองยุทธ์ด่านสุดท้ายของ Tier 0 รวมมิตรฟังเสียงและประกอบร่างตัวอักษรเพื่อรับเข็มกลัดต้นกล้า",
+          "icon": "🏆",
+          "estimated_minutes": 25,
+          "xp_reward": 250,
+          "lesson_count": 1,
+          "prerequisite_unit_id": "tier0_u09",
+          "status": "ready",
+          "file": "tier0/unit10_seed_boss_quest.json"
+        }
+      ]
+    },
+    {
+      "tier_id": "tier1",
+      "tier_number": 1,
+      "name": {
+        "zh": "探索级：生活生存 (HSK 1-2)",
+        "th": "Tier 1: Explorer (นักสำรวจเอาชีวิตรอด)",
+        "en": "Tier 1: Explorer (Survival Communication)"
+      },
+      "hsk_level": "HSK 1 - 2",
+      "tagline_th": "เอาชีวิตรอดในชีวิตประจำวัน ทักทาย สั่งอาหาร ซื้อของ ถามทาง สนทนา 3 ภาษาคล่องตัว",
+      "theme": {
+        "color_primary": "#0D9488",
+        "color_secondary": "#0F766E",
+        "color_bg": "#F0FDFA",
+        "badge_icon": "🌿"
+      },
+      "total_units": 10,
+      "units": [
+        {
+          "unit_id": "tier1_u01",
+          "unit_number": 1,
+          "title": {
+            "zh": "初次见面与道谢",
+            "th": "ทักทาย & รู้จักกัน (First Greetings & Gratitude)",
+            "en": "First Greetings & Identity"
+          },
+          "description_th": "เริ่มต้นก้าวแรกอย่างอบอุ่น! ฝึกพูด 'สวัสดี-ขอบคุณ-ไม่เป็นไร-บ๊ายบาย' คล่องปาก สบายใจ ไม่มีเกร็ง",
+          "icon": "🤝",
+          "estimated_minutes": 20,
+          "xp_reward": 150,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier0_u10",
+          "status": "ready",
+          "file": "tier1/unit01_greetings.json"
+        },
+        {
+          "unit_id": "tier1_u02",
+          "unit_number": 2,
+          "title": {
+            "zh": "数字、日历与时间",
+            "th": "ตัวเลข วันที่ & เวลา (Numbers, Calendar & Time)",
+            "en": "Numbers, Calendar & Time"
+          },
+          "description_th": "นับเลข 0-10 ภาษามือคนจีน วันนี้ พรุ่งนี้ กี่โมง และการนัดหมายเวลากินข้าว",
+          "icon": "⏰",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u01",
+          "status": "ready",
+          "file": "tier1/unit02_numbers_time.json"
+        },
+        {
+          "unit_id": "tier1_u03",
+          "unit_number": 3,
+          "title": {
+            "zh": "点餐与街头美食",
+            "th": "สั่งอาหาร & เครื่องดื่ม (Food & Street Bites)",
+            "en": "Food & Street Bites"
+          },
+          "description_th": "สั่งบะหมี่ เกี๊ยว ชานมไข่มุก บอกรสชาติ เผ็ด-ไม่เผ็ด และสั่งอาหารแบบไม่เก้อเขิน",
+          "icon": "🥟",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u02",
+          "status": "ready",
+          "file": "tier1/unit03_food_drinks.json"
+        },
+        {
+          "unit_id": "tier1_u04",
+          "unit_number": 4,
+          "title": {
+            "zh": "购物与砍价技巧",
+            "th": "ช็อปปิ้ง & ถามราคา (Shopping & Bargaining)",
+            "en": "Shopping & Bargaining"
+          },
+          "description_th": "อันนี้เท่าไหร่? แพงเกินไป ลดได้ไหม? เอาอันนี้ ไม่เอาอันนั้น ช็อปปิ้งสนุกทุกตลาด",
+          "icon": "🛍️",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u03",
+          "status": "ready",
+          "file": "tier1/unit04_shopping_money.json"
+        },
+        {
+          "unit_id": "tier1_u05",
+          "unit_number": 5,
+          "title": {
+            "zh": "问路与市内交通",
+            "th": "การเดินทาง & ทิศทาง (Directions & Transit)",
+            "en": "Directions & Transit"
+          },
+          "description_th": "อยู่ที่ไหน เลี้ยวซ้าย เลี้ยวขวา ตรงไป นั่งรถไฟใต้ดิน และบอกคนขับแท็กซี่อย่างมั่นใจ",
+          "icon": "🚇",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u04",
+          "status": "ready",
+          "file": "tier1/unit05_directions_transport.json"
+        },
+        {
+          "unit_id": "tier1_u06",
+          "unit_number": 6,
+          "title": {
+            "zh": "家人与朋友圈子",
+            "th": "ครอบครัว & คนรอบตัว (Family & Friends)",
+            "en": "Family & Friends"
+          },
+          "description_th": "แนะนำคุณพ่อ คุณแม่ พี่น้อง เพื่อนสนิท และเล่าเรื่องครอบครัวให้คนจีนฟังอย่างอบอุ่น",
+          "icon": "👨‍👩‍👧‍👦",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u05",
+          "status": "ready",
+          "file": "tier1/unit06_family_friends.json"
+        },
+        {
+          "unit_id": "tier1_u07",
+          "unit_number": 7,
+          "title": {
+            "zh": "日常作息与休闲",
+            "th": "กิจวัตรประจำวัน & งานอดิเรก (Daily Life & Free Time)",
+            "en": "Daily Life & Free Time"
+          },
+          "description_th": "ตื่นนอน ไปทำงาน ฟังเพลง ดูซีรีส์ เล่นโทรศัพท์ และชวนเพื่อนไปเที่ยววันหยุดสุดสัปดาห์",
+          "icon": "🎮",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u06",
+          "status": "ready",
+          "file": "tier1/unit07_daily_routines.json"
+        },
+        {
+          "unit_id": "tier1_u08",
+          "unit_number": 8,
+          "title": {
+            "zh": "天气与四季变换",
+            "th": "สภาพอากาศ & ฤดูกาล (Weather & Seasons)",
+            "en": "Weather & Seasons"
+          },
+          "description_th": "วันนี้ร้อนหรือหนาว? ฝนตกหรือหิมะตก ชวนคุยเรื่องสภาพอากาศและเตรียมเสื้อผ้าไปเที่ยวจีน",
+          "icon": "🌤️",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u07",
+          "status": "ready",
+          "file": "tier1/unit08_weather_seasons.json"
+        },
+        {
+          "unit_id": "tier1_u09",
+          "unit_number": 9,
+          "title": {
+            "zh": "身体不适与就医",
+            "th": "ร่างกาย สุขภาพ & ไม่สบาย (Health & Body)",
+            "en": "Health & Body"
+          },
+          "description_th": "ปวดหัว ปวดท้อง เป็นไข้ หาหมอ ซื้อยาแก้ปวดที่ร้านขายยาในเซี่ยงไฮ้ รอดปลอดภัยเมื่อป่วย",
+          "icon": "💊",
+          "estimated_minutes": 25,
+          "xp_reward": 180,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u08",
+          "status": "ready",
+          "file": "tier1/unit09_health_body.json"
+        },
+        {
+          "unit_id": "tier1_u10",
+          "unit_number": 10,
+          "title": {
+            "zh": "酒店入住与登机试炼",
+            "th": "โรงแรม & เที่ยวบิน (Hotel Check-in & Airport Grand Boss)",
+            "en": "Hotel Check-in & Flight Boarding"
+          },
+          "description_th": "เช็กอินโรงแรม ขอรหัส Wi-Fi เช็กอินที่สนามบิน โหลดกระเป๋า พิชิต Tier 1 Grand Boss Quest!",
+          "icon": "🛫",
+          "estimated_minutes": 30,
+          "xp_reward": 300,
+          "lesson_count": 4,
+          "prerequisite_unit_id": "tier1_u09",
+          "status": "ready",
+          "file": "tier1/unit10_hotel_airport.json"
+        }
+      ]
+    },
+    {
+      "tier_id": "tier2",
+      "tier_number": 2,
+      "name": {
+        "zh": "行者级：深度出行 (HSK 3-4)",
+        "th": "Tier 2: Traveler (นักเดินทางท่องแดนมังกร)",
+        "en": "Tier 2: Traveler (Independent Exploration)"
+      },
+      "hsk_level": "HSK 3 - 4",
+      "tagline_th": "เที่ยวจีนคนเดียว จ่ายเงินมือถือ สั่งเดลิเวอรี่ จองตั๋วรถไฟความเร็วสูง และสนทนาลื่นไหล",
+      "theme": {
+        "color_primary": "#0284C7",
+        "color_secondary": "#0369A1",
+        "color_bg": "#F0F9FF",
+        "badge_icon": "🎋"
+      },
+      "total_units": 15,
+      "units_summary": [
+        { "unit_number": 1, "title_th": "สั่งอาหารเดลิเวอรี่ (美团/饿了么)", "icon": "🛵" },
+        { "unit_number": 2, "title_th": "กระเป๋าเงินดิจิทัล WeChat Pay & Alipay", "icon": "📱" },
+        { "unit_number": 3, "title_th": "จองตั๋วรถไฟความเร็วสูง (高铁)", "icon": "🚄" },
+        { "unit_number": 4, "title_th": "เช่าห้องพักและอพาร์ตเมนต์", "icon": "🔑" },
+        { "unit_number": 5, "title_th": "เรียกรถ Didi และเจรจากับคนขับ", "icon": "🚖" },
+        { "unit_number": 6, "title_th": "คืนของและเปลี่ยนสินค้า", "icon": "📦" },
+        { "unit_number": 7, "title_th": "ตัดผมและทำสปา", "icon": "💇" },
+        { "unit_number": 8, "title_th": "ท่องเที่ยวสถานที่ประวัติศาสตร์ & ซื้อตั๋ว", "icon": "🏯" },
+        { "unit_number": 9, "title_th": "การแสดงความเห็นและความรู้สึกเชิงลึก", "icon": "💭" },
+        { "unit_number": 10, "title_th": "การสัมภาษณ์งานและแนะนำประสบการณ์", "icon": "💼" },
+        { "unit_number": 11, "title_th": "วัฒนธรรมการดื่มชาและการสังสรรค์", "icon": "🍵" },
+        { "unit_number": 12, "title_th": "แก้ไขปัญหาเฉพาะหน้าและแจ้งเรื่องร้องเรียน", "icon": "⚠️" },
+        { "unit_number": 13, "title_th": "กีฬา สุขภาพและการออกกำลังกาย", "icon": "⚽" },
+        { "unit_number": 14, "title_th": "เทศกาลจีนสำคัญ (ตรุษจีน ไหว้พระจันทร์)", "icon": "🏮" },
+        { "unit_number": 15, "title_th": "Tier 2 Boss Quest: ตะลุยเดี่ยวแบกเป้ 4 เมืองจีน", "icon": "🏔️" }
+      ],
+      "status": "blueprint_ready",
+      "file": "tier2/unit_blueprints.json"
+    },
+    {
+      "tier_id": "tier3",
+      "tier_number": 3,
+      "name": {
+        "zh": "大师级：职场商务 (HSK 5-6)",
+        "th": "Tier 3: Master (ผู้เชี่ยวชาญการทำงาน & วัฒนธรรม)",
+        "en": "Tier 3: Master (Professional & Cultural Fluency)"
+      },
+      "hsk_level": "HSK 5 - 6",
+      "tagline_th": "ทำงานร่วมกับคนจีน เจรจาธุรกิจ เข้าใจกระแสสังคม และดูซีรีส์จีนไร้ซับไตเติล",
+      "theme": {
+        "color_primary": "#7C3AED",
+        "color_secondary": "#6D28D9",
+        "color_bg": "#F5F3FF",
+        "badge_icon": "🐉"
+      },
+      "total_units": 20,
+      "units_summary": [
+        { "unit_number": 1, "title_th": "การเขียนอีเมลและการสื่อสารทางการ", "icon": "✉️" },
+        { "unit_number": 2, "title_th": "การประชุมธุรกิจและการนำเสนองาน (Pitching)", "icon": "📊" },
+        { "unit_number": 3, "title_th": "การเจรจาต่อรองราคาและเงื่อนไขการค้า", "icon": "🤝" },
+        { "unit_number": 4, "title_th": "สัญญาและข้อตกลงพื้นฐาน", "icon": "📜" },
+        { "unit_number": 5, "title_th": "การตลาดและอีคอมเมิร์ซจีน (Douyin, Taobao)", "icon": "📈" },
+        { "unit_number": 6, "title_th": "สำนวนจีนคลาสสิกที่ใช้ในชีวิตประจำวัน (成语)", "icon": "📖" },
+        { "unit_number": 7, "title_th": "กระแสสังคมและคำสแลงอินเทอร์เน็ตจีน", "icon": "🔥" },
+        { "unit_number": 8, "title_th": "ข่าวเศรษฐกิจและเทคโนโลยีจีน", "icon": "🤖" },
+        { "unit_number": 9, "title_th": "การวิพากษ์ภาพยนตร์และซีรีส์จีน", "icon": "🎬" },
+        { "unit_number": 10, "title_th": "อาหารและวัฒนธรรม 8 สำรับใหญ่ของจีน", "icon": "🍲" },
+        { "unit_number": 11, "title_th": "ระบบการศึกษาและการทำงานในจีน (996, 内卷)", "icon": "🏢" },
+        { "unit_number": 12, "title_th": "การท่องเที่ยวเชิงอนุรักษ์และภูมิศาสตร์จีน", "icon": "🗺️" },
+        { "unit_number": 13, "title_th": "การบริหารความสัมพันธ์และเครือข่าย (关系 - Guānxi)", "icon": "🌐" },
+        { "unit_number": 14, "title_th": "ศิลปะการดื่มและการเข้าสังคมบนโต๊ะอาหาร", "icon": "🍶" },
+        { "unit_number": 15, "title_th": "การวิเคราะห์พฤติกรรมผู้บริโภคชาวจีน", "icon": "🛒" },
+        { "unit_number": 16, "title_th": "การแพทย์แผนจีนและศาสตร์การดูแลสุขภาพ (中医)", "icon": "🌿" },
+        { "unit_number": 17, "title_th": "ดนตรีและศิลปะร่วมสมัยของจีน", "icon": "🎵" },
+        { "unit_number": 18, "title_th": "การบริหารจัดการทรัพยากรบุคคลในองค์กรจีน", "icon": "👥" },
+        { "unit_number": 19, "title_th": "การพูดในที่สาธารณะและการกล่าวสุนทรพจน์", "icon": "🎙️" },
+        { "unit_number": 20, "title_th": "Tier 3 Grand Quest: ปิดดีลการค้าระหว่างประเทศที่งานแคนตันแฟร์", "icon": "👑" }
+      ],
+      "status": "blueprint_ready",
+      "file": "tier3/unit_blueprints.json"
+    },
+    {
+      "tier_id": "tier4",
+      "tier_number": 4,
+      "name": {
+        "zh": "传奇级：学术文学 (HSK 7-9)",
+        "th": "Tier 4: Legend (ปราชญ์ภาษา วรรณกรรม & การทูต)",
+        "en": "Tier 4: Legend (Classical, Academic & Diplomatic)"
+      },
+      "hsk_level": "HSK 7 - 9",
+      "tagline_th": "คลังความรู้ขั้นสูงสุด ปรัชญา วรรณกรรมโบราณ การทูต และเศรษฐศาสตร์การคลัง",
+      "theme": {
+        "color_primary": "#DC2626",
+        "color_secondary": "#B91C1C",
+        "color_bg": "#FEF2F2",
+        "badge_icon": "👑"
+      },
+      "total_units": 10,
+      "units_summary": [
+        { "unit_number": 1, "title_th": "ภาษาจีนโบราณพื้นฐาน (文言文入门)", "icon": "📜" },
+        { "unit_number": 2, "title_th": "ปรัชญาขงจื๊อและเต๋า (儒家与道家)", "icon": "☯️" },
+        { "unit_number": 3, "title_th": "บทกวีสมัยถังและซ่ง (唐诗宋词赏析)", "icon": "🪶" },
+        { "unit_number": 4, "title_th": "สี่สุดยอดวรรณกรรมจีนคลาสสิก (四大名著)", "icon": "📚" },
+        { "unit_number": 5, "title_th": "การทูตและแถลงการณ์ระหว่างประเทศ", "icon": "🏛️" },
+        { "unit_number": 6, "title_th": "กฎหมายและระเบียบการค้าระหว่างประเทศ", "icon": "⚖️" },
+        { "unit_number": 7, "title_th": "เศรษฐศาสตร์และการลงทุนในจีนยุคใหม่", "icon": "💹" },
+        { "unit_number": 8, "title_th": "การแปลวรรณกรรมและการล่ามขั้นสูง", "icon": "🗣️" },
+        { "unit_number": 9, "title_th": "การเขียนบทความวิจัยและวิทยานิพนธ์", "icon": "🎓" },
+        { "unit_number": 10, "title_th": "Tier 4 Legend Quest: บททดสอบบัณฑิตเกียรติยศแห่งฮั่นซีโร่", "icon": "🏆" }
+      ],
+      "status": "blueprint_ready",
+      "file": "tier4/unit_blueprints.json"
+    }
+  ]
+}

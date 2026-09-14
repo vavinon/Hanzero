@@ -1,0 +1,148 @@
+{
+  "unit_id": "tier1_u08",
+  "tier": 1,
+  "unit_number": 8,
+  "title": {
+    "zh": "天气与四季变换",
+    "th": "สภาพอากาศ & ฤดูกาล (Weather & Seasons)",
+    "en": "Weather & Seasons"
+  },
+  "description": "วันนี้ร้อนหรือหนาว? ฝนตกหรือหิมะตก ชวนคุยเรื่องสภาพอากาศและเตรียมเสื้อผ้าไปเที่ยวจีน",
+  "lessons": [
+    {
+      "lesson_id": "t1_u08_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "今天天气怎么样？",
+        "th": "วันนี้อากาศเป็นอย่างไรบ้าง?",
+        "en": "How is the Weather Today?"
+      },
+      "can_do": {
+        "th": "ถามและตอบเกี่ยวกับสภาพอากาศ ร้อน (热) หรือหนาว (冷) ได้",
+        "en": "Ask and describe the weather using 热 (hot) and 冷 (cold)"
+      },
+      "baby_step_goal": "จำคำตรงข้าม: 热 (rè - ร้อน มี 4 จุดไฟ 灬) ปะทะ 冷 (lěng - หนาว มีน้ำแข็งสองหยด 冫)",
+      "vocabulary": [
+        {
+          "id": "hsk1_0070",
+          "hanzi": "天气",
+          "pinyin": "tiānqì",
+          "pinyin_tone": "tian1qi4",
+          "meaning_th": "สภาพอากาศ",
+          "meaning_en": "weather",
+          "radical": "大 / 气",
+          "radical_name_th": "ท้องฟ้า + ลมหายใจ",
+          "stroke_count": 8,
+          "kid_mnemonic": "ท้องฟ้า (天) พ่นไอน้ำและลม (气) ออกมา = อากาศ",
+          "body_gesture": "กางมือมองขึ้นไปบนฟ้า"
+        },
+        {
+          "id": "hsk1_0071",
+          "hanzi": "怎么样",
+          "pinyin": "zěnmeyàng",
+          "pinyin_tone": "zen3me5yang4",
+          "meaning_th": "เป็นอย่างไรบ้าง",
+          "meaning_en": "how is it? / how about?",
+          "radical": "心 / 木",
+          "radical_name_th": "อย่างไร + แบบอย่าง",
+          "stroke_count": 22,
+          "kid_mnemonic": "ทำหน้าสงสัยถามไถ่ว่าเป็นอย่างไรบ้าง",
+          "body_gesture": "ยักไหล่ผายมือสองข้าง"
+        },
+        {
+          "id": "hsk1_0072",
+          "hanzi": "热",
+          "pinyin": "rè",
+          "pinyin_tone": "re4",
+          "meaning_th": "ร้อน",
+          "meaning_en": "hot",
+          "radical": "灬",
+          "radical_name_th": "หมวดไฟสี่จุด",
+          "stroke_count": 10,
+          "kid_mnemonic": "ข้างล่างมีกองไฟ 4 จุด (灬) ร้อนจังเลย!",
+          "body_gesture": "เอามือพัดวีหน้า เหงื่อตก"
+        },
+        {
+          "id": "hsk1_0073",
+          "hanzi": "冷",
+          "pinyin": "lěng",
+          "pinyin_tone": "leng3",
+          "meaning_th": "หนาว, เย็น",
+          "meaning_en": "cold",
+          "radical": "冫",
+          "radical_name_th": "หมวดน้ำแข็งสองหยด",
+          "stroke_count": 7,
+          "kid_mnemonic": "มีน้ำแข็งสองหยด (冫) หนาวจนตัวสั่น",
+          "body_gesture": "กอดอกลูบแขนสั่น บรึ๋ยยย"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรถามสภาพอากาศ: [เวลา/สถานที่] + 天气怎么样？",
+        "explanation_th": "ถามว่าอากาศวันนี้เป็นอย่างไร: 今天天气怎么样？ ตอบง่ายๆ: 很热 (ร้อนมาก) หรือ 很冷 (หนาวมาก)",
+        "patterns": [
+          {
+            "formula": "今天天气怎么样？",
+            "pinyin": "Jīntiān tiānqì zěnmeyàng?",
+            "th": "วันนี้อากาศเป็นอย่างไรบ้าง?"
+          },
+          {
+            "formula": "今天很冷！ / 今天很热！",
+            "pinyin": "Jīntiān hěn lěng! / Jīntiān hěn rè!",
+            "th": "วันนี้หนาวมาก! / วันนี้ร้อนมาก!"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "今天北京天气怎么样？",
+          "pinyin": "Jīntiān Běijīng tiānqì zěnmeyàng?",
+          "th": "วันนี้อากาศที่ปักกิ่งเป็นอย่างไรบ้างครับ?"
+        },
+        {
+          "speaker_name": "แพนด้าเป่าเปา 🐼",
+          "zh": "今天很冷，下雪了！",
+          "pinyin": "Jīntiān hěn lěng, xiàxuě le!",
+          "th": "วันนี้หนาวมาก หิมะตกแล้วจ้า!"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "太好了！我要看雪！",
+          "pinyin": "Tài hǎo le! Wǒ yào kàn xuě!",
+          "th": "สุดยอดเลย! ผมอยากเห็นหิมะ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "ตัวอักษร '热' (ร้อน) มีส่วนประกอบของสิ่งใดอยู่ข้างใต้?",
+          "options": [
+            "สายน้ำ (氵)",
+            "กองไฟสี่จุด (灬)",
+            "ต้นไม้ (木)",
+            "ก้อนดิน (土)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "มีกองไฟ 4 จุด (灬) อยู่ข้างใต้ บ่งบอกถึงความร้อนระอุ",
+          "encouragement": "ตาไวมาก! จำสัญลักษณ์กองไฟได้แม่นยำ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณกำลังจัดกระเป๋าจะบินไปเที่ยวเมืองฮาร์บินในฤดูหนาว เพื่อนโทรมาบอกว่า '哈尔滨今天非常冷！' (ฮาร์บินวันนี้หนาวสุดๆ!) คุณควรเตรียมเสื้อผ้าแบบไหน?",
+        "options": [
+          "เสื้อยืดแขนสั้นและกางเกงขาสั้น",
+          "เสื้อโค้ทหนากันหนาว ถุงมือ และหมวกไหมพรม",
+          "ชุดว่ายน้ำ",
+          "รองเท้าแตะ"
+        ],
+        "correct_index": 1,
+        "explanation_th": "เพราะ '冷' แปลว่าหนาว ต้องเตรียมเสื้อโค้ทและถุงมือให้อบอุ่น!",
+        "encouragement": "เตรียมตัวพร้อมลุยหิมะฮาร์บินได้อย่างอบอุ่นปลอดภัย!"
+      },
+      "cheer_trophy": {
+        "badge_name": "นักพยากรณ์อากาศรอบรู้ 🌤️❄️",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

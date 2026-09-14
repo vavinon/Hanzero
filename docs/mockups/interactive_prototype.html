@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanzero - เริ่มจาก 0 สู่ภาษาจีนคล่องตัว (Interactive Web App Prototype)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+SC:wght@500;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #F59E0B;
+      --primary-hover: #D97706;
+      --primary-light: #FEF3C7;
+      --primary-dark: #B45309;
+      --jade: #10B981;
+      --jade-light: #D1FAE5;
+      --vermilion: #EF4444;
+      --vermilion-light: #FEE2E2;
+      --bg-rice: #FDFBF7;
+      --surface: #FFFFFF;
+      --surface-card: #FFFFFF;
+      --text-main: #1F2937;
+      --text-muted: #6B7280;
+      --border: #E5E7EB;
+      --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+      --shadow-md: 0 6px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 12px 28px rgba(245, 158, 11, 0.12);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+    }
+
+    [data-theme="dark"] {
+      --bg-rice: #111827;
+      --surface: #1F2937;
+      --surface-card: #283548;
+      --text-main: #F9FAFB;
+      --text-muted: #9CA3AF;
+      --border: #374151;
+      --primary-light: #452B06;
+      --jade-light: #064E3B;
+      --shadow-md: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Prompt', 'Inter', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-rice);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    .hanzi-font {
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    /* === LAYOUT: DESKTOP FIRST WITH RESPONSIVE MOBILE === */
+    .app-sidebar {
+      width: 260px;
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      height: 100vh;
+      position: sticky;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 16px;
+      z-index: 50;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--primary-light);
+    }
+
+    .brand-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+    }
+
+    .brand-badge {
+      font-size: 0.7rem;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+    }
+
+    .nav-item:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      transform: translateX(4px);
+    }
+
+    .nav-item.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+    }
+
+    .nav-icon {
+      font-size: 1.25rem;
+      width: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* === MAIN STAGE === */
+    .app-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      max-width: 1400px;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .viewport-mode-pill {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stats-cluster {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      background: var(--bg-rice);
+      border: 1px solid var(--border);
+    }
+
+    .stat-pill.streak { color: #EA580C; }
+    .stat-pill.hearts { color: var(--vermilion); }
+    .stat-pill.xp { color: var(--primary-dark); }
+
+    .control-btn {
+      background: var(--bg-rice);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+
+    .control-btn:hover {
+      transform: scale(1.08);
+      border-color: var(--primary);
+    }
+
+    /* CONTENT LAYOUT: TWO COLUMNS (MAIN + RIGHT WIDGETS) */
+    .content-area {
+      display: flex;
+      flex: 1;
+      padding: 32px;
+      gap: 32px;
+    }
+
+    .stage-column {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .side-column {
+      width: 340px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* TAB SWITCHER */
+    .hub-switcher {
+      display: flex;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px;
+      border-radius: var(--radius-lg);
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hub-tab {
+      flex: 1;
+      padding: 12px 16px;
+      border: none;
+      background: transparent;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .hub-tab.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* CARDS & PANELS */
+    .card-panel {
+      background: var(--surface-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
+    }
+
+    /* MASCOT WIDGET */
+    .mascot-widget {
+      background: linear-gradient(135deg, var(--primary-light) 0%, #FFFBEB 100%);
+      border: 1px solid #FDE68A;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .mascot-widget {
+      background: linear-gradient(135deg, #372808 0%, #1F2937 100%);
+      border-color: #78350F;
+    }
+
+    .mascot-profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .mascot-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: var(--shadow-md);
+      border: 3px solid #FFFFFF;
+    }
+
+    .mascot-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+    }
+
+    [data-theme="dark"] .mascot-name {
+      color: #FCD34D;
+    }
+
+    .mascot-speech {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--text-main);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .mascot-speech::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 28px;
+      width: 14px;
+      height: 14px;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      transform: rotate(45deg);
+    }
+
+    /* FLASHCARD DEMO */
+    .vocab-card-box {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hanzi-box {
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 20px;
+      background: #FFFDF9;
+      border: 2px solid #E5D5BC;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: inset 0 0 16px rgba(245, 158, 11, 0.05);
+    }
+
+    [data-theme="dark"] .hanzi-box {
+      background: #1A202C;
+      border-color: #4A5568;
+    }
+
+    .hanzi-char {
+      font-size: 6.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .mizige-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: 
+        linear-gradient(to right, rgba(220, 38, 38, 0.15) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(220, 38, 38, 0.15) 1px, transparent 1px);
+      background-size: 50% 50%;
+    }
+
+    .pinyin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 6px 20px;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+      transition: opacity 0.3s;
+    }
+
+    .pinyin-badge.faded {
+      opacity: 0.25;
+    }
+
+    .pinyin-badge.hidden {
+      opacity: 0;
+    }
+
+    .tone-tag {
+      font-size: 0.75rem;
+      background: var(--primary);
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+    }
+
+    .translation-th {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .translation-en {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .action-btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .audio-btn {
+      background: var(--jade);
+      color: #FFFFFF;
+      border: none;
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+      transition: all 0.2s;
+    }
+
+    .audio-btn:hover {
+      transform: scale(1.05);
+      background: #059669;
+    }
+
+    .secondary-pill-btn {
+      background: var(--bg-rice);
+      border: 1px solid var(--border);
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .secondary-pill-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    /* TOPIC CATALOG (FREE EXPLORATION) */
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .topic-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .topic-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .topic-info h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .topic-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .topic-badge {
+      font-size: 0.72rem;
+      background: var(--jade-light);
+      color: #065F46;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    /* QUEST PATH VIEW */
+    .quest-path-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .quest-node-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .quest-node {
+      width: 76px;
+      height: 76px;
+      border-radius: 24px;
+      background: var(--surface);
+      border: 3px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .quest-node.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #FFFFFF;
+      transform: scale(1.12);
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.4);
+    }
+
+    .quest-node.completed {
+      border-color: var(--jade);
+      color: var(--jade);
+    }
+
+    .node-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* TONE COASTER DEMO */
+    .coaster-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .tone-btn {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      padding: 16px 10px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .tone-btn:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .tone-name { font-weight: 700; font-size: 1.1rem; color: var(--primary-dark); }
+    .tone-shape { font-size: 1.6rem; line-height: 1; margin: 6px 0; }
+    .tone-desc { font-size: 0.75rem; color: var(--text-muted); }
+
+    /* RESPONSIVE: MOBILE STYLING */
+    @media (max-width: 960px) {
+      .app-sidebar {
+        display: none;
+      }
+      .side-column {
+        display: none;
+      }
+      .content-area {
+        padding: 16px;
+      }
+      .top-bar {
+        padding: 12px 16px;
+      }
+      .coaster-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      /* MOBILE BOTTOM NAV */
+      .mobile-bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 8px 16px;
+        justify-content: space-around;
+        z-index: 100;
+        box-shadow: 0 -4px 16px rgba(0,0,0,0.05);
+      }
+      .mobile-nav-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-decoration: none;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+      }
+      .mobile-nav-btn.active {
+        color: var(--primary-dark);
+        font-weight: 700;
+      }
+    }
+
+    @media (min-width: 961px) {
+      .mobile-bottom-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LEFT SIDEBAR (GLOBAL APP NAVIGATION) -->
+  <aside class="app-sidebar">
+    <div class="brand-header">
+      <img src="../../assets/brand/app_icon.jpg" alt="Hanzero Logo" class="brand-logo" onerror="this.src='https://placehold.co/92x92/F59E0B/white?text=HZ'">
+      <div>
+        <div class="brand-title">HANZERO</div>
+        <span class="brand-badge">เริ่มจาก 0 สู่คล่องตัว</span>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <button class="nav-item active" id="nav-learn" onclick="selectNav('learn')">
+        <span class="nav-icon">🏠</span>
+        <span>เรียนรู้ (Learn)</span>
+      </button>
+      <button class="nav-item" id="nav-review" onclick="selectNav('review')">
+        <span class="nav-icon">🧠</span>
+        <span>ทบทวนคำศัพท์ (SRS)</span>
+      </button>
+      <button class="nav-item" id="nav-passport" onclick="selectNav('passport')">
+        <span class="nav-icon">🏆</span>
+        <span>บัตรเกียรติยศ (Passport)</span>
+      </button>
+      <button class="nav-item" id="nav-settings" onclick="alert('หน้าต่างตั้งค่า: สำรองข้อมูล JSON / โหมดเงียบ / ปรับระดับเสียง')">
+        <span class="nav-icon">⚙️</span>
+        <span>ตั้งค่า (Settings)</span>
+      </button>
+    </nav>
+
+    <div style="padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-muted);">
+      <div>🟢 สถานะ: <b>Client-Side 100%</b></div>
+      <div>💾 รันฟรีตลอดชีพบน GitHub Pages</div>
+    </div>
+  </aside>
+
+  <!-- MAIN VIEWPORT -->
+  <main class="app-main">
+    
+    <!-- TOP STICKY BAR -->
+    <header class="top-bar">
+      <div class="viewport-mode-pill">
+        <span>💻 Responsive Web App</span>
+        <span style="opacity: 0.6;">(ย่อจอเพื่อดูมุมมองมือถือ)</span>
+      </div>
+
+      <div class="stats-cluster">
+        <div class="stat-pill streak" title="จำนวนวันเรียนต่อเนื่อง">
+          <span>🔥</span>
+          <span id="streak-val">5 วัน</span>
+        </div>
+        <div class="stat-pill hearts" title="หัวใจ Safe Zone">
+          <span>❤️</span>
+          <span>5 / 5</span>
+        </div>
+        <div class="stat-pill xp" title="คะแนนความก้าวหน้า">
+          <span>⭐</span>
+          <span>1,250 XP</span>
+        </div>
+        <button class="control-btn" onclick="toggleTheme()" title="สลับ Dark / Light Mode">🌓</button>
+      </div>
+    </header>
+
+    <!-- CONTENT WITH TWO COLUMNS -->
+    <div class="content-area">
+      
+      <!-- STAGE COLUMN -->
+      <section class="stage-column">
+        
+        <!-- IN-PAGE VIEW SWITCHER (STREAMLINED: ONLY 2 TABS) -->
+        <div class="hub-switcher" id="inpage-switcher">
+          <button class="hub-tab active" id="tab-btn-quest" onclick="switchView('quest')">
+            <span>🗺️</span>
+            <span>แผนที่เดินทาง (Quest Path)</span>
+          </button>
+          <button class="hub-tab" id="tab-btn-catalog" onclick="switchView('catalog')">
+            <span>📚</span>
+            <span>เลือกเรียนอิสระ (All Topics)</span>
+          </button>
+        </div>
+
+
+        <!-- TAB 1: QUEST MAP VIEW -->
+        <div id="view-quest" class="tab-view">
+          <div class="card-panel">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+              <div>
+                <h2 style="font-size: 1.4rem; font-weight: 700;">เส้นทางการเรียนรู้: Tier 0 ➔ Tier 1</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">ระบบจะพาคุณเก่งทีละก้าว หรือกดแท็บ "เลือกเรียนอิสระ" เพื่อข้ามไปบทที่ต้องการได้ทันที</p>
+              </div>
+              <span class="topic-badge">Safe Zone: ไม่หักหัวใจ</span>
+            </div>
+
+            <div class="quest-path-container">
+              <!-- Node 1 -->
+              <div class="quest-node-row">
+                <div class="quest-node completed" onclick="playBeep(523.25); alert('Unit 0.1: พยัญชนะริมฝีปาก (b, p, m, f) - ผ่านแล้ว ⭐⭐⭐')">
+                  <span style="font-size: 1.6rem;">👄</span>
+                  <span class="node-title">0.1 เสียงปาก</span>
+                </div>
+              </div>
+              <!-- Node 2 (ACTIVE) -->
+              <div class="quest-node-row">
+                <div class="quest-node active" onclick="switchTab('flashcard'); playBeep(659.25);">
+                  <span style="font-size: 1.8rem;">🎋</span>
+                  <span class="node-title">0.2 โคนลิ้น</span>
+                  <span style="position: absolute; top: -10px; right: -10px; background: #EF4444; color: white; border-radius: 999px; font-size: 0.7rem; padding: 2px 6px; font-weight: 700;">กำลังเรียน</span>
+                </div>
+              </div>
+              <!-- Node 3 -->
+              <div class="quest-node-row">
+                <div class="quest-node" onclick="switchTab('coaster'); playBeep(783.99);">
+                  <span style="font-size: 1.6rem;">🎢</span>
+                  <span class="node-title">0.3 วรรณยุกต์</span>
+                </div>
+              </div>
+              <!-- Node 4 -->
+              <div class="quest-node-row">
+                <div class="quest-node" onclick="playBeep(440); alert('Unit 0.4: ลิ้นม้วน zh, ch, sh vs ลิ้นตรง z, c, s')">
+                  <span style="font-size: 1.6rem;">👅</span>
+                  <span class="node-title">0.4 ลิ้นม้วน</span>
+                </div>
+              </div>
+              <!-- Boss Node -->
+              <div class="quest-node-row">
+                <div class="quest-node" style="border-color: #F59E0B; background: #FFFBEB;" onclick="playBeep(880); alert('🏆 Tier 0 Grand Boss: ประลองความรู้พินอินรับ Passport!')">
+                  <span style="font-size: 1.8rem;">👑</span>
+                  <span class="node-title">Boss ด่านสุดท้าย</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: TOPIC CATALOG (FREE EXPLORATION) -->
+        <div id="view-catalog" class="tab-view" style="display: none;">
+          <div class="card-panel">
+            <div style="margin-bottom: 24px;">
+              <h2 style="font-size: 1.4rem; font-weight: 700;">📚 คลังบทเรียนทั้งหมด (เลือกเรียนได้อิสระ)</h2>
+              <p style="color: var(--text-muted); font-size: 0.9rem;">อยากเรียนเรื่องไหนวันนี้ กดเข้าเรียนได้ทันที ไม่มีการบังคับล็อกด่าน!</p>
+            </div>
+
+            <div class="topic-grid">
+              <div class="topic-card" onclick="switchTab('flashcard')">
+                <div class="topic-icon">👋</div>
+                <div class="topic-info">
+                  <h4>Unit 1: ทักทาย & ขอบคุณ</h4>
+                  <p>你好, 谢谢, 再见, 不客气</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+
+              <div class="topic-card" onclick="alert('เข้าเรียน Unit 2: ตัวเลขและเวลา')">
+                <div class="topic-icon">🔢</div>
+                <div class="topic-info">
+                  <h4>Unit 2: ตัวเลข วันที่ & เวลา</h4>
+                  <p>一, 二, 三... นับเลข นัดหมาย</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+
+              <div class="topic-card" onclick="alert('เข้าเรียน Unit 3: สั่งอาหารและเครื่องดื่ม')">
+                <div class="topic-icon">🍜</div>
+                <div class="topic-info">
+                  <h4>Unit 3: สั่งอาหาร & ชานม</h4>
+                  <p>我要米饭, 奶茶, 不要辣</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+
+              <div class="topic-card" onclick="alert('เข้าเรียน Unit 4: ช็อปปิ้งและต่อราคา')">
+                <div class="topic-icon">🛍️</div>
+                <div class="topic-info">
+                  <h4>Unit 4: ช็อปปิ้ง & ถามราคา</h4>
+                  <p>多少钱? 太贵了, 便宜一点</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+
+              <div class="topic-card" onclick="alert('เข้าเรียน Unit 5: เรียกรถและถามทาง')">
+                <div class="topic-icon">🚕</div>
+                <div class="topic-info">
+                  <h4>Unit 5: เรียกรถแท็กซี่ & รถไฟ</h4>
+                  <p>去机场, 左转, 右转, 在哪里?</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+
+              <div class="topic-card" onclick="alert('เข้าเรียน Unit 6: เช็คอินโรงแรม & Wi-Fi')">
+                <div class="topic-icon">🏨</div>
+                <div class="topic-info">
+                  <h4>Unit 6: โรงแรม & Wi-Fi</h4>
+                  <p>订房间, 密码是什么?</p>
+                  <span class="topic-badge">พร้อมเรียนทันที</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: FLASHCARD LESSON DEMO -->
+        <div id="view-flashcard" class="tab-view" style="display: none;">
+          <div class="card-panel">
+            <div class="vocab-card-box">
+              
+              <!-- HANZI CARD WITH GRID -->
+              <div class="hanzi-box">
+                <div class="mizige-grid"></div>
+                <span class="hanzi-char hanzi-font" id="vocab-hanzi">你</span>
+              </div>
+
+              <!-- PINYIN BADGE -->
+              <div>
+                <div class="pinyin-badge" id="vocab-pinyin">
+                  <span id="pinyin-text">nǐ</span>
+                  <span class="tone-tag">เสียง 3 ˇ</span>
+                </div>
+              </div>
+
+              <!-- MEANINGS -->
+              <div class="translation-th" id="vocab-th">คุณ, เธอ</div>
+              <div class="translation-en" id="vocab-en">You (singular)</div>
+
+              <!-- AUDIO ACTION -->
+              <div class="action-btn-row">
+                <button class="audio-btn" onclick="speakCurrentWord()">
+                  <span>🔊</span>
+                  <span>ฟังเสียงคนพูดจริง</span>
+                </button>
+              </div>
+
+              <!-- INTERACTIVE TOGGLES -->
+              <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;">
+                <button class="secondary-pill-btn" onclick="togglePinyin()">
+                  <span>👁️</span>
+                  <span id="pinyin-toggle-label">โหมดซ่อนพินอิน: แสดงเต็ม</span>
+                </button>
+                <button class="secondary-pill-btn" onclick="nextWordDemo()">
+                  <span>⏭️</span>
+                  <span>สลับดูคำถัดไป</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: TONE COASTER DEMO -->
+        <div id="view-coaster" class="tab-view" style="display: none;">
+          <div class="card-panel" style="text-align: center;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px;">🎢 รถไฟเหาะ 4 วรรณยุกต์จีน (Tone Coaster)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;">แตะที่วรรณยุกต์เพื่อฟังระดับเสียงความถี่สูง-ต่ำ จำง่ายผ่านคลื่นเสียง</p>
+
+            <div class="coaster-grid">
+              <div class="tone-btn" onclick="playTonePitch(1)">
+                <div class="tone-name">เสียง 1 (ā)</div>
+                <div class="tone-shape">━</div>
+                <div class="tone-desc">เสียงสูงราบเรียบ (55)</div>
+              </div>
+              <div class="tone-btn" onclick="playTonePitch(2)">
+                <div class="tone-name">เสียง 2 (á)</div>
+                <div class="tone-shape">↗</div>
+                <div class="tone-desc">เสียงพุ่งทะยานขึ้น (35)</div>
+              </div>
+              <div class="tone-btn" onclick="playTonePitch(3)">
+                <div class="tone-name">เสียง 3 (ǎ)</div>
+                <div class="tone-shape">⤵⤴</div>
+                <div class="tone-desc">เสียงดิ่งแล้วเด้งขึ้น (214)</div>
+              </div>
+              <div class="tone-btn" onclick="playTonePitch(4)">
+                <div class="tone-name">เสียง 4 (à)</div>
+                <div class="tone-shape">↘</div>
+                <div class="tone-desc">เสียงทิ้งดิ่งลงมา (51)</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding: 12px; background: var(--jade-light); border-radius: var(--radius-md); color: #065F46; font-size: 0.85rem; font-weight: 600;">
+              🛡️ Safe Practice Zone: ตอบผิดในโหมดนี้ไม่เสียหัวใจเด็ดขาด!
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- RIGHT SIDEBAR (DESKTOP WIDGETS) -->
+      <aside class="side-column">
+        
+        <!-- MASCOT CARD -->
+        <div class="mascot-widget">
+          <div class="mascot-profile">
+            <img src="../../assets/brand/mascot_bunny.jpg" alt="Mascot Bunny" class="mascot-avatar" onerror="this.src='https://placehold.co/144x144/F59E0B/white?text=🐰'">
+            <div>
+              <div class="mascot-name">น้องเปาเปา 🐰</div>
+              <span style="font-size: 0.75rem; color: var(--text-muted);">มาสคอตกระต่ายหูตก</span>
+            </div>
+          </div>
+          <div class="mascot-speech">
+            "สวัสดีครับ! นี่คือตัวอย่าง Web App แบบเต็มรูปแบบ เปิดบนจอคอมก็สวยงาม หรือเปิดบนมือถือก็คล่องตัวครับ!"
+          </div>
+        </div>
+
+        <!-- DAILY GOAL WIDGET -->
+        <div class="card-panel">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-weight: 700; font-size: 0.95rem;">🎯 เป้าหมายวันนี้</span>
+            <span style="font-size: 0.8rem; color: var(--primary-dark); font-weight: 600;">6 / 10 นาที</span>
+          </div>
+          <div style="height: 8px; background: var(--border); border-radius: 999px; overflow: hidden; margin-bottom: 12px;">
+            <div style="width: 60%; height: 100%; background: var(--primary); border-radius: 999px;"></div>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">อีกแค่ 4 นาที คุณจะบรรลุเป้าหมายและรักษาสถิติไฟ Streak วันนี้!</p>
+        </div>
+
+        <!-- QUICK BACKUP WIDGET -->
+        <div class="card-panel" style="background: var(--bg-rice);">
+          <h4 style="font-size: 0.9rem; margin-bottom: 8px;">💾 ข้อมูลบันทึกในเครื่องคุณ</h4>
+          <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px;">รันผ่าน LocalStorage + IndexedDB 100% ฟรีตลอดชีพบน GitHub Pages</p>
+          <button class="secondary-pill-btn" style="width: 100%; justify-content: center;" onclick="alert('จำลองการดาวน์โหลดไฟล์ hanzero_backup.json สำเร็จ!')">
+            <span>📥</span>
+            <span>1-Click JSON Backup</span>
+          </button>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <!-- MOBILE BOTTOM NAV (SHOWS ONLY ON MOBILE VIEWPORT) -->
+  <nav class="mobile-bottom-nav">
+    <button class="mobile-nav-btn active" onclick="switchTab('quest')">
+      <span style="font-size: 1.2rem;">🗺️</span>
+      <span>แผนที่</span>
+    </button>
+    <button class="mobile-nav-btn" onclick="switchTab('catalog')">
+      <span style="font-size: 1.2rem;">📚</span>
+      <span>บทเรียน</span>
+    </button>
+    <button class="mobile-nav-btn" onclick="switchTab('flashcard')">
+      <span style="font-size: 1.2rem;">🔤</span>
+      <span>การ์ดคำ</span>
+    </button>
+    <button class="mobile-nav-btn" onclick="switchTab('coaster')">
+      <span style="font-size: 1.2rem;">🎢</span>
+      <span>รถไฟเหาะ</span>
+    </button>
+  </nav>
+
+  <!-- SCRIPT LOGIC -->
+  <script>
+    let currentNav = 'learn';
+    let currentLearnView = 'quest';
+
+    function selectNav(navId) {
+      currentNav = navId;
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + navId);
+      if (activeNav) activeNav.classList.add('active');
+
+      const switcher = document.getElementById('inpage-switcher');
+      document.querySelectorAll('.tab-view').forEach(el => el.style.display = 'none');
+
+      if (navId === 'learn') {
+        switcher.style.display = 'flex';
+        switchView(currentLearnView);
+      } else if (navId === 'review') {
+        switcher.style.display = 'none';
+        document.getElementById('view-flashcard').style.display = 'block';
+      } else if (navId === 'passport') {
+        switcher.style.display = 'none';
+        alert('🏆 แสดงบัตรเกียรติยศ Hanzero Passport สำหรับกดแชร์ลง Social Media');
+        switchView('quest');
+      }
+      playBeep(440);
+    }
+
+    function switchView(viewId) {
+      currentLearnView = viewId;
+      document.querySelectorAll('.tab-view').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.hub-tab').forEach(el => el.classList.remove('active'));
+
+      const targetView = document.getElementById('view-' + viewId);
+      const targetBtn = document.getElementById('tab-btn-' + viewId);
+      if (targetView) targetView.style.display = 'block';
+      if (targetBtn) targetBtn.classList.add('active');
+      playBeep(523.25);
+    }
+
+    // Open Lesson directly from Quest Node or Topic Card
+    function openLesson(unitName) {
+      document.getElementById('inpage-switcher').style.display = 'none';
+      document.querySelectorAll('.tab-view').forEach(el => el.style.display = 'none');
+      document.getElementById('view-flashcard').style.display = 'block';
+      playBeep(659.25);
+    }
+
+    function backToLearn() {
+      selectNav('learn');
+    }
+
+    // Vocabulary Dataset Demo
+    const demoWords = [
+      { hanzi: '你', pinyin: 'nǐ', tone: 'เสียง 3 ˇ', th: 'คุณ, เธอ', en: 'You (singular)' },
+      { hanzi: '好', pinyin: 'hǎo', tone: 'เสียง 3 ˇ', th: 'ดี, สบายดี', en: 'Good, well' },
+      { hanzi: '谢谢', pinyin: 'xièxie', tone: 'เสียง 4 + เบา', th: 'ขอบคุณ', en: 'Thank you' },
+      { hanzi: '不客气', pinyin: 'bú kèqi', tone: 'เสียง 2 + 4', th: 'ไม่เป็นไร (ด้วยความยินดี)', en: "You're welcome" },
+      { hanzi: '再见', pinyin: 'zàijiàn', tone: 'เสียง 4 + 4', th: 'ลาก่อน (แล้วพบกันใหม่)', en: 'Goodbye' }
+    ];
+    let currentWordIndex = 0;
+
+    function nextWordDemo() {
+      currentWordIndex = (currentWordIndex + 1) % demoWords.length;
+      const w = demoWords[currentWordIndex];
+      document.getElementById('vocab-hanzi').innerText = w.hanzi;
+      document.getElementById('pinyin-text').innerText = w.pinyin;
+      document.getElementById('vocab-th').innerText = w.th;
+      document.getElementById('vocab-en').innerText = w.en;
+      playBeep(587.33);
+    }
+
+    // Pinyin Fading Toggle
+    let pinyinMode = 0; // 0: full, 1: faded, 2: hidden
+    function togglePinyin() {
+      const badge = document.getElementById('vocab-pinyin');
+      const label = document.getElementById('pinyin-toggle-label');
+      pinyinMode = (pinyinMode + 1) % 3;
+      badge.classList.remove('faded', 'hidden');
+
+      if (pinyinMode === 0) {
+        label.innerText = 'โหมดพินอิน: แสดงเต็ม (Full)';
+      } else if (pinyinMode === 1) {
+        badge.classList.add('faded');
+        label.innerText = 'โหมดพินอิน: สีจางลง (Faded)';
+      } else {
+        badge.classList.add('hidden');
+        label.innerText = 'โหมดพินอิน: ซ่อน (Hidden)';
+      }
+      playBeep(493.88);
+    }
+
+    // Native Speech Synthesis (Speak Word)
+    function speakCurrentWord() {
+      const text = document.getElementById('vocab-hanzi').innerText;
+      if ('speechSynthesis' in window) {
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'zh-CN';
+        utter.rate = 0.85;
+        window.speechSynthesis.speak(utter);
+      } else {
+        playBeep(523.25);
+        alert('เบราว์เซอร์ไม่รองรับ Speech Synthesis กำลังเล่นเสียงสังเคราะห์แทน');
+      }
+    }
+
+    // Web Audio Pitch Synth (0 KB network)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playBeep(freq = 440) {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.15);
+    }
+
+    // Tone Pitch Simulation
+    function playTonePitch(toneNumber) {
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      const now = audioCtx.currentTime;
+      osc.type = 'triangle';
+      gain.gain.setValueAtTime(0.12, now);
+
+      if (toneNumber === 1) { // 55 flat high
+        osc.frequency.setValueAtTime(360, now);
+        osc.frequency.setValueAtTime(360, now + 0.35);
+      } else if (toneNumber === 2) { // 35 rising
+        osc.frequency.setValueAtTime(280, now);
+        osc.frequency.exponentialRampToValueAtTime(380, now + 0.35);
+      } else if (toneNumber === 3) { // 214 dipping
+        osc.frequency.setValueAtTime(260, now);
+        osc.frequency.exponentialRampToValueAtTime(200, now + 0.15);
+        osc.frequency.exponentialRampToValueAtTime(320, now + 0.4);
+      } else if (toneNumber === 4) { // 51 falling
+        osc.frequency.setValueAtTime(390, now);
+        osc.frequency.exponentialRampToValueAtTime(200, now + 0.3);
+      }
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(now + 0.45);
+    }
+
+    // Theme Toggle
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      playBeep(659.25);
+    }
+  </script>
+</body>
+</html>

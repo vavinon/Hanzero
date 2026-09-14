@@ -1,0 +1,188 @@
+{
+  "unit_id": "tier1_u03",
+  "tier": 1,
+  "unit_number": 3,
+  "title": {
+    "zh": "点餐与街头美食",
+    "th": "สั่งอาหาร & เครื่องดื่ม (Food & Street Bites)",
+    "en": "Food & Street Bites"
+  },
+  "description": "สั่งบะหมี่ เกี๊ยว ชานมไข่มุก บอกรสชาติ เผ็ด-ไม่เผ็ด และสั่งอาหารแบบไม่เก้อเขิน",
+  "lessons": [
+    {
+      "lesson_id": "t1_u03_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "我要吃米饭和面条",
+        "th": "อยากกินข้าวหรือบะหมี่? สั่งอาหารจานโปรด",
+        "en": "Rice or Noodles? Ordering Food"
+      },
+      "can_do": {
+        "th": "ใช้ประโยค '我要...' (ฉันเอา/ฉันจะกิน...) สั่งอาหารและเครื่องดื่มในร้านได้",
+        "en": "Order food and drinks using 我要 (Wǒ yào...)"
+      },
+      "baby_step_goal": "จำคำว่า 吃 (กิน) กับ 喝 (ดื่ม) มีปาก '口' นำหน้าทั้งคู่!",
+      "vocabulary": [
+        {
+          "id": "hsk1_0020",
+          "hanzi": "吃",
+          "pinyin": "chī",
+          "pinyin_tone": "chi1",
+          "meaning_th": "กิน",
+          "meaning_en": "to eat",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก",
+          "stroke_count": 6,
+          "kid_mnemonic": "มีปาก (口) อ้ากว้างงับช้อนกินข้าว",
+          "body_gesture": "ทำท่าหยิบช้อนตักอาหารเข้าปาก"
+        },
+        {
+          "id": "hsk1_0021",
+          "hanzi": "喝",
+          "pinyin": "hē",
+          "pinyin_tone": "he1",
+          "meaning_th": "ดื่ม",
+          "meaning_en": "to drink",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก",
+          "stroke_count": 12,
+          "kid_mnemonic": "มีปาก (口) ดื่มน้ำใต้แสงแดด (日)",
+          "body_gesture": "ทำมือยกแก้วน้ำขึ้นดื่มชื่นใจ"
+        },
+        {
+          "id": "hsk1_0022",
+          "hanzi": "米饭",
+          "pinyin": "mǐfàn",
+          "pinyin_tone": "mi3fan4",
+          "meaning_th": "ข้าวสวย",
+          "meaning_en": "cooked rice",
+          "radical": "米",
+          "radical_name_th": "หมวดเมล็ดข้าว",
+          "stroke_count": 13,
+          "kid_mnemonic": "เมล็ดข้าว (米) เอามาหุงเป็นข้าวสวยร้อนๆ",
+          "body_gesture": "ถือถ้วยข้าวดมกลิ่นหอม"
+        },
+        {
+          "id": "hsk1_0023",
+          "hanzi": "面条",
+          "pinyin": "miàntiáo",
+          "pinyin_tone": "mian4tiao2",
+          "meaning_th": "บะหมี่, ก๋วยเตี๋ยว",
+          "meaning_en": "noodles",
+          "radical": "麦 / 木",
+          "radical_name_th": "หมวดข้าวสาลี",
+          "stroke_count": 16,
+          "kid_mnemonic": "เส้นบะหมี่ยาวๆ นุ่มเหนียว",
+          "body_gesture": "ทำท่าคีบตะเกียบซู้ดเส้นบะหมี่"
+        },
+        {
+          "id": "hsk1_0024",
+          "hanzi": "水",
+          "pinyin": "shuǐ",
+          "pinyin_tone": "shui3",
+          "meaning_th": "น้ำเปล่า",
+          "meaning_en": "water",
+          "radical": "水",
+          "radical_name_th": "หมวดน้ำ",
+          "stroke_count": 4,
+          "kid_mnemonic": "สายน้ำไหลผ่านแกนกลาง แตกละอองสองข้าง",
+          "body_gesture": "ทำมือพลิ้วไหวเหมือนสายน้ำ"
+        },
+        {
+          "id": "hsk1_0025",
+          "hanzi": "好吃",
+          "pinyin": "hǎochī",
+          "pinyin_tone": "hao3chi1",
+          "meaning_th": "อร่อย",
+          "meaning_en": "delicious",
+          "radical": "女 / 口",
+          "radical_name_th": "ดี + กิน",
+          "stroke_count": 12,
+          "kid_mnemonic": "ดี (好) + กิน (吃) = กินแล้วดีงาม อร่อยจัง!",
+          "body_gesture": "ลูบท้องวนๆ แล้วยกนิ้วโป้งชม"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรสั่งอาหาร: 我要 + [ชื่ออาหาร]",
+        "explanation_th": "我要 (Wǒ yào) แปลว่า 'ฉันต้องการ/ฉันเอา...' ใช้ได้กับทุกเมนู ชี้รูปแล้วพูดได้เลย!",
+        "patterns": [
+          {
+            "formula": "我要米饭。",
+            "pinyin": "Wǒ yào mǐfàn.",
+            "th": "ฉันเอาข้าวสวยครับ/ค่ะ"
+          },
+          {
+            "formula": "我要面条，谢谢！",
+            "pinyin": "Wǒ yào miàntiáo, xièxie!",
+            "th": "ฉันเอาบะหมี่ครับ ขอบคุณครับ!"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "พนักงานเสิร์ฟ 👨‍🍳",
+          "zh": "你好！你要吃什么？",
+          "pinyin": "Nǐ hǎo! Nǐ yào chī shénme?",
+          "th": "สวัสดีครับ คุณต้องการรับประทานอะไรดีครับ?"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "你好！我要面条和水。",
+          "pinyin": "Nǐ hǎo! Wǒ yào miàntiáo hé shuǐ.",
+          "th": "สวัสดีครับ ผมเอาบะหมี่กับน้ำเปล่าครับ"
+        },
+        {
+          "speaker_name": "พนักงานเสิร์ฟ 👨‍🍳",
+          "zh": "好的，请稍等！",
+          "pinyin": "Hǎo de, qǐng shāoděng!",
+          "th": "ได้เลยครับ รอสักครู่นะครับ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "หากต้องการบอกว่าอาหารจานนี้ 'อร่อยมาก' ต้องพูดคำว่าอะไร?",
+          "options": [
+            "好 (hǎo)",
+            "好吃 (hǎochī)",
+            "喝 (hē)",
+            "不 (bù)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "好吃 (hǎochī) แปลว่า 'อร่อย' (ดีที่จะกิน)",
+          "encouragement": "เก่งมาก! อร่อยจนต้องขอเบิ้ลเลย!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยคสั่งน้ำเปล่า: (ฉันเอาน้ำเปล่า)",
+          "tokens": [
+            "水",
+            "我要"
+          ],
+          "correct_sequence": [
+            "我要",
+            "水"
+          ],
+          "pinyin": "Wǒ yào shuǐ.",
+          "meaning_th": "ฉันเอาน้ำเปล่า"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเดินเข้าร้านอาหารในเฉิงตู พนักงานนำบะหมี่มาเสิร์ฟ กลิ่นหอมฟุ้ง คุณตักกินคำแรกแล้วอร่อยถูกใจมาก อยากเอ่ยปากชมพ่อครัว จะพูดว่าอย่างไร?",
+        "options": [
+          "再见！",
+          "不好！",
+          "很好吃！谢谢！ (Hěn hǎochī! Xièxie!)",
+          "不客气"
+        ],
+        "correct_index": 2,
+        "explanation_th": "กล่าวชมว่า '很好吃！谢谢！' (อร่อยมากครับ ขอบคุณครับ) พ่อครัวจะยิ้มแก้มปริ!",
+        "encouragement": "เยี่ยมยอด! พ่อครัวแถมเกี๊ยวให้คุณชิมฟรีอีกจานเลย!"
+      },
+      "cheer_trophy": {
+        "badge_name": "นักชิมสตรีทฟู้ดตัวยง 🥟🍜",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

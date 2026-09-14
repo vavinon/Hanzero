@@ -1,0 +1,241 @@
+{
+  "unit_id": "tier1_u02",
+  "tier": 1,
+  "unit_number": 2,
+  "title": {
+    "zh": "数字、日历与时间",
+    "th": "ตัวเลข วันที่ & เวลา (Numbers, Calendar & Time)",
+    "en": "Numbers, Calendar & Time"
+  },
+  "description": "นับเลข 0-10 ท่ามือจีน วันนี้ พรุ่งนี้ กี่โมง และนัดหมายเวลากินข้าวได้อย่างเป็นธรรมชาติ",
+  "lessons": [
+    {
+      "lesson_id": "t1_u02_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "数字0-10与中国手势",
+        "th": "นับเลข 0-10 & มหัศจรรย์ภาษามือจีน",
+        "en": "Numbers 0-10 & Chinese Hand Gestures"
+      },
+      "can_do": {
+        "th": "นับเลข 1-10 และทำภาษามือคนจีนด้วยมือเดียวได้คล่องแคล่ว",
+        "en": "Count 1-10 and use one-handed Chinese gestures"
+      },
+      "baby_step_goal": "จำเลข 1-10 และทำท่ายิงปืน 8 (bā) กับโทรศัพท์ 6 (liù) ด้วยมือเดียว!",
+      "vocabulary": [
+        {
+          "id": "hsk1_0001",
+          "hanzi": "一",
+          "pinyin": "yī",
+          "pinyin_tone": "yi1",
+          "meaning_th": "หนึ่ง",
+          "meaning_en": "one",
+          "radical": "一",
+          "radical_name_th": "หมวดเส้นนอน",
+          "stroke_count": 1,
+          "kid_mnemonic": "เส้นตรงนอนหนึ่งเส้น = 1",
+          "body_gesture": "ชูนิ้วชี้ 1 นิ้ว"
+        },
+        {
+          "id": "hsk1_0002",
+          "hanzi": "二",
+          "pinyin": "èr",
+          "pinyin_tone": "er4",
+          "meaning_th": "สอง",
+          "meaning_en": "two",
+          "radical": "二",
+          "radical_name_th": "หมวดสองเส้น",
+          "stroke_count": 2,
+          "kid_mnemonic": "เส้นนอนสองเส้นคู่กัน = 2",
+          "body_gesture": "ชูนิ้วชี้และนิ้วกลาง (สู้ๆ)"
+        },
+        {
+          "id": "hsk1_0003",
+          "hanzi": "三",
+          "pinyin": "sān",
+          "pinyin_tone": "san1",
+          "meaning_th": "สาม",
+          "meaning_en": "three",
+          "radical": "一",
+          "radical_name_th": "หมวดเส้นนอน",
+          "stroke_count": 3,
+          "kid_mnemonic": "เส้นนอนสามเส้นเรียงกัน = 3",
+          "body_gesture": "ชูสามนิ้ว"
+        },
+        {
+          "id": "hsk1_0004",
+          "hanzi": "四",
+          "pinyin": "sì",
+          "pinyin_tone": "si4",
+          "meaning_th": "สี่",
+          "meaning_en": "four",
+          "radical": "囗",
+          "radical_name_th": "หมวดกล่องล้อม",
+          "stroke_count": 5,
+          "kid_mnemonic": "กล่องสี่เหลี่ยมมีผ้าม่านสองข้าง = 4",
+          "body_gesture": "ชูสี่นิ้วหุบนิ้วโป้ง"
+        },
+        {
+          "id": "hsk1_0005",
+          "hanzi": "五",
+          "pinyin": "wǔ",
+          "pinyin_tone": "wu3",
+          "meaning_th": "ห้า",
+          "meaning_en": "five",
+          "radical": "二",
+          "radical_name_th": "หมวดสองเส้น",
+          "stroke_count": 4,
+          "kid_mnemonic": "เส้นคดไปมา นับได้ 5 มุม",
+          "body_gesture": "แบมือทั้ง 5 นิ้วร่าเริง"
+        },
+        {
+          "id": "hsk1_0006",
+          "hanzi": "六",
+          "pinyin": "liù",
+          "pinyin_tone": "liu4",
+          "meaning_th": "หก",
+          "meaning_en": "six",
+          "radical": "八",
+          "radical_name_th": "หมวดแปด",
+          "stroke_count": 4,
+          "kid_mnemonic": "คนกางแขนขาเต้นอย่างมีความสุข",
+          "body_gesture": "ชูนิ้วโป้งกับนิ้วก้อย (ท่าฮัลโหลโทรศัพท์)"
+        },
+        {
+          "id": "hsk1_0007",
+          "hanzi": "七",
+          "pinyin": "qī",
+          "pinyin_tone": "qi1",
+          "meaning_th": "เจ็ด",
+          "meaning_en": "seven",
+          "radical": "一",
+          "radical_name_th": "หมวดเส้นนอน",
+          "stroke_count": 2,
+          "kid_mnemonic": "เลข 7 กลับหัวเหมือนจอบขุดดิน",
+          "body_gesture": "จีบนิ้วโป้ง นิ้วชี้ นิ้วกลาง รวมกัน"
+        },
+        {
+          "id": "hsk1_0008",
+          "hanzi": "八",
+          "pinyin": "bā",
+          "pinyin_tone": "ba1",
+          "meaning_th": "แปด",
+          "meaning_en": "eight",
+          "radical": "八",
+          "radical_name_th": "หมวดแปด",
+          "stroke_count": 2,
+          "kid_mnemonic": "หนวดมังกรสองข้างอ้าออก รับความมั่งคั่ง",
+          "body_gesture": "กางนิ้วโป้งและนิ้วชี้เป็นรูปปืน (เล็งเป้า 8)"
+        },
+        {
+          "id": "hsk1_0009",
+          "hanzi": "九",
+          "pinyin": "jiǔ",
+          "pinyin_tone": "jiu3",
+          "meaning_th": "เก้า",
+          "meaning_en": "nine",
+          "radical": "乙",
+          "radical_name_th": "หมวดตะขอ",
+          "stroke_count": 2,
+          "kid_mnemonic": "คนคุกเข่าอธิษฐานขอพรอายุยืนยาว",
+          "body_gesture": "งอนิ้วชี้เป็นรูปตะขอเบ็ด"
+        },
+        {
+          "id": "hsk1_0010",
+          "hanzi": "十",
+          "pinyin": "shí",
+          "pinyin_tone": "shi2",
+          "meaning_th": "สิบ",
+          "meaning_en": "ten",
+          "radical": "十",
+          "radical_name_th": "หมวดกากบาท",
+          "stroke_count": 2,
+          "kid_mnemonic": "เครื่องหมายบวก รวมครบ 10 ประการ",
+          "body_gesture": "กำปั้นแน่น หรือทำนิ้วชี้สองข้างไขว้กันเป็นกากบาท"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรเลขผสม 11 - 99: ง่ายที่สุดในโลก!",
+        "explanation_th": "ภาษาจีนนับเลขเหมือนคณิตศาสตร์ตรงไปตรงมา: สิบ-เอ็ด (十 + 一 = 十一), ยี่สิบ (二 + 十 = 二十)",
+        "patterns": [
+          {
+            "formula": "11 = 十 + 一 (shí-yī)",
+            "th": "สิบเอ็ด"
+          },
+          {
+            "formula": "20 = 二 + 十 (èr-shí)",
+            "th": "ยี่สิบ"
+          },
+          {
+            "formula": "25 = 二 + 十 + 五 (èr-shí-wǔ)",
+            "th": "ยี่สิบห้า"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "แพนด้าเป่าเปา 🐼",
+          "zh": "你要几个？",
+          "pinyin": "Nǐ yào jǐ ge?",
+          "th": "เธอเอาผลไม้กี่ลูกจ๊ะ?"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "我要八个，谢谢！",
+          "pinyin": "Wǒ yào bā ge, xièxie!",
+          "th": "ผมเอา 8 ลูกครับ ขอบคุณครับ!"
+        },
+        {
+          "speaker_name": "แพนด้าเป่าเปา 🐼",
+          "zh": "给你八个，再见！",
+          "pinyin": "Gěi nǐ bā ge, zàijiàn!",
+          "th": "ให้หนู 8 ลูกจ้า บ๊ายบาย!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "hand_gesture_match",
+          "question_th": "คนจีนทำมือเป็นรูป 'ปืน' (กางนิ้วโป้งกับนิ้วชี้) หมายถึงเลขใด?",
+          "options": [
+            "เลข 2",
+            "เลข 5",
+            "เลข 8 (八 - bā)",
+            "เลข 10"
+          ],
+          "correct_index": 2,
+          "explanation_th": "นิ้วโป้งกับนิ้วชี้กางออกดูเหมือนตัว '八' (แปด)",
+          "encouragement": "ยอดเยี่ยมมาก! ภาษามือคนจีนเก่งระดับโปรแล้ว!"
+        },
+        {
+          "type": "math_chinese",
+          "question_th": "เลข 15 ในภาษาจีนเขียนและอ่านอย่างไร?",
+          "options": [
+            "五十一 (wǔshíyī)",
+            "十五 (shíwǔ)",
+            "一五 (yīwǔ)",
+            "十 (shí)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "15 = 十 (สิบ) + 五 (ห้า) รวมกันเป็น 十五 (shíwǔ)",
+          "encouragement": "คิดเลขจีนไวดั่งสายฟ้าฟาด!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "แม่ค้าผลไม้ในตลาดปักกิ่งถามว่า '几斤？' (เอากี่ชั่ง?) คุณต้องการซื้อ 6 ชั่ง แต่รอบข้างเสียงดังมาก คุณควรทำภาษามือแบบไหนให้แม่ค้าเข้าใจทันที?",
+        "options": [
+          "ชูนิ้วก้อยนิ้วเดียว",
+          "ทำมือรูปโทรศัพท์ ชูนิ้วโป้งและนิ้วก้อย (เลข 6)",
+          "ชู 6 นิ้วโดยใช้สองมือ",
+          "แบมือ 5 นิ้ว"
+        ],
+        "correct_index": 1,
+        "explanation_th": "การชูนิ้วโป้งและนิ้วก้อยด้วยมือเดียวคือเลข 6 (liù) สากลของคนจีน!",
+        "encouragement": "ว้าว! แม่ค้ายิ้มแฉ่งหยิบผลไม้ 6 ชั่งส่งให้ทันที!"
+      },
+      "cheer_trophy": {
+        "badge_name": "ปรมาจารย์ตัวเลข & ภาษามือจีน 🔢",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

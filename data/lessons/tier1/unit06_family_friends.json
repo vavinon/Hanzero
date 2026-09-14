@@ -1,0 +1,161 @@
+{
+  "unit_id": "tier1_u06",
+  "tier": 1,
+  "unit_number": 6,
+  "title": {
+    "zh": "家人与朋友圈子",
+    "th": "ครอบครัว & คนรอบตัว (Family & Friends)",
+    "en": "Family & Friends"
+  },
+  "description": "แนะนำคุณพ่อ คุณแม่ พี่น้อง เพื่อนสนิท เล่าเรื่องครอบครัวให้คนจีนฟังอย่างอบอุ่น",
+  "lessons": [
+    {
+      "lesson_id": "t1_u06_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "这是我的爸爸妈妈",
+        "th": "นี่คือคุณพ่อคุณแม่ของฉัน",
+        "en": "This is My Dad and Mom"
+      },
+      "can_do": {
+        "th": "แนะนำสมาชิกในครอบครัวและเพื่อนด้วยคำว่า '这是我的...' (นี่คือ...ของฉัน) ได้",
+        "en": "Introduce family members and friends using 这是我的..."
+      },
+      "baby_step_goal": "จำคำเรียกพ่อแม่และพี่น้อง: 爸爸 (ป้าปะ), 妈妈 (มามะ), 朋友 (เผิงโหย่ว)",
+      "vocabulary": [
+        {
+          "id": "hsk1_0050",
+          "hanzi": "爸爸",
+          "pinyin": "bàba",
+          "pinyin_tone": "ba4ba5",
+          "meaning_th": "พ่อ, คุณพ่อ",
+          "meaning_en": "father / dad",
+          "radical": "父",
+          "radical_name_th": "หมวดพ่อ",
+          "stroke_count": 8,
+          "kid_mnemonic": "คุณพ่อไว้หนวดเขี้ยวใจดี",
+          "body_gesture": "ทำท่าลูบหนวดเท่ๆ"
+        },
+        {
+          "id": "hsk1_0051",
+          "hanzi": "妈妈",
+          "pinyin": "māma",
+          "pinyin_tone": "ma1ma5",
+          "meaning_th": "แม่, คุณแม่",
+          "meaning_en": "mother / mom",
+          "radical": "女",
+          "radical_name_th": "หมวดผู้หญิง",
+          "stroke_count": 12,
+          "kid_mnemonic": "ผู้หญิง (女) ที่เลี้ยงดูเราอย่างทะนุถนอม (马)",
+          "body_gesture": "ทำสองมือโอบกอดอบอุ่น"
+        },
+        {
+          "id": "hsk1_0052",
+          "hanzi": "朋友",
+          "pinyin": "péngyou",
+          "pinyin_tone": "peng2you5",
+          "meaning_th": "เพื่อน",
+          "meaning_en": "friend",
+          "radical": "月 / 又",
+          "radical_name_th": "ดวงจันทร์คู่",
+          "stroke_count": 12,
+          "kid_mnemonic": "พระจันทร์สองดวงเคียงคู่กัน = เพื่อนแท้ไม่ทิ้งกัน",
+          "body_gesture": "กอดคอเพื่อนข้างๆ ยิ้มแย้ม"
+        },
+        {
+          "id": "hsk1_0053",
+          "hanzi": "的",
+          "pinyin": "de",
+          "pinyin_tone": "de5",
+          "meaning_th": "ของ (แสดงความเป็นเจ้าของ)",
+          "meaning_en": "of / possessive particle",
+          "radical": "白",
+          "radical_name_th": "หมวดสีขาว",
+          "stroke_count": 8,
+          "kid_mnemonic": "เป้าหมายสีขาวที่ฉันเป็นเจ้าของ",
+          "body_gesture": "เอามือทาบที่อก 'ของฉัน'"
+        },
+        {
+          "id": "hsk1_0054",
+          "hanzi": "高兴",
+          "pinyin": "gāoxìng",
+          "pinyin_tone": "gao1xing4",
+          "meaning_th": "ดีใจ, ยินดี",
+          "meaning_en": "happy / glad",
+          "radical": "高",
+          "radical_name_th": "หมวดสูง",
+          "stroke_count": 16,
+          "kid_mnemonic": "หอคอยสูง หัวเราะเบิกบานใจ",
+          "body_gesture": "กระโดดชูมือดีใจ"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรแสดงความเป็นเจ้าของ: [คน] + 的 + [ของ]",
+        "explanation_th": "คำว่า 的 (de) เทียบเท่าคำว่า 'ของ' ในภาษาไทย: 我的 (ของฉัน), 你的 (ของเธอ)",
+        "patterns": [
+          {
+            "formula": "我的朋友",
+            "pinyin": "wǒ de péngyou",
+            "th": "เพื่อนของฉัน"
+          },
+          {
+            "formula": "认识你很高兴！",
+            "pinyin": "Rènshi nǐ hěn gāoxìng!",
+            "th": "ยินดีที่ได้รู้จักเธอนะ!"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "你好！这是我的朋友，王力。",
+          "pinyin": "Nǐ hǎo! Zhè shì wǒ de péngyou, Wáng Lì.",
+          "th": "สวัสดีครับ นี่คือเพื่อนของผม ชื่อหวังลี่ครับ"
+        },
+        {
+          "speaker_name": "หวังลี่ 👦",
+          "zh": "你好！认识你很高兴！",
+          "pinyin": "Nǐ hǎo! Rènshi nǐ hěn gāoxìng!",
+          "th": "สวัสดีครับ ยินดีที่ได้รู้จักนะครับ!"
+        },
+        {
+          "speaker_name": "แพนด้าเป่าเปา 🐼",
+          "zh": "我也很高兴！",
+          "pinyin": "Wǒ yě hěn gāoxìng!",
+          "th": "ฉันก็ดีใจมากๆ เช่นกันจ้า!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "คำว่า '我的妈妈' แปลว่าอะไร?",
+          "options": [
+            "เพื่อนของฉัน",
+            "คุณแม่ของฉัน",
+            "คุณพ่อของฉัน",
+            "คุณครูของฉัน"
+          ],
+          "correct_index": 1,
+          "explanation_th": "我 (ฉัน) + 的 (ของ) + 妈妈 (แม่) = คุณแม่ของฉัน",
+          "encouragement": "ยอดเยี่ยมมาก! อบอุ่นหัวใจที่สุดเลย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในงานปาร์ตี้ต้อนรับ คุณได้พบกับโฮสต์แฟมิลี่ชาวจีนเป็นครั้งแรก เขาจับมือคุณ คุณควรพูดประโยคแสดงความยินดีอย่างไร?",
+        "options": [
+          "对不起！",
+          "认识你很高兴！ (Rènshi nǐ hěn gāoxìng!)",
+          "这个多少钱？",
+          "不要！"
+        ],
+        "correct_index": 1,
+        "explanation_th": "พูดว่า '认识你很高兴！' (ยินดีที่ได้รู้จักครับ) เป็นการเปิดมิตรภาพที่สวยงามที่สุด!",
+        "encouragement": "เยี่ยมยอด! โฮสต์ชาวจีนยิ้มกว้างและต้อนรับคุณเข้าบ้านอย่างอบอุ่น!"
+      },
+      "cheer_trophy": {
+        "badge_name": "ทูตมิตรภาพอบอุ่นใจ 👨‍👩‍👧‍👦💖",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

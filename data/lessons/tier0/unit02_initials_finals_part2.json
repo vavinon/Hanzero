@@ -1,0 +1,236 @@
+{
+  "unit_id": "tier0_u02",
+  "tier": 0,
+  "unit_number": 2,
+  "title": {
+    "zh": "舌根音与单韵母 (二)",
+    "th": "เสียงโคนลิ้น & ลมพ่น (g, k, h, j, q, x) + สระ (i, u, ü)",
+    "en": "Velar & Palatal Initials + Simple Finals (i, u, ü)"
+  },
+  "description": "ไขความลับสระปากจิ๋ว ü ที่คนไทยกลัว พร้อมฝึกเสียงโคนลิ้นและเพดานแข็งอย่างสบายอารมณ์",
+  "archetype": "phonetic_and_stroke",
+  "lessons": [
+    {
+      "lesson_id": "t0_u02_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "单韵母 i, u, ü",
+        "th": "สระยิ้ม i, สระปากจู๋ u, และสระปราบเซียน ü",
+        "en": "Simple Finals i, u, ü"
+      },
+      "can_do": {
+        "th": "ออกเสียงสระ ü ได้เป๊ะด้วยเคล็ดลับ 'ปากทำท่าอู แต่ข้างในพูดอี'",
+        "en": "Master the tricky ü final using the mouth-shape trick"
+      },
+      "baby_step_goal": "ทำปากจู๋เหมือนจะเป่านกหวีด แล้วปล่อยเสียง 'อี' ออกมา = ปิ๊ง! ได้เสียง ü ทันที!",
+      "sound_cards": [
+        {
+          "symbol": "i",
+          "type": "final",
+          "thai_approx": "อี",
+          "mouth_shape": "ฉีกยิ้มกว้าง ปลายลิ้นแตะหลังฟันล่าง",
+          "kid_mnemonic": "ยิ้มหวานถ่ายรูป 'หนึ่ง สอง ซั่ม... ชีสสส (อี)'",
+          "body_gesture": "ชูสองนิ้วยิ้มหวาน",
+          "example_word": {
+            "hanzi": "一",
+            "pinyin": "yī",
+            "meaning_th": "เลขหนึ่ง"
+          }
+        },
+        {
+          "symbol": "u",
+          "type": "final",
+          "thai_approx": "อู",
+          "mouth_shape": "ห่อปากจู๋ยื่นไปข้างหน้า รูเปิดเล็กนิดเดียว",
+          "kid_mnemonic": "นกฮูกตากลมโต ร้อง 'ฮูกกกก (อู)'",
+          "body_gesture": "ทำมือครอบเป็นจะงอยปากนกยื่นไปข้างหน้า",
+          "example_word": {
+            "hanzi": "五",
+            "pinyin": "wǔ",
+            "meaning_th": "เลขห้า"
+          }
+        },
+        {
+          "symbol": "ü",
+          "type": "final",
+          "thai_approx": "อวี (สระ อู ผสม อี)",
+          "mouth_shape": "ปากจู๋กลมจิ๋ว ห้ามขยับปาก แล้วเปล่งเสียง 'อี'",
+          "kid_mnemonic": "ปลาทองพ่นฟองน้ำ ปากกลมป๊อก 'อวี่ อวี่ อวี่'",
+          "body_gesture": "ทำปากจู๋กลมบล็อกไว้แล้วส่งเสียงปลาทองว่ายน้ำ",
+          "example_word": {
+            "hanzi": "鱼",
+            "pinyin": "yú",
+            "meaning_th": "ปลา"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "mouth_shape_match",
+          "question_th": "เคล็ดลับเด็ดในการออกเสียงสระ 'ü' ให้ถูกต้องที่สุดคืออะไร?",
+          "options": [
+            "อ้าปากกว้างๆ ร้องโอ้โฮ",
+            "ทำปากจู๋เป็นรูเล็กเหมือนสระ 'u' แต่ข้างในเปล่งเสียง 'i (อี)'",
+            "กัดฟันแน่นๆ แล้วพูดอู",
+            "แลบลิ้นออกมาแตะริมฝีปาก"
+          ],
+          "correct_index": 1,
+          "explanation_th": "ถูกต้อง! ปากกลมจิ๋ว ห้ามขยับปาก แล้วปล่อยเสียง 'อี' ลมจะกลายเป็น 'ü' โดยอัตโนมัติ!",
+          "encouragement": "สุดยอดมาก! เคล็ดลับนี้ใช้ได้ผลตลอดชีวิตเลยนะเด็กดี!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "เจ้าของสระปลาทอง ü 🐟",
+        "xp_reward": 35
+      }
+    },
+    {
+      "lesson_id": "t0_u02_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "声母 g, k, h",
+        "th": "3 เสียงโคนลิ้น (g, k, h)",
+        "en": "Velar Initials g, k, h"
+      },
+      "can_do": {
+        "th": "ยกโคนลิ้นแตะเพดานอ่อนเพื่อออกเสียง g (ก), k (ค), h (ฮ) ได้ชัดเจน",
+        "en": "Pronounce velar sounds g, k, h comfortably"
+      },
+      "baby_step_goal": "จำว่า g คือ ก.ไก่ (ไม่พ่นลม) ส่วน k คือ ค.ควาย (พ่นลมแรง)",
+      "sound_cards": [
+        {
+          "symbol": "g",
+          "type": "initial",
+          "thai_approx": "ก (ไม่พ่นลม)",
+          "mouth_shape": "ยกโคนลิ้นกั้นลม แล้วเปิดออกเบาๆ",
+          "kid_mnemonic": "ไก่กุ๊กไก่ ไม่พ่นลม",
+          "body_gesture": "ทำมือเป็นปีกไก่กระพือ",
+          "example_word": {
+            "hanzi": "哥",
+            "pinyin": "gē",
+            "meaning_th": "พี่ชาย"
+          }
+        },
+        {
+          "symbol": "k",
+          "type": "initial",
+          "thai_approx": "ค (พ่นลมแรง)",
+          "mouth_shape": "ยกโคนลิ้นกั้นลม แล้วพ่นลมพุ่งระเบิดออกมา",
+          "kid_mnemonic": "ไอ ค่อกแค่ก พ่นลมแรง!",
+          "body_gesture": "เอามือป้องปากเช็คลมพุ่ง",
+          "example_word": {
+            "hanzi": "渴",
+            "pinyin": "kě",
+            "meaning_th": "กระหายน้ำ"
+          }
+        },
+        {
+          "symbol": "h",
+          "type": "initial",
+          "thai_approx": "ฮ (เสียงเสียดแทรกในคอ)",
+          "mouth_shape": "ปล่อยลมเสียดสีผ่านโคนลิ้นและลำคออย่างผ่อนคลาย",
+          "kid_mnemonic": "หัวเราะ ฮ่าๆๆ มีความสุขจัง",
+          "body_gesture": "เอามือจับหน้าอกหัวเราะอย่างมีความสุข",
+          "example_word": {
+            "hanzi": "好",
+            "pinyin": "hǎo",
+            "meaning_th": "ดี"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '好' (ดี) ขึ้นต้นด้วยพยัญชนะเสียงใด?",
+          "options": [
+            "g (ก)",
+            "k (ค)",
+            "h (ฮ)",
+            "b (ป)"
+          ],
+          "correct_index": 2,
+          "explanation_th": "好 (hǎo) ขึ้นต้นด้วยพยัญชนะ 'h' ออกเสียง ฮ.นกฮูก เสียดสีในลำคอเบาๆ",
+          "encouragement": "ถูกต้องจ้า! จำเก่งมากเลย!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "จอมยุทธ์โคนลิ้น g-k-h 🦅",
+        "xp_reward": 35
+      }
+    },
+    {
+      "lesson_id": "t0_u02_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "声母 j, q, x",
+        "th": "3 เสียงเพดานแข็งหน้ายิ้ม (j, q, x)",
+        "en": "Palatal Initials j, q, x"
+      },
+      "can_do": {
+        "th": "ยิ้มมุมปากและใช้หน้าลิ้นแตะเพดานแข็งเพื่อออกเสียง j (จ), q (ช), x (ซ)",
+        "en": "Pronounce palatal sounds j, q, x with a smile"
+      },
+      "baby_step_goal": "หน้าต้องยิ้มเสมอเมื่อพูด j, q, x!",
+      "sound_cards": [
+        {
+          "symbol": "j",
+          "type": "initial",
+          "thai_approx": "จ (ยิ้มกว้าง ไม่พ่นลม)",
+          "mouth_shape": "หน้าลิ้นแตะเพดานแข็ง ฉีกยิ้ม",
+          "kid_mnemonic": "ไก่น้อย จิ๊บๆ ยิ้มแฉ่ง",
+          "body_gesture": "ทำนิ้วจีบยิ้มหวาน",
+          "example_word": {
+            "hanzi": "鸡",
+            "pinyin": "jī",
+            "meaning_th": "ไก่"
+          }
+        },
+        {
+          "symbol": "q",
+          "type": "initial",
+          "thai_approx": "ช (ยิ้มกว้าง + พ่นลมแรงสุดขีด!)",
+          "mouth_shape": "หน้าลิ้นแตะเพดานแข็ง แล้วพ่นลมฟู่พุ่งออกมา",
+          "kid_mnemonic": "ลูกโป่งแตก ฟู่! ลมพุ่งปรี๊ด",
+          "body_gesture": "ทำท่าลูกโป่งระเบิดขยายสองมือออก",
+          "example_word": {
+            "hanzi": "七",
+            "pinyin": "qī",
+            "meaning_th": "เลขเจ็ด"
+          }
+        },
+        {
+          "symbol": "x",
+          "type": "initial",
+          "thai_approx": "ซ (ยิ้มกว้าง ลมพ่นผ่านซอกลิ้น)",
+          "mouth_shape": "หน้าลิ้นยกใกล้เพดานแข็ง ลมเสียดสีบางเบา",
+          "kid_mnemonic": "แตงโมสีแดง สดชื่น 西瓜 (ซีกวา)",
+          "body_gesture": "ทำท่าถือแตงโมกินคำโต",
+          "example_word": {
+            "hanzi": "西",
+            "pinyin": "xī",
+            "meaning_th": "ทิศตะวันตก"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "พยัญชนะ 'q' มีลักษณะการออกเสียงอย่างไรเมื่อเทียบกับ 'j'?",
+          "options": [
+            "ไม่พ่นลมเหมือนกัน",
+            "q ต้องพ่นลมแรงพุ่งออกมาอย่างชัดเจน",
+            "ต้องห่อปากกลม",
+            "ต้องม้วนลิ้นเข้าในคอ"
+          ],
+          "correct_index": 1,
+          "explanation_th": "ถูกต้อง! 'q' คือเสียงคู่แฝดพ่นลมแรงของ 'j'",
+          "encouragement": "ยอดเยี่ยม! จับเคล็ดลับลมพ่นได้แม่นยำมาก!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "ยิ้มหวานเสียงใส j-q-x 😊",
+        "xp_reward": 30
+      }
+    }
+  ]
+}

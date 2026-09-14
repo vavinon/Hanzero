@@ -1,0 +1,161 @@
+{
+  "unit_id": "tier1_u09",
+  "tier": 1,
+  "unit_number": 9,
+  "title": {
+    "zh": "身体不适与就医",
+    "th": "ร่างกาย สุขภาพ & ไม่สบาย (Health & Body)",
+    "en": "Health & Body"
+  },
+  "description": "ปวดหัว ไม่สบาย เป็นไข้ หาหมอ ซื้อยาแก้ปวดที่ร้านขายยาในเซี่ยงไฮ้ รอดปลอดภัยเมื่อป่วย",
+  "lessons": [
+    {
+      "lesson_id": "t1_u09_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "我不舒服，头疼",
+        "th": "ฉันรู้สึกไม่ค่อยสบาย ปวดหัวจังเลย",
+        "en": "I Don't Feel Well, I Have a Headache"
+      },
+      "can_do": {
+        "th": "บอกอาการเจ็บป่วยพื้นฐาน เช่น '我不舒服' (ฉันไม่สบาย) และ '头疼' (ปวดหัว) ได้",
+        "en": "Express basic sickness symptoms like headache and discomfort"
+      },
+      "baby_step_goal": "จำคำว่า 疼 (téng - ปวด/เจ็บ) ชี้ไปที่อวัยวะไหน แปลว่าปวดตรงนั้น!",
+      "vocabulary": [
+        {
+          "id": "hsk1_0080",
+          "hanzi": "头",
+          "pinyin": "tóu",
+          "pinyin_tone": "tou2",
+          "meaning_th": "ศีรษะ, หัว",
+          "meaning_en": "head",
+          "radical": "大",
+          "radical_name_th": "หมวดใหญ่",
+          "stroke_count": 5,
+          "kid_mnemonic": "มีจุดสองจุดอยู่บนหัวเหมือนมวยผม",
+          "body_gesture": "เอามือสองข้างกุมหัว"
+        },
+        {
+          "id": "hsk1_0081",
+          "hanzi": "疼",
+          "pinyin": "téng",
+          "pinyin_tone": "teng2",
+          "meaning_th": "ปวด, เจ็บ",
+          "meaning_en": "painful / hurt",
+          "radical": "疒",
+          "radical_name_th": "หมวดเตียงคนป่วย",
+          "stroke_count": 10,
+          "kid_mnemonic": "มีหลังคาคนป่วย (疒) นอนปวดระบม",
+          "body_gesture": "ทำหน้าเหยเกกุมจุดที่ปวด"
+        },
+        {
+          "id": "hsk1_0082",
+          "hanzi": "不舒服",
+          "pinyin": "bù shūfu",
+          "pinyin_tone": "bu4 shu1fu5",
+          "meaning_th": "ไม่สบาย, อึดอัดตัว",
+          "meaning_en": "uncomfortable / unwell",
+          "radical": "不 / 舌",
+          "radical_name_th": "ไม่ + สบาย",
+          "stroke_count": 19,
+          "kid_mnemonic": "ร่างกายบอกว่า 'ไม่ (不) สบายตัวเลย'",
+          "body_gesture": "เอามือกุมหน้าอกหน้าผาก"
+        },
+        {
+          "id": "hsk1_0083",
+          "hanzi": "医院",
+          "pinyin": "yīyuàn",
+          "pinyin_tone": "yi1yuan4",
+          "meaning_th": "โรงพยาบาล",
+          "meaning_en": "hospital",
+          "radical": "匚 / 阝",
+          "radical_name_th": "การรักษา + ลานกว้าง",
+          "stroke_count": 16,
+          "kid_mnemonic": "สถานที่หมอรักษาผู้คน = โรงพยาบาล",
+          "body_gesture": "ทำมือรูปกากบาทพยาบาล"
+        },
+        {
+          "id": "hsk1_0084",
+          "hanzi": "药",
+          "pinyin": "yào",
+          "pinyin_tone": "yao4",
+          "meaning_th": "ยา",
+          "meaning_en": "medicine",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้าสมุนไพร",
+          "stroke_count": 9,
+          "kid_mnemonic": "พืชสมุนไพร (艹) สรรพคุณยอดเยี่ยมนำมาปรุงเป็นยา",
+          "body_gesture": "ทำท่าหยิบเม็ดยากินกับน้ำ"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรบอกอาการปวด: [อวัยวะ] + 疼",
+        "explanation_th": "ง่ายดายมาก! แค่บอกชื่ออวัยวะแล้วเติมคำว่า 疼 (téng - ปวด): 头疼 (ปวดหัว), 肚子疼 (ปวดท้อง)",
+        "patterns": [
+          {
+            "formula": "我头疼。",
+            "pinyin": "Wǒ tóu téng.",
+            "th": "ฉันปวดหัวครับ/ค่ะ"
+          },
+          {
+            "formula": "我要买药。",
+            "pinyin": "Wǒ yào mǎi yào.",
+            "th": "ฉันต้องการซื้อยาครับ"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "เภสัชกร 👩‍⚕️",
+          "zh": "你好！你哪里不舒服？",
+          "pinyin": "Nǐ hǎo! Nǐ nǎlǐ bù shūfu?",
+          "th": "สวัสดีค่ะ คุณไม่สบายตรงไหนคะ?"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "你好，我头疼，发烧了。",
+          "pinyin": "Nǐ hǎo, wǒ tóu téng, fāshāo le.",
+          "th": "สวัสดีครับ ผมปวดหัวและเป็นไข้ครับ"
+        },
+        {
+          "speaker_name": "เภสัชกร 👩‍⚕️",
+          "zh": "这是感冒药，多喝水！",
+          "pinyin": "Zhè shì gǎnmàoyào, duō hē shuǐ!",
+          "th": "นี่คือยาแก้ไข้หวัด ดื่มน้ำเยอะๆ นะคะ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "คำว่า '头疼' (tóu téng) มีความหมายว่าอะไร?",
+          "options": [
+            "ปวดหัว",
+            "ปวดท้อง",
+            "เจ็บขา",
+            "เจ็บคอ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "头 (หัว) + 疼 (ปวด) = ปวดหัว",
+          "encouragement": "ถูกต้องนะคร้าบ! รู้วิธีบอกอาการป่วยได้อย่างปลอดภัย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเที่ยวเดินเล่นจนรู้สึกครั่นเนื้อครั่นตัว ปวดหัว จึงเดินเข้าร้านขายยาในเซี่ยงไฮ้ ต้องการขอยาแก้ปวดหัวจากเภสัชกร ควรบอกอาการอย่างไรให้ตรงประเด็น?",
+        "options": [
+          "你好，我要吃面条！",
+          "你好，我头疼，要买药。 (Nǐ hǎo, wǒ tóu téng, yào mǎi yào.)",
+          "再见！",
+          "这个多少钱？"
+        ],
+        "correct_index": 1,
+        "explanation_th": "บอกว่า '我头疼，要买药' (ผมปวดหัว อยากซื้อยาครับ) เภสัชกรจะหยิบยาแก้ปวดที่ถูกต้องให้ทันที!",
+        "encouragement": "ยอดเยี่ยมมาก! ดูแลตัวเองในต่างแดนได้อย่างมั่นใจและปลอดภัย!"
+      },
+      "cheer_trophy": {
+        "badge_name": "ผู้พิทักษ์สุขภาพตนเอง 💊🩺",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

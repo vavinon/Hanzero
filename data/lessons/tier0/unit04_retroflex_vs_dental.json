@@ -1,0 +1,175 @@
+{
+  "unit_id": "tier0_u04",
+  "tier": 0,
+  "unit_number": 4,
+  "title": {
+    "zh": "翘舌音与平舌音对决",
+    "th": "ลิ้นม้วน (zh, ch, sh, r) vs ลิ้นแบนชิดฟัน (z, c, s)",
+    "en": "Retroflex vs Dental Sibilants"
+  },
+  "description": "ด่านปราบเซียนยอดฮิต! เคล็ดลับแยกประสาทสัมผัสตำแหน่งลิ้น ม้วนขึ้นเพดาน vs แตะหลังฟันล่าง",
+  "archetype": "phonetic_and_stroke",
+  "lessons": [
+    {
+      "lesson_id": "t0_u04_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "翘舌四剑客 zh, ch, sh, r",
+        "th": "4 ขุนพลลิ้นม้วน: zh, ch, sh, r",
+        "en": "The 4 Retroflex Sounds"
+      },
+      "can_do": {
+        "th": "ยกปลายลิ้นงอขึ้นหาเพดานแข็งเพื่อออกเสียงกลุ่ม zh, ch, sh, r ได้อย่างถูกต้อง",
+        "en": "Produce retroflex sounds comfortably without tongue cramps"
+      },
+      "baby_step_goal": "เอาปลายลิ้นแตะเพดานเหงือกบนเหมือนกำลังอมลูกอม!",
+      "sound_cards": [
+        {
+          "symbol": "zh",
+          "type": "initial",
+          "thai_approx": "จ (ม้วนลิ้น ไม่พ่นลม)",
+          "mouth_shape": "ปลายลิ้นงอขึ้นแตะเพดานแข็ง แล้วปล่อยลมออกเบาๆ",
+          "kid_mnemonic": "จระเข้ลอยน้ำ อมลูกอมเม็ดโต ม้วนลิ้น",
+          "body_gesture": "งอนิ้วชี้ให้โค้งเหมือนลิ้นม้วน",
+          "example_word": {
+            "hanzi": "中",
+            "pinyin": "zhōng",
+            "meaning_th": "ตรงกลาง / ประเทศจีน"
+          }
+        },
+        {
+          "symbol": "ch",
+          "type": "initial",
+          "thai_approx": "ช (ม้วนลิ้น + พ่นลมแรง!)",
+          "mouth_shape": "ปลายลิ้นงอแตะเพดานแข็ง แล้วพ่นลมพุ่งระเบิดออกมา",
+          "kid_mnemonic": "รถไฟวิ่ง ปู๊นๆ พ่นไอน้ำ ชึ่กชั่ก",
+          "body_gesture": "หมุนแขนเป็นล้อรถไฟ",
+          "example_word": {
+            "hanzi": "吃",
+            "pinyin": "chī",
+            "meaning_th": "กิน"
+          }
+        },
+        {
+          "symbol": "sh",
+          "type": "initial",
+          "thai_approx": "ซ/ช (ม้วนลิ้น ลมเสียดสีเพดาน)",
+          "mouth_shape": "ปลายลิ้นใกล้เพดานแข็ง ลมไหลผ่านช่องว่างอย่างต่อเนื่อง",
+          "kid_mnemonic": "จุ๊ๆ อย่าส่งเสียงดัง ชู่ววว",
+          "body_gesture": "เอานิ้วชี้แตะปากทำท่า ชู่ววว",
+          "example_word": {
+            "hanzi": "是",
+            "pinyin": "shì",
+            "meaning_th": "เป็น, คือ, ใช่"
+          }
+        },
+        {
+          "symbol": "r",
+          "type": "initial",
+          "thai_approx": "ย/ร (ม้วนลิ้น เส้นเสียงสั่นสะเทือน)",
+          "mouth_shape": "ตำแหน่งเดียวกับ sh แต่เปล่งเสียงให้ลำคอสั่น",
+          "kid_mnemonic": "ดวงอาทิตย์ส่องแสง อบอุ่น ยรื่อออ",
+          "body_gesture": "เอามือทาบคอรู้สึกคอสั่นสะเทือน",
+          "example_word": {
+            "hanzi": "人",
+            "pinyin": "rén",
+            "meaning_th": "คน"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '吃' (chī - กิน) ต้องวางตำแหน่งลิ้นอย่างไร?",
+          "options": [
+            "แลบลิ้นออกนอกปาก",
+            "ปลายลิ้นงอขึ้นหาเพดานเหงือกบนและพ่นลมแรง",
+            "เอาลิ้นแตะฟันหน้าแบนราบ",
+            "ลิ้นไม่แตะส่วนใดเลย"
+          ],
+          "correct_index": 1,
+          "explanation_th": "ch เป็นกลุ่มลิ้นม้วน (翘舌音) ต้องงอปลายลิ้นขึ้นเพดานแข็งและพ่นลมแรง",
+          "encouragement": "ยอดเยี่ยมมาก! ลิ้นม้วนพ่นลมกินของอร่อยได้สบาย!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "อัศวินลิ้นม้วน 4 ทิศ 🗡️",
+        "xp_reward": 40
+      }
+    },
+    {
+      "lesson_id": "t0_u04_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "平舌三兄弟 z, c, s",
+        "th": "3 พี่น้องลิ้นแบนชิดฟัน: z, c, s",
+        "en": "The 3 Flat Dental Sounds"
+      },
+      "can_do": {
+        "th": "วางลิ้นแบนราบแตะหลังฟันล่างเพื่อออกเสียง z, c, s ชัดเจน ไม่ปนกับกลุ่มลิ้นม้วน",
+        "en": "Keep tongue completely flat behind lower teeth for z, c, s"
+      },
+      "baby_step_goal": "กัดฟันเบาๆ ยิ้มกว้าง ลิ้นห้ามงอเด็ดขาด!",
+      "sound_cards": [
+        {
+          "symbol": "z",
+          "type": "initial",
+          "thai_approx": "ซ/จ (ลิ้นแบนชิดฟัน ไม่พ่นลม)",
+          "mouth_shape": "ปลายลิ้นแตะหลังฟันบน แล้วถอยหลังเปิดช่องแคบ",
+          "kid_mnemonic": "ตัวต่อ บินมา ซื่อออ ไม่พ่นลม",
+          "body_gesture": "ใช้นิ้วชี้ทำท่าตัวต่อบิน",
+          "example_word": {
+            "hanzi": "再",
+            "pinyin": "zài",
+            "meaning_th": "อีกครั้ง"
+          }
+        },
+        {
+          "symbol": "c",
+          "type": "initial",
+          "thai_approx": "ช/ซ (ลิ้นแบน + พ่นลมแรงพุ่ง)",
+          "mouth_shape": "เหมือน z แต่พ่นลมผ่านซอกฟันอย่างรวดเร็ว",
+          "kid_mnemonic": "สเปรย์ฉีดน้ำ ฟู่! พ่นละออง",
+          "body_gesture": "ทำท่ากดกระป๋องสเปรย์",
+          "example_word": {
+            "hanzi": "菜",
+            "pinyin": "cài",
+            "meaning_th": "กับข้าว / ผัก"
+          }
+        },
+        {
+          "symbol": "s",
+          "type": "initial",
+          "thai_approx": "ส (ฟันสบกัน ลมพ่นผ่านซอกฟัน)",
+          "mouth_shape": "ปลายลิ้นใกล้หลังฟันบน ลมเสียดแทรกผ่านฟัน",
+          "kid_mnemonic": "งูเขียวเลื้อย ซี่ๆๆ ฟันชิด",
+          "body_gesture": "ทำมือเลื้อยเหมือนงู",
+          "example_word": {
+            "hanzi": "四",
+            "pinyin": "sì",
+            "meaning_th": "เลขสี่"
+          }
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คู่เปรียบเทียบ 'sì' (เลข 4) กับ 'shì' (ใช่) ต่างกันที่จุดใด?",
+          "options": [
+            "sì ใช้เสียงขึ้นจมูก",
+            "sì ลิ้นแบนชิดฟัน ส่วน shì ลิ้นต้องงอม้วนขึ้นหาเพดาน",
+            "sì เสียงยาวกว่า shì",
+            "ไม่มีความแตกต่างกันเลย"
+          ],
+          "correct_index": 1,
+          "explanation_th": "ถูกต้อง! sì (4) ลิ้นแบนชิดฟัน ส่วน shì (ใช่) ลิ้นต้องม้วนขึ้นเพดานปาก",
+          "encouragement": "เป๊ะมาก! แยกความต่างระหว่าง 4 กับ ใช่ ได้ขาดลอย!"
+        }
+      ],
+      "cheer_trophy": {
+        "badge_name": "ผู้พิทักษ์ลิ้นแบน z-c-s 🛡️",
+        "xp_reward": 40
+      }
+    }
+  ]
+}

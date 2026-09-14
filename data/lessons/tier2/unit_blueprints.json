@@ -1,0 +1,304 @@
+{
+  "tier_id": "tier2",
+  "tier_number": 2,
+  "name": {
+    "zh": "行者级：深度出行与生活 (HSK 3-4)",
+    "th": "Tier 2: Traveler (นักเดินทางท่องแดนมังกร)",
+    "en": "Tier 2: Traveler (Independent Exploration)"
+  },
+  "description": "เที่ยวจีนคนเดียว สั่งเดลิเวอรี่ จ่ายเงินผ่านมือถือ จองตั๋วรถไฟความเร็วสูง เรียกรถ และสนทนาลื่นไหลแบบคนท้องถิ่น",
+  "total_units": 15,
+  "units": [
+    {
+      "unit_id": "tier2_u01",
+      "unit_number": 1,
+      "title": {
+        "zh": "外卖订餐与备注",
+        "th": "สั่งอาหารเดลิเวอรี่ & ระบุหมายเหตุพิเศษ",
+        "en": "Food Delivery & Special Instructions"
+      },
+      "icon": "🛵",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "外卖",
+          "pinyin": "wàimài",
+          "meaning_th": "เดลิเวอรี่ / อาหารสั่งกลับบ้าน"
+        },
+        {
+          "hanzi": "送餐",
+          "pinyin": "sòngcān",
+          "meaning_th": "ส่งอาหาร"
+        },
+        {
+          "hanzi": "微辣",
+          "pinyin": "wēilà",
+          "meaning_th": "เผ็ดน้อย"
+        },
+        {
+          "hanzi": "不放香菜",
+          "pinyin": "bù fàng xiāngcài",
+          "meaning_th": "ไม่ใส่ผักชี"
+        },
+        {
+          "hanzi": "骑手",
+          "pinyin": "qíshǒu",
+          "meaning_th": "ไรเดอร์ส่งอาหาร"
+        }
+      ],
+      "grammar_point": "การใช้ '请 + 别/不要...' เพื่อระบุข้อห้ามในหมายเหตุ เช่น '请不要放辣' (โปรดอย่าใส่เผ็ด)",
+      "sample_dialogue": {
+        "speaker_a": "ไรเดอร์ 🛵: 您好，您的外卖到了，在酒店前台！",
+        "speaker_b": "ผู้เรียน 🧒: 好的，非常感谢，我马上下来拿！"
+      }
+    },
+    {
+      "unit_id": "tier2_u02",
+      "unit_number": 2,
+      "title": {
+        "zh": "微信与支付宝扫码支付",
+        "th": "กระเป๋าเงินดิจิทัล WeChat Pay & Alipay",
+        "en": "Mobile Payments (WeChat & Alipay)"
+      },
+      "icon": "📱",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "扫码",
+          "pinyin": "sǎomǎ",
+          "meaning_th": "สแกนคิวอาร์โค้ด"
+        },
+        {
+          "hanzi": "微信支付",
+          "pinyin": "Wēixìn zhīfù",
+          "meaning_th": "WeChat Pay"
+        },
+        {
+          "hanzi": "支付宝",
+          "pinyin": "Zhīfùbǎo",
+          "meaning_th": "Alipay"
+        },
+        {
+          "hanzi": "我扫你",
+          "pinyin": "wǒ sǎo nǐ",
+          "meaning_th": "ฉันสแกนเธอ (เธอเปิดรับเงิน)"
+        },
+        {
+          "hanzi": "你扫我",
+          "pinyin": "nǐ sǎo wǒ",
+          "meaning_th": "เธอสแกนฉัน (ฉันเปิดบาร์โค้ดจ่าย)"
+        }
+      ],
+      "grammar_point": "โครงสร้าง '用 + [วิธี] + 支付' เช่น '可以用微信支付吗？' (ใช้ WeChat Pay ได้ไหมครับ?)",
+      "sample_dialogue": {
+        "speaker_a": "สมชาย 🧒: 请问，可以刷微信吗？",
+        "speaker_b": "คนขาย 👩‍💼: 可以，我扫你还是你扫我？"
+      }
+    },
+    {
+      "unit_id": "tier2_u03",
+      "unit_number": 3,
+      "title": {
+        "zh": "乘坐高铁与火车站进站",
+        "th": "นั่งรถไฟความเร็วสูง (高铁) & ตรวจตั๋ว",
+        "en": "High-Speed Rail & Train Station"
+      },
+      "icon": "🚄",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "高铁",
+          "pinyin": "gāotiě",
+          "meaning_th": "รถไฟความเร็วสูง"
+        },
+        {
+          "hanzi": "二等座",
+          "pinyin": "èrděngzuò",
+          "meaning_th": "ที่นั่งชั้นสอง"
+        },
+        {
+          "hanzi": "候车室",
+          "pinyin": "hòuchēshì",
+          "meaning_th": "ห้องพักผู้โดยสารรอขึ้นรถ"
+        },
+        {
+          "hanzi": "检票口",
+          "pinyin": "jiǎnpiàokǒu",
+          "meaning_th": "ประตูตรวจตั๋ว"
+        },
+        {
+          "hanzi": "靠窗",
+          "pinyin": "kàochuāng",
+          "meaning_th": "ติดริมหน้าต่าง"
+        }
+      ],
+      "grammar_point": "การระบุตำแหน่งที่นั่งด้วย '靠...' เช่น 靠窗 (ริมหน้าต่าง), 靠过道 (ริมทางเดิน)",
+      "sample_dialogue": {
+        "speaker_a": "สมชาย 🧒: 请问去上海的高铁在哪个检票口？",
+        "speaker_b": "เจ้าหน้าที่ 👨‍✈️: 在12号检票口，请提前15分钟进站。"
+      }
+    },
+    {
+      "unit_id": "tier2_u04",
+      "unit_number": 4,
+      "title": {
+        "zh": "租房与公寓生活",
+        "th": "เช่าห้องพักและอพาร์ตเมนต์",
+        "en": "Renting an Apartment"
+      },
+      "icon": "🔑",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u05",
+      "unit_number": 5,
+      "title": {
+        "zh": "网约车滴滴出行",
+        "th": "เรียกรถ Didi และคุยกับคนขับ",
+        "en": "Ride Hailing with Didi"
+      },
+      "icon": "🚖",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u06",
+      "unit_number": 6,
+      "title": {
+        "zh": "退换货与售后服务",
+        "th": "คืนของ เปลี่ยนสินค้า และบริการหลังการขาย",
+        "en": "Returns & Exchanges"
+      },
+      "icon": "📦",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u07",
+      "unit_number": 7,
+      "title": {
+        "zh": "理发与水疗放松",
+        "th": "ตัดผมและสปาผ่อนคลาย",
+        "en": "Haircut & Spa"
+      },
+      "icon": "💇",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u08",
+      "unit_number": 8,
+      "title": {
+        "zh": "历史名胜与买票预约",
+        "th": "เที่ยวสถานที่ประวัติศาสตร์ & จองตั๋วเข้าชม",
+        "en": "Visiting Historical Sites"
+      },
+      "icon": "🏯",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u09",
+      "unit_number": 9,
+      "title": {
+        "zh": "表达观点与深入感受",
+        "th": "การแสดงความเห็นและความรู้สึกเชิงลึก",
+        "en": "Expressing In-depth Opinions"
+      },
+      "icon": "💭",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u10",
+      "unit_number": 10,
+      "title": {
+        "zh": "工作求职与面试初探",
+        "th": "การสัมภาษณ์งานและแนะนำประสบการณ์",
+        "en": "Job Interview Basics"
+      },
+      "icon": "💼",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u11",
+      "unit_number": 11,
+      "title": {
+        "zh": "中国茶文化与聚会",
+        "th": "วัฒนธรรมการดื่มชาและการสังสรรค์",
+        "en": "Tea Culture & Social Gatherings"
+      },
+      "icon": "🍵",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u12",
+      "unit_number": 12,
+      "title": {
+        "zh": "应急处理与投诉求助",
+        "th": "แก้ไขปัญหาเฉพาะหน้าและแจ้งเรื่องร้องเรียน",
+        "en": "Handling Emergencies & Complaints"
+      },
+      "icon": "⚠️",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u13",
+      "unit_number": 13,
+      "title": {
+        "zh": "运动健身与生活方式",
+        "th": "กีฬา สุขภาพและการออกกำลังกาย",
+        "en": "Sports & Healthy Lifestyle"
+      },
+      "icon": "⚽",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u14",
+      "unit_number": 14,
+      "title": {
+        "zh": "中国传统节日与习俗",
+        "th": "เทศกาลจีนสำคัญ (ตรุษจีน ไหว้พระจันทร์)",
+        "en": "Traditional Chinese Festivals"
+      },
+      "icon": "🏮",
+      "estimated_minutes": 25,
+      "xp_reward": 200,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier2_u15",
+      "unit_number": 15,
+      "title": {
+        "zh": "背包独行四城试炼",
+        "th": "Tier 2 Boss Quest: ตะลุยเดี่ยวแบกเป้ 4 เมืองจีน",
+        "en": "Tier 2 Boss Quest: Solo Backpacking Across 4 Cities"
+      },
+      "icon": "🏔️",
+      "estimated_minutes": 30,
+      "xp_reward": 400,
+      "status": "blueprint"
+    }
+  ]
+}

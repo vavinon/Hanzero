@@ -1,0 +1,161 @@
+{
+  "unit_id": "tier1_u04",
+  "tier": 1,
+  "unit_number": 4,
+  "title": {
+    "zh": "购物与砍价技巧",
+    "th": "ช็อปปิ้ง & ถามราคา (Shopping & Bargaining)",
+    "en": "Shopping & Bargaining"
+  },
+  "description": "อันนี้เท่าไหร่? แพงเกินไป ลดได้ไหม? ซื้อของฝากสนุกทุกตลาด",
+  "lessons": [
+    {
+      "lesson_id": "t1_u04_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "这个多少钱？",
+        "th": "อันนี้เท่าไหร่? ถามราคาคล่องปาก",
+        "en": "How Much is This?"
+      },
+      "can_do": {
+        "th": "ชี้สิ่งของแล้วถามราคา '这个多少钱？' ได้อย่างมั่นใจ",
+        "en": "Ask the price of items using 这个多少钱？"
+      },
+      "baby_step_goal": "จำสูตรชี้ของ: 这个 (อันนี้) + 多少钱 (เท่าไหร่)",
+      "vocabulary": [
+        {
+          "id": "hsk1_0030",
+          "hanzi": "这 / 这个",
+          "pinyin": "zhè / zhège",
+          "pinyin_tone": "zhe4 / zhe4ge5",
+          "meaning_th": "นี้ / อันนี้",
+          "meaning_en": "this / this one",
+          "radical": "辶",
+          "radical_name_th": "หมวดการเดิน",
+          "stroke_count": 7,
+          "kid_mnemonic": "เดิน (辶) มาชี้สิ่งนี้ตรงหน้า",
+          "body_gesture": "ใช้นิ้วชี้จิ้มลงไปใกล้ๆ ตัว"
+        },
+        {
+          "id": "hsk1_0031",
+          "hanzi": "那 / 那个",
+          "pinyin": "nà / nàge",
+          "pinyin_tone": "na4 / na4ge5",
+          "meaning_th": "นั้น / อันนั้น",
+          "meaning_en": "that / that one",
+          "radical": "阝",
+          "radical_name_th": "หมวดหูขวา",
+          "stroke_count": 6,
+          "kid_mnemonic": "ยืนมองไกลๆ ชี้อันนั้นอยู่ตรงโน้น",
+          "body_gesture": "ชี้นิ้วไปไกลๆ ข้างหน้า"
+        },
+        {
+          "id": "hsk1_0032",
+          "hanzi": "多少",
+          "pinyin": "duōshao",
+          "pinyin_tone": "duo1shao5",
+          "meaning_th": "เท่าไหร่ (มากหรือน้อย)",
+          "meaning_en": "how much / how many",
+          "radical": "夕 / 小",
+          "radical_name_th": "มาก + น้อย",
+          "stroke_count": 10,
+          "kid_mnemonic": "มาก (多) + น้อย (少) = เท่าไหร่กันนะ?",
+          "body_gesture": "หงายสองมือขึ้นทำท่าชั่งน้ำหนัก"
+        },
+        {
+          "id": "hsk1_0033",
+          "hanzi": "钱",
+          "pinyin": "qián",
+          "pinyin_tone": "qian2",
+          "meaning_th": "เงิน",
+          "meaning_en": "money",
+          "radical": "钅",
+          "radical_name_th": "หมวดโลหะทอง",
+          "stroke_count": 10,
+          "kid_mnemonic": "โลหะมีค่า (钅) = เหรียญเงินทอง",
+          "body_gesture": "ถูกปลายนิ้วโป้งกับนิ้วชี้ (ท่านับตังค์)"
+        },
+        {
+          "id": "hsk1_0034",
+          "hanzi": "块",
+          "pinyin": "kuài",
+          "pinyin_tone": "kuai4",
+          "meaning_th": "หยวน (ภาษาพูด)",
+          "meaning_en": "yuan / kuai (spoken)",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน",
+          "stroke_count": 7,
+          "kid_mnemonic": "ก้อนเงินดินเผาสมัยก่อน = 1 ก้อน (1 หยวน)",
+          "body_gesture": "กำมือเป็นก้อนสี่เหลี่ยม"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรถามราคา: 这个 / 那个 + 多少钱？",
+        "explanation_th": "ชี้ของที่อยากได้ แล้วพูดว่า 多少钱 (ตัวเส่าเฉียน?) แม่ค้าจะบอกราคาเป็นตัวเลข + 块 (ไขว้)",
+        "patterns": [
+          {
+            "formula": "这个多少钱？",
+            "pinyin": "Zhè ge duōshao qián?",
+            "th": "อันนี้เท่าไหร่ครับ/ค่ะ?"
+          },
+          {
+            "formula": "五块。 / 十块。",
+            "pinyin": "Wǔ kuài. / Shí kuài.",
+            "th": "5 หยวน / 10 หยวน"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "你好！这个多少钱？",
+          "pinyin": "Nǐ hǎo! Zhè ge duōshao qián?",
+          "th": "สวัสดีครับ อันนี้ราคาเท่าไหร่ครับ?"
+        },
+        {
+          "speaker_name": "แม่ค้า 👩‍💼",
+          "zh": "你好！这个十块。",
+          "pinyin": "Nǐ hǎo! Zhè ge shí kuài.",
+          "th": "สวัสดีจ้า อันนี้ 10 หยวนจ้ะ"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "我要这个，谢谢！",
+          "pinyin": "Wǒ yào zhè ge, xièxie!",
+          "th": "ผมเอาอันนี้ครับ ขอบคุณครับ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "flash_recall",
+          "question_th": "ประโยค '这个多少钱？' แปลว่าอะไร?",
+          "options": [
+            "อันนี้กินได้ไหม?",
+            "อันนี้ราคาเท่าไหร่?",
+            "อันนี้อยู่ที่ไหน?",
+            "อันนี้ของใคร?"
+          ],
+          "correct_index": 1,
+          "explanation_th": "这个 (อันนี้) + 多少钱 (ราคาเท่าไหร่)",
+          "encouragement": "ถูกต้อง! ถามราคาแม่นยำ เตรียมช็อปปิ้งได้เลย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเห็นพวงกุญแจแพนด้าน่ารักในร้านของฝาก อยากถามราคาคนขาย ควรพูดอย่างไร?",
+        "options": [
+          "再见！",
+          "你是谁？",
+          "这个多少钱？ (Zhè ge duōshao qián?)",
+          "很好吃！"
+        ],
+        "correct_index": 2,
+        "explanation_th": "พูดว่า '这个多少钱？' คนขายจะหยิบเครื่องคิดเลขหรือกดราคาให้ดูทันที!",
+        "encouragement": "ยอดเยี่ยม! คุณได้พวงกุญแจแพนด้าในราคามิตรภาพ!"
+      },
+      "cheer_trophy": {
+        "badge_name": "นักช็อปผู้ปราดเปรื่อง 🛍️🏷️",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

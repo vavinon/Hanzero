@@ -1,0 +1,170 @@
+{
+  "tier_id": "tier4",
+  "tier_number": 4,
+  "name": {
+    "zh": "传奇级：学术文学与外交高度 (HSK 7-9)",
+    "th": "Tier 4: Legend (ปราชญ์ภาษา วรรณกรรม & การทูต)",
+    "en": "Tier 4: Legend (Classical, Academic & Diplomatic)"
+  },
+  "description": "คลังความรู้ขั้นสูงสุด ปรัชญาคลาสสิก วรรณกรรมจีนโบราณ สุนทรพจน์ทางการทูต และการวิเคราะห์เศรษฐศาสตร์เชิงมหภาค",
+  "total_units": 10,
+  "units": [
+    {
+      "unit_id": "tier4_u01",
+      "unit_number": 1,
+      "title": {
+        "zh": "文言文实词与虚词精析",
+        "th": "ภาษาจีนโบราณพื้นฐานและคำเชื่อมสำคัญ (文言文)",
+        "en": "Introduction to Classical Chinese"
+      },
+      "icon": "📜",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "ready",
+      "key_vocabulary": [
+        {
+          "hanzi": "之",
+          "pinyin": "zhī",
+          "meaning_th": "ของ / ไปยัง / คำสรรพนามแทนสิ่งนั้น (文言虚词)"
+        },
+        {
+          "hanzi": "乎",
+          "pinyin": "hū",
+          "meaning_th": "หรือ / หรือไม่ (เทียบเท่า 吗)"
+        },
+        {
+          "hanzi": "者",
+          "pinyin": "zhě",
+          "meaning_th": "ผู้ที่ / สิ่งที่ / คนที่"
+        },
+        {
+          "hanzi": "也",
+          "pinyin": "yě",
+          "meaning_th": "คำลงท้ายยืนยันความจริง (เทียบเท่า です/เป็นอยู่คือ)"
+        }
+      ],
+      "grammar_point": "โครงสร้างประโยคบอกเล่าโบราณ: '...者，...也' (ผู้ที่เป็น... คือ... นั่นเอง) เช่น '仁者，人也' (ผู้เปี่ยมเมตตา ย่อมเห็นค่าในความเป็นมนุษย์)",
+      "sample_dialogue": {
+        "speaker_a": "อาจารย์ปราชญ์ 📜: '温故而知新，可以为师矣。' 何解？",
+        "speaker_b": "บัณฑิต 🎓: 意思是复习旧知识从而获得新体会，便可为人师表。"
+      }
+    },
+    {
+      "unit_id": "tier4_u02",
+      "unit_number": 2,
+      "title": {
+        "zh": "先秦哲学：儒家与道家争鸣",
+        "th": "ปรัชญาสมัยก่อนราชวงศ์ฉิน: ขงจื๊อและเล่าจื๊อ",
+        "en": "Pre-Qin Philosophy: Confucianism & Daoism"
+      },
+      "icon": "☯️",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u03",
+      "unit_number": 3,
+      "title": {
+        "zh": "唐诗宋词格律与美学鉴赏",
+        "th": "สุนทรียศาสตร์บทกวีสมัยถังและซ่ง",
+        "en": "Tang Poetry & Song Lyrics Aesthetics"
+      },
+      "icon": "🪶",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u04",
+      "unit_number": 4,
+      "title": {
+        "zh": "四大名著文学脉络解读",
+        "th": "สี่สุดยอดวรรณกรรมคลาสสิก (สามก๊ก, ไซอิ๋ว ฯลฯ)",
+        "en": "The Four Great Classical Novels"
+      },
+      "icon": "📚",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u05",
+      "unit_number": 5,
+      "title": {
+        "zh": "国际外交辞令与联合声明",
+        "th": "ภาษาทางการทูตและแถลงการณ์ร่วมระหว่างประเทศ",
+        "en": "Diplomatic Discourse & Joint Statements"
+      },
+      "icon": "🏛️",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u06",
+      "unit_number": 6,
+      "title": {
+        "zh": "国际贸易法与跨国仲裁",
+        "th": "กฎหมายการค้าระหว่างประเทศและการอนุญาโตตุลาการ",
+        "en": "International Trade Law & Arbitration"
+      },
+      "icon": "⚖️",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u07",
+      "unit_number": 7,
+      "title": {
+        "zh": "宏观经济分析与金融政策",
+        "th": "การวิเคราะห์เศรษฐศาสตร์มหภาคและนโยบายการเงิน",
+        "en": "Macroeconomic Analysis & Fiscal Policy"
+      },
+      "icon": "💹",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u08",
+      "unit_number": 8,
+      "title": {
+        "zh": "同声传译与高级文学翻译",
+        "th": "การล่ามคู่ขนานและการแปลวรรณกรรมขั้นสูง",
+        "en": "Simultaneous Interpretation & Literary Translation"
+      },
+      "icon": "🗣️",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u09",
+      "unit_number": 9,
+      "title": {
+        "zh": "学术论文规范与批判性写作",
+        "th": "การเขียนบทความวิจัยทางวิชาการและบทความเชิงวิพากษ์",
+        "en": "Academic Publishing & Critical Writing"
+      },
+      "icon": "🎓",
+      "estimated_minutes": 35,
+      "xp_reward": 350,
+      "status": "blueprint"
+    },
+    {
+      "unit_id": "tier4_u10",
+      "unit_number": 10,
+      "title": {
+        "zh": "汉学至高无上帝王试炼",
+        "th": "Tier 4 Legend Quest: บททดสอบมหาบัณฑิตเกียรติยศ",
+        "en": "Tier 4 Legend Quest: The Supreme Sinology Fellowship"
+      },
+      "icon": "🏆",
+      "estimated_minutes": 45,
+      "xp_reward": 1000,
+      "status": "blueprint"
+    }
+  ]
+}

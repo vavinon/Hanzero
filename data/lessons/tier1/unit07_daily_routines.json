@@ -1,0 +1,148 @@
+{
+  "unit_id": "tier1_u07",
+  "tier": 1,
+  "unit_number": 7,
+  "title": {
+    "zh": "日常作息与休闲",
+    "th": "กิจวัตรประจำวัน & งานอดิเรก (Daily Life & Free Time)",
+    "en": "Daily Life & Free Time"
+  },
+  "description": "ตื่นนอน ทำงาน ดูซีรีส์ เล่นโทรศัพท์ และชวนเพื่อนไปเที่ยววันหยุดสุดสัปดาห์",
+  "lessons": [
+    {
+      "lesson_id": "t1_u07_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "我喜欢看电影和听音乐",
+        "th": "ฉันชอบดูหนังและฟังเพลงยามว่าง",
+        "en": "I Like Watching Movies and Listening to Music"
+      },
+      "can_do": {
+        "th": "บอกสิ่งที่เราชอบทำในเวลาว่างด้วยคำว่า '我喜欢...' (ฉันชอบ...) ได้",
+        "en": "Express personal hobbies using 我喜欢..."
+      },
+      "baby_step_goal": "จำคำว่า 喜欢 (xǐhuan - ชอบ) แล้วตามด้วยสิ่งที่เราชอบทำ!",
+      "vocabulary": [
+        {
+          "id": "hsk1_0060",
+          "hanzi": "喜欢",
+          "pinyin": "xǐhuan",
+          "pinyin_tone": "xi3huan5",
+          "meaning_th": "ชอบ",
+          "meaning_en": "to like",
+          "radical": "口 / 欠",
+          "radical_name_th": "สุขใจ + ปาก",
+          "stroke_count": 18,
+          "kid_mnemonic": "หัวเราะมีความสุขกับสิ่งที่ถูกใจ",
+          "body_gesture": "เอามือทาบอกทำตาวิ้งๆ"
+        },
+        {
+          "id": "hsk1_0061",
+          "hanzi": "看",
+          "pinyin": "kàn",
+          "pinyin_tone": "kan4",
+          "meaning_th": "ดู, มอง, อ่าน",
+          "meaning_en": "to look / to watch / to read",
+          "radical": "目",
+          "radical_name_th": "หมวดตา",
+          "stroke_count": 9,
+          "kid_mnemonic": "เอามือ (手) ป้องเหนือตา (目) มองดูระยะไกล",
+          "body_gesture": "เอามือป้องคิ้วมองไปไกลๆ"
+        },
+        {
+          "id": "hsk1_0062",
+          "hanzi": "电影",
+          "pinyin": "diànyǐng",
+          "pinyin_tone": "dian4ying3",
+          "meaning_th": "ภาพยนตร์, หนัง",
+          "meaning_en": "movie / film",
+          "radical": "电 / 彡",
+          "radical_name_th": "ไฟฟ้า + เงา",
+          "stroke_count": 20,
+          "kid_mnemonic": "ไฟฟ้า (电) ฉายเงา (影) บนจอผ้าใบ = ภาพยนตร์",
+          "body_gesture": "ทำท่าถ่ายกล้องหนังแอ็กชัน"
+        },
+        {
+          "id": "hsk1_0063",
+          "hanzi": "睡觉",
+          "pinyin": "shuìjiào",
+          "pinyin_tone": "shui4jiao4",
+          "meaning_th": "นอนหลับ",
+          "meaning_en": "to sleep",
+          "radical": "目",
+          "radical_name_th": "หมวดตา",
+          "stroke_count": 18,
+          "kid_mnemonic": "หลับตา (目) พักผ่อนลงบนหมอนนุ่ม",
+          "body_gesture": "เอาสองมือประกบแก้มเอียงคอนอนหลับ"
+        }
+      ],
+      "grammar_bite": {
+        "title": "สูตรบอกความชอบ: 我喜欢 + [กิจกรรม]",
+        "explanation_th": "พูดคำว่า 我喜欢 (Wǒ xǐhuan) แล้วตามด้วยคำกริยา เช่น 看电影 (ดูหนัง)",
+        "patterns": [
+          {
+            "formula": "我喜欢看电影。",
+            "pinyin": "Wǒ xǐhuan kàn diànyǐng.",
+            "th": "ฉันชอบดูหนัง"
+          },
+          {
+            "formula": "我不喜欢睡觉。",
+            "pinyin": "Wǒ bù xǐhuan shuìjiào.",
+            "th": "ฉันไม่ชอบนอนกลางวัน"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker_name": "หวังลี่ 👦",
+          "zh": "你周末喜欢做什么？",
+          "pinyin": "Nǐ zhōumò xǐhuan zuò shénme?",
+          "th": "วันหยุดสุดสัปดาห์เธอชอบทำอะไรเหรอ?"
+        },
+        {
+          "speaker_name": "สมชาย 🧒",
+          "zh": "我喜欢看电影，你呢？",
+          "pinyin": "Wǒ xǐhuan kàn diànyǐng, nǐ ne?",
+          "th": "ฉันชอบดูหนัง แล้วเธอล่ะ?"
+        },
+        {
+          "speaker_name": "หวังลี่ 👦",
+          "zh": "我也喜欢看电影！我们一起去吧！",
+          "pinyin": "Wǒ yě xǐhuan kàn diànyǐng! Wǒmen yìqǐ qù ba!",
+          "th": "ฉันก็ชอบดูหนังเหมือนกัน! พวกเราไปด้วยกันเถอะ!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "vocab_match",
+          "question_th": "คำว่า '看电影' แปลว่าอะไร?",
+          "options": [
+            "นอนหลับ",
+            "ดูภาพยนตร์",
+            "กินข้าว",
+            "ฟังเพลง"
+          ],
+          "correct_index": 1,
+          "explanation_th": "看 (ดู) + 电影 (ภาพยนตร์) = ดูหนัง",
+          "encouragement": "ถูกต้อง! ซื้อป๊อปคอร์นรอชมหนังได้เลย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "เพื่อนคนจีนถามคุณว่า '你喜欢中国电影吗？' (เธอชอบหนังจีนไหม?) คุณชอบมาก อยากตอบตกลงอย่างกระตือรือร้น ควรตอบอย่างไร?",
+        "options": [
+          "不喜欢！",
+          "我不知道。",
+          "我很喜欢！ (Wǒ hěn xǐhuan!)",
+          "再见！"
+        ],
+        "correct_index": 2,
+        "explanation_th": "ตอบว่า '我很喜欢！' (ฉันชอบมากเลย!) เพื่อนจะชวนคุยเรื่องซีรีส์จีนอย่างสนุกสนาน!",
+        "encouragement": "สุดยอดมาก! แลกเปลี่ยนความชอบกับเพื่อนคนจีนได้อย่างสนิทสนม!"
+      },
+      "cheer_trophy": {
+        "badge_name": "คอหนังและผู้รักอิสระ 🎬🍿",
+        "xp_reward": 60
+      }
+    }
+  ]
+}

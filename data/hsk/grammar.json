@@ -1,0 +1,4013 @@
+[
+  {
+    "id": "1",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "名词",
+    "point": "方位名词"
+  },
+  {
+    "id": "2",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "3",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "4",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "疑问代词"
+  },
+  {
+    "id": "5",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "人称代词"
+  },
+  {
+    "id": "6",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "7",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "数词",
+    "point": "一、二/两、三、四、五、六、七、八、九、零；十、百；半"
+  },
+  {
+    "id": "8",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "9",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "10",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "11",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "12",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "13",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "14",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "否定副词"
+  },
+  {
+    "id": "15",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "16",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "17",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "18",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "19",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接词或词组"
+  },
+  {
+    "id": "20",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "结构助词"
+  },
+  {
+    "id": "21",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "动态助词"
+  },
+  {
+    "id": "22",
+    "level": "1",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "语气助词"
+  },
+  {
+    "id": "23",
+    "level": "1",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "其他结构类型"
+  },
+  {
+    "id": "24",
+    "level": "1",
+    "category": "句子成分",
+    "subcategory": "主语",
+    "point": "名词、代词或名词性短语作主语"
+  },
+  {
+    "id": "25",
+    "level": "1",
+    "category": "句子成分",
+    "subcategory": "谓语",
+    "point": "动词或动词性短语、形容词或形容词性短语作谓语"
+  },
+  {
+    "id": "26",
+    "level": "1",
+    "category": "句子成分",
+    "subcategory": "宾语",
+    "point": "名词、代词或名词性短语作宾语"
+  },
+  {
+    "id": "27",
+    "level": "1",
+    "category": "句子成分",
+    "subcategory": "定语",
+    "point": "名词性词语、形容词性词语、数量短语作定语"
+  },
+  {
+    "id": "28",
+    "level": "1",
+    "category": "句子成分",
+    "subcategory": "状语",
+    "point": "副词、形容词作状语； 表示时间、处所的词语作状语"
+  },
+  {
+    "id": "29",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句型",
+    "point": "单句"
+  },
+  {
+    "id": "30",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句型",
+    "point": "单句"
+  },
+  {
+    "id": "31",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句型",
+    "point": "单句"
+  },
+  {
+    "id": "32",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句类",
+    "point": "陈述句"
+  },
+  {
+    "id": "33",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句类",
+    "point": "疑问句"
+  },
+  {
+    "id": "34",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句类",
+    "point": "祈使句"
+  },
+  {
+    "id": "35",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "句类",
+    "point": "感叹句"
+  },
+  {
+    "id": "36",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“是”字句"
+  },
+  {
+    "id": "37",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“有”字句"
+  },
+  {
+    "id": "38",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "39",
+    "level": "1",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "40",
+    "level": "1",
+    "category": "动作的态",
+    "subcategory": "动作的态",
+    "point": "变化态"
+  },
+  {
+    "id": "41",
+    "level": "1",
+    "category": "动作的态",
+    "subcategory": "动作的态",
+    "point": "完成态"
+  },
+  {
+    "id": "42",
+    "level": "1",
+    "category": "动作的态",
+    "subcategory": "动作的态",
+    "point": "进行态"
+  },
+  {
+    "id": "43",
+    "level": "1",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "钱数表示法"
+  },
+  {
+    "id": "44",
+    "level": "1",
+    "category": "特殊表达法",
+    "subcategory": "时间表示法",
+    "point": "（1）年、月、日、星期表示法（2）钟点表示法"
+  },
+  {
+    "id": "45",
+    "level": "1",
+    "category": "提问的方法",
+    "subcategory": "用“吗”提问",
+    "point": ""
+  },
+  {
+    "id": "46",
+    "level": "1",
+    "category": "提问的方法",
+    "subcategory": "用“多、多少、几、哪、哪儿、哪里、哪些、什么、谁、怎么”提问",
+    "point": ""
+  },
+  {
+    "id": "47",
+    "level": "1",
+    "category": "提问的方法",
+    "subcategory": "用“还是”提问",
+    "point": ""
+  },
+  {
+    "id": "48",
+    "level": "1",
+    "category": "提问的方法",
+    "subcategory": "用正反疑问形式提问",
+    "point": ""
+  },
+  {
+    "id": "49",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "50",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "51",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "52",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "动词重叠"
+  },
+  {
+    "id": "53",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "疑问代词"
+  },
+  {
+    "id": "54",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "人称代词"
+  },
+  {
+    "id": "55",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "56",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "形容词",
+    "point": "形容词重叠"
+  },
+  {
+    "id": "57",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "数词",
+    "point": "千、万、亿"
+  },
+  {
+    "id": "58",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "59",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "动量词"
+  },
+  {
+    "id": "60",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "时量词"
+  },
+  {
+    "id": "61",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "62",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "63",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "64",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "65",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "66",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "67",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "68",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "69",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "70",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "71",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "72",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "73",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "74",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "75",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "76",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出目的、原因"
+  },
+  {
+    "id": "77",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接词或词组"
+  },
+  {
+    "id": "78",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "79",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "结构助词"
+  },
+  {
+    "id": "80",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "动态助词"
+  },
+  {
+    "id": "81",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "着"
+  },
+  {
+    "id": "82",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "语气助词"
+  },
+  {
+    "id": "83",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "其他助词"
+  },
+  {
+    "id": "84",
+    "level": "2",
+    "category": "词类",
+    "subcategory": "叹词",
+    "point": "喂"
+  },
+  {
+    "id": "85",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "基本结构类型"
+  },
+  {
+    "id": "86",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "其他结构类型"
+  },
+  {
+    "id": "87",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "功能类型",
+    "point": "名词性短语"
+  },
+  {
+    "id": "88",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "功能类型",
+    "point": "动词性短语"
+  },
+  {
+    "id": "89",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "功能类型",
+    "point": "形容词性短语"
+  },
+  {
+    "id": "90",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "91",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "92",
+    "level": "2",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "93",
+    "level": "2",
+    "category": "固定格式",
+    "subcategory": "还是……吧",
+    "point": ""
+  },
+  {
+    "id": "94",
+    "level": "2",
+    "category": "固定格式",
+    "subcategory": "又……又……",
+    "point": ""
+  },
+  {
+    "id": "95",
+    "level": "2",
+    "category": "固定格式",
+    "subcategory": "（在）……以前/以后/前/后",
+    "point": ""
+  },
+  {
+    "id": "96",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "谓语",
+    "point": "名词、代词、数词、数量短语、名词性短语作谓语"
+  },
+  {
+    "id": "97",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "结果补语"
+  },
+  {
+    "id": "98",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "趋向补语"
+  },
+  {
+    "id": "99",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "状态补语"
+  },
+  {
+    "id": "100",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "数量补语"
+  },
+  {
+    "id": "101",
+    "level": "2",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "数量补语"
+  },
+  {
+    "id": "102",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "句型",
+    "point": "单句"
+  },
+  {
+    "id": "103",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“有”字句"
+  },
+  {
+    "id": "104",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "存现句"
+  },
+  {
+    "id": "105",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "连动句"
+  },
+  {
+    "id": "106",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "107",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "108",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“是……的”句"
+  },
+  {
+    "id": "109",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "双宾语句"
+  },
+  {
+    "id": "110",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "111",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "112",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "113",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "114",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "115",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "116",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "117",
+    "level": "2",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "118",
+    "level": "2",
+    "category": "动作的态",
+    "subcategory": "动作的态",
+    "point": "持续态"
+  },
+  {
+    "id": "119",
+    "level": "2",
+    "category": "动作的态",
+    "subcategory": "动作的态",
+    "point": "经历态"
+  },
+  {
+    "id": "120",
+    "level": "2",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "序数表示法"
+  },
+  {
+    "id": "121",
+    "level": "2",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "概数表示法1： （1）数词+多+量词（2）数词+量词+多"
+  },
+  {
+    "id": "122",
+    "level": "2",
+    "category": "强调的方法",
+    "subcategory": "用“就”表示强调",
+    "point": ""
+  },
+  {
+    "id": "123",
+    "level": "2",
+    "category": "强调的方法",
+    "subcategory": "※“是……的”表示强调（见“是……的”句1和“是……的”句2）)",
+    "point": ""
+  },
+  {
+    "id": "124",
+    "level": "2",
+    "category": "提问的方法",
+    "subcategory": "用“好吗/可以吗/行吗/怎么样”提问",
+    "point": ""
+  },
+  {
+    "id": "125",
+    "level": "2",
+    "category": "提问的方法",
+    "subcategory": "用“什么时候、什么样、为什么、怎么样、怎样”提问",
+    "point": ""
+  },
+  {
+    "id": "126",
+    "level": "2",
+    "category": "提问的方法",
+    "subcategory": "用“呢”构成的省略式疑问句“代词/名词+呢？”提问",
+    "point": ""
+  },
+  {
+    "id": "127",
+    "level": "2",
+    "category": "提问的方法",
+    "subcategory": "用“是不是”提问",
+    "point": ""
+  },
+  {
+    "id": "128",
+    "level": "2",
+    "category": "提问的方法",
+    "subcategory": "用“吧”提问",
+    "point": ""
+  },
+  {
+    "id": "129",
+    "level": "2",
+    "category": "口语格式",
+    "subcategory": "该……了",
+    "point": ""
+  },
+  {
+    "id": "130",
+    "level": "2",
+    "category": "口语格式",
+    "subcategory": "要/快要/就要……了",
+    "point": ""
+  },
+  {
+    "id": "131",
+    "level": "3",
+    "category": "语素",
+    "subcategory": "前缀",
+    "point": "第-、老-、小-"
+  },
+  {
+    "id": "132",
+    "level": "3",
+    "category": "语素",
+    "subcategory": "后缀",
+    "point": "-儿、-家、-们、-头、-子"
+  },
+  {
+    "id": "133",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "134",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "135",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "离合词"
+  },
+  {
+    "id": "136",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "离合词"
+  },
+  {
+    "id": "137",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "疑问代词"
+  },
+  {
+    "id": "138",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "139",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "140",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "动量词"
+  },
+  {
+    "id": "141",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "量词重叠"
+  },
+  {
+    "id": "142",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "143",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "144",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "145",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "146",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "147",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "148",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "149",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "150",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "151",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "152",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "153",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "154",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "155",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出目的、原因"
+  },
+  {
+    "id": "156",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出目的、原因"
+  },
+  {
+    "id": "157",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出施事、受事"
+  },
+  {
+    "id": "158",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "表示排除"
+  },
+  {
+    "id": "159",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "160",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "161",
+    "level": "3",
+    "category": "词类",
+    "subcategory": "拟声词",
+    "point": "哈哈"
+  },
+  {
+    "id": "162",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "其他结构类型"
+  },
+  {
+    "id": "163",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "数量重叠：数词+量词+数词+量词"
+  },
+  {
+    "id": "164",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "165",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "166",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "167",
+    "level": "3",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "168",
+    "level": "3",
+    "category": "固定格式",
+    "subcategory": "除了……（以外），……还/也/都……",
+    "point": ""
+  },
+  {
+    "id": "169",
+    "level": "3",
+    "category": "固定格式",
+    "subcategory": "从……起",
+    "point": ""
+  },
+  {
+    "id": "170",
+    "level": "3",
+    "category": "固定格式",
+    "subcategory": "对……来说",
+    "point": ""
+  },
+  {
+    "id": "171",
+    "level": "3",
+    "category": "固定格式",
+    "subcategory": "一……也/都+不/没……",
+    "point": ""
+  },
+  {
+    "id": "172",
+    "level": "3",
+    "category": "固定格式",
+    "subcategory": "越……越……",
+    "point": ""
+  },
+  {
+    "id": "173",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "主语",
+    "point": "动词或动词性短语、形容词或形容词性短语作主语"
+  },
+  {
+    "id": "174",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "宾语",
+    "point": "动词或动词性短语、形容词或形容词性短语和主谓短语作宾语"
+  },
+  {
+    "id": "175",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "定语",
+    "point": "动词或动词性短语、主谓短语作定语"
+  },
+  {
+    "id": "176",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "结果补语"
+  },
+  {
+    "id": "177",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "趋向补语"
+  },
+  {
+    "id": "178",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "可能补语"
+  },
+  {
+    "id": "179",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "程度补语"
+  },
+  {
+    "id": "180",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "数量补语"
+  },
+  {
+    "id": "181",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "数量补语"
+  },
+  {
+    "id": "182",
+    "level": "3",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "数量补语"
+  },
+  {
+    "id": "183",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "句型",
+    "point": "单句"
+  },
+  {
+    "id": "184",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“把”字句"
+  },
+  {
+    "id": "185",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "被动句"
+  },
+  {
+    "id": "186",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "连动句"
+  },
+  {
+    "id": "187",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "兼语句"
+  },
+  {
+    "id": "188",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "189",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "重动句"
+  },
+  {
+    "id": "190",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "191",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "192",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "193",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "194",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "195",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "196",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "197",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "198",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "199",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "200",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "201",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "202",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "203",
+    "level": "3",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "204",
+    "level": "3",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "概数表示法2： （1）用“大概、大约、几”表示概数（2）相邻数词连用表示概数（3）用“左右、前后”表示概数"
+  },
+  {
+    "id": "205",
+    "level": "3",
+    "category": "强调的方法",
+    "subcategory": "用“一点儿也不……”表示强调",
+    "point": ""
+  },
+  {
+    "id": "206",
+    "level": "3",
+    "category": "强调的方法",
+    "subcategory": "用反问句表示强调 反问句1：不是……吗？/难道……吗？",
+    "point": ""
+  },
+  {
+    "id": "207",
+    "level": "3",
+    "category": "强调的方法",
+    "subcategory": "用“是”表示强调",
+    "point": ""
+  },
+  {
+    "id": "208",
+    "level": "3",
+    "category": "提问的方法",
+    "subcategory": "用疑问语调表示疑问",
+    "point": ""
+  },
+  {
+    "id": "209",
+    "level": "3",
+    "category": "口语格式",
+    "subcategory": "都……了",
+    "point": ""
+  },
+  {
+    "id": "210",
+    "level": "3",
+    "category": "口语格式",
+    "subcategory": "X就X（点儿）吧",
+    "point": ""
+  },
+  {
+    "id": "211",
+    "level": "3",
+    "category": "口语格式",
+    "subcategory": "X什么（啊）",
+    "point": ""
+  },
+  {
+    "id": "212",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "213",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "人称代词"
+  },
+  {
+    "id": "214",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "215",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "借用量词"
+  },
+  {
+    "id": "216",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "217",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "218",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "219",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "220",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "221",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "否定副词"
+  },
+  {
+    "id": "222",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "223",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "224",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "225",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "226",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "227",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "228",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "229",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "230",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接词或词组"
+  },
+  {
+    "id": "231",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "232",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "其他助词"
+  },
+  {
+    "id": "233",
+    "level": "4",
+    "category": "词类",
+    "subcategory": "叹词",
+    "point": "啊2"
+  },
+  {
+    "id": "234",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "235",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "236",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "237",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "238",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "239",
+    "level": "4",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "240",
+    "level": "4",
+    "category": "固定格式",
+    "subcategory": "一+量词+比+一+量词",
+    "point": ""
+  },
+  {
+    "id": "241",
+    "level": "4",
+    "category": "固定格式",
+    "subcategory": "（自）……以来",
+    "point": ""
+  },
+  {
+    "id": "242",
+    "level": "4",
+    "category": "固定格式",
+    "subcategory": "由……组成",
+    "point": ""
+  },
+  {
+    "id": "243",
+    "level": "4",
+    "category": "固定格式",
+    "subcategory": "在……方面",
+    "point": ""
+  },
+  {
+    "id": "244",
+    "level": "4",
+    "category": "固定格式",
+    "subcategory": "在……上/下/中",
+    "point": ""
+  },
+  {
+    "id": "245",
+    "level": "4",
+    "category": "句子成分",
+    "subcategory": "主语",
+    "point": "主谓短语作主语"
+  },
+  {
+    "id": "246",
+    "level": "4",
+    "category": "句子成分",
+    "subcategory": "主语",
+    "point": "受事主语"
+  },
+  {
+    "id": "247",
+    "level": "4",
+    "category": "句子成分",
+    "subcategory": "定语",
+    "point": "多项定语"
+  },
+  {
+    "id": "248",
+    "level": "4",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "趋向补语"
+  },
+  {
+    "id": "249",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“把”字句"
+  },
+  {
+    "id": "250",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "被动句"
+  },
+  {
+    "id": "251",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "存现句"
+  },
+  {
+    "id": "252",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "兼语句"
+  },
+  {
+    "id": "253",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“是……的”句"
+  },
+  {
+    "id": "254",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "255",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "256",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "257",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "258",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "259",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "260",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "261",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "262",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "263",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "264",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "265",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "266",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "267",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "268",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "269",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "270",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "271",
+    "level": "4",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "272",
+    "level": "4",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "概数表示法3：数词+来+量词"
+  },
+  {
+    "id": "273",
+    "level": "4",
+    "category": "特殊表达法",
+    "subcategory": "数的表示法",
+    "point": "小数、分数、百分数、倍数的表示法；"
+  },
+  {
+    "id": "274",
+    "level": "4",
+    "category": "强调的方法",
+    "subcategory": "用反问句表示强调 反问句2：由疑问代词构成的反问句",
+    "point": ""
+  },
+  {
+    "id": "275",
+    "level": "4",
+    "category": "强调的方法",
+    "subcategory": "用双重否定表示强调",
+    "point": ""
+  },
+  {
+    "id": "276",
+    "level": "4",
+    "category": "强调的方法",
+    "subcategory": "用“一+量词（+名词）+也（都）/也没（不）……”表示强调",
+    "point": ""
+  },
+  {
+    "id": "277",
+    "level": "4",
+    "category": "强调的方法",
+    "subcategory": "用“连……也/都……”表示强调",
+    "point": ""
+  },
+  {
+    "id": "278",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "不X白不X",
+    "point": ""
+  },
+  {
+    "id": "279",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "动词+一X是一X",
+    "point": ""
+  },
+  {
+    "id": "280",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "（没）有什么（好）X的",
+    "point": ""
+  },
+  {
+    "id": "281",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "X是X，Y是Y",
+    "point": ""
+  },
+  {
+    "id": "282",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "X也得X，不X也得X",
+    "point": ""
+  },
+  {
+    "id": "283",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "X就是了",
+    "point": ""
+  },
+  {
+    "id": "284",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "还X呢",
+    "point": ""
+  },
+  {
+    "id": "285",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "你X你的吧",
+    "point": ""
+  },
+  {
+    "id": "286",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "让/叫你X你就X",
+    "point": ""
+  },
+  {
+    "id": "287",
+    "level": "4",
+    "category": "口语格式",
+    "subcategory": "说什么/怎么（着）也得X",
+    "point": ""
+  },
+  {
+    "id": "288",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "289",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "290",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "291",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "292",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "293",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "294",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "295",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "296",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "297",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出目的、原因"
+  },
+  {
+    "id": "298",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出施事、受事"
+  },
+  {
+    "id": "299",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "300",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "301",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "302",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "303",
+    "level": "5",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "其他助词"
+  },
+  {
+    "id": "304",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "305",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "306",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "307",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "308",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "309",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "310",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "311",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "312",
+    "level": "5",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "313",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "从……来看",
+    "point": ""
+  },
+  {
+    "id": "314",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "到……为止",
+    "point": ""
+  },
+  {
+    "id": "315",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "够……的",
+    "point": ""
+  },
+  {
+    "id": "316",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "拿……来说",
+    "point": ""
+  },
+  {
+    "id": "317",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "A的A，B的B",
+    "point": ""
+  },
+  {
+    "id": "318",
+    "level": "5",
+    "category": "固定格式",
+    "subcategory": "在……看来",
+    "point": ""
+  },
+  {
+    "id": "319",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "宾语",
+    "point": "宾语的语义类型1：（1）施事宾语；（2）受事宾语"
+  },
+  {
+    "id": "320",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "状语",
+    "point": "多项状语"
+  },
+  {
+    "id": "321",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "趋向补语"
+  },
+  {
+    "id": "322",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "可能补语"
+  },
+  {
+    "id": "323",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "程度补语"
+  },
+  {
+    "id": "324",
+    "level": "5",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "状态补语"
+  },
+  {
+    "id": "325",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“有”字句"
+  },
+  {
+    "id": "326",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“把”字句"
+  },
+  {
+    "id": "327",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "被动句"
+  },
+  {
+    "id": "328",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "连动句"
+  },
+  {
+    "id": "329",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "兼语句"
+  },
+  {
+    "id": "330",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "331",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "332",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "333",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "334",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "335",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "336",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "337",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "338",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "339",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "340",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "341",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "342",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "343",
+    "level": "5",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "多重复句"
+  },
+  {
+    "id": "344",
+    "level": "5",
+    "category": "强调的方法",
+    "subcategory": "用“再也不/没”表示强调",
+    "point": ""
+  },
+  {
+    "id": "345",
+    "level": "5",
+    "category": "强调的方法",
+    "subcategory": "用副词“可”表示强调",
+    "point": ""
+  },
+  {
+    "id": "346",
+    "level": "5",
+    "category": "强调的方法",
+    "subcategory": "用“怎么都/也+不/没”表示强调",
+    "point": ""
+  },
+  {
+    "id": "347",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X也不是，Y也不是",
+    "point": ""
+  },
+  {
+    "id": "348",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X也X不得，Y也Y不得",
+    "point": ""
+  },
+  {
+    "id": "349",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X是它，Y也是它",
+    "point": ""
+  },
+  {
+    "id": "350",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X着也是X着",
+    "point": ""
+  },
+  {
+    "id": "351",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X归X，Y归Y",
+    "point": ""
+  },
+  {
+    "id": "352",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "不管怎样说",
+    "point": ""
+  },
+  {
+    "id": "353",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "看你X的/瞧他X的",
+    "point": ""
+  },
+  {
+    "id": "354",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "真有你/他/她的",
+    "point": ""
+  },
+  {
+    "id": "355",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "X什么X",
+    "point": ""
+  },
+  {
+    "id": "356",
+    "level": "5",
+    "category": "口语格式",
+    "subcategory": "什么X不X（的）",
+    "point": ""
+  },
+  {
+    "id": "357",
+    "level": "5",
+    "category": "句群",
+    "subcategory": "形式分类",
+    "point": "用代词复指"
+  },
+  {
+    "id": "358",
+    "level": "5",
+    "category": "句群",
+    "subcategory": "形式分类",
+    "point": "带省略成分"
+  },
+  {
+    "id": "359",
+    "level": "6",
+    "category": "语素",
+    "subcategory": "前缀",
+    "point": "类前缀：超-、多-、反-、无-、亚-、准-"
+  },
+  {
+    "id": "360",
+    "level": "6",
+    "category": "语素",
+    "subcategory": "后缀",
+    "point": "类后缀：-化、-式、-型、-性"
+  },
+  {
+    "id": "361",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "362",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "363",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "动量词"
+  },
+  {
+    "id": "364",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "365",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "366",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "367",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "368",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "369",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "370",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "371",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出时间、处所"
+  },
+  {
+    "id": "372",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "373",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "374",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "375",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出目的、原因"
+  },
+  {
+    "id": "376",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "表示排除"
+  },
+  {
+    "id": "377",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "378",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接词或词组"
+  },
+  {
+    "id": "379",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "380",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "结构助词"
+  },
+  {
+    "id": "381",
+    "level": "6",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "语气助词"
+  },
+  {
+    "id": "382",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "基本结构类型"
+  },
+  {
+    "id": "383",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "384",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "385",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "386",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "387",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "388",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "389",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "390",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "391",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "392",
+    "level": "6",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "393",
+    "level": "6",
+    "category": "固定格式",
+    "subcategory": "A一+量词，B一+量词",
+    "point": ""
+  },
+  {
+    "id": "394",
+    "level": "6",
+    "category": "固定格式",
+    "subcategory": "东一A，西一A",
+    "point": ""
+  },
+  {
+    "id": "395",
+    "level": "6",
+    "category": "固定格式",
+    "subcategory": "为了……而……",
+    "point": ""
+  },
+  {
+    "id": "396",
+    "level": "6",
+    "category": "句子成分",
+    "subcategory": "宾语",
+    "point": "宾语的语义类型2： （1）处所宾语（2）结果宾语"
+  },
+  {
+    "id": "397",
+    "level": "6",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "趋向补语"
+  },
+  {
+    "id": "398",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“把”字句"
+  },
+  {
+    "id": "399",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "被动句"
+  },
+  {
+    "id": "400",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "401",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "402",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "403",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "404",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "405",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "406",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "407",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "408",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "409",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "410",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "411",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "412",
+    "level": "6",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "多重复句"
+  },
+  {
+    "id": "413",
+    "level": "6",
+    "category": "强调的方法",
+    "subcategory": "用“非……不可”表示强调",
+    "point": ""
+  },
+  {
+    "id": "414",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "X到Y头上来了",
+    "point": ""
+  },
+  {
+    "id": "415",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "X就X吧",
+    "point": ""
+  },
+  {
+    "id": "416",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "X是X",
+    "point": ""
+  },
+  {
+    "id": "417",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "不X不……，一X……",
+    "point": ""
+  },
+  {
+    "id": "418",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "好你个X",
+    "point": ""
+  },
+  {
+    "id": "419",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "动词+什么（就）是什么",
+    "point": ""
+  },
+  {
+    "id": "420",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "早（也）不X，晚（也）不X",
+    "point": ""
+  },
+  {
+    "id": "421",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "看/瞧+把+宾语（施事）+ X 得",
+    "point": ""
+  },
+  {
+    "id": "422",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "放着X不Y",
+    "point": ""
+  },
+  {
+    "id": "423",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "X来X去，都是/就是 ……",
+    "point": ""
+  },
+  {
+    "id": "424",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "X了就X了，（没）有……",
+    "point": ""
+  },
+  {
+    "id": "425",
+    "level": "6",
+    "category": "口语格式",
+    "subcategory": "这/那也不X，那/这也不Y",
+    "point": ""
+  },
+  {
+    "id": "426",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "动词",
+    "point": "能愿动词"
+  },
+  {
+    "id": "427",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "疑问代词"
+  },
+  {
+    "id": "428",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "代词",
+    "point": "指示代词"
+  },
+  {
+    "id": "429",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "量词",
+    "point": "名量词"
+  },
+  {
+    "id": "430",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "关联副词"
+  },
+  {
+    "id": "431",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出方向、路径"
+  },
+  {
+    "id": "432",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接词或词组"
+  },
+  {
+    "id": "433",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "连词",
+    "point": "连接分句或句子"
+  },
+  {
+    "id": "434",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "结构助词"
+  },
+  {
+    "id": "435",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "结构类型",
+    "point": "基本结构类型"
+  },
+  {
+    "id": "436",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "437",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "438",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "439",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "440",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "441",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "442",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "443",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "四字格"
+  },
+  {
+    "id": "444",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "445",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "446",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "447",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "448",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "449",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "450",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "451",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "452",
+    "level": "7-9",
+    "category": "固定格式",
+    "subcategory": "不知……好",
+    "point": ""
+  },
+  {
+    "id": "453",
+    "level": "7-9",
+    "category": "固定格式",
+    "subcategory": "所谓……就是……",
+    "point": ""
+  },
+  {
+    "id": "454",
+    "level": "7-9",
+    "category": "固定格式",
+    "subcategory": "无非/不过/只不过/只是……而已/罢了",
+    "point": ""
+  },
+  {
+    "id": "455",
+    "level": "7-9",
+    "category": "固定格式",
+    "subcategory": "以……为……",
+    "point": ""
+  },
+  {
+    "id": "456",
+    "level": "7-9",
+    "category": "固定格式",
+    "subcategory": "因……而……",
+    "point": ""
+  },
+  {
+    "id": "457",
+    "level": "7-9",
+    "category": "句子成分",
+    "subcategory": "宾语",
+    "point": "宾语的语义类型3：  （1）方式宾语（2）工具宾语（3）材料宾语（4）目的宾语"
+  },
+  {
+    "id": "458",
+    "level": "7-9",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "程度补语"
+  },
+  {
+    "id": "459",
+    "level": "7-9",
+    "category": "句子成分",
+    "subcategory": "补语",
+    "point": "状态补语"
+  },
+  {
+    "id": "460",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "“把”字句"
+  },
+  {
+    "id": "461",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "被动句"
+  },
+  {
+    "id": "462",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "特殊句型",
+    "point": "比较句"
+  },
+  {
+    "id": "463",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "并列复句"
+  },
+  {
+    "id": "464",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "465",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "承接复句"
+  },
+  {
+    "id": "466",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "467",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "468",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "469",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "470",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "471",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "472",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "473",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "474",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "475",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "选择复句"
+  },
+  {
+    "id": "476",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "477",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "转折复句"
+  },
+  {
+    "id": "478",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "479",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "480",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "假设复句"
+  },
+  {
+    "id": "481",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "482",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "条件复句"
+  },
+  {
+    "id": "483",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "484",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "485",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "486",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "487",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "因果复句"
+  },
+  {
+    "id": "488",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "489",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "490",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "491",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "492",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "让步复句"
+  },
+  {
+    "id": "493",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "494",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "目的复句"
+  },
+  {
+    "id": "495",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "解说复句"
+  },
+  {
+    "id": "496",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "497",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "紧缩复句"
+  },
+  {
+    "id": "498",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "多重复句"
+  },
+  {
+    "id": "499",
+    "level": "7-9",
+    "category": "强调的方法",
+    "subcategory": "用反问句表示强调 反问句3：何必/何苦……呢？",
+    "point": ""
+  },
+  {
+    "id": "500",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "（不过/但/可是）话又说回来，……",
+    "point": ""
+  },
+  {
+    "id": "501",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "X（也）不是，不X也不是",
+    "point": ""
+  },
+  {
+    "id": "502",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "X也好/也罢，Y也好/也罢",
+    "point": ""
+  },
+  {
+    "id": "503",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "X了又Y，Y了又X",
+    "point": ""
+  },
+  {
+    "id": "504",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "X也X不……，Y也Y不……",
+    "point": ""
+  },
+  {
+    "id": "505",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "别提（有）多X了",
+    "point": ""
+  },
+  {
+    "id": "506",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "不知X的",
+    "point": ""
+  },
+  {
+    "id": "507",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "话（说）是这么说，不过/可/可是……",
+    "point": ""
+  },
+  {
+    "id": "508",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "看/瞧你那（X）样",
+    "point": ""
+  },
+  {
+    "id": "509",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "看在X的面子上",
+    "point": ""
+  },
+  {
+    "id": "510",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "哪有X这么Y的/有X这样Y的吗",
+    "point": ""
+  },
+  {
+    "id": "511",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "什么X的Y的",
+    "point": ""
+  },
+  {
+    "id": "512",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "说到/想到哪儿去了",
+    "point": ""
+  },
+  {
+    "id": "513",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "无所谓X不X",
+    "point": ""
+  },
+  {
+    "id": "514",
+    "level": "7-9",
+    "category": "口语格式",
+    "subcategory": "要X有/没X，要Y有/没Y",
+    "point": ""
+  },
+  {
+    "id": "515",
+    "level": "7-9",
+    "category": "句群",
+    "subcategory": "形式分类",
+    "point": "带关联词语"
+  },
+  {
+    "id": "516",
+    "level": "7-9",
+    "category": "句群",
+    "subcategory": "形式分类",
+    "point": "不带关联词语"
+  },
+  {
+    "id": "517",
+    "level": "7-9",
+    "category": "句群",
+    "subcategory": "意义分类",
+    "point": "联合关系：并列句群、承接句群、递进句群、选择句群、解说句群、总括句群"
+  },
+  {
+    "id": "518",
+    "level": "7-9",
+    "category": "句群",
+    "subcategory": "意义分类",
+    "point": "偏正关系：条件句群、因果句群、目的句群、转折句群、假设句群、让步句群"
+  },
+  {
+    "id": "519",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "520",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "521",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "522",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "523",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "524",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "525",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "程度副词"
+  },
+  {
+    "id": "526",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "527",
+    "level": "7-9",
+    "category": "句子的类型",
+    "subcategory": "复句",
+    "point": "递进复句"
+  },
+  {
+    "id": "528",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "529",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "530",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "531",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "范围、协同副词"
+  },
+  {
+    "id": "532",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "533",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "534",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "方式副词"
+  },
+  {
+    "id": "535",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "否定副词"
+  },
+  {
+    "id": "536",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "否定副词"
+  },
+  {
+    "id": "537",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "538",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "频率、重复副词"
+  },
+  {
+    "id": "539",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "540",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "541",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "542",
+    "level": "7-9",
+    "category": "短语",
+    "subcategory": "固定短语",
+    "point": "其他"
+  },
+  {
+    "id": "543",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "544",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "545",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "546",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "547",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "情态副词"
+  },
+  {
+    "id": "548",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "549",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "550",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "551",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "时间副词"
+  },
+  {
+    "id": "552",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "553",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出对象"
+  },
+  {
+    "id": "554",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "555",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "556",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "介词",
+    "point": "引出凭借、依据"
+  },
+  {
+    "id": "557",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "558",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "559",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "560",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "561",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "562",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "563",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "564",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "565",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "566",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "567",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "568",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "569",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "570",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "571",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "副词",
+    "point": "语气副词"
+  },
+  {
+    "id": "572",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "语气助词"
+  },
+  {
+    "id": "573",
+    "level": "7-9",
+    "category": "词类",
+    "subcategory": "助词",
+    "point": "语气助词"
+  }
+]
