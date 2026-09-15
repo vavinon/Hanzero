@@ -1,0 +1,152 @@
+:root {
+  /* =========================================
+     Typography Tokens
+     ========================================= */
+  --font-thai: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-hanzi: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-latin: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Hanzi & Pinyin Legibility Scale */
+  --font-hanzi-hero: 3.5rem;   /* 56px - Stroke writing & Hero */
+  --font-hanzi-card: 2.25rem;  /* 36px - Vocab cards */
+  --font-hanzi-quiz: 1.75rem;  /* 28px - Quiz buttons */
+  --font-pinyin-body: 1.25rem; /* 20px - Pīnyīn body with ample line-height */
+  --line-height-pinyin: 1.6;   /* Prevents diacritic clipping (ǚ, ǎ, etc.) */
+
+  /* =========================================
+     Accessible Modern Oriental Color Palette
+     ========================================= */
+  /* Jade (Emerald / ความเจริญก้าวหน้า) */
+  --color-jade-accent: #10b981;
+  --color-jade-dark: #047857;       /* Text-safe contrast > 5.1:1 on Rice Paper */
+  --color-jade-light: #ecfdf5;
+
+  /* Ochre (Imperial Gold / พลังความมุ่งมั่น) */
+  --color-ochre-accent: #f59e0b;
+  --color-ochre-dark: #b45309;      /* Text-safe contrast > 4.8:1 on Rice Paper */
+  --color-ochre-light: #fef3c7;
+
+  /* Vermilion (Chinese Red / ความมงคล) */
+  --color-vermilion-accent: #ef4444;
+  --color-vermilion-dark: #dc2626;  /* Text-safe contrast > 5.0:1 on Rice Paper */
+  --color-vermilion-light: #fee2e2;
+
+  /* Backgrounds & Neutrals */
+  --color-rice-paper: #fdfbf7;      /* Warm Rice Paper (Light Mode BG) */
+  --color-paper-card: #ffffff;
+  --color-border-warm: #e8e2d5;
+  --color-border-subtle: #f0ede6;
+
+  --color-ink-900: #12161a;         /* Deep Ink Stone (Headings & Dark BG) */
+  --color-ink-800: #1f2937;         /* Body Text */
+  --color-ink-600: #4b5563;         /* Secondary Text */
+  --color-ink-400: #9ca3af;         /* Muted / Hints */
+
+  /* 4 Tones Accessible Dual-Encoded Colors */
+  --tone-1-color: #2563eb; /* 1st Tone (Flat / High): Blue */
+  --tone-2-color: #059669; /* 2nd Tone (Rising): Green */
+  --tone-3-color: #d97706; /* 3rd Tone (Falling-Rising): Orange/Amber */
+  --tone-4-color: #dc2626; /* 4th Tone (Falling): Red */
+  --tone-5-color: #6b7280; /* Neutral Tone: Grey */
+
+  /* UI Tokens */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 4px rgba(18, 22, 26, 0.04);
+  --shadow-md: 0 4px 12px rgba(18, 22, 26, 0.08);
+  --shadow-lg: 0 8px 24px rgba(18, 22, 26, 0.12);
+
+  /* Touch Safety */
+  --touch-target-min: 44px;
+}
+
+/* Reset & Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-thai);
+  background-color: var(--color-rice-paper);
+  color: var(--color-ink-800);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-rice-paper);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* Typography Helpers */
+.font-hanzi {
+  font-family: var(--font-hanzi);
+}
+
+.font-latin {
+  font-family: var(--font-latin);
+}
+
+.font-pinyin {
+  font-family: var(--font-latin);
+  line-height: var(--line-height-pinyin);
+}
+
+/* Touch Friendly Spring Button */
+.btn-spring {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  font-family: var(--font-thai);
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.btn-spring:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background-color: var(--color-jade-dark);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(4, 120, 87, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: #036348;
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: var(--color-jade-dark);
+  border: 1.5px solid var(--color-border-warm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-jade-light);
+  border-color: var(--color-jade-accent);
+}

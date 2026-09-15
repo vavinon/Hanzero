@@ -12,21 +12,21 @@
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
 ### 1. โครงสร้างโปรเจกต์และการกำหนดค่า (Project Scaffolding & Code Quality)
-- [ ] ติดตั้งโปรเจกต์ด้วย Vite + React + TypeScript:
+- [x] ติดตั้งโปรเจกต์ด้วย Vite + React + TypeScript:
   - สร้าง `package.json`, `tsconfig.json`, `vite.config.ts`, `index.html`
-- [ ] ตั้งค่า Code Quality & Test Tooling:
+- [x] ตั้งค่า Code Quality & Test Tooling:
   - ติดตั้ง `eslint`, `prettier` และ `vitest` สำหรับ Automated Unit Testing
   - กำหนด npm scripts: `npm run lint`, `npm test`
-- [ ] ติดตั้ง PWA & Offline Support:
+- [x] ติดตั้ง PWA & Offline Support:
   - ติดตั้ง `vite-plugin-pwa`
   - กำหนดค่า `manifest.json` (ชื่อแอป Hanzero, สี ธีม Modern Oriental, ไอคอนน้องกระต่ายหูตกทู่ทู่ (Lop-eared Bunny Tutu), display: standalone)
   - ตั้งค่า Service Worker ให้แคช Static Assets และ Audio
-- [ ] ติดตั้ง Dependencies จำเป็น (Zero-cost & น้ำหนักเบา):
+- [x] ติดตั้ง Dependencies จำเป็น (Zero-cost & น้ำหนักเบา):
   - `lucide-react` (ไอคอนมินิมอล)
   - `pinyin-pro` (ระบบประมวลผลและแปลงพินอิน)
   - `hanzi-writer` (ระบบแอนิเมชันและตรวจลำดับขีดตัวอักษรจีน)
   - `idb-keyval` (หรือ lightweight IndexedDB helper สำหรับ Dual Storage)
-- [ ] สร้างโครงสร้างไดเรกทอรีมาตรฐานตาม `AGENTS.md`:
+- [x] สร้างโครงสร้างไดเรกทอรีมาตรฐานตาม `AGENTS.md`:
   ```text
   src/
   ├── assets/          # SVG, ไอคอน และ static audio tier 0
