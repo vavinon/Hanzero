@@ -21,7 +21,7 @@ gantt
     SM-2 SRS with Daily Cap & IndexedDB Mirror :p5, after p4, 3d
     section Phase 4: Tier 0 Mastery
     Welcome Onboarding & Placement Flow :p6, after p5, 2d
-    Panda Tone Coaster, Echo Mic & Shareable Passport :p7, after p6, 4d
+    Bunny Tone Coaster, Echo Mic & Shareable Passport :p7, after p6, 4d
     section Phase 5: Production Rollout
     Tier 1 Expansion (Units 2-10) & Pinyin Fading :p8, after p7, 5d
     Zero-Knowledge Alpha Playtest & Production Launch :p9, after p8, 2d
@@ -85,7 +85,7 @@ gantt
 * [phase_04_tier0_pinyin_mastery.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_04_tier0_pinyin_mastery.md)
 * หน้าต่างต้อนรับ `WelcomeModal.tsx` นำทางเลือกระหว่าง "เริ่มจาก 0" กับ "ข้ามไปบทสนทนา"
 * บรรจุบทเรียน Tier 0 ทั้ง 6 Units (รวมสระผสมและสระนาสิก) พร้อมระบบภาพช่วยจำรูปปากและ Static Audio Pack
-* มินิเกม Panda Tone Coaster ฝึกลากเส้นวรรณยุกต์ 4 เสียง (Safe Zone ไม่หักหัวใจ)
+* มินิเกม Bunny Tone Coaster ฝึกลากเส้นวรรณยุกต์ 4 เสียง (Safe Zone ไม่หักหัวใจ)
 * **Client-side Echo Mic (Shadowing):** บันทึกเสียงผู้เรียน 2 วินาทีแล้วเล่นเทียบเสียง Native ทันที
 * บอร์ดเปรียบเทียบเสียงคู่ก้ำกึ่ง (Minimal Pairs)
 * ด่านทดสอบ Boss Quest ปลดล็อกพร้อม **"Hanzero Passport Card"** บันทึกเป็นรูปแชร์ลง Social Media ได้ทันที

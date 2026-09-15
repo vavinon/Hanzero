@@ -60,7 +60,7 @@
 
 ### 📍 Step 5: มินิเกมและตัวเขียนอักษรจีน (Hanzi Writer & Mini-Games)
 - ติดตั้ง `hanzi-writer` สร้างคอมโพเนนต์คัดอักษรจีนตามลำดับขีด
-- ประกอบเกม Panda Tone Coaster (รถไฟเหาะ 4 เสียง) ด้วย SVG + CSS
+- ประกอบเกม Bunny Tone Coaster (รถไฟเหาะ 4 เสียง) ด้วย SVG + CSS
 
 ### 📍 Step 6: นำเว็บขึ้นออนไลน์บน GitHub Pages (100% Free Deployment)
 - เขียนไฟล์ `.github/workflows/deploy.yml`

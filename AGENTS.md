@@ -1,4 +1,4 @@
-# 🐼 Hanzero - AI Agent Guidelines & Project Instructions (`AGENTS.md`)
+# 🐰 Hanzero - AI Agent Guidelines & Project Instructions (`AGENTS.md`)
 
 ยินดีต้อนรับสู่โปรเจกต์ **Hanzero (ฮั่นซีโร่)** — แพลตฟอร์มเว็บแอปพลิเคชันสำหรับเรียนและฝึกฝนภาษาจีนตั้งแต่ศูนย์ ("เริ่มจาก 0 ก็เก่งจีนได้") โดยมุ่งเน้นประสบการณ์การเรียนรู้ที่ สนุก เข้าใจง่าย สวยงามทันสมัย และไม่น่ากลัวสำหรับผู้เริ่มต้น
 

@@ -19,7 +19,7 @@
   - กำหนด npm scripts: `npm run lint`, `npm test`
 - [ ] ติดตั้ง PWA & Offline Support:
   - ติดตั้ง `vite-plugin-pwa`
-  - กำหนดค่า `manifest.json` (ชื่อแอป Hanzero, สี ธีม Modern Oriental, ไอคอนแพนด้าเปาเปา, display: standalone)
+  - กำหนดค่า `manifest.json` (ชื่อแอป Hanzero, สี ธีม Modern Oriental, ไอคอนน้องกระต่ายหูตกทู่ทู่ (Lop-eared Bunny Tutu), display: standalone)
   - ตั้งค่า Service Worker ให้แคช Static Assets และ Audio
 - [ ] ติดตั้ง Dependencies จำเป็น (Zero-cost & น้ำหนักเบา):
   - `lucide-react` (ไอคอนมินิมอล)
