@@ -20,9 +20,21 @@
 
 ---
 
-## 2. 📚 Documentation First Policy (`docs/`)
+## 2. 📚 Documentation & Agents Architecture (`docs/` & `agents/`)
 
-โปรเจกต์นี้ใช้ **`docs/`** เป็น **Single Source of Truth** สำหรับการวางแผน ข้อกำหนด สถาปัตยกรรม และเนื้อหาหลักสูตรทั้งหมด
+โปรเจกต์นี้ใช้ **`docs/`** เป็น Single Source of Truth สำหรับสถาปัตยกรรมและหลักสูตร และใช้ **`agents/`** เป็นศูนย์รวมพิมพ์เขียวบทบาทของทีม Agent ทั้งหมด
+
+### โครงสร้างของ `agents/` (Multi-Agent Blueprints):
+```text
+agents/
+├── README.md                 # สรุปผังทีม Agent และโครงสร้างการทำงาน
+├── pedagogical_qa.md         # อาจารย์ตรวจภาษาจีน (อักษรย่อ, วรรณยุกต์, สำนวนไทย)
+├── technical_qa.md           # ผู้ตรวจการโค้ดและประสิทธิภาพ (Strict Types, Bundle < 100KB)
+├── red_team_adversary.md     # หน่วยจู่โจมล่าบั๊ก (ถล่มคิวเสียง, Memory Leak, Safari Sleep)
+├── web_dev.md                # วิศวกรเว็บแอปพลิเคชัน (Pure TypeScript, Web Audio, 60fps)
+├── curriculum_tutor.md       # อาจารย์สอนภาษาจีนสายพี่เลี้ยง (สตอรี่ภาพจำช่วยจำ)
+└── gamification_designer.md  # นักออกแบบเกม (Tone Coaster, เลโก้เรียงประโยค, Safe Zone)
+```
 
 ### โครงสร้างของ `docs/`:
 ```text
@@ -39,17 +51,17 @@ docs/
 ├── architecture/             # สถาปัตยกรรมและเทคโนโลยี
 │   ├── tech_stack.md         # การตัดสินใจเลือก Stack (Frontend, State, Sound, Animation)
 │   └── data_schema.md        # รูปแบบข้อมูลคำศัพท์ บทเรียน และ User Progress Schema
-├── plan/                     # แผนการพัฒนาแบบละเอียดและ Checklist การทำงาน (5 Phases)
-│   ├── README.md             # สรุปภาพรวมและ Quality Gate ทั้ง 5 เฟส
+├── plan/                     # แผนการพัฒนาแบบละเอียดและ Checklist การทำงาน (8 Phases)
+│   ├── README.md             # สรุปภาพรวมและ Quality Gate ทั้ง 8 เฟส
 │   ├── phase_01_web_foundation_engines.md
 │   ├── phase_02_unit1_lesson_experience.md
 │   ├── phase_03_gamification_srs.md
 │   ├── phase_04_tier0_pinyin_mastery.md
-│   └── phase_05_tier1_content_rollout.md
-└── prompts/                  # คลัง Master Prompts สำหรับสั่งการ AI
-    ├── curriculum_prompt.md  # แม่แบบสั่งสร้างเนื้อหาบทเรียน 3 ภาษา (中-泰-英)
-    ├── game_design_prompt.md # แม่แบบสั่งออกแบบมินิเกมการเรียนรู้
-    └── web_dev_prompt.md     # แม่แบบสถาปนิกและนักพัฒนา Web App
+│   ├── phase_05_tier1_content_rollout.md
+│   ├── phase_06_content_authoring_studio.md
+│   ├── phase_07_tier2_traveler_quest.md
+│   └── phase_08_tier3_4_advanced_immersion.md
+└── prompts/                  # คลังแม่แบบ Prompts เพิ่มเติม
 ```
 
 ### กฎสำคัญสำหรับ Agent เกี่ยวกับ `docs/`:
@@ -110,14 +122,15 @@ src/
 
 ---
 
-## 5. 🧪 Systematic Testing & Verification Framework (กรอบการทดสอบอย่างเป็นระบบ)
-
-กำหนดแนวทางการทดสอบ 3 มิติ (**3-Tier Verification Matrix**) เพื่อการันตีคุณภาพทั้งด้านเทคนิคและการเรียนรู้:
-
+## 5. 🧪 Systematic Testing & 4-Tier Verification Matrix
+ 
+กำหนดแนวทางการทดสอบ 4 มิติ (**4-Tier Verification Matrix**) โดยมี QA อิสระและ Red Team คอยตรวจสอบคุณภาพก่อนส่งมอบงาน:
+ 
 ```mermaid
 graph TD
-    T1["🧪 Tier 1: Logic & Unit Tests<br/>(Vitest - Automated)"] --> T2["🛠️ Tier 2: Interactive Sandbox<br/>(Test Panels & Dev Tools)"]
-    T2 --> T3["📱 Tier 3: Browser & Dual Verification<br/>(Technical QA + Pedagogical Accuracy)"]
+    T1["🧪 Tier 1: Logic & Unit Tests<br/>(Vitest - Pure Engines 100%)"] --> T2["🛠️ Tier 2: Interactive Sandbox<br/>(EngineTestPanel & Dev Tools)"]
+    T2 --> T3["📱 Tier 3: Browser & Dual Verification<br/>(Technical QA + Pedagogical QA)"]
+    T3 --> T4["🔥 Tier 4: Red Team Chaos Attacks<br/>(Stress Test, Audio Flood, Memory Leak Hunt)"]
 ```
 
 ### 5.1 Tier 1: Logic & Unit Tests (Automated Testing ด้วย Vitest)
@@ -132,14 +145,22 @@ graph TD
 - **`HanziWriterTestBox`**: แผงทดสอบแคนวาสคัดลายมือ ตรวจสอบความไวในการลากเส้น (Stroke recognition) และการรีเซ็ตแคนวาส
 
 ### 5.3 Tier 3: Browser & Dual Verification (Technical QA + Pedagogical QA)
-1. **Technical QA:**
+1. **Technical QA ([agents/technical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/technical_qa.md)):**
    - 0 Browser Console Errors (ไม่มีข้อผิดพลาดสีแดงหรือ Warning ที่อันตราย)
    - Mobile-First Touch Ready (ขนาดปุ่มและ Hitbox ไม่ต่ำกว่า 44x44px สัมผัสง่ายบนมือถือ)
-   - First Contentful Paint โหลดเร็วต่ำกว่า 1 วินาที
-2. **Pedagogical QA (ความถูกต้องของเนื้อหาภาษาจีน 100%):**
-   - ตรวจทานตัวอักษรจีนตัวย่อ (Simplified Chinese) ให้ถูกต้องแม่นยำ
+   - First Contentful Paint โหลดเร็วต่ำกว่า 0.8 วินาที
+   - Production Bundle Size: JS gzipped ≤ 100 KB, CSS ≤ 20 KB
+2. **Pedagogical QA ([agents/pedagogical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/pedagogical_qa.md)):**
+   - ตรวจทานตัวอักษรจีนตัวย่อ (Simplified Chinese) ให้ถูกต้องแม่นยำ 100%
    - ตรวจทานตำแหน่งเครื่องหมายวรรณยุกต์ Pinyin (วางบนสระที่ถูกต้องตามหลักสากล)
    - ตรวจสอบคำแปลภาษาไทย ให้เป็นสำนวนที่เป็นธรรมชาติและตรงตามบริบทในชีวิตประจำวัน
+
+### 5.4 Tier 4: Red Team Adversarial Attacks ([agents/red_team_adversary.md](file:///d:/V/project/Hanzero/hanzero/agents/red_team_adversary.md))
+- **Audio Flood Attack:** รัวปุ่มออกเสียง 50 ครั้งใน 2 วินาที คิวเสียงต้องไม่ค้าง ไม่แฮงก์
+- **Tab Sleep / Resume Attack:** สลับแท็บหรือพักหน้าจอขณะเล่นเสียง แล้วตรวจสถานะ `audioContext.state` ว่ากลับมา Auto-Resume หรือไม่
+- **Memory Leak Hunt:** สลับการ์ดคัดอักษรจีน 100 รอบ ตรวจดูว่า Heap Memory ไม่บวมเกิน 40 MB
+- **Offline Resilience:** ปิดเน็ตแล้วเปิดแอป Service Worker ต้องเสิร์ฟเนื้อหาได้ 100%
+- **Small Viewport 320px Squeeze:** บีบจอแคบสุด 320px ตรวจดูว่าหัววรรณยุกต์พินอินไม่โดนตัด และปุ่มไม่ล้นจอ
 
 ---
 
