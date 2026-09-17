@@ -1,277 +1,142 @@
 import React, { useState } from 'react';
-import { Sparkles, Heart, Flame, Volume2, CheckCircle2, BookOpen } from 'lucide-react';
-import bunnyImg from '@/assets/brand/mascot_bunny.jpg';
+import { Flame, Heart, Sparkles, Volume2 } from 'lucide-react';
 
 export const App: React.FC = () => {
-  const [hearts] = useState<number>(5);
   const [streak] = useState<number>(1);
-  const [soundPlayed, setSoundPlayed] = useState<boolean>(false);
-
-  const playSynthesizedTone = () => {
-    try {
-      const ctx = new (window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext)();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-      osc.frequency.exponentialRampToValueAtTime(659.25, ctx.currentTime + 0.15); // E5
-
-      gain.gain.setValueAtTime(0.2, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start();
-      osc.stop(ctx.currentTime + 0.25);
-      setSoundPlayed(true);
-      setTimeout(() => setSoundPlayed(false), 800);
-    } catch {
-      // Graceful fallback if AudioContext is not allowed before user gesture
-    }
-  };
+  const [hearts] = useState<number>(5);
+  const [xp] = useState<number>(0);
 
   return (
-    <div style={{ padding: '1.25rem 1rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+    <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '20px', flex: 1 }}>
       {/* Top Header Bar */}
       <header
         style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '0.75rem 1rem',
-          backgroundColor: '#ffffff',
-          borderRadius: 'var(--radius-md)',
-          boxShadow: 'var(--shadow-sm)',
-          border: '1px solid var(--color-border-subtle)',
+          padding: '10px 16px',
+          backgroundColor: '#FFFFFF',
+          borderRadius: '16px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+          border: '1px solid #E5E0D8'
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <span style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--color-jade-dark)' }}>
-            Hanzero
-          </span>
-          <span
-            style={{
-              fontSize: '0.75rem',
-              backgroundColor: 'var(--color-jade-light)',
-              color: 'var(--color-jade-dark)',
-              padding: '0.15rem 0.5rem',
-              borderRadius: 'var(--radius-full)',
-              fontWeight: 600,
-            }}
-          >
-            Phase 1.1
-          </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: '#B45309' }}>
+          <Flame size={20} color="#F59E0B" fill="#F59E0B" />
+          <span>{streak} วัน</span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.25rem',
-              color: 'var(--color-ochre-dark)',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-            }}
-          >
-            <Flame size={18} fill="currentColor" />
-            <span>{streak}</span>
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: '#DC2626' }}>
+          <Heart size={20} color="#DC2626" fill="#DC2626" />
+          <span>{hearts}</span>
+        </div>
 
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.25rem',
-              color: 'var(--color-vermilion-dark)',
-              fontWeight: 700,
-              fontSize: '0.9rem',
-            }}
-          >
-            <Heart size={18} fill="currentColor" />
-            <span>{hearts}</span>
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 600, color: '#047857' }}>
+          <Sparkles size={20} color="#10B981" />
+          <span>{xp} XP</span>
         </div>
       </header>
 
-      {/* Hero Welcome Card */}
-      <section
+      {/* Hero Welcome Card with น้องกระต่าย 🐰 */}
+      <main
         style={{
-          backgroundColor: '#ffffff',
-          borderRadius: 'var(--radius-lg)',
-          padding: '1.5rem',
-          boxShadow: 'var(--shadow-md)',
-          border: '1px solid var(--color-border-warm)',
+          backgroundColor: '#FFFFFF',
+          borderRadius: '20px',
+          padding: '24px 20px',
           textAlign: 'center',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.05)',
+          border: '1px solid #E5E0D8',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '1rem',
+          gap: '16px'
         }}
       >
-        <div style={{ position: 'relative', width: '120px', height: '120px' }}>
-          <img
-            src={bunnyImg}
-            alt="Mascot Tutu the Lop-eared Bunny"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              borderRadius: '50%',
-              border: '3px solid var(--color-jade-dark)',
-              boxShadow: '0 4px 16px rgba(4, 120, 87, 0.15)',
-            }}
-          />
-          <div
-            style={{
-              position: 'absolute',
-              bottom: 0,
-              right: 0,
-              backgroundColor: 'var(--color-ochre-accent)',
-              borderRadius: '50%',
-              width: '32px',
-              height: '32px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#ffffff',
-              boxShadow: 'var(--shadow-sm)',
-            }}
-          >
-            <Sparkles size={18} />
-          </div>
+        <div
+          style={{
+            fontSize: '64px',
+            lineHeight: 1,
+            backgroundColor: '#ECFDF5',
+            width: '100px',
+            height: '100px',
+            borderRadius: '50%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '3px solid #10B981'
+          }}
+        >
+          🐰
         </div>
 
         <div>
-          <h1
-            style={{
-              fontSize: '1.5rem',
-              fontWeight: 700,
-              color: 'var(--color-ink-900)',
-              marginBottom: '0.25rem',
-            }}
-          >
-            ยินดีต้อนรับสู่ Hanzero
+          <h1 style={{ fontSize: '24px', fontWeight: 700, color: '#047857', marginBottom: '4px' }}>
+            Hanzero (ฮั่นซีโร่)
           </h1>
-          <p style={{ color: 'var(--color-ink-600)', fontSize: '0.95rem' }}>
-            เริ่มจาก 0 สู่ภาษาจีนคล่องตัว 🐰
+          <p style={{ fontSize: '14px', color: '#525866' }}>
+            เริ่มจาก 0 สู่ภาษาจีนคล่องตัว • เรียนง่าย สบายใจ ไม่น่ากลัว
           </p>
         </div>
 
-        {/* 3-Language Typography Preview Card */}
+        {/* Bite-sized Preview Card */}
         <div
           style={{
+            backgroundColor: '#FDFBF7',
+            borderRadius: '16px',
+            padding: '16px',
             width: '100%',
-            backgroundColor: 'var(--color-rice-paper)',
-            borderRadius: 'var(--radius-md)',
-            padding: '1rem',
-            border: '1px dashed var(--color-border-warm)',
+            border: '1px dashed #D1C9BE',
             display: 'flex',
             flexDirection: 'column',
-            gap: '0.5rem',
+            gap: '8px'
           }}
         >
-          <div
-            className="font-hanzi"
-            style={{
-              fontSize: 'var(--font-hanzi-card)',
-              fontWeight: 700,
-              color: 'var(--color-jade-dark)',
-              lineHeight: 1.1,
-            }}
-          >
+          <div style={{ fontSize: '13px', color: '#8E95A3', fontWeight: 500 }}>
+            ✨ คำแรกในชีวิตของผู้เริ่มต้น
+          </div>
+          <div style={{ fontSize: '44px', fontWeight: 700, color: '#1A1D20', fontFamily: 'var(--font-hanzi-hero)' }}>
             你好
           </div>
-          <div
-            className="font-pinyin"
-            style={{
-              fontSize: 'var(--font-pinyin-body)',
-              fontWeight: 600,
-              color: 'var(--color-ink-800)',
-            }}
-          >
-            nǐ hǎo
+          <div style={{ fontSize: '18px', color: '#B45309', fontWeight: 600 }}>
+            nǐ hǎo <span style={{ fontSize: '14px', color: '#8E95A3', fontWeight: 400 }}>(ออกเสียงจริง: ní hǎo)</span>
           </div>
-          <div
-            style={{
-              fontSize: '0.9rem',
-              color: 'var(--color-ink-600)',
-            }}
-          >
+          <div style={{ fontSize: '15px', color: '#047857', fontWeight: 500 }}>
             สวัสดี (Hello)
           </div>
         </div>
 
-        {/* Interactive Audio SFX Test Button */}
         <button
-          onClick={playSynthesizedTone}
-          className="btn-spring btn-primary"
-          style={{ width: '100%' }}
-        >
-          <Volume2 size={20} />
-          <span>{soundPlayed ? 'Ding! 🎵' : 'ทดสอบ Web Audio SFX'}</span>
-        </button>
-      </section>
-
-      {/* Scaffolding Status Checklist */}
-      <section
-        style={{
-          backgroundColor: '#ffffff',
-          borderRadius: 'var(--radius-lg)',
-          padding: '1.25rem',
-          boxShadow: 'var(--shadow-sm)',
-          border: '1px solid var(--color-border-subtle)',
-        }}
-      >
-        <div
+          onClick={() => {
+            if ('speechSynthesis' in window) {
+              const utter = new SpeechSynthesisUtterance('你好');
+              utter.lang = 'zh-CN';
+              utter.rate = 0.85;
+              window.speechSynthesis.cancel();
+              window.speechSynthesis.speak(utter);
+            }
+          }}
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            marginBottom: '0.85rem',
+            backgroundColor: '#047857',
+            color: '#FFFFFF',
+            padding: '12px 24px',
+            borderRadius: '12px',
+            fontWeight: 600,
+            fontSize: '16px',
+            gap: '8px',
+            width: '100%',
+            boxShadow: '0 4px 12px rgba(4, 120, 87, 0.25)'
           }}
         >
-          <BookOpen size={20} color="var(--color-jade-dark)" />
-          <h2
-            style={{
-              fontSize: '1.05rem',
-              fontWeight: 600,
-              color: 'var(--color-ink-900)',
-            }}
-          >
-            Phase 1.1 Ready Checklist
-          </h2>
-        </div>
+          <Volume2 size={20} />
+          <span>กดฟังเสียงตัวอย่าง</span>
+        </button>
+      </main>
 
-        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
-          {[
-            { title: 'Vite 6 + React 18 + TypeScript Strict', desc: 'Zero `any` & Path Alias @/*' },
-            { title: 'Offline PWA & Manifest', desc: 'Tutu Mascot & Service Worker ready' },
-            { title: 'Vitest + Testing Library', desc: 'JSDOM test runner ready' },
-            { title: 'Modern Oriental Design Tokens', desc: 'Prompt + Noto Sans SC + Inter' },
-          ].map((item, idx) => (
-            <li
-              key={idx}
-              style={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: '0.6rem',
-                fontSize: '0.85rem',
-              }}
-            >
-              <CheckCircle2 size={18} color="var(--color-jade-dark)" style={{ flexShrink: 0, marginTop: '2px' }} />
-              <div>
-                <strong style={{ color: 'var(--color-ink-900)', display: 'block' }}>{item.title}</strong>
-                <span style={{ color: 'var(--color-ink-600)' }}>{item.desc}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Footer Info */}
+      <footer style={{ textAlign: 'center', fontSize: '12px', color: '#8E95A3', marginTop: 'auto', padding: '12px' }}>
+        Phase 1: Web Foundation & Pure Engines 🐰
+      </footer>
     </div>
   );
 };
-
 export default App;

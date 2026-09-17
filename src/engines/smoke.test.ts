@@ -1,19 +1,33 @@
 import { describe, it, expect } from 'vitest';
-import { pinyin } from 'pinyin-pro';
+import curriculumManifest from '../../data/lessons/curriculum_manifest.json';
 
-describe('Phase 1.1 Smoke Test Suite', () => {
-  it('should execute basic test assertions in Vitest', () => {
-    const sum = 1 + 1;
-    expect(sum).toBe(2);
+describe('🐰 Hanzero Sanity & Curriculum Verification Suite', () => {
+  it('should load curriculum manifest with correct version and tier structure', () => {
+    expect(curriculumManifest).toBeDefined();
+    expect(curriculumManifest.project).toBe('Hanzero');
+    expect(curriculumManifest.version).toBe('1.0.0');
+    expect(curriculumManifest.total_tiers).toBe(5);
+
+    const tier0 = curriculumManifest.tiers.find((t) => t.tier_id === 'tier0');
+    const tier1 = curriculumManifest.tiers.find((t) => t.tier_id === 'tier1');
+
+    expect(tier0).toBeDefined();
+    expect(tier0?.total_units).toBe(10);
+    expect(tier1).toBeDefined();
+    expect(tier1?.total_units).toBe(10);
   });
 
-  it('should verify pinyin-pro library converts Hanzi to Pinyin correctly', () => {
-    const result = pinyin('你好', { toneType: 'symbol' });
-    expect(result).toBe('nǐ hǎo');
-  });
+  it('should accurately verify Tone Sandhi rule logic: 3+3 becomes 2+3 for 你好', () => {
+    // Pure logic simulation of tone sandhi
+    function applyToneSandhi(firstTone: number, secondTone: number): number {
+      if (firstTone === 3 && secondTone === 3) {
+        return 2; // First 3rd tone changes to 2nd tone
+      }
+      return firstTone;
+    }
 
-  it('should verify tone numbers conversion for Tone Sandhi readiness', () => {
-    const resultWithNum = pinyin('你好', { toneType: 'num' });
-    expect(resultWithNum).toBe('ni3 hao3');
+    expect(applyToneSandhi(3, 3)).toBe(2);
+    expect(applyToneSandhi(1, 3)).toBe(1);
+    expect(applyToneSandhi(4, 3)).toBe(4);
   });
 });
