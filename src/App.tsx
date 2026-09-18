@@ -1,8 +1,12 @@
-import React, { useState, useRef } from 'react';
-import { Flame, Heart, Sparkles, Volume2, PlayCircle, CheckCircle2 } from 'lucide-react';
-
-// Speech GC retention set to prevent mobile browser garbage collection mid-speech
-const speechUtteranceSet = new Set<SpeechSynthesisUtterance>();
+import React, { useState, useRef, useEffect } from 'react';
+import { Flame, Heart, Sparkles, Volume2, PlayCircle, CheckCircle2, AlertCircle } from 'lucide-react';
+import {
+  speak,
+  playClick,
+  playCorrect,
+  unlockAudioContext,
+  isInAppBrowser,
+} from './engines/audio/audioEngine';
 
 export const App: React.FC = () => {
   const [streak] = useState<number>(1);
@@ -10,87 +14,57 @@ export const App: React.FC = () => {
   const [xp] = useState<number>(0);
   const [audioFeedback, setAudioFeedback] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
   const feedbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Web Audio synth chime fallback (0 KB network, 100% resilient)
-  const playSynthFallbackChime = () => {
-    try {
-      const AudioCtx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(440, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(660, ctx.currentTime + 0.15);
-
-      gain.gain.setValueAtTime(0.3, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start();
-      osc.stop(ctx.currentTime + 0.26);
-      osc.onended = () => {
-        ctx.close().catch(() => {});
-      };
-    } catch {
-      // AudioContext unavailable, silent graceful bypass
+  useEffect(() => {
+    // Detect In-App browser once on mount
+    if (isInAppBrowser()) {
+      setShowInAppAlert(true);
     }
-  };
 
-  const handleSpeak = (text: string) => {
+    return () => {
+      if (feedbackTimerRef.current) {
+        clearTimeout(feedbackTimerRef.current);
+      }
+    };
+  }, []);
+
+  const handleSpeak = async (text: string, label?: string) => {
+    // Unlock Web Audio context on user gesture (crucial for iOS)
+    await unlockAudioContext();
+    playClick();
+
     setIsPlaying(true);
-    setAudioFeedback('🔊 กำลังออกเสียง...');
+    setAudioFeedback(label ? `🔊 ${label}` : '🔊 กำลังออกเสียง...');
 
     if (feedbackTimerRef.current) {
       clearTimeout(feedbackTimerRef.current);
     }
 
-    const hasSpeech = typeof window !== 'undefined' && 'speechSynthesis' in window;
-
-    if (!hasSpeech) {
-      playSynthFallbackChime();
-      setAudioFeedback('💡 เบราว์เซอร์ไม่รองรับ TTS (เล่นเสียงสังเคราะห์แทน)');
-      setIsPlaying(false);
-      feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 3000);
-      return;
-    }
-
-    try {
-      window.speechSynthesis.cancel();
-
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'zh-CN';
-      utter.rate = 0.85;
-
-      // Retain reference to prevent GC cutting audio mid-utterance
-      speechUtteranceSet.add(utter);
-
-      utter.onend = () => {
-        speechUtteranceSet.delete(utter);
+    await speak(text, {
+      rate: 0.85,
+      onStart: () => {
+        setIsPlaying(true);
+      },
+      onEnd: () => {
         setIsPlaying(false);
         setAudioFeedback('✅ ฟังเรียบร้อย');
         feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
-      };
-
-      utter.onerror = () => {
-        speechUtteranceSet.delete(utter);
+      },
+      onError: (err) => {
         setIsPlaying(false);
-        playSynthFallbackChime();
-        setAudioFeedback('💡 เล่นเสียงสังเคราะห์ (สำรอง)');
+        const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
+        setAudioFeedback(`💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เปิดเสียงเรียบร้อย'}`);
         feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2500);
-      };
+      },
+    });
+  };
 
-      window.speechSynthesis.speak(utter);
-    } catch {
-      setIsPlaying(false);
-      playSynthFallbackChime();
-      setAudioFeedback('💡 กำลังเตรียมระบบเสียง');
-      feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2500);
-    }
+  const handleStartLesson = async () => {
+    await unlockAudioContext();
+    playCorrect();
+    await handleSpeak('你好', '你好 (nǐ hǎo - สวัสดี)');
   };
 
   return (
@@ -101,11 +75,36 @@ export const App: React.FC = () => {
         flexDirection: 'column',
         gap: '16px',
         flex: 1,
-        minWidth: '320px',
-        maxWidth: '100%',
-        boxSizing: 'border-box'
+        width: '100%',
+        maxWidth: '480px',
+        margin: '0 auto',
+        boxSizing: 'border-box',
       }}
     >
+      {/* In-App Browser Warning Banner */}
+      {showInAppAlert && (
+        <aside
+          role="alert"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '10px 14px',
+            backgroundColor: '#FEF3C7',
+            border: '1px solid #F59E0B',
+            borderRadius: '12px',
+            fontSize: '12px',
+            color: '#92400E',
+            lineHeight: 1.4,
+          }}
+        >
+          <AlertCircle size={18} style={{ flexShrink: 0 }} />
+          <span>
+            แนะนำเปิดด้วย <strong>Safari</strong> หรือ <strong>Chrome</strong> เพื่อประสบการณ์เสียงที่ลื่นไหลที่สุด
+          </span>
+        </aside>
+      )}
+
       {/* Top Header Bar - Responsive on 320px */}
       <header
         style={{
@@ -117,7 +116,7 @@ export const App: React.FC = () => {
           borderRadius: '16px',
           boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
           border: '1px solid #E5E0D8',
-          fontSize: 'clamp(13px, 3.5vw, 15px)'
+          fontSize: 'clamp(13px, 3.5vw, 15px)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600, color: '#B45309' }}>
@@ -148,7 +147,7 @@ export const App: React.FC = () => {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '14px'
+          gap: '14px',
         }}
       >
         <div
@@ -163,7 +162,7 @@ export const App: React.FC = () => {
             alignItems: 'center',
             justifyContent: 'center',
             border: '3px solid #10B981',
-            boxShadow: '0 4px 12px rgba(16, 185, 129, 0.2)'
+            boxShadow: '0 4px 12px rgba(16, 185, 129, 0.2)',
           }}
         >
           🐰
@@ -189,7 +188,7 @@ export const App: React.FC = () => {
             display: 'flex',
             flexDirection: 'column',
             gap: '6px',
-            boxSizing: 'border-box'
+            boxSizing: 'border-box',
           }}
         >
           <div style={{ fontSize: '12px', color: '#8E95A3', fontWeight: 500 }}>
@@ -201,13 +200,22 @@ export const App: React.FC = () => {
               fontWeight: 700,
               color: '#1A1D20',
               fontFamily: 'var(--font-hanzi-hero)',
-              lineHeight: 1.2
+              lineHeight: 1.2,
             }}
           >
             你好
           </div>
-          <div style={{ fontSize: 'clamp(15px, 4vw, 18px)', color: '#B45309', fontWeight: 600 }}>
-            nǐ hǎo <span style={{ fontSize: '13px', color: '#8E95A3', fontWeight: 400 }}>(ผันเสียงจริง: ní hǎo)</span>
+          <div
+            style={{
+              fontSize: 'clamp(15px, 4vw, 18px)',
+              color: '#B45309',
+              fontWeight: 600,
+              fontFamily: 'var(--font-latin)',
+              lineHeight: 'var(--line-height-pinyin, 1.6)',
+            }}
+          >
+            nǐ hǎo{' '}
+            <span style={{ fontSize: '13px', color: '#8E95A3', fontWeight: 400 }}>(ผันเสียงจริง: ní hǎo)</span>
           </div>
           <div style={{ fontSize: 'clamp(13px, 3.5vw, 15px)', color: '#047857', fontWeight: 500 }}>
             สวัสดี (Hello)
@@ -226,7 +234,7 @@ export const App: React.FC = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                gap: '4px'
+                gap: '4px',
               }}
             >
               <CheckCircle2 size={14} />
@@ -237,7 +245,8 @@ export const App: React.FC = () => {
 
         {/* Listen Button with Anti-Cheat / Resilience */}
         <button
-          onClick={() => handleSpeak('你好')}
+          type="button"
+          onClick={() => handleSpeak('你好', '你好 (nǐ hǎo)')}
           disabled={isPlaying}
           style={{
             backgroundColor: isPlaying ? '#059669' : '#047857',
@@ -249,16 +258,24 @@ export const App: React.FC = () => {
             gap: '8px',
             width: '100%',
             boxShadow: '0 4px 12px rgba(4, 120, 87, 0.25)',
-            transition: 'all 0.15s ease'
+            opacity: isPlaying ? 0.7 : 1,
+            cursor: isPlaying ? 'not-allowed' : 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: 'none',
+            transition: 'all 0.15s ease',
           }}
         >
           <Volume2 size={20} />
-          <span>{isPlaying ? 'กำลังพูด...' : 'กดฟังเสียงตัวอย่าง'}</span>
+          <span>{isPlaying ? 'กำลังเล่นเสียง...' : 'กดฟังเสียงตัวอย่าง'}</span>
         </button>
 
-        {/* Primary CTA Button */}
+        {/* Primary CTA Button - Flood-safe with disabled guard */}
         <button
-          onClick={() => handleSpeak('你好！很高兴认识你。')}
+          type="button"
+          onClick={handleStartLesson}
+          disabled={isPlaying}
           style={{
             backgroundColor: '#F59E0B',
             color: '#FFFFFF',
@@ -268,7 +285,14 @@ export const App: React.FC = () => {
             fontSize: '15px',
             gap: '8px',
             width: '100%',
-            boxShadow: '0 4px 12px rgba(245, 158, 11, 0.25)'
+            boxShadow: '0 4px 12px rgba(245, 158, 11, 0.25)',
+            opacity: isPlaying ? 0.7 : 1,
+            cursor: isPlaying ? 'not-allowed' : 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: 'none',
+            transition: 'all 0.15s ease',
           }}
         >
           <PlayCircle size={20} />
@@ -276,19 +300,20 @@ export const App: React.FC = () => {
         </button>
       </main>
 
-      {/* Footer Info */}
+      {/* Footer Info with Audio Status Hint */}
       <footer
         style={{
           textAlign: 'center',
           fontSize: '12px',
           color: '#8E95A3',
           marginTop: 'auto',
-          padding: '8px'
+          padding: '8px',
         }}
       >
-        Hanzero 🐰 • Zero-Cost & 60fps Mobile-Ready
+        Hanzero 🐰 • Zero-Cost & 60fps Mobile-Ready • Audio Engine Active
       </footer>
     </div>
   );
 };
+
 export default App;
