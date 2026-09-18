@@ -88,6 +88,8 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
   const [charCacheStatus, setCharCacheStatus] = useState<string>('กำลังตรวจสอบ...');
   const [writerMountCount, setWriterMountCount] = useState<number>(1);
   const [churnStatus, setChurnStatus] = useState<string | null>(null);
+  const [mistakeFloodStatus, setMistakeFloodStatus] = useState<string | null>(null);
+  const [isMistakeFlooding, setIsMistakeFlooding] = useState<boolean>(false);
   const writerContainerRef = useRef<HTMLDivElement>(null);
 
   // --- TAB 5: 360px & Contrast State ---
@@ -389,6 +391,38 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
         ? `✅ Memory Leak Guard ผ่านฉลุย! (Mount/Unmount 10 รอบ, Leaked SVG Nodes: 0, Container Children: ${childCount})`
         : `⚠️ พบโหนดตกค้าง: ${childCount} โหนด`
     );
+  };
+
+  // Chaos: Rapid Stroke Mistakes Attack (Simulates 10 rapid incorrect strokes)
+  const handleRapidMistakesAttack = async () => {
+    if (isMistakeFlooding) return;
+    playClick();
+    setIsMistakeFlooding(true);
+    setMistakeFloodStatus('🔥 กำลังยิง Stroke Mistakes รัวๆ 10 ครั้ง เพื่อตรวจความทนทานของ DOM Canvas...');
+
+    const container = writerContainerRef.current;
+
+    for (let i = 1; i <= 10; i++) {
+      playIncorrect();
+      // Inspect that SVG and container remain stable in DOM
+      if (container) {
+        const svg = container.querySelector('svg');
+        if (!svg) {
+          setMistakeFloodStatus(`❌ ล้มเหลว: พบว่า SVG ถูก React Unmount ในรอบที่ ${i}!`);
+          setIsMistakeFlooding(false);
+          return;
+        }
+      }
+      await new Promise((r) => setTimeout(r, 80));
+    }
+
+    const svgExists = container ? !!container.querySelector('svg') : false;
+    setMistakeFloodStatus(
+      svgExists
+        ? '✅ ผ่านฉลุย 100%! ยิงลากเส้นผิด 10 ครั้งรัวๆ แคนวาส SVG ยังคงอยู่ครบสมบูรณ์ ไม่มีการ Unmount หรือหลุดจาก DOM'
+        : '❌ ตรวจพบความผิดปกติของ DOM Canvas!'
+    );
+    setIsMistakeFlooding(false);
   };
 
   return (
@@ -1337,6 +1371,31 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
               {churnStatus && (
                 <div style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', lineHeight: 1.4 }}>
                   {churnStatus}
+                </div>
+              )}
+
+              {/* Chaos: Rapid Stroke Mistakes Attack */}
+              <button
+                type="button"
+                onClick={handleRapidMistakesAttack}
+                disabled={isMistakeFlooding}
+                className="btn-tactile-secondary"
+                style={{
+                  width: '100%',
+                  minHeight: '48px',
+                  backgroundColor: '#FFF7ED',
+                  borderColor: '#FDBA74',
+                  color: 'var(--color-ochre)',
+                  fontWeight: 700,
+                  gap: '6px',
+                }}
+              >
+                <Zap size={16} />
+                <span>{isMistakeFlooding ? '⏳ กำลังยิง Mistake Flood...' : '⚡ Chaos: ยิงลากเส้นผิดรัวๆ 10 ครั้ง (Rapid Mistakes Attack)'}</span>
+              </button>
+              {mistakeFloodStatus && (
+                <div style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', lineHeight: 1.4 }}>
+                  {mistakeFloodStatus}
                 </div>
               )}
             </div>

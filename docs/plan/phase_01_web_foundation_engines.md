@@ -124,9 +124,10 @@
 | **5. Storage Resilience & Persist** | ตรวจสอบผ่าน DevTools `navigator.storage.persisted()` | ส่งคืนค่า `true` และข้อมูล Hot/Cold Mirror สอดคล้องกันทั้ง LocalStorage และ IndexedDB |
 | **6. Hanzi Legibility & 360px Layout** | จำลองหน้าจอขนาด 360px กว้าง x 640px สูง ใน DevTools | Header Bar ไม่ล้นจอ (หัวใจย่อเป็นตัวเลข), ฟอนต์อ่านชัดเจนไม่แตก และตัวอักษรจีนขีดซับซ้อนอ่านออก |
 | **7. Accessible Color Contrast** | ทดสอบ Text สี Jade/Ochre บนพื้นหลัง Rice Paper | ผ่านเกณฑ์ WCAG AA ขั้นต่ำ 4.5:1 สำหรับข้อความทั้งหมด |
+| **8. Hanzi Mistake Resilience & DOM Stability** | ยิง Stroke Mistakes รัวๆ 10-50 ครั้งทั้งแบบ Automated Vitest (`hanziResilience.test.ts`) และปุ่ม Chaos ใน Engine Test Panel | แคนวาส SVG ไม่หลุดออกจาก DOM, ไม่มี Unmount กลางคัน, ตัวนับผิดนับแม่นยำ, เคลียร์ Timeout สะอาด 100% |
 
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 1
-เมื่อผ่านการทดสอบทั้ง 6 ข้อในตารางข้างต้น รัน `npm test` ผ่าน และ `npm run build` สำเร็จโดยไม่มีคำเตือน Type Error จึงจะถือว่า Phase 1 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 2: Unit 1 Complete Experience](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_02_unit1_lesson_experience.md)
+เมื่อผ่านการทดสอบทั้ง 8 ข้อในตารางข้างต้น รัน `npm test` ผ่านครบ 77 tests และ `npm run build` สำเร็จโดยไม่มีคำเตือน Type Error จึงจะถือว่า Phase 1 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 2: Unit 1 Complete Experience](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_02_unit1_lesson_experience.md)
 
