@@ -92,10 +92,13 @@ export function isHanziStrokeData(val: unknown): val is HanziStrokeData {
   const obj = val as Record<string, unknown>;
 
   if (!Array.isArray(obj.strokes) || obj.strokes.length === 0) return false;
+  if (!Array.isArray(obj.medians) || obj.medians.length === 0) return false;
+  // Guard against length mismatch crash (H-01)
+  if (obj.strokes.length !== obj.medians.length) return false;
+
   const validStrokes = obj.strokes.every((s) => typeof s === 'string' && s.length > 0);
   if (!validStrokes) return false;
 
-  if (!Array.isArray(obj.medians) || obj.medians.length === 0) return false;
   const validMedians = obj.medians.every(
     (strokeMedians) =>
       Array.isArray(strokeMedians) &&
@@ -104,7 +107,9 @@ export function isHanziStrokeData(val: unknown): val is HanziStrokeData {
           Array.isArray(point) &&
           point.length === 2 &&
           typeof point[0] === 'number' &&
-          typeof point[1] === 'number'
+          Number.isFinite(point[0]) &&
+          typeof point[1] === 'number' &&
+          Number.isFinite(point[1])
       )
   );
 
@@ -231,57 +236,82 @@ export async function loadStrokeData(
   }
 
   // 2. Check In-Flight Coalescing (encompasses both IDB check and CDN fetch)
-  const existingRequest = inFlightRequests.get(char);
-  if (existingRequest) {
-    return existingRequest;
+  let sharedPromise = inFlightRequests.get(char);
+  if (!sharedPromise) {
+    sharedPromise = (async () => {
+      try {
+        // 3. Check L2 IndexedDB Cold Storage
+        try {
+          const idbHit = await getStrokeCache(char);
+          if (idbHit && isHanziStrokeData(idbHit)) {
+            const formattedData: HanziStrokeData = {
+              strokes: idbHit.strokes,
+              medians: idbHit.medians,
+            };
+            memoryCache.set(char, formattedData);
+            return formattedData;
+          }
+        } catch {
+          // If IDB read fails, smoothly proceed to network tier
+        }
+
+        // 4. L3 Network Fetch (isolated from single caller's AbortSignal)
+        const strokeData = await fetchStrokeFromCdn(char, {
+          fetchFn: options?.fetchFn,
+          cdnBaseUrl: options?.cdnBaseUrl,
+          timeoutMs: options?.timeoutMs,
+        });
+
+        // Backfill L1 Memory Cache
+        memoryCache.set(char, strokeData);
+
+        // Backfill L2 IndexedDB Cold Storage (fire & forget)
+        const recordToStore: HanziStrokeCacheRecord = {
+          char,
+          strokes: strokeData.strokes,
+          medians: strokeData.medians,
+          cached_at: Date.now(),
+        };
+        setStrokeCache(recordToStore).catch((e) => {
+          console.warn('[Hanzero] Failed to backfill stroke data into IndexedDB:', e);
+        });
+
+        return strokeData;
+      } finally {
+        inFlightRequests.delete(char);
+      }
+    })();
+
+    inFlightRequests.set(char, sharedPromise);
   }
 
-  const loadPipelinePromise = (async () => {
-    try {
-      // 3. Check L2 IndexedDB Cold Storage
-      try {
-        const idbHit = await getStrokeCache(char);
-        if (idbHit && isHanziStrokeData(idbHit)) {
-          const formattedData: HanziStrokeData = {
-            strokes: idbHit.strokes,
-            medians: idbHit.medians,
-          };
-          memoryCache.set(char, formattedData);
-          return formattedData;
-        }
-      } catch {
-        // If IDB read fails, smoothly proceed to network tier
-      }
-
-      if (options?.signal?.aborted) {
-        throw new StrokeDataLoaderError('Request was aborted after storage check', 'ABORTED');
-      }
-
-      // 4. L3 Network Fetch
-      const strokeData = await fetchStrokeFromCdn(char, options);
-
-      // Backfill L1 Memory Cache
-      memoryCache.set(char, strokeData);
-
-      // Backfill L2 IndexedDB Cold Storage (fire & forget)
-      const recordToStore: HanziStrokeCacheRecord = {
-        char,
-        strokes: strokeData.strokes,
-        medians: strokeData.medians,
-        cached_at: Date.now(),
-      };
-      setStrokeCache(recordToStore).catch((e) => {
-        console.warn('[Hanzero] Failed to backfill stroke data into IndexedDB:', e);
-      });
-
-      return strokeData;
-    } finally {
-      inFlightRequests.delete(char);
+  // 5. If caller provided an AbortSignal, race caller's abort with shared promise
+  if (options?.signal) {
+    const signal = options.signal;
+    if (signal.aborted) {
+      throw new StrokeDataLoaderError('Request was aborted by caller', 'ABORTED');
     }
-  })();
+    return new Promise<HanziStrokeData>((resolve, reject) => {
+      const onAbort = () => {
+        signal.removeEventListener('abort', onAbort);
+        reject(new StrokeDataLoaderError('Request was aborted by caller', 'ABORTED'));
+      };
+      signal.addEventListener('abort', onAbort, { once: true });
 
-  inFlightRequests.set(char, loadPipelinePromise);
-  return loadPipelinePromise;
+      sharedPromise!.then(
+        (data) => {
+          signal.removeEventListener('abort', onAbort);
+          resolve(data);
+        },
+        (err) => {
+          signal.removeEventListener('abort', onAbort);
+          reject(err);
+        }
+      );
+    });
+  }
+
+  return sharedPromise;
 }
 
 /**

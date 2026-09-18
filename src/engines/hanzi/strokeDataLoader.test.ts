@@ -73,6 +73,10 @@ describe('StrokeDataLoader Engine (Slice 1.4)', () => {
       expect(isHanziStrokeData({ strokes: ['M 0 0'], medians: [] })).toBe(false);
       expect(isHanziStrokeData({ strokes: [], medians: [[[0, 0]]] })).toBe(false);
       expect(isHanziStrokeData({ strokes: ['M 0 0'], medians: [[[0]]] })).toBe(false); // coordinate length != 2
+      // Red Team H-01 Defense
+      expect(isHanziStrokeData({ strokes: ['M 0 0', 'M 1 1'], medians: [[[0, 0]]] })).toBe(false); // length mismatch
+      expect(isHanziStrokeData({ strokes: ['M 0 0'], medians: [[[NaN, 0]]] })).toBe(false); // non-finite
+      expect(isHanziStrokeData({ strokes: ['M 0 0'], medians: [[[0, Infinity]]] })).toBe(false); // non-finite
     });
   });
 
@@ -257,6 +261,42 @@ describe('StrokeDataLoader Engine (Slice 1.4)', () => {
       await expect(
         loadStrokeData('你', { signal: controller.signal })
       ).rejects.toThrow(StrokeDataLoaderError);
+    });
+
+    it('does not poison subsequent callers when an earlier caller aborts (Red Team C-01)', async () => {
+      let resolveFetch!: (val: unknown) => void;
+      const delayedPromise = new Promise((resolve) => {
+        resolveFetch = resolve;
+      });
+      const mockFetch = vi.fn().mockReturnValue(delayedPromise);
+
+      const controller = new AbortController();
+
+      // Caller 1 requests '好' with signal
+      const promise1 = loadStrokeData('好', {
+        fetchFn: mockFetch as unknown as typeof fetch,
+        signal: controller.signal,
+      });
+
+      // Caller 1 aborts mid-flight
+      controller.abort();
+      await expect(promise1).rejects.toThrow(StrokeDataLoaderError);
+
+      // Caller 2 requests '好' without abort
+      const promise2 = loadStrokeData('好', { fetchFn: mockFetch as unknown as typeof fetch });
+
+      // Resolve the underlying shared fetch
+      resolveFetch({
+        ok: true,
+        status: 200,
+        json: async () => ({
+          strokes: ['M 0 0 L 10 10'],
+          medians: [[[0, 0], [10, 10]]],
+        }),
+      });
+
+      const res2 = await promise2;
+      expect(res2.strokes).toEqual(['M 0 0 L 10 10']);
     });
   });
 

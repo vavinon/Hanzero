@@ -230,3 +230,22 @@ button {
     transform: rotate(360deg);
   }
 }
+
+/* Subtle Celebration Fade-In */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* iOS Safari WebKit SVG Touch Action Lock (Red Team Defense M-02) */
+.hanzi-writer-box svg {
+  touch-action: none !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}

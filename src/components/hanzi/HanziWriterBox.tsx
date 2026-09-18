@@ -89,9 +89,17 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
   const writerRef = useRef<HanziWriter | null>(null);
   const isMountedRef = useRef<boolean>(true);
   const requestIdRef = useRef<number>(0);
+  const registeredDocListenersRef = useRef<EventListener[]>([]);
 
-  // Teardown previous writer instance cleanly
+  // Teardown previous writer instance cleanly (Red Team C-02 Memory Leak Defense)
   const teardownWriter = useCallback(() => {
+    // Purge leaked document pointer-end listeners
+    registeredDocListenersRef.current.forEach((listener) => {
+      document.removeEventListener('mouseup', listener);
+      document.removeEventListener('touchend', listener);
+    });
+    registeredDocListenersRef.current = [];
+
     if (writerRef.current) {
       try {
         writerRef.current.cancelQuiz();
@@ -162,6 +170,15 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
         setLoadError(msg);
       },
     });
+
+    // Intercept target.addPointerEndListener to prevent C-02 memory leaks on document
+    if (writer.target && typeof writer.target.addPointerEndListener === 'function') {
+      const origAddPointerEndListener = writer.target.addPointerEndListener.bind(writer.target);
+      writer.target.addPointerEndListener = (callback: () => void) => {
+        registeredDocListenersRef.current.push(callback as unknown as EventListener);
+        origAddPointerEndListener(callback);
+      };
+    }
 
     writerRef.current = writer;
 
@@ -234,8 +251,8 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
 
     try {
       await writer.animateCharacter({
-        onComplete: () => {
-          if (!isMountedRef.current) return;
+        onComplete: (res) => {
+          if (!isMountedRef.current || (res && res.canceled)) return;
           setCurrentMode('idle');
         },
       });

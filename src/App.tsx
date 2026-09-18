@@ -53,8 +53,21 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'vocab' | 'stroke'>('vocab');
   const [strokeChar, setStrokeChar] = useState<string>('你');
   const [strokeCacheStatus, setStrokeCacheStatus] = useState<string | null>(null);
+  const [canvasSize, setCanvasSize] = useState<number>(() =>
+    typeof window !== 'undefined'
+      ? Math.min(270, Math.max(220, window.innerWidth - 64))
+      : 270
+  );
 
   const isPlayingRef = useRef<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setCanvasSize(Math.min(270, Math.max(220, window.innerWidth - 64)));
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     // 1. In-App browser check
@@ -463,6 +476,24 @@ export const App: React.FC = () => {
             สวัสดีครับ / สวัสดีค่ะ
           </div>
 
+          {/* Tone Sandhi Pedagogical Note (Pedagogical QA Recommendation) */}
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '6px 12px',
+              borderRadius: 'var(--radius-sm)',
+              backgroundColor: 'var(--bg-rice-paper)',
+              fontSize: '11px',
+              color: 'var(--text-ink-secondary)',
+              border: '1px solid var(--border-subtle)',
+              lineHeight: 1.4,
+            }}
+          >
+            <span>💡 <strong>เกร็ดเสียง 3+3</strong>: พินอินเขียน <code>nǐ hǎo</code> แต่ออกเสียงจริงเป็น <code>ní hǎo</code> (2+3)</span>
+          </div>
+
           {/* Sound Action Pill */}
           <div
             style={{
@@ -513,6 +544,7 @@ export const App: React.FC = () => {
                   }}
                   style={{
                     padding: '4px 14px',
+                    minHeight: '36px',
                     borderRadius: 'var(--radius-full)',
                     border: '1.5px solid',
                     borderColor: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
@@ -530,10 +562,10 @@ export const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Interactive Hanzi Writer Canvas in 米字格 */}
+          {/* Interactive Hanzi Writer Canvas in 米字格 (Responsive canvasSize) */}
           <HanziWriterBox
             character={strokeChar}
-            size={270}
+            size={canvasSize}
             onComplete={handleStrokeComplete}
           />
         </main>
