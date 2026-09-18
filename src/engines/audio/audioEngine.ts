@@ -31,6 +31,11 @@ let currentUtterance: SpeechSynthesisUtterance | null = null;
 let watchdogTimer: ReturnType<typeof setTimeout> | null = null;
 let isLifecycleBound = false;
 
+// Concurrency & Session guards
+let activeSessionId = 0;
+let activeSessionResolve: (() => void) | null = null;
+let unlockPromise: Promise<boolean> | null = null;
+
 /**
  * Detects whether the user is inside a constrained mobile in-app WebView
  * (LINE, Facebook, WeChat, Instagram) which often restricts audio autoplay.
@@ -45,14 +50,15 @@ export function isInAppBrowser(): boolean {
 
 /**
  * Returns the singleton AudioContext instance or null if unsupported.
- * Lazily creates the instance on first demand.
+ * Lazily creates the instance on first demand and automatically recreates
+ * if the previous instance was closed by the host OS.
  */
 export function getAudioContext(): AudioContext | null {
   if (typeof window === 'undefined') {
     return null;
   }
 
-  if (!audioContextInstance) {
+  if (!audioContextInstance || audioContextInstance.state === 'closed') {
     const AudioCtx =
       window.AudioContext ||
       (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
@@ -99,31 +105,37 @@ function setupLifecycleListeners(): void {
 
 /**
  * Explicit user-gesture unlocker for iOS / Safari Autoplay policies.
- * Should be invoked on the very first touch/click interaction.
+ * Includes fast-path for running contexts and mutex memoization to prevent
+ * duplicate buffer source allocation under rapid taps.
  */
-export async function unlockAudioContext(): Promise<boolean> {
+export function unlockAudioContext(): Promise<boolean> {
   const ctx = getAudioContext();
-  if (!ctx) return false;
+  if (!ctx) return Promise.resolve(false);
 
-  if (ctx.state === 'suspended') {
+  // Fast-path: already operational
+  if (ctx.state === 'running') return Promise.resolve(true);
+
+  if (unlockPromise) return unlockPromise;
+
+  unlockPromise = (async () => {
     try {
-      await ctx.resume();
+      if (ctx.state === 'suspended') {
+        await ctx.resume();
+      }
+      const buffer = ctx.createBuffer(1, 1, 22050);
+      const source = ctx.createBufferSource();
+      source.buffer = buffer;
+      source.connect(ctx.destination);
+      source.start(0);
+      return true;
     } catch {
       return false;
+    } finally {
+      unlockPromise = null;
     }
-  }
+  })();
 
-  // Play a 1-sample silent buffer to unlock the hardware audio pipeline
-  try {
-    const buffer = ctx.createBuffer(1, 1, 22050);
-    const source = ctx.createBufferSource();
-    source.buffer = buffer;
-    source.connect(ctx.destination);
-    source.start(0);
-    return true;
-  } catch {
-    return false;
-  }
+  return unlockPromise;
 }
 
 /**
@@ -260,7 +272,7 @@ export function playFanfare(): void {
  * Synthesizes a pure sine wave frequency glide that contours the 4 standard Mandarin tones.
  * Tone 1 (55): High and level (440Hz -> 440Hz)
  * Tone 2 (35): Mid-rising (330Hz -> 440Hz)
- * Tone 3 (214): Dipping (293Hz -> 220Hz -> 370Hz)
+ * Tone 3 (214): Dipping (300Hz -> 220Hz -> 370Hz)
  * Tone 4 (51): High-falling (440Hz -> 220Hz)
  */
 export function playToneContour(tone: ToneNumber, durationSeconds = 0.35): void {
@@ -331,7 +343,8 @@ export function findChineseVoice(): SpeechSynthesisVoice | null {
 }
 
 /**
- * Stops any active speech and clears pending watchdog timers.
+ * Stops any active speech, clears watchdog timers, and safely unblocks
+ * any in-flight Promise so callers don't hang in an await state.
  */
 export function stopSpeaking(): void {
   if (watchdogTimer) {
@@ -348,6 +361,12 @@ export function stopSpeaking(): void {
   }
 
   currentUtterance = null;
+
+  // Unblock any in-flight Promise so callers awaiting an interrupted speech don't hang
+  if (activeSessionResolve) {
+    activeSessionResolve();
+    activeSessionResolve = null;
+  }
 }
 
 /**
@@ -363,13 +382,18 @@ export function isSpeaking(): boolean {
  * 1. Safe cancel before start to avoid queue deadlocks.
  * 2. Utterance retention to avoid mobile Safari GC mid-speech bugs.
  * 3. 3-second watchdog timer: automatically invokes fallback and triggers onEnd if browser hangs.
+ * 4. Active Session ID tracking: prevents trailing cancellation events from hijacking newer sessions.
+ * 5. Guaranteed Promise resolution: ensures caller `await` blocks always resolve cleanly.
  */
 export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   const { rate = 0.85, pitch = 1.0, onStart, onEnd, onError } = options;
 
   return new Promise((resolve) => {
-    // Stop any existing speech and clean up timer
+    // Stop existing speech, unblock prior callers, and clear watchdog
     stopSpeaking();
+
+    const currentSessionId = ++activeSessionId;
+    activeSessionResolve = resolve;
 
     const hasSpeech =
       typeof window !== 'undefined' &&
@@ -381,6 +405,7 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       playToneContour(1, 0.25);
       onError?.(new Error('SpeechSynthesis not supported on this browser'));
       onEnd?.();
+      activeSessionResolve = null;
       resolve();
       return;
     }
@@ -391,17 +416,23 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       if (isCompleted) return;
       isCompleted = true;
 
-      if (watchdogTimer) {
-        clearTimeout(watchdogTimer);
-        watchdogTimer = null;
+      // Clean up global references ONLY if this is still the active session
+      if (currentSessionId === activeSessionId) {
+        if (watchdogTimer) {
+          clearTimeout(watchdogTimer);
+          watchdogTimer = null;
+        }
+
+        currentUtterance = null;
+        activeSessionResolve = null;
+
+        if (error) {
+          onError?.(error);
+        }
+        onEnd?.();
       }
 
-      currentUtterance = null;
-
-      if (error) {
-        onError?.(error);
-      }
-      onEnd?.();
+      // Always resolve this specific call's Promise to prevent hanging awaits
       resolve();
     };
 
@@ -420,7 +451,9 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       currentUtterance = utterance;
 
       utterance.onstart = () => {
-        onStart?.();
+        if (currentSessionId === activeSessionId) {
+          onStart?.();
+        }
       };
 
       utterance.onend = () => {
@@ -433,7 +466,7 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
 
       // 3-second Watchdog: If browser locks up or fails to trigger onend/onerror
       watchdogTimer = setTimeout(() => {
-        if (!isCompleted) {
+        if (!isCompleted && currentSessionId === activeSessionId) {
           stopSpeaking();
           playToneContour(1, 0.2); // Fallback tone
           finalize(new Error('SpeechSynthesis timed out (3s watchdog triggered)'));
@@ -482,6 +515,9 @@ export function getAudioEngineStatus(): AudioEngineStatus {
  */
 export function _resetAudioEngineForTesting(): void {
   stopSpeaking();
+  activeSessionId = 0;
+  activeSessionResolve = null;
+  unlockPromise = null;
   if (audioContextInstance) {
     try {
       audioContextInstance.close().catch(() => {});

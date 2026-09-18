@@ -15,6 +15,7 @@ export const App: React.FC = () => {
   const [audioFeedback, setAudioFeedback] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
+  const isPlayingRef = useRef<boolean>(false);
   const feedbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -31,40 +32,91 @@ export const App: React.FC = () => {
   }, []);
 
   const handleSpeak = async (text: string, label?: string) => {
-    // Unlock Web Audio context on user gesture (crucial for iOS)
-    await unlockAudioContext();
-    playClick();
-
+    // Immediate synchronous guard against microtask double-taps
+    if (isPlayingRef.current) return;
+    isPlayingRef.current = true;
     setIsPlaying(true);
-    setAudioFeedback(label ? `🔊 ${label}` : '🔊 กำลังออกเสียง...');
 
     if (feedbackTimerRef.current) {
       clearTimeout(feedbackTimerRef.current);
     }
+    setAudioFeedback(label ? `🔊 ${label}` : '🔊 กำลังออกเสียง...');
 
-    await speak(text, {
-      rate: 0.85,
-      onStart: () => {
-        setIsPlaying(true);
-      },
-      onEnd: () => {
-        setIsPlaying(false);
-        setAudioFeedback('✅ ฟังเรียบร้อย');
-        feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
-      },
-      onError: (err) => {
-        setIsPlaying(false);
-        const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
-        setAudioFeedback(`💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เปิดเสียงเรียบร้อย'}`);
-        feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2500);
-      },
-    });
+    let hasEncounteredError = false;
+
+    try {
+      // Unlock Web Audio context on user gesture (crucial for iOS)
+      await unlockAudioContext();
+      playClick();
+
+      await speak(text, {
+        rate: 0.85,
+        onStart: () => {
+          setIsPlaying(true);
+        },
+        onError: (err) => {
+          hasEncounteredError = true;
+          const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
+          setAudioFeedback(
+            `💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เบราว์เซอร์เล่นเสียงสังเคราะห์สำรอง'}`
+          );
+          feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 3000);
+        },
+        onEnd: () => {
+          if (!hasEncounteredError) {
+            setAudioFeedback('✅ ฟังเรียบร้อย');
+            feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
+          }
+        },
+      });
+    } finally {
+      isPlayingRef.current = false;
+      setIsPlaying(false);
+    }
   };
 
   const handleStartLesson = async () => {
-    await unlockAudioContext();
-    playCorrect();
-    await handleSpeak('你好', '你好 (nǐ hǎo - สวัสดี)');
+    // Immediate synchronous guard against microtask double-taps
+    if (isPlayingRef.current) return;
+    isPlayingRef.current = true;
+    setIsPlaying(true);
+
+    if (feedbackTimerRef.current) {
+      clearTimeout(feedbackTimerRef.current);
+    }
+    setAudioFeedback('🔊 你好 (nǐ hǎo - สวัสดี)');
+
+    let hasEncounteredError = false;
+
+    try {
+      await unlockAudioContext();
+      // Clean acoustic transition: celebratory chime, no overlapping click
+      playCorrect();
+
+      await speak('你好', {
+        rate: 0.85,
+        onStart: () => {
+          setIsPlaying(true);
+        },
+        onError: (err) => {
+          hasEncounteredError = true;
+          const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
+          setAudioFeedback(
+            `💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เบราว์เซอร์เล่นเสียงสังเคราะห์สำรอง'}`
+          );
+          feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 3000);
+        },
+        onEnd: () => {
+          if (!hasEncounteredError) {
+            setAudioFeedback('✅ ฟังเรียบร้อย');
+            feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
+          }
+        },
+      });
+    } finally {
+      isPlayingRef.current = false;
+      setIsPlaying(false);
+    }
   };
 
   return (
@@ -177,18 +229,20 @@ export const App: React.FC = () => {
           </p>
         </div>
 
-        {/* First Word Learning Card */}
+        {/* First Word Learning Card with Visual Grapheme Active Glow */}
         <div
           style={{
-            backgroundColor: '#FDFBF7',
+            backgroundColor: isPlaying ? '#F0FDF4' : '#FDFBF7',
             borderRadius: '16px',
             padding: '14px',
             width: '100%',
-            border: '1px dashed #D1C9BE',
+            border: isPlaying ? '2px solid #10B981' : '1px dashed #D1C9BE',
+            boxShadow: isPlaying ? '0 0 16px rgba(16, 185, 129, 0.2)' : 'none',
             display: 'flex',
             flexDirection: 'column',
             gap: '6px',
             boxSizing: 'border-box',
+            transition: 'all 0.2s ease',
           }}
         >
           <div style={{ fontSize: '12px', color: '#8E95A3', fontWeight: 500 }}>
@@ -198,9 +252,10 @@ export const App: React.FC = () => {
             style={{
               fontSize: 'clamp(36px, 10vw, 48px)',
               fontWeight: 700,
-              color: '#1A1D20',
+              color: isPlaying ? '#047857' : '#1A1D20',
               fontFamily: 'var(--font-hanzi-hero)',
               lineHeight: 1.2,
+              transition: 'color 0.2s ease',
             }}
           >
             你好
@@ -246,7 +301,7 @@ export const App: React.FC = () => {
         {/* Listen Button with Anti-Cheat / Resilience */}
         <button
           type="button"
-          onClick={() => handleSpeak('你好', '你好 (nǐ hǎo)')}
+          onClick={() => handleSpeak('你好', '你好 (nǐ hǎo - สวัสดี)')}
           disabled={isPlaying}
           style={{
             backgroundColor: isPlaying ? '#059669' : '#047857',

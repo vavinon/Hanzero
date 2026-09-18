@@ -167,13 +167,32 @@ describe('audioEngine', () => {
       expect(ctx1).toBe(ctx2);
     });
 
-    it('unlocks suspended audio context with a silent buffer', async () => {
-      const unlockPromise = unlockAudioContext();
-      const result = await unlockPromise;
+    it('memoizes in-flight unlockAudioContext calls and fast-paths once running', async () => {
+      const ctx = getAudioContext() as unknown as MockAudioContext;
+      ctx.state = 'suspended';
+
+      // First unlock while suspended
+      const p1 = unlockAudioContext();
+      const p2 = unlockAudioContext();
+      expect(p1).toBe(p2); // Same in-flight promise memoized
+
+      const result = await p1;
       expect(result).toBe(true);
 
-      const ctx = getAudioContext() as unknown as MockAudioContext;
-      expect(ctx.createBuffer).toHaveBeenCalledWith(1, 1, 22050);
+      // Subsequent call fast-paths when running
+      ctx.state = 'running';
+      const p3 = unlockAudioContext();
+      expect(await p3).toBe(true);
+    });
+
+    it('reclaims and creates a new AudioContext if the previous one was closed', () => {
+      const ctx1 = getAudioContext() as unknown as MockAudioContext;
+      expect(ctx1).not.toBeNull();
+      ctx1.state = 'closed';
+
+      const ctx2 = getAudioContext() as unknown as MockAudioContext;
+      expect(ctx2).not.toBeNull();
+      expect(ctx2).not.toBe(ctx1);
     });
 
     it('reports engine status accurately', () => {
@@ -280,9 +299,40 @@ describe('audioEngine', () => {
       expect(mockCancel).toHaveBeenCalled();
     });
 
-    it('handles stopSpeaking safely', () => {
+    it('handles stopSpeaking safely and unblocks in-flight session', async () => {
+      const onEndSpy = vi.fn();
+      const speakPromise = speak('你好', { onEnd: onEndSpy });
       stopSpeaking();
       expect(mockCancel).toHaveBeenCalled();
+      await speakPromise; // Unblocks
+    });
+
+    it('guarantees promise resolution on preempted speech calls and preserves active session watchdog', async () => {
+      const onEndA = vi.fn();
+      const onEndB = vi.fn();
+      const onErrorB = vi.fn();
+
+      // Start call A
+      const promiseA = speak('A', { onEnd: onEndA });
+      expect(mockSpeak).toHaveBeenCalledTimes(1);
+
+      // Start call B immediately, preempting A
+      const promiseB = speak('B', { onEnd: onEndB, onError: onErrorB });
+      expect(mockSpeak).toHaveBeenCalledTimes(2);
+
+      // Promise A must resolve cleanly rather than hanging
+      await promiseA;
+
+      // Advance time by 3100ms - Call B's watchdog must STILL be active and trip safely
+      vi.advanceTimersByTime(3100);
+
+      await promiseB;
+      expect(onErrorB).toHaveBeenCalledWith(
+        expect.objectContaining({
+          message: expect.stringContaining('3s watchdog triggered'),
+        })
+      );
+      expect(onEndB).toHaveBeenCalled();
     });
   });
 });
