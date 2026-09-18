@@ -160,6 +160,15 @@ export function playClick(): void {
     osc.connect(gain);
     gain.connect(ctx.destination);
 
+    osc.onended = () => {
+      try {
+        osc.disconnect();
+        gain.disconnect();
+      } catch {
+        // Safe ignore
+      }
+    };
+
     osc.start(now);
     osc.stop(now + 0.05);
   } catch {
@@ -191,6 +200,15 @@ export function playCorrect(): void {
 
       osc.connect(gain);
       gain.connect(ctx.destination);
+
+      osc.onended = () => {
+        try {
+          osc.disconnect();
+          gain.disconnect();
+        } catch {
+          // Safe ignore
+        }
+      };
 
       osc.start(startTime);
       osc.stop(startTime + 0.26);
@@ -224,6 +242,15 @@ export function playIncorrect(): void {
 
       osc.connect(gain);
       gain.connect(ctx.destination);
+
+      osc.onended = () => {
+        try {
+          osc.disconnect();
+          gain.disconnect();
+        } catch {
+          // Safe ignore
+        }
+      };
 
       osc.start(startTime);
       osc.stop(startTime + 0.21);
@@ -259,6 +286,15 @@ export function playFanfare(): void {
 
       osc.connect(gain);
       gain.connect(ctx.destination);
+
+      osc.onended = () => {
+        try {
+          osc.disconnect();
+          gain.disconnect();
+        } catch {
+          // Safe ignore
+        }
+      };
 
       osc.start(startTime);
       osc.stop(startTime + duration + 0.01);
@@ -312,11 +348,128 @@ export function playToneContour(tone: ToneNumber, durationSeconds = 0.35): void 
     osc.connect(gain);
     gain.connect(ctx.destination);
 
+    osc.onended = () => {
+      try {
+        osc.disconnect();
+        gain.disconnect();
+      } catch {
+        // Safe ignore
+      }
+    };
+
     osc.start(now);
     osc.stop(now + durationSeconds + 0.02);
   } catch {
     // Graceful fallback
   }
+}
+
+/**
+ * Map of common Tier 0 / Tier 1 phonemes to standard Chinese characters
+ * to allow SpeechSynthesis to pronounce them correctly without spelling letter-by-letter.
+ */
+const PHONEME_CHARACTER_MAP: Record<string, string> = {
+  a1: '啊',
+  a2: '啊',
+  a3: '啊',
+  a4: '啊',
+  ba1: '八',
+  ba2: '拔',
+  ba3: '把',
+  ba4: '爸',
+  ma1: '妈',
+  ma2: '麻',
+  ma3: '马',
+  ma4: '骂',
+  ni3: '你',
+  hao3: '好',
+  wo3: '我',
+  ta1: '他',
+  shi4: '是',
+  bu4: '不',
+  xie4: '谢',
+  zai4: '再',
+  jian4: '见',
+};
+
+/**
+ * Plays pre-rendered Tier 0 static audio fallback from local PWA assets,
+ * or gracefully falls back to synthesized tone contour / TTS if the asset is missing.
+ *
+ * Guaranteed non-throwing promise that resolves to true (if audio played) or false (fallback).
+ */
+export async function playPhonemeAudio(code: string): Promise<boolean> {
+  const sanitized = code.trim().toLowerCase();
+  if (!sanitized || !/^[a-z]+[1-4]?$/.test(sanitized)) {
+    return false;
+  }
+
+  // Attempt Tier 0: Static Audio asset
+  if (typeof window !== 'undefined' && typeof Audio !== 'undefined') {
+    const assetUrl = `${import.meta.env.BASE_URL}audio/tier0/${sanitized}.mp3`;
+    const played = await new Promise<boolean>((resolve) => {
+      try {
+        const audio = new Audio();
+        let isResolved = false;
+
+        const cleanup = () => {
+          if (!isResolved) {
+            isResolved = true;
+            audio.onended = null;
+            audio.onerror = null;
+            audio.src = '';
+          }
+        };
+
+        audio.onended = () => {
+          cleanup();
+          resolve(true);
+        };
+
+        audio.onerror = () => {
+          cleanup();
+          resolve(false);
+        };
+
+        // 1.5s timeout watchdog for asset load
+        setTimeout(() => {
+          if (!isResolved) {
+            cleanup();
+            resolve(false);
+          }
+        }, 1500);
+
+        audio.src = assetUrl;
+        audio.play().catch(() => {
+          cleanup();
+          resolve(false);
+        });
+      } catch {
+        resolve(false);
+      }
+    });
+
+    if (played) return true;
+  }
+
+  // Fallback Cascade Tier 1: Tone Contour Glide if tone digit exists
+  const toneMatch = sanitized.match(/[1-4]$/);
+  if (toneMatch) {
+    const tone = parseInt(toneMatch[0], 10) as ToneNumber;
+    playToneContour(tone, 0.35);
+    return true;
+  }
+
+  // Fallback Cascade Tier 2: Mapped Chinese Character Speech
+  const mappedChar = PHONEME_CHARACTER_MAP[sanitized];
+  if (mappedChar) {
+    await speak(mappedChar, { rate: 0.85 });
+    return true;
+  }
+
+  // Fallback Cascade Tier 3: Default Tone 1 chime
+  playToneContour(1, 0.25);
+  return true;
 }
 
 /**
@@ -340,6 +493,45 @@ export function findChineseVoice(): SpeechSynthesisVoice | null {
     voices.find((v) => v.lang.startsWith('zh') || v.lang.startsWith('cmn')) ||
     null
   );
+}
+
+/**
+ * Returns all Chinese voices currently available in the speech synthesis engine.
+ */
+export function getAllChineseVoices(): SpeechSynthesisVoice[] {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    return [];
+  }
+  const voices = window.speechSynthesis.getVoices();
+  return voices.filter(
+    (v) =>
+      v.lang.toLowerCase().startsWith('zh') ||
+      v.lang.toLowerCase().startsWith('cmn') ||
+      v.lang.toLowerCase().includes('chinese')
+  );
+}
+
+/**
+ * Subscribes to dynamic voice loading events from the browser.
+ * Returns an unsubscribe callback.
+ */
+export function onVoicesChanged(callback: () => void): () => void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    return () => {};
+  }
+  if (typeof window.speechSynthesis.addEventListener === 'function') {
+    window.speechSynthesis.addEventListener('voiceschanged', callback);
+    return () => {
+      window.speechSynthesis.removeEventListener('voiceschanged', callback);
+    };
+  }
+  const prevHandler = window.speechSynthesis.onvoiceschanged;
+  window.speechSynthesis.onvoiceschanged = callback;
+  return () => {
+    if (window.speechSynthesis.onvoiceschanged === callback) {
+      window.speechSynthesis.onvoiceschanged = prevHandler;
+    }
+  };
 }
 
 /**

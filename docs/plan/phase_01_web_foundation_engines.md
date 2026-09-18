@@ -42,19 +42,19 @@
   ```
 
 ### 2. ระบบการออกแบบและสไตล์ (Design Tokens, Font Subsetting, Accessible Tones & 360px Layout)
-- [ ] นำเข้าฟอนต์พรีเมียม 3 ภาษา พร้อมกลยุทธ์ Font Subsetting & Legibility Fallback:
+- [x] นำเข้าฟอนต์พรีเมียม 3 ภาษา พร้อมกลยุทธ์ Font Subsetting & Legibility Fallback:
   - ภาษาไทย: `Prompt` หรือ `Noto Sans Thai`
   - ภาษาจีน: **Dual Chinese Font Strategy**:
     - `LXGW WenKai` (KaiTi ลายมือพู่กันบรรจง) สำหรับตัวอักษรขนาดใหญ่ (`--font-hanzi-hero`, `--font-hanzi-card`)
     - `Noto Sans SC` (HeiTi โกธิคเส้นสม่ำเสมอ) เป็น Fallback อัตโนมัติสำหรับตัวอักษรขนาดเล็ก (<32px) ปุ่มควิซ และอุปกรณ์ความละเอียดต่ำ (Low-DPI) เพื่อป้องกันเส้นขีดเบลอ/แตก
     - ใช้กลยุทธ์ **Google Fonts Dynamic Slice** หรือตัด Subset เฉพาะ HSK 1–3 ไม่โหลดไฟล์เต็ม 30MB
   - สากล: `Inter` / `Outfit`
-- [ ] กำหนดมาตรฐานขนาดตัวอักษรจีนและพินอิน (Hanzi & Pinyin Legibility Tokens):
+- [x] กำหนดมาตรฐานขนาดตัวอักษรจีนและพินอิน (Hanzi & Pinyin Legibility Tokens):
   - `--font-hanzi-hero: 3.5rem` (56px) สำหรับหน้าเรียนคัดลายมือ
   - `--font-hanzi-card: 2.25rem` (36px) ขั้นต่ำสำหรับการ์ดคำศัพท์
   - `--font-hanzi-quiz: 1.75rem` (28px) ขั้นต่ำสำหรับปุ่มควิซ
   - `--font-pinyin-body: 1.25rem` (20px) พร้อม **`line-height: 1.5` ขึ้นไปเสมอ** เพื่อป้องกันการตัดหัววรรณยุกต์ (Diacritic Clipping) เช่น `ǚ`, `ǎ`
-- [ ] กำหนด CSS Variables ที่ผ่านเกณฑ์ความเปรียบต่างสากล (WCAG AA Accessible Palette):
+- [x] กำหนด CSS Variables ที่ผ่านเกณฑ์ความเปรียบต่างสากล (WCAG AA Accessible Palette):
   - Primary Jade Accent: `#10B981` (สำหรับปุ่ม/ไฮไลต์พื้นหลังเข้ม)
   - **Text-Safe Dark Jade:** `#047857` (Contrast Ratio > 5.1:1 บน Rice Paper สำหรับข้อความ/ไอคอน)
   - Accent Ochre: `#F59E0B` (สำหรับแบดจ์/แถบความก้าวหน้า)
@@ -62,13 +62,13 @@
   - Text-Safe Vermilion: `#DC2626` (Contrast Ratio > 5.0:1)
   - Backgrounds: Rice Paper `#FDFBF7` (โหมดสว่าง) / Ink Stone `#12161A` (โหมดมืด)
   - **Accessible Dual-Encoded Tones:** กำหนดคลาสแสดงวรรณยุกต์ที่ผสาน **สี + รูปทรงเรขาคณิต/สัญลักษณ์รูปคลื่น (¯ ˊ ˇ ˋ)** ควบคู่กันเสมอ เพื่อให้ผู้ใช้ตาบอดสี (Deuteranopia/Protanopia) แยก 4 เสียงได้อย่างแม่นยำ 100%
-- [ ] กฎเลย์เอาต์สำหรับหน้าจอมือถือขนาดเล็ก (360px Small Viewport Resilience):
+- [x] กฎเลย์เอาต์สำหรับหน้าจอมือถือขนาดเล็ก (360px Small Viewport Resilience):
   - Safe Touch Target: Hitbox ปุ่มกดและตัวเลือกไม่ต่ำกว่า 44x44px ทุกจุด
   - Mobile Condensed Header: รวมกลุ่มหัวใจเป็นตัวเลขย่อ `❤️ x 5` บนจอความกว้าง < 380px ป้องกัน Header Bar ล้นจอ
   - Responsive Stacking: แผงเปรียบเทียบเสียงคู่ก้ำกึ่ง (Minimal Pairs) สลับเป็น Vertical Stack อัตโนมัติเมื่อความกว้างจอ < 400px
 
 ### 3. เครื่องยนต์เสียงสองประสานและระบบสำรอง (Audio Resilience Engine)
-- [ ] สร้าง `src/engines/audio/audioEngine.ts`:
+- [x] สร้าง `src/engines/audio/audioEngine.ts`:
   - **Singleton AudioContext & Lifecycle Manager:**
     - สร้าง instance เดียว ปลดล็อก AudioContext ใน First Touch ของผู้เรียน (`unlockAudioContext()`)
     - **Wakeup & Auto-Resume:** ดักจับ Event `visibilitychange` และ `focus` เมื่อผู้เรียนปลดล็อกหน้าจอหรือสลับแท็บกลับมา หากพบ `audioContext.state === 'suspended'` ให้สั่ง `.resume()` ทันที ป้องกันเสียงใบ้
@@ -102,7 +102,7 @@
   - **Canvas & DOM Cleanup:** เคลียร์ Container, Event Listeners และ Animation Frame เมื่อ Unmount หรือสลับการ์ดเพื่อป้องกัน Memory Leak 100%
 
 ### 6. แผงควบคุมและทดสอบระบบ (Engine Test Panel)
-- [ ] สร้างหน้าจอทดสอบ `src/components/test/EngineTestPanel.tsx`:
+- [x] สร้างหน้าจอทดสอบ `src/components/test/EngineTestPanel.tsx`:
   - ตรวจสอบและแสดงรายชื่อ Voice Pack ภาษาจีนในเครื่อง
   - ปุ่มทดสอบเสียง TTS, การตัดคำยาว (GC Bug Test) และปุ่มทดสอบ Static Audio Pack ของ Tier 0
   - ปุ่มทดสอบ iOS First Touch Audio Unlock และ SFX Oscillators

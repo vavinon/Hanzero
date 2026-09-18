@@ -38,9 +38,14 @@ import {
 import { getStrokeCache } from './engines/storage/coldStorage';
 import { HanziWriterBox } from './components/hanzi';
 
+const EngineTestPanel = React.lazy(() =>
+  import('./components/test/EngineTestPanel').then((m) => ({ default: m.EngineTestPanel }))
+);
+
 export const App: React.FC = () => {
   // Real Storage Engine Integration (Synchronous Fast Boot)
   const [userState, setUserState] = useState<UserStateSchema>(getStoredUserStateSync);
+  const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
@@ -295,7 +300,7 @@ export const App: React.FC = () => {
           </span>
         </div>
 
-        {/* Stats Right (Hearts & XP) */}
+        {/* Stats Right (Hearts, XP & Lab Switch) */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <div
             className="badge-capsule"
@@ -312,6 +317,27 @@ export const App: React.FC = () => {
             <Sparkles size={16} color="var(--color-jade-primary)" />
             <span>{xp}</span>
           </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              playClick();
+              setShowTestPanel(true);
+            }}
+            className="badge-capsule"
+            style={{
+              backgroundColor: '#F5F1EA',
+              color: 'var(--text-ink-secondary)',
+              border: '1px solid var(--border-subtle)',
+              cursor: 'pointer',
+              fontSize: '11px',
+              padding: '6px 8px',
+              minHeight: '36px',
+            }}
+            title="เปิดห้องทดลองเครื่องยนต์ฮั่นซีโร่ (Engine Test Panel)"
+          >
+            <span>🛠️ Lab</span>
+          </button>
         </div>
       </header>
 
@@ -764,6 +790,34 @@ export const App: React.FC = () => {
           <span>เริ่มบทเรียนก้าวแรก (+10 XP)</span>
         </button>
       </footer>
+
+      {/* Engine Test Panel (Lazy Loaded Diagnostics Workbench) */}
+      {showTestPanel && (
+        <React.Suspense
+          fallback={
+            <div
+              style={{
+                position: 'fixed',
+                inset: 0,
+                backgroundColor: 'var(--bg-rice-paper)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 100,
+                gap: '12px',
+              }}
+            >
+              <div className="spinner" />
+              <div style={{ fontSize: '14px', color: 'var(--text-ink-secondary)', fontWeight: 600 }}>
+                กำลังเปิดห้องทดลองเครื่องยนต์ฮั่นซีโร่ 🐰🔬...
+              </div>
+            </div>
+          }
+        >
+          <EngineTestPanel onClose={() => setShowTestPanel(false)} />
+        </React.Suspense>
+      )}
     </div>
   );
 };

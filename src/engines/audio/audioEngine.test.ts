@@ -10,6 +10,9 @@ import {
   speak,
   stopSpeaking,
   findChineseVoice,
+  getAllChineseVoices,
+  onVoicesChanged,
+  playPhonemeAudio,
   getAudioEngineStatus,
   isInAppBrowser,
   _resetAudioEngineForTesting,
@@ -73,6 +76,7 @@ describe('audioEngine', () => {
     mockCancel = vi.fn();
     mockGetVoices = vi.fn(() => [
       { name: 'Tingting', lang: 'zh-CN', default: true },
+      { name: 'Meijia', lang: 'cmn-Hans-CN', default: false },
       { name: 'Alex', lang: 'en-US', default: false },
     ]);
 
@@ -80,6 +84,8 @@ describe('audioEngine', () => {
       speak: mockSpeak,
       cancel: mockCancel,
       getVoices: mockGetVoices,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
     };
 
     class MockSpeechSynthesisUtterance {
@@ -333,6 +339,41 @@ describe('audioEngine', () => {
         })
       );
       expect(onEndB).toHaveBeenCalled();
+    });
+  });
+
+  describe('Phoneme Audio & Voice Discovery (Slice 1.5)', () => {
+    it('returns all Chinese voices matching zh or cmn', () => {
+      const voices = getAllChineseVoices();
+      expect(voices.length).toBeGreaterThanOrEqual(2);
+      expect(voices.some((v) => v.lang === 'zh-CN')).toBe(true);
+    });
+
+    it('subscribes and unsubscribes to voiceschanged event safely', () => {
+      const callback = vi.fn();
+      const unsubscribe = onVoicesChanged(callback);
+      expect(typeof unsubscribe).toBe('function');
+      unsubscribe();
+    });
+
+    it('sanitizes phoneme codes and rejects invalid inputs immediately', async () => {
+      expect(await playPhonemeAudio('')).toBe(false);
+      expect(await playPhonemeAudio('   ')).toBe(false);
+      expect(await playPhonemeAudio('../secret')).toBe(false);
+      expect(await playPhonemeAudio('1234')).toBe(false);
+      expect(await playPhonemeAudio('ni5')).toBe(false);
+    });
+
+    it('safely plays fallback tone contour when static asset is absent but code has tone digit', async () => {
+      // "ni3" has tone digit 3
+      const result = await playPhonemeAudio('ni3');
+      expect(result).toBe(true);
+    });
+
+    it('safely plays fallback mapped character speech when code matches dictionary', async () => {
+      // "shi4" maps to 是
+      const result = await playPhonemeAudio('shi4');
+      expect(result).toBe(true);
     });
   });
 });
