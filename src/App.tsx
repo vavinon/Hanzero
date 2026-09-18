@@ -3,7 +3,6 @@ import {
   Flame,
   Heart,
   Sparkles,
-  Volume2,
   Play,
   ChevronDown,
   ChevronUp,
@@ -14,6 +13,8 @@ import {
   AlertTriangle,
   PenTool,
   BookOpen,
+  MessageCircle,
+  Award,
 } from 'lucide-react';
 import bunnyImg from './assets/brand/mascot_bunny.jpg';
 import {
@@ -37,6 +38,25 @@ import {
 } from './engines/storage';
 import { getStrokeCache } from './engines/storage/coldStorage';
 import { HanziWriterBox } from './components/hanzi';
+import { VocabCard, DialoguePlayer, GrammarBite, QuizContainer, QuizResult } from './components/lesson';
+import unit01Data from './data/lessons/tier1/unit01_greetings.json';
+import {
+  VocabularyItem,
+  DialogueLine,
+  GrammarBite as GrammarBiteData,
+  ToneRule,
+  QuizQuestion,
+  BossChallenge,
+  CheerTrophy,
+} from './types/lesson';
+
+const lesson1VocabList = unit01Data.lessons[0].vocabulary as VocabularyItem[];
+const lesson1Dialogue = unit01Data.lessons[0].dialogue as DialogueLine[];
+const lesson1GrammarBite = unit01Data.lessons[0].grammar_bite as GrammarBiteData;
+const lesson1ToneRule = (unit01Data.lessons[0].tone_rule || null) as ToneRule | null;
+const lesson1Quizzes = unit01Data.lessons[0].quizzes as QuizQuestion[];
+const lesson1Boss = unit01Data.lessons[0].boss_challenge as BossChallenge;
+const lesson1Trophy = unit01Data.lessons[0].cheer_trophy as CheerTrophy;
 
 const EngineTestPanel = React.lazy(() =>
   import('./components/test/EngineTestPanel').then((m) => ({ default: m.EngineTestPanel }))
@@ -46,7 +66,6 @@ export const App: React.FC = () => {
   // Real Storage Engine Integration (Synchronous Fast Boot)
   const [userState, setUserState] = useState<UserStateSchema>(getStoredUserStateSync);
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
   const [storageHealth, setStorageHealth] = useState<StorageDiagnostics | null>(null);
@@ -54,8 +73,8 @@ export const App: React.FC = () => {
   const [quickSyncInput, setQuickSyncInput] = useState<string>('');
   const [syncFeedback, setSyncFeedback] = useState<string | null>(null);
 
-  // Slice 1.4: Hanzi Stroke Engine Integration
-  const [activeTab, setActiveTab] = useState<'vocab' | 'stroke'>('vocab');
+  // Slice 1.4 - 2.5: Interactive Study Tabs
+  const [activeTab, setActiveTab] = useState<'vocab' | 'stroke' | 'dialogue' | 'grammar' | 'quiz'>('vocab');
   const [strokeChar, setStrokeChar] = useState<string>('你');
   const [strokeCacheStatus, setStrokeCacheStatus] = useState<string | null>(null);
   const [canvasSize, setCanvasSize] = useState<number>(() =>
@@ -63,6 +82,10 @@ export const App: React.FC = () => {
       ? Math.min(270, Math.max(220, window.innerWidth - 64))
       : 270
   );
+
+  // Slice 2.2: Trilingual VocabCard Stepper Integration
+  const [vocabIndex, setVocabIndex] = useState<number>(0);
+  const currentVocab = lesson1VocabList[vocabIndex] || lesson1VocabList[0];
 
   const isPlayingRef = useRef<boolean>(false);
 
@@ -101,37 +124,9 @@ export const App: React.FC = () => {
   const hearts = userState.progress.hearts.current;
   const xp = userState.progress.xp;
 
-  const handlePlayWord = async () => {
-    if (isPlayingRef.current) return;
-    isPlayingRef.current = true;
-    setIsPlaying(true);
-
-    try {
-      await unlockAudioContext();
-      playClick();
-
-      await speak('你好', {
-        rate: 0.85,
-        onStart: () => setIsPlaying(true),
-        onEnd: () => {
-          setIsPlaying(false);
-          isPlayingRef.current = false;
-        },
-        onError: () => {
-          setIsPlaying(false);
-          isPlayingRef.current = false;
-        },
-      });
-    } catch {
-      setIsPlaying(false);
-      isPlayingRef.current = false;
-    }
-  };
-
   const handleStartLesson = async () => {
     if (isPlayingRef.current) return;
     isPlayingRef.current = true;
-    setIsPlaying(true);
 
     try {
       await unlockAudioContext();
@@ -157,16 +152,13 @@ export const App: React.FC = () => {
       await speak('你好', {
         rate: 0.85,
         onEnd: () => {
-          setIsPlaying(false);
           isPlayingRef.current = false;
         },
         onError: () => {
-          setIsPlaying(false);
           isPlayingRef.current = false;
         },
       });
     } catch {
-      setIsPlaying(false);
       isPlayingRef.current = false;
     }
   };
@@ -220,6 +212,25 @@ export const App: React.FC = () => {
     };
     await saveUserState(updatedState);
     setUserState(updatedState);
+  };
+
+  const handleQuizComplete = async (result: QuizResult) => {
+    if (result.passed && result.xpEarned > 0) {
+      const updatedState = {
+        ...userState,
+        progress: {
+          ...userState.progress,
+          xp: userState.progress.xp + result.xpEarned,
+          streak: {
+            ...userState.progress.streak,
+            count: Math.max(userState.progress.streak.count, 1),
+            last_active_date: new Date().toISOString().slice(0, 10),
+          },
+        },
+      };
+      await saveUserState(updatedState);
+      setUserState(updatedState);
+    }
   };
 
   const handleInspectStrokeCache = async () => {
@@ -279,6 +290,8 @@ export const App: React.FC = () => {
           alignItems: 'center',
           padding: '6px 8px',
           borderRadius: 'var(--radius-full)',
+          flexWrap: 'wrap',
+          gap: '6px',
         }}
       >
         {/* Streak Capsule */}
@@ -291,11 +304,17 @@ export const App: React.FC = () => {
         </div>
 
         {/* Brand Center */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
           <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-jade-primary)' }}>
             Hanzero
           </span>
-          <span style={{ fontSize: '14px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+          <span
+            style={{
+              fontSize: '13px',
+              color: 'var(--text-ink-muted)',
+              fontWeight: 500,
+            }}
+          >
             (ฮั่นซีโร่)
           </span>
         </div>
@@ -331,10 +350,12 @@ export const App: React.FC = () => {
               border: '1px solid var(--border-subtle)',
               cursor: 'pointer',
               fontSize: '11px',
-              padding: '6px 8px',
-              minHeight: '36px',
+              padding: '6px 10px',
+              minHeight: '44px',
+              minWidth: '44px',
             }}
             title="เปิดห้องทดลองเครื่องยนต์ฮั่นซีโร่ (Engine Test Panel)"
+            aria-label="เปิดห้องทดลองเครื่องยนต์"
           >
             <span>🛠️ Lab</span>
           </button>
@@ -382,6 +403,7 @@ export const App: React.FC = () => {
           borderRadius: 'var(--radius-full)',
           padding: '4px',
           gap: '4px',
+          flexWrap: 'wrap',
         }}
       >
         <button
@@ -395,11 +417,12 @@ export const App: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '6px',
-            padding: '8px 12px',
+            gap: '5px',
+            padding: '8px 10px',
+            minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
-            fontSize: '13px',
+            fontSize: '12.5px',
             fontWeight: 600,
             cursor: 'pointer',
             backgroundColor: activeTab === 'vocab' ? '#FFFFFF' : 'transparent',
@@ -408,8 +431,8 @@ export const App: React.FC = () => {
             transition: 'all 0.15s ease',
           }}
         >
-          <BookOpen size={15} />
-          <span>การ์ดคำศัพท์</span>
+          <BookOpen size={14} />
+          <span>คำศัพท์</span>
         </button>
 
         <button
@@ -423,11 +446,12 @@ export const App: React.FC = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '6px',
-            padding: '8px 12px',
+            gap: '5px',
+            padding: '8px 10px',
+            minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
-            fontSize: '13px',
+            fontSize: '12.5px',
             fontWeight: 600,
             cursor: 'pointer',
             backgroundColor: activeTab === 'stroke' ? '#FFFFFF' : 'transparent',
@@ -436,111 +460,158 @@ export const App: React.FC = () => {
             transition: 'all 0.15s ease',
           }}
         >
-          <PenTool size={15} />
-          <span>คัดลายมือ (米字格)</span>
+          <PenTool size={14} />
+          <span>คัดลายมือ</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            playClick();
+            setActiveTab('dialogue');
+          }}
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            padding: '8px 10px',
+            minHeight: '44px',
+            borderRadius: 'var(--radius-full)',
+            border: 'none',
+            fontSize: '12.5px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            backgroundColor: activeTab === 'dialogue' ? '#FFFFFF' : 'transparent',
+            color: activeTab === 'dialogue' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+            boxShadow: activeTab === 'dialogue' ? '0 2px 8px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <MessageCircle size={14} />
+          <span>บทสนทนา</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            playClick();
+            setActiveTab('grammar');
+          }}
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            padding: '8px 10px',
+            minHeight: '44px',
+            borderRadius: 'var(--radius-full)',
+            border: 'none',
+            fontSize: '12.5px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            backgroundColor: activeTab === 'grammar' ? '#FFFFFF' : 'transparent',
+            color: activeTab === 'grammar' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+            boxShadow: activeTab === 'grammar' ? '0 2px 8px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <Sparkles size={14} />
+          <span>ไวยากรณ์</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            playClick();
+            setActiveTab('quiz');
+          }}
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            padding: '8px 10px',
+            minHeight: '44px',
+            borderRadius: 'var(--radius-full)',
+            border: 'none',
+            fontSize: '12.5px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            backgroundColor: activeTab === 'quiz' ? '#FFFFFF' : 'transparent',
+            color: activeTab === 'quiz' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+            boxShadow: activeTab === 'quiz' ? '0 2px 8px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <Award size={14} />
+          <span>แบบทดสอบ</span>
         </button>
       </nav>
 
-      {/* Main Study Area: Vocab Card or Hanzi Stroke Practice */}
-      {activeTab === 'vocab' ? (
-        <main
-          onClick={handlePlayWord}
-          className={isPlaying ? 'acoustic-card-active' : ''}
-          style={{
-            backgroundColor: 'var(--bg-card)',
-            borderRadius: 'var(--radius-lg)',
-            padding: '36px 20px 28px 20px',
-            textAlign: 'center',
-            boxShadow: 'var(--shadow-card)',
-            border: '1px solid var(--border-card)',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '16px',
-            cursor: 'pointer',
-            transition: 'all 0.2s ease',
-            userSelect: 'none',
-          }}
-        >
-          <div style={{ fontSize: '13px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
-            ✨ แตะการ์ดเพื่อฟังเสียงออกเสียงมาตรฐาน
-          </div>
+      {/* Main Study Area: Strictly Single Active Tab (No Component Collision) */}
 
-          {/* Chinese Characters (56px) */}
+      {/* Tab 1: Vocab Card */}
+      {activeTab === 'vocab' && (
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+          {/* Word Selector Capsule Tabs (Unit 1 Lesson 1 Vocabulary) */}
           <div
             style={{
-              fontSize: 'var(--size-hanzi-hero)',
-              fontWeight: 700,
-              color: 'var(--text-ink-primary)',
-              fontFamily: 'var(--font-hanzi-hero)',
-              lineHeight: 1.1,
-              letterSpacing: '0.04em',
-              transition: 'transform 0.15s ease',
-              transform: isPlaying ? 'scale(1.04)' : 'scale(1)',
-            }}
-          >
-            你好
-          </div>
-
-          {/* Pinyin with Accessible Tone Coloring */}
-          <div
-            style={{
-              fontSize: 'var(--size-pinyin-body)',
-              lineHeight: 'var(--line-height-pinyin)',
-              fontWeight: 600,
-              color: 'var(--color-ochre)',
               display: 'flex',
               alignItems: 'center',
-              gap: '8px',
-            }}
-          >
-            <span>nǐ hǎo</span>
-          </div>
-
-          {/* Meaning */}
-          <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text-ink-secondary)' }}>
-            สวัสดีครับ / สวัสดีค่ะ
-          </div>
-
-          {/* Tone Sandhi Pedagogical Note (Pedagogical QA Recommendation) */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
+              justifyContent: 'center',
               gap: '6px',
-              padding: '6px 12px',
-              borderRadius: 'var(--radius-sm)',
-              backgroundColor: 'var(--bg-rice-paper)',
-              fontSize: '11px',
-              color: 'var(--text-ink-secondary)',
-              border: '1px solid var(--border-subtle)',
-              lineHeight: 1.4,
+              flexWrap: 'wrap',
+              padding: '2px 4px',
             }}
           >
-            <span>💡 <strong>เกร็ดเสียง 3+3</strong>: พินอินเขียน <code>nǐ hǎo</code> แต่ออกเสียงจริงเป็น <code>ní hǎo</code> (2+3)</span>
+            <span style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
+              เลือกคำศัพท์:
+            </span>
+            {lesson1VocabList.map((item, idx) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => {
+                  playClick();
+                  setVocabIndex(idx);
+                }}
+                style={{
+                  padding: '6px 12px',
+                  minHeight: '44px',
+                  minWidth: '44px',
+                  borderRadius: 'var(--radius-full)',
+                  border: '1.5px solid',
+                  borderColor:
+                    vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
+                  backgroundColor:
+                    vocabIndex === idx ? 'var(--color-jade-surface)' : '#FFFFFF',
+                  color:
+                    vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                  fontWeight: 700,
+                  fontSize: '13px',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease',
+                }}
+              >
+                {item.hanzi}
+              </button>
+            ))}
           </div>
 
-          {/* Sound Action Pill */}
-          <div
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '8px 18px',
-              borderRadius: 'var(--radius-full)',
-              backgroundColor: isPlaying ? 'var(--color-jade-surface)' : 'var(--bg-rice-paper)',
-              color: 'var(--color-jade-primary)',
-              fontSize: '13px',
-              fontWeight: 600,
-              marginTop: '4px',
-              border: '1px solid var(--border-subtle)',
-            }}
-          >
-            <Volume2 size={16} />
-            <span>{isPlaying ? 'กำลังออกเสียง...' : 'แตะเพื่อฟัง'}</span>
-          </div>
+          {/* Trilingual VocabCard Component (Golden Template) */}
+          <VocabCard
+            key={currentVocab.id}
+            vocab={currentVocab}
+          />
         </main>
-      ) : (
+      )}
+
+      {/* Tab 2: Hanzi Stroke Practice */}
+      {activeTab === 'stroke' && (
         <main
           style={{
             backgroundColor: 'var(--bg-card)',
@@ -552,14 +623,16 @@ export const App: React.FC = () => {
             flexDirection: 'column',
             alignItems: 'center',
             gap: '14px',
+            width: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {/* Character Switcher Capsule */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
             <span style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
               เลือกตัวอักษร:
             </span>
-            <div style={{ display: 'flex', gap: '6px' }}>
+            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
               {(['你', '好'] as const).map((char) => (
                 <button
                   key={char}
@@ -569,8 +642,9 @@ export const App: React.FC = () => {
                     setStrokeChar(char);
                   }}
                   style={{
-                    padding: '4px 14px',
-                    minHeight: '36px',
+                    padding: '8px 14px',
+                    minHeight: '44px',
+                    minWidth: '44px',
                     borderRadius: 'var(--radius-full)',
                     border: '1.5px solid',
                     borderColor: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
@@ -597,6 +671,38 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* Tab 3: Interactive Dialogue Player */}
+      {activeTab === 'dialogue' && (
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+          <DialoguePlayer
+            dialogue={lesson1Dialogue}
+            title="บทสนทนา 1.1: ทักทายแรกพบ 🐰👋"
+          />
+        </main>
+      )}
+
+      {/* Tab 4: 1-Minute Grammar Bite & Tone Rule */}
+      {activeTab === 'grammar' && (
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+          <GrammarBite
+            grammarBite={lesson1GrammarBite}
+            toneRule={lesson1ToneRule}
+          />
+        </main>
+      )}
+
+      {/* Tab 5: Interactive Quiz Engine & Boss Challenge */}
+      {activeTab === 'quiz' && (
+        <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+          <QuizContainer
+            quizzes={lesson1Quizzes}
+            bossChallenge={lesson1Boss}
+            cheerTrophy={lesson1Trophy}
+            onComplete={handleQuizComplete}
+          />
+        </main>
+      )}
+
       {/* Collapsible Developer & Diagnostics Sandbox Drawer */}
       <section
         style={{
@@ -613,6 +719,7 @@ export const App: React.FC = () => {
           style={{
             width: '100%',
             padding: '12px 16px',
+            minHeight: '44px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -677,7 +784,7 @@ export const App: React.FC = () => {
                 <button
                   onClick={handleCopyQuickSync}
                   className="btn-tactile-secondary"
-                  style={{ padding: '6px 12px', minHeight: '38px' }}
+                  style={{ padding: '8px 14px', minHeight: '44px', minWidth: '44px' }}
                 >
                   {copiedSyncCode ? <Check size={16} color="var(--color-jade-primary)" /> : <Copy size={16} />}
                 </button>
@@ -708,7 +815,7 @@ export const App: React.FC = () => {
                 <button
                   onClick={handleRestoreQuickSync}
                   className="btn-tactile-secondary"
-                  style={{ padding: '6px 12px', minHeight: '38px' }}
+                  style={{ padding: '8px 14px', minHeight: '44px', minWidth: '44px' }}
                 >
                   กู้คืน
                 </button>
@@ -725,7 +832,7 @@ export const App: React.FC = () => {
               <button
                 onClick={handleDownloadSnapshot}
                 className="btn-tactile-secondary"
-                style={{ width: '100%', minHeight: '40px', gap: '6px' }}
+                style={{ width: '100%', minHeight: '44px', gap: '6px' }}
               >
                 <span>💾 ดาวน์โหลด Full Backup (.JSON)</span>
               </button>
@@ -739,7 +846,7 @@ export const App: React.FC = () => {
               <button
                 onClick={handleInspectStrokeCache}
                 className="btn-tactile-secondary"
-                style={{ width: '100%', minHeight: '38px', gap: '6px' }}
+                style={{ width: '100%', minHeight: '44px', gap: '6px' }}
               >
                 <span>🔍 ตรวจสอบสถานะแคชเส้นขีดใน IndexedDB</span>
               </button>

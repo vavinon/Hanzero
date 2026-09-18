@@ -13,6 +13,7 @@ import {
   getAllChineseVoices,
   onVoicesChanged,
   playPhonemeAudio,
+  PHONEME_CHARACTER_MAP,
   getAudioEngineStatus,
   isInAppBrowser,
   _resetAudioEngineForTesting,
@@ -361,7 +362,8 @@ describe('audioEngine', () => {
       expect(await playPhonemeAudio('   ')).toBe(false);
       expect(await playPhonemeAudio('../secret')).toBe(false);
       expect(await playPhonemeAudio('1234')).toBe(false);
-      expect(await playPhonemeAudio('ni5')).toBe(false);
+      expect(await playPhonemeAudio('ni6')).toBe(false);
+      expect(await playPhonemeAudio('ni!#')).toBe(false);
     });
 
     it('safely plays fallback tone contour when static asset is absent but code has tone digit', async () => {
@@ -373,6 +375,53 @@ describe('audioEngine', () => {
     it('safely plays fallback mapped character speech when code matches dictionary', async () => {
       // "shi4" maps to 是
       const result = await playPhonemeAudio('shi4');
+      expect(result).toBe(true);
+    });
+
+    it('contains Unit 1 vocabulary phonemes and neutral tones in PHONEME_CHARACTER_MAP', () => {
+      // Unit 1.1 greetings
+      expect(PHONEME_CHARACTER_MAP.ni3).toBe('你');
+      expect(PHONEME_CHARACTER_MAP.hao3).toBe('好');
+      expect(PHONEME_CHARACTER_MAP.xie4).toBe('谢');
+      expect(PHONEME_CHARACTER_MAP.ke4).toBe('客');
+      expect(PHONEME_CHARACTER_MAP.qi4).toBe('气');
+      expect(PHONEME_CHARACTER_MAP.bu2).toBe('不');
+      expect(PHONEME_CHARACTER_MAP.zai4).toBe('再');
+      expect(PHONEME_CHARACTER_MAP.jian4).toBe('见');
+
+      // Unit 1.2 name & identity
+      expect(PHONEME_CHARACTER_MAP.wo3).toBe('我');
+      expect(PHONEME_CHARACTER_MAP.jiao4).toBe('叫');
+      expect(PHONEME_CHARACTER_MAP.shen2).toBe('什');
+      expect(PHONEME_CHARACTER_MAP.me5).toBe('么');
+      expect(PHONEME_CHARACTER_MAP.ming2).toBe('名');
+      expect(PHONEME_CHARACTER_MAP.zi4).toBe('字');
+
+      // Unit 1.3 nationality
+      expect(PHONEME_CHARACTER_MAP.shi4).toBe('是');
+      expect(PHONEME_CHARACTER_MAP.na3).toBe('哪');
+      expect(PHONEME_CHARACTER_MAP.guo2).toBe('国');
+      expect(PHONEME_CHARACTER_MAP.ren2).toBe('人');
+      expect(PHONEME_CHARACTER_MAP.tai4).toBe('泰');
+      expect(PHONEME_CHARACTER_MAP.zhong1).toBe('中');
+
+      // Unit 1.4 Boss challenge networking
+      expect(PHONEME_CHARACTER_MAP.nin2).toBe('您');
+      expect(PHONEME_CHARACTER_MAP.gui4).toBe('贵');
+      expect(PHONEME_CHARACTER_MAP.xing4).toBe('姓');
+      expect(PHONEME_CHARACTER_MAP.ren4).toBe('认');
+      expect(PHONEME_CHARACTER_MAP.shi5).toBe('识');
+      expect(PHONEME_CHARACTER_MAP.gao1).toBe('高');
+    });
+
+    it('supports neutral tone 5 phoneme audio fallback', async () => {
+      // "me5" should be accepted and fall back to mapped character speech
+      const promise = playPhonemeAudio('me5');
+      expect(mockSpeak).toHaveBeenCalled();
+      const lastCall = mockSpeak.mock.calls[mockSpeak.mock.calls.length - 1];
+      const utterance = lastCall[0];
+      utterance.onend();
+      const result = await promise;
       expect(result).toBe(true);
     });
   });

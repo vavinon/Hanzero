@@ -368,7 +368,7 @@ export function playToneContour(tone: ToneNumber, durationSeconds = 0.35): void 
  * Map of common Tier 0 / Tier 1 phonemes to standard Chinese characters
  * to allow SpeechSynthesis to pronounce them correctly without spelling letter-by-letter.
  */
-const PHONEME_CHARACTER_MAP: Record<string, string> = {
+export const PHONEME_CHARACTER_MAP: Record<string, string> = {
   a1: '啊',
   a2: '啊',
   a3: '啊',
@@ -381,15 +381,49 @@ const PHONEME_CHARACTER_MAP: Record<string, string> = {
   ma2: '麻',
   ma3: '马',
   ma4: '骂',
+  ma5: '吗',
+  ma: '吗',
   ni3: '你',
   hao3: '好',
   wo3: '我',
   ta1: '他',
   shi4: '是',
   bu4: '不',
+  bu2: '不',
   xie4: '谢',
+  xie5: '谢',
+  ke4: '客',
+  qi4: '气',
+  qi5: '气',
+  qi: '气',
   zai4: '再',
   jian4: '见',
+  jiao4: '叫',
+  shen2: '什',
+  me5: '么',
+  me: '么',
+  ming2: '名',
+  zi4: '字',
+  zi5: '字',
+  na3: '哪',
+  na4: '那',
+  guo2: '国',
+  ren2: '人',
+  tai4: '泰',
+  zhong1: '中',
+  nin2: '您',
+  gui4: '贵',
+  xing4: '姓',
+  ren4: '认',
+  shi5: '识',
+  shi: '识',
+  gao1: '高',
+  hen3: '很',
+  ye3: '也',
+  ne5: '呢',
+  ne: '呢',
+  men5: '们',
+  men: '们',
 };
 
 /**
@@ -400,7 +434,7 @@ const PHONEME_CHARACTER_MAP: Record<string, string> = {
  */
 export async function playPhonemeAudio(code: string): Promise<boolean> {
   const sanitized = code.trim().toLowerCase();
-  if (!sanitized || !/^[a-z]+[1-4]?$/.test(sanitized)) {
+  if (!sanitized || !/^[a-z]+[1-5]?$/.test(sanitized)) {
     return false;
   }
 

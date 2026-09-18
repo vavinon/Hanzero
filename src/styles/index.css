@@ -249,3 +249,417 @@ button {
   -webkit-user-select: none !important;
   user-select: none !important;
 }
+
+/* ==========================================================================
+   VocabCard Component Styles (Phase 2 Slice 2.2)
+   ========================================================================== */
+
+/* 3D Card Flip Architecture (60fps GPU Accelerated) */
+.vocab-card-container {
+  perspective: 1200px;
+  width: 100%;
+}
+
+.vocab-card-flipper {
+  position: relative;
+  width: 100%;
+  min-height: 440px;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.vocab-card-flipper.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.vocab-card-face {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid var(--border-card);
+  background-color: var(--bg-card);
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.vocab-card-front {
+  position: relative;
+  min-height: 440px;
+}
+
+.vocab-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+/* Accessible Tone Indicators (Universal Design & Color-Blind Resilient) */
+.tone-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+.tone-pill-1 {
+  background-color: #EFF6FF;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+
+.tone-pill-2 {
+  background-color: #ECFDF5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+
+.tone-pill-3 {
+  background-color: #FFFBEB;
+  color: #B45309;
+  border: 1px solid #FDE68A;
+}
+
+.tone-pill-4 {
+  background-color: #FEF2F2;
+  color: #B91C1C;
+  border: 1px solid #FECACA;
+}
+
+.tone-pill-0,
+.tone-pill-5 {
+  background-color: #F3F4F6;
+  color: #4B5563;
+  border: 1px solid #E5E7EB;
+}
+
+/* Progressive Pinyin Fading Modes */
+.pinyin-display {
+  transition: opacity 0.22s ease, filter 0.22s ease, transform 0.22s ease;
+}
+
+.pinyin-mode-full {
+  opacity: 1;
+}
+
+.pinyin-mode-faded {
+  opacity: 0.38;
+}
+
+.pinyin-mode-hidden {
+  opacity: 0;
+  user-select: none;
+}
+
+.pinyin-mode-peek {
+  opacity: 1 !important;
+  color: var(--color-jade-primary) !important;
+  transform: scale(1.03);
+}
+
+/* Stroke Inspector Modal (Zero Memory Leak Teardown) */
+.stroke-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(28, 30, 33, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 100;
+  animation: modal-fade-in 0.2s ease-out;
+}
+
+.stroke-modal-content {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  max-width: 380px;
+  width: 100%;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  padding: 20px 16px;
+  box-shadow: var(--shadow-floating);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  animation: modal-pop 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-pop {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   DialoguePlayer Component Styles (Phase 2 Slice 2.3)
+   ========================================================================== */
+
+/* Dialogue Bubble Animations */
+@keyframes sound-wave-bounce {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 14px;
+  }
+}
+
+.sound-wave-bar {
+  display: inline-block;
+  width: 3px;
+  background-color: var(--color-jade-primary);
+  border-radius: var(--radius-full);
+  animation: sound-wave-bounce 0.8s ease-in-out infinite;
+}
+
+.sound-wave-bar:nth-child(1) { animation-delay: 0.0s; }
+.sound-wave-bar:nth-child(2) { animation-delay: 0.18s; }
+.sound-wave-bar:nth-child(3) { animation-delay: 0.36s; }
+
+/* Chat Bubble Container */
+.dialogue-bubble-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 12px;
+  gap: 10px;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+}
+
+.dialogue-bubble-row.speaker-a {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.dialogue-bubble-row.speaker-b {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* Bubble Body */
+.dialogue-bubble {
+  position: relative;
+  max-width: 82%;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1.5px solid transparent;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  user-select: text;
+}
+
+.dialogue-bubble.speaker-a {
+  background-color: var(--bg-card-subtle);
+  border-color: var(--border-subtle);
+  border-bottom-left-radius: 4px;
+}
+
+.dialogue-bubble.speaker-b {
+  background-color: var(--color-jade-surface);
+  border-color: #A7F3D0;
+  border-bottom-right-radius: 4px;
+}
+
+.dialogue-bubble.is-active {
+  border-color: var(--color-jade-primary) !important;
+  box-shadow: 0 0 20px rgba(5, 150, 105, 0.25) !important;
+  transform: translateY(-1px);
+}
+
+.dialogue-bubble.speaker-a.is-active {
+  background-color: #FFFFFF !important;
+}
+
+.dialogue-bubble.speaker-b.is-active {
+  background-color: #E6FAF0 !important;
+}
+
+/* ==========================================================================
+   QuizContainer Component Styles (Phase 2 Slice 2.5)
+   ========================================================================== */
+
+/* Quiz Option Tactile 3D Cards */
+.quiz-option-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--border-card);
+  border-bottom: 4px solid #D1C9BE;
+  background-color: #FFFFFF;
+  color: var(--text-ink-primary);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.1s ease, border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.quiz-option-card:hover:not(:disabled) {
+  border-color: #CBD5E1;
+  background-color: #FDFDFD;
+}
+
+.quiz-option-card:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom-width: 2px;
+}
+
+.quiz-option-card.is-selected {
+  border-color: var(--color-jade-primary);
+  border-bottom-color: var(--color-jade-deep);
+  background-color: var(--color-jade-surface);
+  color: var(--color-jade-deep);
+}
+
+.quiz-option-card.is-correct {
+  border-color: var(--color-jade-primary) !important;
+  border-bottom-color: var(--color-jade-deep) !important;
+  background-color: #ECFDF5 !important;
+  color: #065F46 !important;
+}
+
+.quiz-option-card.is-wrong {
+  border-color: var(--color-vermilion) !important;
+  border-bottom-color: #B91C1C !important;
+  background-color: var(--color-vermilion-surface) !important;
+  color: #991B1B !important;
+}
+
+.quiz-option-card:disabled {
+  cursor: default;
+}
+
+/* Option Letter Badge (A, B, C, D) */
+.quiz-option-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-subtle);
+  background-color: #F8FAFC;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-ink-secondary);
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.quiz-option-card.is-selected .quiz-option-badge {
+  background-color: var(--color-jade-primary);
+  color: #FFFFFF;
+  border-color: var(--color-jade-primary);
+}
+
+.quiz-option-card.is-correct .quiz-option-badge {
+  background-color: var(--color-jade-primary);
+  color: #FFFFFF;
+  border-color: var(--color-jade-primary);
+}
+
+.quiz-option-card.is-wrong .quiz-option-badge {
+  background-color: var(--color-vermilion);
+  color: #FFFFFF;
+  border-color: var(--color-vermilion);
+}
+
+/* Lego Sentence Scramble Builder */
+.lego-scramble-dropzone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-height: 60px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 2px dashed var(--border-card);
+  background-color: #FAF8F5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lego-token-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid #FDE68A;
+  border-bottom: 3.5px solid #F59E0B;
+  background-color: #FFFBEB;
+  color: #92400E;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-hanzi-hero);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.1s ease, filter 0.15s ease;
+  user-select: none;
+}
+
+.lego-token-btn:active {
+  transform: translateY(2px);
+  border-bottom-width: 1.5px;
+}
+
+.lego-token-btn.is-placed {
+  opacity: 0.25;
+  cursor: not-allowed;
+  border-bottom-width: 1.5px;
+}
+
+/* Victory Screen Trophy Card */
+.victory-trophy-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FEF3C7 0%, #FDE68A 100%);
+  border: 3px solid #F59E0B;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25);
+  animation: trophy-float 2.5s ease-in-out infinite;
+}
+
+@keyframes trophy-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
