@@ -82,7 +82,7 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
   const [currentStrokeNum, setCurrentStrokeNum] = useState<number>(0);
   const [mistakes, setMistakes] = useState<number>(0);
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
-  const [shakeKey, setShakeKey] = useState<number>(0);
+  const [isShaking, setIsShaking] = useState<boolean>(false);
 
   // DOM and Instance Refs
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -90,9 +90,15 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
   const isMountedRef = useRef<boolean>(true);
   const requestIdRef = useRef<number>(0);
   const registeredDocListenersRef = useRef<EventListener[]>([]);
+  const shakeTimeoutRef = useRef<number | null>(null);
 
   // Teardown previous writer instance cleanly (Red Team C-02 Memory Leak Defense)
   const teardownWriter = useCallback(() => {
+    if (shakeTimeoutRef.current !== null) {
+      window.clearTimeout(shakeTimeoutRef.current);
+      shakeTimeoutRef.current = null;
+    }
+
     // Purge leaked document pointer-end listeners
     registeredDocListenersRef.current.forEach((listener) => {
       document.removeEventListener('mouseup', listener);
@@ -184,10 +190,34 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
 
     return () => {
       isMountedRef.current = false;
+      if (shakeTimeoutRef.current !== null) {
+        window.clearTimeout(shakeTimeoutRef.current);
+        shakeTimeoutRef.current = null;
+      }
       abortController.abort();
       teardownWriter();
     };
   }, [safeChar, size, charError, teardownWriter]);
+
+  // Shake animation trigger for mistakes without unmounting/destroying the DOM container
+  const triggerShake = useCallback(() => {
+    if (shakeTimeoutRef.current !== null) {
+      window.clearTimeout(shakeTimeoutRef.current);
+      shakeTimeoutRef.current = null;
+    }
+    setIsShaking(false);
+    requestAnimationFrame(() => {
+      if (isMountedRef.current) {
+        setIsShaking(true);
+      }
+    });
+    shakeTimeoutRef.current = window.setTimeout(() => {
+      if (isMountedRef.current) {
+        setIsShaking(false);
+        shakeTimeoutRef.current = null;
+      }
+    }, 350);
+  }, []);
 
   // Start Quiz implementation
   const startQuiz = (writerInstance?: HanziWriter) => {
@@ -218,10 +248,14 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
       },
       onMistake: (strokeData: StrokeData) => {
         if (!isMountedRef.current) return;
-        playIncorrect();
-        setMistakes((prev) => prev + 1);
-        setShakeKey((prev) => prev + 1);
-        onMistake?.(strokeData);
+        try {
+          playIncorrect();
+          setMistakes((prev) => prev + 1);
+          triggerShake();
+          onMistake?.(strokeData);
+        } catch (err) {
+          console.warn('[HanziWriterBox] onMistake handler error:', err);
+        }
       },
       onComplete: (summary: { character: string; totalMistakes: number }) => {
         if (!isMountedRef.current) return;
@@ -404,8 +438,8 @@ export const HanziWriterBox: React.FC<HanziWriterBoxProps> = ({
 
       {/* 2. Interactive Canvas in 米字格 (Mǐzìgé) Grid */}
       <div
-        key={shakeKey}
-        className={shakeKey > 0 ? 'hanzero-shake' : ''}
+        className={isShaking ? 'hanzero-shake' : ''}
+        onAnimationEnd={() => setIsShaking(false)}
         style={{
           position: 'relative',
           width: `${size}px`,
