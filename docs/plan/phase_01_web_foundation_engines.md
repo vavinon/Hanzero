@@ -83,7 +83,7 @@
   - **In-App Browser Detector:** ตรวจจับหากรันอยู่ใน WebView ของ LINE / Facebook / WeChat และแสดงแบนเนอร์แนะนำให้ "เปิดด้วยเบราว์เซอร์ปกติ (Safari / Chrome)" เพื่อให้ใช้งานเสียงและไมโครโฟนได้ลื่นไหล 100%
 
 ### 4. ระบบจัดเก็บข้อมูลสำรองแบบแบ่งชั้น (Tiered Storage Engine: Hot LocalStorage + Cold IndexedDB)
-- [ ] สร้าง `src/engines/storage/storageEngine.ts`:
+- [x] สร้าง `src/engines/storage/storageEngine.ts`:
   - **Persistent Storage Request:** เรียกใช้งาน `navigator.storage.persist()` อัตโนมัติเมื่อเปิดแอป เพื่อขอสิทธิ์ป้องกัน Safari ITP และระบบประหยัดพลังงานของ OS ล้างข้อมูลทิ้งหลังไม่ได้เปิด 7 วัน
   - **Hot Tier:** บันทึก State สรุปย่อลง `LocalStorage` (`hanzero_user_state_v1` < 50KB) สำหรับ Fast Boot / Zero UI Flash
   - **Cold Tier:** บันทึกก้อนข้อมูลใหญ่ลง `IndexedDB` (`srs_records` รองรับ 5,000+ คำ, `hanzi_strokes` แคชเส้นขีด)

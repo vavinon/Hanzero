@@ -28,6 +28,7 @@
 ```text
 agents/
 ├── README.md                 # สรุปผังทีม Agent และโครงสร้างการทำงาน
+├── ux_ui_designer.md         # นักออกแบบ UX/UI สุนทรียภาพ (Modern Oriental Minimalism, Mobile First)
 ├── pedagogical_qa.md         # อาจารย์ตรวจภาษาจีน (อักษรย่อ, วรรณยุกต์, สำนวนไทย)
 ├── technical_qa.md           # ผู้ตรวจการโค้ดและประสิทธิภาพ (Strict Types, Bundle < 100KB)
 ├── red_team_adversary.md     # หน่วยจู่โจมล่าบั๊ก (ถล่มคิวเสียง, Memory Leak, Safari Sleep)

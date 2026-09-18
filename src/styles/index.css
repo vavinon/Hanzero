@@ -3,30 +3,33 @@
    ========================================================================== */
 
 :root {
-  /* Brand Colors - WCAG AA Accessible (>4.5:1 on Rice Paper) */
-  --color-jade-primary: #047857;       /* เขียวหยกเข้มสำหรับข้อความ/ปุ่ม (Text-Safe) */
-  --color-jade-light: #10B981;         /* เขียวหยกสว่างสำหรับปุ่ม/ไฮไลต์ */
-  --color-jade-surface: #ECFDF5;       /* ผิวสัมผัสเขียวอ่อน */
+  /* Brand Surfaces & Rice Paper */
+  --bg-rice-paper: #FBF9F5;          /* ผิวสัมผัสกระดาษข้าวธรรมชาติ ถนอมสายตา */
+  --bg-card: #FFFFFF;                /* พื้นบัตรคำ */
+  --bg-card-subtle: #F5F1EA;         /* พื้นหลังแผงควบคุมรอง */
 
-  --color-vermilion: #DC2626;          /* แดงชาด (หัวใจ/แต้มสำคัญ Text-Safe) */
-  --color-vermilion-light: #F87171;
+  /* Modern Oriental Palette - WCAG AA Accessible (>4.5:1 on Rice Paper) */
+  --color-jade-primary: #059669;      /* เขียวหยกมงคล สง่างาม */
+  --color-jade-deep: #047857;         /* หยกเงาลึก สำหรับฐานปุ่ม 3D */
+  --color-jade-surface: #ECFDF5;      /* ผิวสัมผัสหยกอ่อน */
+
+  --color-vermilion: #DC2626;         /* แดงชาด สำหรับหัวใจ */
   --color-vermilion-surface: #FEF2F2;
 
-  --color-ochre: #B45309;              /* ดินเผา/ทองคำอบอุ่น (Text-Safe) */
-  --color-ochre-light: #F59E0B;
+  --color-ochre: #D97706;             /* ส้มทองคำ/ดินเผาอบอุ่น สำหรับ Streak */
   --color-ochre-surface: #FFFBEB;
 
-  /* Surfaces & Backgrounds */
-  --bg-rice-paper: #FDFBF7;           /* กระดาษข้าว (พื้นหลังโหมดสว่าง ถนอมสายตา) */
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #F9F7F2;
-  --border-subtle: #E5E0D8;
-  --border-strong: #D1C9BE;
+  /* Typography Inks */
+  --text-ink-primary: #1C1E21;       /* หมึกจีนดำลึก นุ่มนวล ไม่กระด้าง */
+  --text-ink-secondary: #525866;     /* หมึกเทากลาง */
+  --text-ink-muted: #9CA3AF;         /* หมึกจาง */
 
-  /* Typography Colors */
-  --text-ink-primary: #1A1D20;        /* หมึกจีนเข้ม (อ่านง่าย สบายตา) */
-  --text-ink-secondary: #525866;      /* หมึกรอง */
-  --text-ink-muted: #8E95A3;          /* หมึกจาง/คำใบ้ */
+  /* Borders & Shadows */
+  --border-subtle: #EAE5DE;
+  --border-card: #E2DBD0;
+  --shadow-sm: 0 1px 3px rgba(28, 30, 33, 0.04);
+  --shadow-card: 0 8px 28px -4px rgba(44, 34, 20, 0.05);
+  --shadow-floating: 0 16px 40px -6px rgba(44, 34, 20, 0.08);
 
   /* Typography Hierarchy */
   --font-thai: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -35,24 +38,18 @@
   --font-latin: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Sizing Tokens */
-  --size-hanzi-hero: 3.5rem;          /* 56px */
-  --size-hanzi-card: 2.25rem;         /* 36px */
-  --size-hanzi-quiz: 1.75rem;         /* 28px */
-  --size-pinyin-body: 1.25rem;        /* 20px */
-  --line-height-pinyin: 1.6;          /* ป้องกันการตัดหัววรรณยุกต์ เช่น ǚ, ǎ */
+  --size-hanzi-hero: 3.5rem;         /* 56px */
+  --size-hanzi-card: 2.25rem;        /* 36px */
+  --size-pinyin-body: 1.35rem;       /* 21.6px */
+  --line-height-pinyin: 1.6;
 
   /* Mobile Hitbox & Layout */
-  --touch-target-min: 44px;           /* มาตรฐานนิ้วมือถือแตะสะดวก */
-  --max-app-width: 480px;             /* เลย์เอาต์กึ่งกลางสบายตาบน Desktop */
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --touch-target-min: 48px;          /* มาตรฐานนิ้วมือถือแตะสะดวกสูงสุด */
+  --max-app-width: 440px;            /* Centered Slate สไตล์ Mobile-First */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-full: 9999px;
-
-  /* Elevation Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 4px 12px rgba(26, 29, 32, 0.06);
-  --shadow-floating: 0 8px 24px rgba(26, 29, 32, 0.12);
 }
 
 /* Reset & Box Sizing */
@@ -81,7 +78,8 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-rice-paper);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 50px rgba(44, 34, 20, 0.04);
+  position: relative;
 }
 
 /* Buttons & Touch Accessibility */
@@ -92,20 +90,73 @@ button {
   background: none;
   outline: none;
   touch-action: manipulation;
-  min-height: var(--touch-target-min);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.1s ease, filter 0.15s ease;
+  transition: transform 0.1s ease, filter 0.15s ease, box-shadow 0.15s ease;
 }
 
-button:active {
-  transform: scale(0.97);
+/* Tactile 3D Buttons (Duolingo-level delight with Oriental Jade palette) */
+.btn-tactile-primary {
+  background-color: var(--color-jade-primary);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  border-bottom: 4px solid var(--color-jade-deep);
+  min-height: 52px;
+  padding: 12px 24px;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-sm);
 }
 
-/* Accessible Dual-Encoded Tone Classes (Color + Shape / Contour) */
-.tone-1 { color: #2563EB; font-weight: 600; } /* เสียง 1: ราบเรียบ */
-.tone-2 { color: #059669; font-weight: 600; } /* เสียง 2: พุ่งขึ้น */
-.tone-3 { color: #D97706; font-weight: 600; } /* เสียง 3: กดต่ำแล้วขึ้น */
-.tone-4 { color: #DC2626; font-weight: 600; } /* เสียง 4: ดิ่งลง */
-.tone-0 { color: #6B7280; font-weight: 500; } /* เสียงเบา */
+.btn-tactile-primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn-tactile-primary:active {
+  transform: translateY(2px);
+  border-bottom: 2px solid var(--color-jade-deep);
+}
+
+.btn-tactile-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-ink-primary);
+  font-weight: 600;
+  border: 1px solid var(--border-card);
+  border-bottom: 3px solid #D1C9BE;
+  border-radius: var(--radius-md);
+  min-height: 44px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.btn-tactile-secondary:active {
+  transform: translateY(2px);
+  border-bottom: 1px solid #D1C9BE;
+}
+
+/* Acoustic Breathing Ripple Effect for Active Speech */
+.acoustic-card-active {
+  border: 2px solid var(--color-jade-primary) !important;
+  box-shadow: 0 0 28px rgba(5, 150, 105, 0.22) !important;
+  background-color: #F0FDF4 !important;
+}
+
+/* Minimalist Capsule Badges */
+.badge-capsule {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Tone Classes */
+.tone-1 { color: #2563EB; font-weight: 600; }
+.tone-2 { color: #059669; font-weight: 600; }
+.tone-3 { color: #D97706; font-weight: 600; }
+.tone-4 { color: #DC2626; font-weight: 600; }
+.tone-0 { color: #6B7280; font-weight: 500; }

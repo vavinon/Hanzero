@@ -9,7 +9,8 @@
 
 ```mermaid
 graph TD
-    Dev["👨‍💻 web_dev.md<br/>(วิศวกรผู้สร้าง)"] --> Tester["🧪 Automated Vitest"]
+    Design["🎨 ux_ui_designer.md<br/>(สุนทรียภาพ & ประสบการณ์ผู้ใช้)"] --> Dev["👨‍💻 web_dev.md<br/>(วิศวกรผู้สร้าง)"]
+    Dev --> Tester["🧪 Automated Vitest"]
     Tutor["🎓 curriculum_tutor.md<br/>(ผู้สร้างเนื้อหา 3 ภาษา)"] --> Content["📦 Lesson Data"]
     Game["🎮 gamification_designer.md<br/>(ผู้ออกแบบมินิเกม)"] --> Content
     
@@ -33,6 +34,7 @@ graph TD
 
 | ไฟล์ Agent | บทบาทหน้าที่ | หน้าที่หลัก |
 | :--- | :--- | :--- |
+| **[ux_ui_designer.md](file:///d:/V/project/Hanzero/hanzero/agents/ux_ui_designer.md)** | นักออกแบบผลิตภัณฑ์ UX/UI และสุนทรียภาพ | กำกับความเรียบง่าย สวยงาม มินิมอลแบบ Modern Oriental คุม Space & Typography บนเว็บ/มือถือ |
 | **[pedagogical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/pedagogical_qa.md)** | ผู้ตรวจการภาษาจีน | ตรวจสอบอักษรจีนตัวย่อ, วรรณยุกต์พินอิน, กฎ Tone Sandhi และคำแปลไทยธรรมชาติ |
 | **[technical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/technical_qa.md)** | ผู้ตรวจการเทคนิคและประสิทธิภาพ | บังคับ Strict Type, ห้ามมี `any`, คุมขนาดไฟล์ JS < 100KB, CSS < 20KB |
 | **[red_team_adversary.md](file:///d:/V/project/Hanzero/hanzero/agents/red_team_adversary.md)** | หน่วยจู่โจมเคสพิสดาร (Chaos) | รัวคิวเสียง 50 ครั้ง/วิ, แกล้งพักหน้าจอ Safari, ล่า Memory Leak บน Canvas |

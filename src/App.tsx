@@ -1,5 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Flame, Heart, Sparkles, Volume2, PlayCircle, CheckCircle2, AlertCircle } from 'lucide-react';
+import {
+  Flame,
+  Heart,
+  Sparkles,
+  Volume2,
+  Play,
+  ChevronDown,
+  ChevronUp,
+  Database,
+  Copy,
+  Check,
+  ShieldCheck,
+  AlertTriangle,
+} from 'lucide-react';
+import bunnyImg from './assets/brand/mascot_bunny.jpg';
 import {
   speak,
   playClick,
@@ -7,133 +21,177 @@ import {
   unlockAudioContext,
   isInAppBrowser,
 } from './engines/audio/audioEngine';
+import {
+  initializeStorage,
+  getStoredUserStateSync,
+  saveUserState,
+  onUserStateChanged,
+  getQuickSyncCode,
+  restoreFromQuickSyncCode,
+  exportSnapshotAsJsonString,
+  checkStorageHealth,
+  StorageDiagnostics,
+  UserStateSchema,
+} from './engines/storage';
 
 export const App: React.FC = () => {
-  const [streak] = useState<number>(1);
-  const [hearts] = useState<number>(5);
-  const [xp] = useState<number>(0);
-  const [audioFeedback, setAudioFeedback] = useState<string | null>(null);
+  // Real Storage Engine Integration (Synchronous Fast Boot)
+  const [userState, setUserState] = useState<UserStateSchema>(getStoredUserStateSync);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
+  const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
+  const [storageHealth, setStorageHealth] = useState<StorageDiagnostics | null>(null);
+  const [copiedSyncCode, setCopiedSyncCode] = useState<boolean>(false);
+  const [quickSyncInput, setQuickSyncInput] = useState<string>('');
+  const [syncFeedback, setSyncFeedback] = useState<string | null>(null);
+
   const isPlayingRef = useRef<boolean>(false);
-  const feedbackTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    // Detect In-App browser once on mount
+    // 1. In-App browser check
     if (isInAppBrowser()) {
       setShowInAppAlert(true);
     }
 
+    // 2. Initialize storage lifecycle (checks cold mirror & persistent storage)
+    initializeStorage().then((state) => {
+      setUserState(state);
+      checkStorageHealth().then(setStorageHealth);
+    });
+
+    // 3. Subscribe to real-time storage changes (cross-tab sync)
+    const unsubscribe = onUserStateChanged((newState) => {
+      setUserState(newState);
+    });
+
     return () => {
-      if (feedbackTimerRef.current) {
-        clearTimeout(feedbackTimerRef.current);
-      }
+      unsubscribe();
     };
   }, []);
 
-  const handleSpeak = async (text: string, label?: string) => {
-    // Immediate synchronous guard against microtask double-taps
+  // Quick State Selectors
+  const streak = userState.progress.streak.count;
+  const hearts = userState.progress.hearts.current;
+  const xp = userState.progress.xp;
+
+  const handlePlayWord = async () => {
     if (isPlayingRef.current) return;
     isPlayingRef.current = true;
     setIsPlaying(true);
 
-    if (feedbackTimerRef.current) {
-      clearTimeout(feedbackTimerRef.current);
-    }
-    setAudioFeedback(label ? `🔊 ${label}` : '🔊 กำลังออกเสียง...');
-
-    let hasEncounteredError = false;
-
     try {
-      // Unlock Web Audio context on user gesture (crucial for iOS)
       await unlockAudioContext();
       playClick();
 
-      await speak(text, {
+      await speak('你好', {
         rate: 0.85,
-        onStart: () => {
-          setIsPlaying(true);
-        },
-        onError: (err) => {
-          hasEncounteredError = true;
-          const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
-          setAudioFeedback(
-            `💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เบราว์เซอร์เล่นเสียงสังเคราะห์สำรอง'}`
-          );
-          feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 3000);
-        },
+        onStart: () => setIsPlaying(true),
         onEnd: () => {
-          if (!hasEncounteredError) {
-            setAudioFeedback('✅ ฟังเรียบร้อย');
-            feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
-          }
+          setIsPlaying(false);
+          isPlayingRef.current = false;
+        },
+        onError: () => {
+          setIsPlaying(false);
+          isPlayingRef.current = false;
         },
       });
-    } finally {
-      isPlayingRef.current = false;
+    } catch {
       setIsPlaying(false);
+      isPlayingRef.current = false;
     }
   };
 
   const handleStartLesson = async () => {
-    // Immediate synchronous guard against microtask double-taps
     if (isPlayingRef.current) return;
     isPlayingRef.current = true;
     setIsPlaying(true);
 
-    if (feedbackTimerRef.current) {
-      clearTimeout(feedbackTimerRef.current);
-    }
-    setAudioFeedback('🔊 你好 (nǐ hǎo - สวัสดี)');
-
-    let hasEncounteredError = false;
-
     try {
       await unlockAudioContext();
-      // Clean acoustic transition: celebratory chime, no overlapping click
       playCorrect();
+
+      // Award 10 XP on finishing first phrase and persist safely
+      const updatedState = {
+        ...userState,
+        progress: {
+          ...userState.progress,
+          xp: userState.progress.xp + 10,
+          streak: {
+            ...userState.progress.streak,
+            count: Math.max(userState.progress.streak.count, 1),
+            last_active_date: new Date().toISOString().slice(0, 10),
+          },
+        },
+      };
+
+      await saveUserState(updatedState);
+      setUserState(updatedState);
 
       await speak('你好', {
         rate: 0.85,
-        onStart: () => {
-          setIsPlaying(true);
-        },
-        onError: (err) => {
-          hasEncounteredError = true;
-          const errMsg = err instanceof Error ? err.message : 'ระบบเสียงขัดข้อง';
-          setAudioFeedback(
-            `💡 ${errMsg.includes('watchdog') ? 'เล่นเสียงสังเคราะห์แทน' : 'เบราว์เซอร์เล่นเสียงสังเคราะห์สำรอง'}`
-          );
-          feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 3000);
-        },
         onEnd: () => {
-          if (!hasEncounteredError) {
-            setAudioFeedback('✅ ฟังเรียบร้อย');
-            feedbackTimerRef.current = setTimeout(() => setAudioFeedback(null), 2000);
-          }
+          setIsPlaying(false);
+          isPlayingRef.current = false;
+        },
+        onError: () => {
+          setIsPlaying(false);
+          isPlayingRef.current = false;
         },
       });
-    } finally {
-      isPlayingRef.current = false;
+    } catch {
       setIsPlaying(false);
+      isPlayingRef.current = false;
     }
+  };
+
+  const handleCopyQuickSync = () => {
+    const code = getQuickSyncCode(userState);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(code);
+      setCopiedSyncCode(true);
+      setTimeout(() => setCopiedSyncCode(false), 2000);
+    }
+  };
+
+  const handleRestoreQuickSync = async () => {
+    if (!quickSyncInput.trim()) return;
+    const res = await restoreFromQuickSyncCode(quickSyncInput.trim());
+    if (res.success) {
+      setSyncFeedback('✅ กู้คืนข้อมูลสำเร็จ!');
+      setQuickSyncInput('');
+      setTimeout(() => setSyncFeedback(null), 3000);
+    } else {
+      setSyncFeedback(`❌ ${res.error ?? 'รหัสไม่ถูกต้อง'}`);
+      setTimeout(() => setSyncFeedback(null), 4000);
+    }
+  };
+
+  const handleDownloadSnapshot = async () => {
+    const jsonStr = await exportSnapshotAsJsonString();
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `hanzero_backup_${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div
       style={{
-        padding: 'clamp(10px, 3vw, 16px)',
         display: 'flex',
         flexDirection: 'column',
-        gap: '16px',
-        flex: 1,
+        minHeight: '100vh',
         width: '100%',
-        maxWidth: '480px',
+        maxWidth: '440px',
         margin: '0 auto',
+        padding: '16px 16px calc(90px + env(safe-area-inset-bottom, 0px)) 16px',
         boxSizing: 'border-box',
+        gap: '20px',
       }}
     >
-      {/* In-App Browser Warning Banner */}
+      {/* In-App Browser Warning Alert */}
       {showInAppAlert && (
         <aside
           role="alert"
@@ -142,230 +200,346 @@ export const App: React.FC = () => {
             alignItems: 'center',
             gap: '8px',
             padding: '10px 14px',
-            backgroundColor: '#FEF3C7',
+            backgroundColor: '#FFFBEB',
             border: '1px solid #F59E0B',
-            borderRadius: '12px',
+            borderRadius: 'var(--radius-md)',
             fontSize: '12px',
             color: '#92400E',
             lineHeight: 1.4,
           }}
         >
-          <AlertCircle size={18} style={{ flexShrink: 0 }} />
+          <AlertTriangle size={16} style={{ flexShrink: 0 }} />
           <span>
-            แนะนำเปิดด้วย <strong>Safari</strong> หรือ <strong>Chrome</strong> เพื่อประสบการณ์เสียงที่ลื่นไหลที่สุด
+            แนะนำเปิดด้วย <strong>Safari</strong> หรือ <strong>Chrome</strong> เพื่อประสบการณ์เสียงที่สมบูรณ์ที่สุด
           </span>
         </aside>
       )}
 
-      {/* Top Header Bar - Responsive on 320px */}
+      {/* Top Capsule Header - Clean Zen Header */}
       <header
         style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          padding: '8px clamp(10px, 3vw, 16px)',
-          backgroundColor: '#FFFFFF',
-          borderRadius: '16px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
-          border: '1px solid #E5E0D8',
-          fontSize: 'clamp(13px, 3.5vw, 15px)',
+          padding: '6px 8px',
+          borderRadius: 'var(--radius-full)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600, color: '#B45309' }}>
-          <Flame size={18} color="#F59E0B" fill="#F59E0B" />
+        {/* Streak Capsule */}
+        <div
+          className="badge-capsule"
+          style={{ backgroundColor: 'var(--color-ochre-surface)', color: 'var(--color-ochre)' }}
+        >
+          <Flame size={17} color="var(--color-ochre)" fill="var(--color-ochre)" />
           <span>{streak} วัน</span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600, color: '#DC2626' }}>
-          <Heart size={18} color="#DC2626" fill="#DC2626" />
-          <span>{hearts}</span>
+        {/* Brand Center */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-jade-primary)' }}>
+            Hanzero
+          </span>
+          <span style={{ fontSize: '14px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+            (ฮั่นซีโร่)
+          </span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 600, color: '#047857' }}>
-          <Sparkles size={18} color="#10B981" />
-          <span>{xp} XP</span>
+        {/* Stats Right (Hearts & XP) */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <div
+            className="badge-capsule"
+            style={{ backgroundColor: 'var(--color-vermilion-surface)', color: 'var(--color-vermilion)' }}
+          >
+            <Heart size={16} color="var(--color-vermilion)" fill="var(--color-vermilion)" />
+            <span>{hearts}</span>
+          </div>
+
+          <div
+            className="badge-capsule"
+            style={{ backgroundColor: 'var(--color-jade-surface)', color: 'var(--color-jade-primary)' }}
+          >
+            <Sparkles size={16} color="var(--color-jade-primary)" />
+            <span>{xp}</span>
+          </div>
         </div>
       </header>
 
-      {/* Hero Welcome Card with น้องกระต่าย 🐰 */}
-      <main
+      {/* Mascot Companion Greeting */}
+      <section
         style={{
-          backgroundColor: '#FFFFFF',
-          borderRadius: '20px',
-          padding: 'clamp(16px, 4vw, 24px) clamp(12px, 3vw, 20px)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '14px',
+          padding: '4px 8px',
+        }}
+      >
+        <img
+          src={bunnyImg}
+          alt="น้องกระต่ายฮั่นซีโร่"
+          style={{
+            width: '68px',
+            height: '68px',
+            borderRadius: '50%',
+            objectFit: 'cover',
+            boxShadow: '0 6px 16px rgba(44, 34, 20, 0.08)',
+            border: '2px solid #FFFFFF',
+            flexShrink: 0,
+          }}
+        />
+        <div>
+          <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--color-jade-primary)' }}>
+            น้องกระต่ายทู่ทู่ (Tùtu) 🐰
+          </div>
+          <p style={{ fontSize: '14px', color: 'var(--text-ink-secondary)', margin: '2px 0 0 0' }}>
+            "เริ่มจาก 0 ก็เก่งจีนได้ มาฟังคำแรกกันเถอะ!"
+          </p>
+        </div>
+      </section>
+
+      {/* Unboxed Hero Flashcard */}
+      <main
+        onClick={handlePlayWord}
+        className={isPlaying ? 'acoustic-card-active' : ''}
+        style={{
+          backgroundColor: 'var(--bg-card)',
+          borderRadius: 'var(--radius-lg)',
+          padding: '36px 20px 28px 20px',
           textAlign: 'center',
-          boxShadow: '0 4px 16px rgba(0,0,0,0.05)',
-          border: '1px solid #E5E0D8',
+          boxShadow: 'var(--shadow-card)',
+          border: '1px solid var(--border-card)',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          gap: '14px',
+          gap: '16px',
+          cursor: 'pointer',
+          transition: 'all 0.2s ease',
+          userSelect: 'none',
         }}
       >
+        <div style={{ fontSize: '13px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+          ✨ แตะการ์ดเพื่อฟังเสียงออกเสียงมาตรฐาน
+        </div>
+
+        {/* Chinese Characters (56px) */}
         <div
           style={{
-            fontSize: 'clamp(48px, 12vw, 64px)',
-            lineHeight: 1,
-            backgroundColor: '#ECFDF5',
-            width: 'clamp(80px, 20vw, 100px)',
-            height: 'clamp(80px, 20vw, 100px)',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: '3px solid #10B981',
-            boxShadow: '0 4px 12px rgba(16, 185, 129, 0.2)',
+            fontSize: 'var(--size-hanzi-hero)',
+            fontWeight: 700,
+            color: 'var(--text-ink-primary)',
+            fontFamily: 'var(--font-hanzi-hero)',
+            lineHeight: 1.1,
+            letterSpacing: '0.04em',
+            transition: 'transform 0.15s ease',
+            transform: isPlaying ? 'scale(1.04)' : 'scale(1)',
           }}
         >
-          🐰
+          你好
         </div>
 
-        <div>
-          <h1 style={{ fontSize: 'clamp(20px, 5vw, 24px)', fontWeight: 700, color: '#047857', marginBottom: '4px' }}>
-            Hanzero (ฮั่นซีโร่)
-          </h1>
-          <p style={{ fontSize: 'clamp(12px, 3.5vw, 14px)', color: '#525866' }}>
-            เริ่มจาก 0 สู่ภาษาจีนคล่องตัว • เรียนง่าย สบายใจ ไม่น่ากลัว
-          </p>
-        </div>
-
-        {/* First Word Learning Card with Visual Grapheme Active Glow */}
+        {/* Pinyin with Accessible Tone Coloring */}
         <div
           style={{
-            backgroundColor: isPlaying ? '#F0FDF4' : '#FDFBF7',
-            borderRadius: '16px',
-            padding: '14px',
-            width: '100%',
-            border: isPlaying ? '2px solid #10B981' : '1px dashed #D1C9BE',
-            boxShadow: isPlaying ? '0 0 16px rgba(16, 185, 129, 0.2)' : 'none',
+            fontSize: 'var(--size-pinyin-body)',
+            lineHeight: 'var(--line-height-pinyin)',
+            fontWeight: 600,
+            color: 'var(--color-ochre)',
             display: 'flex',
-            flexDirection: 'column',
-            gap: '6px',
-            boxSizing: 'border-box',
-            transition: 'all 0.2s ease',
+            alignItems: 'center',
+            gap: '8px',
           }}
         >
-          <div style={{ fontSize: '12px', color: '#8E95A3', fontWeight: 500 }}>
-            ✨ ด่านแรก: สวัสดีคนจีนอย่างมั่นใจ
-          </div>
-          <div
-            style={{
-              fontSize: 'clamp(36px, 10vw, 48px)',
-              fontWeight: 700,
-              color: isPlaying ? '#047857' : '#1A1D20',
-              fontFamily: 'var(--font-hanzi-hero)',
-              lineHeight: 1.2,
-              transition: 'color 0.2s ease',
-            }}
-          >
-            你好
-          </div>
-          <div
-            style={{
-              fontSize: 'clamp(15px, 4vw, 18px)',
-              color: '#B45309',
-              fontWeight: 600,
-              fontFamily: 'var(--font-latin)',
-              lineHeight: 'var(--line-height-pinyin, 1.6)',
-            }}
-          >
-            nǐ hǎo{' '}
-            <span style={{ fontSize: '13px', color: '#8E95A3', fontWeight: 400 }}>(ผันเสียงจริง: ní hǎo)</span>
-          </div>
-          <div style={{ fontSize: 'clamp(13px, 3.5vw, 15px)', color: '#047857', fontWeight: 500 }}>
-            สวัสดี (Hello)
-          </div>
-
-          {/* Audio Feedback Indicator */}
-          {audioFeedback && (
-            <div
-              style={{
-                fontSize: '12px',
-                color: '#047857',
-                backgroundColor: '#ECFDF5',
-                padding: '4px 8px',
-                borderRadius: '8px',
-                marginTop: '4px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '4px',
-              }}
-            >
-              <CheckCircle2 size={14} />
-              <span>{audioFeedback}</span>
-            </div>
-          )}
+          <span>nǐ hǎo</span>
         </div>
 
-        {/* Listen Button with Anti-Cheat / Resilience */}
-        <button
-          type="button"
-          onClick={() => handleSpeak('你好', '你好 (nǐ hǎo - สวัสดี)')}
-          disabled={isPlaying}
-          style={{
-            backgroundColor: isPlaying ? '#059669' : '#047857',
-            color: '#FFFFFF',
-            padding: '12px 20px',
-            borderRadius: '12px',
-            fontWeight: 600,
-            fontSize: '15px',
-            gap: '8px',
-            width: '100%',
-            boxShadow: '0 4px 12px rgba(4, 120, 87, 0.25)',
-            opacity: isPlaying ? 0.7 : 1,
-            cursor: isPlaying ? 'not-allowed' : 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: 'none',
-            transition: 'all 0.15s ease',
-          }}
-        >
-          <Volume2 size={20} />
-          <span>{isPlaying ? 'กำลังเล่นเสียง...' : 'กดฟังเสียงตัวอย่าง'}</span>
-        </button>
+        {/* Meaning */}
+        <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text-ink-secondary)' }}>
+          สวัสดีครับ / สวัสดีค่ะ
+        </div>
 
-        {/* Primary CTA Button - Flood-safe with disabled guard */}
-        <button
-          type="button"
-          onClick={handleStartLesson}
-          disabled={isPlaying}
+        {/* Sound Action Pill */}
+        <div
           style={{
-            backgroundColor: '#F59E0B',
-            color: '#FFFFFF',
-            padding: '12px 20px',
-            borderRadius: '12px',
-            fontWeight: 600,
-            fontSize: '15px',
-            gap: '8px',
-            width: '100%',
-            boxShadow: '0 4px 12px rgba(245, 158, 11, 0.25)',
-            opacity: isPlaying ? 0.7 : 1,
-            cursor: isPlaying ? 'not-allowed' : 'pointer',
-            display: 'flex',
+            display: 'inline-flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            border: 'none',
-            transition: 'all 0.15s ease',
+            gap: '8px',
+            padding: '8px 18px',
+            borderRadius: 'var(--radius-full)',
+            backgroundColor: isPlaying ? 'var(--color-jade-surface)' : 'var(--bg-rice-paper)',
+            color: 'var(--color-jade-primary)',
+            fontSize: '13px',
+            fontWeight: 600,
+            marginTop: '4px',
+            border: '1px solid var(--border-subtle)',
           }}
         >
-          <PlayCircle size={20} />
-          <span>เริ่มเรียน Unit 1 (3 นาที) 🚀</span>
-        </button>
+          <Volume2 size={16} />
+          <span>{isPlaying ? 'กำลังออกเสียง...' : 'แตะเพื่อฟัง'}</span>
+        </div>
       </main>
 
-      {/* Footer Info with Audio Status Hint */}
-      <footer
+      {/* Collapsible Developer & Diagnostics Sandbox Drawer */}
+      <section
         style={{
-          textAlign: 'center',
-          fontSize: '12px',
-          color: '#8E95A3',
           marginTop: 'auto',
-          padding: '8px',
+          backgroundColor: '#FFFFFF',
+          borderRadius: 'var(--radius-md)',
+          border: '1px solid var(--border-subtle)',
+          overflow: 'hidden',
+          fontSize: '13px',
         }}
       >
-        Hanzero 🐰 • Zero-Cost & 60fps Mobile-Ready • Audio Engine Active
+        <button
+          onClick={() => setShowDevDrawer(!showDevDrawer)}
+          style={{
+            width: '100%',
+            padding: '12px 16px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            color: 'var(--text-ink-secondary)',
+            fontWeight: 600,
+            backgroundColor: '#FAFAF9',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Database size={16} color="var(--color-jade-primary)" />
+            <span>ระบบจัดเก็บข้อมูล & แผงทดสอบ (Tiered Storage)</span>
+          </div>
+          {showDevDrawer ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+        </button>
+
+        {showDevDrawer && (
+          <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+            {/* Storage Status */}
+            <div
+              style={{
+                backgroundColor: 'var(--bg-rice-paper)',
+                padding: '10px 12px',
+                borderRadius: 'var(--radius-sm)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4px',
+                fontSize: '12px',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--color-jade-primary)', fontWeight: 600 }}>
+                <ShieldCheck size={16} />
+                <span>สถานะระบบ: {storageHealth?.activeStorageTier.toUpperCase()} TIER READY</span>
+              </div>
+              <div style={{ color: 'var(--text-ink-secondary)' }}>
+                LocalStorage: {storageHealth?.isLocalStorageAvailable ? '✅ ทำงานปกติ' : '❌ ปิดกั้น'} | IndexedDB: {storageHealth?.isIndexedDbAvailable ? '✅ เชื่อมต่อแล้ว' : '❌ ปิดกั้น'}
+              </div>
+              <div style={{ color: 'var(--text-ink-muted)' }}>
+                Safari 7-day ITP Protection: {storageHealth?.isPersisted ? '✅ ป้องกันแล้ว (Persisted)' : 'รอสิทธิ์เบราว์เซอร์'}
+              </div>
+            </div>
+
+            {/* Quick Sync 1-Tap Code */}
+            <div>
+              <div style={{ fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-primary)' }}>
+                Emergency Quick Sync Code (รหัสกู้คืนแบบกระชับ)
+              </div>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input
+                  type="text"
+                  readOnly
+                  value={getQuickSyncCode(userState)}
+                  style={{
+                    flex: 1,
+                    padding: '8px 10px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1px solid var(--border-card)',
+                    fontSize: '12px',
+                    fontFamily: 'monospace',
+                    backgroundColor: '#FFFFFF',
+                  }}
+                />
+                <button
+                  onClick={handleCopyQuickSync}
+                  className="btn-tactile-secondary"
+                  style={{ padding: '6px 12px', minHeight: '38px' }}
+                >
+                  {copiedSyncCode ? <Check size={16} color="var(--color-jade-primary)" /> : <Copy size={16} />}
+                </button>
+              </div>
+            </div>
+
+            {/* Quick Sync Code Restore */}
+            <div>
+              <div style={{ fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-primary)' }}>
+                กู้คืนสถานะด้วยรหัส
+              </div>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input
+                  type="text"
+                  placeholder="วางรหัส เช่น HZ1-T1-U01..."
+                  value={quickSyncInput}
+                  onChange={(e) => setQuickSyncInput(e.target.value)}
+                  style={{
+                    flex: 1,
+                    padding: '8px 10px',
+                    borderRadius: 'var(--radius-sm)',
+                    border: '1px solid var(--border-card)',
+                    fontSize: '12px',
+                    fontFamily: 'monospace',
+                    backgroundColor: '#FFFFFF',
+                  }}
+                />
+                <button
+                  onClick={handleRestoreQuickSync}
+                  className="btn-tactile-secondary"
+                  style={{ padding: '6px 12px', minHeight: '38px' }}
+                >
+                  กู้คืน
+                </button>
+              </div>
+              {syncFeedback && (
+                <div style={{ fontSize: '12px', marginTop: '4px', color: syncFeedback.startsWith('✅') ? 'var(--color-jade-primary)' : 'var(--color-vermilion)' }}>
+                  {syncFeedback}
+                </div>
+              )}
+            </div>
+
+            {/* 1-Click Snapshot JSON */}
+            <div>
+              <button
+                onClick={handleDownloadSnapshot}
+                className="btn-tactile-secondary"
+                style={{ width: '100%', minHeight: '40px', gap: '6px' }}
+              >
+                <span>💾 ดาวน์โหลด Full Backup (.JSON)</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </section>
+
+      {/* Bottom Sticky Action Dock (Thumb Zone Ergonomics) */}
+      <footer
+        style={{
+          position: 'fixed',
+          bottom: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '100%',
+          maxWidth: '440px',
+          padding: '12px 16px calc(16px + env(safe-area-inset-bottom, 0px)) 16px',
+          backgroundColor: 'rgba(251, 249, 245, 0.94)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          borderTop: '1px solid var(--border-subtle)',
+          boxSizing: 'border-box',
+          zIndex: 50,
+        }}
+      >
+        <button
+          onClick={handleStartLesson}
+          className="btn-tactile-primary"
+          style={{ width: '100%', gap: '8px' }}
+        >
+          <Play size={18} fill="#FFFFFF" />
+          <span>เริ่มบทเรียนก้าวแรก (+10 XP)</span>
+        </button>
       </footer>
     </div>
   );
