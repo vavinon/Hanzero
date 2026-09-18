@@ -160,3 +160,73 @@ button {
 .tone-3 { color: #D97706; font-weight: 600; }
 .tone-4 { color: #DC2626; font-weight: 600; }
 .tone-0 { color: #6B7280; font-weight: 500; }
+
+/* Hanzi Stroke Tactile Buttons (44px+ Accessible Hitbox & Spring Press) */
+.btn-stroke-tactile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-height: 48px;
+  padding: 8px 4px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--border-subtle);
+  border-bottom: 3px solid #D1C9BE;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.btn-stroke-tactile:active:not(:disabled) {
+  transform: translateY(2px);
+  border-bottom: 1px solid #D1C9BE;
+}
+
+.btn-stroke-tactile:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-bottom-width: 1.5px;
+}
+
+/* Gentle Horizontal Shake Animation for Stroke Mistakes */
+@keyframes hanzero-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+}
+
+.hanzero-shake {
+  animation: hanzero-shake 0.3s ease;
+}
+
+/* Elegant Ink Spinner */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 2.5px solid var(--border-subtle);
+  border-top-color: var(--color-jade-primary);
+  border-radius: 50%;
+  animation: hanzero-spin 0.8s linear infinite;
+}
+
+@keyframes hanzero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

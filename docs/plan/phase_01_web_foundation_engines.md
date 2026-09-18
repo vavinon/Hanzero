@@ -94,7 +94,7 @@
     - เตรียมพร้อมสำหรับ Compressed Base64 QR Sync
 
 ### 5. โมดูลคัดอักษรจีน (Hanzi Writer Component)
-- [ ] สร้าง `src/components/hanzi/HanziWriterBox.tsx` & `src/engines/hanzi/strokeDataLoader.ts`:
+- [x] สร้าง `src/components/hanzi/HanziWriterBox.tsx` & `src/engines/hanzi/strokeDataLoader.ts`:
   - **On-Demand Stroke Caching:** ใช้ Custom `charDataLoader` ตรวจสอบและดึงข้อมูลเส้นขีดจาก IndexedDB ก่อน หากไม่มีจึง Fetch และบันทึกลง IndexedDB อัตโนมัติ (ไม่ Bundling ข้อมูลขีด 6MB ล่วงหน้า)
   - โหมดสาธิต: แอนิเมชันวาดเส้นขีดทีละเส้นตามลำดับถูกต้อง (Animated Stroke Order)
   - โหมดฝึกเขียน: ระบบลากเส้นด้วยเมาส์หรือนิ้วสัมผัส พร้อมการตรวจจับลำดับขีดผิด/ถูก

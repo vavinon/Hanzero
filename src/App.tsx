@@ -12,6 +12,8 @@ import {
   Check,
   ShieldCheck,
   AlertTriangle,
+  PenTool,
+  BookOpen,
 } from 'lucide-react';
 import bunnyImg from './assets/brand/mascot_bunny.jpg';
 import {
@@ -33,6 +35,8 @@ import {
   StorageDiagnostics,
   UserStateSchema,
 } from './engines/storage';
+import { getStrokeCache } from './engines/storage/coldStorage';
+import { HanziWriterBox } from './components/hanzi';
 
 export const App: React.FC = () => {
   // Real Storage Engine Integration (Synchronous Fast Boot)
@@ -44,6 +48,11 @@ export const App: React.FC = () => {
   const [copiedSyncCode, setCopiedSyncCode] = useState<boolean>(false);
   const [quickSyncInput, setQuickSyncInput] = useState<string>('');
   const [syncFeedback, setSyncFeedback] = useState<string | null>(null);
+
+  // Slice 1.4: Hanzi Stroke Engine Integration
+  const [activeTab, setActiveTab] = useState<'vocab' | 'stroke'>('vocab');
+  const [strokeChar, setStrokeChar] = useState<string>('你');
+  const [strokeCacheStatus, setStrokeCacheStatus] = useState<string | null>(null);
 
   const isPlayingRef = useRef<boolean>(false);
 
@@ -177,6 +186,35 @@ export const App: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
+  const handleStrokeComplete = async () => {
+    // Award 10 XP on finishing full character handwriting quiz
+    const updatedState = {
+      ...userState,
+      progress: {
+        ...userState.progress,
+        xp: userState.progress.xp + 10,
+        streak: {
+          ...userState.progress.streak,
+          count: Math.max(userState.progress.streak.count, 1),
+          last_active_date: new Date().toISOString().slice(0, 10),
+        },
+      },
+    };
+    await saveUserState(updatedState);
+    setUserState(updatedState);
+  };
+
+  const handleInspectStrokeCache = async () => {
+    const ni = await getStrokeCache('你');
+    const hao = await getStrokeCache('好');
+    const parts: string[] = [];
+    if (ni) parts.push(`"你": ${ni.strokes.length} ขีด (แคช IDB สำเร็จ ✅)`);
+    else parts.push('"你": ยังไม่ได้แคช ⏳');
+    if (hao) parts.push(`"好": ${hao.strokes.length} ขีด (แคช IDB สำเร็จ ✅)`);
+    else parts.push('"好": ยังไม่ได้แคช ⏳');
+    setStrokeCacheStatus(parts.join(' | '));
+  };
+
   return (
     <div
       style={{
@@ -296,86 +334,210 @@ export const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Unboxed Hero Flashcard */}
-      <main
-        onClick={handlePlayWord}
-        className={isPlaying ? 'acoustic-card-active' : ''}
+      {/* Interactive Mode Segmented Tabs */}
+      <nav
+        aria-label="โหมดการเรียนรู้"
         style={{
-          backgroundColor: 'var(--bg-card)',
-          borderRadius: 'var(--radius-lg)',
-          padding: '36px 20px 28px 20px',
-          textAlign: 'center',
-          boxShadow: 'var(--shadow-card)',
-          border: '1px solid var(--border-card)',
           display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '16px',
-          cursor: 'pointer',
-          transition: 'all 0.2s ease',
-          userSelect: 'none',
+          backgroundColor: '#EFEBE4',
+          borderRadius: 'var(--radius-full)',
+          padding: '4px',
+          gap: '4px',
         }}
       >
-        <div style={{ fontSize: '13px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
-          ✨ แตะการ์ดเพื่อฟังเสียงออกเสียงมาตรฐาน
-        </div>
-
-        {/* Chinese Characters (56px) */}
-        <div
-          style={{
-            fontSize: 'var(--size-hanzi-hero)',
-            fontWeight: 700,
-            color: 'var(--text-ink-primary)',
-            fontFamily: 'var(--font-hanzi-hero)',
-            lineHeight: 1.1,
-            letterSpacing: '0.04em',
-            transition: 'transform 0.15s ease',
-            transform: isPlaying ? 'scale(1.04)' : 'scale(1)',
+        <button
+          type="button"
+          onClick={() => {
+            playClick();
+            setActiveTab('vocab');
           }}
-        >
-          你好
-        </div>
-
-        {/* Pinyin with Accessible Tone Coloring */}
-        <div
           style={{
-            fontSize: 'var(--size-pinyin-body)',
-            lineHeight: 'var(--line-height-pinyin)',
-            fontWeight: 600,
-            color: 'var(--color-ochre)',
+            flex: 1,
             display: 'flex',
             alignItems: 'center',
-            gap: '8px',
-          }}
-        >
-          <span>nǐ hǎo</span>
-        </div>
-
-        {/* Meaning */}
-        <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text-ink-secondary)' }}>
-          สวัสดีครับ / สวัสดีค่ะ
-        </div>
-
-        {/* Sound Action Pill */}
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            padding: '8px 18px',
+            justifyContent: 'center',
+            gap: '6px',
+            padding: '8px 12px',
             borderRadius: 'var(--radius-full)',
-            backgroundColor: isPlaying ? 'var(--color-jade-surface)' : 'var(--bg-rice-paper)',
-            color: 'var(--color-jade-primary)',
+            border: 'none',
             fontSize: '13px',
             fontWeight: 600,
-            marginTop: '4px',
-            border: '1px solid var(--border-subtle)',
+            cursor: 'pointer',
+            backgroundColor: activeTab === 'vocab' ? '#FFFFFF' : 'transparent',
+            color: activeTab === 'vocab' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+            boxShadow: activeTab === 'vocab' ? '0 2px 8px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.15s ease',
           }}
         >
-          <Volume2 size={16} />
-          <span>{isPlaying ? 'กำลังออกเสียง...' : 'แตะเพื่อฟัง'}</span>
-        </div>
-      </main>
+          <BookOpen size={15} />
+          <span>การ์ดคำศัพท์</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => {
+            playClick();
+            setActiveTab('stroke');
+          }}
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '6px',
+            padding: '8px 12px',
+            borderRadius: 'var(--radius-full)',
+            border: 'none',
+            fontSize: '13px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            backgroundColor: activeTab === 'stroke' ? '#FFFFFF' : 'transparent',
+            color: activeTab === 'stroke' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+            boxShadow: activeTab === 'stroke' ? '0 2px 8px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <PenTool size={15} />
+          <span>คัดลายมือ (米字格)</span>
+        </button>
+      </nav>
+
+      {/* Main Study Area: Vocab Card or Hanzi Stroke Practice */}
+      {activeTab === 'vocab' ? (
+        <main
+          onClick={handlePlayWord}
+          className={isPlaying ? 'acoustic-card-active' : ''}
+          style={{
+            backgroundColor: 'var(--bg-card)',
+            borderRadius: 'var(--radius-lg)',
+            padding: '36px 20px 28px 20px',
+            textAlign: 'center',
+            boxShadow: 'var(--shadow-card)',
+            border: '1px solid var(--border-card)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '16px',
+            cursor: 'pointer',
+            transition: 'all 0.2s ease',
+            userSelect: 'none',
+          }}
+        >
+          <div style={{ fontSize: '13px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+            ✨ แตะการ์ดเพื่อฟังเสียงออกเสียงมาตรฐาน
+          </div>
+
+          {/* Chinese Characters (56px) */}
+          <div
+            style={{
+              fontSize: 'var(--size-hanzi-hero)',
+              fontWeight: 700,
+              color: 'var(--text-ink-primary)',
+              fontFamily: 'var(--font-hanzi-hero)',
+              lineHeight: 1.1,
+              letterSpacing: '0.04em',
+              transition: 'transform 0.15s ease',
+              transform: isPlaying ? 'scale(1.04)' : 'scale(1)',
+            }}
+          >
+            你好
+          </div>
+
+          {/* Pinyin with Accessible Tone Coloring */}
+          <div
+            style={{
+              fontSize: 'var(--size-pinyin-body)',
+              lineHeight: 'var(--line-height-pinyin)',
+              fontWeight: 600,
+              color: 'var(--color-ochre)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <span>nǐ hǎo</span>
+          </div>
+
+          {/* Meaning */}
+          <div style={{ fontSize: '16px', fontWeight: 500, color: 'var(--text-ink-secondary)' }}>
+            สวัสดีครับ / สวัสดีค่ะ
+          </div>
+
+          {/* Sound Action Pill */}
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '8px 18px',
+              borderRadius: 'var(--radius-full)',
+              backgroundColor: isPlaying ? 'var(--color-jade-surface)' : 'var(--bg-rice-paper)',
+              color: 'var(--color-jade-primary)',
+              fontSize: '13px',
+              fontWeight: 600,
+              marginTop: '4px',
+              border: '1px solid var(--border-subtle)',
+            }}
+          >
+            <Volume2 size={16} />
+            <span>{isPlaying ? 'กำลังออกเสียง...' : 'แตะเพื่อฟัง'}</span>
+          </div>
+        </main>
+      ) : (
+        <main
+          style={{
+            backgroundColor: 'var(--bg-card)',
+            borderRadius: 'var(--radius-lg)',
+            padding: '20px 16px',
+            boxShadow: 'var(--shadow-card)',
+            border: '1px solid var(--border-card)',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '14px',
+          }}
+        >
+          {/* Character Switcher Capsule */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
+              เลือกตัวอักษร:
+            </span>
+            <div style={{ display: 'flex', gap: '6px' }}>
+              {(['你', '好'] as const).map((char) => (
+                <button
+                  key={char}
+                  type="button"
+                  onClick={() => {
+                    playClick();
+                    setStrokeChar(char);
+                  }}
+                  style={{
+                    padding: '4px 14px',
+                    borderRadius: 'var(--radius-full)',
+                    border: '1.5px solid',
+                    borderColor: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
+                    backgroundColor: strokeChar === char ? 'var(--color-jade-surface)' : 'transparent',
+                    color: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                    fontWeight: 700,
+                    fontSize: '14px',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  {char} {char === '你' ? '(nǐ)' : '(hǎo)'}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Interactive Hanzi Writer Canvas in 米字格 */}
+          <HanziWriterBox
+            character={strokeChar}
+            size={270}
+            onComplete={handleStrokeComplete}
+          />
+        </main>
+      )}
 
       {/* Collapsible Developer & Diagnostics Sandbox Drawer */}
       <section
@@ -509,6 +671,35 @@ export const App: React.FC = () => {
               >
                 <span>💾 ดาวน์โหลด Full Backup (.JSON)</span>
               </button>
+            </div>
+
+            {/* Slice 1.4: IndexedDB Stroke Cache Diagnostics */}
+            <div style={{ borderTop: '1px dashed var(--border-subtle)', paddingTop: '10px' }}>
+              <div style={{ fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-primary)' }}>
+                IndexedDB Hanzi Stroke Cache (`hanzi_strokes`)
+              </div>
+              <button
+                onClick={handleInspectStrokeCache}
+                className="btn-tactile-secondary"
+                style={{ width: '100%', minHeight: '38px', gap: '6px' }}
+              >
+                <span>🔍 ตรวจสอบสถานะแคชเส้นขีดใน IndexedDB</span>
+              </button>
+              {strokeCacheStatus && (
+                <div
+                  style={{
+                    marginTop: '6px',
+                    padding: '6px 10px',
+                    borderRadius: 'var(--radius-sm)',
+                    backgroundColor: 'var(--bg-rice-paper)',
+                    fontSize: '11px',
+                    color: 'var(--text-ink-secondary)',
+                    fontFamily: 'monospace',
+                  }}
+                >
+                  {strokeCacheStatus}
+                </div>
+              )}
             </div>
           </div>
         )}
