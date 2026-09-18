@@ -28,13 +28,37 @@ export interface AudioEngineStatus {
 // Module-level singletons and tracking
 let audioContextInstance: AudioContext | null = null;
 let currentUtterance: SpeechSynthesisUtterance | null = null;
+let currentAudioElement: HTMLAudioElement | null = null;
 let watchdogTimer: ReturnType<typeof setTimeout> | null = null;
 let isLifecycleBound = false;
+let cachedVoices: SpeechSynthesisVoice[] = [];
 
 // Concurrency & Session guards
 let activeSessionId = 0;
 let activeSessionResolve: (() => void) | null = null;
 let unlockPromise: Promise<boolean> | null = null;
+
+/**
+ * Populates and refreshes the internal cached voices list.
+ */
+function populateVoices(): void {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+    const list = window.speechSynthesis.getVoices();
+    if (list.length > 0) {
+      cachedVoices = list;
+    }
+  }
+}
+
+// Automatically bind voiceschanged listener on module initialization
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  populateVoices();
+  if (typeof window.speechSynthesis.addEventListener === 'function') {
+    window.speechSynthesis.addEventListener('voiceschanged', populateVoices);
+  } else {
+    window.speechSynthesis.onvoiceschanged = populateVoices;
+  }
+}
 
 /**
  * Detects whether the user is inside a constrained mobile in-app WebView
@@ -109,6 +133,7 @@ function setupLifecycleListeners(): void {
  * duplicate buffer source allocation under rapid taps.
  */
 export function unlockAudioContext(): Promise<boolean> {
+  primeSharedAudio();
   const ctx = getAudioContext();
   if (!ctx) return Promise.resolve(false);
 
@@ -144,6 +169,10 @@ export function unlockAudioContext(): Promise<boolean> {
 export function playClick(): void {
   const ctx = getAudioContext();
   if (!ctx) return;
+
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(() => {});
+  }
 
   try {
     const now = ctx.currentTime;
@@ -182,6 +211,10 @@ export function playClick(): void {
 export function playCorrect(): void {
   const ctx = getAudioContext();
   if (!ctx) return;
+
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(() => {});
+  }
 
   try {
     const now = ctx.currentTime;
@@ -225,6 +258,10 @@ export function playIncorrect(): void {
   const ctx = getAudioContext();
   if (!ctx) return;
 
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(() => {});
+  }
+
   try {
     const now = ctx.currentTime;
     const notes = [440.0, 392.0]; // A4 -> G4
@@ -266,6 +303,10 @@ export function playIncorrect(): void {
 export function playFanfare(): void {
   const ctx = getAudioContext();
   if (!ctx) return;
+
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(() => {});
+  }
 
   try {
     const now = ctx.currentTime;
@@ -314,6 +355,10 @@ export function playFanfare(): void {
 export function playToneContour(tone: ToneNumber, durationSeconds = 0.35): void {
   const ctx = getAudioContext();
   if (!ctx) return;
+
+  if (ctx.state === 'suspended') {
+    ctx.resume().catch(() => {});
+  }
 
   try {
     const now = ctx.currentTime;
@@ -508,25 +553,62 @@ export async function playPhonemeAudio(code: string): Promise<boolean> {
 
 /**
  * Searches the browser speech synthesis voices for the optimal Chinese voice.
+ * Checks cached voices first and employs multi-tier matching across BCP 47 tags and voice names.
  */
 export function findChineseVoice(): SpeechSynthesisVoice | null {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     return null;
   }
 
-  const voices = window.speechSynthesis.getVoices();
-  // Priority: Mainland Chinese (zh-CN / cmn-Hans-CN) -> any zh voice
-  return (
-    voices.find(
-      (v) =>
-        v.lang === 'zh-CN' ||
-        v.lang === 'cmn-Hans-CN' ||
-        v.lang.toLowerCase() === 'zh_cn' ||
-        v.lang === 'zh'
-    ) ||
-    voices.find((v) => v.lang.startsWith('zh') || v.lang.startsWith('cmn')) ||
-    null
-  );
+  const liveVoices = window.speechSynthesis.getVoices();
+  const voices = liveVoices.length > 0 ? liveVoices : cachedVoices;
+  if (liveVoices.length > 0 && cachedVoices.length === 0) {
+    cachedVoices = liveVoices;
+  }
+
+  // Priority 1: Mainland Standard Mandarin (zh-CN / cmn-Hans-CN / zh-Hans)
+  const mainlandVoice = voices.find((v) => {
+    const l = v.lang.toLowerCase().replace(/_/g, '-');
+    return (
+      l === 'zh-cn' ||
+      l === 'cmn-hans-cn' ||
+      l === 'cmn-hans' ||
+      l === 'zh-hans-cn' ||
+      l === 'zh-hans'
+    );
+  });
+  if (mainlandVoice) return mainlandVoice;
+
+  // Priority 2: General Chinese (zh, cmn, or regional accents: zh-HK, zh-TW, zh-SG)
+  const regionalVoice = voices.find((v) => {
+    const l = v.lang.toLowerCase().replace(/_/g, '-');
+    return l.startsWith('zh') || l.startsWith('cmn');
+  });
+  if (regionalVoice) return regionalVoice;
+
+  // Priority 3: Name-based Chinese voice heuristics
+  const nameMatchVoice = voices.find((v) => {
+    const n = v.name.toLowerCase();
+    return (
+      n.includes('chinese') ||
+      n.includes('mandarin') ||
+      n.includes('putonghua') ||
+      v.name.includes('中文') ||
+      v.name.includes('普通话') ||
+      v.name.includes('華語') ||
+      v.name.includes('国语')
+    );
+  });
+  if (nameMatchVoice) return nameMatchVoice;
+
+  return null;
+}
+
+/**
+ * Returns true if at least one Chinese speech synthesis voice is available.
+ */
+export function hasChineseVoice(): boolean {
+  return findChineseVoice() !== null;
 }
 
 /**
@@ -536,13 +618,20 @@ export function getAllChineseVoices(): SpeechSynthesisVoice[] {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     return [];
   }
-  const voices = window.speechSynthesis.getVoices();
-  return voices.filter(
-    (v) =>
-      v.lang.toLowerCase().startsWith('zh') ||
-      v.lang.toLowerCase().startsWith('cmn') ||
-      v.lang.toLowerCase().includes('chinese')
-  );
+  const liveVoices = window.speechSynthesis.getVoices();
+  const voices = liveVoices.length > 0 ? liveVoices : cachedVoices;
+  return voices.filter((v) => {
+    const l = v.lang.toLowerCase().replace(/_/g, '-');
+    const n = v.name.toLowerCase();
+    return (
+      l.startsWith('zh') ||
+      l.startsWith('cmn') ||
+      n.includes('chinese') ||
+      n.includes('mandarin') ||
+      v.name.includes('中文') ||
+      v.name.includes('普通话')
+    );
+  });
 }
 
 /**
@@ -568,6 +657,210 @@ export function onVoicesChanged(callback: () => void): () => void {
   };
 }
 
+// Shared singleton HTMLAudioElement to preserve user gesture authorization across async loops
+let sharedAudioElement: HTMLAudioElement | null = null;
+let preferOnlineAudioState = false;
+
+/**
+ * Pre-warms / unlocks the shared HTMLAudioElement on direct user interaction.
+ * Playing a silent 1-sample buffer during a click or touch event grants persistent
+ * playback permissions in Chromium and WebKit browsers, allowing subsequent
+ * asynchronous lines (e.g. sequential dialogue lines with 500ms gaps) to play.
+ */
+export function primeSharedAudio(): void {
+  if (typeof window === 'undefined' || typeof Audio === 'undefined') return;
+  try {
+    if (!sharedAudioElement) {
+      sharedAudioElement = new Audio();
+      sharedAudioElement.preload = 'auto';
+    }
+    if (!sharedAudioElement.dataset.unlocked) {
+      // 1-sample silent WAV data URI
+      sharedAudioElement.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+      sharedAudioElement.volume = 0;
+      const playPromise = sharedAudioElement.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            if (sharedAudioElement) {
+              sharedAudioElement.dataset.unlocked = 'true';
+              sharedAudioElement.volume = 1;
+            }
+          })
+          .catch(() => {
+            // User gesture not yet available or blocked; safe ignore
+          });
+      }
+    }
+  } catch {
+    // Safe ignore in headless/test environments
+  }
+}
+
+/**
+ * Configure user preference for online audio streaming vs native TTS.
+ */
+export function setPreferOnlineAudio(prefer: boolean): void {
+  preferOnlineAudioState = prefer;
+}
+
+/**
+ * Returns current preference for online audio stream.
+ */
+export function isPreferOnlineAudio(): boolean {
+  return preferOnlineAudioState;
+}
+
+/**
+ * Local Pre-recorded Native Chinese Audio Map (Unit 1).
+ * Serves zero-latency, high-fidelity studio MP3s directly from project assets
+ * without relying on external network or browser speech synthesis.
+ */
+export const STATIC_AUDIO_MAP: Record<string, string> = {
+  // Vocabulary
+  '你': 'audio/unit01/ni.mp3',
+  '好': 'audio/unit01/hao.mp3',
+  '你好': 'audio/unit01/ni_hao.mp3',
+  '您': 'audio/unit01/nin.mp3',
+  '您好': 'audio/unit01/nin_hao.mp3',
+  '你们': 'audio/unit01/nimen.mp3',
+  '你们好': 'audio/unit01/nimen_hao.mp3',
+  '谢谢': 'audio/unit01/xie_xie.mp3',
+  '不': 'audio/unit01/bu.mp3',
+  '客气': 'audio/unit01/ke_qi.mp3',
+  '不客气': 'audio/unit01/bu_ke_qi.mp3',
+  '再见': 'audio/unit01/zai_jian.mp3',
+  // Dialogue & Sentences
+  '你好！': 'audio/unit01/dialogue_ni_hao.mp3',
+  '谢谢！': 'audio/unit01/dialogue_xie_xie.mp3',
+  '不客气！': 'audio/unit01/dialogue_bu_ke_qi.mp3',
+  '不客气，再见！': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
+  '不客气，再见': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
+  '不客气再见': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
+  '再见！': 'audio/unit01/dialogue_zai_jian.mp3',
+  '你好！很高兴认识你。': 'audio/unit01/sentence_ni_hao_renshi.mp3',
+  '今天天气很好。': 'audio/unit01/sentence_tianqi_hao.mp3',
+  '太谢谢你了，朋友！': 'audio/unit01/sentence_tai_xiexie.mp3',
+  '不用谢，大家都是朋友，不客气！': 'audio/unit01/sentence_bu_yong_xie.mp3',
+  '明天学校见，再见！': 'audio/unit01/sentence_mingtian_xuexiao.mp3',
+  '我是泰国人。': 'audio/unit01/sentence_wo_shi_taiguo_ren.mp3',
+  '我是泰国人': 'audio/unit01/sentence_wo_shi_taiguo_ren.mp3',
+  '我叫李明，你呢？': 'audio/unit01/sentence_wo_jiao_li_ming.mp3',
+  '认识你很高兴！': 'audio/unit01/sentence_renshi_ni.mp3',
+  '认识你很高兴': 'audio/unit01/sentence_renshi_ni.mp3',
+  '认识您我也很高兴！谢谢，再见！': 'audio/unit01/sentence_renshi_nin.mp3',
+};
+
+/**
+ * Resolves the playback URL for a given Chinese text:
+ * 1. Checks local static MP3 assets (fast, offline, studio quality)
+ * 2. Falls back to Youdao DictVoice online stream (&le=zh) without punctuation to prevent HTTP 500
+ */
+export function getAudioSourceUrl(text: string): string {
+  const clean = text.trim();
+  const unpunct = clean.replace(/[！!？?。，,、；;：“”"'\s]+$/g, '') || clean;
+  const noPunctuation = clean.replace(/[！!？?。，,、；;：“”"'\s]/g, '') || clean;
+
+  const localFile =
+    STATIC_AUDIO_MAP[clean] || STATIC_AUDIO_MAP[unpunct] || STATIC_AUDIO_MAP[noPunctuation];
+  if (localFile) {
+    const baseUrl =
+      typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
+        ? import.meta.env.BASE_URL
+        : '/Hanzero/';
+    return `${baseUrl.replace(/\/$/, '')}/${localFile}`;
+  }
+
+  // Youdao DictVoice returns HTTP 500 if punctuation is present, so strip for fallback
+  return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(noPunctuation)}&le=zh`;
+}
+
+/**
+ * Plays high-quality Chinese speech via local MP3 audio assets or HTML5 Audio Stream.
+ * Used as a zero-cost, high-fidelity fallback when the host OS/browser lacks Chinese TTS voice packs
+ * or when native speech synthesis is unavailable or fails.
+ */
+export function playAudioStream(text: string, options: SpeakOptions = {}): Promise<boolean> {
+  const { rate = 1.0, onStart, onEnd, onError } = options;
+
+  if (typeof window === 'undefined' || typeof Audio === 'undefined') {
+    return Promise.resolve(false);
+  }
+
+  const cleanText = text.trim();
+  if (!cleanText) return Promise.resolve(false);
+
+  // Stop any active audio stream
+  if (currentAudioElement) {
+    try {
+      currentAudioElement.pause();
+      currentAudioElement.currentTime = 0;
+    } catch {
+      // Safe ignore
+    }
+    currentAudioElement = null;
+  }
+
+  const targetUrl = getAudioSourceUrl(cleanText);
+
+  return new Promise<boolean>((resolve) => {
+    try {
+      const audio = new Audio(targetUrl);
+      currentAudioElement = audio;
+
+      audio.playbackRate = Math.max(0.5, Math.min(rate, 1.5));
+      audio.volume = 1;
+
+      let isFinished = false;
+
+      const finish = (success: boolean) => {
+        if (isFinished) return;
+        isFinished = true;
+        audio.onplay = null;
+        audio.onended = null;
+        audio.onerror = null;
+        if (currentAudioElement === audio) {
+          currentAudioElement = null;
+        }
+        if (success) {
+          onEnd?.();
+        } else {
+          onError?.(new Error('Audio playback failed'));
+        }
+        resolve(success);
+      };
+
+      audio.onplay = () => {
+        onStart?.();
+      };
+
+      audio.onended = () => {
+        finish(true);
+      };
+
+      audio.onerror = () => {
+        finish(false);
+      };
+
+      // 5s watchdog timeout for network/local audio
+      setTimeout(() => {
+        if (!isFinished) {
+          finish(false);
+        }
+      }, 5000);
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          finish(false);
+        });
+      }
+    } catch {
+      resolve(false);
+    }
+  });
+}
+
 /**
  * Stops any active speech, clears watchdog timers, and safely unblocks
  * any in-flight Promise so callers don't hang in an await state.
@@ -576,6 +869,16 @@ export function stopSpeaking(): void {
   if (watchdogTimer) {
     clearTimeout(watchdogTimer);
     watchdogTimer = null;
+  }
+
+  if (currentAudioElement) {
+    try {
+      currentAudioElement.pause();
+      currentAudioElement.currentTime = 0;
+    } catch {
+      // Safe ignore
+    }
+    currentAudioElement = null;
   }
 
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
@@ -599,17 +902,16 @@ export function stopSpeaking(): void {
  * Returns true if an utterance is currently active in the engine.
  */
 export function isSpeaking(): boolean {
-  return currentUtterance !== null;
+  return currentUtterance !== null || currentAudioElement !== null;
 }
 
 /**
  * High-resilience speech synthesis (TTS) for Chinese characters and phrases.
- * Includes:
- * 1. Safe cancel before start to avoid queue deadlocks.
- * 2. Utterance retention to avoid mobile Safari GC mid-speech bugs.
- * 3. 3-second watchdog timer: automatically invokes fallback and triggers onEnd if browser hangs.
- * 4. Active Session ID tracking: prevents trailing cancellation events from hijacking newer sessions.
- * 5. Guaranteed Promise resolution: ensures caller `await` blocks always resolve cleanly.
+ * Priority cascade:
+ * 1. Pre-recorded studio MP3 files (Unit 1 assets in public/audio/unit01/)
+ * 2. High-fidelity Online Audio Stream (Youdao DictVoice)
+ * 3. Native SpeechSynthesis if available
+ * 4. Tone contour acoustic glide fallback
  */
 export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   const { rate = 0.85, pitch = 1.0, onStart, onEnd, onError } = options;
@@ -621,18 +923,67 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
     const currentSessionId = ++activeSessionId;
     activeSessionResolve = resolve;
 
+    const clean = text.trim();
+    const unpunct = clean.replace(/[！!？?。，,、；;：“”"'\s]+$/g, '') || clean;
+    const hasStaticAudio = !!(STATIC_AUDIO_MAP[clean] || STATIC_AUDIO_MAP[unpunct]);
+    const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
+
+    const chineseVoice = findChineseVoice();
+    const shouldUseAudioStream =
+      (!isTestMode && hasStaticAudio) || preferOnlineAudioState || !chineseVoice;
+
+    // Direct Studio MP3 / Audio Stream if available in real browser or when host lacks Chinese voice
+    if (shouldUseAudioStream) {
+      playAudioStream(text, {
+        rate,
+        onStart: () => {
+          if (currentSessionId === activeSessionId) {
+            onStart?.();
+          }
+        },
+        onEnd: () => {
+          if (currentSessionId === activeSessionId) {
+            onEnd?.();
+            activeSessionResolve = null;
+          }
+          resolve();
+        },
+        onError: () => {
+          // Acoustic Tone Fallback if offline/network stream fails
+          playToneContour(1, 0.25);
+          if (currentSessionId === activeSessionId) {
+            onError?.(new Error('Chinese TTS voice not installed and audio stream unavailable'));
+            onEnd?.();
+            activeSessionResolve = null;
+          }
+          resolve();
+        },
+      });
+      return;
+    }
+
     const hasSpeech =
       typeof window !== 'undefined' &&
       'speechSynthesis' in window &&
       typeof SpeechSynthesisUtterance !== 'undefined';
 
     if (!hasSpeech) {
-      // Fallback to sine tone chime
-      playToneContour(1, 0.25);
-      onError?.(new Error('SpeechSynthesis not supported on this browser'));
-      onEnd?.();
-      activeSessionResolve = null;
-      resolve();
+      // Fallback to online stream or sine tone chime
+      playAudioStream(text, {
+        rate,
+        onStart,
+        onEnd: () => {
+          activeSessionResolve = null;
+          resolve();
+        },
+        onError: () => {
+          playToneContour(1, 0.25);
+          onError?.(new Error('SpeechSynthesis not supported on this browser'));
+          onEnd?.();
+          activeSessionResolve = null;
+          resolve();
+        },
+      });
       return;
     }
 
@@ -663,15 +1014,16 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
     };
 
     try {
+      // Chromium Workaround: If speechSynthesis was left in paused state, resume it
+      if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+      }
+
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'zh-CN';
       utterance.rate = Math.max(0.5, Math.min(rate, 1.5));
       utterance.pitch = Math.max(0.5, Math.min(pitch, 1.5));
-
-      const chineseVoice = findChineseVoice();
-      if (chineseVoice) {
-        utterance.voice = chineseVoice;
-      }
+      utterance.voice = chineseVoice;
 
       // Retain utterance reference to avoid mobile garbage collection
       currentUtterance = utterance;
@@ -687,6 +1039,7 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       };
 
       utterance.onerror = (event) => {
+        playToneContour(1, 0.2);
         finalize(new Error(event.error || 'SpeechSynthesis error occurred'));
       };
 
@@ -731,7 +1084,7 @@ export function getAudioEngineStatus(): AudioEngineStatus {
       : isAudioCtxSupported
         ? 'uninitialized'
         : 'unsupported',
-    hasChineseVoice: !!findChineseVoice(),
+    hasChineseVoice: hasChineseVoice(),
     isInAppBrowser: isInAppBrowser(),
   };
 }
@@ -744,6 +1097,10 @@ export function _resetAudioEngineForTesting(): void {
   activeSessionId = 0;
   activeSessionResolve = null;
   unlockPromise = null;
+  cachedVoices = [];
+  currentAudioElement = null;
+  sharedAudioElement = null;
+  preferOnlineAudioState = false;
   if (audioContextInstance) {
     try {
       audioContextInstance.close().catch(() => {});

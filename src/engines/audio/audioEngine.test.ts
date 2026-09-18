@@ -10,6 +10,7 @@ import {
   speak,
   stopSpeaking,
   findChineseVoice,
+  hasChineseVoice,
   getAllChineseVoices,
   onVoicesChanged,
   playPhonemeAudio,
@@ -270,6 +271,7 @@ describe('audioEngine', () => {
       const voice = findChineseVoice();
       expect(voice).not.toBeNull();
       expect(voice?.lang).toBe('zh-CN');
+      expect(hasChineseVoice()).toBe(true);
     });
 
     it('cancels existing speech before queueing new utterance (anti-deadlock)', async () => {

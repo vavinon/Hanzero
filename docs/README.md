@@ -31,10 +31,13 @@ docs/
 │   ├── phase_07_tier2_traveler_quest.md       # Phase 7: Tier 2 Traveler Rollout & HSK 3-4 Quest Map
 │   └── phase_08_tier3_4_advanced_immersion.md # Phase 8: Tier 3-4 Advanced Immersion & Fluency Tools
 ├── prompts/                       # คลัง Master Prompts สำหรับสั่งการ AI
-│   ├── phase_01_scaffolding_prompt.md # แม่แบบคำสั่ง Phase 1.1 Scaffolding & Code Quality Tooling
+│   ├── README.md                  # ดัชนีรวมแม่แบบคำสั่งทั้งหมด
+│   ├── phase_03_subagents_prompts.md # แม่แบบคำสั่งทีม Subagents สำหรับพัฒนา Phase 3
 │   ├── curriculum_prompt.md       # แม่แบบสั่งสร้างเนื้อหาบทเรียน 3 ภาษา (中-泰-英)
 │   ├── game_design_prompt.md      # แม่แบบสั่งออกแบบมินิเกมการเรียนรู้
-│   └── web_dev_prompt.md          # แม่แบบสถาปนิกและนักพัฒนา Web App (สายฟรี 100%)
+│   ├── phase_01_scaffolding_prompt.md # แม่แบบคำสั่ง Phase 1.1 Scaffolding
+│   ├── qa_and_red_team_prompts.md # แม่แบบตรวจภาษาจีนและจู่โจมระบบ
+│   └── web_dev_prompt.md          # แม่แบบสถาปนิกและนักพัฒนา Web App สายฟรี 100%
 └── roadmap/                       # แผนงานและลำดับขั้นตอนการพัฒนา
     └── milestone_plan.md          # ไทม์ไลน์และเป้าหมายในแต่ละระยะ (Phase 1 ถึง 8)
 ```

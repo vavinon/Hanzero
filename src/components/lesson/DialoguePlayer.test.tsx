@@ -56,6 +56,8 @@ describe('DialoguePlayer Component (Phase 2 Slice 2.3)', () => {
   let speakSpy: any;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let stopSpeakingSpy: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let unlockAudioSpy: any;
 
   beforeEach(() => {
     container = document.createElement('div');
@@ -68,6 +70,9 @@ describe('DialoguePlayer Component (Phase 2 Slice 2.3)', () => {
       return Promise.resolve();
     });
     stopSpeakingSpy = vi.spyOn(audioEngine, 'stopSpeaking').mockImplementation(() => {});
+    unlockAudioSpy = vi.spyOn(audioEngine, 'unlockAudioContext').mockResolvedValue(true);
+    vi.spyOn(audioEngine, 'hasChineseVoice').mockReturnValue(true);
+    vi.spyOn(audioEngine, 'onVoicesChanged').mockReturnValue(() => {});
     vi.spyOn(audioEngine, 'playClick').mockImplementation(() => {});
   });
 
@@ -504,5 +509,43 @@ describe('DialoguePlayer Component (Phase 2 Slice 2.3)', () => {
         expect((btn as HTMLElement).style.minHeight).toBe('44px');
       });
     });
+
+    it('invokes unlockAudioContext when Play All or single line is tapped', async () => {
+      await act(async () => {
+        root!.render(<DialoguePlayer dialogue={mockDialogue} />);
+      });
+
+      const playAllBtn = Array.from(container?.querySelectorAll('button') || []).find(
+        (btn) => btn.textContent?.includes('ฟังบทสนทนาทั้งหมด')
+      ) as HTMLButtonElement;
+
+      expect(playAllBtn).toBeTruthy();
+
+      await act(async () => {
+        playAllBtn.click();
+      });
+
+      expect(unlockAudioSpy).toHaveBeenCalled();
+    });
+
+    it('renders Voice Readiness Info Banner when Chinese voice is not available and allows dismissal', async () => {
+      vi.spyOn(audioEngine, 'hasChineseVoice').mockReturnValue(false);
+
+      await act(async () => {
+        root!.render(<DialoguePlayer dialogue={mockDialogue} />);
+      });
+
+      expect(container?.textContent).toContain('กำลังใช้ระบบเสียงออนไลน์');
+
+      const dismissBtn = container?.querySelector('button[aria-label="ปิดการแจ้งเตือนเสียง"]') as HTMLButtonElement;
+      expect(dismissBtn).toBeTruthy();
+
+      await act(async () => {
+        dismissBtn.click();
+      });
+
+      expect(container?.textContent).not.toContain('กำลังใช้ระบบเสียงออนไลน์');
+    });
   });
 });
+

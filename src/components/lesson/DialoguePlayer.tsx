@@ -32,7 +32,14 @@ import {
   MessageCircle,
 } from 'lucide-react';
 import { DialogueLine } from '../../types/lesson';
-import { speak, stopSpeaking, playClick } from '../../engines/audio/audioEngine';
+import {
+  speak,
+  stopSpeaking,
+  playClick,
+  unlockAudioContext,
+  hasChineseVoice,
+  onVoicesChanged,
+} from '../../engines/audio/audioEngine';
 
 export type ScaffoldingMode = 'full' | 'pinyin_only' | 'hanzi_only';
 
@@ -96,6 +103,10 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
   const [activeLineIndex, setActiveLineIndex] = useState<number | null>(null);
   const [isPlayingAll, setIsPlayingAll] = useState<boolean>(false);
 
+  // Voice Readiness & Notice State
+  const [isVoiceReady, setIsVoiceReady] = useState<boolean>(() => hasChineseVoice());
+  const [dismissVoiceWarning, setDismissVoiceWarning] = useState<boolean>(false);
+
   // Set of line indices that are currently "peeked" by the learner
   const [peekedLines, setPeekedLines] = useState<Set<number>>(new Set());
 
@@ -106,6 +117,17 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
   const isPlayingAllRef = useRef<boolean>(false);
   const speedRef = useRef<1.0 | 0.75>(speed);
   const activePlayRequestIdRef = useRef<number>(0);
+
+  // Synchronize live voices availability
+  useEffect(() => {
+    setIsVoiceReady(hasChineseVoice());
+    const unsub = onVoicesChanged(() => {
+      if (isMountedRef.current) {
+        setIsVoiceReady(hasChineseVoice());
+      }
+    });
+    return unsub;
+  }, []);
 
   // Synchronize refs with live state
   useEffect(() => {
@@ -162,8 +184,9 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
         onEnd: () => {
           if (!isMountedRef.current) return;
         },
-        onError: () => {
+        onError: (err) => {
           if (!isMountedRef.current) return;
+          console.warn(`[DialoguePlayer] Audio playback notice for line ${index}:`, err);
         },
       });
     },
@@ -236,8 +259,9 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
   /**
    * Plays all lines sequentially starting from line 0.
    */
-  const handlePlayAll = useCallback(() => {
+  const handlePlayAll = useCallback(async () => {
     playClick();
+    unlockAudioContext();
     // Use live ref instead of stale state closure (VULN-02)
     if (isPlayingAllRef.current) {
       // Pause / Stop sequential playback
@@ -256,14 +280,15 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
   const handlePlaySingleLine = useCallback(
     async (index: number) => {
       playClick();
+      unlockAudioContext();
       const requestId = ++activePlayRequestIdRef.current;
 
       // Halt any running sequential autoplay immediately
       if (isPlayingAllRef.current) {
         isPlayingAllRef.current = false;
         setIsPlayingAll(false);
+        clearSequenceTimer();
       }
-      cancelAllAudio();
 
       await speakLine(index);
 
@@ -276,7 +301,7 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
         setActiveLineIndex(null);
       }
     },
-    [cancelAllAudio, speakLine]
+    [clearSequenceTimer, speakLine]
   );
 
   /**
@@ -540,6 +565,53 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
                 ? 'โหมดพินอิน: ซ่อนคำแปลไว้ แตะที่ปุ่มแอบดูเพื่อดูเฉลยได้นะ!'
                 : 'โหมดจีนล้วน: ซ่อนพินอินและคำแปล แตะที่ปุ่มแอบดูได้จ้า!'}
             </span>
+          </div>
+        )}
+
+        {/* Voice Readiness Info Banner (shown when browser uses high-quality Online Audio Stream or local audio) */}
+        {!isVoiceReady && !dismissVoiceWarning && (
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: '10px',
+              padding: '10px 12px',
+              borderRadius: 'var(--radius-md)',
+              backgroundColor: '#F0FDF4',
+              border: '1px solid #BBF7D0',
+              color: 'var(--color-jade-primary)',
+              fontSize: '12.5px',
+              lineHeight: 1.4,
+            }}
+            role="status"
+            aria-live="polite"
+          >
+            <Sparkles size={18} style={{ flexShrink: 0, marginTop: '2px', color: 'var(--color-jade-primary)' }} />
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 700, marginBottom: '2px', color: 'var(--color-jade-primary)' }}>
+                ✨ กำลังใช้ระบบเสียงออนไลน์ความคมชัดสูง (Online HD Audio)
+              </div>
+              <div style={{ color: 'var(--text-ink-secondary)', fontSize: '11.5px' }}>
+                เบราว์เซอร์นี้ไม่มีเสียงภาษาจีนในเครื่อง ระบบจึงสตรีมเสียงออกเสียงมาตรฐานให้โดยอัตโนมัติ (หากต้องการใช้งานออฟไลน์ แนะนำเปิดด้วย Microsoft Edge หรือติดตั้ง Chinese Speech Pack ใน Windows)
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => setDismissVoiceWarning(true)}
+              style={{
+                border: 'none',
+                background: 'transparent',
+                color: 'var(--text-ink-muted)',
+                cursor: 'pointer',
+                padding: '2px 6px',
+                fontSize: '13px',
+                fontWeight: 700,
+                lineHeight: 1,
+              }}
+              aria-label="ปิดการแจ้งเตือนเสียง"
+            >
+              ✕
+            </button>
           </div>
         )}
 
