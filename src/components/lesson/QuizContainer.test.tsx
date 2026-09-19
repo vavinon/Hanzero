@@ -237,6 +237,39 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
       expect(container?.textContent).toContain('ยังไม่ถูกต้องนะ');
       expect(container?.textContent).toContain('2'); // Hearts remaining
     });
+
+    it('protects hearts from deduction when isSafeZone is enabled', async () => {
+      const onHeartLostMock = vi.fn();
+
+      await act(async () => {
+        root!.render(
+          <QuizContainer
+            quizzes={mockQuizzes}
+            initialHearts={3}
+            isSafeZone={true}
+            onHeartLost={onHeartLostMock}
+          />
+        );
+      });
+
+      // Verify Safe Zone badge is rendered
+      expect(container?.textContent).toContain('Safe Zone');
+
+      // Select Option A (index 0: wrong answer)
+      const options = container?.querySelectorAll('.quiz-option-card');
+      await act(async () => {
+        options![0].dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      });
+
+      const checkBtn = container?.querySelector('button[aria-label="ตรวจคำตอบ"]') as HTMLButtonElement;
+      await act(async () => {
+        checkBtn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      });
+
+      // Verification: SFX plays but NO hearts are lost
+      expect(playIncorrectSpy).toHaveBeenCalled();
+      expect(onHeartLostMock).not.toHaveBeenCalled();
+    });
   });
 
   // --------------------------------------------------------------------------

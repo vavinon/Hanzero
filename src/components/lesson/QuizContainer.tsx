@@ -71,6 +71,8 @@ export interface QuizContainerProps {
   initialHearts?: number;
   /** Initial silent mode state (defaults to false) */
   initialSilentMode?: boolean;
+  /** Whether the quiz runs in the Safe Practice Zone (0 hearts lost on mistake) */
+  isSafeZone?: boolean;
   /** Callback fired when the quiz set or boss challenge is completed */
   onComplete?: (result: QuizResult) => void;
   /** Callback fired when a heart is lost */
@@ -87,6 +89,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   cheerTrophy,
   initialHearts = 5,
   initialSilentMode = false,
+  isSafeZone = false,
   onComplete,
   onHeartLost,
   className = '',
@@ -265,12 +268,14 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         if (!isUnmountedRef.current) setIsShaking(false);
       }, 400);
 
-      const nextHearts = Math.max(0, hearts - 1);
-      setHearts(nextHearts);
-      onHeartLost?.(nextHearts);
+      if (!isSafeZone) {
+        const nextHearts = Math.max(0, hearts - 1);
+        setHearts(nextHearts);
+        onHeartLost?.(nextHearts);
 
-      if (nextHearts === 0) {
-        setShowHeartRefillModal(true);
+        if (nextHearts === 0) {
+          setShowHeartRefillModal(true);
+        }
       }
     }
   };
@@ -589,20 +594,38 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           <span>{silentMode ? 'เงียบ 🤫' : 'เสียง 🔊'}</span>
         </button>
 
-        {/* Hearts Badge */}
-        <div
-          className="badge-capsule"
-          style={{
-            backgroundColor: 'var(--color-vermilion-surface, #FEF2F2)',
-            color: 'var(--color-vermilion, #DC2626)',
-            padding: '6px 12px',
-            minHeight: '44px',
-          }}
-          aria-label={`จำนวนหัวใจคงเหลือ: ${hearts}`}
-        >
-          <Heart size={18} color="var(--color-vermilion, #DC2626)" fill="var(--color-vermilion, #DC2626)" />
-          <span style={{ fontWeight: 800 }}>{hearts}</span>
-        </div>
+        {/* Hearts / Safe Zone Badge */}
+        {isSafeZone ? (
+          <div
+            className="badge-capsule"
+            style={{
+              backgroundColor: 'rgba(16, 185, 129, 0.12)',
+              color: 'var(--color-jade-dark, #065F46)',
+              padding: '6px 12px',
+              minHeight: '44px',
+              gap: '6px',
+            }}
+            title="Safe Practice Zone: โหมดฝึกฝน ตอบผิดได้ ไม่หักหัวใจ 🛡️"
+            aria-label="Safe Practice Zone ไม่หักหัวใจ"
+          >
+            <ShieldCheck size={18} color="var(--color-jade-primary, #059669)" />
+            <span style={{ fontWeight: 800, fontSize: '11px' }}>Safe Zone</span>
+          </div>
+        ) : (
+          <div
+            className="badge-capsule"
+            style={{
+              backgroundColor: 'var(--color-vermilion-surface, #FEF2F2)',
+              color: 'var(--color-vermilion, #DC2626)',
+              padding: '6px 12px',
+              minHeight: '44px',
+            }}
+            aria-label={`จำนวนหัวใจคงเหลือ: ${hearts}`}
+          >
+            <Heart size={18} color="var(--color-vermilion, #DC2626)" fill="var(--color-vermilion, #DC2626)" />
+            <span style={{ fontWeight: 800 }}>{hearts}</span>
+          </div>
+        )}
       </header>
 
       {/* -------------------------------------------------------------------- */}

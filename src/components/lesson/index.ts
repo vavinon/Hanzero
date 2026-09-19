@@ -7,3 +7,4 @@ export * from './VocabCard';
 export * from './DialoguePlayer';
 export * from './GrammarBite';
 export * from './QuizContainer';
+export * from './LessonView';

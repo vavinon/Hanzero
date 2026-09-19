@@ -56,6 +56,7 @@ class MockAudioContext {
   currentTime = 0;
   destination = new MockAudioNode();
   resume = vi.fn().mockResolvedValue(undefined);
+  suspend = vi.fn().mockResolvedValue(undefined);
   close = vi.fn().mockResolvedValue(undefined);
   createOscillator = vi.fn(() => new MockOscillatorNode());
   createGain = vi.fn(() => new MockGainNode());

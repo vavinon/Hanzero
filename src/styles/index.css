@@ -416,21 +416,24 @@ button {
    DialoguePlayer Component Styles (Phase 2 Slice 2.3)
    ========================================================================== */
 
-/* Dialogue Bubble Animations */
+/* Dialogue Bubble Animations (GPU Composited 60fps) */
 @keyframes sound-wave-bounce {
   0%, 100% {
-    height: 4px;
+    transform: scaleY(0.28);
   }
   50% {
-    height: 14px;
+    transform: scaleY(1);
   }
 }
 
 .sound-wave-bar {
   display: inline-block;
   width: 3px;
+  height: 14px;
   background-color: var(--color-jade-primary);
   border-radius: var(--radius-full);
+  transform-origin: bottom;
+  transform: scaleY(0.28);
   animation: sound-wave-bounce 0.8s ease-in-out infinite;
 }
 
@@ -712,4 +715,12 @@ button {
     display: none !important;
   }
 }
+
+/* Double Diacritic Tone Mark Protection (Prevent Ascender Clipping on System Fonts) */
+.pinyin-display {
+  padding-top: 3px;
+  padding-bottom: 2px;
+  overflow: visible !important;
+}
+
 

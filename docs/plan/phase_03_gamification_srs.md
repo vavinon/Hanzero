@@ -3,7 +3,7 @@ plan_type: "ROADMAP_PHASE"
 phase: "03"
 created_at: "2026-09-15"
 updated_at: "2026-09-19"
-status: "READY_FOR_EXECUTION"
+status: "COMPLETED"
 priority: "HIGH"
 target_engines: ["src/engines/srs/srsEngine.ts", "src/hooks/useUserState.ts"]
 target_components: ["src/components/layout/QuestMap.tsx", "src/components/layout/HeaderBar.tsx", "src/components/srs/ReviewDeck.tsx"]
@@ -23,7 +23,7 @@ target_components: ["src/components/layout/QuestMap.tsx", "src/components/layout
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
 ### 1. แผนที่เส้นทางการเรียนรู้ (Quest Path & Node System)
-- [ ] พัฒนา `src/components/layout/QuestMap.tsx`:
+- [x] พัฒนา `src/components/layout/QuestMap.tsx`:
   - ดีไซน์เส้นทางเดินแบบคดเคี้ยวสไตล์ Modern Oriental
   - สถานะของแต่ละด่าน:
     - 🔒 **Locked:** ด่านที่ยังล็อกอยู่
@@ -33,25 +33,25 @@ target_components: ["src/components/layout/QuestMap.tsx", "src/components/layout
   - แถบ Tier Switcher: สลับดูแผนที่ระหว่าง Tier 0 และ Tier 1 ได้อิสระ
 
 ### 2. แดชบอร์ดสถานะและโซนการเรียนรู้ปลอดภัย (User Economy & Safe Practice Zone)
-- [ ] พัฒนา `src/components/layout/HeaderBar.tsx`:
-  - 🔥 **Streak Tracker:** นับจำนวนวันเรียนติดต่อกัน พร้อมไอคอนไฟลุก
+- [x] พัฒนา `src/components/layout/HeaderBar.tsx`:
+  - 🔥 **Streak Tracker:** นับจำนวนวันเรียนติดต่อกัน พร้อมไอคอนไฟลุก (Anti-exploit max +1 ต่อวัน)
   - ❤️ **Heart Meter:** หัวใจ 5 ดวง พร้อม **Mobile 360px Responsive Rule**:
     - บนหน้าจอกว้าง (>380px): แสดงหัวใจเรียง 5 ดวง
     - บนหน้าจอเล็ก (<=380px): ย่อเป็น `❤️ x 5` เพื่อป้องกัน Header Bar ล้นจอแนวนอน
   - ⭐ **XP Points & Level:** คะแนนสะสมสำหรับปลดล็อกระดับ
-  - ⚙️ **Settings Modal:** สลับ Dark/Light mode, Silent Mode, ตั้งเป้าหมายรายวัน, และปุ่ม Export/Import ข้อมูล
-- [ ] **ระบบหัวใจและกฎ Safe Practice Zone (Pedagogical Protection):**
+  - ⚙️ **Settings & Diagnostics:** เชื่อมต่อ DevStorageDrawer, Silent Mode, และปุ่ม Export/Import ข้อมูล
+- [x] **ระบบหัวใจและกฎ Safe Practice Zone (Pedagogical Protection):**
   - 🛡️ **Tier 0 และ SRS Review จะไม่มีการหักหัวใจเด็ดขาด** เมื่อตอบผิด (ไม่ทำให้ผู้เริ่มต้นเครียดกับการฟังวรรณยุกต์)
   - ⚠️ หักหัวใจเฉพาะใน Unit Quiz และ Boss Challenge ของ Tier 1 ขึ้นไป
   - **การฟื้นฟูหัวใจ:**
     - ฟื้นฟูอัตโนมัติ 1 ดวงทุก 4 ชั่วโมง
-    - โหมดฝึกฝนเพื่อฟื้นฟู (Practice to Earn): ทบทวนการ์ดคำศัพท์ถูก 5 ข้อ ได้รับ 1 หัวใจทันที
-- [ ] **Daily Study Goals & Session Closure:**
+    - โหมดฝึกฝนเพื่อฟื้นฟู (Practice to Earn): ทบทวนการ์ดคำศัพท์ถูก 5 ข้อ ได้รับ 1 หัวใจทันที (Clamp $\le 5$ ดวง)
+- [x] **Daily Study Goals & Session Closure:**
   - ตัวเลือกเป้าหมายรายวัน: 5 นาที (Casual) / 10 นาที (Regular) / 15 นาที (Intense)
   - หน้าต่าง **Daily Completion Card**: เมื่อเรียนครบเป้าหมาย แสดงการ์ดสรุปผล (XP วันนี้, คำศัพท์ใหม่, สถิติความแม่นยำ) สร้างความรู้สึกจบเซสชันในแต่ละวัน
 
 ### 3. เครื่องยนต์คำนวณการทบทวนคำศัพท์ (SRS Engine: SuperMemo SM-2 & Anti-Overload)
-- [ ] สร้าง `src/engines/srs/srsEngine.ts` (Pure TypeScript, Zero-UI, 100% Testable):
+- [x] สร้าง `src/engines/srs/srsEngine.ts` (Pure TypeScript, Zero-UI, 100% Testable):
   - **SuperMemo SM-2 Mathematical Specifications:**
     - ระดับการประเมินของผู้เรียน:
       - `0 = Again` (ลืมสนิท / ตอบผิด)
@@ -68,15 +68,17 @@ target_components: ["src/components/layout/QuestMap.tsx", "src/components/layout
       - หากตอบ Again ($Grade = 0$): รีเซ็ต $Repetitions = 0$, $Interval = 1$ วัน แต่คงค่า $EF$ ไว้
   - **Daily Review Cap Algorithm:** ล็อกจำนวนการ์ดทบทวนสูงสุดไม่เกิน **20 คำ/วัน (`MAX_DAILY_REVIEWS = 20`)** ป้องกันภาวะล้นสมอง (Cognitive Overload)
   - **Backlog Triage Algorithm:** เมื่อผู้เรียนหยุดเรียนไปเกิน 7 วัน หรือมีคำค้างทบทวนสะสมเกิน 30 คำ ระบบจะเปิดสถานะ `isTriageActive: true` และจ่ายคำศัพท์เป็นก้อนย่อยวันละ **10 คำ (`TRIAGE_BATCH_SIZE = 10`)** พร้อมข้อความให้กำลังใจ
-- [ ] หน้าคลังทบทวนคำศัพท์ (`src/components/srs/ReviewDeck.tsx`):
+- [x] หน้าคลังทบทวนคำศัพท์ (`src/components/srs/ReviewDeck.tsx`):
   - แอนิเมชันพลิกการ์ด CSS 3D Transform 60fps
   - Dock ปุ่มประเมิน 4 ระดับ (Again, Hard, Good, Easy) ชิดขอบล่างตามรัศมีนิ้วโป้ง (Thumb Zone $\ge 48\text{px}$)
+  - แสดงคำใบ้ Mnemonic ภาพจำช่วยจำด้านหลังการ์ด
+  - Empty Queue State เมื่อทบทวนครบถ้วน
 
 ### 4. ระบบบันทึกสถานะสองชั้นและการย้ายข้อมูล (State Migration, IndexedDB & Backup)
-- [ ] พัฒนา `src/hooks/useUserState.ts`:
+- [x] พัฒนา `src/hooks/useUserState.ts`:
   - จัดเก็บลง `LocalStorage` เป็นหลักในคีย์ `hanzero_user_state_v1`
   - ทำ Auto-mirror ไปยัง `IndexedDB` (`hanzero_mirror_db`) ทุกครั้งที่มีการบันทึก พร้อมขอสิทธิ์ `navigator.storage.persist()`
-  - บูตผ่าน **Boot Resurrection Gate**: หาก LocalStorage โดน Safari ล้าง ดึงข้อมูลจาก Cold Mirror กลับมาซ่อมแซมอัตโนมัติ
+  - บูตผ่าน **Boot Resurrection Gate**: หาก LocalStorage โดน Safari ล้าง ดึงข้อมูลจาก Cold Mirror กลับมาซ่อมแซมอัตโนมัติ พร้อม Ghost-State Overwrite Guard
   - **Contract Interface สำหรับ Custom Hook:**
     ```typescript
     export interface UseUserStateReturn {

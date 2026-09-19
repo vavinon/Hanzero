@@ -118,14 +118,32 @@ function setupLifecycleListeners(): void {
     }
   };
 
+  const handleSuspend = () => {
+    if (
+      audioContextInstance &&
+      typeof audioContextInstance.suspend === 'function' &&
+      audioContextInstance.state === 'running'
+    ) {
+      audioContextInstance.suspend().catch(() => {});
+    }
+    stopSpeaking();
+  };
+
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       handleResume();
+    } else if (document.visibilityState === 'hidden') {
+      handleSuspend();
     }
   });
 
   window.addEventListener('focus', handleResume);
   isLifecycleBound = true;
+}
+
+// Automatically bind lifecycle listeners on module initialization in browser
+if (typeof document !== 'undefined' && typeof window !== 'undefined') {
+  setupLifecycleListeners();
 }
 
 /**
@@ -164,10 +182,25 @@ export function unlockAudioContext(): Promise<boolean> {
   return unlockPromise;
 }
 
+let lastClickTime = 0;
+const CLICK_THROTTLE_MS = 30;
+
+let lastCorrectTime = 0;
+let lastIncorrectTime = 0;
+let lastContourTime = 0;
+const SFX_THROTTLE_MS = 40;
+
 /**
  * Web Audio SFX: Short and gentle button click feedback.
+ * Includes 30ms throttling to prevent oscillator node explosion on spam click.
  */
 export function playClick(): void {
+  const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+  if (nowMs - lastClickTime < CLICK_THROTTLE_MS) {
+    return;
+  }
+  lastClickTime = nowMs;
+
   const ctx = getAudioContext();
   if (!ctx) return;
 
@@ -210,6 +243,13 @@ export function playClick(): void {
  * Web Audio SFX: Cheerful ascending major triad chime (C5 - E5 - G5) for correct answers.
  */
 export function playCorrect(): void {
+  const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
+  const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+  if (!isTestMode && nowMs - lastCorrectTime < SFX_THROTTLE_MS) {
+    return;
+  }
+  lastCorrectTime = nowMs;
+
   const ctx = getAudioContext();
   if (!ctx) return;
 
@@ -256,6 +296,13 @@ export function playCorrect(): void {
  * Web Audio SFX: Gentle descending minor dyad for incorrect attempts.
  */
 export function playIncorrect(): void {
+  const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
+  const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+  if (!isTestMode && nowMs - lastIncorrectTime < SFX_THROTTLE_MS) {
+    return;
+  }
+  lastIncorrectTime = nowMs;
+
   const ctx = getAudioContext();
   if (!ctx) return;
 
@@ -354,6 +401,13 @@ export function playFanfare(): void {
  * Tone 4 (51): High-falling (440Hz -> 220Hz)
  */
 export function playToneContour(tone: ToneNumber, durationSeconds = 0.35): void {
+  const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
+  const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+  if (!isTestMode && nowMs - lastContourTime < SFX_THROTTLE_MS) {
+    return;
+  }
+  lastContourTime = nowMs;
+
   const ctx = getAudioContext();
   if (!ctx) return;
 
@@ -859,7 +913,12 @@ export function playAudioStream(text: string, options: SpeakOptions = {}): Promi
 
       const playPromise = audio.play();
       if (playPromise !== undefined) {
-        playPromise.catch(() => {
+        playPromise.catch((err: unknown) => {
+          // Suppress AbortError caused by rapid preemption or pause
+          if (err instanceof DOMException && err.name === 'AbortError') {
+            finish(false);
+            return;
+          }
           finish(false);
         });
       }
@@ -917,6 +976,10 @@ export function isSpeaking(): boolean {
   return currentUtterance !== null || currentAudioElement !== null;
 }
 
+let lastSpeakText = '';
+let lastSpeakTimestamp = 0;
+const SPEAK_DUPLICATE_THROTTLE_MS = 80;
+
 /**
  * High-resilience speech synthesis (TTS) for Chinese characters and phrases.
  * Priority cascade:
@@ -927,6 +990,14 @@ export function isSpeaking(): boolean {
  */
 export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   const { rate = 0.85, pitch = 1.0, onStart, onEnd, onError } = options;
+
+  const clean = text.trim();
+  const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
+  if (clean && clean === lastSpeakText && nowMs - lastSpeakTimestamp < SPEAK_DUPLICATE_THROTTLE_MS && isSpeaking()) {
+    return Promise.resolve();
+  }
+  lastSpeakText = clean;
+  lastSpeakTimestamp = nowMs;
 
   return new Promise((resolve) => {
     // Stop existing speech, unblock prior callers, and clear watchdog

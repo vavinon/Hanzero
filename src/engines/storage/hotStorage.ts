@@ -81,23 +81,15 @@ export function writeHotItemSync(key: string, value: string): boolean {
         window.localStorage.setItem(key, value);
         return true;
       } catch (retryErr) {
-        console.warn('[Hanzero Storage] Emergency prune insufficient. Using Memory Fallback for hot state.', retryErr);
-        try {
-          window.localStorage.removeItem(key);
-        } catch {
-          // Safe ignore if remove fails
-        }
+        console.warn('[Hanzero Storage] Emergency prune insufficient. Using Non-Destructive Memory Fallback for hot state.', retryErr);
+        // Do NOT removeItem(key) to preserve existing disk data
         isLocalStorageBlocked = true;
         return true;
       }
     }
 
     console.warn('[Hanzero Storage] Failed to write to localStorage, using in-memory cache:', err);
-    try {
-      window.localStorage.removeItem(key);
-    } catch {
-      // Safe ignore
-    }
+    // Do NOT removeItem(key) to preserve existing disk data
     isLocalStorageBlocked = true;
     return true;
   }

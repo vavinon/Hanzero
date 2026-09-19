@@ -53,6 +53,13 @@ let writeQueue: Promise<void> = Promise.resolve();
 type StateChangeListener = (state: UserStateSchema) => void;
 const listeners = new Set<StateChangeListener>();
 
+export function _resetStorageEngineForTesting(): void {
+  cachedUserState = null;
+  initPromise = null;
+  isInitialized = false;
+  listeners.clear();
+}
+
 /**
  * Deep clones an object to preserve immutability
  */
@@ -113,13 +120,23 @@ export async function initializeStorage(): Promise<UserStateSchema> {
       }
     }
 
-    // 2. Ghost State / Disaster Recovery: If Hot is empty or corrupted, check Cold Mirror
-    if (!stateToUse) {
+    // 2. Ghost State / Disaster Recovery: If Hot is empty, corrupted, or has 0 progress, check Cold Mirror
+    const isHotEmpty =
+      !stateToUse ||
+      (stateToUse.progress.xp === 0 &&
+        (!stateToUse.progress.completed_lessons || stateToUse.progress.completed_lessons.length === 0));
+
+    if (isHotEmpty) {
       try {
         const coldMirror = await getColdMirror();
         if (coldMirror && isUserStateSchema(coldMirror)) {
-          console.info('[Hanzero Storage] Auto-Resurrected User State from Cold IndexedDB mirror! 🐰✨');
-          stateToUse = coldMirror;
+          const coldHasProgress =
+            coldMirror.progress.xp > 0 ||
+            (coldMirror.progress.completed_lessons && coldMirror.progress.completed_lessons.length > 0);
+          if (coldHasProgress || !stateToUse) {
+            console.info('[Hanzero Storage] Auto-Resurrected User State from Cold IndexedDB mirror! 🐰✨');
+            stateToUse = coldMirror;
+          }
         }
       } catch (err) {
         console.warn('[Hanzero Storage] Cold mirror check failed:', err);

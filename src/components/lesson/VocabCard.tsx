@@ -797,6 +797,7 @@ export const VocabCard: React.FC<VocabCardProps> = ({
           <div
             style={{
               display: 'flex',
+              flexWrap: 'wrap',
               alignItems: 'center',
               justifyContent: 'space-between',
               gap: '10px',
@@ -811,6 +812,7 @@ export const VocabCard: React.FC<VocabCardProps> = ({
               className="btn-tactile-primary"
               style={{
                 flex: 1,
+                minWidth: '140px',
                 gap: '8px',
                 minHeight: '46px',
                 padding: '8px 16px',

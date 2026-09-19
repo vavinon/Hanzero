@@ -345,6 +345,23 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Pause dialogue when user switches tab or locks screen
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        isPlayingAllRef.current = false;
+        setIsPlayingAll(false);
+        setActiveLineIndex(null);
+        clearSequenceTimer();
+        stopSpeaking();
+      }
+    };
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, [clearSequenceTimer]);
+
   // Teardown on unmount
   useEffect(() => {
     isMountedRef.current = true;
@@ -567,6 +584,26 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
             </span>
           </div>
         )}
+
+        {/* Spoken Tone Sandhi Bunny Tip */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '6px',
+            fontSize: '11px',
+            color: 'var(--text-ink-secondary)',
+            backgroundColor: 'rgba(16, 185, 129, 0.05)',
+            borderRadius: 'var(--radius-sm)',
+            padding: '6px 10px',
+            border: '1px dashed var(--border-subtle)',
+          }}
+        >
+          <span>💡</span>
+          <span>
+            <strong>เกร็ดเสียงพูด:</strong> ตัวเขียนพินอินจะคงรูปเสียงเดิม (เช่น Nǐ hǎo) แต่เสียงพูดจริงจะผันลื่นไหล (เช่น ní hǎo) ตามกฎ 3+3 อัตโนมัติจ้า 🐰
+          </span>
+        </div>
 
         {/* Voice Readiness Info Banner (shown when browser uses high-quality Online Audio Stream or local audio) */}
         {!isVoiceReady && !dismissVoiceWarning && (
