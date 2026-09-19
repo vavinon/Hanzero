@@ -1,3 +1,14 @@
+---
+plan_type: "ROADMAP_PHASE"
+phase: "03"
+created_at: "2026-09-15"
+updated_at: "2026-09-19"
+status: "READY_FOR_EXECUTION"
+priority: "HIGH"
+target_engines: ["src/engines/srs/srsEngine.ts", "src/hooks/useUserState.ts"]
+target_components: ["src/components/layout/QuestMap.tsx", "src/components/layout/HeaderBar.tsx", "src/components/srs/ReviewDeck.tsx"]
+---
+
 # 🎮 Phase 3: Gamification, Progression & SRS Flashcards
 
 เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 3** ของการพัฒนา Hanzero: สร้างระบบแรงจูงใจ แผนที่การเรียนรู้ (Quest Map), ระบบเศรษฐกิจเกมที่มี **Safe Practice Zone ถนอมผู้เรียน**, และเครื่องยนต์ทบทวนคำศัพท์อัจฉริยะ Spaced Repetition (SRS) พร้อมระบบสำรองข้อมูลข้ามเครื่อง
@@ -40,25 +51,47 @@
   - หน้าต่าง **Daily Completion Card**: เมื่อเรียนครบเป้าหมาย แสดงการ์ดสรุปผล (XP วันนี้, คำศัพท์ใหม่, สถิติความแม่นยำ) สร้างความรู้สึกจบเซสชันในแต่ละวัน
 
 ### 3. เครื่องยนต์คำนวณการทบทวนคำศัพท์ (SRS Engine: SuperMemo SM-2 & Anti-Overload)
-- [ ] สร้าง `src/engines/srs/srsEngine.ts`:
-  - ตัวคำนวณระดับความง่าย (Ease Factor: เริ่มต้น 2.5)
-  - จำนวนรอบที่จำได้สำเร็จ (Repetitions)
-  - กำหนดรอบวันทบทวน (Interval: 1 วัน ➔ 3 วัน ➔ 7 วัน ➔ 14 วัน ➔ 30 วัน)
-  - ระดับการประเมินตนเองของผู้เรียน (Again = 0, Hard = 1, Good = 2, Easy = 3)
-  - **Daily Review Cap:** ล็อกจำนวนการ์ดทบทวนสูงสุดไม่เกิน **20 คำ/วัน** เพื่อป้องกันภาระเกินกำลังสมอง
-  - **Backlog Triage Mode:** เมื่อผู้เรียนหยุดเรียนไปเกิน 7 วัน ระบบจะเสนอโหมด "เกลี่ยการบ้านค้าง" โดยแบ่งการ์ดทบทวนเป็นก้อนย่อยวันละ 10 คำ ไม่ให้ค้างเป็นร้อยคำ
-- [ ] หน้าคลังทบทวนคำศัพท์ (Review Deck Screen):
-  - ดึงคำศัพท์ที่ถึงกำหนดทบทวน (Due Words ภายใต้โควตา 20 คำ) ขึ้นมาเป็นการ์ดทบทวนประจำวัน
-  - แตะเพื่อดูเฉลย และกดปุ่มประเมินความจำตนเอง
+- [ ] สร้าง `src/engines/srs/srsEngine.ts` (Pure TypeScript, Zero-UI, 100% Testable):
+  - **SuperMemo SM-2 Mathematical Specifications:**
+    - ระดับการประเมินของผู้เรียน:
+      - `0 = Again` (ลืมสนิท / ตอบผิด)
+      - `1 = Hard` (จำได้ยากมาก / ต้องนึกนาน)
+      - `2 = Good` (จำได้ถูกต้อง / ใช้ความพยายามปานกลาง)
+      - `3 = Easy` (จำได้แม่นยำในทันที)
+    - ค่าความง่ายเริ่มต้น (Initial Ease Factor): $EF = 2.5$ (Clamp ขอบเขต $[1.3, 2.5]$)
+    - สูตรคำนวณ Ease Factor ใหม่:
+      $$EF' = EF + (0.1 - (3 - grade) \times (0.08 + (3 - grade) \times 0.02))$$
+    - การคำนวณช่วงวัน (Interval Days):
+      - รอบที่ 1 ($Repetitions = 1$): $Interval = 1$ วัน
+      - รอบที่ 2 ($Repetitions = 2$): $Interval = 3$ วัน (หรือ $6$ วันสำหรับ Easy)
+      - รอบที่ 3+ ($Repetitions \ge 3$): $Interval_n = \lceil Interval_{n-1} \times EF \rceil$
+      - หากตอบ Again ($Grade = 0$): รีเซ็ต $Repetitions = 0$, $Interval = 1$ วัน แต่คงค่า $EF$ ไว้
+  - **Daily Review Cap Algorithm:** ล็อกจำนวนการ์ดทบทวนสูงสุดไม่เกิน **20 คำ/วัน (`MAX_DAILY_REVIEWS = 20`)** ป้องกันภาวะล้นสมอง (Cognitive Overload)
+  - **Backlog Triage Algorithm:** เมื่อผู้เรียนหยุดเรียนไปเกิน 7 วัน หรือมีคำค้างทบทวนสะสมเกิน 30 คำ ระบบจะเปิดสถานะ `isTriageActive: true` และจ่ายคำศัพท์เป็นก้อนย่อยวันละ **10 คำ (`TRIAGE_BATCH_SIZE = 10`)** พร้อมข้อความให้กำลังใจ
+- [ ] หน้าคลังทบทวนคำศัพท์ (`src/components/srs/ReviewDeck.tsx`):
+  - แอนิเมชันพลิกการ์ด CSS 3D Transform 60fps
+  - Dock ปุ่มประเมิน 4 ระดับ (Again, Hard, Good, Easy) ชิดขอบล่างตามรัศมีนิ้วโป้ง (Thumb Zone $\ge 48\text{px}$)
 
 ### 4. ระบบบันทึกสถานะสองชั้นและการย้ายข้อมูล (State Migration, IndexedDB & Backup)
 - [ ] พัฒนา `src/hooks/useUserState.ts`:
   - จัดเก็บลง `LocalStorage` เป็นหลักในคีย์ `hanzero_user_state_v1`
-  - ทำ Auto-mirror ไปยัง `IndexedDB` ทุกครั้งที่มีการบันทึก พร้อมขอสิทธิ์ `navigator.storage.persist()` ป้องกัน Safari ITP ล้างข้อมูลหลัง 7 วัน
-  - ฟังก์ชัน `migrateUserState(raw)`: ตรวจจับ Schema Version เก่าและปรับเป็น v1 อัตโนมัติ ป้องกันจอขาว
-  - ฟังก์ชัน Export Backup: ดาวน์โหลดไฟล์ JSON สำรองข้อมูล
-  - ฟังก์ชัน Import Backup: โหลดไฟล์ JSON กู้คืนความก้าวหน้ากลับมาทันที
-  - **Quick Sync Code Generator:** สร้างรหัสกู้คืนแบบสั้น (เช่น `HZ1-U05-S14-X1200`) สำหรับคัดลอกลง LINE/Notes ใน 1 แตะ
+  - ทำ Auto-mirror ไปยัง `IndexedDB` (`hanzero_mirror_db`) ทุกครั้งที่มีการบันทึก พร้อมขอสิทธิ์ `navigator.storage.persist()`
+  - บูตผ่าน **Boot Resurrection Gate**: หาก LocalStorage โดน Safari ล้าง ดึงข้อมูลจาก Cold Mirror กลับมาซ่อมแซมอัตโนมัติ
+  - **Contract Interface สำหรับ Custom Hook:**
+    ```typescript
+    export interface UseUserStateReturn {
+      userState: UserStateSchema;
+      isLoading: boolean;
+      isPersisted: boolean;
+      completeLesson: (lessonId: string, xpReward: number) => Promise<void>;
+      deductHeart: () => Promise<boolean>; // คืนค่า false หากอยู่ใน Safe Practice Zone หรือหัวใจหมด
+      earnHeart: (amount?: number) => Promise<void>;
+      updatePreferences: (patch: Partial<PreferencesState>) => Promise<void>;
+      exportBackup: () => Promise<string>;
+      importBackup: (jsonString: string) => Promise<boolean>;
+      quickSyncCode: string;
+    }
+    ```
 
 ---
 
@@ -78,5 +111,5 @@
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 3
-เมื่อระบบ Quest Map นำทางได้ทั้งสอง Tier, กฎ Safe Practice Zone ทำงานถูกต้อง, ระบบ Daily Goal สรุปผลได้, ระบบ SRS มี Daily Cap ไม่เกิน 20 คำ, Header Bar รองรับหน้าจอ 360px และระบบ Backup/Dual Storage สำรองข้อมูลได้จริง จึงถือว่า Phase 3 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 4: Tier 0 Pinyin Mastery](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_04_tier0_pinyin_mastery.md)
+เมื่อระบบ Quest Map นำทางได้ทั้งสอง Tier, กฎ Safe Practice Zone ทำงานถูกต้อง, ระบบ Daily Goal สรุปผลได้, ระบบ SRS มี Daily Cap ไม่เกิน 20 คำ, Header Bar รองรับหน้าจอ 360px และระบบ Backup/Dual Storage สำรองข้อมูลได้จริง จึงถือว่า Phase 3 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 4: Tier 0 Pinyin Mastery](./phase_04_tier0_pinyin_mastery.md)
 

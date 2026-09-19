@@ -25,7 +25,7 @@ graph TD
 ## 🌱 Tier 0: Seed (Pre-HSK / Novice Low: Dual-Track เสียงคู่ตัวอักษร 6 Units)
 > **เป้าหมาย Can-Do:** ฟังออก ผันวรรณยุกต์แม่นยำ เข้าใจระบบ 8 เส้นขีดและหมวดนำ ไม่กลัวตัวอักษรจีน ออกเสียงและประกอบร่าง 15 ตัวอักษรจีนแรกสำเร็จ  
 > **หลักการสำคัญ:** ไม่เรียนทฤษฎีเสียงแห้งๆ แต่ใช้หลัก **"Dual-Track"** เรียนเสียงคู่คำจริง และสะสมชิ้นส่วนเลโก้อักษรจีนอย่างเป็นระบบ  
-> **เอกสารอ้างอิง:** [01_pinyin_system.md](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/01_pinyin_system.md) และ [02_radical_basics.md](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/02_radical_basics.md)
+> **เอกสารอ้างอิง:** [01_pinyin_system.md](./01_pinyin_system.md) และ [02_radical_basics.md](./02_radical_basics.md)
 
 * **Unit 0.1:** เสียงริมฝีปาก & ปลายลิ้น (b, p, m, f, d, t, n, l) + สระเดี่ยว (a, o, e) + เส้นขีด 横 (นอน), 竖 (ตั้ง)  
   * 🔤 *คำแรกในชีวิต:* **爸爸** (bàba - พ่อ), **妈妈** (māma - แม่), **大** (dà - ใหญ่), **十** (shí - สิบ)
@@ -692,7 +692,7 @@ graph TD
 ---
 
 ## 📋 แม่แบบบทเรียนมาตรฐาน (Standard Lesson Structure)
-ทุกบทเรียนจะถูกสร้างขึ้นตามแม่แบบ **Master Prompt (Trilingual)** ใน [curriculum_prompt.md](file:///c:/DevProjects/hanzero/hanzero/docs/prompts/curriculum_prompt.md) โดยประกอบด้วย 7 เสาหลัก:
+ทุกบทเรียนจะถูกสร้างขึ้นตามแม่แบบ **Master Prompt (Trilingual)** ใน [curriculum_prompt.md](../prompts/curriculum_prompt.md) โดยประกอบด้วย 7 เสาหลัก:
 1. 🎯 **Lesson Overview:** ภารกิจ Can-Do ชัดเจน จบใน 3-5 นาที
 2. 🔤 **New Words (4-6 คำ):** ศัพท์ใหม่พร้อมหมวดนำ (Radical) และภาพจำ (Visual Mnemonic)
 3. 🧩 **Grammar Bite:** ไวยากรณ์ภาษาพูด 1 นาที (เปรียบเทียบ จีน-ไทย-อังกฤษ)

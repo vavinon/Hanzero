@@ -9,11 +9,11 @@
 | ชื่อไฟล์ | บทบาทหน้าที่ | รายละเอียด |
 | :--- | :--- | :--- |
 | **[`phase_03_subagents_prompts.md`](./phase_03_subagents_prompts.md)** | **Phase 3 Multi-Agent Team** | แม่แบบ Prompt สำหรับส่งมอบงานให้ทีม Subagent ทั้ง 4 บทบาท (SRS Engine, State Hook, UI Components, QA Adversary) สำหรับพัฒนา Phase 3 |
-| **[`curriculum_prompt.md`](./curriculum_prompt.md)** | **Curriculum & Lesson Authoring** | แม่แบบ Prompt สำหรับอาจารย์สอนภาษาจีน สร้างบทเรียน 3 ภาษา (จีน-ไทย-อังกฤษ) แบบ Bite-sized |
-| **[`game_design_prompt.md`](./game_design_prompt.md)** | **Gamification & Interactive Mechanics** | แม่แบบ Prompt สำหรับนักออกแบบเกม ออกแบบกลไก Tone Coaster, เลโก้เรียงประโยค, และระบบสะสมดาว |
-| **[`phase_01_scaffolding_prompt.md`](./phase_01_scaffolding_prompt.md)** | **Phase 1 Scaffolding** | แม่แบบคำสั่ง Phase 1.1 Scaffolding & Code Quality Tooling |
-| **[`qa_and_red_team_prompts.md`](./qa_and_red_team_prompts.md)** | **Pedagogical QA & Red Team** | แม่แบบตรวจภาษาจีนและจู่โจมความปลอดภัยระบบ |
-| **[`web_dev_prompt.md`](./web_dev_prompt.md)** | **Web Architect & Developer** | แม่แบบสถาปนิกและนักพัฒนา Web App สายฟรี 100% |
+| **[`curriculum_prompt.md`](./curriculum_prompt.md)** | **Curriculum Authoring Prompt** | แม่แบบสั่งการ AI สร้างบทเรียน 3 ภาษา (จีน-ไทย-อังกฤษ) อ้างอิงสเปกจาก [`docs/curriculum/00_lesson_framework.md`](../curriculum/00_lesson_framework.md) |
+
+> [!NOTE]
+> - **Agent Blueprints:** พิมพ์เขียวและ System Prompts ของทีม Agent ทั้งหมดประจำการอยู่ที่ **[`agents/`](../../agents/)** เป็น Single Source of Truth
+> - **Game Design Guidelines:** หลักจิตวิทยาเกมมิฟิเคชันและคลังมินิเกม ถูกจัดเก็บอย่างเป็นทางการอยู่ที่ **[`agents/gamification_designer.md`](../../agents/gamification_designer.md)** และ **[`docs/curriculum/04_mini_games.md`](../curriculum/04_mini_games.md)**
 
 ---
 

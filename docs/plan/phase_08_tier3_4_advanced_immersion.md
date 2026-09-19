@@ -37,7 +37,7 @@
   - การเล่นเสียงเทียบเป็นวรรคตอน (Phrase-by-phrase Comparison) เพื่อขัดเกลาจังหวะการเว้นวรรค (Pauses) และน้ำเสียง
 
 ### 5. การผลิตและตรวจสอบเนื้อหา Tier 3 & Tier 4 (Units 26 ถึง 57)
-- [ ] ผลิตเนื้อหา Tier 3 (Units 26–45) ตาม [docs/curriculum/03_lesson_levels.md](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/03_lesson_levels.md):
+- [ ] ผลิตเนื้อหา Tier 3 (Units 26–45) ตาม [docs/curriculum/03_lesson_levels.md](../curriculum/03_lesson_levels.md):
   - หมวดที่ทำงานและการค้า (Units 26–30): 职场沟通, 商务谈判, 中国电商生态, 酒桌文化与社交, 合同与法务初步
   - หมวดสังคม เทคโนโลยี และการศึกษา (Units 31–36): 中国科技与创新, 求职与面试技巧, 中国地理与方言, 教育与内卷现象, 环境保护, 心理健康
   - หมวดศิลปวัฒนธรรมและร่วมสมัย (Units 37–45): 传统艺术, 医疗与养生, 投资理财, 茶道与禅意, 网络热梗, 城市变迁, 危机公关, 跨文化, Master Thesis Defense

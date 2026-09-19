@@ -88,6 +88,6 @@
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 4
-เมื่อผู้เรียนใหม่ถูกพาเข้าสู่เส้นทาง Tier 0 อย่างเป็นมิตร ผ่านครบทั้ง **6 Units** ปูพื้นฐานเสียงพินอิน สระเดี่ยว สระผสม และสระนาสิกโดยไม่เสียหัวใจ มีระบบ Static Audio และ Echo Mic ช่วยฝึกออกเสียง ได้รับ Passport Card และปลดล็อกประตูเชื่อมสู่ Tier 1 ที่พัฒนาไว้ใน Phase 2 จึงถือว่า Phase 4 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 5: Tier 1 Content Rollout](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_05_tier1_content_rollout.md)
+เมื่อผู้เรียนใหม่ถูกพาเข้าสู่เส้นทาง Tier 0 อย่างเป็นมิตร ผ่านครบทั้ง **6 Units** ปูพื้นฐานเสียงพินอิน สระเดี่ยว สระผสม และสระนาสิกโดยไม่เสียหัวใจ มีระบบ Static Audio และ Echo Mic ช่วยฝึกออกเสียง ได้รับ Passport Card และปลดล็อกประตูเชื่อมสู่ Tier 1 ที่พัฒนาไว้ใน Phase 2 จึงถือว่า Phase 4 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 5: Tier 1 Content Rollout](./phase_05_tier1_content_rollout.md)
 
 

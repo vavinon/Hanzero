@@ -21,7 +21,7 @@ graph TD
 * **ไฟล์เป้าหมาย:** 
   - `src/engines/srs/srsEngine.ts`
   - `src/engines/srs/srsEngine.test.ts`
-* **เอกสารอ้างอิง:** [docs/plan/phase_03_gamification_srs.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_03_gamification_srs.md) และ [src/types/user.ts](file:///c:/DevProjects/hanzero/hanzero/src/types/user.ts)
+* **เอกสารอ้างอิง:** [docs/plan/phase_03_gamification_srs.md](../plan/phase_03_gamification_srs.md) และ [src/types/user.ts](../../src/types/user.ts)
 
 ### 📋 Prompt สำหรับคัดลอกสั่งงาน Subagent 1:
 ```markdown
@@ -63,7 +63,7 @@ graph TD
 * **ไฟล์เป้าหมาย:**
   - `src/hooks/useUserState.ts`
   - `src/hooks/useUserState.test.ts`
-* **เอกสารอ้างอิง:** [src/engines/storage/storageEngine.ts](file:///c:/DevProjects/hanzero/hanzero/src/engines/storage/storageEngine.ts) และ [src/types/user.ts](file:///c:/DevProjects/hanzero/hanzero/src/types/user.ts)
+* **เอกสารอ้างอิง:** [src/engines/storage/storageEngine.ts](../../src/engines/storage/storageEngine.ts) และ [src/types/user.ts](../../src/types/user.ts)
 
 ### 📋 Prompt สำหรับคัดลอกสั่งงาน Subagent 2:
 ```markdown
@@ -113,7 +113,7 @@ graph TD
   - `src/components/layout/QuestMap.tsx`
   - `src/components/srs/ReviewDeck.tsx`
   - Unit Tests สำหรับแต่ละคอมโพเนนต์
-* **เอกสารอ้างอิง:** [agents/ux_ui_designer.md](file:///c:/DevProjects/hanzero/hanzero/agents/ux_ui_designer.md) และ [src/styles/index.css](file:///c:/DevProjects/hanzero/hanzero/src/styles/index.css)
+* **เอกสารอ้างอิง:** [agents/ux_ui_designer.md](../../agents/ux_ui_designer.md) และ [src/styles/index.css](../../src/styles/index.css)
 
 ### 📋 Prompt สำหรับคัดลอกสั่งงาน Subagent 3:
 ```markdown
@@ -159,7 +159,7 @@ graph TD
 ## 4. 🛡️ Subagent 4: Pedagogical & Red Team QA Specialist
 
 * **เป้าหมาย:** ทดสอบเจาะระบบ ตรวจสอบความถูกต้องของตรรกะเกม ตรวจทานสำนวนภาษา และโจมตีระบบแบบ Adversarial Stress Test
-* **เอกสารอ้างอิง:** [agents/pedagogical_qa.md](file:///c:/DevProjects/hanzero/hanzero/agents/pedagogical_qa.md) และ [agents/red_team_adversary.md](file:///c:/DevProjects/hanzero/hanzero/agents/red_team_adversary.md)
+* **เอกสารอ้างอิง:** [agents/pedagogical_qa.md](../../agents/pedagogical_qa.md) และ [agents/red_team_adversary.md](../../agents/red_team_adversary.md)
 
 ### 📋 Prompt สำหรับคัดลอกสั่งงาน Subagent 4:
 ```markdown

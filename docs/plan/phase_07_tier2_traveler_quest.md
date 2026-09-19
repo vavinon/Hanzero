@@ -37,7 +37,7 @@
   - มีด่านสถานการณ์ฉุกเฉิน (Station Mini-Boss) เช่น การเปลี่ยนตั๋วเวลารถไฟดีเลย์ หรือการนัดรับสัมภาระ
 
 ### 5. การผลิตและตรวจสอบเนื้อหา Tier 2 (Units 11 ถึง 25)
-- [ ] ผลิตเนื้อหา 15 Units ครบถ้วนตาม [docs/curriculum/03_lesson_levels.md](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/03_lesson_levels.md):
+- [ ] ผลิตเนื้อหา 15 Units ครบถ้วนตาม [docs/curriculum/03_lesson_levels.md](../curriculum/03_lesson_levels.md):
   - **Batch D: ดิจิทัลไลฟ์สไตล์และการคมนาคม (Units 11 - 14):** 扫码支付, 外卖与快递, 高铁与出行, 租房与生活设施
   - **Batch E: อาหาร สุขภาพ และช็อปปิ้งเชิงลึก (Units 15 - 18):** 餐厅点菜进阶, 商场退换货, 看病与买药进阶, 银行与通信业务
   - **Batch F: สังคม วัฒนธรรม และการแก้ปัญหา (Units 19 - 22):** 中国节庆与拜访, 求助与意外处理, 文娱与观影, 健身与户外

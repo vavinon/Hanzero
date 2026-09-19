@@ -129,5 +129,5 @@
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 1
-เมื่อผ่านการทดสอบทั้ง 8 ข้อในตารางข้างต้น รัน `npm test` ผ่านครบ 77 tests และ `npm run build` สำเร็จโดยไม่มีคำเตือน Type Error จึงจะถือว่า Phase 1 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 2: Unit 1 Complete Experience](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_02_unit1_lesson_experience.md)
+เมื่อผ่านการทดสอบทั้ง 8 ข้อในตารางข้างต้น รัน `npm test` ผ่านครบ 77 tests และ `npm run build` สำเร็จโดยไม่มีคำเตือน Type Error จึงจะถือว่า Phase 1 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 2: Unit 1 Complete Experience](./phase_02_unit1_lesson_experience.md)
 

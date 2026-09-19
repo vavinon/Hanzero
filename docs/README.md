@@ -13,6 +13,7 @@ docs/
 │   ├── 01_product_vision.md       # เป้าหมาย, Persona ผู้เรียน, Core Value Proposition
 │   └── 02_feature_specs.md        # สเปกฟีเจอร์ละเอียด (Onboarding, Audio Fallback, Silent Mode, Safe Zone, Schema Migration)
 ├── curriculum/                    # โครงสร้างเนื้อหาและการเรียนการสอน
+│   ├── 00_lesson_framework.md     # แม่บทมาตรฐานโครงสร้างบทเรียน 7 เสาหลัก และ 3 ภาษา (SSOT)
 │   ├── 01_pinyin_system.md        # แม่บทระบบพินอินและการออกเสียง
 │   ├── 02_radical_basics.md       # หมวดนำ 40 ตัว และ 8 เส้นขีดอักษรจีน
 │   ├── 03_lesson_levels.md        # ผังด่าน/บทเรียน (Lessons Roadmap Tier 0 ถึง Tier 4)
@@ -33,11 +34,12 @@ docs/
 ├── prompts/                       # คลัง Master Prompts สำหรับสั่งการ AI
 │   ├── README.md                  # ดัชนีรวมแม่แบบคำสั่งทั้งหมด
 │   ├── phase_03_subagents_prompts.md # แม่แบบคำสั่งทีม Subagents สำหรับพัฒนา Phase 3
-│   ├── curriculum_prompt.md       # แม่แบบสั่งสร้างเนื้อหาบทเรียน 3 ภาษา (中-泰-英)
-│   ├── game_design_prompt.md      # แม่แบบสั่งออกแบบมินิเกมการเรียนรู้
-│   ├── phase_01_scaffolding_prompt.md # แม่แบบคำสั่ง Phase 1.1 Scaffolding
-│   ├── qa_and_red_team_prompts.md # แม่แบบตรวจภาษาจีนและจู่โจมระบบ
-│   └── web_dev_prompt.md          # แม่แบบสถาปนิกและนักพัฒนา Web App สายฟรี 100%
+│   └── curriculum_prompt.md       # แม่แบบสั่งสร้างเนื้อหาบทเรียน 3 ภาษา (中-泰-英)
+├── tasks/                         # 🔨 ศูนย์รวมงานย่อยระดับปฏิบัติการ (Actionable Task Board & Hotfix Tracker)
+│   ├── README.md                  # Task Board สรุปสถานะงานทั้งหมดรายวัน
+│   ├── _template.md               # แม่แบบสำหรับสร้าง Task ใหม่
+│   ├── 2026-09-18_P01_foundation-and-engines.md
+│   └── 2026-09-19_P02_unit1-complete-experience.md
 └── roadmap/                       # แผนงานและลำดับขั้นตอนการพัฒนา
     └── milestone_plan.md          # ไทม์ไลน์และเป้าหมายในแต่ละระยะ (Phase 1 ถึง 8)
 ```
@@ -48,12 +50,13 @@ docs/
 
 | โฟลเดอร์ | วัตถุประสงค์ | สถานะ |
 | :--- | :--- | :--- |
-| **`prd/`** | รวบรวมวิสัยทัศน์ผลิตภัณฑ์ ([01_product_vision.md](file:///c:/DevProjects/hanzero/hanzero/docs/prd/01_product_vision.md)) และสเปกฟีเจอร์ครบทุกมิติ ([02_feature_specs.md](file:///c:/DevProjects/hanzero/hanzero/docs/prd/02_feature_specs.md)) พร้อมกลไก Anti-Churn, Studio และ Telemetry | ✅ สมบูรณ์ครบถ้วน |
-| **`curriculum/`** | โครงสร้างเนื้อหา 3 ภาษา (จีน-ไทย-อังกฤษ), [แม่บทพินอิน](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/01_pinyin_system.md), [รากศัพท์ & เส้นขีด](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/02_radical_basics.md), [ผังบทเรียน](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/03_lesson_levels.md) และ [คลังมินิเกม](file:///c:/DevProjects/hanzero/hanzero/docs/curriculum/04_mini_games.md) | ✅ สมบูรณ์ครบถ้วน |
-| **`architecture/`** | กำหนดสถาปัตยกรรม เทคโนโลยี Frontend/Backend, Data Model (ดู [tech_stack.md](file:///c:/DevProjects/hanzero/hanzero/docs/architecture/tech_stack.md) และ [data_schema.md](file:///c:/DevProjects/hanzero/hanzero/docs/architecture/data_schema.md)) | ✅ เรียบร้อย |
-| **`plan/`** | แผนปฏิบัติการและ Checklist การพัฒนารายเฟส 1-8 พร้อมเกณฑ์ตรวจรับงาน (ดู [docs/plan/](file:///c:/DevProjects/hanzero/hanzero/docs/plan/)) | 🚀 Active & Modular |
-| **`prompts/`** | คลัง Master Prompts สำหรับสั่งการ AI ขยายเนื้อหา/เกม/สถาปัตยกรรม (ดู [docs/prompts/](file:///c:/DevProjects/hanzero/hanzero/docs/prompts/)) | 🗄️ คลังแม่แบบ |
-| **`roadmap/`** | แผนงานและระยะการพัฒนา Phase 1 - 8 (ดู [milestone_plan.md](file:///c:/DevProjects/hanzero/hanzero/docs/roadmap/milestone_plan.md)) | ✅ เรียบร้อย |
+| **`prd/`** | รวบรวมวิสัยทัศน์ผลิตภัณฑ์ ([01_product_vision.md](./prd/01_product_vision.md)) และสเปกฟีเจอร์ครบทุกมิติ ([02_feature_specs.md](./prd/02_feature_specs.md)) พร้อมกลไก Anti-Churn, Studio และ Telemetry | ✅ สมบูรณ์ครบถ้วน |
+| **`curriculum/`** | โครงสร้างเนื้อหา 3 ภาษา (จีน-ไทย-อังกฤษ), [แม่บทพินอิน](./curriculum/01_pinyin_system.md), [รากศัพท์ & เส้นขีด](./curriculum/02_radical_basics.md), [ผังบทเรียน](./curriculum/03_lesson_levels.md) และ [คลังมินิเกม](./curriculum/04_mini_games.md) | ✅ สมบูรณ์ครบถ้วน |
+| **`architecture/`** | กำหนดสถาปัตยกรรม เทคโนโลยี Frontend/Backend, Data Model (ดู [tech_stack.md](./architecture/tech_stack.md) และ [data_schema.md](./architecture/data_schema.md)) | ✅ เรียบร้อย |
+| **`plan/`** | แผนปฏิบัติการและ Checklist การพัฒนารายเฟส 1-8 พร้อมเกณฑ์ตรวจรับงาน (ดู [docs/plan/](./plan)) | 🚀 Active & Modular |
+| **`tasks/`** | กระดานงานย่อยระดับปฏิบัติการรายวัน (Micro-Slicing), รองรับงานด่วน (Hotfix) และเก็บบันทึกประวัติส่งมอบงาน (ดู [docs/tasks/](./tasks)) | 📌 Active Tracker |
+| **`prompts/`** | คลัง Master Prompts สำหรับสั่งการ AI ขยายเนื้อหา/เกม/สถาปัตยกรรม (ดู [docs/prompts/](./prompts)) | 🗄️ คลังแม่แบบ |
+| **`roadmap/`** | แผนงานและระยะการพัฒนา Phase 1 - 8 (ดู [milestone_plan.md](./roadmap/milestone_plan.md)) | ✅ เรียบร้อย |
 
 ---
 

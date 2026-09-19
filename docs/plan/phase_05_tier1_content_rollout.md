@@ -19,7 +19,7 @@
   - ตรวจสอบกฎการทบทวนวนซ้ำ (Interleaving Rule): ยืนยันว่าตั้งแต่ Unit 2 เป็นต้นไป มีคำศัพท์จาก Unit ก่อนหน้าแทรกเข้ามาอย่างน้อย 20%
 
 ### 2. ผลิตและตรวจสอบเนื้อหา Tier 1 ทีละ Unit (Unit 2 ถึง 10)
-ผลิตเนื้อหาตามแม่แบบ [curriculum_prompt.md](file:///c:/DevProjects/hanzero/hanzero/docs/prompts/curriculum_prompt.md) โดยแบ่งการปล่อยเป็น Batch:
+ผลิตเนื้อหาตามแม่แบบ [curriculum_prompt.md](../prompts/curriculum_prompt.md) โดยแบ่งการปล่อยเป็น Batch:
 
 - [ ] **Batch A: ตัวเลขและการใช้ชีวิตพื้นฐาน (Unit 2 - 4)**
   - **Unit 2 (ตัวเลข วันที่ & เวลา):** นับเลข 0-10, วันในสัปดาห์, การนัดหมายเวลา *(⚡ Sandhi: กฎเสียงเดิมของ `一` yī)*

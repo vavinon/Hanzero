@@ -4,7 +4,7 @@
 
 > 💡 **หมายเหตุสำคัญจาก Senior PM (Architectural Clarification):**  
 > ใน Phase 2 นี้ เป็นการสร้างบทเรียน Unit 1 ในเชิง **Technical Proof of Concept (PoC)** เพื่อทดสอบความสมบูรณ์ของคอมโพเนนต์ Flashcard, Dialogue, Grammar และ Quiz ร่วมกันก่อน  
-> **ไม่ใช่ลำดับจริงของผู้เรียนใหม่:** สำหรับผู้เรียนที่เริ่มต้นจากศูนย์ (Zero-knowledge) เมื่อแอปเปิดตัวจริง เส้นทาง Onboarding จะพาเข้าสู่ [Tier 0: Pinyin Mastery](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_04_tier0_pinyin_mastery.md) ก่อนเสมอ
+> **ไม่ใช่ลำดับจริงของผู้เรียนใหม่:** สำหรับผู้เรียนที่เริ่มต้นจากศูนย์ (Zero-knowledge) เมื่อแอปเปิดตัวจริง เส้นทาง Onboarding จะพาเข้าสู่ [Tier 0: Pinyin Mastery](./phase_04_tier0_pinyin_mastery.md) ก่อนเสมอ
 
 ---
 
@@ -75,5 +75,5 @@
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 2
-เมื่อผู้ใช้สามารถเปิดเว็บขึ้นมา กดเลือก Unit 1 เรียนเนื้อหาตั้งแต่ Lesson 1.1 ถึง 1.4 ผ่านแบบทดสอบทั้งในโหมดปกติและ Silent Mode ทดสอบระบบซ่อนพินอินได้ และเห็นหน้าสรุปคะแนนโดยไม่มีข้อผิดพลาดบน Console จึงถือว่า Phase 2 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 3: Gamification & SRS](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_03_gamification_srs.md)
+เมื่อผู้ใช้สามารถเปิดเว็บขึ้นมา กดเลือก Unit 1 เรียนเนื้อหาตั้งแต่ Lesson 1.1 ถึง 1.4 ผ่านแบบทดสอบทั้งในโหมดปกติและ Silent Mode ทดสอบระบบซ่อนพินอินได้ และเห็นหน้าสรุปคะแนนโดยไม่มีข้อผิดพลาดบน Console จึงถือว่า Phase 2 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 3: Gamification & SRS](./phase_03_gamification_srs.md)
 

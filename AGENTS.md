@@ -146,17 +146,17 @@ graph TD
 - **`HanziWriterTestBox`**: แผงทดสอบแคนวาสคัดลายมือ ตรวจสอบความไวในการลากเส้น (Stroke recognition) และการรีเซ็ตแคนวาส
 
 ### 5.3 Tier 3: Browser & Dual Verification (Technical QA + Pedagogical QA)
-1. **Technical QA ([agents/technical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/technical_qa.md)):**
+1. **Technical QA ([agents/technical_qa.md](./agents/technical_qa.md)):**
    - 0 Browser Console Errors (ไม่มีข้อผิดพลาดสีแดงหรือ Warning ที่อันตราย)
    - Mobile-First Touch Ready (ขนาดปุ่มและ Hitbox ไม่ต่ำกว่า 44x44px สัมผัสง่ายบนมือถือ)
    - First Contentful Paint โหลดเร็วต่ำกว่า 0.8 วินาที
    - Production Bundle Size: JS gzipped ≤ 100 KB, CSS ≤ 20 KB
-2. **Pedagogical QA ([agents/pedagogical_qa.md](file:///d:/V/project/Hanzero/hanzero/agents/pedagogical_qa.md)):**
+2. **Pedagogical QA ([agents/pedagogical_qa.md](./agents/pedagogical_qa.md)):**
    - ตรวจทานตัวอักษรจีนตัวย่อ (Simplified Chinese) ให้ถูกต้องแม่นยำ 100%
    - ตรวจทานตำแหน่งเครื่องหมายวรรณยุกต์ Pinyin (วางบนสระที่ถูกต้องตามหลักสากล)
    - ตรวจสอบคำแปลภาษาไทย ให้เป็นสำนวนที่เป็นธรรมชาติและตรงตามบริบทในชีวิตประจำวัน
 
-### 5.4 Tier 4: Red Team Adversarial Attacks ([agents/red_team_adversary.md](file:///d:/V/project/Hanzero/hanzero/agents/red_team_adversary.md))
+### 5.4 Tier 4: Red Team Adversarial Attacks ([agents/red_team_adversary.md](./agents/red_team_adversary.md))
 - **Audio Flood Attack:** รัวปุ่มออกเสียง 50 ครั้งใน 2 วินาที คิวเสียงต้องไม่ค้าง ไม่แฮงก์
 - **Tab Sleep / Resume Attack:** สลับแท็บหรือพักหน้าจอขณะเล่นเสียง แล้วตรวจสถานะ `audioContext.state` ว่ากลับมา Auto-Resume หรือไม่
 - **Memory Leak Hunt:** สลับการ์ดคัดอักษรจีน 100 รอบ ตรวจดูว่า Heap Memory ไม่บวมเกิน 40 MB
