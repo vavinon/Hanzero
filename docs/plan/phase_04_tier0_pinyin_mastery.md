@@ -23,7 +23,7 @@
     - สวิตช์ตั้งค่าเสียงเบื้องต้น ("ตอนนี้เปิดเสียงได้หรือไม่?") พร้อมปุ่มทดสอบฟังเสียงกระต่ายทู่ทู่
 
 ### 2. นำเข้าข้อมูลบทเรียน Tier 0 (6 Units ครบตามแม่บทหลักสูตร) พร้อมระบบเสียง Zero-MP3 Cascade
-- [ ] นำเข้าไฟล์ข้อมูล `src/data/lessons/tier0/`:
+- [x] นำเข้าไฟล์ข้อมูล `src/data/lessons/tier0/`:
   - **`unit00_01_lips_tongue.json`:**
     - พยัญชนะริมฝีปาก & ปลายลิ้น: `b`, `p`, `m`, `f`, `d`, `t`, `n`, `l`
     - สระเดี่ยวพื้นฐาน: `a`, `o`, `e`
@@ -45,7 +45,7 @@
   - **`unit00_06_strokes_radicals.json`:**
     - 8 เส้นขีดพื้นฐานจีน และ 6 หมวดนำตั้งต้น (`亻`, `女`, `子`, `口`, `氵`, `木`)
     - 🏆 Tier 0 Grand Boss Quest: "ไขรหัสลับน้องกระต่ายทู่ทู่"
-- [ ] สถาปัตยกรรมเสียง **Zero-MP3 Pure Neural Voice (อ้างอิง `docs/architecture/zero_mp3_audio_health_blueprint.md`)**:
+- [x] สถาปัตยกรรมเสียง **Zero-MP3 Pure Neural Voice (อ้างอิง `docs/architecture/zero_mp3_audio_health_blueprint.md`)**:
   - ตัดการพึ่งพาไฟล์ MP3 ทั้งหมด (ประหยัดพื้นที่ Bundle/PWA 15–30 MB)
   - ใช้ **3-Tier Cascade**: (1) OS Neural TTS (Xiaoxiao/Siri/Google) $\rightarrow$ (2) Youdao HD Stream $\rightarrow$ (3) Web Audio Tone Contour
 

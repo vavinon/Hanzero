@@ -146,7 +146,7 @@ export interface UnitLessonData {
   lessons: Lesson[];
 }
 
-// --- Archetype A: Tier 0 Phonics & Stroke Types ---
+// --- Archetype A: Tier 0 Phonics, Tones & Stroke Types ---
 
 export interface SoundCard {
   pinyin: string;
@@ -167,16 +167,64 @@ export interface StrokeCard {
   mnemonic: string;
 }
 
+export interface RadicalCard {
+  radical: string;
+  radical_name_zh: string;
+  radical_name_th: string;
+  meaning_th: string;
+  meaning_en: string;
+  mnemonic: string;
+  example_chars: string[];
+}
+
+export interface ToneCard {
+  tone_number: number; // 1, 2, 3, 4, 0 (neutral)
+  pitch_contour: string; // "55", "35", "214", "51", "short"
+  pinyin_mark: string; // "ā", "á", "ǎ", "à", "a"
+  name_th: string;
+  sound_shape_th: string;
+  thai_equivalent: string;
+  example_words: Array<{ hanzi: string; pinyin: string; th: string }>;
+}
+
+export interface ToneSandhiExplanation {
+  rule_name: string;
+  formula: string;
+  description_th: string;
+  example: string;
+  fun_metaphor: string;
+  reassurance: string;
+}
+
 export interface ArchetypeALesson {
   lesson_id: string; // e.g. "t0_u01_l01"
   archetype: 'phonics' | 'strokes';
   title: TrilingualText;
   can_do: BilingualText;
+  baby_step_goal?: string;
   sound_cards?: SoundCard[];
   stroke_cards?: StrokeCard[];
   tone_practice_enabled?: boolean;
   quizzes: QuizQuestion[];
   is_safe_practice_zone: true; // Tier 0 is always safe
+}
+
+export interface Tier0Lesson extends ArchetypeALesson {
+  vocabulary: VocabularyItem[];
+  radical_cards?: RadicalCard[];
+  tone_cards?: ToneCard[];
+  sandhi_rules?: ToneSandhiExplanation[];
+  boss_challenge?: BossChallenge;
+  cheer_trophy?: CheerTrophy;
+}
+
+export interface Tier0UnitData {
+  unit_id: string; // e.g. "tier0_u01"
+  tier: 0;
+  unit_number: number;
+  title: TrilingualText;
+  description: string;
+  lessons: Tier0Lesson[];
 }
 
 // --- Curriculum Manifest Types ---

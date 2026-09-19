@@ -8,6 +8,7 @@ import React, { useState } from 'react';
 import { Lock, Star, Crown, Play, CheckCircle2 } from 'lucide-react';
 import { ProgressState } from '../../engines/storage/types';
 import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
+import { tier0Units } from '../../data/lessons/tier0';
 
 export interface QuestMapProps {
   progress: ProgressState;
@@ -23,7 +24,26 @@ interface MapNode {
   titleCn: string;
   isBoss: boolean;
   xpReward: number;
+  unitId?: string;
+  icon?: string;
 }
+
+const tier0UnitIcons = ['👄', '👅', '🎢', '⚡', '🎵', '🏆'];
+
+const tier0Nodes: MapNode[] = tier0Units.map((unit, idx) => {
+  const lesson = unit.lessons[0];
+  const isBoss = idx === 5;
+  return {
+    lessonId: lesson.lesson_id,
+    lessonNumber: `0.${idx + 1}`,
+    titleTh: unit.title.th,
+    titleCn: unit.title.zh,
+    isBoss,
+    xpReward: isBoss ? 150 : 25 + idx * 5,
+    unitId: unit.unit_id,
+    icon: tier0UnitIcons[idx],
+  };
+});
 
 const unit01Nodes: MapNode[] = [
   {
@@ -197,35 +217,245 @@ export const QuestMap: React.FC<QuestMapProps> = ({
         </div>
       </div>
 
-      {/* Tier 0 Placeholder Notice */}
+      {/* Tier 0 Quest Nodes */}
       {selectedTier === 'tier0' && (
-        <div
-          style={{
-            width: '100%',
-            backgroundColor: '#FFFFFF',
-            borderRadius: 'var(--radius-md)',
-            padding: '24px 16px',
-            textAlign: 'center',
-            border: '1.5px dashed var(--border-card)',
-            color: 'var(--text-ink-secondary)',
-          }}
-        >
-          <div style={{ fontSize: '36px', marginBottom: '8px' }}>🐰🎧</div>
-          <div style={{ fontWeight: 700, fontSize: '16px', color: 'var(--text-ink-primary)' }}>
-            Tier 0: Seed Pinyin Mastery
-          </div>
-          <p style={{ fontSize: '13px', marginTop: '6px', lineHeight: 1.6 }}>
-            หลักสูตรปูพื้นฐานพินอิน 6 ยูนิตพร้อม Bunny Tone Coaster จะเปิดตัวใน Phase 4!
-            <br />
-            ในเฟสนี้ คุณสามารถเข้าเรียน Unit 1 ของ Tier 1 ได้ทันทีครับ
-          </p>
-          <button
-            onClick={() => setSelectedTier('tier1')}
-            className="btn-tactile-secondary"
-            style={{ marginTop: '12px', padding: '8px 16px', minHeight: '44px' }}
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          {/* Tier 0 Header Card */}
+          <div
+            style={{
+              backgroundColor: '#1E3A8A',
+              color: '#FFFFFF',
+              borderRadius: 'var(--radius-md)',
+              padding: '16px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              boxShadow: '0 4px 12px rgba(30, 58, 138, 0.25)',
+            }}
           >
-            กลับสู่ Tier 1: นักสำรวจ 🌿
-          </button>
+            <div>
+              <span
+                style={{
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em',
+                  opacity: 0.9,
+                }}
+              >
+                Tier 0 · 汉语拼音 & 笔画
+              </span>
+              <div style={{ fontSize: '18px', fontWeight: 800, marginTop: '2px' }}>
+                🌱 ปูพื้นฐานพินอิน & 8 เส้นขีด
+              </div>
+              <div style={{ fontSize: '12px', opacity: 0.85, marginTop: '2px' }}>
+                หลักสูตร 6 ยูนิตเพื่อผู้เริ่มต้นจากศูนย์เด็ดขาด 🛡️ โซนปลอดภัย ไม่หักหัวใจ
+              </div>
+            </div>
+            <div
+              style={{
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(255,255,255,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '22px',
+              }}
+            >
+              🐰
+            </div>
+          </div>
+
+          {/* Tier 0 Path Nodes List */}
+          <div
+            style={{
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px',
+              padding: '10px 0',
+            }}
+          >
+            {tier0Nodes.map((node, index) => {
+              const isCompleted = completedSet.has(node.lessonId);
+              // First lesson always unlocked; subsequent unlocked if previous completed
+              const isUnlocked = index === 0 || completedSet.has(tier0Nodes[index - 1].lessonId);
+              const isCurrent = isUnlocked && !isCompleted;
+              const offset = index % 2 === 0 ? '-16px' : '16px';
+
+              return (
+                <div
+                  key={node.lessonId}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transform: `translateX(${offset})`,
+                    transition: 'transform 0.3s ease',
+                  }}
+                >
+                  <button
+                    onClick={() => {
+                      if (isUnlocked) {
+                        onSelectLesson(node.unitId || `tier0_u0${index + 1}`, node.lessonId);
+                      }
+                    }}
+                    disabled={!isUnlocked}
+                    style={{
+                      width: '100%',
+                      maxWidth: '380px',
+                      padding: '14px 16px',
+                      minHeight: '64px',
+                      borderRadius: 'var(--radius-md)',
+                      border: isCurrent
+                        ? '2px solid #3B82F6'
+                        : '1.5px solid var(--border-card)',
+                      backgroundColor: isUnlocked ? '#FFFFFF' : '#F3F4F6',
+                      cursor: isUnlocked ? 'pointer' : 'not-allowed',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      boxShadow: isCurrent
+                        ? '0 6px 16px rgba(59, 130, 246, 0.22)'
+                        : 'var(--shadow-card)',
+                      position: 'relative',
+                    }}
+                  >
+                    {/* Left: Node Number & Icon */}
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                      <div
+                        style={{
+                          width: '44px',
+                          height: '44px',
+                          borderRadius: '50%',
+                          backgroundColor: isCompleted
+                            ? 'var(--color-jade-primary)'
+                            : isCurrent
+                            ? '#2563EB'
+                            : '#E5E7EB',
+                          color: '#FFFFFF',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          fontWeight: 800,
+                          fontSize: '15px',
+                        }}
+                      >
+                        {isCompleted ? (
+                          <CheckCircle2 size={22} />
+                        ) : node.isBoss ? (
+                          <Crown size={22} color="#FBBF24" />
+                        ) : isUnlocked ? (
+                          <Play size={18} style={{ marginLeft: '2px' }} />
+                        ) : (
+                          <Lock size={18} color="#9CA3AF" />
+                        )}
+                      </div>
+
+                      <div style={{ textAlign: 'left' }}>
+                        <div
+                          style={{
+                            fontSize: '11px',
+                            fontWeight: 700,
+                            color: isCurrent ? '#2563EB' : 'var(--text-ink-muted)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '6px',
+                          }}
+                        >
+                          <span>ยูนิต {node.lessonNumber}</span>
+                          {node.isBoss && (
+                            <span
+                              style={{
+                                backgroundColor: '#FEF3C7',
+                                color: '#B45309',
+                                fontSize: '10px',
+                                padding: '1px 6px',
+                                borderRadius: '4px',
+                                fontWeight: 800,
+                              }}
+                            >
+                              GRAND BOSS
+                            </span>
+                          )}
+                          <span
+                            style={{
+                              backgroundColor: 'rgba(16, 185, 129, 0.12)',
+                              color: 'var(--color-jade-dark)',
+                              fontSize: '10px',
+                              padding: '1px 6px',
+                              borderRadius: '4px',
+                              fontWeight: 700,
+                            }}
+                          >
+                            🛡️ SAFE
+                          </span>
+                        </div>
+                        <div
+                          style={{
+                            fontSize: '14px',
+                            fontWeight: 700,
+                            color: isUnlocked ? 'var(--text-ink-primary)' : 'var(--text-ink-muted)',
+                            marginTop: '2px',
+                          }}
+                        >
+                          {node.icon} {node.titleTh}
+                        </div>
+                        <div
+                          style={{
+                            fontSize: '12px',
+                            color: isUnlocked ? 'var(--text-ink-secondary)' : 'var(--text-ink-muted)',
+                            fontFamily: 'var(--font-chinese)',
+                          }}
+                        >
+                          {node.titleCn}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right: XP reward & status */}
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '3px',
+                          fontSize: '12px',
+                          fontWeight: 700,
+                          color: '#D97706',
+                        }}
+                      >
+                        <Star size={13} fill="#D97706" color="#D97706" />
+                        <span>+{node.xpReward}</span>
+                      </div>
+                      {isCompleted && (
+                        <span style={{ fontSize: '10px', color: 'var(--color-jade-dark)', fontWeight: 700, marginTop: '4px' }}>
+                          พิชิตแล้ว
+                        </span>
+                      )}
+                      {isCurrent && (
+                        <span
+                          style={{
+                            fontSize: '10px',
+                            backgroundColor: '#DBEAFE',
+                            color: '#1D4ED8',
+                            padding: '2px 6px',
+                            borderRadius: 'var(--radius-full)',
+                            fontWeight: 800,
+                            marginTop: '4px',
+                          }}
+                        >
+                          เรียนต่อ
+                        </span>
+                      )}
+                    </div>
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
 

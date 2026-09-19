@@ -527,10 +527,13 @@ export const PHONEME_CHARACTER_MAP: Record<string, string> = {
 };
 
 /**
- * Plays pre-rendered Tier 0 static audio fallback from local PWA assets,
- * or gracefully falls back to synthesized tone contour / TTS if the asset is missing.
+ * Zero-MP3 Pure Audio Cascade for Tier 0 / Tier 1 phonemes:
+ * Tier 1: Acoustic Tone Contour Glide if tone digit (1-4) exists
+ * Tier 2: Mapped Chinese Character Speech via SpeechSynthesis
+ * Tier 3: Default gentle Tone 1 chime
  *
- * Guaranteed non-throwing promise that resolves to true (if audio played) or false (fallback).
+ * Eliminates disk MP3 footprint completely (0 KB audio assets).
+ * Guaranteed non-throwing promise that resolves to true (if audio played) or false (invalid input).
  */
 export async function playPhonemeAudio(code: string): Promise<boolean> {
   const sanitized = code.trim().toLowerCase();
@@ -538,55 +541,7 @@ export async function playPhonemeAudio(code: string): Promise<boolean> {
     return false;
   }
 
-  // Attempt Tier 0: Static Audio asset
-  if (typeof window !== 'undefined' && typeof Audio !== 'undefined') {
-    const assetUrl = `${import.meta.env.BASE_URL}audio/tier0/${sanitized}.mp3`;
-    const played = await new Promise<boolean>((resolve) => {
-      try {
-        const audio = new Audio();
-        let isResolved = false;
-
-        const cleanup = () => {
-          if (!isResolved) {
-            isResolved = true;
-            audio.onended = null;
-            audio.onerror = null;
-            audio.src = '';
-          }
-        };
-
-        audio.onended = () => {
-          cleanup();
-          resolve(true);
-        };
-
-        audio.onerror = () => {
-          cleanup();
-          resolve(false);
-        };
-
-        // 1.5s timeout watchdog for asset load
-        setTimeout(() => {
-          if (!isResolved) {
-            cleanup();
-            resolve(false);
-          }
-        }, 1500);
-
-        audio.src = assetUrl;
-        audio.play().catch(() => {
-          cleanup();
-          resolve(false);
-        });
-      } catch {
-        resolve(false);
-      }
-    });
-
-    if (played) return true;
-  }
-
-  // Fallback Cascade Tier 1: Tone Contour Glide if tone digit exists
+  // Cascade Tier 1: Tone Contour Glide if tone digit 1-4 exists
   const toneMatch = sanitized.match(/[1-4]$/);
   if (toneMatch) {
     const tone = parseInt(toneMatch[0], 10) as ToneNumber;
@@ -594,14 +549,14 @@ export async function playPhonemeAudio(code: string): Promise<boolean> {
     return true;
   }
 
-  // Fallback Cascade Tier 2: Mapped Chinese Character Speech
+  // Cascade Tier 2: Mapped Chinese Character Speech (e.g. neutral tone 5 or mapped phoneme)
   const mappedChar = PHONEME_CHARACTER_MAP[sanitized];
   if (mappedChar) {
     await speak(mappedChar, { rate: 0.85 });
     return true;
   }
 
-  // Fallback Cascade Tier 3: Default Tone 1 chime
+  // Cascade Tier 3: Default Tone 1 chime
   playToneContour(1, 0.25);
   return true;
 }
@@ -767,66 +722,19 @@ export function isPreferOnlineAudio(): boolean {
 }
 
 /**
- * Local Pre-recorded Native Chinese Audio Map (Unit 1).
- * Serves zero-latency, high-fidelity studio MP3s directly from project assets
- * without relying on external network or browser speech synthesis.
+ * @deprecated Legacy static audio map deprecated in favor of Zero-MP3 Pure Neural Voice Architecture.
+ * Preserved as an empty map for backward compatibility.
  */
-export const STATIC_AUDIO_MAP: Record<string, string> = {
-  // Vocabulary
-  '你': 'audio/unit01/ni.mp3',
-  '好': 'audio/unit01/hao.mp3',
-  '你好': 'audio/unit01/ni_hao.mp3',
-  '您': 'audio/unit01/nin.mp3',
-  '您好': 'audio/unit01/nin_hao.mp3',
-  '你们': 'audio/unit01/nimen.mp3',
-  '你们好': 'audio/unit01/nimen_hao.mp3',
-  '谢谢': 'audio/unit01/xie_xie.mp3',
-  '不': 'audio/unit01/bu.mp3',
-  '客气': 'audio/unit01/ke_qi.mp3',
-  '不客气': 'audio/unit01/bu_ke_qi.mp3',
-  '再见': 'audio/unit01/zai_jian.mp3',
-  // Dialogue & Sentences
-  '你好！': 'audio/unit01/dialogue_ni_hao.mp3',
-  '谢谢！': 'audio/unit01/dialogue_xie_xie.mp3',
-  '不客气！': 'audio/unit01/dialogue_bu_ke_qi.mp3',
-  '不客气，再见！': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
-  '不客气，再见': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
-  '不客气再见': 'audio/unit01/dialogue_bu_ke_qi_zai_jian.mp3',
-  '再见！': 'audio/unit01/dialogue_zai_jian.mp3',
-  '你好！很高兴认识你。': 'audio/unit01/sentence_ni_hao_renshi.mp3',
-  '今天天气很好。': 'audio/unit01/sentence_tianqi_hao.mp3',
-  '太谢谢你了，朋友！': 'audio/unit01/sentence_tai_xiexie.mp3',
-  '不用谢，大家都是朋友，不客气！': 'audio/unit01/sentence_bu_yong_xie.mp3',
-  '明天学校见，再见！': 'audio/unit01/sentence_mingtian_xuexiao.mp3',
-  '我是泰国人。': 'audio/unit01/sentence_wo_shi_taiguo_ren.mp3',
-  '我是泰国人': 'audio/unit01/sentence_wo_shi_taiguo_ren.mp3',
-  '我叫李明，你呢？': 'audio/unit01/sentence_wo_jiao_li_ming.mp3',
-  '认识你很高兴！': 'audio/unit01/sentence_renshi_ni.mp3',
-  '认识你很高兴': 'audio/unit01/sentence_renshi_ni.mp3',
-  '认识您我也很高兴！谢谢，再见！': 'audio/unit01/sentence_renshi_nin.mp3',
-};
+export const STATIC_AUDIO_MAP: Record<string, string> = {};
 
 /**
- * Resolves the playback URL for a given Chinese text:
- * 1. Checks local static MP3 assets (fast, offline, studio quality)
- * 2. Falls back to Youdao DictVoice online stream (&le=zh) without punctuation to prevent HTTP 500
+ * Resolves the online playback stream URL for a given Chinese text:
+ * Streams from Youdao DictVoice online stream (&le=zh) without punctuation to prevent HTTP 500.
  */
 export function getAudioSourceUrl(text: string): string {
   const clean = text.trim();
-  const unpunct = clean.replace(/[！!？?。，,、；;：“”"'\s]+$/g, '') || clean;
   const noPunctuation = clean.replace(/[！!？?。，,、；;：“”"'\s]/g, '') || clean;
 
-  const localFile =
-    STATIC_AUDIO_MAP[clean] || STATIC_AUDIO_MAP[unpunct] || STATIC_AUDIO_MAP[noPunctuation];
-  if (localFile) {
-    const baseUrl =
-      typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL
-        ? import.meta.env.BASE_URL
-        : '/Hanzero/';
-    return `${baseUrl.replace(/\/$/, '')}/${localFile}`;
-  }
-
-  // Youdao DictVoice returns HTTP 500 if punctuation is present, so strip for fallback
   return `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(noPunctuation)}&le=zh`;
 }
 
@@ -981,12 +889,10 @@ let lastSpeakTimestamp = 0;
 const SPEAK_DUPLICATE_THROTTLE_MS = 80;
 
 /**
- * High-resilience speech synthesis (TTS) for Chinese characters and phrases.
- * Priority cascade:
- * 1. Pre-recorded studio MP3 files (Unit 1 assets in public/audio/unit01/)
- * 2. High-fidelity Online Audio Stream (Youdao DictVoice)
- * 3. Native SpeechSynthesis if available
- * 4. Tone contour acoustic glide fallback
+ * Zero-MP3 High-Resilience Speech Cascade (TTS):
+ * Priority 1: Native SpeechSynthesis (OS Neural Chinese Voice) — 0 Bytes, 0ms, 100% offline
+ * Priority 2: Online Audio Stream (Youdao DictVoice CDN) — when host lacks Chinese voice pack
+ * Priority 3: Acoustic Tone Contour Fallback — when offline and lacking Chinese voice
  */
 export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
   const { rate = 0.85, pitch = 1.0, onStart, onEnd, onError } = options;
@@ -1006,16 +912,10 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
     const currentSessionId = ++activeSessionId;
     activeSessionResolve = resolve;
 
-    const clean = text.trim();
-    const unpunct = clean.replace(/[！!？?。，,、；;：“”"'\s]+$/g, '') || clean;
-    const hasStaticAudio = !!(STATIC_AUDIO_MAP[clean] || STATIC_AUDIO_MAP[unpunct]);
-    const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
-
     const chineseVoice = findChineseVoice();
-    const shouldUseAudioStream =
-      (!isTestMode && hasStaticAudio) || preferOnlineAudioState || !chineseVoice;
+    const shouldUseAudioStream = preferOnlineAudioState || !chineseVoice;
 
-    // Direct Studio MP3 / Audio Stream if available in real browser or when host lacks Chinese voice
+    // Online Audio Stream fallback when user prefers online or when host lacks Chinese voice
     if (shouldUseAudioStream) {
       playAudioStream(text, {
         rate,

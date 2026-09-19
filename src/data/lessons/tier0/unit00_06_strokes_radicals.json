@@ -1,0 +1,302 @@
+{
+  "unit_id": "tier0_u06",
+  "tier": 0,
+  "unit_number": 6,
+  "title": {
+    "zh": "笔画笔顺与汉字拼图",
+    "th": "ลำดับขีด & ประกอบร่างอักษรจีน",
+    "en": "Stroke Rules & Radical Assembly"
+  },
+  "description": "บทสรุปความยิ่งใหญ่ของ Tier 0! 8 เส้นขีดพื้นฐาน 7 กฎทองลำดับขีด และการประกอบเลโก้อักษรจีนจาก 6 หมวดนำตั้งต้น พร้อม Grand Boss Quest ชิงบัตรผ่านเกียรติยศเข้าสู่ Tier 1",
+  "lessons": [
+    {
+      "lesson_id": "t0_u06_l01",
+      "archetype": "strokes",
+      "title": {
+        "zh": "汉字密码大通关",
+        "th": "ไขรหัสลับน้องกระต่ายทู่ทู่",
+        "en": "Tutu Bunny's Hanzi Secret Cipher"
+      },
+      "can_do": {
+        "th": "เข้าใจและปฏิบัติตาม 7 กฎทองลำดับขีดได้ เขียนและประกอบร่างอักษรจีนสำคัญ 5 ตัวแรกในชีวิตได้อย่างถูกต้อง 100% พร้อมปลดล็อกบัตรเกียรติยศก้าวสู่ Tier 1",
+        "en": "Master the 7 golden stroke order rules, assemble and write your first 5 core characters accurately, and unlock the Tier 0 graduation passport"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ประกอบเลโก้อักษรจีน 好, 大, 水, 门, 字 พิชิต Boss Quest สำเร็จ!",
+      "is_safe_practice_zone": true,
+      "stroke_cards": [
+        {
+          "stroke_code": "heng",
+          "stroke_symbol": "一",
+          "stroke_name_zh": "横",
+          "stroke_name_th": "เส้นนอน (เหิง)",
+          "direction_description_th": "ลากแนวนอนจากซ้ายไปขวาตรงๆ",
+          "example_char": "一",
+          "mnemonic": "สะพานไม้ราบเรียบทอดข้ามสายน้ำ"
+        },
+        {
+          "stroke_code": "shu",
+          "stroke_symbol": "丨",
+          "stroke_name_zh": "竖",
+          "stroke_name_th": "เส้นตั้ง (ซู่)",
+          "direction_description_th": "ลากแนวดิ่งจากบนลงล่างอย่างมั่นคง",
+          "example_char": "十",
+          "mnemonic": "ต้นไผ่ลำตรงตระหง่านท้าลม"
+        },
+        {
+          "stroke_code": "pie",
+          "stroke_symbol": "丿",
+          "stroke_name_zh": "撇",
+          "stroke_name_th": "เส้นปัดซ้าย (เผี่ย)",
+          "direction_description_th": "ลากจากขวาบน ปัดโค้งลงซ้ายล่าง",
+          "example_char": "人",
+          "mnemonic": "ใบหลิวพลิ้วไหวไปทางซ้าย"
+        },
+        {
+          "stroke_code": "na",
+          "stroke_symbol": "㇏",
+          "stroke_name_zh": "捺",
+          "stroke_name_th": "เส้นตวัดขวา (น่า)",
+          "direction_description_th": "ลากจากซ้ายบน กดลงแล้วตวัดขวาล่าง",
+          "example_char": "大",
+          "mnemonic": "สไลเดอร์ทอดตัวลงสู่ทางขวา"
+        },
+        {
+          "stroke_code": "ti",
+          "stroke_symbol": "㇀",
+          "stroke_name_zh": "提",
+          "stroke_name_th": "เส้นตวัดขึ้น (ถี)",
+          "direction_description_th": "ตวัดจากซ้ายล่าง เฉียงขึ้นขวาบน",
+          "example_char": "我",
+          "mnemonic": "ดาบกระบี่ตวัดขึ้นสู่ท้องฟ้า"
+        },
+        {
+          "stroke_code": "dian",
+          "stroke_symbol": "丶",
+          "stroke_name_zh": "点",
+          "stroke_name_th": "เส้นจุด (เตี่ยน)",
+          "direction_description_th": "แต้มจากบนซ้ายลงขวาล่าง น้ำหนักเบาไปหนัก",
+          "example_char": "六",
+          "mnemonic": "หยดน้ำค้างแต้มลงบนใบชา"
+        },
+        {
+          "stroke_code": "zhe",
+          "stroke_symbol": "𠃍",
+          "stroke_name_zh": "折",
+          "stroke_name_th": "เส้นหักมุม (เจ๋อ)",
+          "direction_description_th": "ลากเส้นแล้วหักมุมลงโดยไม่ยกพู่กัน",
+          "example_char": "口",
+          "mnemonic": "หัวมุมกำแพงเมืองเลี้ยวคมกริบ"
+        },
+        {
+          "stroke_code": "gou",
+          "stroke_symbol": "亅",
+          "stroke_name_zh": "钩",
+          "stroke_name_th": "เส้นตะขอ (โกว)",
+          "direction_description_th": "ลากเส้นแล้วตวัดปลายขึ้นเหมือนเบ็ดตกปลา",
+          "example_char": "小",
+          "mnemonic": "ตะขอเบ็ดตกเกี่ยวสิ่งดีงาม"
+        }
+      ],
+      "radical_cards": [
+        {
+          "radical": "亻",
+          "radical_name_zh": "单人旁",
+          "radical_name_th": "หมวดคนยืน",
+          "meaning_th": "คน, มนุษย์",
+          "meaning_en": "person, human",
+          "mnemonic": "คนยืนหันข้างส่งยิ้ม",
+          "example_chars": ["你", "他"]
+        },
+        {
+          "radical": "女",
+          "radical_name_zh": "女字旁",
+          "radical_name_th": "หมวดผู้หญิง",
+          "meaning_th": "ผู้หญิง, แม่",
+          "meaning_en": "woman, female",
+          "mnemonic": "หญิงสาวนั่งพับเพียบสง่างาม",
+          "example_chars": ["好", "妈"]
+        },
+        {
+          "radical": "子",
+          "radical_name_zh": "子字旁",
+          "radical_name_th": "หมวดเด็ก",
+          "meaning_th": "เด็ก, บุตร",
+          "meaning_en": "child, son",
+          "mnemonic": "เด็กทารกอ้าแขนรอให้อุ้ม",
+          "example_chars": ["好", "字"]
+        },
+        {
+          "radical": "口",
+          "radical_name_zh": "口字旁",
+          "radical_name_th": "หมวดช่องปาก",
+          "meaning_th": "ปาก, การพูด",
+          "meaning_en": "mouth, speech",
+          "mnemonic": "ช่องปากเปิดรับเรื่องดีๆ",
+          "example_chars": ["吃", "喝"]
+        },
+        {
+          "radical": "氵",
+          "radical_name_zh": "三点水",
+          "radical_name_th": "หมวดสามจุดน้ำ",
+          "meaning_th": "น้ำ, ของเหลว",
+          "meaning_en": "water, liquid",
+          "mnemonic": "หยดน้ำ 3 หยดกระเซ็น",
+          "example_chars": ["汤", "海"]
+        },
+        {
+          "radical": "木",
+          "radical_name_zh": "木字旁",
+          "radical_name_th": "หมวดต้นไม้",
+          "meaning_th": "ไม้, ป่า",
+          "meaning_en": "tree, wood",
+          "mnemonic": "ต้นไม้แผ่กิ่งก้านสาขา",
+          "example_chars": ["杯", "林"]
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "t0_0021",
+          "hanzi": "好",
+          "pinyin": "hǎo",
+          "pinyin_tone": "hao3",
+          "meaning_th": "ดี, สบายดี (ชิ้นส่วน: 女 + 子)",
+          "meaning_en": "good, well (assembled: female + child)",
+          "radical": "女",
+          "radical_name_th": "หมวดผู้หญิง (女字旁)",
+          "stroke_count": 6,
+          "mnemonic": "แม่ (女) กอดลูก (子) แนบอก = ความดีงามและอบอุ่น",
+          "kid_mnemonic": "ต่อเลโก้ผู้หญิงกับเด็กทารก ได้คำว่าดีเยี่ยม!",
+          "body_gesture": "ยกนิ้วโป้งเยี่ยมระดับอก"
+        },
+        {
+          "id": "t0_0022",
+          "hanzi": "大",
+          "pinyin": "dà",
+          "pinyin_tone": "da4",
+          "meaning_th": "ใหญ่ (ชิ้นส่วน: 横 + 撇 + 捺)",
+          "meaning_en": "big, large (assembled: horizontal + slash + press)",
+          "radical": "大",
+          "radical_name_th": "หมวดใหญ่ (大字部)",
+          "stroke_count": 3,
+          "mnemonic": "เส้นนอนคือแขนที่กางออก ปัดซ้ายตวัดขวาคือสองขา = ใหญ่โต",
+          "kid_mnemonic": "คนกางแขนกางขา ใหญ่ที่สุดในห้อง!",
+          "body_gesture": "กางแขนสองข้างกว้างสุดลำตัว"
+        },
+        {
+          "id": "t0_0023",
+          "hanzi": "水",
+          "pinyin": "shuǐ",
+          "pinyin_tone": "shui3",
+          "meaning_th": "น้ำ (แกนกลาง 亅ก่อน สองข้างทีหลัง)",
+          "meaning_en": "water (stroke order: center hook before sides)",
+          "radical": "水",
+          "radical_name_th": "หมวดน้ำ (水字部)",
+          "stroke_count": 4,
+          "mnemonic": "ลำน้ำสายหลักไหลตรงกลาง หยดน้ำกระเซ็นซ้ายขวา",
+          "kid_mnemonic": "วาดสายน้ำตรงกลางก่อน แล้วค่อยเติมน้ำกระเซ็นสองข้าง",
+          "body_gesture": "ทำคลื่นมือเลื้อยเป็นสายน้ำ"
+        },
+        {
+          "id": "t0_0024",
+          "hanzi": "门",
+          "pinyin": "mén",
+          "pinyin_tone": "men2",
+          "meaning_th": "ประตู (点 + 竖 + 横折钩)",
+          "meaning_en": "door, gate",
+          "radical": "门",
+          "radical_name_th": "หมวดประตู (门字部)",
+          "stroke_count": 3,
+          "mnemonic": "แต้มจุด ลากเสาประตู แล้วลากคานหักมุมมีตะขอ",
+          "kid_mnemonic": "เปิดประตูต้อนรับสู่โลกภาษาจีน!",
+          "body_gesture": "ทำท่าผลักบานประตูเปิดออกสองข้าง"
+        },
+        {
+          "id": "t0_0025",
+          "hanzi": "字",
+          "pinyin": "zì",
+          "pinyin_tone": "zi4",
+          "meaning_th": "ตัวอักษรจีน (หลังคา 宀 + เด็ก 子)",
+          "meaning_en": "Chinese character, script",
+          "radical": "宀",
+          "radical_name_th": "หมวดหลังคาบ้าน (宝盖头)",
+          "stroke_count": 6,
+          "mnemonic": "เด็ก (子) นั่งคัดลายมืออย่างตั้งใจใต้หลังคาบ้าน (宀)",
+          "kid_mnemonic": "หนูน้อยนั่งเขียนอักษรจีนอย่างมีความสุข",
+          "body_gesture": "ทำท่าใช้พู่กันตวัดเขียนอักษรจีนอย่างมั่นใจ"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "🏆 Grand Boss Quest: น้องกระต่ายทู่ทู่ต้องการไขรหัสผ่านประตูสู่เมืองจีน! 'คุณแม่กอดลูกตัวน้อยไว้แนบอก' ประกอบเป็นตัวอักษรจีนใด?",
+        "options": [
+          "好 (hǎo - ดี/มีความสุข: หมวด 女 + 子)",
+          "大 (dà - ใหญ่: คนกางแขน)",
+          "水 (shuǐ - น้ำ: สายน้ำไหล)",
+          "门 (mén - ประตู: ทางเข้าสู่เมือง)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ถูกต้องแล้ว! แม่ (女) กอดลูก (子) รวมกันเป็น '好' (ดี) รหัสลับเปิดประตูสู่ Tier 1 สำเร็จแล้ว 🐰🎉",
+        "encouragement": "ยินดีด้วยครับ! คุณพิชิต Tier 0 ครบทั้ง 6 ยูนิตอย่างสมบูรณ์แบบ ได้รับตราเกียรติยศแล้ว!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t0_seed_master",
+        "badge_name": "ผู้พิชิตเมล็ดพันธุ์พินอิน (Tier 0 Master)",
+        "message_th": "เก่งกาจที่สุด! ปูพื้นฐานพินอินและ 8 เส้นขีดสำเร็จ พร้อมก้าวสู่การสนทนาจริงใน Tier 1",
+        "xp_reward": 150
+      },
+      "quizzes": [
+        {
+          "question_th": "กฎลำดับขีดข้อใดใช้เขียนคำว่า '十' (สิบ) ได้ถูกต้อง?",
+          "explanation_th": "กฎลำดับขีด: 'เส้นนอนก่อนเส้นตั้ง' (Horizontal before Vertical) จึงลาก 横 ก่อน แล้วตามด้วย 竖",
+          "encouragement": "ยอดเยี่ยม! กฎนอนก่อนตั้งทำให้สิบมั่นคงสวยงาม",
+          "type": "radical_focus",
+          "options": [
+            "เส้นนอนก่อนเส้นตั้ง (横 ก่อน 竖)",
+            "เส้นตั้งก่อนเส้นนอน (竖 ก่อน 横)",
+            "ลากพร้อมกันทั้งสองเส้น",
+            "แต้มจุดตรงกลางก่อน"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "กฎลำดับขีดข้อใดใช้เขียนคำว่า '水' (น้ำ) ได้ถูกต้อง?",
+          "explanation_th": "กฎลำดับขีด: 'แกนกลางก่อน สองข้างทีหลัง' (Center before Sides) จึงลากเส้นตะขอกลาง 亅 ก่อน แล้วตามด้วยซ้ายและขวา",
+          "encouragement": "ถูกต้องเป๊ะ! สายน้ำสมดุลด้วยการลากแกนกลางก่อน",
+          "type": "radical_focus",
+          "options": [
+            "แกนกลางก่อน สองข้างทีหลัง",
+            "สองข้างก่อน แกนกลางทีหลัง",
+            "ซ้ายสุดไปขวาสุดตรงๆ",
+            "ล่างขึ้นบน"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "8 เส้นขีดพื้นฐานของอักษรจีน ข้อใดคือเส้น 'ตะขอ' (钩 - Gōu)?",
+          "explanation_th": "เส้น 钩 (โกว) คือเส้นที่มีการตวัดปลายงอคล้ายตะขอเบ็ดตกปลา เช่น 亅 หรือ ㇁",
+          "encouragement": "สุดยอดมาก! จำสัญลักษณ์เส้นขีดได้แม่นยำ 🐰✨",
+          "type": "listen_match",
+          "options": [
+            "เส้นตะขอ (亅)",
+            "เส้นนอน (一)",
+            "เส้นตั้ง (丨)",
+            "เส้นจุด (丶)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "คำว่า '字' (ตัวอักษรจีน) เกิดจากการประกอบร่างของสองหมวดนำใด?",
+          "explanation_th": "เกิดจากหมวดหลังคา 宀 + หมวดเด็ก 子 สื่อถึงเด็กนั่งเขียนหนังสือใต้หลังคาบ้าน",
+          "encouragement": "ยินดีด้วยครับ! ถอดรหัสโครงสร้างตัวอักษรจีนได้สำเร็จครบถ้วน",
+          "type": "meaning_match",
+          "options": [
+            "宀 (หลังคา) + 子 (เด็ก)",
+            "女 (ผู้หญิง) + 子 (เด็ก)",
+            "口 (ปาก) + 门 (ประตู)",
+            "亻 (คน) + 大 (ใหญ่)"
+          ],
+          "correct_index": 0
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,8 @@ import {
   PHONEME_CHARACTER_MAP,
   getAudioEngineStatus,
   isInAppBrowser,
+  getAudioSourceUrl,
+  STATIC_AUDIO_MAP,
   _resetAudioEngineForTesting,
 } from './audioEngine';
 
@@ -443,6 +445,17 @@ describe('audioEngine', () => {
       utterance.onend();
       const result = await promise;
       expect(result).toBe(true);
+    });
+
+    it('Zero-MP3: strips punctuation in getAudioSourceUrl to prevent HTTP 500 on Youdao CDN', () => {
+      const url = getAudioSourceUrl('你好！很高兴认识你。');
+      expect(url).toBe('https://dict.youdao.com/dictvoice?audio=%E4%BD%A0%E5%A5%BD%E5%BE%88%E9%AB%98%E5%85%B4%E8%AE%A4%E8%AF%86%E4%BD%A0&le=zh');
+      expect(url).not.toContain('！');
+      expect(url).not.toContain('。');
+    });
+
+    it('Zero-MP3: confirms STATIC_AUDIO_MAP is empty (zero disk MP3 dependency)', () => {
+      expect(Object.keys(STATIC_AUDIO_MAP).length).toBe(0);
     });
   });
 });
