@@ -37,7 +37,6 @@ import {
   UserStateSchema,
 } from './engines/storage';
 import { getStrokeCache } from './engines/storage/coldStorage';
-import { HanziWriterBox } from './components/hanzi';
 import { VocabCard, DialoguePlayer, GrammarBite, QuizContainer, QuizResult } from './components/lesson';
 import unit01Data from './data/lessons/tier1/unit01_greetings.json';
 import {
@@ -57,6 +56,35 @@ const lesson1ToneRule = (unit01Data.lessons[0].tone_rule || null) as ToneRule | 
 const lesson1Quizzes = unit01Data.lessons[0].quizzes as QuizQuestion[];
 const lesson1Boss = unit01Data.lessons[0].boss_challenge as BossChallenge;
 const lesson1Trophy = unit01Data.lessons[0].cheer_trophy as CheerTrophy;
+
+const HanziWriterBox = React.lazy(() =>
+  import('./components/hanzi/HanziWriterBox').then((m) => ({ default: m.HanziWriterBox }))
+);
+
+const HanziWriterSkeleton: React.FC<{ size: number }> = ({ size }) => (
+  <div
+    className="animate-zen-pulse"
+    style={{
+      width: `${size}px`,
+      height: `${size}px`,
+      margin: '0 auto',
+      backgroundColor: 'var(--bg-rice-paper)',
+      borderRadius: 'var(--radius-md)',
+      border: '1.5px dashed var(--border-card)',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '8px',
+      boxShadow: 'inset 0 0 20px rgba(0,0,0,0.02)',
+    }}
+  >
+    <div style={{ fontSize: '28px', opacity: 0.8 }}>🖌️</div>
+    <span style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+      ฝนหมึกเตรียมกระดาษข้าว...
+    </span>
+  </div>
+);
 
 const EngineTestPanel = React.lazy(() =>
   import('./components/test/EngineTestPanel').then((m) => ({ default: m.EngineTestPanel }))
@@ -309,6 +337,7 @@ export const App: React.FC = () => {
             Hanzero
           </span>
           <span
+            className="header-brand-sublabel"
             style={{
               fontSize: '13px',
               color: 'var(--text-ink-muted)',
@@ -397,13 +426,12 @@ export const App: React.FC = () => {
       {/* Interactive Mode Segmented Tabs */}
       <nav
         aria-label="โหมดการเรียนรู้"
+        className="scrollable-tabs-pill"
         style={{
-          display: 'flex',
           backgroundColor: '#EFEBE4',
           borderRadius: 'var(--radius-full)',
           padding: '4px',
-          gap: '4px',
-          flexWrap: 'wrap',
+          gap: '6px',
         }}
       >
         <button
@@ -413,12 +441,13 @@ export const App: React.FC = () => {
             setActiveTab('vocab');
           }}
           style={{
-            flex: 1,
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            padding: '8px 10px',
+            padding: '8px 14px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
@@ -442,12 +471,13 @@ export const App: React.FC = () => {
             setActiveTab('stroke');
           }}
           style={{
-            flex: 1,
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            padding: '8px 10px',
+            padding: '8px 14px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
@@ -471,12 +501,13 @@ export const App: React.FC = () => {
             setActiveTab('dialogue');
           }}
           style={{
-            flex: 1,
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            padding: '8px 10px',
+            padding: '8px 14px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
@@ -500,12 +531,13 @@ export const App: React.FC = () => {
             setActiveTab('grammar');
           }}
           style={{
-            flex: 1,
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            padding: '8px 10px',
+            padding: '8px 14px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
@@ -529,12 +561,13 @@ export const App: React.FC = () => {
             setActiveTab('quiz');
           }}
           style={{
-            flex: 1,
+            flex: '0 0 auto',
+            whiteSpace: 'nowrap',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '5px',
-            padding: '8px 10px',
+            padding: '8px 14px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
@@ -663,11 +696,13 @@ export const App: React.FC = () => {
           </div>
 
           {/* Interactive Hanzi Writer Canvas in 米字格 (Responsive canvasSize) */}
-          <HanziWriterBox
-            character={strokeChar}
-            size={canvasSize}
-            onComplete={handleStrokeComplete}
-          />
+          <React.Suspense fallback={<HanziWriterSkeleton size={canvasSize} />}>
+            <HanziWriterBox
+              character={strokeChar}
+              size={canvasSize}
+              onComplete={handleStrokeComplete}
+            />
+          </React.Suspense>
         </main>
       )}
 

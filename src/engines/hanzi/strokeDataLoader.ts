@@ -45,8 +45,35 @@ export interface StrokeLoaderOptions {
   cdnBaseUrl?: string;
 }
 
-// In-Memory L1 Cache for fast recall during active session
+// In-Memory L1 Cache for fast recall during active session with LRU eviction
+export const MAX_L1_CACHE_SIZE = 50;
 const memoryCache = new Map<string, HanziStrokeData>();
+
+function setL1MemoryCache(char: string, data: HanziStrokeData): void {
+  if (memoryCache.has(char)) {
+    memoryCache.delete(char);
+  } else if (memoryCache.size >= MAX_L1_CACHE_SIZE) {
+    const oldestKey = memoryCache.keys().next().value;
+    if (oldestKey !== undefined) {
+      memoryCache.delete(oldestKey);
+    }
+  }
+  memoryCache.set(char, data);
+}
+
+function getL1MemoryCache(char: string): HanziStrokeData | undefined {
+  const hit = memoryCache.get(char);
+  if (hit) {
+    // Refresh LRU order (delete & re-insert)
+    memoryCache.delete(char);
+    memoryCache.set(char, hit);
+  }
+  return hit;
+}
+
+export function _getStrokeDataLoaderMemoryCacheSize(): number {
+  return memoryCache.size;
+}
 
 // In-Flight Promise Registry for request coalescing (prevents duplicate storage checks and fetches)
 const inFlightRequests = new Map<string, Promise<HanziStrokeData>>();
@@ -230,7 +257,7 @@ export async function loadStrokeData(
   }
 
   // 1. Check L1 Memory Cache
-  const memoryHit = memoryCache.get(char);
+  const memoryHit = getL1MemoryCache(char);
   if (memoryHit) {
     return memoryHit;
   }
@@ -248,7 +275,7 @@ export async function loadStrokeData(
               strokes: idbHit.strokes,
               medians: idbHit.medians,
             };
-            memoryCache.set(char, formattedData);
+            setL1MemoryCache(char, formattedData);
             return formattedData;
           }
         } catch {
@@ -263,7 +290,7 @@ export async function loadStrokeData(
         });
 
         // Backfill L1 Memory Cache
-        memoryCache.set(char, strokeData);
+        setL1MemoryCache(char, strokeData);
 
         // Backfill L2 IndexedDB Cold Storage (fire & forget)
         const recordToStore: HanziStrokeCacheRecord = {

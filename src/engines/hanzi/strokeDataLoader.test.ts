@@ -12,6 +12,8 @@ import {
   createCharDataLoader,
   StrokeDataLoaderError,
   _resetStrokeDataLoaderMemoryCacheForTesting,
+  _getStrokeDataLoaderMemoryCacheSize,
+  MAX_L1_CACHE_SIZE,
   HanziStrokeData,
 } from './strokeDataLoader';
 import * as coldStorage from '../storage/coldStorage';
@@ -330,6 +332,30 @@ describe('StrokeDataLoader Engine (Slice 1.4)', () => {
       await expect(loader('好', onLoad, onError)).rejects.toThrow();
       expect(onError).toHaveBeenCalled();
       expect(onLoad).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Scenario 8: L1 Memory LRU Eviction Bound (Memory Balloon Defense)', () => {
+    it(`caps L1 memory cache at MAX_L1_CACHE_SIZE (${MAX_L1_CACHE_SIZE}) items and evicts oldest`, async () => {
+      _resetStrokeDataLoaderMemoryCacheForTesting();
+
+      // Load 55 distinct mock characters
+      const mockFetch = vi.fn().mockImplementation(() => {
+        return Promise.resolve({
+          ok: true,
+          status: 200,
+          json: () => Promise.resolve({ strokes: ['M 0 0 L 10 10'], medians: [[[0, 0], [10, 10]]] }),
+        });
+      });
+
+      // Populate 55 CJK characters (from \u4e00 to \u4e36)
+      for (let i = 0; i < 55; i++) {
+        const char = String.fromCharCode(0x4e00 + i);
+        await loadStrokeData(char, { fetchFn: mockFetch as unknown as typeof fetch });
+      }
+
+      // Memory cache size should be capped strictly at MAX_L1_CACHE_SIZE
+      expect(_getStrokeDataLoaderMemoryCacheSize()).toBe(MAX_L1_CACHE_SIZE);
     });
   });
 });

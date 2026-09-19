@@ -663,3 +663,53 @@ button {
   }
 }
 
+/* Pinyin Typography: Safe Latin Ascenders & Generous Breathing Room */
+.pinyin-display {
+  font-family: var(--font-latin);
+  line-height: var(--line-height-pinyin, 1.6);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  letter-spacing: 0.02em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Single-row Horizontal Scrollable Pill Bar (No-scrollbar on mobile) */
+.scrollable-tabs-pill {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;            /* Firefox */
+  -ms-overflow-style: none;         /* IE/Edge */
+  -webkit-overflow-scrolling: touch;/* iOS Momentum Scrolling */
+}
+
+.scrollable-tabs-pill::-webkit-scrollbar {
+  display: none;                    /* Chrome / Safari */
+}
+
+/* Zen Calligraphy Skeleton Pulse */
+@keyframes zen-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.99);
+  }
+}
+
+.animate-zen-pulse {
+  animation: zen-pulse 1.8s ease-in-out infinite;
+}
+
+/* Small screen (<350px) Responsive Ergonomics */
+@media (max-width: 350px) {
+  .header-brand-sublabel {
+    display: none !important;
+  }
+  .capsule-hide-compact {
+    display: none !important;
+  }
+}
+

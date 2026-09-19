@@ -10,7 +10,11 @@ export const STORAGE_KEYS = {
 } as const;
 
 export const INDEXEDDB_CONFIG = {
-  DB_NAME: 'hanzero_db',
+  DB_NAMES: {
+    SRS: 'hanzero_srs_db',
+    STROKES: 'hanzero_strokes_db',
+    MIRROR: 'hanzero_mirror_db',
+  },
   STORES: {
     SRS_RECORDS: 'srs_records',
     HANZI_STROKES: 'hanzi_strokes',

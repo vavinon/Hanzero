@@ -82,11 +82,23 @@ export function writeHotItemSync(key: string, value: string): boolean {
         return true;
       } catch (retryErr) {
         console.warn('[Hanzero Storage] Emergency prune insufficient. Using Memory Fallback for hot state.', retryErr);
+        try {
+          window.localStorage.removeItem(key);
+        } catch {
+          // Safe ignore if remove fails
+        }
+        isLocalStorageBlocked = true;
         return true;
       }
     }
 
     console.warn('[Hanzero Storage] Failed to write to localStorage, using in-memory cache:', err);
+    try {
+      window.localStorage.removeItem(key);
+    } catch {
+      // Safe ignore
+    }
+    isLocalStorageBlocked = true;
     return true;
   }
 }

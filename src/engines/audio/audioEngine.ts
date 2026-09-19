@@ -30,6 +30,7 @@ let audioContextInstance: AudioContext | null = null;
 let currentUtterance: SpeechSynthesisUtterance | null = null;
 let currentAudioElement: HTMLAudioElement | null = null;
 let watchdogTimer: ReturnType<typeof setTimeout> | null = null;
+let audioStreamWatchdogTimer: ReturnType<typeof setTimeout> | null = null;
 let isLifecycleBound = false;
 let cachedVoices: SpeechSynthesisVoice[] = [];
 
@@ -816,6 +817,10 @@ export function playAudioStream(text: string, options: SpeakOptions = {}): Promi
       const finish = (success: boolean) => {
         if (isFinished) return;
         isFinished = true;
+        if (audioStreamWatchdogTimer) {
+          clearTimeout(audioStreamWatchdogTimer);
+          audioStreamWatchdogTimer = null;
+        }
         audio.onplay = null;
         audio.onended = null;
         audio.onerror = null;
@@ -843,7 +848,10 @@ export function playAudioStream(text: string, options: SpeakOptions = {}): Promi
       };
 
       // 5s watchdog timeout for network/local audio
-      setTimeout(() => {
+      if (audioStreamWatchdogTimer) {
+        clearTimeout(audioStreamWatchdogTimer);
+      }
+      audioStreamWatchdogTimer = setTimeout(() => {
         if (!isFinished) {
           finish(false);
         }
@@ -869,6 +877,10 @@ export function stopSpeaking(): void {
   if (watchdogTimer) {
     clearTimeout(watchdogTimer);
     watchdogTimer = null;
+  }
+  if (audioStreamWatchdogTimer) {
+    clearTimeout(audioStreamWatchdogTimer);
+    audioStreamWatchdogTimer = null;
   }
 
   if (currentAudioElement) {
@@ -949,9 +961,9 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
           resolve();
         },
         onError: () => {
-          // Acoustic Tone Fallback if offline/network stream fails
-          playToneContour(1, 0.25);
           if (currentSessionId === activeSessionId) {
+            // Acoustic Tone Fallback if offline/network stream fails
+            playToneContour(1, 0.25);
             onError?.(new Error('Chinese TTS voice not installed and audio stream unavailable'));
             onEnd?.();
             activeSessionResolve = null;
@@ -1039,7 +1051,13 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
       };
 
       utterance.onerror = (event) => {
-        playToneContour(1, 0.2);
+        if (
+          currentSessionId === activeSessionId &&
+          event.error !== 'canceled' &&
+          event.error !== 'interrupted'
+        ) {
+          playToneContour(1, 0.2);
+        }
         finalize(new Error(event.error || 'SpeechSynthesis error occurred'));
       };
 

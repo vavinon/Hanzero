@@ -20,7 +20,7 @@ import {
 import { migrateUserState, stripPollution, clampNumber } from './migration';
 import { normalizeQuickSyncCode, parseQuickSyncCode } from './quickSync';
 import { calculateCrc16, verifyCrc16 } from './checksum';
-import { isUserStateSchema, SrsItemRecord } from './types';
+import { isUserStateSchema, SrsItemRecord, INDEXEDDB_CONFIG } from './types';
 import { readHotItemSync, writeHotItemSync } from './hotStorage';
 import { saveColdMirror } from './coldStorage';
 
@@ -436,6 +436,12 @@ describe('Tiered Storage Engine (Slice 1.3)', () => {
     it('handles requestStoragePersistence gracefully when navigator is unavailable or available', async () => {
       const persisted = await requestStoragePersistence();
       expect(typeof persisted).toBe('boolean');
+    });
+
+    it('defines distinct database names for SRS, strokes, and mirror to prevent idb-keyval collision', () => {
+      expect(INDEXEDDB_CONFIG.DB_NAMES.SRS).toBe('hanzero_srs_db');
+      expect(INDEXEDDB_CONFIG.DB_NAMES.STROKES).toBe('hanzero_strokes_db');
+      expect(INDEXEDDB_CONFIG.DB_NAMES.MIRROR).toBe('hanzero_mirror_db');
     });
   });
 });

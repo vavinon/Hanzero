@@ -29,7 +29,10 @@ import {
 } from 'lucide-react';
 import { VocabularyItem, ExampleSentence } from '../../types/lesson';
 import { speak, stopSpeaking, playClick } from '../../engines/audio/audioEngine';
-import { HanziWriterBox } from '../hanzi/HanziWriterBox';
+
+const HanziWriterBox = React.lazy(() =>
+  import('../hanzi/HanziWriterBox').then((m) => ({ default: m.HanziWriterBox }))
+);
 
 export type PinyinFadingMode = 'full' | 'faded' | 'hidden';
 
@@ -1169,13 +1172,38 @@ export const VocabCard: React.FC<VocabCardProps> = ({
             )}
 
             {/* Interactive HanziWriter inside MizigeGrid (220px on Mobile) */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <HanziWriterBox
-                character={activeInspectorChar}
-                size={220}
-                initialMode="idle"
-                showOutline={true}
-              />
+            <div style={{ display: 'flex', justifyContent: 'center', minHeight: '220px' }}>
+              <React.Suspense
+                fallback={
+                  <div
+                    className="animate-zen-pulse"
+                    style={{
+                      width: '220px',
+                      height: '220px',
+                      backgroundColor: 'var(--bg-rice-paper)',
+                      borderRadius: 'var(--radius-md)',
+                      border: '1.5px dashed var(--border-card)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <div style={{ fontSize: '24px' }}>🖌️</div>
+                    <span style={{ fontSize: '11px', color: 'var(--text-ink-muted)', fontWeight: 500 }}>
+                      ฝนหมึกเตรียมกระดาษข้าว...
+                    </span>
+                  </div>
+                }
+              >
+                <HanziWriterBox
+                  character={activeInspectorChar}
+                  size={220}
+                  initialMode="idle"
+                  showOutline={true}
+                />
+              </React.Suspense>
             </div>
 
             {/* Radical & Writing Note */}

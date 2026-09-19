@@ -29,9 +29,9 @@ let mirrorStore: CustomStore | null = null;
 
 function getStores(): { srs: CustomStore; stroke: CustomStore; mirror: CustomStore } {
   if (!srsStore || !strokeStore || !mirrorStore) {
-    srsStore = createStore(INDEXEDDB_CONFIG.DB_NAME, INDEXEDDB_CONFIG.STORES.SRS_RECORDS);
-    strokeStore = createStore(INDEXEDDB_CONFIG.DB_NAME, INDEXEDDB_CONFIG.STORES.HANZI_STROKES);
-    mirrorStore = createStore(INDEXEDDB_CONFIG.DB_NAME, INDEXEDDB_CONFIG.STORES.COLD_HOT_MIRROR);
+    srsStore = createStore(INDEXEDDB_CONFIG.DB_NAMES.SRS, INDEXEDDB_CONFIG.STORES.SRS_RECORDS);
+    strokeStore = createStore(INDEXEDDB_CONFIG.DB_NAMES.STROKES, INDEXEDDB_CONFIG.STORES.HANZI_STROKES);
+    mirrorStore = createStore(INDEXEDDB_CONFIG.DB_NAMES.MIRROR, INDEXEDDB_CONFIG.STORES.COLD_HOT_MIRROR);
   }
   return { srs: srsStore, stroke: strokeStore, mirror: mirrorStore };
 }

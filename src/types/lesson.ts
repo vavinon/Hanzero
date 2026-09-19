@@ -145,3 +145,54 @@ export interface UnitLessonData {
   description: string;
   lessons: Lesson[];
 }
+
+// --- Archetype A: Tier 0 Phonics & Stroke Types ---
+
+export interface SoundCard {
+  pinyin: string;
+  ipa?: string;
+  mouth_shape_th: string;
+  audio_key?: string;
+  fun_hint: string;
+  example_words?: Array<{ hanzi: string; pinyin: string; th: string }>;
+}
+
+export interface StrokeCard {
+  stroke_code: string; // e.g. "heng", "shu"
+  stroke_symbol: string; // e.g. "一", "丨"
+  stroke_name_zh: string;
+  stroke_name_th: string;
+  direction_description_th: string;
+  example_char: string;
+  mnemonic: string;
+}
+
+export interface ArchetypeALesson {
+  lesson_id: string; // e.g. "t0_u01_l01"
+  archetype: 'phonics' | 'strokes';
+  title: TrilingualText;
+  can_do: BilingualText;
+  sound_cards?: SoundCard[];
+  stroke_cards?: StrokeCard[];
+  tone_practice_enabled?: boolean;
+  quizzes: QuizQuestion[];
+  is_safe_practice_zone: true; // Tier 0 is always safe
+}
+
+// --- Curriculum Manifest Types ---
+
+export interface CurriculumTier {
+  tier_id: string;
+  tier_number: number;
+  title: TrilingualText;
+  description: string;
+  total_units: number;
+  unit_ids: string[];
+}
+
+export interface CurriculumManifest {
+  project: string;
+  version: string;
+  total_tiers: number;
+  tiers: CurriculumTier[];
+}

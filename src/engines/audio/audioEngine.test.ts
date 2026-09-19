@@ -343,6 +343,23 @@ describe('audioEngine', () => {
       );
       expect(onEndB).toHaveBeenCalled();
     });
+
+    it('stopSpeaking() cancels speech and prevents late watchdog trigger', async () => {
+      const onEnd = vi.fn();
+      const onError = vi.fn();
+
+      const promise = speak('你好', { onEnd, onError });
+      expect(mockSpeak).toHaveBeenCalledTimes(1);
+
+      stopSpeaking();
+      await promise;
+
+      // Advance time past watchdog
+      vi.advanceTimersByTime(5000);
+
+      // Neither late error nor late end should fire
+      expect(onError).not.toHaveBeenCalled();
+    });
   });
 
   describe('Phoneme Audio & Voice Discovery (Slice 1.5)', () => {
