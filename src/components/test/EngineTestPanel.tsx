@@ -42,6 +42,7 @@ import {
 import { getStrokeCache, setStrokeCache } from '../../engines/storage/coldStorage';
 import { loadStrokeData } from '../../engines/hanzi/strokeDataLoader';
 import { HanziWriterBox } from '../hanzi/HanziWriterBox';
+import { ToneCoaster, EchoMicRecorder, MinimalPairBoard } from '../games';
 import {
   RICE_PAPER_HEX,
   HANZERO_PALETTE_TOKENS,
@@ -51,7 +52,7 @@ import {
   getWcagCompliance,
 } from '../../engines/diagnostics';
 
-export type TestTab = 'audio' | 'sfx' | 'storage' | 'hanzi' | 'contrast';
+export type TestTab = 'audio' | 'sfx' | 'storage' | 'hanzi' | 'contrast' | 'games';
 
 interface EngineTestPanelProps {
   onClose: () => void;
@@ -534,6 +535,7 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
               { id: 'storage', label: 'Tiered Storage', icon: Database },
               { id: 'hanzi', label: 'เส้นขีด Hanzi', icon: PenTool },
               { id: 'contrast', label: 'UI & ความชัด', icon: Eye },
+              { id: 'games', label: 'มินิเกม Tier 0', icon: Sparkles },
             ] as const
           ).map((t) => {
             const Icon = t.icon;
@@ -1608,6 +1610,83 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        {/* --- TAB 6: Tier 0 Games & Interactive Phonics --- */}
+        {activeTab === 'games' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: 'var(--radius-md)',
+                padding: '16px',
+                border: '1px solid var(--border-card)',
+              }}
+            >
+              <h4
+                style={{
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--text-ink-primary)',
+                  marginBottom: '4px',
+                }}
+              >
+                1. 🎢 Bunny Tone Coaster
+              </h4>
+              <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', marginBottom: '12px' }}>
+                รถไฟเหาะ 4 วรรณยุกต์ พร้อมระบบ Safe Practice และสับราง 3+3
+              </p>
+              <ToneCoaster />
+            </div>
+
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: 'var(--radius-md)',
+                padding: '16px',
+                border: '1px solid var(--border-card)',
+              }}
+            >
+              <h4
+                style={{
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--text-ink-primary)',
+                  marginBottom: '4px',
+                }}
+              >
+                2. 🎙️ Shadowing Echo Mic
+              </h4>
+              <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', marginBottom: '12px' }}>
+                ไมโครโฟนอัดเสียงผู้เรียน 2 วินาที และเล่นเสียงเทียบ Dual Echo (Native ➔ ผู้เรียน)
+              </p>
+              <EchoMicRecorder text="你好" pinyin="nǐ hǎo" meaningTh="สวัสดี" />
+            </div>
+
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: 'var(--radius-md)',
+                padding: '16px',
+                border: '1px solid var(--border-card)',
+              }}
+            >
+              <h4
+                style={{
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--text-ink-primary)',
+                  marginBottom: '4px',
+                }}
+              >
+                3. ⚖️ Minimal Pairs Board
+              </h4>
+              <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', marginBottom: '12px' }}>
+                กระดานเทียบเสียงคู่ก้ำกึ่งที่คนไทยสับสน พร้อมภาพจำลองรูปปากและโหมดหูทองคำ
+              </p>
+              <MinimalPairBoard initialPairId="b_vs_p" />
             </div>
           </div>
         )}

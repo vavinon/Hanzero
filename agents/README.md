@@ -10,12 +10,12 @@
 ```mermaid
 graph TD
     Design["🎨 ux_ui_designer.md<br/>(สุนทรียภาพ & ประสบการณ์ผู้ใช้)"] --> Dev["👨‍💻 web_dev.md<br/>(วิศวกรผู้สร้าง)"]
-    Dev --> Tester["🧪 Automated Vitest"]
+    Dev --> AutoTester["🧪 test_automation_engineer.md<br/>(สถาปนิกระบบทดสอบ & CI/CD)"]
     Tutor["🎓 curriculum_tutor.md<br/>(ผู้สร้างเนื้อหา 3 ภาษา)"] --> Content["📦 Lesson Data"]
     Game["🎮 gamification_designer.md<br/>(ผู้ออกแบบมินิเกม)"] --> Content
+    Content --> AutoTester
     
-    Tester --> Gatekeeper
-    Content --> Gatekeeper
+    AutoTester --> Gatekeeper
     
     subgraph Gatekeeper ["🛡️ คณะกรรมการตรวจสอบอิสระ"]
         QA_Ped["🇨🇳 pedagogical_qa.md<br/>(ตรวจภาษาจีน 100%)"]
@@ -35,9 +35,10 @@ graph TD
 | ไฟล์ Agent | บทบาทหน้าที่ | หน้าที่หลัก |
 | :--- | :--- | :--- |
 | **[ux_ui_designer.md](./ux_ui_designer.md)** | นักออกแบบผลิตภัณฑ์ UX/UI และสุนทรียภาพ | กำกับความเรียบง่าย สวยงาม มินิมอลแบบ Modern Oriental คุม Space & Typography บนเว็บ/มือถือ |
-| **[pedagogical_qa.md](./pedagogical_qa.md)** | ผู้ตรวจการภาษาจีน | ตรวจสอบอักษรจีนตัวย่อ, วรรณยุกต์พินอิน, กฎ Tone Sandhi และคำแปลไทยธรรมชาติ |
-| **[technical_qa.md](./technical_qa.md)** | ผู้ตรวจการเทคนิคและประสิทธิภาพ | บังคับ Strict Type, ห้ามมี `any`, คุมขนาดไฟล์ JS < 100KB, CSS < 20KB |
-| **[red_team_adversary.md](./red_team_adversary.md)** | หน่วยจู่โจมเคสพิสดาร (Chaos) | รัวคิวเสียง 50 ครั้ง/วิ, แกล้งพักหน้าจอ Safari, ล่า Memory Leak บน Canvas |
 | **[web_dev.md](./web_dev.md)** | วิศวกรเว็บแอปพลิเคชัน | เขียนโค้ด Pure TypeScript, จัดการ Web Audio API, PWA Offline, ลื่นไหล 60fps |
 | **[curriculum_tutor.md](./curriculum_tutor.md)** | อาจารย์สอนภาษาจีนสายพี่เลี้ยง | สร้างเนื้อหาบทเรียน 3 ภาษา (จีน-ไทย-อังกฤษ), คิดสตอรี่เลโก้ช่วยจำ (Mnemonics) |
 | **[gamification_designer.md](./gamification_designer.md)** | นักออกแบบเกมการเรียนรู้ | ออกแบบมินิเกม Tone Coaster, กระดานวรรณยุกต์, ระบบ Streak และหัวใจ |
+| **[test_automation_engineer.md](./test_automation_engineer.md)** | วิศวกรระบบทดสอบอัตโนมัติ | สถาปัตยกรรม Testing Pyramid, Vitest, Playwright E2E, Schema Validator, และ CI/CD Pipeline |
+| **[pedagogical_qa.md](./pedagogical_qa.md)** | ผู้ตรวจการภาษาจีน | ตรวจสอบอักษรจีนตัวย่อ, วรรณยุกต์พินอิน, กฎ Tone Sandhi และคำแปลไทยธรรมชาติ |
+| **[technical_qa.md](./technical_qa.md)** | ผู้ตรวจการเทคนิคและประสิทธิภาพ | บังคับ Strict Type, ห้ามมี `any`, คุมขนาดไฟล์ JS < 100KB, CSS < 20KB |
+| **[red_team_adversary.md](./red_team_adversary.md)** | หน่วยจู่โจมเคสพิสดาร (Chaos) | รัวคิวเสียง 50 ครั้ง/วิ, แกล้งพักหน้าจอ Safari, ล่า Memory Leak บน Canvas |

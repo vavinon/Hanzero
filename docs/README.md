@@ -40,6 +40,8 @@ docs/
 │   ├── _template.md               # แม่แบบสำหรับสร้าง Task ใหม่
 │   ├── 2026-09-18_P01_foundation-and-engines.md
 │   └── 2026-09-19_P02_unit1-complete-experience.md
+├── testing/                       # 🧪 แม่บทการทดสอบและแผนจำลองสถานการณ์ทั้งหมด
+│   └── master_test_scenarios_matrix.md # Matrix เคสทดสอบ White-box/Black-box & Happy/Bad Path ครบทุกมิติ
 └── roadmap/                       # แผนงานและลำดับขั้นตอนการพัฒนา
     └── milestone_plan.md          # ไทม์ไลน์และเป้าหมายในแต่ละระยะ (Phase 1 ถึง 8)
 ```
@@ -55,6 +57,7 @@ docs/
 | **`architecture/`** | กำหนดสถาปัตยกรรม เทคโนโลยี Frontend/Backend, Data Model (ดู [tech_stack.md](./architecture/tech_stack.md) และ [data_schema.md](./architecture/data_schema.md)) | ✅ เรียบร้อย |
 | **`plan/`** | แผนปฏิบัติการและ Checklist การพัฒนารายเฟส 1-8 พร้อมเกณฑ์ตรวจรับงาน (ดู [docs/plan/](./plan)) | 🚀 Active & Modular |
 | **`tasks/`** | กระดานงานย่อยระดับปฏิบัติการรายวัน (Micro-Slicing), รองรับงานด่วน (Hotfix) และเก็บบันทึกประวัติส่งมอบงาน (ดู [docs/tasks/](./tasks)) | 📌 Active Tracker |
+| **`testing/`** | แม่บทการทดสอบระบบและตารางจำลองทุกสถานการณ์ ([master_test_scenarios_matrix.md](./testing/master_test_scenarios_matrix.md)) | 🧪 แผนแม่บทสมบูรณ์ |
 | **`prompts/`** | คลัง Master Prompts สำหรับสั่งการ AI ขยายเนื้อหา/เกม/สถาปัตยกรรม (ดู [docs/prompts/](./prompts)) | 🗄️ คลังแม่แบบ |
 | **`roadmap/`** | แผนงานและระยะการพัฒนา Phase 1 - 8 (ดู [milestone_plan.md](./roadmap/milestone_plan.md)) | ✅ เรียบร้อย |
 

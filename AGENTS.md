@@ -33,6 +33,7 @@ agents/
 ├── technical_qa.md           # ผู้ตรวจการโค้ดและประสิทธิภาพ (Strict Types, Bundle < 100KB)
 ├── red_team_adversary.md     # หน่วยจู่โจมล่าบั๊ก (ถล่มคิวเสียง, Memory Leak, Safari Sleep)
 ├── web_dev.md                # วิศวกรเว็บแอปพลิเคชัน (Pure TypeScript, Web Audio, 60fps)
+├── test_automation_engineer.md # สถาปนิกระบบทดสอบอัตโนมัติ (Vitest, Playwright E2E, CI/CD Gate)
 ├── curriculum_tutor.md       # อาจารย์สอนภาษาจีนสายพี่เลี้ยง (สตอรี่ภาพจำช่วยจำ)
 └── gamification_designer.md  # นักออกแบบเกม (Tone Coaster, เลโก้เรียงประโยค, Safe Zone)
 ```
@@ -62,6 +63,8 @@ docs/
 │   ├── phase_06_content_authoring_studio.md
 │   ├── phase_07_tier2_traveler_quest.md
 │   └── phase_08_tier3_4_advanced_immersion.md
+├── testing/                  # แม่บทเคสทดสอบระบบ (White-box, Black-box, Happy/Bad Cases)
+│   └── master_test_scenarios_matrix.md
 └── prompts/                  # คลังแม่แบบ Prompts เพิ่มเติม
 ```
 

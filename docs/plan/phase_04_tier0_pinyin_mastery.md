@@ -50,19 +50,19 @@
   - ใช้ **3-Tier Cascade**: (1) OS Neural TTS (Xiaoxiao/Siri/Google) $\rightarrow$ (2) Youdao HD Stream $\rightarrow$ (3) Web Audio Tone Contour
 
 ### 3. มินิเกมรถไฟเหาะ 4 วรรณยุกต์ (Bunny Tone Coaster)
-- [ ] พัฒนา `src/components/games/ToneCoaster.tsx`:
+- [x] พัฒนา `src/components/games/ToneCoaster.tsx`:
   - กราฟิกภาพเคลื่อนไหวแสดงรูปคลื่นเสียง 4 รูปแบบ (1: สูงราบเรียบ, 2: พุ่งทะยาน, 3: โค้งดิ่งแล้วเด้งขึ้น, 4: ทิ้งดิ่งลงมา)
   - เสียงนำการออกเสียงตามระดับ Pitch สูง-ต่ำ (รองรับ Web Audio Tone Contour + Speech Synthesis)
   - มินิเกมฟังเสียงที่สุ่มมา แล้วผู้เรียนแตะเลือกรางรถไฟวรรณยุกต์ที่ถูกต้อง (ไม่มีการหักหัวใจเมื่อตอบผิด)
 
 ### 4. ระบบฝึกพูดและเทียบเสียงตนเอง (Shadowing Echo Mic)
-- [ ] พัฒนา `src/components/games/EchoMicRecorder.tsx`:
+- [x] พัฒนา `src/components/games/EchoMicRecorder.tsx`:
   - ปุ่มไมโครโฟนสำหรับกดค้างเพื่ออัดเสียงผู้เรียน (2 วินาที)
   - เล่นเสียงต้นฉบับ Native แล้วตามด้วยเสียงอัดของผู้เรียนทันที (Client-side MediaRecorder)
   - ให้ผู้เรียนฝึกฟังและปรับแต่งรูปปากและวรรณยุกต์ด้วยตัวเองโดยไม่กดดัน
 
 ### 5. กระดานเปรียบเทียบเสียงคู่ก้ำกึ่ง (Minimal Pairs Board)
-- [ ] พัฒนา `src/components/games/MinimalPairBoard.tsx`:
+- [x] พัฒนา `src/components/games/MinimalPairBoard.tsx`:
   - โหมดฟังเทียบเสียงที่คนไทยมักสับสน (`b` vs `p`, `shì` vs `sì`, `u` vs `ü`)
   - ภาพแอนิเมชันรูปปากและตำแหน่งลิ้นช่วยอธิบายความต่าง
   - เลย์เอาต์ Responsive ปรับเป็น Vertical Stack อัตโนมัติบนหน้าจอมือถือเล็ก (<400px)

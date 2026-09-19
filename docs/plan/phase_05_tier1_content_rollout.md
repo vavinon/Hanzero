@@ -50,15 +50,29 @@
   - ตรวจสอบจุดสะดุด (UX Friction): ปัญหาความสับสนของเสียงพินอิน, ขนาดตัวอักษร, หรือความเข้าใจในกฎผันเสียง
   - รวบรวม Feedback เพื่อ Fine-tune ควิซและบทสนทนาก่อนเปิดตัวสาธารณะ
 
-### 5. ระบบนำขึ้น GitHub Pages, Social Metadata & CI/CD (Deployment & Automation)
+### 5. ระบบทดสอบอัตโนมัติครบวงจร (Automated E2E Testing & Test Pyramid)
+- [ ] ติดตั้งและตั้งค่า **Playwright E2E Suite** (`playwright.config.ts`) สำหรับรัน Headless Browser Tests
+- [ ] พัฒนา E2E User Journey Scenarios ครอบคลุมเส้นทางสำคัญ:
+  - **Journey 1 (First-Run Onboarding & Safe Zone):** ผู้ใช้ใหม่เข้ามา เลือกลู่ทาง "เริ่มจาก 0" $\rightarrow$ เริ่มบทเรียนพินอิน $\rightarrow$ ลองตอบผิด ยืนยันหัวใจไม่ลดแม้แต่ดวงเดียว (Safe Practice Zone)
+  - **Journey 2 (Fast-track to Tier 1 & Heart Penalty):** ผู้ใช้เลือกข้ามไป Tier 1 $\rightarrow$ เล่น Unit 1.1 $\rightarrow$ เมื่อตอบผิดต้องตัดหัวใจ และแสดงหน้าต่างหมดหัวใจ/รีฟิล
+  - **Journey 3 (SRS Review Loop):** เข้าสู่หน้าทบทวนคำศัพท์ $\rightarrow$ คลิกการ์ดคำ $\rightarrow$ เลือกความจำ (Again/Good/Easy) $\rightarrow$ ตรวจสอบความถูกต้องของตรรกะ SM-2 ใน Storage
+  - **Journey 4 (Voice Health Alert Modal):** จำลองเบราว์เซอร์ที่ไม่มีชุดเสียงจีน (`zh-CN`) $\rightarrow$ Modal แนะนำการติดตั้งเสียงต้องปรากฏขึ้นอย่างถูกต้อง
+  - **Journey 5 (Small Screen 320px Squeeze):** ทดสอบบน Viewport กว้าง 320px ยืนยันว่า Pinyin tone marks และปุ่มกดไม่ตกขอบหรือหลุดเลย์เอาต์
+- [ ] สคริปต์รันเทสต์เบื้องหลัง: `npm run test:e2e` และ `npm run test:all` (รวม Unit + Curriculum + E2E)
+
+### 6. ระบบนำขึ้น GitHub Pages, Social Metadata & CI/CD Pipeline (Deployment & Automation)
 - [ ] ตั้งค่า `vite.config.ts`:
   - กำหนด `base: '/hanzero/'` เพื่อรองรับ Subpath บน GitHub Pages
 - [ ] ติดตั้ง OpenGraph / Twitter Card Meta Tags (`index.html`):
   - รองรับการแสดงผลรูปภาพพรีวิวบัตรเกียรติยศ (Passport Preview) เวลาผู้เรียนแชร์ลิงก์ลงโซเชียลมีเดีย
 - [ ] สร้าง GitHub Actions Workflow `.github/workflows/deploy.yml`:
   - ทริกเกอร์อัตโนมัติเมื่อ push หรือ merge เข้า branch `main`
-  - ตรวจสอบ Lint และทดสอบ Validation Script
-  - สั่ง `npm run build` และ Deploy ไปยัง GitHub Pages
+  - **4-Stage Automated Quality Gate:**
+    1. `TypeCheck`: `npx tsc --noEmit`
+    2. `Curriculum Lint`: `npm run validate:curriculum`
+    3. `Unit & Engine Suite`: `npm test -- --run`
+    4. `E2E Smoke Suite`: `npx playwright test`
+  - สั่ง `npm run build` และ Deploy ไปยัง GitHub Pages **เฉพาะเมื่อทุก Stage ผ่าน 100% เท่านั้น**
 - [ ] ตั้งค่า Custom 404 / SPA Redirect:
   - รองรับการรีเฟรชหน้าเว็บในทุก URL path โดยไม่เกิดปัญหาหน้า 404 Not Found
 
@@ -71,13 +85,15 @@
 | **1. Automated Schema Pass** | รันคำสั่ง `npm run validate:curriculum` ใน Terminal | ผ่าน 100% โดยไม่มีข้อผิดพลาด (Zero Errors / Zero Missing Fields) |
 | **2. Interleaving Coverage** | ตรวจสอบรายงานของ Script ใน Unit 2-10 | ทุก Unit มีคำศัพท์/โครงสร้างจาก Unit ก่อนหน้าแทรกอยู่อย่างน้อย 20% |
 | **3. Tone Sandhi Audit** | ตรวจสอบไฟล์เสียงและตัวอักษรของคำที่มี `一` และ `不` ในทุก Unit | วรรณยุกต์พินอินตรงตามกฎผันเสียง เช่น `yí kuài`, `yì qǐ`, `bù chī`, `bú shì` |
-| **4. Alpha Playtest Sign-off** | ทดสอบกับผู้เรียน Zero-Knowledge 5 คน | ผู้เรียนเข้าใจวิธีเล่น สามารถผ่าน Tier 0 ได้โดยไม่ต้องมีคนคอยสอนข้างๆ |
-| **5. Bundle Size & Load Speed** | รัน `npm run build` แล้วตรวจขนาดไฟล์ และทดสอบด้วย Lighthouse | ขนาด JavaScript รวม (Gzip) < 300KB และคะแนน Performance > 90 |
-| **6. Live Production Test** | เข้าใช้งานผ่าน URL จริงของ GitHub Pages บนมือถือ iOS และ Android | โหลดหน้าเว็บได้สมบูรณ์ เสียงสังเคราะห์ออกครบ เล่นได้ทุก Unit โดยไม่ต้องต่อเซิร์ฟเวอร์ภายนอก |
-| **7. Product Diagnostics Verification** | ทดลองตอบผิดซ้ำในด่าน และตรวจดูผลใน Local Diagnostics | ระบบบันทึกสถิติข้อผิดพลาดลงใน State ได้ถูกต้องเพื่อการวิเคราะห์ปรับปรุง |
+| **4. Automated E2E Pass** | รันคำสั่ง `npm run test:e2e` บน Headless Chrome/WebKit | เทสต์ User Journeys ทั้ง 5 สถานการณ์ผ่าน 100% ไร้ข้อผิดพลาด |
+| **5. Alpha Playtest Sign-off** | ทดสอบกับผู้เรียน Zero-Knowledge 5 คน | ผู้เรียนเข้าใจวิธีเล่น สามารถผ่าน Tier 0 ได้โดยไม่ต้องมีคนคอยสอนข้างๆ |
+| **6. Bundle Size & Load Speed** | รัน `npm run build` แล้วตรวจขนาดไฟล์ และทดสอบด้วย Lighthouse | ขนาด JavaScript รวม (Gzip) < 300KB และคะแนน Performance > 90 |
+| **7. CI/CD Pipeline Gate** | สร้าง Pull Request จำลองบั๊ก แล้วตรวจดู GitHub Actions | Pipeline ต้องขึ้นสีแดงและบล็อกการ Deploy เมื่อมีเทสต์ตก และขึ้นเขียวเมื่อโค้ดถูกต้อง |
+| **8. Live Production Test** | เข้าใช้งานผ่าน URL จริงของ GitHub Pages บนมือถือ iOS และ Android | โหลดหน้าเว็บได้สมบูรณ์ เสียงสังเคราะห์ออกครบ เล่นได้ทุก Unit โดยไม่ต้องต่อเซิร์ฟเวอร์ภายนอก |
+| **9. Product Diagnostics Verification** | ทดลองตอบผิดซ้ำในด่าน และตรวจดูผลใน Local Diagnostics | ระบบบันทึกสถิติข้อผิดพลาดลงใน State ได้ถูกต้องเพื่อการวิเคราะห์ปรับปรุง |
 
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 5
-เมื่อบทเรียน Tier 1 ครบทั้ง 10 Units ได้รับการตรวจสอบความถูกต้องของเนื้อหา 100% สคริปต์ Validation ผ่านทุกเงื่อนไข ผ่านการทดสอบ Alpha Playtest กับผู้เรียนจริง ระบบวัดผล Local Diagnostics พร้อมทำงาน และระบบออนไลน์บน GitHub Pages ให้นักเรียนเข้ามาเรียนได้จริง จึงถือว่าการเปิดตัวเวอร์ชัน Production ของ Hanzero ประสบความสำเร็จสมบูรณ์!
+เมื่อบทเรียน Tier 1 ครบทั้ง 10 Units ได้รับการตรวจสอบความถูกต้องของเนื้อหา 100% สคริปต์ Validation ผ่านทุกเงื่อนไข ผ่านชุดทดสอบ Automated E2E Test และ CI/CD Pipeline ทุกชั้น ผ่านการทดสอบ Alpha Playtest กับผู้เรียนจริง ระบบวัดผล Local Diagnostics พร้อมทำงาน และระบบออนไลน์บน GitHub Pages ให้นักเรียนเข้ามาเรียนได้จริง จึงถือว่าการเปิดตัวเวอร์ชัน Production ของ Hanzero ประสบความสำเร็จสมบูรณ์!
 
