@@ -15,6 +15,7 @@ export interface QuestMapProps {
   onSelectLesson: (unitId: string, lessonId: string) => void;
   onOpenReviewDeck: () => void;
   dueCardsCount: number;
+  onOpenPassport?: () => void;
 }
 
 interface MapNode {
@@ -85,6 +86,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
   onSelectLesson,
   onOpenReviewDeck,
   dueCardsCount,
+  onOpenPassport,
 }) => {
   const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1'>(
     (progress.current_tier as 'tier0' | 'tier1') || 'tier0'
@@ -268,7 +270,50 @@ export const QuestMap: React.FC<QuestMapProps> = ({
             </div>
           </div>
 
-          {/* Tier 0 Path Nodes List */}
+          {/* Tier 0 Completed Celebration Banner & Passport Access */}
+          {completedSet.has('t0_u06_l01') && onOpenPassport && (
+            <div
+              onClick={onOpenPassport}
+              style={{
+                width: '100%',
+                backgroundColor: '#FEF3C7',
+                borderRadius: 'var(--radius-md)',
+                border: '2px solid #F59E0B',
+                padding: '12px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(245, 158, 11, 0.2)',
+              }}
+              data-testid="btn-questmap-open-passport"
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span style={{ fontSize: '24px' }}>🏆</span>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#92400E' }}>
+                    บัตรเกียรติยศผู้พิชิต Tier 0 (Passport)
+                  </div>
+                  <div style={{ fontSize: '11px', color: '#B45309' }}>
+                    แตะเพื่อดูบัตรเกียรติยศและส่งต่อความสำเร็จ 🐰✨
+                  </div>
+                </div>
+              </div>
+              <div
+                style={{
+                  backgroundColor: '#D97706',
+                  color: '#FFFFFF',
+                  padding: '6px 12px',
+                  borderRadius: 'var(--radius-full)',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                }}
+              >
+                ดูพาสปอร์ต
+              </div>
+            </div>
+          )}
+
           <div
             style={{
               position: 'relative',

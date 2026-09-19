@@ -229,7 +229,9 @@ export function useUserState(): UseUserStateReturn {
   const deductHeart = useCallback(
     async (isSafeZone: boolean = false): Promise<boolean> => {
       const currentState = getStoredUserStateSync();
-      const isTier0 = currentState.progress.current_tier === 'T0';
+      const isTier0 =
+        currentState.progress.current_tier === 'tier0' ||
+        currentState.progress.current_tier === 'T0';
 
       // Safe Practice Zone: Tier 0 and SRS Review Deck NEVER deduct hearts!
       if (isSafeZone || isTier0 || currentState.progress.hearts.current <= 0) {

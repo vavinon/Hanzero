@@ -6,3 +6,4 @@
 export * from './ToneCoaster';
 export * from './EchoMicRecorder';
 export * from './MinimalPairBoard';
+export * from './RadicalPuzzle';

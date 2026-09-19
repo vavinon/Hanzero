@@ -42,7 +42,8 @@ import {
 import { getStrokeCache, setStrokeCache } from '../../engines/storage/coldStorage';
 import { loadStrokeData } from '../../engines/hanzi/strokeDataLoader';
 import { HanziWriterBox } from '../hanzi/HanziWriterBox';
-import { ToneCoaster, EchoMicRecorder, MinimalPairBoard } from '../games';
+import { ToneCoaster, EchoMicRecorder, MinimalPairBoard, RadicalPuzzle } from '../games';
+import { MilestonePassportModal } from '../layout/MilestonePassportModal';
 import {
   RICE_PAPER_HEX,
   HANZERO_PALETTE_TOKENS,
@@ -95,6 +96,9 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
 
   // --- TAB 5: 360px & Contrast State ---
   const [is360Simulated, setIs360Simulated] = useState<boolean>(false);
+
+  // --- TAB 6: Passport Test State ---
+  const [showPassportTest, setShowPassportTest] = useState<boolean>(false);
 
   // 1. Initial Load & Listeners
   useEffect(() => {
@@ -1688,7 +1692,76 @@ export const EngineTestPanel: React.FC<EngineTestPanelProps> = ({ onClose }) => 
               </p>
               <MinimalPairBoard initialPairId="b_vs_p" />
             </div>
+
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: 'var(--radius-md)',
+                padding: '16px',
+                border: '1px solid var(--border-card)',
+              }}
+            >
+              <h4
+                style={{
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--text-ink-primary)',
+                  marginBottom: '4px',
+                }}
+              >
+                4. 🧩 Radical Puzzle Builder
+              </h4>
+              <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', marginBottom: '12px' }}>
+                ตัวต่อเลโก้ประกอบร่างอักษรจีน พร้อมคำอธิบายภาพจำ (Mnemonic) และเคล็ดวิชาหลบขีด
+              </p>
+              <RadicalPuzzle />
+            </div>
+
+            <div
+              style={{
+                backgroundColor: '#FFFFFF',
+                borderRadius: 'var(--radius-md)',
+                padding: '16px',
+                border: '1px solid var(--border-card)',
+              }}
+            >
+              <h4
+                style={{
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  color: 'var(--text-ink-primary)',
+                  marginBottom: '4px',
+                }}
+              >
+                5. 🏆 Milestone Passport Modal (Tier 0 Graduation)
+              </h4>
+              <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary)', marginBottom: '12px' }}>
+                การ์ดพาสปอร์ตส่งต่อความสำเร็จ เรนเดอร์ Canvas 2D คมชัด 1080x1440px พร้อมตราประทับน้องกระต่ายทู่ทู่
+              </p>
+              <button
+                type="button"
+                onClick={() => {
+                  playClick();
+                  setShowPassportTest(true);
+                }}
+                className="btn-tactile-primary"
+                style={{ minHeight: '44px', padding: '10px 18px', fontSize: '14px', borderRadius: 'var(--radius-full)' }}
+                data-testid="btn-open-passport-test"
+              >
+                🏆 เปิดพรีวิวบัตรเกียรติยศ Tier 0
+              </button>
+            </div>
           </div>
+        )}
+
+        {showPassportTest && (
+          <MilestonePassportModal
+            isOpen={showPassportTest}
+            onClose={() => setShowPassportTest(false)}
+            userName="นักเรียนฮั่นซีโร่ 🐰"
+            streakCount={7}
+            totalXp={450}
+          />
         )}
       </main>
     </div>

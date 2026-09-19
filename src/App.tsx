@@ -6,6 +6,7 @@ import {
   DailyCompletionModal,
   WelcomeModal,
   VoiceHealthModal,
+  MilestonePassportModal,
 } from './components/layout';
 import { useUserState } from './hooks/useUserState';
 import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine';
@@ -51,6 +52,7 @@ export const App: React.FC = () => {
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
   const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(false);
   const [showVoiceHealthModal, setShowVoiceHealthModal] = useState<boolean>(false);
+  const [showPassportModal, setShowPassportModal] = useState<boolean>(false);
   const [storageHealth, setStorageHealth] = useState<StorageDiagnostics | null>(null);
   const [strokeCacheStatus, setStrokeCacheStatus] = useState<string | null>(null);
   const [dailyCelebration, setDailyCelebration] = useState<{ isOpen: boolean; xp: number }>({
@@ -100,6 +102,9 @@ export const App: React.FC = () => {
   const handleLessonComplete = async (lessonId: string, xpReward: number) => {
     await completeLesson(lessonId, xpReward);
     setDailyCelebration({ isOpen: true, xp: xpReward });
+    if (lessonId === 't0_u06_l01') {
+      setShowPassportModal(true);
+    }
     setCurrentView('map');
     refreshQueue();
   };
@@ -170,6 +175,7 @@ export const App: React.FC = () => {
             onSelectLesson={handleSelectLesson}
             onOpenReviewDeck={() => setCurrentView('review')}
             dueCardsCount={srsQueueStatus.total_due_count}
+            onOpenPassport={() => setShowPassportModal(true)}
           />
         </main>
       )}
@@ -262,6 +268,15 @@ export const App: React.FC = () => {
         onClose={() => setShowVoiceHealthModal(false)}
         isSilentMode={userState.preferences.silent_mode}
         onToggleSilentMode={(silent) => updatePreferences({ silent_mode: silent })}
+      />
+
+      {/* Tier 0 Graduation Milestone Passport Modal */}
+      <MilestonePassportModal
+        isOpen={showPassportModal}
+        onClose={() => setShowPassportModal(false)}
+        userName="นักเรียนฮั่นซีโร่ 🐰"
+        streakCount={userState.progress.streak.count}
+        totalXp={userState.progress.xp}
       />
 
       {/* Engine Test Panel Modal */}
