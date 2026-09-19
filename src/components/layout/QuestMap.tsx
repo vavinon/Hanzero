@@ -66,7 +66,15 @@ export const QuestMap: React.FC<QuestMapProps> = ({
   onOpenReviewDeck,
   dueCardsCount,
 }) => {
-  const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1'>('tier1');
+  const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1'>(
+    (progress.current_tier as 'tier0' | 'tier1') || 'tier0'
+  );
+
+  React.useEffect(() => {
+    if (progress.current_tier === 'tier0' || progress.current_tier === 'tier1') {
+      setSelectedTier(progress.current_tier);
+    }
+  }, [progress.current_tier]);
 
   // Completed lessons from progress state
   const completedSet = new Set(progress.completed_lessons);

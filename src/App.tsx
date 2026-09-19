@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { HeaderBar, QuestMap, DevStorageDrawer, DailyCompletionModal } from './components/layout';
+import {
+  HeaderBar,
+  QuestMap,
+  DevStorageDrawer,
+  DailyCompletionModal,
+  WelcomeModal,
+  VoiceHealthModal,
+} from './components/layout';
 import { useUserState } from './hooks/useUserState';
 import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine';
 import { checkStorageHealth, StorageDiagnostics, loadStrokeCache } from './engines/storage';
@@ -32,21 +39,34 @@ export const App: React.FC = () => {
     completeLesson,
     recordCardReview,
     updatePreferences,
+    completeOnboarding,
     refreshQueue,
   } = useUserState();
 
   // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck)
   const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review'>('map');
-  const [activeLessonId, setActiveLessonId] = useState<string>('unit01_l01');
+  const [activeLessonId, setActiveLessonId] = useState<string>('t1_u01_l01');
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
+  const [showWelcomeModal, setShowWelcomeModal] = useState<boolean>(false);
+  const [showVoiceHealthModal, setShowVoiceHealthModal] = useState<boolean>(false);
   const [storageHealth, setStorageHealth] = useState<StorageDiagnostics | null>(null);
   const [strokeCacheStatus, setStrokeCacheStatus] = useState<string | null>(null);
   const [dailyCelebration, setDailyCelebration] = useState<{ isOpen: boolean; xp: number }>({
     isOpen: false,
     xp: 0,
   });
+
+  // Check First-run Onboarding Need
+  useEffect(() => {
+    if (
+      !userState.progress.onboarding_completed &&
+      userState.progress.completed_lessons.length === 0
+    ) {
+      setShowWelcomeModal(true);
+    }
+  }, [userState.progress.onboarding_completed, userState.progress.completed_lessons.length]);
 
   // Check In-App WebView & Storage Health
   useEffect(() => {
@@ -200,6 +220,8 @@ export const App: React.FC = () => {
             onRestoreState={() => {
               window.location.reload();
             }}
+            onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
+            onResetOnboarding={() => setShowWelcomeModal(true)}
           />
           <button
             onClick={() => setShowTestPanel(true)}
@@ -217,6 +239,29 @@ export const App: React.FC = () => {
         xpEarnedToday={dailyCelebration.xp}
         streakCount={userState.progress.streak.count}
         onClose={() => setDailyCelebration({ isOpen: false, xp: 0 })}
+      />
+
+      {/* First-Run Welcome / Onboarding Modal */}
+      <WelcomeModal
+        isOpen={showWelcomeModal}
+        onSelectTrack={async (track, silent) => {
+          await completeOnboarding(track, silent);
+          setShowWelcomeModal(false);
+          if (track === 'tier0') {
+            setCurrentView('map');
+          } else {
+            setActiveLessonId('t1_u01_l01');
+          }
+        }}
+        onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
+      />
+
+      {/* Tutu Bunny Voice Health Modal */}
+      <VoiceHealthModal
+        isOpen={showVoiceHealthModal}
+        onClose={() => setShowVoiceHealthModal(false)}
+        isSilentMode={userState.preferences.silent_mode}
+        onToggleSilentMode={(silent) => updatePreferences({ silent_mode: silent })}
       />
 
       {/* Engine Test Panel Modal */}

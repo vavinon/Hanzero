@@ -12,8 +12,8 @@
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
 ### 1. ระบบต้อนรับผู้เรียนและเลือกเส้นทาง พร้อมระบบตรวจสุขภาพเสียง (Onboarding & Voice Health Flow)
-- [ ] พัฒนา `src/components/layout/WelcomeModal.tsx` ร่วมกับ `VoiceHealthModal.tsx`:
-  - แสดงผลเมื่อเข้าใช้งานครั้งแรก (ตรวจไม่พบข้อมูลใน LocalStorage)
+- [x] พัฒนา `src/components/layout/WelcomeModal.tsx` ร่วมกับ `VoiceHealthModal.tsx`:
+  - แสดงผลเมื่อเข้าใช้งานครั้งแรก (ตรวจไม่พบข้อมูลใน LocalStorage หรือยังไม่เคยทำ Onboarding)
   - ตัวเลือก 2 เส้นทาง:
     - 🐰 **"เริ่มจาก 0 ไม่เคยเรียนจีนมาก่อน" (แนะนำ):** นำทางเข้าสู่ Tier 0 Unit 0.1 ทันที
     - 🚀 **"พอรู้พินอินแล้ว ข้ามไปบทสนทนา":** ปลดล็อกข้ามไปที่ Tier 1 Unit 1.1 ได้ทันที

@@ -58,6 +58,7 @@ export interface UseUserStateReturn {
     mnemonic?: string;
   }>) => Promise<void>;
   updatePreferences: (patch: Partial<PreferencesState>) => Promise<void>;
+  completeOnboarding: (track: 'tier0' | 'tier1', silentMode: boolean) => Promise<void>;
   exportBackup: () => Promise<string>;
   importBackup: (jsonString: string) => Promise<boolean>;
   quickSyncCode: string;
@@ -396,6 +397,18 @@ export function useUserState(): UseUserStateReturn {
     setUserState(nextState);
   }, []);
 
+  // 10. Complete onboarding & select learning track
+  const completeOnboarding = useCallback(async (track: 'tier0' | 'tier1', silentMode: boolean) => {
+    const currentState = getStoredUserStateSync();
+    const nextState: UserStateSchema = JSON.parse(JSON.stringify(currentState)) as UserStateSchema;
+    nextState.progress.onboarding_completed = true;
+    nextState.progress.selected_track = track;
+    nextState.progress.current_tier = track;
+    nextState.preferences.silent_mode = silentMode;
+    await saveUserState(nextState);
+    setUserState(nextState);
+  }, []);
+
   // 10. Backup & Quick Sync helpers
   const exportBackup = useCallback(async (): Promise<string> => {
     return exportSnapshotAsJsonString();
@@ -451,6 +464,7 @@ export function useUserState(): UseUserStateReturn {
     recordCardReview,
     addVocabToSrs,
     updatePreferences,
+    completeOnboarding,
     exportBackup,
     importBackup,
     quickSyncCode,

@@ -7,3 +7,5 @@ export * from './HeaderBar';
 export * from './QuestMap';
 export * from './DevStorageDrawer';
 export * from './DailyCompletionModal';
+export * from './VoiceHealthModal';
+export * from './WelcomeModal';

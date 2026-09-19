@@ -21,6 +21,8 @@ export interface DevStorageDrawerProps {
   strokeCacheStatus: string | null;
   onInspectStrokeCache: () => void;
   onRestoreState: (state: UserStateSchema) => void;
+  onOpenVoiceHealth?: () => void;
+  onResetOnboarding?: () => void;
 }
 
 export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
@@ -29,6 +31,8 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   strokeCacheStatus,
   onInspectStrokeCache,
   onRestoreState,
+  onOpenVoiceHealth,
+  onResetOnboarding,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [copiedSyncCode, setCopiedSyncCode] = useState<boolean>(false);
@@ -244,6 +248,31 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
               >
                 {strokeCacheStatus}
               </div>
+            )}
+          </div>
+
+          {/* Phase 4: Voice Health & Onboarding Sandbox Controls */}
+          <div style={{ borderTop: '1px dashed var(--border-subtle)', paddingTop: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ fontWeight: 600, color: 'var(--text-ink-primary)' }}>
+              ระบบเสียง & Onboarding (Phase 4)
+            </div>
+            {onOpenVoiceHealth && (
+              <button
+                onClick={onOpenVoiceHealth}
+                className="btn-tactile-secondary"
+                style={{ width: '100%', minHeight: '44px', gap: '6px' }}
+              >
+                <span>🎧 ตรวจสอบสุขภาพเสียง (Voice Health Check)</span>
+              </button>
+            )}
+            {onResetOnboarding && (
+              <button
+                onClick={onResetOnboarding}
+                className="btn-tactile-secondary"
+                style={{ width: '100%', minHeight: '44px', gap: '6px' }}
+              >
+                <span>🐰 ทดสอบเปิด Onboarding Modal อีกครั้ง</span>
+              </button>
             )}
           </div>
         </div>

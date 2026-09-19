@@ -56,6 +56,8 @@ export interface ProgressState {
   hearts: ProgressHearts;
   xp: number;
   level: number;
+  onboarding_completed?: boolean;
+  selected_track?: 'tier0' | 'tier1';
 }
 
 export interface SrsSummaryState {
@@ -167,6 +169,8 @@ export function createDefaultUserState(): UserStateSchema {
       },
       xp: 0,
       level: 1,
+      onboarding_completed: false,
+      selected_track: 'tier0',
     },
     srs_summary: {
       total_learned_count: 0,
@@ -202,6 +206,15 @@ export function isUserStateSchema(value: unknown): value is UserStateSchema {
   if (typeof prog.streak !== 'object' || prog.streak === null) return false;
   if (typeof prog.hearts !== 'object' || prog.hearts === null) return false;
   if (typeof prog.xp !== 'number' || !Number.isFinite(prog.xp)) return false;
+
+  if (prog.onboarding_completed !== undefined && typeof prog.onboarding_completed !== 'boolean') return false;
+  if (
+    prog.selected_track !== undefined &&
+    prog.selected_track !== 'tier0' &&
+    prog.selected_track !== 'tier1'
+  ) {
+    return false;
+  }
 
   return true;
 }
