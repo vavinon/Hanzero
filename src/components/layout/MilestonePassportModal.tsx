@@ -22,6 +22,7 @@ import {
   Copy,
 } from 'lucide-react';
 import { playFanfare, playClick, speak } from '../../engines/audio/audioEngine';
+import { copyTextWithFallback } from '../../utils/clipboard';
 
 export interface MilestonePassportModalProps {
   isOpen: boolean;
@@ -357,15 +358,18 @@ export const MilestonePassportModal: React.FC<MilestonePassportModalProps> = ({
     setTimeout(() => setShareStatusMessage(null), 3000);
   };
 
-  // Copy share message to clipboard
-  const handleCopyText = () => {
+  // Copy share message to clipboard with 3-tier resilient fallback
+  const handleCopyText = async () => {
     playClick();
     const shareText = `ฉันสำเร็จการศึกษาปูพื้นฐานพินอิน Tier 0 บน Hanzero แล้ว! 23 พยัญชนะ 24 สระ และ 5 อักษรจีนแรกในชีวิต 🇨🇳✨ https://hanzero.app`;
-    if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      navigator.clipboard.writeText(shareText).then(() => {
-        setCopiedNotification(true);
-        setTimeout(() => setCopiedNotification(false), 2500);
-      });
+    const success = await copyTextWithFallback(shareText);
+    if (success) {
+      setCopiedNotification(true);
+      setTimeout(() => setCopiedNotification(false), 2500);
+    } else {
+      if (typeof window !== 'undefined' && typeof window.alert === 'function') {
+        window.alert(`กรุณาคัดลอกข้อความด้านล่างเพื่อแชร์:\n\n${shareText}`);
+      }
     }
   };
 

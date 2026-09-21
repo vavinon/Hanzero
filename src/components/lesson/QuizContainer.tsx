@@ -20,7 +20,7 @@
  * - Zero Memory Leak Teardown (all speech and timer handles cleaned on unmount)
  */
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import {
   Volume2,
   Heart,
@@ -52,6 +52,7 @@ import {
   playClick,
 } from '../../engines/audio/audioEngine';
 import { recordQuestionError } from '../../engines/storage';
+import { copyTextWithFallback } from '../../utils/clipboard';
 
 export interface QuizResult {
   passed: boolean;
@@ -74,6 +75,8 @@ export interface QuizContainerProps {
   initialSilentMode?: boolean;
   /** Whether the quiz runs in the Safe Practice Zone (0 hearts lost on mistake) */
   isSafeZone?: boolean;
+  /** Whether multiple choice options are shuffled at runtime (defaults to true) */
+  shuffleOptions?: boolean;
   /** Callback fired when the quiz set or boss challenge is completed */
   onComplete?: (result: QuizResult) => void;
   /** Callback fired when a heart is lost */
@@ -91,6 +94,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   initialHearts = 5,
   initialSilentMode = false,
   isSafeZone = false,
+  shuffleOptions = true,
   onComplete,
   onHeartLost,
   className = '',
@@ -125,6 +129,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
   const totalQuestions = quizzes.length + (bossChallenge ? 1 : 0);
   const isBossStage = currentIndex === quizzes.length && Boolean(bossChallenge);
   const currentQuiz: QuizQuestion | undefined = !isBossStage ? quizzes[currentIndex] : undefined;
+
+  // Option Shuffling State: Atomic useMemo eliminates 1-frame desync gap and fast-tap race conditions
+  const displayOptions = useMemo<Array<{ text: string; originalIndex: number }>>(() => {
+    const rawOptions = (isBossStage
+      ? bossChallenge?.options
+      : (currentQuiz as MultipleChoiceQuiz)?.options) || [];
+
+    const mapped = rawOptions.map((text, originalIndex) => ({
+      text,
+      originalIndex,
+    }));
+
+    if (!shuffleOptions || mapped.length <= 1) {
+      return mapped;
+    }
+
+    // Fisher-Yates shuffle
+    const shuffled = [...mapped];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  }, [currentIndex, currentQuiz, isBossStage, bossChallenge, shuffleOptions]);
 
   // Red Team Defense: Safe Click SFX that strictly respects Silent Mode
   const playSafeClick = useCallback(() => {
@@ -236,7 +264,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
     if (isBossStage && bossChallenge) {
       if (selectedOption === null) return;
-      isCorrect = selectedOption === bossChallenge.correct_index;
+      const selectedItem = displayOptions[selectedOption];
+      isCorrect = selectedItem?.originalIndex === bossChallenge.correct_index;
     } else if (currentQuiz) {
       if (currentQuiz.type === 'sentence_scramble') {
         const scrambleQuiz = currentQuiz as SentenceScrambleQuiz;
@@ -247,7 +276,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       } else {
         const mcQuiz = currentQuiz as MultipleChoiceQuiz;
         if (selectedOption === null) return;
-        isCorrect = selectedOption === mcQuiz.correct_index;
+        const selectedItem = displayOptions[selectedOption];
+        isCorrect = selectedItem?.originalIndex === mcQuiz.correct_index;
       }
     }
 
@@ -275,8 +305,8 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         let correctStr = 'unknown';
         if (currentQuiz.type !== 'sentence_scramble') {
           const mc = currentQuiz as MultipleChoiceQuiz;
-          wrongStr = selectedOption !== null ? mc.options[selectedOption] || '' : '';
-          correctStr = mc.options[mc.correct_index] || '';
+          wrongStr = selectedOption !== null ? displayOptions[selectedOption]?.text || '' : '';
+          correctStr = displayOptions.find((d) => d.originalIndex === mc.correct_index)?.text || mc.options[mc.correct_index] || '';
         } else {
           const sc = currentQuiz as SentenceScrambleQuiz;
           wrongStr = placedTokens.map((t) => t.text).join(' ');
@@ -347,20 +377,24 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
     setShowHeartRefillModal(false);
   };
 
-  // Share Trophy Card with Cleared Timer
-  const handleShareTrophy = () => {
+  // Share Trophy Card with Cleared Timer & Resilient Clipboard Fallback
+  const handleShareTrophy = async () => {
     playSafeClick();
     const shareText = `🐰 Hanzero — ชนะด่านท้าทายแล้ว! ได้รับเหรียญ "${
       cheerTrophy?.badge_name || 'ยอดฝีมือภาษาจีน'
     }" +${cheerTrophy?.xp_reward || 50} XP! เริ่มจาก 0 ก็เก่งจีนได้ 🌟`;
 
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(shareText);
+    const isCopied = await copyTextWithFallback(shareText);
+    if (isCopied) {
       setCopiedShare(true);
       if (shareTimerRef.current) clearTimeout(shareTimerRef.current);
       shareTimerRef.current = setTimeout(() => {
         if (!isUnmountedRef.current) setCopiedShare(false);
       }, 2500);
+    } else {
+      if (typeof window !== 'undefined' && typeof window.alert === 'function') {
+        window.alert(`กรุณาคัดลอกข้อความด้านล่างเพื่อแชร์รางวัล:\n\n${shareText}`);
+      }
     }
   };
 
@@ -763,49 +797,47 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
             aria-label="ตัวเลือกคำตอบ"
             style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
           >
-            {((isBossStage ? bossChallenge?.options : (currentQuiz as MultipleChoiceQuiz)?.options) || []).map(
-              (optionText, idx) => {
-                const isSelected = selectedOption === idx;
-                const letter = String.fromCharCode(65 + idx); // A, B, C, D
+            {displayOptions.map((item, idx) => {
+              const isSelected = selectedOption === idx;
+              const letter = String.fromCharCode(65 + idx); // A, B, C, D
 
-                let statusClass = '';
-                if (isAnswerChecked) {
-                  const correctIdx = isBossStage
-                    ? bossChallenge?.correct_index
-                    : (currentQuiz as MultipleChoiceQuiz)?.correct_index;
+              let statusClass = '';
+              if (isAnswerChecked) {
+                const correctIdx = isBossStage
+                  ? bossChallenge?.correct_index
+                  : (currentQuiz as MultipleChoiceQuiz)?.correct_index;
 
-                  if (idx === correctIdx) {
-                    statusClass = 'is-correct';
-                  } else if (isSelected) {
-                    statusClass = 'is-wrong';
-                  }
+                if (item.originalIndex === correctIdx) {
+                  statusClass = 'is-correct';
                 } else if (isSelected) {
-                  statusClass = 'is-selected';
+                  statusClass = 'is-wrong';
                 }
-
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    role="radio"
-                    data-testid={`quiz-option-card-${idx}`}
-                    aria-checked={isSelected}
-                    disabled={isAnswerChecked}
-                    onClick={() => handleSelectOption(idx)}
-                    className={`quiz-option-card ${statusClass}`}
-                  >
-                    <div className="quiz-option-badge">{letter}</div>
-                    <span style={{ flex: 1, lineHeight: 1.4 }}>{optionText}</span>
-                    {isAnswerChecked && statusClass === 'is-correct' && (
-                      <CheckCircle2 size={20} color="var(--color-jade-primary, #059669)" />
-                    )}
-                    {isAnswerChecked && statusClass === 'is-wrong' && (
-                      <XCircle size={20} color="var(--color-vermilion, #DC2626)" />
-                    )}
-                  </button>
-                );
+              } else if (isSelected) {
+                statusClass = 'is-selected';
               }
-            )}
+
+              return (
+                <button
+                  key={idx}
+                  type="button"
+                  role="radio"
+                  data-testid={`quiz-option-card-${idx}`}
+                  aria-checked={isSelected}
+                  disabled={isAnswerChecked}
+                  onClick={() => handleSelectOption(idx)}
+                  className={`quiz-option-card ${statusClass}`}
+                >
+                  <div className="quiz-option-badge">{letter}</div>
+                  <span style={{ flex: 1, lineHeight: 1.4 }}>{item.text}</span>
+                  {isAnswerChecked && statusClass === 'is-correct' && (
+                    <CheckCircle2 size={20} color="var(--color-jade-primary, #059669)" />
+                  )}
+                  {isAnswerChecked && statusClass === 'is-wrong' && (
+                    <XCircle size={20} color="var(--color-vermilion, #DC2626)" />
+                  )}
+                </button>
+              );
+            })}
           </div>
         )}
 

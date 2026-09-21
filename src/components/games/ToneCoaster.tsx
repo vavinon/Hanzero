@@ -547,15 +547,15 @@ export const ToneCoaster: React.FC<ToneCoasterProps> = ({
                 }}
                 data-testid={`btn-tone-track-${t}`}
               >
-                <div className="flex items-center gap-1.5">
-                  <span className="text-base font-bold" style={{ color: info.color }}>
+                <div className="flex items-center justify-center gap-1.5">
+                  <span className="text-lg font-bold pinyin-display font-pinyin leading-none" style={{ color: info.color }}>
                     {info.pinyinMark}
                   </span>
                   <span className="text-xs text-slate-500 font-medium">
                     {t === 0 ? 'เสียงเบา' : `เสียง ${t}`}
                   </span>
                 </div>
-                <span className="text-[10px] text-slate-400 mt-0.5">
+                <span className="text-[10px] text-slate-400 mt-0.5 pinyin-display text-center">
                   {info.exampleWord.hanzi} ({info.exampleWord.pinyin})
                 </span>
               </button>

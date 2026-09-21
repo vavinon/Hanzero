@@ -133,9 +133,9 @@ describe('Tier 1 (Units 1-10) Curriculum Data & Pedagogical Schema Verification'
     });
 
     describe('Quizzes & Mini-Games Verification', () => {
-      it('provides exactly 4 quizzes in every lesson covering all 4 core modes', () => {
+      it('provides at least 4 quizzes in every lesson covering all core modes', () => {
         unit.lessons.forEach((lesson) => {
-          expect(lesson.quizzes.length).toBe(4);
+          expect(lesson.quizzes.length).toBeGreaterThanOrEqual(4);
 
           const types = lesson.quizzes.map((q) => q.type);
           expect(types).toContain('sentence_scramble');

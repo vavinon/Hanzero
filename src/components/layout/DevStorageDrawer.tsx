@@ -35,49 +35,9 @@ export interface DevStorageDrawerProps {
   defaultOpen?: boolean;
 }
 
-/**
- * 3-Tier Safe Clipboard Helper for modern browsers, iOS WebKit, and WebViews
- */
-export async function copyTextWithFallback(text: string): Promise<boolean> {
-  // Tier 1: Modern Async Clipboard API (Secure Context)
-  if (
-    typeof window !== 'undefined' &&
-    window.isSecureContext &&
-    navigator?.clipboard?.writeText
-  ) {
-    try {
-      await navigator.clipboard.writeText(text);
-      return true;
-    } catch (err) {
-      console.warn('[Hanzero Storage] Modern clipboard write failed, trying fallback:', err);
-    }
-  }
-
-  // Tier 2: Legacy execCommand Fallback (iOS WebKit friendly offscreen textarea)
-  if (typeof document !== 'undefined') {
-    try {
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      textArea.style.position = 'fixed';
-      textArea.style.top = '0';
-      textArea.style.left = '-9999px';
-      textArea.style.opacity = '0';
-      textArea.style.fontSize = '16px';
-      textArea.setAttribute('readonly', '');
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      textArea.setSelectionRange(0, 999999);
-      const success = document.execCommand('copy');
-      document.body.removeChild(textArea);
-      if (success) return true;
-    } catch (fallbackErr) {
-      console.warn('[Hanzero Storage] execCommand fallback failed:', fallbackErr);
-    }
-  }
-
-  return false;
-}
+// Re-export shared 3-tier safe clipboard utility
+export { copyTextWithFallback } from '../../utils/clipboard';
+import { copyTextWithFallback } from '../../utils/clipboard';
 
 export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   userState,

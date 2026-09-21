@@ -17,6 +17,7 @@
   --color-vermilion-surface: #FEF2F2;
 
   --color-ochre: #D97706;             /* ส้มทองคำ/ดินเผาอบอุ่น สำหรับ Streak */
+  --color-ochre-accessible: #B45309;  /* ส้มเข้มสำหรับตัวอักษรขนาดเล็ก ผ่านเกณฑ์ WCAG AA 5.84:1 */
   --color-ochre-surface: #FFFBEB;
 
   /* Typography Inks */
@@ -99,6 +100,16 @@ button {
   align-items: center;
   justify-content: center;
   transition: transform 0.1s ease, filter 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Accessible Focus Visible (WCAG 2.1 SC 2.4.7 Level AA) with Oriental Jade styling */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[role="radio"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-jade-primary, #047857) !important;
+  outline-offset: 2px !important;
 }
 
 /* Tactile 3D Buttons (Duolingo-level delight with Oriental Jade palette) */

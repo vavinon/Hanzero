@@ -31,12 +31,15 @@ export function getDeviceDiagnosticInfo(): DeviceDiagnosticInfo {
   const isBrowser = typeof window !== 'undefined';
   const ua = isBrowser && typeof navigator !== 'undefined' ? (navigator.userAgent || '') : 'Server/Node';
   const isInApp = /Line|FB_IAB|FB4A|FBAN|FBIOS|Instagram|Discord|MicroMessenger/i.test(ua);
+  const platformStr = isBrowser && typeof navigator !== 'undefined'
+    ? ((navigator as { userAgentData?: { platform?: string } }).userAgentData?.platform || navigator.platform || 'Unknown')
+    : 'Node';
 
   return {
     viewport_width: isBrowser ? window.innerWidth : 0,
     viewport_height: isBrowser ? window.innerHeight : 0,
     device_pixel_ratio: isBrowser ? (window.devicePixelRatio || 1) : 1,
-    platform: isBrowser && typeof navigator !== 'undefined' ? (navigator.platform || 'Unknown') : 'Node',
+    platform: platformStr,
     is_in_app_browser: isInApp,
     is_secure_context: isBrowser ? Boolean(window.isSecureContext) : false,
   };
@@ -80,9 +83,13 @@ function loadSnapshotSync(): DiagnosticsSnapshot {
         parsed &&
         parsed.schema_version === 1 &&
         typeof parsed.bottlenecks === 'object' &&
-        Array.isArray(parsed.recent_errors) &&
-        typeof parsed.audio_usage === 'object'
+        Array.isArray(parsed.recent_errors)
       ) {
+        parsed.audio_usage = {
+          silent_mode_toggles: parsed.audio_usage?.silent_mode_toggles ?? 0,
+          normal_plays: parsed.audio_usage?.normal_plays ?? 0,
+          slow_plays: parsed.audio_usage?.slow_plays ?? 0,
+        };
         if (!parsed.session_start_time) parsed.session_start_time = parsed.created_at || Date.now();
         parsed.last_active_at = Date.now();
         if (!parsed.device_info) parsed.device_info = getDeviceDiagnosticInfo();
@@ -215,9 +222,11 @@ export function getDiagnosticsSnapshot(): DiagnosticsSnapshot {
 export function exportDiagnosticsMarkdown(userState?: UserStateSchema): string {
   const snapshot = loadSnapshotSync();
   const topBottlenecks = getTopLearningBottlenecks(3);
-  const totalAudioPlays = snapshot.audio_usage.normal_plays + snapshot.audio_usage.slow_plays;
+  const normalPlays = snapshot.audio_usage?.normal_plays ?? 0;
+  const slowPlays = snapshot.audio_usage?.slow_plays ?? 0;
+  const totalAudioPlays = normalPlays + slowPlays;
   const slowRatio = totalAudioPlays > 0
-    ? Math.round((snapshot.audio_usage.slow_plays / totalAudioPlays) * 100)
+    ? Math.round((slowPlays / totalAudioPlays) * 100)
     : 0;
 
   const now = new Date();

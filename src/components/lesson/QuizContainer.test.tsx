@@ -95,6 +95,10 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
     speakSpy = vi.spyOn(audioEngine, 'speak').mockResolvedValue();
     stopSpeakingSpy = vi.spyOn(audioEngine, 'stopSpeaking').mockImplementation(() => {});
     vi.spyOn(audioEngine, 'playClick').mockImplementation(() => {});
+
+    // Mock window.alert and document.execCommand for clipboard fallback
+    window.alert = vi.fn();
+    document.execCommand = vi.fn().mockReturnValue(true);
   });
 
   afterEach(async () => {
@@ -171,7 +175,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
   describe('Multiple Choice Interaction', () => {
     it('allows selecting option and checking correct answer', async () => {
       await act(async () => {
-        root!.render(<QuizContainer quizzes={mockQuizzes} />);
+        root!.render(<QuizContainer quizzes={mockQuizzes} shuffleOptions={false} />);
       });
 
       const checkBtn = container?.querySelector('button[aria-label="ตรวจคำตอบ"]') as HTMLButtonElement;
@@ -214,6 +218,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
             quizzes={mockQuizzes}
             initialHearts={3}
             onHeartLost={onHeartLostMock}
+            shuffleOptions={false}
           />
         );
       });
@@ -248,6 +253,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
             initialHearts={3}
             isSafeZone={true}
             onHeartLost={onHeartLostMock}
+            shuffleOptions={false}
           />
         );
       });
@@ -278,7 +284,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
   describe('Adaptive Silent Mode', () => {
     it('adapts listen_match to visual text and mutes sound effects', async () => {
       await act(async () => {
-        root!.render(<QuizContainer quizzes={mockQuizzes} initialSilentMode={true} />);
+        root!.render(<QuizContainer quizzes={mockQuizzes} initialSilentMode={true} shuffleOptions={false} />);
       });
 
       // Verification: Audio button is replaced by silent visual hint
@@ -431,6 +437,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
             bossChallenge={mockBossChallenge}
             cheerTrophy={mockCheerTrophy}
             onComplete={onCompleteMock}
+            shuffleOptions={false}
           />
         );
       });
@@ -502,7 +509,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
   describe('Hearts Depleted Recovery', () => {
     it('shows refill modal when hearts reach 0 and refills safely on button click', async () => {
       await act(async () => {
-        root!.render(<QuizContainer quizzes={mockQuizzes} initialHearts={1} />);
+        root!.render(<QuizContainer quizzes={mockQuizzes} initialHearts={1} shuffleOptions={false} />);
       });
 
       // Submit wrong answer with 1 heart left -> 0 hearts
@@ -574,6 +581,7 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
             bossChallenge={mockBossChallenge}
             cheerTrophy={mockCheerTrophy}
             onComplete={onCompleteMock}
+            shuffleOptions={false}
           />
         );
       });
@@ -619,7 +627,45 @@ describe('QuizContainer Component (Phase 2 Slice 2.5)', () => {
   });
 
   // --------------------------------------------------------------------------
-  // 8. Cleanup & Teardown
+  // 8. Runtime Shuffling & Resilient Sharing
+  // --------------------------------------------------------------------------
+  describe('Runtime Shuffling & Resilient Sharing', () => {
+    it('defaults to shuffleOptions=true, maintaining letter badges A-D while correctly validating text', async () => {
+      await act(async () => {
+        root!.render(<QuizContainer quizzes={[mockQuizzes[0]]} />);
+      });
+
+      const options = container?.querySelectorAll('.quiz-option-card');
+      expect(options?.length).toBe(4);
+
+      // Verify badges are sequentially A, B, C, D
+      const badges = Array.from(options!).map((el) => el.querySelector('.quiz-option-badge')?.textContent);
+      expect(badges).toEqual(['A', 'B', 'C', 'D']);
+
+      // Find the card with the correct answer text: 'เสียง 3 (ǎ) ตีลังกาลงสไลเดอร์แล้วเด้งขึ้น'
+      const targetCard = Array.from(options!).find((el) =>
+        el.textContent?.includes('เสียง 3 (ǎ) ตีลังกาลงสไลเดอร์แล้วเด้งขึ้น')
+      );
+      expect(targetCard).toBeTruthy();
+
+      // Click the correct card
+      await act(async () => {
+        targetCard!.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      });
+
+      const checkBtn = container?.querySelector('button[aria-label="ตรวจคำตอบ"]') as HTMLButtonElement;
+      await act(async () => {
+        checkBtn.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      });
+
+      expect(playCorrectSpy).toHaveBeenCalled();
+      expect(targetCard!.classList.contains('is-correct')).toBe(true);
+      expect(container?.textContent).toContain('ถูกต้องแล้วคนเก่ง!');
+    });
+  });
+
+  // --------------------------------------------------------------------------
+  // 9. Cleanup & Teardown
   // --------------------------------------------------------------------------
   describe('Cleanup & Teardown', () => {
     it('cancels active speech when unmounted', async () => {
