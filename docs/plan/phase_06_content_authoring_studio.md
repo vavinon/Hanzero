@@ -61,12 +61,12 @@ flowchart TD
   - Unit Tests ครอบคลุม 100% ด้วย Vitest (`studioLinterEngine.test.ts`)
 
 ### `TASK-602`: Studio State Engine, Draft Recovery & JSON Serialization
-- [ ] พัฒนา Hook และ Serializer ใน `src/hooks/useStudioDraft.ts` และ `src/engines/studio/studioSerializer.ts`:
+- [x] พัฒนา Hook และ Serializer ใน `src/hooks/useStudioDraft.ts` และ `src/engines/studio/studioSerializer.ts`:
   - **Reactive Draft State:** จัดเก็บสถานะแบบร่าง Unit, Vocab List, Dialogue Script, และ Quizzes
   - **Crash-Resilient Auto-Save:** บันทึกดราฟต์ลง LocalStorage ทุกครั้งที่มีการแก้ไข กู้คืนข้อมูลอัตโนมัติเมื่อหน้ารีเฟรช
-  - **Strict Schema Serialization:** แปลงสถานะแบบร่างเป็น JSON ตามโครงสร้าง `LessonUnit` ใน `src/types/lesson.ts`
+  - **Strict Schema Serialization:** แปลงสถานะแบบร่างเป็น JSON ตามโครงสร้าง `UnitLessonData` ใน `src/types/lesson.ts`
   - **JSON Importer:** นำเข้าไฟล์ JSON บทเรียนเดิมมาเปิดแก้ไขได้ทันที พร้อมระบบ Validate และฟ้อง Error จุดที่ผิด
-  - Unit Tests สำหรับ Round-trip Import/Export
+  - Unit Tests สำหรับ Round-trip Import/Export 100% กับ `unit01_greetings.json` และ `unit02_numbers_time.json`
 
 ### `TASK-603`: Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms)
 - [ ] พัฒนา UI Components ใน `src/components/studio/`:
