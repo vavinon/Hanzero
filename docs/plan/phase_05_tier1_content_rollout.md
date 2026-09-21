@@ -3,7 +3,7 @@ plan_type: "ROADMAP_PHASE"
 phase: "05"
 created_at: "2026-09-19"
 updated_at: "2026-09-21"
-status: "IN_PROGRESS"
+status: "DONE"
 priority: "HIGH"
 target_scripts: ["scripts/validateCurriculum.ts"]
 target_curriculum: ["src/data/lessons/tier1/"]
@@ -46,11 +46,11 @@ target_curriculum: ["src/data/lessons/tier1/"]
   - **Unit 10 (โรงแรม & เที่ยวบิน):** เช็กอินโรงแรม ขอรหัส Wi-Fi สนามบิน ขึ้นเครื่องบิน
   - 🏆 **Tier 1 Grand Boss Quest:** "ภารกิจเที่ยวจีน 3 วัน 2 คืนไร้อุปสรรค" (Lesson 10.4)
 
-### 3. ระบบวัดผลผลิตภัณฑ์และข้อมูลสถิตินิรนาม (Product KPIs & Telemetry)
-- [ ] ระบบเก็บข้อมูลสถิตินิรนามในตัวเครื่อง (Zero-Cost Local Diagnostics):
+### 3. ระบบวัดผลผลิตภัณฑ์และข้อมูลสถิตินิรนาม (Product KPIs & Telemetry) [DONE ✅]
+- [x] ระบบเก็บข้อมูลสถิตินิรนามในตัวเครื่อง (Zero-Cost Local Diagnostics): [DONE ✅]
   - บันทึกสถิติ 3 จุดที่ผู้เรียนตอบผิดซ้ำบ่อยที่สุด (Top 3 Learning Bottlenecks) เพื่อนำไปปรับปรุงเนื้อหา
   - บันทึกอัตราการใช้งาน Silent Mode และ Slow TTS Mode
-- [ ] กำหนดเกณฑ์วัดผลความสำเร็จของผลิตภัณฑ์ (Product North Star Metrics):
+- [x] กำหนดเกณฑ์วัดผลความสำเร็จของผลิตภัณฑ์ (Product North Star Metrics): [DONE ✅]
   - **Tier 0 Completion Rate > 60%:** ผู้เริ่มต้นที่เข้าเรียน Tier 0 จบครบทั้ง 6 Units
   - **Unit 1 Completion Rate > 50%:** สัดส่วนผู้เรียนที่จบ Unit 1 สำเร็จ
   - **Day-7 Retention > 35%:** ผู้เรียนกลับมาเปิดแอปซ้ำภายใน 7 วัน

@@ -15,9 +15,9 @@
 
 ## 🎯 โฟกัสปัจจุบัน (Current Sprint Focus)
 
-* **เฟสปัจจุบัน:** **Phase 5: Tier 1 Content Rollout, Metrics & Production Launch**
-* **แผนแม่บท:** [docs/plan/phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
-* **เป้าหมายสปรินต์:** ขยายเนื้อหาบทเรียน Tier 1 ครบ 10 Units (40 บทย่อย), พัฒนาระบบตรวจสอบเนื้อหาอัตโนมัติ (`validateCurriculum.ts`), ติดตั้ง Playwright E2E Testing Suite, และสร้าง GitHub Actions CI/CD Pipeline สำหรับ Deploy ขึ้น GitHub Pages
+* **เฟสปัจจุบัน:** **Phase 6: Content Authoring Studio & Community Contribution**
+* **แผนแม่บท:** [docs/plan/phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
+* **เป้าหมายสปรินต์:** สร้างเครื่องมือ Authoring Studio บนเบราว์เซอร์ (Zero-Backend Web GUI) พร้อม In-Browser Pedagogical Linter, Reactive Draft Persistence, Live Mobile Device Preview, และ Zero-Token Git Hand-off สำหรับส่งออกบทเรียน
 
 ---
 
@@ -34,6 +34,11 @@
 | **2026-09-21** | `TASK-504` | Local Diagnostics & Playwright E2E Testing Suite | P05 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_playwright-e2e-suite.md) |
 | **2026-09-21** | `TASK-505` | GitHub Actions CI/CD Pipeline & GitHub Pages Deploy | P05 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_cicd-github-pages-deploy.md) |
 | **2026-09-21** | `TASK-506` | Zero-Knowledge Alpha Playtest Protocol & Feedback Triage | P05 | `ux_ui_designer` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_zero-knowledge-alpha-playtest.md) |
+| **2026-09-21** | `TASK-601` | In-Browser Pedagogical Linter & Pinyin Auto-Converter Engine | P06 | `web_dev` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-linter-engine.md) |
+| **2026-09-21** | `TASK-602` | Studio Draft State Engine, Recovery & JSON Serialization | P06 | `web_dev` | `TODO` ⏳ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-state-serializer.md) |
+| **2026-09-21** | `TASK-603` | Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms) | P06 | `web_dev` | `TODO` ⏳ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-visual-composers.md) |
+| **2026-09-21** | `TASK-604` | Live Interactive Mobile Device Preview & Audio Sandbox | P06 | `ux_ui_designer` | `TODO` ⏳ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-live-mobile-preview.md) |
+| **2026-09-21** | `TASK-605` | Zero-Token Git Hand-off, PR Template & Playwright E2E Suite | P06 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-git-handoff-e2e.md) |
 
 ---
 

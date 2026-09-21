@@ -1,6 +1,17 @@
+---
+plan_type: "ROADMAP_PHASE"
+phase: "06"
+created_at: "2026-09-21"
+updated_at: "2026-09-21"
+status: "IN_PROGRESS"
+priority: "HIGH"
+target_tasks: ["TASK-601", "TASK-602", "TASK-603", "TASK-604", "TASK-605"]
+target_modules: ["src/engines/studio/", "src/components/studio/", "src/hooks/useStudioDraft.ts"]
+---
+
 # 🛠️ Phase 6: Content Authoring Studio & Community Contribution
 
-เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 6** ของการพัฒนา Hanzero: การสร้างเครื่องมือจัดการและผลิตเนื้อหาบทเรียนแบบไม่พึ่งพาเซิร์ฟเวอร์ (Zero-Backend Web-based Content Studio), ระบบตรวจสอบความถูกต้องทางภาษาศาสตร์อัตโนมัติ (Pedagogical Linting), และระบบเชื่อมต่อ Git/GitHub สำหรับคอมมูนิตี้
+เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 6** ของการพัฒนา Hanzero: การสร้างเครื่องมือจัดการและผลิตเนื้อหาบทเรียนแบบไม่พึ่งพาเซิร์ฟเวอร์ (Zero-Backend Web-based Content Studio), ระบบตรวจสอบความถูกต้องทางภาษาศาสตร์อัตโนมัติในเบราว์เซอร์ (In-Browser Pedagogical Linter), หน้าจอจำลองมือถือสด (Live Interactive Mobile Preview) และระบบส่งออกเชื่อมต่อ Git (1-Click Export & Zero-Token GitHub Hand-off)
 
 ---
 
@@ -9,40 +20,84 @@
 
 ---
 
-## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
+## 🗺️ แผนผังและสถาปัตยกรรมของ Studio (System Architecture)
 
-### 1. ระบบจัดการและสร้างบทเรียนผ่านหน้าเว็บ (Visual Lesson Studio GUI)
-- [ ] พัฒนาโมดูล Studio ที่เข้าถึงได้ผ่าน `/studio` หรือเครื่องมือพัฒนาแยกส่วน:
-  - ฟอร์มกรอกข้อมูลบทเรียน: เลือกระดับ (Tier 0–4), หมวด Unit, หมายเลข Lesson, และชื่อบท 3 ภาษา (🇨🇳-🇹🇭-🇬🇧)
-  - ตัวจัดการคำศัพท์ (Vocab Manager): เพิ่ม ลบ แก้ไขบัตรคำศัพท์ คำแปล ตัวอย่างประโยค และรากศัพท์ (Radicals)
-  - ตัวสร้างบทสนทนา (Dialogue Builder): กำหนดบทพูดตัวละคร (ผู้พูด A/B), สลับข้อความ, และเลือกเสียงประกอบ
-  - ตัวสร้างแบบฝึกหัด (Quiz Composer): รองรับประเภทคำถามแบบ Multiple Choice, Hanzi Stroke Order, Sentence Scramble, และ Tone Discrimination
-  - **Live Mobile Preview:** แสดงหน้าจอจำลองขนาดสมาร์ตโฟนพรีวิวบทเรียนแบบเรียลไทม์ขณะกำลังป้อนข้อมูล
+```mermaid
+flowchart TD
+    subgraph UI ["Studio Visual Interface (src/components/studio/)"]
+        Nav["Studio Tabs (Metadata / Vocab / Dialogue / Quiz / Export)"]
+        Forms["Input Forms with Instant Linter Hints"]
+        Preview["Live Mobile Frame (Real-time Hot Preview)"]
+    end
 
-### 2. เครื่องยนต์ตรวจสอบความถูกต้องทางภาษาศาสตร์อัตโนมัติ (Pedagogical Linting Engine)
-- [ ] พัฒนาฟังก์ชันตรวจทานภาษาอัตโนมัติในเบราว์เซอร์ (`src/engines/linter/`):
-  - **Auto Pinyin Tone Placer:** พิมพ์พินอินด้วยตัวเลข (เช่น `ni3hao3`) แล้วแปลงเป็นเครื่องหมายวรรณยุกต์มาตรฐาน (`nǐhǎo`) โดยวางบนสระที่ถูกต้องตามหลักสากล
-  - **Tone Sandhi Detector:** ตรวจจับคำที่มีการผันเสียงอัตโนมัติ (กฎเสียง 3 ชน 3, กฎของ `不`, และกฎของ `一`) แจ้งเตือนผู้เขียนให้ระบุเสียงดั้งเดิมและเสียงผันจริง
-  - **Hanzi Character & Stroke Validator:** เชื่อมต่อกับคลังข้อมูลเส้นขีด เพื่อตรวจสอบว่าตัวอักษรจีนที่ป้อนเข้ามามีอยู่ในระบบและรองรับระบบคัดลายมือ (`hanzi-writer`) หรือไม่
-  - **Interleaving Rule Enforcer:** คำนวณสัดส่วนคำศัพท์เก่าจาก Unit ก่อนหน้าในแบบฝึกหัด ต้องมีไม่น้อยกว่า 20%
+    subgraph Engines ["Client-Side Engines (src/engines/studio/)"]
+        Linter["studioLinterEngine.ts<br/>(Pinyin Converter, Sandhi & Character Checks)"]
+        Serializer["studioSerializer.ts<br/>(Import/Export & Strict LessonUnit Schema)"]
+    end
 
-### 3. ระบบทดสอบเสียงสด (Audio & Speech Synthesis Sandbox)
-- [ ] ติดตั้งแผงพรีวิวเสียงใน Studio:
-  - ปุ่มทดสอบฟังเสียง TTS ภาษาจีนกลาง (`zh-CN`) ปรับความเร็ว 0.75x และ 1.0x ได้ทันที
-  - ตัวช่วยจับคู่และอัปโหลดไฟล์เสียงคนจริงสำรอง (Static Audio Fallback) สำหรับคำศัพท์ใน Tier 0 และคำออกเสียงยาก
+    subgraph State ["Reactive State & Persistence (src/hooks/)"]
+        DraftHook["useStudioDraft.ts<br/>(Draft State + LocalStorage Auto-save)"]
+    end
 
-### 4. ระบบส่งออกและเชื่อมต่อ Git (Export & Git Hand-off)
-- [ ] เพิ่มช่องทางการส่งออกข้อมูลที่ยืดหยุ่น:
-  - **1-Click Export:** ดาวน์โหลดไฟล์ JSON ที่ผ่านการ Validate แล้วตามโครงสร้างมาตรฐาน เช่น `unit_11_scan_pay.json`
-  - **GitHub API Integration (Octokit Client-side):**
-    - ให้ผู้ร่วมพัฒนาใส่ GitHub Personal Access Token (PAT) ชั่วคราว (เก็บในหน่วยความจำเท่านั้น)
-    - ระบบจะ Fork คลังต้นฉบับ, สร้าง Branch ใหม่, บันทึกไฟล์บทเรียน, และเปิด Pull Request อัตโนมัติในคลิกเดียว
-  - **Import & Edit:** อัปโหลดไฟล์ Lesson JSON เก่าขึ้นมาแก้ไขผ่าน Studio ได้ตลอดเวลา
+    Nav --> Forms
+    Forms <--> Linter
+    Forms <--> DraftHook
+    DraftHook --> Preview
+    Forms --> Serializer
+    Serializer --> JSONFile["1-Click Download .json"]
+    Serializer --> PRTemplate["Zero-Token GitHub PR Template"]
+```
+
+---
+
+## 📋 แผนงานปฏิบัติการ 5 Micro-Slices (Actionable Task Slices)
+
+### `TASK-601`: In-Browser Pedagogical Linter & Pinyin Auto-Converter Engine
+- [ ] พัฒนา Pure TypeScript Engine ใน `src/engines/studio/studioLinterEngine.ts`:
+  - **Auto Pinyin Tone Placer:** พิมพ์ตัวเลขวรรณยุกต์ (เช่น `ni3hao3`) แล้วแปลงเป็นเครื่องหมายมาตรฐานสากล (`nǐhǎo`, `lv4` ➔ `lǜ`)
+  - **Tone Sandhi Detector:** ตรวจจับคำที่มีการผันเสียงอัตโนมัติ (`一`, `不`, และกฎเสียง 3 ชน 3) แจ้งเตือนผู้เขียนให้ระบุเสียงตามกฎ
+  - **Traditional Chinese & Forbidden Grammar Guard:** สกัดกั้นอักษรตัวเต็ม 100% จาก Blacklist และบล็อกไวยากรณ์ต้องห้าม (เช่น `不有`)
+  - **Character Stroke Availability Check:** ตรวจสอบความพร้อมของตัวอักษรจีนในคลัง `hanzi-writer`
+  - Unit Tests ครอบคลุม 100% ด้วย Vitest (`studioLinterEngine.test.ts`)
+
+### `TASK-602`: Studio State Engine, Draft Recovery & JSON Serialization
+- [ ] พัฒนา Hook และ Serializer ใน `src/hooks/useStudioDraft.ts` และ `src/engines/studio/studioSerializer.ts`:
+  - **Reactive Draft State:** จัดเก็บสถานะแบบร่าง Unit, Vocab List, Dialogue Script, และ Quizzes
+  - **Crash-Resilient Auto-Save:** บันทึกดราฟต์ลง LocalStorage ทุกครั้งที่มีการแก้ไข กู้คืนข้อมูลอัตโนมัติเมื่อหน้ารีเฟรช
+  - **Strict Schema Serialization:** แปลงสถานะแบบร่างเป็น JSON ตามโครงสร้าง `LessonUnit` ใน `src/types/lesson.ts`
+  - **JSON Importer:** นำเข้าไฟล์ JSON บทเรียนเดิมมาเปิดแก้ไขได้ทันที พร้อมระบบ Validate และฟ้อง Error จุดที่ผิด
+  - Unit Tests สำหรับ Round-trip Import/Export
+
+### `TASK-603`: Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms)
+- [ ] พัฒนา UI Components ใน `src/components/studio/`:
+  - **LessonMetadataForm:** ตั้งค่า Tier (0–4), Unit ID, Lesson ID, และชื่อบท 3 ภาษา (🇨🇳, 🇹🇭, 🇬🇧)
+  - **VocabComposer:** เพิ่ม/ลบ/เรียงการ์ดคำศัพท์ พร้อม Pinyin assist, Radical selector, และปุ่มลองฟังเสียง
+  - **DialogueComposer:** สร้างบทสนทนา A/B กำหนดผู้พูดและเลือกเสียงสังเคราะห์
+  - **QuizComposer:** สร้างแบบฝึกหัด 4 รูปแบบ (Multiple Choice, Hanzi Stroke Order, Sentence Scramble, Tone Discrimination) พร้อมระบบตรวจสมดุลเฉลย
+
+### `TASK-604`: Live Interactive Mobile Device Preview & Audio Sandbox
+- [ ] พัฒนาหน้าจอจำลองและการโต้ตอบสด:
+  - **Split-Screen Layout:** ด้านซ้ายเป็นพื้นที่แก้ไข (Editor Form) และด้านขวาเป็นกรอบสมาร์ตโฟนจำลอง (Mobile Device Frame)
+  - **Hot Real-time Rendering:** นำคอมโพเนนต์จริง (`VocabCard`, `DialoguePlayer`, `QuizContainer`) มารันในกรอบมือถือ ตอบสนองทันทีที่พิมพ์ข้อมูล
+  - **In-Studio Audio Sandbox:** ปุ่มทดสอบเสียงภาษาจีนกลาง (`zh-CN`) ปรับความเร็วได้ (0.75x, 1.0x)
+  - Responsive Mobile Adaptability: รองรับการสลับแท็บไป-มาเมื่อเปิดใช้งานบนหน้าจอมือถือหรือแท็บเล็ต
+
+### `TASK-605`: Zero-Token Git Hand-off, PR Template & Playwright E2E Suite
+- [ ] พัฒนาระบบส่งมอบงานสู่ GitHub และชุดทดสอบอัตโนมัติ:
+  - **1-Click JSON Download:** ส่งออกไฟล์ `.json` ที่พร้อมใช้งานใน `src/data/lessons/`
+  - **Zero-Token PR Generator:** สร้างเทมเพลต GitHub Issue / PR พร้อมก็อปปี้ JSON Payload ปลอดภัย ไม่ต้องใช้ Personal Access Token
+  - **Playwright E2E Test Suite (`e2e/studio.spec.ts`):** ทดสอบ User Journey การแต่งบทเรียนตั้งแต่เริ่มต้นจนถึงส่งออกไฟล์
+  - Red Team Chaos Verification: ทดสอบการรับมือข้อมูลขยะ (Corrupted JSON), ข้อความยาวเกินพิกัด, และการปิดเบราว์เซอร์กะทันหัน
 
 ---
 
 ## 🛡️ เกณฑ์การตรวจรับงาน (Quality Gate & DoD)
-- [ ] สามารถสร้าง Unit ใหม่ผ่าน Studio แล้วเปิดพรีวิวดูได้ถูกต้องเหมือนในแอปจริง
-- [ ] ระบบ Linter ดักจับข้อผิดพลาด (เช่น วรรณยุกต์วางผิดตำแหน่ง หรือคำแปลไม่ครบ) ได้อย่างแม่นยำ
-- [ ] ไฟล์ JSON ที่ส่งออกจาก Studio ผ่านการรันสคริปต์ `scripts/validateCurriculum.ts` 100% โดยไม่มีข้อผิดพลาด
-- [ ] ไม่มีการส่งหรือจัดเก็บ Token/ข้อมูลส่วนตัวของผู้ใช้ออกนอกเครื่องผู้เรียน
+
+| ลำดับ | จุดตรวจสอบ | เครื่องมือทดสอบ | เกณฑ์การผ่าน |
+| :---: | :--- | :--- | :--- |
+| **1** | **Type Safety** | `npm run lint` (`tsc --noEmit`) | 0 Type Errors, Zero `any` |
+| **2** | **Linter & State Unit Tests** | `npm test` | ผ่าน 100% ครบทุกโมดูลใน `src/engines/studio/` |
+| **3** | **Curriculum Validation Round-trip** | `npm run validate:curriculum -- --strict` | ไฟล์ JSON ที่ Export จาก Studio ผ่านสคริปต์ตรวจสอบ 100% |
+| **4** | **Live Mobile Hot Preview** | Interactive Browser Test | แก้ไขฟอร์มแล้วหน้าจอมือถือจำลองอัปเดตแบบเรียลไทม์ ไร้กระตุก 60fps |
+| **5** | **Draft Crash Resilience** | Red Team Browser Kill Test | ปิดแท็บหรือรีเฟรชหน้าเว็บ ข้อมูลบทเรียนที่กำลังแต่งต้องไม่สูญหาย |
+| **6** | **Playwright E2E Pass** | `npm run test:e2e` | ผ่านการทดสอบ Authoring Journey ทุกสถานการณ์ |
