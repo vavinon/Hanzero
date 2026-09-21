@@ -286,11 +286,30 @@ export interface AudioUsageStats {
   slow_plays: number;
 }
 
+export interface DeviceDiagnosticInfo {
+  viewport_width: number;
+  viewport_height: number;
+  device_pixel_ratio: number;
+  platform: string;
+  is_in_app_browser: boolean;
+  is_secure_context: boolean;
+}
+
+export interface ToneDiscriminationStats {
+  total_tone_questions: number;
+  tone_errors: number;
+  tone_accuracy_percentage: number;
+}
+
 export interface DiagnosticsSnapshot {
   schema_version: 1;
   created_at: number;
+  session_start_time?: number;
+  last_active_at?: number;
   total_errors_recorded: number;
   bottlenecks: Record<string, LearningBottleneckItem>;
   recent_errors: QuestionErrorRecord[];
   audio_usage: AudioUsageStats;
+  device_info?: DeviceDiagnosticInfo;
+  tone_stats?: ToneDiscriminationStats;
 }

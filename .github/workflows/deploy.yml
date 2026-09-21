@@ -1,0 +1,119 @@
+name: Hanzero Quality Gate & Production Deployment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  quality-gate:
+    name: 🛡️ 5-Stage Quality Gate & Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🔍 Stage 1: TypeScript Strict TypeCheck
+        run: npx tsc --noEmit
+
+      - name: 📜 Stage 2: Curriculum Schema & Pedagogical Linter
+        run: npm run validate:curriculum -- --strict
+
+      - name: ⚡ Stage 3: Vitest Engine & Unit Test Suite
+        run: npm test -- --run
+
+      - name: 🎭 Cache Playwright Browser Binaries
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('package-lock.json') }}
+
+      - name: 🌐 Install Playwright Browsers & OS Dependencies
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: 🌐 Install Playwright System Dependencies (on Cache Hit)
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: npx playwright install-deps chromium
+
+      - name: 🏗️ Build Application for E2E Preview
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /Hanzero/
+
+      - name: 🎭 Stage 4: Playwright E2E Test Suite
+        run: npx playwright test
+
+      - name: 📊 Stage 5: Bundle Performance Budget Audit
+        run: |
+          echo "Auditing Production Bundle Size..."
+          npm run audit:bundle
+
+      - name: 📤 Upload Playwright Report on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  deploy-pages:
+    name: 🚀 Deploy to GitHub Pages
+    needs: quality-gate
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: 📦 Install Dependencies
+        run: npm ci
+
+      - name: 🏗️ Production Build
+        run: npm run build
+        env:
+          VITE_BASE_PATH: /Hanzero/
+
+      - name: 🔧 Setup GitHub Pages SPA 404 Fallback
+        run: |
+          cp public/404.html dist/404.html || cp dist/index.html dist/404.html
+
+      - name: 📤 Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

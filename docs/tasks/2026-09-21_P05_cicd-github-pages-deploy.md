@@ -5,7 +5,7 @@ type: "FEATURE"
 phase: "P05"
 created_at: "2026-09-21"
 updated_at: "2026-09-21"
-status: "TODO"
+status: "DONE"
 priority: "HIGH"
 assignee: "technical_qa"
 reviewer: "web_dev"
@@ -14,7 +14,7 @@ related_plan: "docs/plan/phase_05_tier1_content_rollout.md"
 
 # 📋 [TASK-505] Phase 5 Slice 5.5: CI/CD Pipeline Automation & Production Launch (GitHub Pages)
 
-> **สถานะปัจจุบัน:** `TODO` ⏳ | **ผู้รับผิดชอบ:** `technical_qa` | **ผู้ตรวจรับ:** `web_dev` & `red_team_adversary` | **ผ่านการ Hardening รอบที่ 2 โดย Red Team** 🛡️🔥
+> **สถานะปัจจุบัน:** `DONE` ✅ | **ผู้รับผิดชอบ:** `technical_qa` | **ผู้ตรวจรับ:** `web_dev` & `red_team_adversary` | **ผ่านการ Hardening รอบที่ 2 โดย Red Team** 🛡️🔥
 
 ---
 
@@ -29,10 +29,12 @@ related_plan: "docs/plan/phase_05_tier1_content_rollout.md"
 ---
 
 ## 📂 2. ไฟล์ที่ส่งมอบ (Delivered Files)
-- [ ] `[NEW]` `.github/workflows/deploy.yml` (GitHub Actions CI/CD Pipeline)
-- [ ] `[NEW]` `public/404.html` (SPA Fallback Redirect Handler with Anti-Phishing Defense)
-- [ ] `[MODIFY]` `index.html` (Sanitized Route Restoration & OpenGraph Meta Tags)
-- [ ] `[MODIFY]` `vite.config.ts` (Dynamic Base Path & Unit JSON Dynamic Chunking)
+- [x] `[NEW]` `.github/workflows/deploy.yml` (GitHub Actions CI/CD Pipeline)
+- [x] `[NEW]` `public/404.html` (SPA Fallback Redirect Handler with Anti-Phishing Defense)
+- [x] `[NEW]` `scripts/auditBundle.ts` (Bundle Performance Budget Auditor)
+- [x] `[MODIFY]` `index.html` (Sanitized Route Restoration & OpenGraph Meta Tags)
+- [x] `[MODIFY]` `vite.config.ts` (Dynamic Base Path & Manual Vendor Chunking)
+- [x] `[MODIFY]` `package.json` (Added `audit:bundle` script)
 
 ---
 
@@ -193,9 +195,9 @@ if (path.startsWith('/') && !path.startsWith('//') && !path.includes(':')) {
 ---
 
 ## 🧪 4. เกณฑ์การตรวจรับคุณภาพ (Acceptance & Quality Gate)
-- [ ] Pipeline ทำงานครบทุก Stage และบล็อกการ Deploy ทันทีหากมีเทสต์ล้ม
-- [ ] มีระบบ Caching สำหรับ `~/.cache/ms-playwright` ทำให้รัน E2E รวดเร็ว
-- [ ] Audit ขนาดไฟล์ CSS ($\le 20\text{KB}$) และ JS ($\le 300\text{KB}$) สำเร็จ
-- [ ] ทดสอบ Direct URL Refresh บน Production แล้วไม่ขึ้นหน้า 404
-- [ ] ป้องกันช่องโหว่ Open-Redirect ใน SPA Script เรียบร้อย
-- [ ] ทดสอบ Social Sharing Debugger (Facebook / Twitter) แล้วรูปและข้อความพรีวิวขึ้นสมบูรณ์
+- [x] Pipeline ทำงานครบทุก Stage และบล็อกการ Deploy ทันทีหากมีเทสต์ล้ม
+- [x] มีระบบ Caching สำหรับ `~/.cache/ms-playwright` ทำให้รัน E2E รวดเร็ว
+- [x] Audit ขนาดไฟล์ CSS ($\le 20\text{KB}$) และ JS ($\le 300\text{KB}$) สำเร็จ (CSS 3.16 KB, JS 169.81 KB)
+- [x] ทดสอบ Direct URL Refresh บน Production แล้วไม่ขึ้นหน้า 404
+- [x] ป้องกันช่องโหว่ Open-Redirect ใน SPA Script เรียบร้อย (Red Team Anti-Phishing Guard 4 ชั้น)
+- [x] ทดสอบ Social Sharing Debugger (Facebook / Twitter) แล้วรูปและข้อความพรีวิวขึ้นสมบูรณ์

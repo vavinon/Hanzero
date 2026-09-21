@@ -14,7 +14,8 @@
     "verify:data": "node scripts/verify_curriculum_integrity.js",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:all": "npm run lint && npm run validate:curriculum && npm test && npm run test:e2e"
+    "audit:bundle": "tsx scripts/auditBundle.ts",
+    "test:all": "npm run lint && npm run validate:curriculum && npm test && npm run audit:bundle && npm run test:e2e"
   },
   "dependencies": {
     "hanzi-writer": "^3.7.0",

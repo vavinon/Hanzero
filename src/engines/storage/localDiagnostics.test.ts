@@ -120,11 +120,22 @@ describe('Local Diagnostics Engine (Pure Telemetry)', () => {
     expect(md).toContain('Lv.2 (XP: 150)');
     expect(md).toContain('米饭 แปลว่าอะไร?');
     expect(md).toContain('ข้าวสวย');
+    expect(md).toContain('Device Viewport');
+    expect(md).toContain('Session Duration');
+    expect(md).toContain('Safe Zone Verified');
+    expect(md).toContain('Tone Discrimination');
 
     const jsonStr = exportDiagnosticsJson();
     const parsed = JSON.parse(jsonStr);
     expect(parsed.total_errors_recorded).toBe(1);
     expect(parsed.schema_version).toBe(1);
+  });
+
+  it('collects device environment info safely without throwing', () => {
+    const snapshot = getDiagnosticsSnapshot();
+    expect(snapshot.device_info).toBeDefined();
+    expect(typeof snapshot.device_info?.viewport_width).toBe('number');
+    expect(typeof snapshot.device_info?.platform).toBe('string');
   });
 
   it('resets diagnostics completely', () => {

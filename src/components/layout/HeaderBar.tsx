@@ -232,9 +232,8 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
           </button>
         )}
 
-        {/* Silent Mode Toggle */}
+        {/* Silent Mode Toggle (Kept visible across all screen sizes) */}
         <button
-          className="capsule-hide-compact"
           onClick={onToggleSilentMode}
           data-testid="btn-toggle-silent"
           title={preferences.silent_mode ? 'เปิดเสียง (Normal Mode)' : 'โหมดเงียบขณะเดินทาง (Silent Mode)'}

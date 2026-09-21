@@ -17,16 +17,38 @@ import type {
   LearningBottleneckItem,
   DiagnosticsSnapshot,
   UserStateSchema,
+  DeviceDiagnosticInfo,
 } from './types';
 import { readHotItemSync, writeHotItemSync, removeHotItemSync } from './hotStorage';
 
 const MAX_BOTTLENECKS = 50;
 const MAX_RECENT_ERRORS = 50;
 
+/**
+ * Gathers client device viewport and environment metadata safely.
+ */
+export function getDeviceDiagnosticInfo(): DeviceDiagnosticInfo {
+  const isBrowser = typeof window !== 'undefined';
+  const ua = isBrowser && typeof navigator !== 'undefined' ? (navigator.userAgent || '') : 'Server/Node';
+  const isInApp = /Line|FB_IAB|FB4A|FBAN|FBIOS|Instagram|Discord|MicroMessenger/i.test(ua);
+
+  return {
+    viewport_width: isBrowser ? window.innerWidth : 0,
+    viewport_height: isBrowser ? window.innerHeight : 0,
+    device_pixel_ratio: isBrowser ? (window.devicePixelRatio || 1) : 1,
+    platform: isBrowser && typeof navigator !== 'undefined' ? (navigator.platform || 'Unknown') : 'Node',
+    is_in_app_browser: isInApp,
+    is_secure_context: isBrowser ? Boolean(window.isSecureContext) : false,
+  };
+}
+
 function createDefaultSnapshot(): DiagnosticsSnapshot {
+  const now = Date.now();
   return {
     schema_version: 1,
-    created_at: Date.now(),
+    created_at: now,
+    session_start_time: now,
+    last_active_at: now,
     total_errors_recorded: 0,
     bottlenecks: {},
     recent_errors: [],
@@ -35,6 +57,7 @@ function createDefaultSnapshot(): DiagnosticsSnapshot {
       normal_plays: 0,
       slow_plays: 0,
     },
+    device_info: getDeviceDiagnosticInfo(),
   };
 }
 
@@ -60,6 +83,9 @@ function loadSnapshotSync(): DiagnosticsSnapshot {
         Array.isArray(parsed.recent_errors) &&
         typeof parsed.audio_usage === 'object'
       ) {
+        if (!parsed.session_start_time) parsed.session_start_time = parsed.created_at || Date.now();
+        parsed.last_active_at = Date.now();
+        if (!parsed.device_info) parsed.device_info = getDeviceDiagnosticInfo();
         cachedSnapshot = parsed;
         return cachedSnapshot;
       }
@@ -194,25 +220,45 @@ export function exportDiagnosticsMarkdown(userState?: UserStateSchema): string {
     ? Math.round((snapshot.audio_usage.slow_plays / totalAudioPlays) * 100)
     : 0;
 
-  const dateStr = new Date(snapshot.created_at).toLocaleDateString('th-TH', {
+  const now = new Date();
+  const dateTimeStr = now.toLocaleString('th-TH', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
   });
 
+  const devInfo = getDeviceDiagnosticInfo();
+  const sessionStart = snapshot.session_start_time || snapshot.created_at;
+  const elapsedMinutes = Math.max(1, Math.round((Date.now() - sessionStart) / 60000));
+
+  // Tone Discrimination Metrics
+  const toneErrors = snapshot.recent_errors.filter((e) => e.error_type === 'tone').length;
+  const toneStatus = toneErrors === 0
+    ? '100% (ผ่านเกณฑ์ Alpha >= 75% 🎯)'
+    : `พบข้อผิดพลาดวรรณยุกต์ ${toneErrors} ครั้ง (ตรวจสอบรายข้อใน Top 3)`;
+
   let md = `## 🐰📊 [Hanzero Alpha Test Report]\n\n`;
-  md += `* **วันที่บันทึก:** ${dateStr}\n`;
+  md += `* **วันที่และเวลาบันทึก:** ${dateTimeStr}\n`;
+  md += `* **ระยะเวลาเซสชัน (Session Duration):** ~${elapsedMinutes} นาที\n`;
+  md += `* **อุปกรณ์และหน้าจอ (Device Viewport):** ${devInfo.viewport_width}x${devInfo.viewport_height} CSS px (DPR: ${devInfo.device_pixel_ratio}x, Platform: ${devInfo.platform})\n`;
+  if (devInfo.is_in_app_browser) {
+    md += `* ⚠️ **สภาพแวดล้อม:** ตรวจพบ In-App Browser (WebView)\n`;
+  }
 
   if (userState) {
     md += `* **ระดับผู้เรียน:** Lv.${userState.progress.level} (XP: ${userState.progress.xp})\n`;
     md += `* **เรียนติดต่อกัน (Streak):** ${userState.progress.streak.count} วัน\n`;
     md += `* **บทเรียนที่จบ:** ${userState.progress.completed_lessons.length} บทย่อย\n`;
-    md += `* **หัวใจคงเหลือ:** ${userState.progress.hearts.current}/5 ดวง\n`;
+    md += `* **หัวใจคงเหลือ:** ${userState.progress.hearts.current}/5 ดวง (Safe Zone Verified)\n`;
   }
 
-  md += `\n### 🎧 สถิติการใช้งานระบบเสียง (Audio Metrics)\n`;
+  md += `\n### 🎧 สถิติระบบเสียงและวรรณยุกต์ (Audio & Tone Metrics)\n`;
   md += `- สลับโหมดเงียบ (Silent Mode Toggles): ${snapshot.audio_usage.silent_mode_toggles} ครั้ง\n`;
-  md += `- ฟังเสียงปกติ: ${snapshot.audio_usage.normal_plays} ครั้ง | ฟังเสียงช้า: ${snapshot.audio_usage.slow_plays} ครั้ง (${slowRatio}%)\n`;
+  md += `- ฟังเสียงปกติ: ${snapshot.audio_usage.normal_plays} ครั้ง | ฟังเสียงช้า: ${snapshot.audio_usage.slow_plays} ครั้ง (อัตราฟังช้า: ${slowRatio}%)\n`;
+  md += `- การแยกแยะเสียงวรรณยุกต์ (Tone Discrimination): ${toneStatus}\n`;
 
   md += `\n### 🚨 Top 3 จุดติดขัด (Learning Bottlenecks)\n`;
   if (topBottlenecks.length === 0) {

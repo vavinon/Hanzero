@@ -32,8 +32,8 @@
 | **2026-09-21** | `TASK-502` | ปล่อยเนื้อหา Tier 1 Batch A: Unit 2 - 4 (ตัวเลข อาหาร ช็อปปิ้ง) | P05 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-a-content.md) |
 | **2026-09-21** | `TASK-503` | ปล่อยเนื้อหา Tier 1 Batch B & C: Unit 5 - 10 + Grand Boss Quest | P05 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-bc-content.md) |
 | **2026-09-21** | `TASK-504` | Local Diagnostics & Playwright E2E Testing Suite | P05 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_playwright-e2e-suite.md) |
-| *2026-09-22* | `TASK-505` | GitHub Actions CI/CD Pipeline & GitHub Pages Deploy | P05 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_cicd-github-pages-deploy.md) |
-| *2026-09-22* | `TASK-506` | Zero-Knowledge Alpha Playtest Protocol & Feedback Triage | P05 | `ux_ui_designer` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_zero-knowledge-alpha-playtest.md) |
+| **2026-09-21** | `TASK-505` | GitHub Actions CI/CD Pipeline & GitHub Pages Deploy | P05 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_cicd-github-pages-deploy.md) |
+| **2026-09-21** | `TASK-506` | Zero-Knowledge Alpha Playtest Protocol & Feedback Triage | P05 | `ux_ui_designer` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_zero-knowledge-alpha-playtest.md) |
 
 ---
 

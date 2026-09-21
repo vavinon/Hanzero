@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Hanzero/',
+  base: process.env.VITE_BASE_PATH || '/Hanzero/',
   plugins: [
     react(),
     VitePWA({
@@ -88,6 +88,18 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules/react/') || id.includes('node_modules/react-dom/')) {
             return 'react-vendor';
+          }
+          if (id.includes('node_modules/hanzi-writer/')) {
+            return 'hanzi-vendor';
+          }
+          if (id.includes('node_modules/pinyin-pro/')) {
+            return 'pinyin-vendor';
+          }
+          if (id.includes('node_modules/lucide-react/')) {
+            return 'icons-vendor';
+          }
+          if (id.includes('node_modules/idb-keyval/')) {
+            return 'storage-vendor';
           }
         }
       }

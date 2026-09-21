@@ -35,6 +35,50 @@ export interface DevStorageDrawerProps {
   defaultOpen?: boolean;
 }
 
+/**
+ * 3-Tier Safe Clipboard Helper for modern browsers, iOS WebKit, and WebViews
+ */
+export async function copyTextWithFallback(text: string): Promise<boolean> {
+  // Tier 1: Modern Async Clipboard API (Secure Context)
+  if (
+    typeof window !== 'undefined' &&
+    window.isSecureContext &&
+    navigator?.clipboard?.writeText
+  ) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (err) {
+      console.warn('[Hanzero Storage] Modern clipboard write failed, trying fallback:', err);
+    }
+  }
+
+  // Tier 2: Legacy execCommand Fallback (iOS WebKit friendly offscreen textarea)
+  if (typeof document !== 'undefined') {
+    try {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.top = '0';
+      textArea.style.left = '-9999px';
+      textArea.style.opacity = '0';
+      textArea.style.fontSize = '16px';
+      textArea.setAttribute('readonly', '');
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      textArea.setSelectionRange(0, 999999);
+      const success = document.execCommand('copy');
+      document.body.removeChild(textArea);
+      if (success) return true;
+    } catch (fallbackErr) {
+      console.warn('[Hanzero Storage] execCommand fallback failed:', fallbackErr);
+    }
+  }
+
+  return false;
+}
+
 export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   userState,
   storageHealth,
@@ -48,6 +92,7 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
   const [copiedSyncCode, setCopiedSyncCode] = useState<boolean>(false);
   const [copiedDiagnostics, setCopiedDiagnostics] = useState<boolean>(false);
+  const [copyFeedback, setCopyFeedback] = useState<string | null>(null);
   const [quickSyncInput, setQuickSyncInput] = useState<string>('');
   const [syncFeedback, setSyncFeedback] = useState<string | null>(null);
   const [showResetConfirm, setShowResetConfirm] = useState<boolean>(false);
@@ -56,28 +101,29 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   const diagSnapshot = getDiagnosticsSnapshot();
 
   const handleCopyQuickSync = async () => {
-    try {
-      const code = getQuickSyncCode(userState);
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(code);
-      }
+    const code = getQuickSyncCode(userState);
+    const success = await copyTextWithFallback(code);
+    if (success) {
       setCopiedSyncCode(true);
       setTimeout(() => setCopiedSyncCode(false), 2000);
-    } catch {
-      // Ignore
+    } else {
+      setCopiedSyncCode(false);
+      setSyncFeedback('⚠️ ไม่สามารถคัดลอกรหัสได้ กรุณาไฮไลต์ข้อความและก๊อบปี้ด้วยตนเอง');
+      setTimeout(() => setSyncFeedback(null), 4000);
     }
   };
 
   const handleCopyDiagnosticsMd = async () => {
-    try {
-      const md = exportDiagnosticsMarkdown(userState);
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(md);
-      }
+    const md = exportDiagnosticsMarkdown(userState);
+    const success = await copyTextWithFallback(md);
+    if (success) {
       setCopiedDiagnostics(true);
-      setTimeout(() => setCopiedDiagnostics(false), 2000);
-    } catch {
-      // Ignore
+      setCopyFeedback(null);
+      setTimeout(() => setCopiedDiagnostics(false), 2500);
+    } else {
+      setCopiedDiagnostics(false);
+      setCopyFeedback('⚠️ ไม่สามารถคัดลอกลงคลิปบอร์ดได้ กรุณากดปุ่ม "💾 ดาวน์โหลด (.JSON)" แทน');
+      setTimeout(() => setCopyFeedback(null), 5000);
     }
   };
 
@@ -161,6 +207,35 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
 
       {isOpen && (
         <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          {/* In-App Browser Warning Banner */}
+          {typeof navigator !== 'undefined' && /Line|FB_IAB|FB4A|FBAN|FBIOS|Instagram|Discord|MicroMessenger/i.test(navigator.userAgent || '') && (
+            <div
+              data-testid="in-app-browser-warning"
+              style={{
+                backgroundColor: '#FEF3C7',
+                border: '1px solid #F59E0B',
+                borderRadius: 'var(--radius-sm)',
+                padding: '10px 12px',
+                fontSize: '12px',
+                color: '#92400E',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4px',
+              }}
+            >
+              <div style={{ fontWeight: 700, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <AlertTriangle size={15} color="#D97706" />
+                <span>🐰 เพื่อเสียงจีนที่คมชัดและการบันทึกผล 100%</span>
+              </div>
+              <div>
+                ตรวจพบการเปิดผ่าน In-App Browser แนะนำให้แตะปุ่ม [•••] มุมขวาบน แล้วเลือก <strong>"เปิดในเบราว์เซอร์ภายนอก" (Safari / Chrome)</strong> นะครับ
+              </div>
+              <div style={{ fontSize: '11px', color: '#B45309' }}>
+                *(สำหรับ iPhone อย่าลืมเปิดสวิตช์เสียงด้านข้างตัวเครื่องนะคะ 🔊)*
+              </div>
+            </div>
+          )}
+
           {/* Storage Health Status */}
           <div
             style={{
@@ -242,7 +317,7 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
                 style={{ flex: 1, minHeight: '44px', gap: '6px', fontSize: '12px' }}
               >
                 {copiedDiagnostics ? <Check size={14} color="var(--color-jade-primary)" /> : <FileText size={14} />}
-                <span>{copiedDiagnostics ? 'คัดลอกแล้ว!' : '📋 สรุปผล Markdown'}</span>
+                <span>{copiedDiagnostics ? 'คัดลอกแล้ว!' : '📋 คัดลอกรายงานสรุป (ส่งครู/แอดมิน)'}</span>
               </button>
               <button
                 onClick={handleDownloadDiagnosticsJson}
@@ -253,6 +328,41 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
                 <span>💾 ดาวน์โหลด (.JSON)</span>
               </button>
             </div>
+
+            {/* Visual Copy Feedback Alerts */}
+            {copiedDiagnostics && (
+              <div
+                data-testid="toast-copy-success"
+                style={{
+                  backgroundColor: 'rgba(4, 120, 87, 0.1)',
+                  border: '1px solid var(--color-jade-primary)',
+                  borderRadius: 'var(--radius-sm)',
+                  padding: '8px 12px',
+                  fontSize: '12px',
+                  color: 'var(--color-jade-primary)',
+                  fontWeight: 600,
+                  textAlign: 'center',
+                }}
+              >
+                ✅ คัดลอกสรุปผลเรียบร้อยแล้ว! สามารถนำไปวางส่งในแชท LINE ได้ทันที 🐰✨
+              </div>
+            )}
+            {copyFeedback && (
+              <div
+                data-testid="toast-copy-feedback"
+                style={{
+                  backgroundColor: '#FEF2F2',
+                  border: '1px solid #F87171',
+                  borderRadius: 'var(--radius-sm)',
+                  padding: '8px 12px',
+                  fontSize: '12px',
+                  color: 'var(--color-vermilion)',
+                  fontWeight: 600,
+                }}
+              >
+                {copyFeedback}
+              </div>
+            )}
           </div>
 
           {/* Quick Sync 1-Tap Code */}

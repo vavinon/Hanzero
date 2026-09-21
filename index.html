@@ -2,17 +2,58 @@
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Hanzero/favicon.svg" />
-    <link rel="alternate icon" href="/Hanzero/favicon.ico" />
-    <link rel="apple-touch-icon" href="/Hanzero/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="alternate icon" href="%BASE_URL%favicon.ico" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="theme-color" content="#047857" />
     <meta name="description" content="Hanzero (ฮั่นซีโร่) - เรียนภาษาจีนตั้งแต่ศูนย์แบบเข้าใจง่าย สบายใจ ไม่น่ากลัว 🐰" />
     <title>Hanzero (ฮั่นซีโร่) 🐰 เริ่มจาก 0 สู่ภาษาจีนคล่องตัว</title>
+
+    <!-- OpenGraph / Facebook Sharing Metadata -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vavinon.github.io/Hanzero/" />
+    <meta property="og:title" content="Hanzero (ฮั่นซีโร่) 🐰 เริ่มจาก 0 สู่ภาษาจีนคล่องตัว" />
+    <meta property="og:description" content="แพลตฟอร์มเรียนและฝึกฝนภาษาจีนตั้งแต่ศูนย์ ฟรี 100% เรียนสนุก เข้าใจง่าย มีระบบทบทวน SRS และโซนปลอดภัยไม่หักหัวใจ" />
+    <meta property="og:image" content="https://vavinon.github.io/Hanzero/brand/mascot_bunny.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="น้องกระต่ายฮั่นซีโร่ มาสคอตประจำแอป Hanzero" />
+
+    <!-- Twitter Card Sharing Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://vavinon.github.io/Hanzero/" />
+    <meta name="twitter:title" content="Hanzero (ฮั่นซีโร่) 🐰 เริ่มจาก 0 สู่ภาษาจีนคล่องตัว" />
+    <meta name="twitter:description" content="แพลตฟอร์มเรียนภาษาจีนตั้งแต่ศูนย์แบบเข้าใจง่าย สบายใจ ไม่น่ากลัว พร้อมระบบทบทวน SRS" />
+    <meta name="twitter:image" content="https://vavinon.github.io/Hanzero/brand/mascot_bunny.jpg" />
+
     <!-- Google Fonts Preconnect for CJK & Thai Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- SPA Route Restoration with Red Team Anti-Open-Redirect Defense -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+
+          // Red Team Defense:
+          // 1. Must start with '/'
+          // 2. Must not start with '//' (prevent protocol-relative open redirects)
+          // 3. Must not contain ':' (prevent javascript:, data:, http:)
+          // 4. Must not contain '\\' (prevent backslash bypass)
+          if (decoded.startsWith('/') && !decoded.startsWith('//') && !decoded.includes(':') && !decoded.includes('\\')) {
+            window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + (l.hash || ''));
+          } else {
+            // Malicious or malformed payload detected: strip query and stay at canonical base
+            window.history.replaceState(null, null, l.pathname);
+          }
+        }
+      }(window.location));
+    </script>
   </head>
   <body>
     <div id="root"></div>
