@@ -59,6 +59,7 @@ export function createNewCard(
     card_id: string;
     hanzi: string;
     pinyin: string;
+    display_pinyin?: string;
     meaning_th: string;
     meaning_en: string;
     mnemonic?: string;
@@ -70,6 +71,7 @@ export function createNewCard(
     card_id: params.card_id,
     hanzi: params.hanzi,
     pinyin: params.pinyin,
+    display_pinyin: params.display_pinyin,
     meaning_th: params.meaning_th,
     meaning_en: params.meaning_en,
     mnemonic: params.mnemonic,

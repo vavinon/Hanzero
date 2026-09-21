@@ -734,6 +734,9 @@ export const GrammarBite: React.FC<GrammarBiteProps> = ({
                         fontWeight: 600,
                         color: 'var(--color-ochre, #D97706)',
                         marginTop: '2px',
+                        lineHeight: 1.35,
+                        paddingTop: '2px',
+                        paddingBottom: '2px',
                         wordBreak: 'break-word',
                       }}
                     >

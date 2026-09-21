@@ -44,11 +44,28 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  const mascotTapCountRef = React.useRef<number>(0);
+  const mascotTapTimerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMascotTap = () => {
+    mascotTapCountRef.current += 1;
+    if (mascotTapTimerRef.current) clearTimeout(mascotTapTimerRef.current);
+    if (mascotTapCountRef.current >= 5) {
+      mascotTapCountRef.current = 0;
+      onOpenDevDrawer();
+    } else {
+      mascotTapTimerRef.current = setTimeout(() => {
+        mascotTapCountRef.current = 0;
+      }, 1500);
+    }
+  };
+
   const heartsCurrent = Math.max(0, Math.min(5, progress.hearts.current));
   const isStreakActive = progress.streak.count > 0;
 
   return (
     <header
+      data-testid="header-bar"
       style={{
         position: 'sticky',
         top: 0,
@@ -70,12 +87,15 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         <img
           src={bunnyImg}
           alt="Hanzero Tutu Bunny"
+          data-testid="mascot-avatar"
+          onClick={handleMascotTap}
           style={{
             width: '36px',
             height: '36px',
             borderRadius: '50%',
             border: '2px solid var(--color-jade-primary)',
             objectFit: 'cover',
+            cursor: 'pointer',
           }}
         />
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -97,6 +117,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
         {/* Streak */}
         <div
+          data-testid="streak-badge"
           title={`Streak: เรียนติดต่อกัน ${progress.streak.count} วัน`}
           style={{
             display: 'flex',
@@ -116,6 +137,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
 
         {/* Heart Meter (Responsive Condensed on <=380px) */}
         <div
+          data-testid="heart-meter"
           title={`หัวใจ: ${heartsCurrent}/5 ดวง`}
           style={{
             display: 'flex',
@@ -152,6 +174,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
 
         {/* XP */}
         <div
+          data-testid="xp-badge"
           className="capsule-hide-compact"
           title={`XP สะสม: ${progress.xp} คะแนน`}
           style={{
@@ -174,6 +197,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         {onOpenReviewDeck && (
           <button
             onClick={onOpenReviewDeck}
+            data-testid="btn-srs-review"
             title={dueCardsCount > 0 ? `มี ${dueCardsCount} คำถึงกำหนดทบทวน` : 'คลังทบทวนคำศัพท์'}
             style={{
               padding: '4px 8px',
@@ -212,6 +236,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         <button
           className="capsule-hide-compact"
           onClick={onToggleSilentMode}
+          data-testid="btn-toggle-silent"
           title={preferences.silent_mode ? 'เปิดเสียง (Normal Mode)' : 'โหมดเงียบขณะเดินทาง (Silent Mode)'}
           style={{
             padding: '4px 8px',
@@ -232,6 +257,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         <button
           className="capsule-hide-compact"
           onClick={onOpenDevDrawer}
+          data-testid="btn-toggle-dev-drawer"
           title="สถานะระบบจัดเก็บข้อมูล"
           style={{
             padding: '4px 8px',

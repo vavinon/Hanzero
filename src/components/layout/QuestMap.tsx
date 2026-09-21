@@ -126,6 +126,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
         }}
       >
         <button
+          data-testid="tab-tier0"
           onClick={() => setSelectedTier('tier0')}
           style={{
             flex: 1,
@@ -145,6 +146,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
           🌱 Tier 0: ปูพื้นพินอิน
         </button>
         <button
+          data-testid="tab-tier1"
           onClick={() => setSelectedTier('tier1')}
           style={{
             flex: 1,
@@ -167,6 +169,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
 
       {/* Review Deck Quick Entry Banner */}
       <div
+        data-testid="btn-open-review-banner"
         onClick={onOpenReviewDeck}
         style={{
           width: '100%',
@@ -321,6 +324,8 @@ export const QuestMap: React.FC<QuestMapProps> = ({
               flexDirection: 'column',
               gap: '16px',
               padding: '10px 0',
+              width: '100%',
+              overflowX: 'hidden',
             }}
           >
             {tier0Nodes.map((node, index) => {
@@ -328,7 +333,10 @@ export const QuestMap: React.FC<QuestMapProps> = ({
               // First lesson always unlocked; subsequent unlocked if previous completed
               const isUnlocked = index === 0 || completedSet.has(tier0Nodes[index - 1].lessonId);
               const isCurrent = isUnlocked && !isCompleted;
-              const offset = index % 2 === 0 ? '-16px' : '16px';
+              const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 380;
+              const offset = isNarrow
+                ? index % 2 === 0 ? '-4px' : '4px'
+                : index % 2 === 0 ? '-16px' : '16px';
 
               return (
                 <div
@@ -342,6 +350,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
                   }}
                 >
                   <button
+                    data-testid={`lesson-node-${node.lessonId}`}
                     onClick={() => {
                       if (isUnlocked) {
                         onSelectLesson(node.unitId || `tier0_u0${index + 1}`, node.lessonId);
@@ -563,6 +572,8 @@ export const QuestMap: React.FC<QuestMapProps> = ({
               flexDirection: 'column',
               gap: '16px',
               padding: '10px 0',
+              width: '100%',
+              overflowX: 'hidden',
             }}
           >
             {unit01Nodes.map((node, index) => {
@@ -572,7 +583,10 @@ export const QuestMap: React.FC<QuestMapProps> = ({
               const isCurrent = isUnlocked && !isCompleted;
 
               // Alternating horizontal offset for curving winding path effect
-              const offset = index % 2 === 0 ? '-16px' : '16px';
+              const isNarrow = typeof window !== 'undefined' && window.innerWidth <= 380;
+              const offset = isNarrow
+                ? index % 2 === 0 ? '-4px' : '4px'
+                : index % 2 === 0 ? '-16px' : '16px';
 
               return (
                 <div
@@ -586,6 +600,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
                   }}
                 >
                   <button
+                    data-testid={`lesson-node-${node.lessonId}`}
                     onClick={() => {
                       if (isUnlocked) {
                         onSelectLesson('unit01', node.lessonId);

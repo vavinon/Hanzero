@@ -1,0 +1,968 @@
+/**
+ * scripts/tier1_batch_bc/unit10.ts
+ * Tier 1 Unit 10: Hotel & Flight + Grand Boss Quest (tier1_u10)
+ * Golden Template Compliant, Simplified Chinese 100%, Tone Sandhi Annotated,
+ * 3-Stage Multistage Quest with State Checkpoint Persistence specification.
+ */
+
+export const unit10 = {
+  unit_id: 'tier1_u10',
+  tier: 1,
+  unit_number: 10,
+  title: {
+    zh: '酒店入住与登机试炼',
+    th: 'โรงแรม & เที่ยวบิน',
+    en: 'Hotel Check-in & Flight Boarding'
+  },
+  description: 'เช็กอินโรงแรม ขอรหัส Wi-Fi เช็กอินที่สนามบิน โหลดกระเป๋า พิชิต Tier 1 Grand Boss Quest!',
+  lessons: [
+    {
+      lesson_id: 't1_u10_l01',
+      lesson_number: 1,
+      title: {
+        zh: '酒店入住与房卡押金',
+        th: 'เช็กอินโรงแรม',
+        en: 'Hotel Check-in & Deposit'
+      },
+      can_do: {
+        th: 'เช็กอินโรงแรม แสดงหนังสือเดินทาง (พาสปอร์ต) วางเงินมัดจำ และรับคีย์การ์ดได้อย่างคล่องแคล่ว',
+        en: 'Check into hotel, present passport, pay deposit, and receive room keycards'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เช็กอินโรงแรมในปักกิ่งและรับคีย์การ์ดเข้าห้องพักได้เอง!',
+      vocabulary: [
+        {
+          id: 'hsk1_1001',
+          hanzi: '预订',
+          pinyin: 'yùdìng',
+          display_pinyin: 'yùdìng',
+          pinyin_tone: 'yu4ding4',
+          meaning_th: 'จองล่วงหน้า/สำรอง',
+          meaning_en: 'book / reserve in advance',
+          radical: '讠',
+          radical_name_th: 'หมวดภาษาพูด (言字旁)',
+          stroke_count: 8,
+          mnemonic: 'แจ้งล่วงหน้า (预) เพื่อกำหนดแน่นอน (订) = จองล่วงหน้า (预订)',
+          kid_mnemonic: 'กดจองห้องพักในแอปพลิเคชันล่วงหน้า = 预订',
+          body_gesture: 'ทำนิ้วชี้กดหน้าจอมือถือจองห้อง'
+        },
+        {
+          id: 'hsk1_1002',
+          hanzi: '房间',
+          pinyin: 'fángjiān',
+          display_pinyin: 'fángjiān',
+          pinyin_tone: 'fang2jian1',
+          meaning_th: 'ห้องพัก/ห้อง',
+          meaning_en: 'room',
+          radical: '户',
+          radical_name_th: 'หมวดประตูบานเดียว (户字头)',
+          stroke_count: 11,
+          mnemonic: 'เปิดประตูบ้าน (户) เข้าสู่ห้องพักส่วนตัว (房间) = ห้อง',
+          kid_mnemonic: 'เปิดประตูเข้าห้องนอน อบอุ่นสบาย = 房间',
+          body_gesture: 'สองมือทำท่าเปิดประตูห้องพัก'
+        },
+        {
+          id: 'hsk1_1003',
+          hanzi: '入住',
+          pinyin: 'rùzhù',
+          display_pinyin: 'rùzhù',
+          pinyin_tone: 'ru4zhu4',
+          meaning_th: 'เช็กอิน/เข้าพัก',
+          meaning_en: 'check in / move into',
+          radical: '亻',
+          radical_name_th: 'หมวดคนข้าง (单人旁)',
+          stroke_count: 9,
+          mnemonic: 'ก้าวเข้าสู่ (入) ที่อยู่อาศัย (住) = เช็กอินเข้าพัก (入住)',
+          kid_mnemonic: 'ลากกระเป๋าเดินทางก้าวเข้าโรงแรม = 入住',
+          body_gesture: 'ก้าวขาหนึ่งข้างพร้อมทำท่าลากกระเป๋าเดินทาง'
+        },
+        {
+          id: 'hsk1_1004',
+          hanzi: '房卡',
+          pinyin: 'fángkǎ',
+          display_pinyin: 'fángkǎ',
+          pinyin_tone: 'fang2ka3',
+          meaning_th: 'คีย์การ์ดห้องพัก',
+          meaning_en: 'room keycard',
+          radical: '户',
+          radical_name_th: 'หมวดประตูบานเดียว (户字头)',
+          stroke_count: 9,
+          mnemonic: 'การ์ดการ์ดใบเล็ก (卡) สำหรับเปิดห้องพัก (房) = คีย์การ์ด (房卡)',
+          kid_mnemonic: 'แตะการ์ดที่ประตูห้อง ติ๊ด! ประตูเปิด = 房卡',
+          body_gesture: 'ทำนิ้วคีบการ์ดแตะที่ลูกบิดประตู'
+        },
+        {
+          id: 'hsk1_1005',
+          hanzi: '押金',
+          pinyin: 'yājīn',
+          display_pinyin: 'yājīn',
+          pinyin_tone: 'ya1jin1',
+          meaning_th: 'เงินมัดจำ/เงินประกัน',
+          meaning_en: 'security deposit',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 16,
+          mnemonic: 'เงินทอง (金) ที่วางประกันไว้ในมือก่อนเข้าพัก = เงินมัดจำ (押金)',
+          kid_mnemonic: 'วางเงินมัดจำไว้ ตอนเช็กเอาต์ได้เงินคืน = 押金',
+          body_gesture: 'สองมือยื่นวางเงินไปข้างหน้าอย่างสุภาพ'
+        },
+        {
+          id: 'hsk1_1006',
+          hanzi: '护照',
+          pinyin: 'hùzhào',
+          display_pinyin: 'hùzhào',
+          pinyin_tone: 'hu4zhao4',
+          meaning_th: 'หนังสือเดินทาง (พาสปอร์ต)',
+          meaning_en: 'passport',
+          radical: '讠',
+          radical_name_th: 'หมวดภาษาพูด (言字旁)',
+          stroke_count: 20,
+          mnemonic: 'เอกสารรูปถ่าย (照) ที่ใช้คุ้มครอง (护) เมื่อเดินทางไปต่างประเทศ = พาสปอร์ต (护照)',
+          kid_mnemonic: 'หยิบเล่มพาสปอร์ตสีน้ำเงิน ยื่นให้พนักงานตรวจ = 护照',
+          body_gesture: 'สองมือถือสมุดพาสปอร์ตยื่นไปข้างหน้า'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi 3+3 เมื่อยื่นของ: 给你 (géi nǐ)',
+        description_th: '给 (gěi) และ 你 (nǐ) เป็นเสียง 3 ทั้งคู่ เมื่อพูดรวมกัน 给 จะผันเป็นเสียง 2 ออกเสียงว่า géi nǐ',
+        example: '给你 (gěi nǐ -> géi nǐ)',
+        fun_metaphor: 'เวลายื่นของให้เพื่อน น้องเก๋ยกระโดดขึ้นเสียงสอง géi nǐ อย่างคล่องแคล่ว!',
+        reassurance: 'พูด géi nǐ ทุกครั้งที่ยื่นพาสปอร์ตหรือสิ่งของ น่ารักเป็นธรรมชาติมาก!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เช็กอินโรงแรมในจีน',
+        explanation_th: 'โครงสร้างเช็กอิน: 你好，我预订了房间 (สวัสดีครับ ผมจองห้องไว้แล้ว) + 这是我的护照 (นี่คือพาสปอร์ตของผม)',
+        patterns: [
+          {
+            formula: '你好，我预订了房间。 = สวัสดีครับ/ค่ะ ฉันได้จองห้องพักไว้แล้ว',
+            zh: '你好，我预订了房间。',
+            pinyin: 'Nǐ hǎo, wǒ yùdìng le fángjiān.',
+            th: 'สวัสดีครับ ผมได้จองห้องพักไว้แล้วครับ',
+            en: 'Hello, I have booked a room.'
+          },
+          {
+            formula: '押金 [จำนวน] 块，这是您的房卡。 = ค่ามัดจำ...หยวน นี่คือคีย์การ์ดของคุณครับ',
+            zh: '押金两百块，这是您的房卡。',
+            pinyin: 'Yājīn liǎngbǎi kuài, zhè shì nín de fángkǎ.',
+            th: 'เงินมัดจำสองร้อยหยวนครับ นี่คือคีย์การ์ดของคุณครับ',
+            en: 'The deposit is 200 yuan, here is your room keycard.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我预订了房间，办理入住。',
+          pinyin: 'Nǐ hǎo! Wǒ yùdìng le fángjiān, bànlǐ rùzhù.',
+          th: 'สวัสดีครับ ผมจองห้องพักไว้แล้วครับ ขอเช็กอินครับ',
+          en: 'Hello! I booked a room, checking in.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานต้อนรับ 👩‍💼',
+          zh: '您好！请出示您的护照。',
+          pinyin: 'Nín hǎo! Qǐng chūshì nín de hùzhào.',
+          th: 'สวัสดีค่ะ รบกวนแสดงหนังสือเดินทางของท่านด้วยค่ะ',
+          en: 'Hello! Please present your passport.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，这是我的护照。',
+          pinyin: 'Hǎode, zhè shì wǒ de hùzhào.',
+          th: 'ได้ครับ นี่คือพาสปอร์ตของผมครับ',
+          en: 'Okay, here is my passport.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานต้อนรับ 👩‍💼',
+          zh: '查到了，入住两晚。押金两百块，退房时退还。',
+          pinyin: 'Chádào le, rùzhù liǎng wǎn. Yājīn liǎngbǎi kuài, tuìfáng shí tuìhuán.',
+          th: 'ตรวจสอบพบแล้วค่ะ พัก 2 คืน เงินมัดจำ 200 หยวน จะคืนให้ตอนเช็กเอาต์ค่ะ',
+          en: 'Found it, staying two nights. 200 yuan deposit, refunded at check-out.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，微信支付押金。',
+          pinyin: 'Hǎode, Wēixìn zhīfù yājīn.',
+          th: 'ตกลงครับ จ่ายมัดจำผ่าน WeChat Pay ครับ',
+          en: 'Okay, paying deposit via WeChat.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานต้อนรับ 👩‍💼',
+          zh: '好的，这是您的房卡，房间在三楼，祝您入住愉快！',
+          pinyin: 'Hǎode, zhè shì nín de fángkǎ, fángjiān zài sān lóu, zhù nín rùzhù yúkuài!',
+          th: 'เรียบร้อยค่ะ นี่คือคีย์การ์ดของท่าน ห้องอยู่ชั้น 3 ขอให้พักผ่อนอย่างมีความสุขค่ะ!',
+          en: 'Here is your keycard, room on the 3rd floor, enjoy your stay!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'zhè shì wǒ de hùzhào' แปลว่าอะไร?",
+          options: [
+            'นี่คือหนังสือเดินทางของฉัน',
+            'นี่คือคีย์การ์ดห้องพักของฉัน',
+            'นี่คือรูปถ่ายของฉัน',
+            'นี่คือเงินมัดจำของฉัน'
+          ],
+          correct_index: 0,
+          explanation_th: 'hùzhào แปลว่า หนังสือเดินทาง (พาสปอร์ต)',
+          encouragement: 'ฟังคำว่าพาสปอร์ตได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '房' (ห้อง) ใน '房卡' มีหมวดนำประตูบานเดียว '户' สื่อถึงอะไร?",
+          options: [
+            'ประตูบานเดียวของห้องพักในบ้าน',
+            'หน้าต่างบานคู่',
+            'หลังคา',
+            'เตียงนอน'
+          ],
+          correct_index: 0,
+          explanation_th: '户 (户字头) คือหมวดประตูบานเดียว สื่อถึงห้องพักส่วนตัว',
+          encouragement: 'จำหมวดนำ 户 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สวัสดีครับ ผมจองห้องพักไว้แล้ว"',
+          tokens: [
+            '我预订了房间',
+            '你好'
+          ],
+          correct_sequence: [
+            '你好',
+            '我预订了房间'
+          ],
+          pinyin: 'Nǐ hǎo, wǒ yùdìng le fángjiān',
+          meaning_th: 'สวัสดีครับ ผมจองห้องพักไว้แล้ว',
+          explanation_th: 'คำทักทาย (你好) + บอกการจองห้อง (我预订了房间)',
+          encouragement: 'เรียงประโยคเช็กอินได้อย่างราบรื่นไร้ที่ติ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า "คีย์การ์ดห้องพัก" ในภาษาจีนตรงกับคำใด?',
+          options: [
+            '房卡 (fángkǎ)',
+            '护照 (hùzhào)',
+            '押金 (yājīn)',
+            '房间 (fángjiān)'
+          ],
+          correct_index: 0,
+          explanation_th: '房卡 (fángkǎ) คือ คีย์การ์ดห้องพัก',
+          encouragement: 'จำคำศัพท์อุปกรณ์โรงแรมได้อย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณเดินทางถึงเคาน์เตอร์โรงแรมในปักกิ่ง ต้องการบอกพนักงานต้อนรับว่า "สวัสดีครับ ผมจองห้องพักไว้แล้ว นี่คือหนังสือเดินทางของผมครับ" ต้องพูดว่าอย่างไร?',
+        options: [
+          '你好，我预订了房间，这是我的护照。 (Nǐ hǎo, wǒ yùdìng le fángjiān, zhè shì wǒ de hùzhào.)',
+          '你好，我要两碗面条，不要辣。 (Nǐ hǎo, wǒ yào liǎng wǎn miàntiáo, bú yào là.)',
+          '去地铁站怎么走？ (Qù dìtiězhàn zěnme zǒu?)',
+          '今天天气不冷不热。 (Jīntiān tiānqì bù lěng bú rè.)'
+        ],
+        correct_index: 0,
+        explanation_th: '你好，我预订了房间，这是我的护照。 เป็นประโยคเช็กอินที่ถูกต้อง สมบูรณ์แบบ สุภาพ และมืออาชีพ 100%!',
+        encouragement: '🎉 ยอดเยี่ยมมาก! พนักงานต้อนรับยิ้มรับและจัดเตรียมห้องพักให้ทันที!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u10_l01',
+        badge_name: 'ผู้เชี่ยวชาญการเช็กอิน 🏨🐰',
+        message_th: 'ยอดเยี่ยมมาก! คุณเช็กอินโรงแรมและรับคีย์การ์ดได้อย่างมั่นใจแล้ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u10_l02',
+      lesson_number: 2,
+      title: {
+        zh: 'Wi-Fi密码与空调坏了',
+        th: 'Wi-Fi & สิ่งอำนวยความสะดวกในห้อง',
+        en: 'Wi-Fi Password & Room Amenities'
+      },
+      can_do: {
+        th: 'ถามรหัส Wi-Fi อ่านเลขห้อง 101 ด้วย yāo และแจ้งอุปกรณ์ในห้องชำรุดเพื่อขอเปลี่ยนห้อง',
+        en: 'Ask for Wi-Fi password, read room 101 as yāo, and report broken amenities'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ขอรหัส Wi-Fi และแจ้งพนักงานเมื่อแอร์ในห้องมีปัญหาได้!',
+      vocabulary: [
+        {
+          id: 'hsk1_1007',
+          hanzi: '密码',
+          pinyin: 'mìmǎ',
+          display_pinyin: 'mìmǎ',
+          pinyin_tone: 'mi4ma3',
+          meaning_th: 'รหัสผ่าน/พาสเวิร์ด',
+          meaning_en: 'password / code',
+          radical: '石',
+          radical_name_th: 'หมวดหิน (石字旁)',
+          stroke_count: 22,
+          mnemonic: 'รหัสลับ (密) ที่ซ่อนอยู่ในชุดตัวเลข (码) = รหัสผ่าน (密码)',
+          kid_mnemonic: 'กดรหัส 4 ตัว ปิ๊บๆ ปลดล็อก Wi-Fi = 密码',
+          body_gesture: 'ทำนิ้วมือกดแป้นพิมพ์รหัสผ่านในอากาศ'
+        },
+        {
+          id: 'hsk1_1008',
+          hanzi: '浴室',
+          pinyin: 'yùshì',
+          display_pinyin: 'yùshì',
+          pinyin_tone: 'yu4shi4',
+          meaning_th: 'ห้องอาบน้ำ/ห้องน้ำในห้องพัก',
+          meaning_en: 'bathroom / shower room',
+          radical: '氵',
+          radical_name_th: 'หมวดสามหยดน้ำ (三点水)',
+          stroke_count: 19,
+          mnemonic: 'ห้อง (室) สำหรับการอาบน้ำชำระร่างกาย (浴) = ห้องอาบน้ำ (浴室)',
+          kid_mnemonic: 'เปิดฝักบัวอาบน้ำ สดชื่นสบายตัว = 浴室',
+          body_gesture: 'ทำท่ายกมือขึ้นเหนือศีรษะเปิดฝักบัวอาบน้ำ'
+        },
+        {
+          id: 'hsk1_1009',
+          hanzi: '空调',
+          pinyin: 'kōngtiáo',
+          display_pinyin: 'kōngtiáo',
+          pinyin_tone: 'kong1tiao2',
+          meaning_th: 'เครื่องปรับอากาศ (แอร์)',
+          meaning_en: 'air conditioner / AC',
+          radical: '穴',
+          radical_name_th: 'หมวดถ้ำโพรง (穴宝盖)',
+          stroke_count: 18,
+          mnemonic: 'เครื่องมือปรับอุณหภูมิ (调) อากาศในช่องว่างห้อง (空) = แอร์ (空调)',
+          kid_mnemonic: 'หยิบรีโมตแอร์ กดปุ่ม ปิ๊บ ลมเย็นพัดฉิว = 空调',
+          body_gesture: 'ทำมือกดรีโมตแอร์ชี้ไปที่เพดานห้อง'
+        },
+        {
+          id: 'hsk1_1010',
+          hanzi: '坏了',
+          pinyin: 'huàile',
+          display_pinyin: 'huàile',
+          pinyin_tone: 'huai4le',
+          meaning_th: 'เสียแล้ว/พังแล้ว',
+          meaning_en: 'broken / out of order',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (土字旁)',
+          stroke_count: 9,
+          mnemonic: 'ชิ้นส่วนพังทลายลงสู่ผืนดิน (土) ใช้การไม่ได้แล้ว = เสีย/พัง (坏了)',
+          kid_mnemonic: 'เครื่องใช้ไฟฟ้าดับสนิท อ้าว เสียแล้วจ้า = 坏了',
+          body_gesture: 'กางสองมือออกแล้วส่ายหน้าบอกว่าพังแล้ว'
+        },
+        {
+          id: 'hsk1_1011',
+          hanzi: '请问',
+          pinyin: 'qǐngwèn',
+          display_pinyin: 'qǐngwèn',
+          pinyin_tone: 'qing3wen4',
+          meaning_th: 'ขอถามหน่อย/ขอโทษนะคะ',
+          meaning_en: 'excuse me / may I ask',
+          radical: '讠',
+          radical_name_th: 'หมวดภาษาพูด (言字旁)',
+          stroke_count: 16,
+          mnemonic: 'กล่าวคำขอร้องสุภาพ (请) เพื่อเอ่ยถาม (问) = ขอถามหน่อย (请问)',
+          kid_mnemonic: 'ยกมือขึ้นเบาๆ ยิ้มหวาน ขออนุญาตถามหน่อยครับ = 请问',
+          body_gesture: 'ยกมือขวาขึ้นระดับอก ก้มศีรษะเล็กน้อยอย่างสุภาพ'
+        },
+        {
+          id: 'hsk1_1012',
+          hanzi: '换',
+          pinyin: 'huàn',
+          display_pinyin: 'huàn',
+          pinyin_tone: 'huan4',
+          meaning_th: 'เปลี่ยน/สลับ',
+          meaning_en: 'change / switch / exchange',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 12,
+          mnemonic: 'ใช้มือ (扌) แลกเปลี่ยนหรือสับเปลี่ยนสิ่งของ = เปลี่ยน (换)',
+          kid_mnemonic: 'ยื่นของเก่า ขอเปลี่ยนเป็นของใหม่ = 换',
+          body_gesture: 'ทำมือสองข้างหมุนวนสลับกัน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎการอ่านเลขห้องและเบอร์โทร: 一 อ่านเป็น yāo (yāo líng yāo)',
+        description_th: 'ในบริบทของเลขห้องพัก เบอร์โทรศัพท์ หรือรหัสผ่าน ตัวเลข 一 (1) จะไม่อ่านว่า yī แต่จะออกเสียงว่า yāo เพื่อไม่ให้สับสนกับตัวเลข 七 (qī)',
+        example: 'ห้อง 101 = 一零一 (yāo líng yāo)',
+        fun_metaphor: 'น้องหนึ่งเปลี่ยนชื่อเล่นเป็น yāo ทันทีเมื่อขึ้นป้ายหน้าห้องพัก!',
+        reassurance: 'อ่าน yāo líng yāo คนจีนทุกคนรู้ทันทีว่าเป็นห้อง 101 มือโปรมาก!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ถามรหัส Wi-Fi และแจ้งของเสีย',
+        explanation_th: 'ถามรหัส: 请问，Wi-Fi 密码是多少？ และแจ้งอุปกรณ์ชำรุด: [อุปกรณ์] + 坏了，可以换一个房间吗？',
+        patterns: [
+          {
+            formula: '请问，Wi-Fi 密码是多少？ = ขอโทษครับ รหัส Wi-Fi คืออะไร?',
+            zh: '请问，Wi-Fi 密码是多少？',
+            pinyin: 'Qǐngwèn, Wi-Fi mìmǎ shì duōshao?',
+            th: 'ขอถามหน่อยครับ รหัสผ่าน Wi-Fi คืออะไรครับ?',
+            en: 'Excuse me, what is the Wi-Fi password?'
+          },
+          {
+            formula: '[อุปกรณ์] + 坏了，可以换...吗？ = ...เสียแล้ว ขอเปลี่ยน...ได้ไหม?',
+            zh: '房间的空调坏了，可以换一个房间吗？',
+            pinyin: 'Fángjiān de kōngtiáo huàile, kěyǐ huàn yí ge fángjiān ma?',
+            th: 'แอร์ในห้องเสียแล้ว สามารถขอเปลี่ยนห้องได้ไหมครับ?',
+            en: 'The AC in the room is broken, can I switch to another room?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我是 101 房的客人。请问 Wi-Fi 密码是多少？',
+          pinyin: 'Nǐ hǎo! Wǒ shì yāo líng yāo fáng de kèrén. Qǐngwèn Wi-Fi mìmǎ shì duōshao?',
+          th: 'สวัสดีครับ ผมแขกห้อง 101 ขอถามหน่อยรหัส Wi-Fi คืออะไรครับ?',
+          en: 'Hello! I am the guest in room 101. What is the Wi-Fi password?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานโรงแรม 👩‍💼',
+          zh: '您好！密码就是您的房间号加手机后四位。',
+          pinyin: 'Nín hǎo! Mìmǎ jiù shì nín de fángjiānhào jiā shǒujī hòu sì wèi.',
+          th: 'สวัสดีค่ะ รหัสผ่านคือเลขห้องพักตามด้วยเบอร์มือถือ 4 ตัวท้ายค่ะ',
+          en: 'Hello! The password is your room number plus last 4 digits of mobile.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的。另外，房间的空调好像坏了，不吹冷风。',
+          pinyin: 'Hǎode. Lìngwài, fángjiān de kōngtiáo hǎoxiàng huàile, bù chuī lěngfēng.',
+          th: 'ขอบคุณครับ อีกเรื่องหนึ่ง แอร์ในห้องเหมือนจะเสีย ไม่เป่าลมเย็นเลยครับ',
+          en: 'Okay. Also, the room AC seems broken, no cold air blowing.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานโรงแรม 👩‍💼',
+          zh: '真对不起！我们马上派师傅去修，或者给您换一个房间，可以吗？',
+          pinyin: 'Zhēn duìbuqǐ! Wǒmen mǎshàng pài shīfu qù xiū, huòzhě gěi nín huàn yí ge fángjiān, kěyǐ ma?',
+          th: 'ต้องขออภัยจริงๆ ค่ะ! ทางเราจะส่งช่างไปซ่อมทันที หรือจะให้เปลี่ยนห้องพัก สะดวกไหมคะ?',
+          en: 'So sorry! We will send a technician to fix it, or switch rooms for you, okay?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '换一个房间吧，太感谢了！',
+          pinyin: 'Huàn yí ge fángjiān ba, tài gǎnxiè le!',
+          th: 'ขอเปลี่ยนห้องดีกว่าครับ ขอบพระคุณมากครับ!',
+          en: 'Let\'s switch rooms, thank you very much!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'yāo líng yāo fáng' หมายถึงห้องหมายเลขใด?",
+          options: [
+            'ห้อง 101 (一 อ่านเป็น yāo ในเลขห้อง)',
+            'ห้อง 701',
+            'ห้อง 110',
+            'ห้อง 201'
+          ],
+          correct_index: 0,
+          explanation_th: 'ในภาษาจีน เลขห้องและเบอร์โทร ตัวเลข 1 จะอ่านว่า yāo เพื่อป้องกันความสับสนกับเลข 7 (qī)',
+          encouragement: 'จำกฎการอ่านเลขห้อง yāo líng yāo ได้อย่างเฉียบขาด!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '换' (เปลี่ยน) มีหมวดนำมือ '扌' สื่อถึงอะไร?",
+          options: [
+            'การใช้มือสลับสับเปลี่ยนสิ่งของ',
+            'การมองดู',
+            'การวิ่งหนี',
+            'การดื่มน้ำ'
+          ],
+          correct_index: 0,
+          explanation_th: '扌 (提手旁) คือหมวดมือ สื่อถึงการกระทำด้วยมือในการสลับเปลี่ยนสิ่งของ',
+          encouragement: 'จำหมวดนำมือ 扌 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แอร์ในห้องเสียแล้ว"',
+          tokens: [
+            '坏了',
+            '房间的空调'
+          ],
+          correct_sequence: [
+            '房间的空调',
+            '坏了'
+          ],
+          pinyin: 'Fángjiān de kōngtiáo huàile',
+          meaning_th: 'แอร์ในห้องเสียแล้ว',
+          explanation_th: 'อุปกรณ์ (房间的空调) + สภาพเสีย (坏了)',
+          encouragement: 'แจ้งอุปกรณ์ชำรุดได้อย่างถูกต้องแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'เมื่อต้องการถามรหัสผ่าน Wi-Fi ควรพูดประโยคใด?',
+          options: [
+            '请问，Wi-Fi 密码是多少？ (Qǐngwèn, Wi-Fi mìmǎ shì duōshao?)',
+            '洗手间在哪儿？ (Xǐshǒujiān zài nǎr?)',
+            '去机场怎么走？ (Qù jīchǎng zěnme zǒu?)',
+            '多少钱一盒？ (Duōshao qián yì hé?)'
+          ],
+          correct_index: 0,
+          explanation_th: '请问，Wi-Fi 密码是多少？ แปลว่า ขอโทษครับ รหัสผ่าน Wi-Fi คืออะไร?',
+          encouragement: 'ถามรหัส Wi-Fi ได้อย่างคล่องแคล่ว มีเน็ตใช้ตลอดการเดินทาง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณเพิ่งเข้าห้องพักที่โรงแรมในเซี่ยงไฮ้ แต่พบว่าแอร์ในห้องเปิดไม่ติดและไม่เย็น ต้องการโทรแจ้งเคาน์เตอร์ว่า "สวัสดีครับ แอร์ในห้องเสียแล้ว ขอเปลี่ยนห้องได้ไหมครับ?" ต้องพูดว่าอย่างไร?',
+        options: [
+          '你好，房间的空调坏了，可以换一个房间吗？ (Nǐ hǎo, fángjiān de kōngtiáo huàile, kěyǐ huàn yí ge fángjiān ma?)',
+          '你好，我要一碗面条，不要辣。 (Nǐ hǎo, wǒ yào yì wǎn miàntiáo, bú yào là.)',
+          '我有两件行李。 (Wǒ yǒu liǎng jiàn xíngli.)',
+          '今天天气很冷。 (Jīntiān tiānqì hěn lěng.)'
+        ],
+        correct_index: 0,
+        explanation_th: '你好，房间的空调坏了，可以换一个房间吗？ เป็นการแจ้งปัญหาและขอเปลี่ยนห้องที่สุภาพและไวยากรณ์ถูกต้อง 100%!',
+        encouragement: '🎉 แก้ไขสถานการณ์เฉพาะหน้าในโรงแรมได้อย่างมืออาชีพ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u10_l02',
+        badge_name: 'เซียนสื่อสารในโรงแรม 📶🐰',
+        message_th: 'ยินดีด้วย! คุณขอรหัส Wi-Fi อ่านเลขห้อง yāo และแจ้งเปลี่ยนห้องได้อย่างคล่องตัว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u10_l03',
+      lesson_number: 3,
+      title: {
+        zh: '机场值机与托运行李',
+        th: 'สนามบิน & บอร์ดดิ้งพาส',
+        en: 'Airport Check-in & Boarding Pass'
+      },
+      can_do: {
+        th: 'เช็กอินที่เคาน์เตอร์สนามบิน รับบอร์ดดิ้งพาส โหลดกระเป๋าสัมภาระ และถามหาเกตขึ้นเครื่องได้',
+        en: 'Check in at airline counters, receive boarding passes, check baggage, and find gates'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สื่อสารการเช็กอินขึ้นเครื่องบินที่สนามบินปักกิ่งได้อย่างราบรื่น!',
+      vocabulary: [
+        {
+          id: 'hsk1_1013',
+          hanzi: '机场',
+          pinyin: 'jīchǎng',
+          display_pinyin: 'jīchǎng',
+          pinyin_tone: 'ji1chang3',
+          meaning_th: 'สนามบิน/ท่าอากาศยาน',
+          meaning_en: 'airport',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (土字旁)',
+          stroke_count: 12,
+          mnemonic: 'ลานกว้างบนผืนดิน (场) สำหรับเครื่องบิน (机) บินขึ้นลง = สนามบิน (机场)',
+          kid_mnemonic: 'เครื่องบินลำใหญ่ร่อนลงจอดบนลานบินกว้าง = 机场',
+          body_gesture: 'กางสองแขนทำท่าปีกเครื่องบินร่อนลงจอด'
+        },
+        {
+          id: 'hsk1_1014',
+          hanzi: '登机牌',
+          pinyin: 'dēngjīpái',
+          display_pinyin: 'dēngjīpái',
+          pinyin_tone: 'deng1ji1pai2',
+          meaning_th: 'บัตรขึ้นเครื่อง (บอร์ดดิ้งพาส)',
+          meaning_en: 'boarding pass',
+          radical: '片',
+          radical_name_th: 'หมวดแผ่นไม้ (片字旁)',
+          stroke_count: 28,
+          mnemonic: 'บัตรป้ายกระดาษ (牌) สำหรับใช้ขึ้น (登) อากาศยาน (机) = บอร์ดดิ้งพาส (登机牌)',
+          kid_mnemonic: 'ถือตั๋วบอร์ดดิ้งพาส เดินขึ้นเครื่องบินอย่างตื่นเต้น = 登机牌',
+          body_gesture: 'สองมือถือบัตรบอร์ดดิ้งพาสยื่นตรวจหน้าเกต'
+        },
+        {
+          id: 'hsk1_1015',
+          hanzi: '行李',
+          pinyin: 'xíngli',
+          display_pinyin: 'xíngli',
+          pinyin_tone: 'xing2li',
+          meaning_th: 'สัมภาระ/กระเป๋าเดินทาง',
+          meaning_en: 'luggage / baggage',
+          radical: '行',
+          radical_name_th: 'หมวดก้าวเดิน (行字部)',
+          stroke_count: 13,
+          mnemonic: 'สิ่งของเครื่องใช้ที่จัดเตรียมไว้เพื่อการเดินทาง (行) = สัมภาระ (行李)',
+          kid_mnemonic: 'ลากกระเป๋าเดินทางใบใหญ่ไปเที่ยว = 行李',
+          body_gesture: 'ทำท่ามือขวาลากกระเป๋าเดินทางล้อเลื่อน'
+        },
+        {
+          id: 'hsk1_1016',
+          hanzi: '托运',
+          pinyin: 'tuōyùn',
+          display_pinyin: 'tuōyùn',
+          pinyin_tone: 'tuo1yun4',
+          meaning_th: 'โหลดใต้ท้องเครื่อง/ฝากส่งขนส่ง',
+          meaning_en: 'check in (baggage) / consign',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 10,
+          mnemonic: 'ใช้มือฝากมอบหมาย (托) ให้ขนส่งนำพาไป (运) = โหลดสัมภาระ (托运)',
+          kid_mnemonic: 'ยกกระเป๋าวางบนสายพาน โหลดใต้ท้องเครื่อง = 托运',
+          body_gesture: 'สองมือทำท่ายกกระเป๋าวางลงบนสายพาน'
+        },
+        {
+          id: 'hsk1_1017',
+          hanzi: '登机口',
+          pinyin: 'dēngjīkǒu',
+          display_pinyin: 'dēngjīkǒu',
+          pinyin_tone: 'deng1ji1kou3',
+          meaning_th: 'ประตูขึ้นเครื่อง (เกต)',
+          meaning_en: 'boarding gate',
+          radical: '口',
+          radical_name_th: 'หมวดปาก/ประตู (口字部)',
+          stroke_count: 19,
+          mnemonic: 'ช่องทางประตู (口) สำหรับเดินก้าวขึ้นเครื่องบิน (登机) = เกต (登机口)',
+          kid_mnemonic: 'มองหาป้ายเกตเลข 12 เดินไปขึ้นเครื่อง = 登机口',
+          body_gesture: 'ชี้ไปยังป้ายประตูทางออกข้างหน้า'
+        },
+        {
+          id: 'hsk1_1018',
+          hanzi: '飞往',
+          pinyin: 'fēiwǎng',
+          display_pinyin: 'fēiwǎng',
+          pinyin_tone: 'fei1wang3',
+          meaning_th: 'บินไปยัง/มุ่งหน้าสู่',
+          meaning_en: 'fly to / bound for',
+          radical: '飞',
+          radical_name_th: 'หมวดบิน (飞字部)',
+          stroke_count: 11,
+          mnemonic: 'กางปีกบิน (飞) มุ่งหน้าไปทาง (往) จุดหมายปลายทาง = บินไปยัง (飞往)',
+          kid_mnemonic: 'เครื่องบินเหินฟ้า บินตรงกลับกรุงเทพฯ = 飞往',
+          body_gesture: 'กางสองแขนร่อนทะยานขึ้นสู่ท้องฟ้า'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ลักษณนามกระเป๋าเดินทาง: 两件行李 (liǎng jiàn xíngli)',
+        description_th: 'กระเป๋าสัมภาระเดินทางใช้ลักษณนาม 件 (jiàn) และจำนวนสองชิ้นต้องใช้ 两 (liǎng) ห้ามใช้ 二 (èr)',
+        example: '两件行李 (liǎng jiàn xíngli = กระเป๋าสองใบ)',
+        fun_metaphor: 'กระเป๋าสองใบใช้เหลี่ยงเจี้ยน liǎng jiàn หนักแน่น ปลอดภัย!',
+        reassurance: 'พูด liǎng jiàn xíngli เจ้าหน้าที่สายการบินประทับใจความเป๊ะทันที!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เช็กอินขึ้นเครื่องบิน',
+        explanation_th: 'ยื่นพาสปอร์ต: 你好，我去 [จุดหมาย]，办理登机牌 และบอกสัมภาระ: 有 [จำนวน] 件行李要托运',
+        patterns: [
+          {
+            formula: '你好，我去 [สถานที่]，这是护照，办理登机牌。',
+            zh: '你好，我去曼谷，这是护照，办理登机牌。',
+            pinyin: 'Nǐ hǎo, wǒ qù Màngǔ, zhè shì hùzhào, bànlǐ dēngjīpái.',
+            th: 'สวัสดีครับ ผมไปกรุงเทพฯ นี่คือพาสปอร์ต ขอออกบอร์ดดิ้งพาสครับ',
+            en: 'Hello, I go to Bangkok, here is my passport, check in for boarding pass.'
+          },
+          {
+            formula: '登机口在 [หมายเลข] 号 = ประตูขึ้นเครื่องอยู่ที่หมายเลข...',
+            zh: '登机口在十二号。',
+            pinyin: 'Dēngjīkǒu zài shí\'èr hào.',
+            th: 'ประตูขึ้นเครื่อง (เกต) อยู่ที่หมายเลข 12 ครับ',
+            en: 'The boarding gate is at number 12.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我去曼谷，这是我的护照，办理登机牌。',
+          pinyin: 'Nǐ hǎo! Wǒ qù Màngǔ, zhè shì wǒ de hùzhào, bànlǐ dēngjīpái.',
+          th: 'สวัสดีครับ ผมไปกรุงเทพฯ นี่คือพาสปอร์ตของผม ขอเช็กอินรับบอร์ดดิ้งพาสครับ',
+          en: 'Hello! Flying to Bangkok, here is my passport, for boarding pass.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่สายการบิน 👨‍💼',
+          zh: '先生您好！请问有行李需要托运吗？',
+          pinyin: 'Xiānsheng nín hǎo! Qǐngwèn yǒu xíngli xūyào tuōyùn ma?',
+          th: 'สวัสดีครับคุณผู้ชาย! ขอถามหน่อยมีกระเป๋าสัมภาระต้องโหลดไหมครับ?',
+          en: 'Hello sir! Do you have any baggage to check in?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '有，两件行李要托运。',
+          pinyin: 'Yǒu, liǎng jiàn xíngli yào tuōyùn.',
+          th: 'มีครับ กระเป๋าสองใบต้องการโหลดใต้เครื่องครับ',
+          en: 'Yes, two pieces of luggage to check in.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่สายการบิน 👨‍💼',
+          zh: '好的，请把行李放上来。给您登机牌，登机口在十八号，下午四点开始登机。',
+          pinyin: 'Hǎode, qǐng bǎ xíngli fàng shànglai. Gěi nín dēngjīpái, dēngjīkǒu zài shíbā hào, xiàwǔ sì diǎn kāishǐ dēngjī.',
+          th: 'ได้ครับ วางกระเป๋าขึ้นมาได้เลย นี่ครับบอร์ดดิ้งพาส เกตอยู่ที่หมายเลข 18 เริ่มขึ้นเครื่องบ่าย 4 โมงครับ',
+          en: 'Okay, put bags up here. Here is your boarding pass, gate 18, boarding at 4:00 PM.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太感谢了！再见！',
+          pinyin: 'Tài gǎnxiè le! Zàijiàn!',
+          th: 'ขอบคุณมากครับ! สวัสดีครับ!',
+          en: 'Thank you very much! Goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'liǎng jiàn xíngli tuōyùn' แปลว่าอะไร?",
+          options: [
+            'โหลดกระเป๋าสัมภาระ 2 ใบ',
+            'โหลดกระเป๋าสัมภาระ 1 ใบ',
+            'ซื้อตั๋วเครื่องบิน 2 ใบ',
+            'ไปที่เกตหมายเลข 2'
+          ],
+          correct_index: 0,
+          explanation_th: 'liǎng jiàn xíngli คือ สัมภาระ 2 ใบ และ tuōyùn คือ โหลดใต้เครื่อง',
+          encouragement: 'ฟังคำศัพท์การโหลดสัมภาระได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '机' ใน '机场' (สนามบิน) และ '登机牌' (บอร์ดดิ้งพาส) คืออะไร?",
+          options: [
+            'เครื่องบิน (飞机 fēijī)',
+            'รถยนต์',
+            'รถไฟใต้ดิน',
+            'เรือเดินสมุทร'
+          ],
+          correct_index: 0,
+          explanation_th: '机 ในบริบทนี้ย่อมาจาก 飞机 (fēijī เครื่องบิน)',
+          encouragement: 'เข้าใจการย่อคำในภาษาจีนได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ประตูขึ้นเครื่องอยู่ที่หมายเลข 18"',
+          tokens: [
+            '在十八号',
+            '登机口'
+          ],
+          correct_sequence: [
+            '登机口',
+            '在十八号'
+          ],
+          pinyin: 'Dēngjīkǒu zài shíbā hào',
+          meaning_th: 'ประตูขึ้นเครื่องอยู่ที่หมายเลข 18',
+          explanation_th: 'ประธานเกต (登机口) + อยู่ที่หมายเลข (在十八号)',
+          encouragement: 'เรียงประโยคค้นหาเกตขึ้นเครื่องได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า "บัตรขึ้นเครื่องบิน (บอร์ดดิ้งพาส)" ในภาษาจีนคือคำใด?',
+          options: [
+            '登机牌 (dēngjīpái)',
+            '房卡 (fángkǎ)',
+            '护照 (hùzhào)',
+            '车票 (chēpiào)'
+          ],
+          correct_index: 0,
+          explanation_th: '登机牌 (dēngjīpái) คือ บอร์ดดิ้งพาส ส่วน 房卡 (fángkǎ) คือ คีย์การ์ดห้อง',
+          encouragement: 'แยกแยะประเภทบัตรต่างๆ ได้อย่างถูกต้องแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณอยู่ที่เคาน์เตอร์เช็กอินสนามบินปักกิ่ง ต้องการบอกเจ้าหน้าที่ว่า "สวัสดีครับ นี่คือพาสปอร์ตของผม มีกระเป๋าสองใบต้องโหลดครับ" ต้องพูดว่าอย่างไร?',
+        options: [
+          '你好，这是我的护照，有两件行李要托运。 (Nǐ hǎo, zhè shì wǒ de hùzhào, yǒu liǎng jiàn xíngli yào tuōyùn.)',
+          '你好，我要一碗面条，不辣。 (Nǐ hǎo, wǒ yào yì wǎn miàntiáo, bú là.)',
+          '洗手间在登机口。 (Xǐshǒujiān zài dēngjīkǒu.)',
+          '今天天气很热。 (Jīntiān tiānqì hěn rè.)'
+        ],
+        correct_index: 0,
+        explanation_th: '你好，这是我的护照，有两件行李要托运。 บูรณาการทั้งการทักทาย การยื่นพาสปอร์ต และการแจ้งจำนวนสัมภาระได้อย่างแม่นยำ 100%!',
+        encouragement: '🎉 สื่อสารที่สนามบินได้อย่างราบรื่น เตรียมพร้อมขึ้นเครื่องกลับบ้านอย่างสบายใจ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u10_l03',
+        badge_name: 'นักเหินฟ้าข้ามทวีป 🛫🐰',
+        message_th: 'ยอดเยี่ยมมาก! คุณเช็กอินที่สนามบิน โหลดกระเป๋า และรับบอร์ดดิ้งพาสได้อย่างคล่องแคล่ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u10_l04',
+      lesson_number: 4,
+      title: {
+        zh: '挑战：中国三日游大通关',
+        th: '🏆 Tier 1 Grand Boss Quest: ภารกิจเที่ยวจีน 3 วัน 2 คืน',
+        en: 'Tier 1 Grand Boss Quest: China 3-Day Adventure Odyssey'
+      },
+      can_do: {
+        th: 'พิชิตมหากาพย์การเดินทาง 3 วัน 2 คืน บูรณาการทักษะภาษาจีนทั้ง 10 Units เอาชีวิตรอดในจีนได้อย่างแท้จริง',
+        en: 'Conquer the 3-day adventure odyssey, integrating all 10 units for real-world survival in China'
+      },
+      baby_step_goal: 'เป้าหมายสูงสุด: พิชิต Grand Boss Quest รับมหาบัตรเกียรติยศ Tier 1 Grand Explorer!',
+      vocabulary: [
+        {
+          id: 'hsk1_1019',
+          hanzi: '大通关',
+          pinyin: 'dà tōngguān',
+          display_pinyin: 'dà tōngguān',
+          pinyin_tone: 'da4 tong1guan1',
+          meaning_th: 'มหาภารกิจผ่านด่าน/การประลองด่านใหญ่',
+          meaning_en: 'grand quest clearance / ultimate trial',
+          radical: '大',
+          radical_name_th: 'หมวดใหญ่ (大字部)',
+          stroke_count: 17,
+          mnemonic: 'บททดสอบยิ่งใหญ่ (大) ที่ผ่านพ้นทุกประตูด่าน (通关) = มหาด่านใหญ่ (大通关)',
+          kid_mnemonic: 'กระโดดข้ามเส้นชัยด่านสุดท้าย ไชโยสำเร็จแล้ว = 大通关',
+          body_gesture: 'ชูสองแขนขึ้นทำสัญลักษณ์รูปตัว V สองข้าง'
+        },
+        {
+          id: 'hsk1_1020',
+          hanzi: '旅行',
+          pinyin: 'lǚxíng',
+          display_pinyin: 'lǚxíng',
+          pinyin_tone: 'lv3xing2',
+          meaning_th: 'การท่องเที่ยว/ออกเดินทาง',
+          meaning_en: 'travel / journey',
+          radical: '方',
+          radical_name_th: 'หมวดทิศทางสี่เหลี่ยม (方字旁)',
+          stroke_count: 16,
+          mnemonic: 'ผู้คนโบกธงมุ่งหน้าก้าวเดิน (行) สู่ทิศทางใหม่ (方) = การเดินทางท่องเที่ยว (旅行)',
+          kid_mnemonic: 'แบกเป้สะพายหลัง ออกไปสำรวจโลกกว้าง = 旅行',
+          body_gesture: 'ทำท่าสะพายเป้สองสายแล้วก้าวเดินอย่างมั่นใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การบูรณาการ Tone Sandhi ทั้ง 10 Units ในการเดินทางจริง',
+        description_th: 'ทบทวนกฎเสียงสำคัญ: 洗手间 (xíshǒujiān), 往左 (wáng zuǒ), 我也 (wó yě), 一起 (yì qǐ), 不冷不热 (bù lěng bú rè), 吃药 (chī yào), 101 房 (yāo líng yāo)',
+        example: 'yāo líng yāo (101), yì qǐ (ด้วยกัน), chī yào (กินยา)',
+        fun_metaphor: 'กฎเสียงพินอินทั้งหมดมารวมพลังเป็นเพลงแห่งชัยชนะของนักสำรวจฮั่นซีโร่!',
+        reassurance: 'คุณฝึกฝนมาอย่างดีเยี่ยมตลอดทั้ง 10 Units วันนี้คือวันที่คุณเปล่งประกายที่สุด!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้มหากาพย์ 3 วัน 2 คืน (3-Stage Odyssey)',
+        explanation_th: 'Stage 1: สนามบินและโรงแรม -> Stage 2: สตรีทฟู้ดและตลาดของฝาก -> Stage 3: ร้านขายยาและมิตรภาพที่งดงาม',
+        patterns: [
+          {
+            formula: 'Stage 1: 师傅，去酒店 / 预订了 101 房 (yāo líng yāo) / Wi-Fi 密码',
+            zh: '师傅，去北京饭店！我预订了房间。',
+            pinyin: 'Shīfu, qù Běijīng Fàndiàn! Wǒ yùdìng le fángjiān.',
+            th: 'คุณคนขับ ไปโรงแรมปักกิ่งครับ! ผมจองห้องไว้แล้ว',
+            en: 'Driver, to Beijing Hotel! I booked a room.'
+          },
+          {
+            formula: 'Stage 2: 我要一碗牛肉面，不要辣 / 太贵了，便宜一点儿吧！',
+            zh: '老板，我要一碗面条，不要辣！这个二十块可以吗？',
+            pinyin: 'Lǎobǎn, wǒ yào yì wǎn miàntiáo, bú yào là! Zhè ge èrshí kuài kéyǐ ma?',
+            th: 'เถ้าแก่ เอาบะหมี่ 1 ชาม ไม่ใส่เผ็ด! อันนี้ยี่สิบหยวนได้ไหม?',
+            en: 'Boss, one bowl of noodles, no spicy! Is 20 yuan okay for this?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '师傅您好！去北京饭店，大概多少钱？',
+          pinyin: 'Shīfu nín hǎo! Qù Běijīng Fàndiàn, dàgài duōshao qián?',
+          th: 'คุณคนขับสวัสดีครับ ไปโรงแรมปักกิ่งประมาณเท่าไหร่ครับ?',
+          en: 'Hello driver! To Beijing Hotel, about how much?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'คนขับแท็กซี่ 🚕',
+          zh: '大概六十块，前面就到了！祝你北京旅行愉快！',
+          pinyin: 'Dàgài liùshí kuài, qiánmiàn jiù dào le! Zhù nǐ Běijīng lǚxíng yúkuài!',
+          th: 'ประมาณ 60 หยวน ข้างหน้านี้ก็ถึงแล้ว ขอให้เที่ยวปักกิ่งอย่างมีความสุขนะ!',
+          en: 'About 60 yuan, almost there! Enjoy your trip to Beijing!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好，我预订了 101 房。请问 Wi-Fi 密码是多少？',
+          pinyin: 'Nǐ hǎo, wǒ yùdìng le yāo líng yāo fáng. Qǐngwèn Wi-Fi mìmǎ shì duōshao?',
+          th: 'สวัสดีครับ ผมจองห้อง 101 ไว้ ขอถามหน่อยรหัส Wi-Fi คืออะไรครับ?',
+          en: 'Hello, I booked room 101. What is the Wi-Fi password?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่โรงแรม 👩‍💼',
+          zh: '这是房卡，密码是八个八。洗手间在左边，祝您晚安！',
+          pinyin: 'Zhè shì fángkǎ, mìmǎ shì bā ge bā. Xǐshǒujiān zài zuǒbiān, zhù nín wǎn\'ān!',
+          th: 'นี่คือคีย์การ์ดค่ะ รหัสคือเลข 8 แปดตัว ห้องน้ำอยู่ด้านซ้าย ราตรีสวัสดิ์ค่ะ!',
+          en: 'Here is keycard, password eight 8s. Restroom on left, good night!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '王明，今天谢谢你带我吃面条和买礼物！认识你很高兴，再见！',
+          pinyin: 'Wáng Míng, jīntiān xièxie nǐ dài wǒ chī miàntiáo hé mǎi lǐwù! Rènshi nǐ hěn gāoxìng, zàijiàn!',
+          th: 'หวังหมิง วันนี้ขอบคุณที่พากินบะหมี่และซื้อของขวัญนะ! ยินดีที่ได้รู้จัก บ๊ายบาย!',
+          en: 'Wang Ming, thanks for noodles and shopping today! Glad to meet you, bye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "🎯 Stage 1 ปักกิ่งแอร์พอร์ต: ได้ยินคนขับพูดว่า 'liùshí kuài qián, zài qiánmiàn tíng' แปลว่าอะไร?",
+          options: [
+            '60 หยวน จอดรถที่ข้างหน้า',
+            '16 หยวน จอดที่สถานีรถไฟใต้ดิน',
+            '600 หยวน ไม่ทอนเงิน',
+            'ไปห้องน้ำที่โรงแรม'
+          ],
+          correct_index: 0,
+          explanation_th: 'liùshí kuài คือ 60 หยวน และ zài qiánmiàn tíng คือ จอดข้างหน้า',
+          encouragement: '🌟 Stage 1 ผ่านฉลุย! เช็กอินเข้าโรงแรมได้อย่างงดงาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "🎯 Stage 2 สตรีทฟู้ด: เมื่อสั่งอาหารแล้วไม่อยากทานเผ็ด ต้องจำอักษรคำว่า '辣' (เผ็ด) ซึ่งมีหมวดนำใด?",
+          options: [
+            'หมวดเผ็ดร้อน (辛 辛字旁)',
+            'หมวดน้ำ (氵)',
+            'หมวดไม้ (木)',
+            'หมวดดิน (土)'
+          ],
+          correct_index: 0,
+          explanation_th: '辣 (เผ็ด) มีหมวดนำ 辛 (เผ็ด/ขม) จำแม่นๆ เพื่อพูดว่า 不要辣！',
+          encouragement: '🌟 Stage 2 แม่นยำมาก! สั่งอาหารไม่เผ็ดได้อย่างสบายใจ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: '🎯 Stage 3 ต่อราคาของฝาก: เรียงประโยคต่อราคา "แพงเกินไปแล้ว ลดราคาหน่อยเถอะ"',
+          tokens: [
+            '便宜一点儿吧',
+            '太贵了'
+          ],
+          correct_sequence: [
+            '太贵了',
+            '便宜一点儿吧'
+          ],
+          pinyin: 'Tài guì le, piányi yìdiǎnr ba',
+          meaning_th: 'แพงเกินไปแล้ว ลดราคาหน่อยเถอะ',
+          explanation_th: 'สูตรต่อราคายอดฮิต: 太贵了 (แพงเกินไปแล้ว) + 便宜一点儿吧 (ถูกลงหน่อยเถอะนะ)',
+          encouragement: '🌟 ต่อรองราคาสำเร็จ! ได้ของฝากถูกใจในราคาสบายกระเป๋า!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: '🎯 มหาบททดสอบสุขภาพ: เมื่อเพื่อนไม่สบายเป็นหวัด ประโยคแสดงความห่วงใยตามมารยาทจีนคือข้อใด?',
+          options: [
+            '多喝热水，多休息！ (Duō hē rèshuǐ, duō xiūxi!)',
+            '多吃辣，少睡觉！',
+            '不要去医院！',
+            '洗手间在哪儿？'
+          ],
+          correct_index: 0,
+          explanation_th: '多喝热水，多休息！ คือยอดแห่งความห่วงใยที่จริงใจของชาวจีน',
+          encouragement: '🌟 หัวใจอบอุ่น มารยาทงดงาม พิชิตแบบทดสอบได้ครบถ้วน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: '🏆 [Tier 1 Grand Odyssey Final Boss]: คุณกำลังจะขึ้นเครื่องบินกลับประเทศไทย หันไปโบกมือลาเพื่อนชาวจีนที่มาส่งที่สนามบินปักกิ่ง คุณต้องการพูดว่า "ขอบคุณสำหรับการดูแลตลอดสามวัน ยินดีที่ได้รู้จัก แล้วพบกันใหม่นะ!" ต้องพูดว่าอย่างไร?',
+        options: [
+          '谢谢你的照顾！认识你很高兴，我们下次再见！ (Xièxie nǐ de zhàogù! Rènshi nǐ hěn gāoxìng, wǒmen xià cì zàijiàn!)',
+          '多少钱一碗面条，不要辣。 (Duōshao qián yì wǎn miàntiáo, bú yào là.)',
+          '洗手间在 101 房。 (Xǐshǒujiān zài yāo líng yāo fáng.)',
+          '我不喜欢看电影。 (Wǒ bù xǐhuan kàn diànyǐng.)'
+        ],
+        correct_index: 0,
+        explanation_th: '谢谢你的照顾！认识你很高兴，我们下次再见！ เป็นบทสรุปแห่งมิตรภาพที่สมบูรณ์แบบ ซาบซึ้ง และงดงามที่สุดในการเดินทางครั้งนี้!',
+        encouragement: '🎉🎊✨ ยินดีด้วยอย่างยิ่งใหญ่ที่สุด! คุณพิชิต Tier 1 Grand Boss Quest (Lesson 10.4) สำเร็จสมบูรณ์แบบ 100%! คุณคือนักท่องแดนมังกรตัวจริงเสียงจริง!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_grand_explorer',
+        badge_name: 'มหาบัตรเกียรติยศนักท่องแดนมังกร Tier 1 Grand Explorer 🏆🐰✨',
+        message_th: 'ขอปรบมือดังกึกก้องให้กับความสำเร็จอันยิ่งใหญ่! คุณผ่านบทเรียน Tier 1 ครบทั้ง 10 Units (40 บทย่อย) ได้อย่างสง่างาม!',
+        xp_reward: 500
+      }
+    }
+  ]
+};

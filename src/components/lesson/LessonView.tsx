@@ -8,6 +8,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { BookOpen, PenTool, MessageCircle, Sparkles, ArrowLeft } from 'lucide-react';
 import { VocabCard, DialoguePlayer, GrammarBite, QuizContainer, QuizResult } from './index';
 import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
+import { tier0Units } from '../../data/lessons/tier0';
 import {
   VocabularyItem,
   DialogueLine,
@@ -53,6 +54,8 @@ export interface LessonViewProps {
   silentMode: boolean;
   onBackToMap: () => void;
   onLessonComplete: (lessonId: string, xp: number) => void;
+  currentHearts?: number;
+  onHeartLost?: () => void;
 }
 
 export const LessonView: React.FC<LessonViewProps> = ({
@@ -60,10 +63,31 @@ export const LessonView: React.FC<LessonViewProps> = ({
   silentMode: _silentMode,
   onBackToMap,
   onLessonComplete,
+  currentHearts,
+  onHeartLost,
 }) => {
-  // Find lesson data by id or fallback to lesson 0
-  const lessonData =
-    unit01Data.lessons.find((l) => l.lesson_id === lessonId) || unit01Data.lessons[0];
+  // Check if this is a Tier 0 lesson
+  const t0Lesson = tier0Units.flatMap((u) => u.lessons).find((l) => l.lesson_id === lessonId);
+  const isTier0 = Boolean(t0Lesson) || lessonId.startsWith('t0_');
+
+  // Find lesson data by id or fallback to Tier 1 lesson 0
+  const lessonData = t0Lesson
+    ? {
+        lesson_id: t0Lesson.lesson_id,
+        title: t0Lesson.title,
+        vocabulary: (t0Lesson.vocabulary || []) as unknown as VocabularyItem[],
+        dialogue: [] as DialogueLine[],
+        grammar_bite: {
+          title: t0Lesson.baby_step_goal || 'พื้นฐานเสียงพินอิน',
+          explanation_th: t0Lesson.can_do.th,
+          patterns: [],
+        } as GrammarBiteData,
+        tone_rule: null as ToneRule | null,
+        quizzes: (t0Lesson.quizzes || []) as QuizQuestion[],
+        boss_challenge: undefined as BossChallenge | undefined,
+        cheer_trophy: undefined as CheerTrophy | undefined,
+      }
+    : unit01Data.lessons.find((l) => l.lesson_id === lessonId) || unit01Data.lessons[0];
 
   const vocabList = lessonData.vocabulary as VocabularyItem[];
   const dialogue = lessonData.dialogue as DialogueLine[];
@@ -127,6 +151,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
       >
         <button
           onClick={onBackToMap}
+          data-testid="btn-back-to-map"
           className="btn-tactile-secondary"
           style={{ padding: '8px 12px', minHeight: '44px', gap: '6px' }}
         >
@@ -136,7 +161,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
 
         <div style={{ textAlign: 'center' }}>
           <div style={{ fontSize: '11px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
-            Unit 01 · {unit01Data.title.th}
+            {isTier0 ? 'Tier 0 · ปูพื้นฐานพินอิน' : `Unit 01 · ${unit01Data.title.th}`}
           </div>
           <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-ink-primary)' }}>
             {lessonData.title.th}
@@ -166,6 +191,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
           return (
             <button
               key={tab.id}
+              data-testid={`tab-${tab.id}`}
               role="tab"
               aria-selected={isActive}
               type="button"
@@ -321,8 +347,10 @@ export const LessonView: React.FC<LessonViewProps> = ({
             quizzes={quizzes}
             bossChallenge={boss}
             cheerTrophy={trophy}
-            isSafeZone={unit01Data.tier === 0}
+            initialHearts={currentHearts ?? 5}
+            isSafeZone={isTier0 || unit01Data.tier === 0}
             onComplete={handleQuizComplete}
+            onHeartLost={onHeartLost}
           />
         </main>
       )}

@@ -95,6 +95,7 @@ export function useUserState(): UseUserStateReturn {
                 card_id: v.id,
                 hanzi: v.hanzi,
                 pinyin: v.pinyin,
+                display_pinyin: (v as { display_pinyin?: string }).display_pinyin || v.pinyin,
                 meaning_th: v.meaning_th,
                 meaning_en: v.meaning_en,
                 mnemonic: v.mnemonic,
@@ -105,6 +106,7 @@ export function useUserState(): UseUserStateReturn {
                 word_id: c.card_id,
                 hanzi: c.hanzi,
                 pinyin: c.pinyin,
+                display_pinyin: c.display_pinyin,
                 meaning_th: c.meaning_th,
                 ease_factor: c.ease_factor,
                 interval_days: c.interval_days,
@@ -121,6 +123,7 @@ export function useUserState(): UseUserStateReturn {
               card_id: r.word_id,
               hanzi: r.hanzi,
               pinyin: r.pinyin,
+              display_pinyin: r.display_pinyin || r.pinyin,
               meaning_th: r.meaning_th,
               meaning_en: '',
               ease_factor: r.ease_factor,
@@ -342,6 +345,7 @@ export function useUserState(): UseUserStateReturn {
         word_id: string;
         hanzi: string;
         pinyin: string;
+        display_pinyin?: string;
         meaning_th: string;
         meaning_en: string;
         mnemonic?: string;
@@ -355,6 +359,7 @@ export function useUserState(): UseUserStateReturn {
             card_id: item.word_id,
             hanzi: item.hanzi,
             pinyin: item.pinyin,
+            display_pinyin: item.display_pinyin || item.pinyin,
             meaning_th: item.meaning_th,
             meaning_en: item.meaning_en,
             mnemonic: item.mnemonic,
@@ -371,6 +376,7 @@ export function useUserState(): UseUserStateReturn {
           word_id: c.card_id,
           hanzi: c.hanzi,
           pinyin: c.pinyin,
+          display_pinyin: c.display_pinyin,
           meaning_th: c.meaning_th,
           ease_factor: c.ease_factor,
           interval_days: c.interval_days,

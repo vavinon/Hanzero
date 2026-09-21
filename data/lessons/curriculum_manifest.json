@@ -225,7 +225,7 @@
           "estimated_minutes": 20,
           "xp_reward": 150,
           "lesson_count": 4,
-          "prerequisite_unit_id": "tier0_u10",
+          "prerequisite_unit_id": "tier0_u06",
           "status": "ready",
           "file": "tier1/unit01_greetings.json"
         },

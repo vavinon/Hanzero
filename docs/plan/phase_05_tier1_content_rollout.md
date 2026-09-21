@@ -23,7 +23,7 @@ target_curriculum: ["src/data/lessons/tier1/"]
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
 ### 1. ระบบตรวจสอบความถูกต้องของบทเรียนอัตโนมัติ (Curriculum Validator Script)
-- [ ] สร้างสคริปต์ `scripts/validateCurriculum.ts`:
+- [x] สร้างสคริปต์ `scripts/validateCurriculum.ts`: [DONE ✅]
   - ตรวจสอบความถูกต้องของโครงสร้าง JSON ทุกไฟล์ใน `src/data/lessons/`
   - ยืนยันว่าทุกคำศัพท์มี `hanzi`, `pinyin`, `meaning_th`, `meaning_en` ครบถ้วน
   - ตรวจสอบว่าไม่มี ID ด่านหรือคำศัพท์ซ้ำซ้อน
@@ -32,19 +32,19 @@ target_curriculum: ["src/data/lessons/tier1/"]
 ### 2. ผลิตและตรวจสอบเนื้อหา Tier 1 ทีละ Unit (Unit 2 ถึง 10)
 ผลิตเนื้อหาตามแม่แบบ [curriculum_prompt.md](../prompts/curriculum_prompt.md) โดยแบ่งการปล่อยเป็น Batch:
 
-- [ ] **Batch A: ตัวเลขและการใช้ชีวิตพื้นฐาน (Unit 2 - 4)**
+- [x] **Batch A: ตัวเลขและการใช้ชีวิตพื้นฐาน (Unit 2 - 4)** [DONE ✅]
   - **Unit 2 (ตัวเลข วันที่ & เวลา):** นับเลข 0-10, วันในสัปดาห์, การนัดหมายเวลา *(⚡ Sandhi: กฎเสียงเดิมของ `一` yī)*
   - **Unit 3 (สั่งอาหาร & เครื่องดื่ม):** สั่งบะหมี่ ข้าว ชานม เผ็ด/ไม่เผ็ด *(⚡ Sandhi: กฎ `不吃` bù chī)*
   - **Unit 4 (ช็อปปิ้ง & ถามราคา):** ถามราคา ต่อรอง ซื้อของฝาก *(⚡ Sandhi: กฎ `一块` yí kuài)*
-- [ ] **Batch B: เดินทางและสังคมรอบตัว (Unit 5 - 7)**
+- [x] **Batch B: เดินทางและสังคมรอบตัว (Unit 5 - 7)** [DONE ✅]
   - **Unit 5 (การเดินทาง & ทิศทาง):** ขึ้นแท็กซี่ รถไฟใต้ดิน เลี้ยวซ้าย/ขวา ถามทาง
   - **Unit 6 (ครอบครัว & เพื่อน):** แนะนำคนในครอบครัว จำนวนคน เพื่อนร่วมงาน
   - **Unit 7 (กิจวัตร & งานอดิเรก):** ตื่นนอน ทำงาน ดูหนัง วันหยุดสุดสัปดาห์ *(⚡ Sandhi: กฎ `一起` yì qǐ)*
-- [ ] **Batch C: สุขภาพและการเดินทางขั้นสูง (Unit 8 - 10)**
+- [x] **Batch C: สุขภาพและการเดินทางขั้นสูง (Unit 8 - 10)** [DONE ✅]
   - **Unit 8 (สภาพอากาศ & ฤดูกาล):** ร้อน หนาว ฝนตก หิมะตก เตรียมเสื้อผ้า
   - **Unit 9 (ร่างกาย สุขภาพ & ไม่สบาย):** ปวดหัว เป็นไข้ ซื้อยาที่ร้านขายยา ไปโรงพยาบาล
   - **Unit 10 (โรงแรม & เที่ยวบิน):** เช็กอินโรงแรม ขอรหัส Wi-Fi สนามบิน ขึ้นเครื่องบิน
-  - 🏆 **Tier 1 Grand Boss Quest:** "ภารกิจเที่ยวจีน 3 วัน 2 คืนไร้อุปสรรค"
+  - 🏆 **Tier 1 Grand Boss Quest:** "ภารกิจเที่ยวจีน 3 วัน 2 คืนไร้อุปสรรค" (Lesson 10.4)
 
 ### 3. ระบบวัดผลผลิตภัณฑ์และข้อมูลสถิตินิรนาม (Product KPIs & Telemetry)
 - [ ] ระบบเก็บข้อมูลสถิตินิรนามในตัวเครื่อง (Zero-Cost Local Diagnostics):
@@ -56,20 +56,23 @@ target_curriculum: ["src/data/lessons/tier1/"]
   - **Day-7 Retention > 35%:** ผู้เรียนกลับมาเปิดแอปซ้ำภายใน 7 วัน
 
 ### 4. การทดสอบกับผู้เรียนจริง (Zero-Knowledge Alpha Playtest)
-- [ ] จัดรอบ Internal Alpha Playtest ร่วมกับกลุ่มผู้เรียนชาวไทยที่ไม่มีพื้นฐานภาษาจีน (Zero-Knowledge) อย่างน้อย 5 คน:
-  - สังเกตพฤติกรรมตั้งแต่หน้า Onboarding ไปจนจบ Tier 0 และ Unit 1
-  - ตรวจสอบจุดสะดุด (UX Friction): ปัญหาความสับสนของเสียงพินอิน, ขนาดตัวอักษร, หรือความเข้าใจในกฎผันเสียง
-  - รวบรวม Feedback เพื่อ Fine-tune ควิซและบทสนทนาก่อนเปิดตัวสาธารณะ
+*(ดำเนินการตามแผนปฏิบัติการฉบับเต็มใน [TASK-506](../tasks/2026-09-21_P05_zero-knowledge-alpha-playtest.md))*
+- [ ] จัดรอบ Internal Alpha Playtest ร่วมกับกลุ่มผู้เรียนชาวไทยที่ไม่มีพื้นฐานภาษาจีน (Zero-Knowledge) 5–8 คน (iOS 2-3, Android 2-3, Desktop 1-2):
+  - สังเกตพฤติกรรมผ่าน Unassisted Think-Aloud Session ครอบคลุม Scenario A (Onboarding & Safe Zone), Scenario B (Tone Coaster & Diacritics), และ Scenario C (Unit 1 Survival & Quiz)
+  - ประเมินคะแนน System Usability Scale (SUS) กำหนดเกณฑ์ผ่าน $\ge 80 / 100$
+  - จัดหมวดหมู่ปัญหาและแก้บั๊กตาม Feedback Triage Matrix (P0 Blocker: 24 ชม., P1 Friction: 48 ชม.) ก่อนเปิดตัวสาธารณะ
+
 
 ### 5. ระบบทดสอบอัตโนมัติครบวงจร (Automated E2E Testing & Test Pyramid)
-- [ ] ติดตั้งและตั้งค่า **Playwright E2E Suite** (`playwright.config.ts`) สำหรับรัน Headless Browser Tests
-- [ ] พัฒนา E2E User Journey Scenarios ครอบคลุมเส้นทางสำคัญ:
+- [x] ติดตั้งและตั้งค่า **Playwright E2E Suite** (`playwright.config.ts`) สำหรับรัน Headless Browser Tests
+- [x] พัฒนา E2E User Journey Scenarios ครอบคลุมเส้นทางสำคัญ (6 Journeys x 3 Browsers/Viewports: Desktop Chrome, Android 360x640, iPhone SE 320x568):
   - **Journey 1 (First-Run Onboarding & Safe Zone):** ผู้ใช้ใหม่เข้ามา เลือกลู่ทาง "เริ่มจาก 0" $\rightarrow$ เริ่มบทเรียนพินอิน $\rightarrow$ ลองตอบผิด ยืนยันหัวใจไม่ลดแม้แต่ดวงเดียว (Safe Practice Zone)
   - **Journey 2 (Fast-track to Tier 1 & Heart Penalty):** ผู้ใช้เลือกข้ามไป Tier 1 $\rightarrow$ เล่น Unit 1.1 $\rightarrow$ เมื่อตอบผิดต้องตัดหัวใจ และแสดงหน้าต่างหมดหัวใจ/รีฟิล
   - **Journey 3 (SRS Review Loop):** เข้าสู่หน้าทบทวนคำศัพท์ $\rightarrow$ คลิกการ์ดคำ $\rightarrow$ เลือกความจำ (Again/Good/Easy) $\rightarrow$ ตรวจสอบความถูกต้องของตรรกะ SM-2 ใน Storage
   - **Journey 4 (Voice Health Alert Modal):** จำลองเบราว์เซอร์ที่ไม่มีชุดเสียงจีน (`zh-CN`) $\rightarrow$ Modal แนะนำการติดตั้งเสียงต้องปรากฏขึ้นอย่างถูกต้อง
-  - **Journey 5 (Small Screen 320px Squeeze):** ทดสอบบน Viewport กว้าง 320px ยืนยันว่า Pinyin tone marks และปุ่มกดไม่ตกขอบหรือหลุดเลย์เอาต์
-- [ ] สคริปต์รันเทสต์เบื้องหลัง: `npm run test:e2e` และ `npm run test:all` (รวม Unit + Curriculum + E2E)
+  - **Journey 5 (Small Screen 320px Squeeze):** ทดสอบบน Viewport กว้าง 320px ยืนยันว่า Pinyin tone marks และปุ่มกดไม่ตกขอบหรือหลุดเลย์เอาต์ (Touch targets $\ge 44$px)
+  - **Journey 6 (Storage Anti-Zombie Resurrection Defense):** ตรวจสอบการล้างข้อมูลพร้อม Tombstone ไม่ให้ Cold Mirror ปลุกชีพข้อมูลกลับมาหลังรีเฟรชหน้าเว็บ
+- [x] สคริปต์รันเทสต์เบื้องหลัง: `npm run test:e2e` และ `npm run test:all` (รวม Unit + Curriculum + E2E)
 
 ### 6. ระบบนำขึ้น GitHub Pages, Social Metadata & CI/CD Pipeline (Deployment & Automation)
 - [ ] ตั้งค่า `vite.config.ts`:
@@ -91,17 +94,17 @@ target_curriculum: ["src/data/lessons/tier1/"]
 
 ## 🔍 รายการตรวจรับงานและทดสอบคุณภาพ (Verification & Acceptance Criteria)
 
-| จุดตรวจสอบ | วิธีการทดสอบ (How to Verify) | เกณฑ์การผ่าน (Acceptance Criteria) |
-| :--- | :--- | :--- |
-| **1. Automated Schema Pass** | รันคำสั่ง `npm run validate:curriculum` ใน Terminal | ผ่าน 100% โดยไม่มีข้อผิดพลาด (Zero Errors / Zero Missing Fields) |
-| **2. Interleaving Coverage** | ตรวจสอบรายงานของ Script ใน Unit 2-10 | ทุก Unit มีคำศัพท์/โครงสร้างจาก Unit ก่อนหน้าแทรกอยู่อย่างน้อย 20% |
-| **3. Tone Sandhi Audit** | ตรวจสอบไฟล์เสียงและตัวอักษรของคำที่มี `一` และ `不` ในทุก Unit | วรรณยุกต์พินอินตรงตามกฎผันเสียง เช่น `yí kuài`, `yì qǐ`, `bù chī`, `bú shì` |
-| **4. Automated E2E Pass** | รันคำสั่ง `npm run test:e2e` บน Headless Chrome/WebKit | เทสต์ User Journeys ทั้ง 5 สถานการณ์ผ่าน 100% ไร้ข้อผิดพลาด |
-| **5. Alpha Playtest Sign-off** | ทดสอบกับผู้เรียน Zero-Knowledge 5 คน | ผู้เรียนเข้าใจวิธีเล่น สามารถผ่าน Tier 0 ได้โดยไม่ต้องมีคนคอยสอนข้างๆ |
-| **6. Bundle Size & Load Speed** | รัน `npm run build` แล้วตรวจขนาดไฟล์ และทดสอบด้วย Lighthouse | ขนาด JavaScript รวม (Gzip) < 300KB และคะแนน Performance > 90 |
-| **7. CI/CD Pipeline Gate** | สร้าง Pull Request จำลองบั๊ก แล้วตรวจดู GitHub Actions | Pipeline ต้องขึ้นสีแดงและบล็อกการ Deploy เมื่อมีเทสต์ตก และขึ้นเขียวเมื่อโค้ดถูกต้อง |
-| **8. Live Production Test** | เข้าใช้งานผ่าน URL จริงของ GitHub Pages บนมือถือ iOS และ Android | โหลดหน้าเว็บได้สมบูรณ์ เสียงสังเคราะห์ออกครบ เล่นได้ทุก Unit โดยไม่ต้องต่อเซิร์ฟเวอร์ภายนอก |
-| **9. Product Diagnostics Verification** | ทดลองตอบผิดซ้ำในด่าน และตรวจดูผลใน Local Diagnostics | ระบบบันทึกสถิติข้อผิดพลาดลงใน State ได้ถูกต้องเพื่อการวิเคราะห์ปรับปรุง |
+| จุดตรวจสอบ | วิธีการทดสอบ (How to Verify) | เกณฑ์การผ่าน (Acceptance Criteria) | สถานะ |
+| :--- | :--- | :--- | :--- |
+| **1. Automated Schema Pass** | รันคำสั่ง `npm run validate:curriculum` ใน Terminal | ผ่าน 100% โดยไม่มีข้อผิดพลาด (Zero Errors / Zero Missing Fields) | ✅ PASS (100%) |
+| **2. Interleaving Coverage** | ตรวจสอบรายงานของ Script ใน Unit 2-10 | ทุก Unit มีคำศัพท์/โครงสร้างจาก Unit ก่อนหน้าแทรกอยู่อย่างน้อย 20% | ✅ PASS (37-48%) |
+| **3. Tone Sandhi Audit** | ตรวจสอบไฟล์เสียงและตัวอักษรของคำที่มี `一`, `不` และกฎเสียง 3 ชน 3 (`3+3 ➔ 2+3`) ในทุก Unit | วรรณยุกต์พินอินตรงตามกฎผันเสียง เช่น `yí kuài`, `yì qǐ`, `bù chī`, `bú shì`, `kéyǐ`, `shóubiǎo` | ✅ PASS |
+| **4. Automated E2E Pass** | รันคำสั่ง `npm run test:e2e` บน Headless Chrome/WebKit | เทสต์ User Journeys ทั้ง 6 สถานการณ์ผ่าน 100% ไร้ข้อผิดพลาด | ✅ PASS (18/18) |
+| **5. Alpha Playtest Sign-off** | ทดสอบกับผู้เรียน Zero-Knowledge 5 คน | ผู้เรียนเข้าใจวิธีเล่น สามารถผ่าน Tier 0 ได้โดยไม่ต้องมีคนคอยสอนข้างๆ | ⏳ PENDING (TASK-506) |
+| **6. Bundle Size & Load Speed** | รัน `npm run build` แล้วตรวจขนาดไฟล์ และทดสอบด้วย Lighthouse | ขนาด JavaScript รวม (Gzip) < 300KB และคะแนน Performance > 90 | ⏳ IN PROGRESS (TASK-505) |
+| **7. CI/CD Pipeline Gate** | สร้าง Pull Request จำลองบั๊ก แล้วตรวจดู GitHub Actions | Pipeline ต้องขึ้นสีแดงและบล็อกการ Deploy เมื่อมีเทสต์ตก และขึ้นเขียวเมื่อโค้ดถูกต้อง | ⏳ NEXT (TASK-505) |
+| **8. Live Production Test** | เข้าใช้งานผ่าน URL จริงของ GitHub Pages บนมือถือ iOS และ Android | โหลดหน้าเว็บได้สมบูรณ์ เสียงสังเคราะห์ออกครบ เล่นได้ทุก Unit โดยไม่ต้องต่อเซิร์ฟเวอร์ภายนอก | ⏳ NEXT (TASK-505) |
+| **9. Product Diagnostics Verification** | ทดลองตอบผิดซ้ำในด่าน และตรวจดูผลใน Local Diagnostics | ระบบบันทึกสถิติข้อผิดพลาดลงใน State ได้ถูกต้องเพื่อการวิเคราะห์ปรับปรุง | ✅ PASS (TASK-504) |
 
 ---
 

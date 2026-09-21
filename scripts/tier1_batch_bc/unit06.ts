@@ -1,0 +1,947 @@
+/**
+ * scripts/tier1_batch_bc/unit06.ts
+ * Tier 1 Unit 6: Family & Friends (tier1_u06)
+ * Golden Template Compliant, Simplified Chinese 100%, Tone Sandhi Annotated.
+ */
+
+export const unit06 = {
+  unit_id: 'tier1_u06',
+  tier: 1,
+  unit_number: 6,
+  title: {
+    zh: '家人与朋友圈子',
+    th: 'ครอบครัว & คนรอบตัว',
+    en: 'Family & Friends'
+  },
+  description: 'แนะนำคุณพ่อ คุณแม่ พี่น้อง เพื่อนสนิท และเล่าเรื่องครอบครัวให้คนจีนฟังอย่างอบอุ่น',
+  lessons: [
+    {
+      lesson_id: 't1_u06_l01',
+      lesson_number: 1,
+      title: {
+        zh: '爸爸妈妈与兄弟姐妹',
+        th: 'พ่อ แม่ พี่ น้อง',
+        en: 'Dad, Mom & Siblings'
+      },
+      can_do: {
+        th: 'เรียกและแนะนำคนในครอบครัว พ่อ แม่ พี่ชาย พี่สาว น้องชาย น้องสาว ได้อย่างถูกต้อง',
+        en: 'Address and introduce family members: dad, mom, brothers, and sisters'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: แนะนำสมาชิกในบ้านให้เพื่อนใหม่รู้จักได้อย่างอบอุ่น!',
+      vocabulary: [
+        {
+          id: 'hsk1_0601',
+          hanzi: '爸爸',
+          pinyin: 'bàba',
+          display_pinyin: 'bàba',
+          pinyin_tone: 'ba4ba',
+          meaning_th: 'คุณพ่อ/พ่อ',
+          meaning_en: 'dad / father',
+          radical: '父',
+          radical_name_th: 'หมวดบิดา (父字头)',
+          stroke_count: 8,
+          mnemonic: 'หัวหน้าครอบครัว (父) ผู้ดูแลลูกๆ อย่างอบอุ่น = คุณพ่อ (爸爸)',
+          kid_mnemonic: 'คุณพ่อยิ้มกว้าง กอดลูกรักไว้ในอ้อมแขน = 爸爸',
+          body_gesture: 'ยกสองมือแตะไหล่ตัวเองทำท่ากอดอย่างอบอุ่น'
+        },
+        {
+          id: 'hsk1_0602',
+          hanzi: '妈妈',
+          pinyin: 'māma',
+          display_pinyin: 'māma',
+          pinyin_tone: 'ma1ma',
+          meaning_th: 'คุณแม่/แม่',
+          meaning_en: 'mom / mother',
+          radical: '女',
+          radical_name_th: 'หมวดผู้หญิง (女字旁)',
+          stroke_count: 6,
+          mnemonic: 'ผู้หญิง (女) ผู้มีจิตใจอดทนดั่งม้า (马) เลี้ยงดูลูก = คุณแม่ (妈妈)',
+          kid_mnemonic: 'คุณแม่ใจดี เล่านิทานก่อนนอนให้ฟัง = 妈妈',
+          body_gesture: 'เอามือขวาทาบอกด้านซ้าย ยิ้มอ่อนโยน'
+        },
+        {
+          id: 'hsk1_0603',
+          hanzi: '哥哥',
+          pinyin: 'gēge',
+          display_pinyin: 'gēge',
+          pinyin_tone: 'ge1ge',
+          meaning_th: 'พี่ชาย',
+          meaning_en: 'older brother',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 10,
+          mnemonic: 'ปาก (口) สองชั้นต่อกัน สื่อถึงพี่ชายที่คอยพูดสอนและปกป้องน้อง = 哥哥',
+          kid_mnemonic: 'พี่ชายตัวสูง แบกน้องขี่หลังเล่นสนุก = 哥哥',
+          body_gesture: 'ยกมือขวาวัดระดับความสูงเหนือศีรษะ'
+        },
+        {
+          id: 'hsk1_0604',
+          hanzi: '姐姐',
+          pinyin: 'jiějie',
+          display_pinyin: 'jiějie',
+          pinyin_tone: 'jie3jie',
+          meaning_th: 'พี่สาว',
+          meaning_en: 'older sister',
+          radical: '女',
+          radical_name_th: 'หมวดผู้หญิง (女字旁)',
+          stroke_count: 8,
+          mnemonic: 'ผู้หญิง (女) ในตลาด (且) ที่คอยดูแลน้องสาวน้องชาย = พี่สาว (姐姐)',
+          kid_mnemonic: 'พี่สาวใจดี ถักเปียสวยงาม = 姐姐',
+          body_gesture: 'ทำท่าจับผมเปียสองข้างอย่างน่ารัก'
+        },
+        {
+          id: 'hsk1_0605',
+          hanzi: '弟弟',
+          pinyin: 'dìdi',
+          display_pinyin: 'dìdi',
+          pinyin_tone: 'di4di',
+          meaning_th: 'น้องชาย',
+          meaning_en: 'younger brother',
+          radical: '弓',
+          radical_name_th: 'หมวดคันธนู (弓字旁)',
+          stroke_count: 7,
+          mnemonic: 'เด็กชายตัวเล็กพันสายธนู (弓) เล่นสนุก = น้องชาย (弟弟)',
+          kid_mnemonic: 'น้องชายตัวแสบ วิ่งซนไล่จับผีเสื้อ = 弟弟',
+          body_gesture: 'ย่อตัวลงเล็กน้อยทำมือวัดระดับเอว'
+        },
+        {
+          id: 'hsk1_0606',
+          hanzi: '妹妹',
+          pinyin: 'mèimei',
+          display_pinyin: 'mèimei',
+          pinyin_tone: 'mei4mei',
+          meaning_th: 'น้องสาว',
+          meaning_en: 'younger sister',
+          radical: '女',
+          radical_name_th: 'หมวดผู้หญิง (女字旁)',
+          stroke_count: 8,
+          mnemonic: 'เด็กผู้หญิง (女) ตัวน้อยที่ยังไม่โตเต็มวัย (未) = น้องสาว (妹妹)',
+          kid_mnemonic: 'น้องสาวแก้มป่อง กอดตุ๊กตาหมีน่ารัก = 妹妹',
+          body_gesture: 'เอียงคอยิ้มสองมือชูสองนิ้วข้างแก้ม'
+        },
+        {
+          id: 'hsk1_0607',
+          hanzi: '家',
+          pinyin: 'jiā',
+          display_pinyin: 'jiā',
+          pinyin_tone: 'jia1',
+          meaning_th: 'บ้าน/ครอบครัว',
+          meaning_en: 'home / family',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาบ้าน (宝盖头)',
+          stroke_count: 10,
+          mnemonic: 'ใต้หลังคาเรือน (宀) มีความอบอุ่นและอาหารอุดมสมบูรณ์ (豕) = บ้าน (家)',
+          kid_mnemonic: 'หลังคาบ้านสามเหลี่ยม อบอุ่นที่สุดในโลก = 家',
+          body_gesture: 'นำปลายนิ้วมือสองข้างมาประกบกันเป็นรูปจั่วหลังคาบ้าน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'เสียงเบาในคำเรียกเครือญาติพยางค์ซ้ำ',
+        description_th: 'คำเรียกญาติที่ซ้ำพยางค์ เช่น 爸爸, 妈妈, 哥哥, 姐姐, 弟弟, 妹妹 พยางค์หลังจะออกเสียงเบา (Neutral tone) เสมอ',
+        example: 'bàba, māma, gēge, jiějie, dìdi, mèimei',
+        fun_metaphor: 'พยางค์แรกออกเสียงเต็มที่ พยางค์หลังปล่อยเบาสบายเหมือนลมหายใจ!',
+        reassurance: 'ไม่ต้องเกร็งวรรณยุกต์พยางค์หลัง ออกเสียงสั้นเบาจะฟังเป็นธรรมชาติสุดๆ!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้แนะนำคนในครอบครัว',
+        explanation_th: 'ใช้โครงสร้าง 这是我 + คนในครอบครัว (เมื่อเป็นคนใกล้ชิดในบ้านสามารถละคำว่า 的 ได้)',
+        patterns: [
+          {
+            formula: '这是我 + [ญาติ] = นี่คือ...ของฉัน',
+            zh: '这是我爸爸，这是我妈妈。',
+            pinyin: 'Zhè shì wǒ bàba, zhè shì wǒ māma.',
+            th: 'นี่คือคุณพ่อของฉัน นี่คือคุณแม่ของฉัน',
+            en: 'This is my dad, this is my mom.'
+          },
+          {
+            formula: '我的家 = บ้าน/ครอบครัวของฉัน',
+            zh: '我爱我的家。',
+            pinyin: 'Wǒ ài wǒ de jiā.',
+            th: 'ฉันรักบ้านของฉัน',
+            en: 'I love my family/home.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！欢迎来我家！',
+          pinyin: 'Nǐ hǎo! Huānyíng lái wǒ jiā!',
+          th: 'สวัสดีครับ ยินดีต้อนรับมาที่บ้านผมครับ!',
+          en: 'Hello! Welcome to my home!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '你好สมชาย！你家真漂亮！',
+          pinyin: 'Nǐ hǎo Somchai! Nǐ jiā zhēn piàoliang!',
+          th: 'สวัสดีสมชาย! บ้านนายสวยจังเลย!',
+          en: 'Hello Somchai! Your home is really beautiful!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '谢谢！这是我爸爸，这是我妈妈。',
+          pinyin: 'Xièxie! Zhè shì wǒ bàba, zhè shì wǒ māma.',
+          th: 'ขอบคุณครับ! นี่คือคุณพ่อของฉัน และนี่คือคุณแม่ของฉัน',
+          en: 'Thank you! This is my dad, this is my mom.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '叔叔阿姨好！认识你们很高兴！',
+          pinyin: 'Shūshu āyí hǎo! Rènshi nǐmen hěn gāoxìng!',
+          th: 'สวัสดีครับคุณลุงคุณป้า! ยินดีที่ได้รู้จักครับ!',
+          en: 'Hello uncle and aunt! Nice to meet you!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '这还有我哥哥和我妹妹。',
+          pinyin: 'Zhè hái yǒu wǒ gēge hé wǒ mèimei.',
+          th: 'ตรงนี้ยังมีพี่ชายและน้องสาวของฉันด้วยนะ',
+          en: 'Here are also my older brother and younger sister.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'zhè shì wǒ māma' แปลว่าอะไร?",
+          options: [
+            'นี่คือคุณแม่ของฉัน',
+            'นี่คือคุณพ่อของฉัน',
+            'นี่คือพี่สาวของฉัน',
+            'นี่คือน้องสาวของฉัน'
+          ],
+          correct_index: 0,
+          explanation_th: 'zhè shì แปลว่า นี่คือ, wǒ แปลว่า ของฉัน และ māma แปลว่า แม่',
+          encouragement: 'ฟังคำว่าแม่ได้ชัดเจนเป๊ะมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '妈' (แม่) และ '妹' (น้องสาว) มีหมวดนำใดที่สื่อถึงเพศหญิง?",
+          options: [
+            'หมวดผู้หญิง (女 女字旁)',
+            'หมวดคน (亻)',
+            'หมวดหลังคา (宀)',
+            'หมวดปาก (口)'
+          ],
+          correct_index: 0,
+          explanation_th: 'ทั้ง 妈 และ 妹 มีหมวดนำ 女 (ผู้หญิง) แสดงถึงบุคคลเพศหญิงในครอบครัว',
+          encouragement: 'จำหมวดนำ 女 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "นี่คือคุณพ่อของฉัน"',
+          tokens: [
+            '我爸爸',
+            '这是'
+          ],
+          correct_sequence: [
+            '这是',
+            '我爸爸'
+          ],
+          pinyin: 'Zhè shì wǒ bàba',
+          meaning_th: 'นี่คือคุณพ่อของฉัน',
+          explanation_th: 'โครงสร้างแนะนำคน: 这是 (นี่คือ) + 我爸爸 (คุณพ่อของฉัน)',
+          encouragement: 'เก่งมาก! แนะนำสมาชิกในบ้านได้อย่างถูกต้อง!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า "พี่ชาย" ในภาษาจีนคือคำใด?',
+          options: [
+            '哥哥 (gēge)',
+            '弟弟 (dìdi)',
+            '爸爸 (bàba)',
+            '姐姐 (jiějie)'
+          ],
+          correct_index: 0,
+          explanation_th: '哥哥 (gēge) แปลว่า พี่ชาย ส่วน 弟弟 (dìdi) แปลว่า น้องชาย',
+          encouragement: 'ตอบได้ทันที ไม่มีสับสนลำดับญาติ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'เพื่อนชาวจีนมาเยี่ยมคุณที่บ้าน และคุณต้องการแนะนำคุณแม่ให้เพื่อนรู้จักอย่างสุภาพ ต้องพูดว่าอย่างไร?',
+        options: [
+          '这是我妈妈。 (Zhè shì wǒ māma.)',
+          '这是我哥哥。 (Zhè shì wǒ gēge.)',
+          '洗手间在那儿。 (Xǐshǒujiān zài nàr.)',
+          '多少钱？ (Duōshao qián?)'
+        ],
+        correct_index: 0,
+        explanation_th: '这是我妈妈 (นี่คือคุณแม่ของฉัน) เป็นประโยคแนะนำที่อบอุ่นและถูกต้อง 100%!',
+        encouragement: '🎉 มารยาทเจ้าบ้านงดงามมาก! เพื่อนชาวจีนยิ้มรับทันที!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u06_l01',
+        badge_name: 'สายใยรักครอบครัวอบอุ่น 🏡🐰',
+        message_th: 'ยอดเยี่ยมมาก! คุณเรียกและแนะนำ พ่อ แม่ พี่ น้อง ได้ครบถ้วนแล้ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u06_l02',
+      lesson_number: 2,
+      title: {
+        zh: '你家有几口人',
+        th: 'บ้านคุณมีกี่คน?',
+        en: 'How Many in Your Family?'
+      },
+      can_do: {
+        th: 'ถามจำนวนสมาชิกในครอบครัว บอกจำนวนคนด้วยลักษณนาม 口 และใช้ 没有 ได้อย่างถูกต้อง',
+        en: 'Ask family size, count members using measure word 口, and negate with 没有'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เล่าจำนวนสมาชิกในบ้านตัวเองและถามเพื่อนเป็นภาษาจีนได้!',
+      vocabulary: [
+        {
+          id: 'hsk1_0608',
+          hanzi: '有',
+          pinyin: 'yǒu',
+          display_pinyin: 'yǒu',
+          pinyin_tone: 'you3',
+          meaning_th: 'มี',
+          meaning_en: 'have / there is',
+          radical: '月',
+          radical_name_th: 'หมวดดวงจันทร์/เนื้อ (月字底)',
+          stroke_count: 6,
+          mnemonic: 'มือยื่นออกไปถือสิ่งของมีค่าไว้ในครอบครอง = มี (有)',
+          kid_mnemonic: 'แบมือรับลูกอม เย้! ฉันมีลูกอมแล้ว = 有',
+          body_gesture: 'หงายฝ่ามือขวาขึ้นระดับอกแสดงว่ามีของ'
+        },
+        {
+          id: 'hsk1_0609',
+          hanzi: '没有',
+          pinyin: 'méiyǒu',
+          display_pinyin: 'méiyǒu',
+          pinyin_tone: 'mei2you3',
+          meaning_th: 'ไม่มี (ปฏิเสธคำว่า 有 ต้องใช้ 没有 เสมอ)',
+          meaning_en: 'do not have / there is not',
+          radical: '氵',
+          radical_name_th: 'หมวดสามหยดน้ำ (三点水)',
+          stroke_count: 13,
+          mnemonic: 'น้ำเหือดแห้งหายไป (没) ไม่มีเหลือสิ่งใด = ไม่มี (没有)',
+          kid_mnemonic: 'คว่ำมือส่ายไปมา ไม่มีเลยจ้า หมดเกลี้ยง = 没有',
+          body_gesture: 'โบกมือไปมาข้างหน้าแสดงการปฏิเสธ'
+        },
+        {
+          id: 'hsk1_0610',
+          hanzi: '口',
+          pinyin: 'kǒu',
+          display_pinyin: 'kǒu',
+          pinyin_tone: 'kou3',
+          meaning_th: 'คน (ลักษณนามคนในครอบครัว)/ปาก',
+          meaning_en: 'measure word for family members / mouth',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字部)',
+          stroke_count: 3,
+          mnemonic: 'รูปปากสี่เหลี่ยม สื่อถึงจำนวนปากท้องในครอบครัวที่ต้องดูแล = 口',
+          kid_mnemonic: 'อ้าปากกว้างกินข้าว อิ่มอร่อยทั้งบ้าน = 口',
+          body_gesture: 'ทำนิ้วชี้กับนิ้วโป้งเป็นรูปสี่เหลี่ยมหน้าปาก'
+        },
+        {
+          id: 'hsk1_0611',
+          hanzi: '几',
+          pinyin: 'jǐ',
+          display_pinyin: 'jǐ',
+          pinyin_tone: 'ji3',
+          meaning_th: 'กี่/เท่าไหร่ (มักใช้น้อยกว่า 10)',
+          meaning_en: 'how many (usually < 10)',
+          radical: '几',
+          radical_name_th: 'หมวดม้านั่ง (几字旁)',
+          stroke_count: 2,
+          mnemonic: 'โต๊ะม้านั่งตัวเล็ก นับจำนวนสิ่งของได้ไม่เกินสิบ = 几',
+          kid_mnemonic: 'ชูนิ้วนับ 1 2 3 มีกี่อันกันแน่นะ? = 几',
+          body_gesture: 'ชูนิ้วชี้แกว่งไปมาทำหน้าถามสงสัย'
+        },
+        {
+          id: 'hsk1_0612',
+          hanzi: '和',
+          pinyin: 'hé',
+          display_pinyin: 'hé',
+          pinyin_tone: 'he2',
+          meaning_th: 'และ/กับ',
+          meaning_en: 'and / with',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 8,
+          mnemonic: 'ต้นข้าว (禾) ป้อนเข้าปาก (口) สื่อถึงความกลมกลืนเชื่อมโยงกัน = และ (和)',
+          kid_mnemonic: 'จับมือเพื่อนสองคนไว้ด้วยกัน เราและเธอ = 和',
+          body_gesture: 'กุมมือสองข้างเข้าหากันระดับอก'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎเสียง 3+3 ในคำถามจำนวน: 几口 (jí kǒu)',
+        description_th: '几 (jǐ) และ 口 (kǒu) เป็นเสียง 3 ทั้งคู่ เมื่ออยู่ติดกัน 几 จะผันเป็นเสียง 2 คือ jí kǒu',
+        example: '几口人 (jǐ kǒu rén -> jí kǒu rén)',
+        fun_metaphor: 'เมื่อจะถามกี่คน น้องจี่ผันเสียงขึ้นสูง jí kǒu เพื่อความไพเราะ!',
+        reassurance: 'ออกเสียง jí kǒu rén ลื่นไหลเป็นธรรมชาติ ไม่ต้องหยุดสะดุด!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ถามจำนวนคนในบ้านและกฎเหล็กการใช้ 没有',
+        explanation_th: 'ถามจำนวนคนในครอบครัวใช้ลักษณนาม 口 เสมอ และจำไว้ขึ้นใจ: ในภาษาจีนการปฏิเสธคำว่า 有 ต้องใช้ 没有 เท่านั้น (ห้ามนำ 不 มาวางหน้า 有)!',
+        patterns: [
+          {
+            formula: '你家有几口人？ = บ้านคุณมีกี่คน?',
+            zh: '你家有几口人？',
+            pinyin: 'Nǐ jiā yǒu jǐ kǒu rén?',
+            th: 'บ้านเธอมีสมาชิกกี่คนครับ/ค่ะ?',
+            en: 'How many people are there in your family?'
+          },
+          {
+            formula: '我家有 [จำนวน] 口人 = บ้านฉันมี...คน',
+            zh: '我家有四口人：爸爸、妈妈、一个哥哥和我。',
+            pinyin: 'Wǒ jiā yǒu sì kǒu rén: bàba, māma, yí ge gēge hé wǒ.',
+            th: 'บ้านฉันมี 4 คน: พ่อ แม่ พี่ชาย 1 คน และฉัน',
+            en: 'My family has four people: dad, mom, an older brother and me.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: 'สมชาย，你家有几口人？',
+          pinyin: 'Somchai, nǐ jiā yǒu jǐ kǒu rén?',
+          th: 'สมชาย บ้านนายมีสมาชิกกี่คนเหรอ?',
+          en: 'Somchai, how many people are in your family?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我家有四口人：爸爸、妈妈、一个妹妹和我。你呢？',
+          pinyin: 'Wǒ jiā yǒu sì kǒu rén: bàba, māma, yí ge mèimei hé wǒ. Nǐ ne?',
+          th: 'บ้านฉันมี 4 คน: คุณพ่อ คุณแม่ น้องสาว 1 คน และฉัน แล้วนายล่ะ?',
+          en: 'My family has four: dad, mom, a younger sister, and me. What about you?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '我家有三口人，我没有哥哥，也没有弟弟。',
+          pinyin: 'Wǒ jiā yǒu sān kǒu rén, wǒ méiyǒu gēge, yě méiyǒu dìdi.',
+          th: 'บ้านฉันมี 3 คน ฉันไม่มีพี่ชาย และก็ไม่มีน้องชายด้วย',
+          en: 'My family has three, I have no older brother, and no younger brother either.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你是独生子啊！',
+          pinyin: 'Nǐ shì dúshēngzǐ a!',
+          th: 'นายเป็นลูกคนเดียวสินะ!',
+          en: 'You are an only child!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'wǒ méiyǒu dìdi' หมายถึงอะไร?",
+          options: [
+            'ฉันไม่มีน้องชาย',
+            'ฉันมีน้องชายสองคน',
+            'ฉันไม่มีพี่ชาย',
+            'ฉันไม่มีน้องสาว'
+          ],
+          correct_index: 0,
+          explanation_th: 'méiyǒu คือ ไม่มี และ dìdi คือ น้องชาย รวมกันคือ ฉันไม่มีน้องชาย',
+          encouragement: 'ฟังคำว่าไม่มีและน้องชายได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ลักษณนาม '口' (ปาก) นำมาใช้นับคนในครอบครัวเพราะสื่อถึงอะไร?",
+          options: [
+            'จำนวนปากท้องที่กินข้าวร่วมกันในบ้าน',
+            'การพูดคุยทักทาย',
+            'ประตูบ้าน',
+            'หน้าต่างห้อง'
+          ],
+          correct_index: 0,
+          explanation_th: 'คำว่า 口 สื่อถึงปากท้องของสมาชิกครอบครัวที่อาศัยและร่วมรับประทานอาหารใต้ชายคาเดียวกัน',
+          encouragement: 'เข้าใจวัฒนธรรมอันลึกซึ้งของภาษาจีนได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "บ้านฉันมีสี่คน"',
+          tokens: [
+            '四口人',
+            '有',
+            '我家'
+          ],
+          correct_sequence: [
+            '我家',
+            '有',
+            '四口人'
+          ],
+          pinyin: 'Wǒ jiā yǒu sì kǒu rén',
+          meaning_th: 'บ้านฉันมีสี่คน',
+          explanation_th: 'ประธาน (我家) + กริยา (有) + จำนวนและลักษณนาม (四口人)',
+          encouragement: 'เรียงโครงสร้างประโยคได้เป๊ะ 100%!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: '🚨 จุดดักผิดสำคัญ: หากต้องการพูดว่า "ไม่มี" ข้อใดถูกต้องตามหลักไวยากรณ์จีน?',
+          options: [
+            '没有 (méiyǒu) - ถูกต้อง 100%',
+            '*不 + 有 (bù + yǒu) - ผิดไวยากรณ์จีน ห้ามนำ 不 มาใส่หน้า 有',
+            '没是 (méi shì)',
+            '不是有 (bú shì yǒu)'
+          ],
+          correct_index: 0,
+          explanation_th: 'ในภาษาจีน การปฏิเสธคำว่า 有 (มี) ต้องใช้ 没有 เสมอ ห้ามนำ 不 มาใส่หน้า 有 เด็ดขาด!',
+          encouragement: 'สุดยอดมาก! ผ่านบททดสอบจุดตายไวยากรณ์จีนได้ฉลุย!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'เพื่อนร่วมงานชาวจีนถามคุณว่า: "你家有几口人？" ในบ้านคุณมีพ่อ แม่ และตัวคุณ (3 คน) ไม่มีพี่น้อง ต้องตอบอย่างไรจึงจะถูกต้องที่สุด?',
+        options: [
+          '我家有三口人，我没有哥哥弟弟。 (Wǒ jiā yǒu sān kǒu rén, wǒ méiyǒu gēge dìdi.)',
+          '我家有三个人，我不是有哥哥。 (Wǒ jiā yǒu sān ge rén, wǒ bú shì yǒu gēge.)',
+          '四块钱一碗面条。 (Sì kuài qián yì wǎn miàntiáo.)',
+          '洗手间在前面。 (Xǐshǒujiān zài qiánmiàn.)'
+        ],
+        correct_index: 0,
+        explanation_th: 'ใช้ลักษณนาม 三口人 และใช้คำปฏิเสธ 没有 ได้อย่างถูกต้องสมบูรณ์แบบ!',
+        encouragement: '🎉 ไวยากรณ์เฉียบคมมาก! สื่อสารได้อย่างเจ้าของภาษามาเอง!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u06_l02',
+        badge_name: 'ผู้เชี่ยวชาญสำมะโนครัว 👨‍👩‍👧🐰',
+        message_th: 'เก่งกาจมาก! คุณบอกจำนวนสมาชิกในบ้านและใช้ ไม่มี (没有) ได้แม่นยำ 100%!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u06_l03',
+      lesson_number: 3,
+      title: {
+        zh: '朋友、同学与同事',
+        th: 'เพื่อน เพื่อนร่วมชั้น & เพื่อนร่วมงาน',
+        en: 'Friends, Classmates & Colleagues'
+      },
+      can_do: {
+        th: 'แนะนำเพื่อน เพื่อนร่วมชั้น เพื่อนร่วมงาน และพูดแสดงความยินดีที่ได้รู้จักอย่างเป็นธรรมชาติ',
+        en: 'Introduce friends, classmates, colleagues, and express pleasure in meeting them'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ผูกมิตรกับเพื่อนใหม่และทักทายอย่างอบอุ่น!',
+      vocabulary: [
+        {
+          id: 'hsk1_0613',
+          hanzi: '朋友',
+          pinyin: 'péngyou',
+          display_pinyin: 'péngyou',
+          pinyin_tone: 'peng2you',
+          meaning_th: 'เพื่อน/มิตร',
+          meaning_en: 'friend',
+          radical: '月',
+          radical_name_th: 'หมวดดวงจันทร์ (月字旁)',
+          stroke_count: 8,
+          mnemonic: 'ดวงจันทร์สองดวง (月月) ส่องสว่างเคียงข้างกันเสมอ = เพื่อน (朋友)',
+          kid_mnemonic: 'เพื่อนรักสองคน กอดคอเดินไปด้วยกัน = 朋友',
+          body_gesture: 'กอดคอหรือเอามือแตะไหล่คนข้างๆ อย่างเป็นมิตร'
+        },
+        {
+          id: 'hsk1_0614',
+          hanzi: '同学',
+          pinyin: 'tóngxué',
+          display_pinyin: 'tóngxué',
+          pinyin_tone: 'tong2xue2',
+          meaning_th: 'เพื่อนร่วมชั้น/เพื่อนนักเรียน',
+          meaning_en: 'classmate',
+          radical: '子',
+          radical_name_th: 'หมวดเด็ก/ลูก (子字底)',
+          stroke_count: 14,
+          mnemonic: 'ร่วมกัน (同) ร่ำเรียนศึกษา (学) ในห้องเรียนเดียวกัน = เพื่อนร่วมชั้น (同学)',
+          kid_mnemonic: 'สะพายกระเป๋าไปโรงเรียน นั่งข้างเพื่อนร่วมชั้น = 同学',
+          body_gesture: 'เปิดฝ่ามือสองข้างเหมือนกำลังเปิดหนังสือเรียน'
+        },
+        {
+          id: 'hsk1_0615',
+          hanzi: '同事',
+          pinyin: 'tóngshì',
+          display_pinyin: 'tóngshì',
+          pinyin_tone: 'tong2shi4',
+          meaning_th: 'เพื่อนร่วมงาน',
+          meaning_en: 'colleague / coworker',
+          radical: '一',
+          radical_name_th: 'หมวดเส้นขวาง (一部)',
+          stroke_count: 14,
+          mnemonic: 'ร่วมกัน (同) รับผิดชอบภารกิจการงาน (事) ในที่ทำงาน = เพื่อนร่วมงาน (同事)',
+          kid_mnemonic: 'จับมือช่วยกันทำงาน โปรเจกต์สำเร็จ = 同事',
+          body_gesture: 'ทำท่ายกนิ้วโป้งให้กำลังใจเพื่อนร่วมงาน'
+        },
+        {
+          id: 'hsk1_0616',
+          hanzi: '认识',
+          pinyin: 'rènshi',
+          display_pinyin: 'rènshi',
+          pinyin_tone: 'ren4shi',
+          meaning_th: 'รู้จัก/ทำความรู้จัก',
+          meaning_en: 'know / recognize / meet',
+          radical: '讠',
+          radical_name_th: 'หมวดภาษาพูด (言字旁)',
+          stroke_count: 9,
+          mnemonic: 'ใช้คำพูดภาษา (讠) สนทนาจนจดจำและคุ้นเคยกัน = รู้จัก (认识)',
+          kid_mnemonic: 'ทักทายพูดคุย ยิ้มให้กันจนจำหน้าได้ = 认识',
+          body_gesture: 'ยื่นมือขวาออกไปทำท่าจับมือเช็กแฮนด์'
+        },
+        {
+          id: 'hsk1_0617',
+          hanzi: '高兴',
+          pinyin: 'gāoxìng',
+          display_pinyin: 'gāoxìng',
+          pinyin_tone: 'gao1xing4',
+          meaning_th: 'ดีใจ/มีความสุข',
+          meaning_en: 'happy / glad / pleased',
+          radical: '高',
+          radical_name_th: 'หมวดสูง (高字部)',
+          stroke_count: 16,
+          mnemonic: 'อารมณ์ความสุขพุ่งสูงขึ้นสู่ยอดหอคอย = ดีใจ (高兴)',
+          kid_mnemonic: 'กระโดดโลดเต้น ยิ้มกว้างมีความสุข = 高兴',
+          body_gesture: 'ชูสองมือขึ้นเหนือหัว โบกไปมาด้วยความเบิกบาน'
+        },
+        {
+          id: 'hsk1_0618',
+          hanzi: '也',
+          pinyin: 'yě',
+          display_pinyin: 'yě',
+          pinyin_tone: 'ye3',
+          meaning_th: 'ก็...เหมือนกัน/ด้วย',
+          meaning_en: 'also / too',
+          radical: '乙',
+          radical_name_th: 'หมวดกิ่งสอง (乙字旁)',
+          stroke_count: 3,
+          mnemonic: 'สายน้ำหรือเส้นทางที่คดเคี้ยวไปในทิศทางเดียวกัน = ก็...ด้วย (也)',
+          kid_mnemonic: 'เธอชอบไอติม ฉันก็ชอบเหมือนกันจ้า = 也',
+          body_gesture: 'ชี้นิ้วชี้มาที่ตัวเองแล้วยิ้มพยักหน้า'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎเสียง 3+3 ในคำตอบรับ: 我也 (wó yě)',
+        description_th: '我 (wǒ) และ 也 (yě) เป็นเสียง 3 ทั้งคู่ เมื่อพูด 我也 คำว่า 我 จะผันเป็นเสียง 2 ออกเสียงว่า wó yě',
+        example: '我也很高兴 (wǒ yě hěn gāoxìng -> wó yě hén gāoxìng)',
+        fun_metaphor: 'น้องหว่อเจอน้องเหยี่ย เลยเขย่งขาเป็นเสียงสอง wó yě!',
+        reassurance: 'พูด wó yě ลื่นไหล คล่องแคล่ว ทรงพลัง!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ทำความรู้จักระดับตำนานและตำแหน่งของ 也',
+        explanation_th: 'สูตรทักทายเมื่อพบกันครั้งแรก: 认识你很高兴！ และจำไว้ว่า 也 ต้องอยู่หน้าคำกริยาหรือคุณศัพท์เสมอ ห้ามวางท้ายประโยคแบบภาษาไทย!',
+        patterns: [
+          {
+            formula: '认识你很高兴！ = ยินดีที่ได้รู้จักคุณ!',
+            zh: '认识你很高兴！',
+            pinyin: 'Rènshi nǐ hěn gāoxìng!',
+            th: 'ยินดีที่ได้รู้จักเธอนะ!',
+            en: 'Nice to meet you!'
+          },
+          {
+            formula: '我也很高兴！ = ฉันก็ยินดีเหมือนกัน!',
+            zh: '我也很高兴！',
+            pinyin: 'Wǒ yě hěn gāoxìng!',
+            th: 'ฉันก็ยินดีเช่นกันครับ/ค่ะ! (ห้ามพูด 我高兴也 เด็ดขาด)',
+            en: 'Nice to meet you too!'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '王明，这位是我的泰国朋友。',
+          pinyin: 'Wáng Míng, zhè wèi shì wǒ de Tàiguó péngyou.',
+          th: 'หวังหมิง นี่คือเพื่อนคนไทยของฉันนะ',
+          en: 'Wang Ming, this is my Thai friend.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '你好！认识你很高兴！',
+          pinyin: 'Nǐ hǎo! Rènshi nǐ hěn gāoxìng!',
+          th: 'สวัสดีครับ! ยินดีที่ได้รู้จักนะ!',
+          en: 'Hello! Nice to meet you!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我也很高兴认识你！你是สมชาย的同事吗？',
+          pinyin: 'Wǒ yě hěn gāoxìng rènshi nǐ! Nǐ shì Somchai de tóngshì ma?',
+          th: 'ฉันก็ยินดีที่ได้รู้จักนายเช่นกัน! นายเป็นเพื่อนร่วมงานของสมชายเหรอ?',
+          en: 'Nice to meet you too! Are you Somchai\'s colleague?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '对，我们是同事，也是好朋友。',
+          pinyin: 'Duì, wǒmen shì tóngshì, yě shì hǎo péngyou.',
+          th: 'ใช่แล้ว พวกเราเป็นเพื่อนร่วมงาน และก็เป็นเพื่อนสนิทกันด้วย',
+          en: 'Yes, we are colleagues, and good friends too.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'rènshi nǐ hěn gāoxìng' หมายถึงอะไร?",
+          options: [
+            'ยินดีที่ได้รู้จักคุณ',
+            'ขอบคุณสำหรับความช่วยเหลือ',
+            'พรุ่งนี้พบกันใหม่',
+            'คุณสบายดีไหม'
+          ],
+          correct_index: 0,
+          explanation_th: 'rènshi คือ รู้จัก, nǐ คือ เธอ/คุณ และ hěn gāoxìng คือ ดีใจมาก รวมกันคือ ยินดีที่ได้รู้จักคุณ',
+          encouragement: 'เข้าใจประโยคผูกมิตรระดับตำนานได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '朋' ใน '朋友' (เพื่อน) ประกอบด้วยอักษรใดสองตัวติดกัน?",
+          options: [
+            'ดวงจันทร์สองดวง (月月)',
+            'ดวงอาทิตย์สองดวง (日日)',
+            'คนสองคน (人人)',
+            'ปากสองปาก (口口)'
+          ],
+          correct_index: 0,
+          explanation_th: '朋 มาจาก 月 สองดวงเคียงคู่กัน สื่อถึงเพื่อนแท้ที่ไม่ทอดทิ้งกัน',
+          encouragement: 'จำโครงสร้างอักษร 朋 ได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ฉันก็ยินดีมากเช่นกัน"',
+          tokens: [
+            '很高兴',
+            '我也'
+          ],
+          correct_sequence: [
+            '我也',
+            '很高兴'
+          ],
+          pinyin: 'Wǒ yě hěn gāoxìng',
+          meaning_th: 'ฉันก็ดีใจมากเช่นกัน',
+          explanation_th: 'ประธาน (我) + 也 (ก็ด้วย) + คุณศัพท์ (很高兴)',
+          encouragement: 'วางตำแหน่ง 也 ได้ถูกต้อง ไม่ติดกับดักภาษาไทย!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า "เพื่อนร่วมงาน" ในภาษาจีนคือคำใด?',
+          options: [
+            '同事 (tóngshì)',
+            '同学 (tóngxué)',
+            '朋友 (péngyou)',
+            '师傅 (shīfu)'
+          ],
+          correct_index: 0,
+          explanation_th: '同事 (tóngshì) คือ เพื่อนร่วมงาน ส่วน 同学 (tóngxué) คือ เพื่อนร่วมชั้น',
+          encouragement: 'แยกแยะเพื่อนร่วมงานกับเพื่อนร่วมชั้นได้แม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในงานเลี้ยงบริษัท เพื่อนร่วมงานชาวจีนเดินเข้ามาทักทายคุณว่า "认识你很高兴！" คุณต้องการตอบกลับอย่างสุภาพและเป็นมิตรว่า "ฉันก็ยินดีที่ได้รู้จักคุณเช่นกัน" ต้องพูดว่าอย่างไร?',
+        options: [
+          '我也很高兴认识你！ (Wǒ yě hěn gāoxìng rènshi nǐ!)',
+          '我很高兴也。 (Wǒ hěn gāoxìng yě.)',
+          '洗手间在哪儿？ (Xǐshǒujiān zài nǎr?)',
+          '不要辣！ (Bú yào là!)'
+        ],
+        correct_index: 0,
+        explanation_th: '我也很高兴认识你！ เป็นการตอบรับที่สมบูรณ์แบบ ทั้งไวยากรณ์และมารยาททางสังคม!',
+        encouragement: '🎉 มารยาทการเข้าสังคมเป็นเลิศ! ได้เพื่อนชาวจีนเพิ่มอีกคนแล้ว!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u06_l03',
+        badge_name: 'ทูตสันถวไมตรีมิตรภาพ 🤝🐰',
+        message_th: 'ยินดีด้วย! คุณทำความรู้จักและสร้างมิตรภาพกับคนจีนได้อย่างงดงาม!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u06_l04',
+      lesson_number: 4,
+      title: {
+        zh: '向中国房东介绍家人通关',
+        th: 'Boss Challenge: แนะนำครอบครัวให้โฮสต์จีนฟัง',
+        en: 'Boss Challenge: Introduce Family to Chinese Host'
+      },
+      can_do: {
+        th: 'บูรณาการคำศัพท์ครอบครัว ตัวเลข สัญชาติ เล่าภาพถ่ายครอบครัวให้เจ้าของบ้านชาวจีนฟังอย่างคล่องแคล่ว',
+        en: 'Integrate family terms, numbers, and nationality to narrate family photos to a Chinese host'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่ Unit 6 เล่าเรื่องครอบครัวให้คนจีนฟังอย่างอบอุ่น!',
+      vocabulary: [
+        {
+          id: 'hsk1_0619',
+          hanzi: '照片',
+          pinyin: 'zhàopiàn',
+          display_pinyin: 'zhàopiàn',
+          pinyin_tone: 'zhao4pian4',
+          meaning_th: 'รูปถ่าย/ภาพถ่าย',
+          meaning_en: 'photo / photograph',
+          radical: '灬',
+          radical_name_th: 'หมวดไฟสี่จุด (四点底)',
+          stroke_count: 17,
+          mnemonic: 'แสงไฟส่องประกาย (照) ลงบนแผ่นฟิล์มบางๆ (片) = รูปถ่าย (照片)',
+          kid_mnemonic: 'แชะ! กดชัตเตอร์กล้องถ่ายรูปครอบครัว = 照片',
+          body_gesture: 'ทำมือสองข้างเล็งเป็นกรอบสี่เหลี่ยมถ่ายรูปหน้าตา'
+        },
+        {
+          id: 'hsk1_0620',
+          hanzi: '谁',
+          pinyin: 'shéi',
+          display_pinyin: 'shéi',
+          pinyin_tone: 'shei2',
+          meaning_th: 'ใคร',
+          meaning_en: 'who / whom',
+          radical: '讠',
+          radical_name_th: 'หมวดภาษาพูด (言字旁)',
+          stroke_count: 10,
+          mnemonic: 'ใช้คำพูดภาษา (讠) เอ่ยถามว่าคนผู้นั้นคือใคร = 谁',
+          kid_mnemonic: 'เอียงคอชี้ที่รูป เอ๊ะ คนนี้คือใครน้า = 谁',
+          body_gesture: 'ยักไหล่ผายสองมือออกทำหน้าสงสัย'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำสรรพนามถาม: 谁 (shéi / shuí)',
+        description_th: 'คำว่า 谁 ในภาษาจีนพูดประจำวันนิยมออกเสียงเป็น shéi (เสียง 2) ชัดเจนและอบอุ่น',
+        example: '这是谁？ (Zhè shì shéi?)',
+        fun_metaphor: 'น้องเสยเสียง 2 ยกปลายเสียงขึ้นเบาๆ ฟังสบายหู!',
+        reassurance: 'เมื่อชี้รูปถามว่า 这是谁？ (นี่คือใคร) คนจีนทุกคนเข้าใจทันที!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้บรรยายภาพถ่ายครอบครัว',
+        explanation_th: 'ใช้โครงสร้าง: 这是我家的照片 (นี่คือรูปบ้านฉัน) + 这是我... (นี่คือ...) + 他们都是... (พวกเขาล้วนเป็น...)',
+        patterns: [
+          {
+            formula: '这是我家的照片 = นี่คือรูปถ่ายครอบครัวของฉัน',
+            zh: '这是我家的照片。',
+            pinyin: 'Zhè shì wǒ jiā de zhàopiàn.',
+            th: 'นี่คือรูปถ่ายครอบครัวของฉันครับ',
+            en: 'This is a photo of my family.'
+          },
+          {
+            formula: '他们都是 + [สัญชาติ/กลุ่ม] = พวกเขาทั้งหมดเป็น...',
+            zh: '他们都是泰国人。',
+            pinyin: 'Tāmen dōu shì Tàiguó rén.',
+            th: 'พวกเขาทุกคนเป็นคนไทยครับ',
+            en: 'They are all Thai.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'คุณป้าเจ้าของบ้าน 👵',
+          zh: '小伙子，这是谁的照片啊？真温馨！',
+          pinyin: 'Xiǎohuǒzi, zhè shì shéi de zhàopiàn a? Zhēn wēnxīn!',
+          th: 'พ่อหนุ่ม นี่รูปถ่ายของใครจ๊ะ? อบอุ่นจังเลย!',
+          en: 'Young man, whose photo is this? So heartwarming!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '阿姨您看，这是我家人的照片。我家有五口人。',
+          pinyin: 'Āyí nín kàn, zhè shì wǒ jiārén de zhàopiàn. Wǒ jiā yǒu wǔ kǒu rén.',
+          th: 'คุณป้าดูสิครับ นี่รูปครอบครัวผม บ้านผมมี 5 คนครับ',
+          en: 'Auntie look, this is my family photo. We have five people.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'คุณป้าเจ้าของบ้าน 👵',
+          zh: '这位漂亮的女士是谁？',
+          pinyin: 'Zhè wèi piàoliang de nǚshì shì shéi?',
+          th: 'สุภาพสตรีคนสวยท่านนี้คือใครจ๊ะ?',
+          en: 'Who is this pretty lady?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '这是我妈妈，旁边是我爸爸。他们都是泰国人。',
+          pinyin: 'Zhè shì wǒ māma, pángbiān shì wǒ bàba. Tāmen dōu shì Tàiguó rén.',
+          th: 'นี่คือคุณแม่ผมครับ ข้างๆ คือคุณพ่อ พวกท่านเป็นคนไทยทั้งคู่ครับ',
+          en: 'This is my mom, next to her is my dad. They are both Thai.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'คุณป้าเจ้าของบ้าน 👵',
+          zh: '太好了！欢迎你们全家常来中国玩！',
+          pinyin: 'Tài hǎo le! Huānyíng nǐmen quánjiā cháng lái Zhōngguó wán!',
+          th: 'ดีจังเลย! ยินดีต้อนรับครอบครัวเธอมาเที่ยวเมืองจีนบ่อยๆ นะ!',
+          en: 'Wonderful! Welcome your whole family to visit China often!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'zhè shì shéi de zhàopiàn' แปลว่าอะไร?",
+          options: [
+            'นี่คือรูปถ่ายของใคร?',
+            'นี่คือบ้านของใคร?',
+            'นี่คือเพื่อนของใคร?',
+            'นี่คือหนังสือของใคร?'
+          ],
+          correct_index: 0,
+          explanation_th: 'zhè shì คือ นี่คือ, shéi คือ ใคร และ zhàopiàn คือ รูปถ่าย รวมกันคือ นี่คือรูปถ่ายของใคร?',
+          encouragement: 'ฟังคำว่ารูปถ่ายและคำถามได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '谁' (ใคร) มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            'หมวดภาษาพูด (讠 言字旁)',
+            'หมวดคน (亻)',
+            'หมวดปาก (口)',
+            'หมวดดวงอาทิตย์ (日)'
+          ],
+          correct_index: 0,
+          explanation_th: '谁 มีหมวดนำ 讠 (ภาษาพูด) สื่อถึงการใช้เสียงพูดสอบถามตัวบุคคล',
+          encouragement: 'จำหมวดนำภาษาพูด 讠 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเขาทุกคนเป็นคนไทย"',
+          tokens: [
+            '都是',
+            '泰国人',
+            '他们'
+          ],
+          correct_sequence: [
+            '他们',
+            '都是',
+            '泰国人'
+          ],
+          pinyin: 'Tāmen dōu shì Tàiguó rén',
+          meaning_th: 'พวกเขาทุกคนเป็นคนไทย',
+          explanation_th: 'ประธาน (他们) + ล้วนเป็น (都是) + สัญชาติ (泰国人)',
+          encouragement: 'บูรณาการความรู้สัญชาติจาก Unit 1 ได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'เมื่อชี้ไปที่รูปถ่ายแล้วต้องการถามว่า "คนนี้คือใคร?" ควรพูดว่าอย่างไร?',
+          options: [
+            '这是谁？ (Zhè shì shéi?)',
+            '在哪儿？ (Zài nǎr?)',
+            '多少钱？ (Duōshao qián?)',
+            '怎么走？ (Zěnme zǒu?)'
+          ],
+          correct_index: 0,
+          explanation_th: '这是谁？ (Zhè shì shéi?) แปลว่า นี่คือใคร?',
+          encouragement: 'จำรูปประโยคคำถามได้คล่องแคล่วว่องไว!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'โฮสต์ชาวจีนชี้ไปที่รูปถ่ายของคุณและถามว่า "这是谁？" คุณต้องการบอกว่า "นี่คือคุณพ่อของฉัน เขาเป็นคนไทย" ต้องพูดว่าอย่างไร?',
+        options: [
+          '这是我爸爸，他是泰国人。 (Zhè shì wǒ bàba, tā shì Tàiguó rén.)',
+          '这是我妈妈，不客气。 (Zhè shì wǒ māma, bú kèqi.)',
+          '洗手间在车站。 (Xǐshǒujiān zài chēzhàn.)',
+          '我有四块钱。 (Wǒ yǒu sì kuài qián.)'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยค 这是我爸爸，他是泰国人。 บูรณาการทั้งคำเรียกครอบครัวและสัญชาติได้อย่างแม่นยำ 100%!',
+        encouragement: '🎉 มหัศจรรย์มาก! คุณพิชิต Grand Boss Challenge ของ Unit 6 ได้อย่างสมบูรณ์แบบ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u06_master',
+        badge_name: 'ทูตผูกมิตรและครอบครัว 👨‍👩‍👧‍👦🐰',
+        message_th: 'ขอแสดงความยินดีด้วย! คุณผ่านบทเรียนครอบครัวและเพื่อนระดับ Tier 1 ครบทั้ง 4 บทย่อยแล้ว!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

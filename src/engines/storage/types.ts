@@ -7,6 +7,7 @@
 export const STORAGE_KEYS = {
   HOT_USER_STATE: 'hanzero_user_state_v1',
   DIAGNOSTICS: 'hanzero_diagnostics_v1',
+  RESET_TOMBSTONE: 'hanzero_reset_tombstone',
 } as const;
 
 export const INDEXEDDB_CONFIG = {
@@ -90,6 +91,7 @@ export interface SrsItemRecord {
   word_id: string; // Primary key: e.g. "hsk1_0001"
   hanzi: string;
   pinyin: string;
+  display_pinyin?: string;
   meaning_th: string;
   ease_factor: number; // Default 2.5
   interval_days: number;
@@ -252,4 +254,43 @@ export function isHanzeroBackupSnapshot(value: unknown): value is HanzeroBackupS
     Array.isArray(v.srs_records) &&
     v.srs_records.every(isSrsItemRecord)
   );
+}
+
+/**
+ * -------------------------------------------------------------------------
+ * Local Diagnostics & Telemetry Data Types
+ * -------------------------------------------------------------------------
+ */
+export interface QuestionErrorRecord {
+  question_id: string;
+  unit_id: string;
+  lesson_id: string;
+  prompt: string;
+  user_wrong_answer: string;
+  correct_answer: string;
+  error_type?: 'tone' | 'meaning' | 'scramble' | 'character';
+  timestamp: number;
+}
+
+export interface LearningBottleneckItem {
+  question_id: string;
+  prompt: string;
+  correct_answer: string;
+  error_count: number;
+  last_wrong_answer: string;
+}
+
+export interface AudioUsageStats {
+  silent_mode_toggles: number;
+  normal_plays: number;
+  slow_plays: number;
+}
+
+export interface DiagnosticsSnapshot {
+  schema_version: 1;
+  created_at: number;
+  total_errors_recorded: number;
+  bottlenecks: Record<string, LearningBottleneckItem>;
+  recent_errors: QuestionErrorRecord[];
+  audio_usage: AudioUsageStats;
 }

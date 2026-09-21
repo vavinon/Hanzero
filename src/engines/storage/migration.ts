@@ -124,6 +124,8 @@ export function migrateUserState(raw: unknown): UserStateSchema {
       },
       xp: Math.floor(clampNumber(prog.xp, 0, 10000000, 0)),
       level: Math.floor(clampNumber(prog.level, 1, 1000, 1)),
+      onboarding_completed: Boolean(prog.onboarding_completed),
+      selected_track: prog.selected_track === 'tier1' ? 'tier1' : 'tier0',
     },
 
     srs_summary: {

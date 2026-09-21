@@ -185,6 +185,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
   // 2. Active Card Review View
   return (
     <div
+      data-testid="review-deck"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -301,6 +302,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
 
       {/* 3D Flashcard Container */}
       <div
+        data-testid="flashcard"
         onClick={handleCardClick}
         style={{
           width: '100%',
@@ -398,9 +400,11 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
                 fontSize: '20px',
                 fontWeight: 700,
                 color: 'var(--color-jade-dark)',
+                lineHeight: 1.35,
+                paddingTop: '3px',
               }}
             >
-              {currentCard.pinyin}
+              {currentCard.display_pinyin || currentCard.pinyin}
             </div>
             <div
               style={{
@@ -460,7 +464,8 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
       >
         {!isFlipped ? (
           <button
-            onClick={handleCardClick}
+            onClick={() => setIsFlipped(true)}
+            data-testid="btn-flip-card"
             className="btn-tactile-primary"
             style={{
               flex: 1,
@@ -478,6 +483,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
             {/* 0 = Again */}
             <button
               onClick={() => handleGrade(0)}
+              data-testid="btn-grade-again"
               disabled={isProcessing}
               style={{
                 flex: 1,
@@ -502,6 +508,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
             {/* 1 = Hard */}
             <button
               onClick={() => handleGrade(1)}
+              data-testid="btn-grade-hard"
               disabled={isProcessing}
               style={{
                 flex: 1,
@@ -526,6 +533,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
             {/* 2 = Good */}
             <button
               onClick={() => handleGrade(2)}
+              data-testid="btn-grade-good"
               disabled={isProcessing}
               style={{
                 flex: 1,
@@ -552,6 +560,7 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
             {/* 3 = Easy */}
             <button
               onClick={() => handleGrade(3)}
+              data-testid="btn-grade-easy"
               disabled={isProcessing}
               style={{
                 flex: 1,

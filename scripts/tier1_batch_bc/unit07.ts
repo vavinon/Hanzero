@@ -1,0 +1,968 @@
+/**
+ * scripts/tier1_batch_bc/unit07.ts
+ * Tier 1 Unit 7: Daily Life & Free Time (tier1_u07)
+ * Golden Template Compliant, Simplified Chinese 100%, Tone Sandhi Annotated.
+ */
+
+export const unit07 = {
+  unit_id: 'tier1_u07',
+  tier: 1,
+  unit_number: 7,
+  title: {
+    zh: '日常作息与休闲',
+    th: 'กิจวัตรประจำวัน & งานอดิเรก',
+    en: 'Daily Life & Free Time'
+  },
+  description: 'ตื่นนอน ไปทำงาน ฟังเพลง ดูซีรีส์ เล่นโทรศัพท์ และชวนเพื่อนไปเที่ยววันหยุดสุดสัปดาห์',
+  lessons: [
+    {
+      lesson_id: 't1_u07_l01',
+      lesson_number: 1,
+      title: {
+        zh: '每天的作息时间',
+        th: 'ตื่นนอน ทำงาน เข้านอน',
+        en: 'Daily Routines & Sleep'
+      },
+      can_do: {
+        th: 'บอกกิจวัตรประจำวัน เวลาตื่นนอน เวลาเข้างาน-เลิกงาน และเวลานอนได้อย่างถูกต้องตามลำดับเวลาจีน',
+        en: 'State daily routines: wake up, work hours, and bedtime using Chinese time-order'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เล่าตารางเวลาชีวิตประจำวัน 1 วันของตัวเองเป็นภาษาจีนได้!',
+      vocabulary: [
+        {
+          id: 'hsk1_0701',
+          hanzi: '起床',
+          pinyin: 'qǐchuáng',
+          display_pinyin: 'qǐchuáng',
+          pinyin_tone: 'qi3chuang2',
+          meaning_th: 'ตื่นนอน/ลุกจากเตียง',
+          meaning_en: 'wake up / get out of bed',
+          radical: '走',
+          radical_name_th: 'หมวดก้าววิ่งเดิน (走字旁)',
+          stroke_count: 14,
+          mnemonic: 'ลุกขึ้นยืน (起) ออกจากเตียงนอน (床) = ตื่นนอน (起床)',
+          kid_mnemonic: 'นาฬิกาปลุกดัง กริ๊ง! ลุกจากเตียงบิดขี้เกียจ = 起床',
+          body_gesture: 'ทำท่ายกสองแขนบิดขี้เกียจตอนตื่นนอน'
+        },
+        {
+          id: 'hsk1_0702',
+          hanzi: '上班',
+          pinyin: 'shàngbān',
+          display_pinyin: 'shàngbān',
+          pinyin_tone: 'shang4ban1',
+          meaning_th: 'เข้างาน/ไปทำงาน',
+          meaning_en: 'go to work / start shift',
+          radical: '一',
+          radical_name_th: 'หมวดเส้นขวาง (一部)',
+          stroke_count: 13,
+          mnemonic: 'ขึ้น (上) สู่กะเวรหรือห้องทำงาน (班) = เข้างาน (上班)',
+          kid_mnemonic: 'หิ้วกระเป๋าเอกสาร เดินกระฉับกระเฉงไปทำงาน = 上班',
+          body_gesture: 'ทำท่าสแกนนิ้วมือหรือแตะบัตรเข้างาน'
+        },
+        {
+          id: 'hsk1_0703',
+          hanzi: '下班',
+          pinyin: 'xiàbān',
+          display_pinyin: 'xiàbān',
+          pinyin_tone: 'xia4ban1',
+          meaning_th: 'เลิกงาน',
+          meaning_en: 'finish work / get off shift',
+          radical: '一',
+          radical_name_th: 'หมวดเส้นขวาง (一部)',
+          stroke_count: 13,
+          mnemonic: 'ลง (下) จากกะงาน จบภารกิจประจำวัน = เลิกงาน (下班)',
+          kid_mnemonic: 'เสียงกริ่งหมดเวลาเลิกงาน เย้! เก็บของกลับบ้าน = 下班',
+          body_gesture: 'ชูสองมือส่งเสียงไชโยฉลองเลิกงาน'
+        },
+        {
+          id: 'hsk1_0704',
+          hanzi: '睡觉',
+          pinyin: 'shuìjiào',
+          display_pinyin: 'shuìjiào',
+          pinyin_tone: 'shui4jiao4',
+          meaning_th: 'นอนหลับ/เข้านอน',
+          meaning_en: 'sleep / go to bed',
+          radical: '目',
+          radical_name_th: 'หมวดดวงตา (目字旁)',
+          stroke_count: 21,
+          mnemonic: 'ปิดดวงตา (目) ที่เหนื่อยล้าลงบนหมอน = นอนหลับ (睡觉)',
+          kid_mnemonic: 'หัวถึงหมอน ปิดไฟนอนหลับฝันดี = 睡觉',
+          body_gesture: 'ประกบสองฝ่ามือแนบข้างแก้ม เอียงคอหลับตา'
+        },
+        {
+          id: 'hsk1_0705',
+          hanzi: '学习',
+          pinyin: 'xuéxí',
+          display_pinyin: 'xuéxí',
+          pinyin_tone: 'xue2xi2',
+          meaning_th: 'เรียน/ศึกษา/ฝึกฝน',
+          meaning_en: 'study / learn',
+          radical: '子',
+          radical_name_th: 'หมวดเด็ก/ลูก (子字底)',
+          stroke_count: 11,
+          mnemonic: 'เด็ก (子) กางปีกนกฝึกบิน (习) สู่ความรู้ = เรียนรู้ (学习)',
+          kid_mnemonic: 'เปิดสมุดจดภาษาจีน ท่องคำศัพท์เก่งขึ้นทุกวัน = 学习',
+          body_gesture: 'ทำมือกางเหมือนอ่านหนังสือและพยักหน้าเข้าใจ'
+        },
+        {
+          id: 'hsk1_0706',
+          hanzi: '每天',
+          pinyin: 'měitiān',
+          display_pinyin: 'měitiān',
+          pinyin_tone: 'mei3tian1',
+          meaning_th: 'ทุกๆ วัน',
+          meaning_en: 'every day / daily',
+          radical: '母',
+          radical_name_th: 'หมวดมารดา (母字部)',
+          stroke_count: 11,
+          mnemonic: 'คุณแม่ (母) ดูแลลูกทุกวัน (每天) สม่ำเสมอไม่เคยขาด',
+          kid_mnemonic: 'พระอาทิตย์ขึ้นทุกเช้า สดใสทุกๆ วัน = 每天',
+          body_gesture: 'วาดวงกลมพระอาทิตย์บนฟ้าด้วยสองมือ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Half-3rd Tone ในคำว่า 每天 (měitiān)',
+        description_th: 'เมื่อคำเสียง 3 (měi) อยู่หน้าคำเสียง 1 (tiān) จะออกเสียงครึ่งเสียง (Half-3rd Tone) คือทอดเสียงลงต่ำโดยไม่ต้องยกปลายเสียงขึ้น',
+        example: '每天 (měitiān)',
+        fun_metaphor: 'น้องเหม่ยลดเสียงลงต่ำ แล้วส่งไมค์ให้น้องเทียนเสียงสูงต่อไป!',
+        reassurance: 'ไม่ต้องเกร็งผันเสียงสูง ออกเสียง měi ต่ำๆ สบายๆ tiān สูงยาว!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้บอกกิจวัตรตามเวลาจีน',
+        explanation_th: 'ทบทวนกฎทองคำภาษาจีน: ประธาน + [เวลา/每天] + [กิจกรรม] (ห้ามวางเวลาไว้ท้ายประโยคเด็ดขาด เช่น ห้ามพูด 我起床在七点!)',
+        patterns: [
+          {
+            formula: '[ประธาน] + [เวลา/每天] + [กิจกรรม] = ...ทำ...ตอน...',
+            zh: '我每天早上七点起床。',
+            pinyin: 'Wǒ měitiān zǎoshang qī diǎn qǐchuáng.',
+            th: 'ฉันตื่นนอนตอน 7 โมงเช้าทุกวัน',
+            en: 'I wake up at 7:00 AM every day.'
+          },
+          {
+            formula: '你几点 + [กิจกรรม]？ = คุณ...กี่โมง?',
+            zh: '你几点上班？',
+            pinyin: 'Nǐ jǐ diǎn shàngbān?',
+            th: 'คุณเข้างานกี่โมงครับ?',
+            en: 'What time do you start work?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: 'สมชาย，你每天早上几点起床？',
+          pinyin: 'Somchai, nǐ měitiān zǎoshang jǐ diǎn qǐchuáng?',
+          th: 'สมชาย นายตื่นนอนกี่โมงทุกเช้าเหรอ?',
+          en: 'Somchai, what time do you wake up every morning?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我每天早上七点起床，八点半上班。你呢？',
+          pinyin: 'Wǒ měitiān zǎoshang qī diǎn qǐchuáng, bā diǎn bàn shàngbān. Nǐ ne?',
+          th: 'ฉันตื่น 7 โมงเช้าทุกวัน เข้างาน 8 โมงครึ่ง แล้วนายล่ะ?',
+          en: 'I wake up at 7:00 AM every day, and start work at 8:30. What about you?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '我九点上班，下午六点下班。晚上学习汉语。',
+          pinyin: 'Wǒ jiǔ diǎn shàngbān, xiàwǔ liù diǎn xiàbān. Wǎnshang xuéxí Hànyǔ.',
+          th: 'ฉันเข้างาน 9 โมง เลิกงาน 6 โมงเย็น ตอนค่ำเรียนภาษาจีน',
+          en: 'I start work at 9:00, finish at 6:00 PM. In the evening I study Chinese.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你真努力！几点睡觉？',
+          pinyin: 'Nǐ zhēn nǔlì! Jǐ diǎn shuìjiào?',
+          th: 'นายขยันจังเลย! นอนกี่โมงเหรอ?',
+          en: 'You are so hardworking! What time do you sleep?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '我晚上十一点睡觉。',
+          pinyin: 'Wǒ wǎnshang shíyī diǎn shuìjiào.',
+          th: 'ฉันเข้านอนตอน 5 ทุ่ม (23:00 น.) จ้า',
+          en: 'I go to sleep at 11:00 PM.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'bā diǎn bàn shàngbān' แปลว่าอะไร?",
+          options: [
+            'เข้างานตอน 8 โมงครึ่ง',
+            'ตื่นนอนตอน 8 โมง',
+            'เลิกงานตอน 8 โมงครึ่ง',
+            'เข้านอนตอน 8 โมง'
+          ],
+          correct_index: 0,
+          explanation_th: 'bā diǎn bàn คือ 8 โมงครึ่ง และ shàngbān คือ เข้างาน',
+          encouragement: 'ฟังเวลาและกิจกรรมได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '睡' (นอนหลับ) มีหมวดนำดวงตา '目' สื่อถึงอะไร?",
+          options: [
+            'การปิดเปลือกตาลงเมื่อเข้าสู่การหลับใหล',
+            'การลืมตาดูสิ่งของ',
+            'การร้องไห้',
+            'การเดินไปมา'
+          ],
+          correct_index: 0,
+          explanation_th: '目 สื่อถึงดวงตา เมื่อปิดตาลงจึงหมายถึงการนอนหลับ (睡觉)',
+          encouragement: 'จดจำรากศัพท์หมวดตา 目 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ฉันตื่นนอนตอนเจ็ดโมงเช้าทุกวัน"',
+          tokens: [
+            '七点起床',
+            '我每天',
+            '早上'
+          ],
+          correct_sequence: [
+            '我每天',
+            '早上',
+            '七点起床'
+          ],
+          pinyin: 'Wǒ měitiān zǎoshang qī diǎn qǐchuáng',
+          meaning_th: 'ฉันตื่นนอนตอนเจ็ดโมงเช้าทุกวัน',
+          explanation_th: 'ลำดับเวลาจีน: ประธาน + ความถี่/ช่วงเวลาใหญ่ + เวลาเจาะจง + กริยา',
+          encouragement: 'เรียงลำดับเวลาได้เป๊ะ 100% ตามหลักไวยากรณ์จีน!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า "เลิกงาน" ในภาษาจีนตรงกับข้อใด?',
+          options: [
+            '下班 (xiàbān)',
+            '上班 (shàngbān)',
+            '起床 (qǐchuáng)',
+            '睡觉 (shuìjiào)'
+          ],
+          correct_index: 0,
+          explanation_th: '下班 (xiàbān) แปลว่า เลิกงาน ส่วน 上班 (shàngbān) แปลว่า เข้างาน',
+          encouragement: 'แยกแยะเข้างานกับเลิกงานได้แม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'เพื่อนร่วมงานถามคุณว่า: "你几点上班？" คุณเข้างานตอนเก้าโมงเช้า ต้องตอบอย่างไรจึงจะถูกต้องตามไวยากรณ์จีนที่สุด?',
+        options: [
+          '我早上九点上班。 (Wǒ zǎoshang jiǔ diǎn shàngbān.)',
+          '我上班在早上九点。 (Wǒ shàngbān zài zǎoshang jiǔ diǎn.)',
+          '洗手间在哪儿？ (Xǐshǒujiān zài nǎr?)',
+          '多少钱九点？ (Duōshao qián jiǔ diǎn?)'
+        ],
+        correct_index: 0,
+        explanation_th: 'ภาษาจีนต้องวางเวลาก่อนกริยาเสมอ: 我 + 早上九点 + 上班。 (ห้ามวางไว้ท้ายประโยค)',
+        encouragement: '🎉 ไวยากรณ์เป๊ะมาก! ไม่หลงกลโครงสร้างภาษาไทยเลย!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u07_l01',
+        badge_name: 'ปรมาจารย์จัดสรรเวลา ⏱️🐰',
+        message_th: 'ยอดเยี่ยมมาก! คุณบอกตารางเวลากิจวัตรประจำวันเป็นภาษาจีนได้คล่องแคล่วแล้ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u07_l02',
+      lesson_number: 2,
+      title: {
+        zh: '业余爱好与玩手机',
+        th: 'ชอบทำอะไรยามว่าง?',
+        en: 'Hobbies & Playing on Phone'
+      },
+      can_do: {
+        th: 'บอกความชอบ งานอดิเรก ดูหนัง ฟังเพลง อ่านหนังสือ และใช้รูปประโยคคำถาม A-不-A ได้อย่างถูกต้อง',
+        en: 'Express hobbies: movies, music, reading, and form A-not-A question structures'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: บอกงานอดิเรกสุดโปรดของตัวเองและถามความชอบของเพื่อนได้!',
+      vocabulary: [
+        {
+          id: 'hsk1_0707',
+          hanzi: '喜欢',
+          pinyin: 'xǐhuan',
+          display_pinyin: 'xǐhuan',
+          pinyin_tone: 'xi3huan',
+          meaning_th: 'ชอบ/ชื่นชอบ',
+          meaning_en: 'like / enjoy',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 18,
+          mnemonic: 'รอยยิ้มเบิกบานจากปาก (口) เมื่อได้ทำสิ่งที่ใจโปรดปราน = ชอบ (喜欢)',
+          kid_mnemonic: 'ยิ้มแก้มปริ ตาเป็นประกาย ชอบจังเลย = 喜欢',
+          body_gesture: 'ทำมือสองข้างเป็นรูปหัวใจระดับอก'
+        },
+        {
+          id: 'hsk1_0708',
+          hanzi: '看',
+          pinyin: 'kàn',
+          display_pinyin: 'kàn',
+          pinyin_tone: 'kan4',
+          meaning_th: 'ดู/มอง/อ่าน',
+          meaning_en: 'look / watch / read',
+          radical: '目',
+          radical_name_th: 'หมวดดวงตา (目字底)',
+          stroke_count: 9,
+          mnemonic: 'เอามือ (手) มาป้องเหนือสายตา (目) เพื่อมองดูให้ชัด = 看',
+          kid_mnemonic: 'เอามือป้องหน้าผาก มองดูดาวบนฟ้า = 看',
+          body_gesture: 'ยกมือขวาป้องหน้าผากทำท่ามองไกล'
+        },
+        {
+          id: 'hsk1_0709',
+          hanzi: '电影',
+          pinyin: 'diànyǐng',
+          display_pinyin: 'diànyǐng',
+          pinyin_tone: 'dian4ying3',
+          meaning_th: 'ภาพยนตร์/หนัง',
+          meaning_en: 'movie / film',
+          radical: '彡',
+          radical_name_th: 'หมวดเส้นขน/เงา (三撇儿)',
+          stroke_count: 20,
+          mnemonic: 'เงาภาพ (影) ที่ฉายด้วยพลังงานไฟฟ้า (电) = ภาพยนตร์ (电影)',
+          kid_mnemonic: 'นั่งกินป๊อปคอร์นดูหนังในโรงหนังสนุกสนาน = 电影',
+          body_gesture: 'สองมือทำท่ากรอบสี่เหลี่ยมจอภาพยนตร์'
+        },
+        {
+          id: 'hsk1_0710',
+          hanzi: '听',
+          pinyin: 'tīng',
+          display_pinyin: 'tīng',
+          pinyin_tone: 'ting1',
+          meaning_th: 'ฟัง',
+          meaning_en: 'listen / hear',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 7,
+          mnemonic: 'เปิดรับเสียงผ่านช่องทางรับฟังอย่างตั้งใจ = ฟัง (听)',
+          kid_mnemonic: 'ใส่หูฟัง โยกหัวตามจังหวะเสียงดนตรี = 听',
+          body_gesture: 'เอามือป้องที่ใบหูทำท่าตั้งใจฟัง'
+        },
+        {
+          id: 'hsk1_0711',
+          hanzi: '音乐',
+          pinyin: 'yīnyuè',
+          display_pinyin: 'yīnyuè',
+          pinyin_tone: 'yin1yue4',
+          meaning_th: 'ดนตรี/เพลง',
+          meaning_en: 'music',
+          radical: '音',
+          radical_name_th: 'หมวดเสียง (音字部)',
+          stroke_count: 14,
+          mnemonic: 'ท่วงทำนองเสียง (音) ที่สร้างความเพลิดเพลินเบิกบานใจ (乐) = ดนตรี (音乐)',
+          kid_mnemonic: 'ตัวโน้ตดนตรีเต้นระบำ ดี้ดีดี่ดี๊ = 音乐',
+          body_gesture: 'ดีดนิ้วตามจังหวะเพลงอย่างมีความสุข'
+        },
+        {
+          id: 'hsk1_0712',
+          hanzi: '玩',
+          pinyin: 'wán',
+          display_pinyin: 'wán',
+          pinyin_tone: 'wan2',
+          meaning_th: 'เล่น/เที่ยวเล่น',
+          meaning_en: 'play / have fun',
+          radical: '王',
+          radical_name_th: 'หมวดหยก/กษัตริย์ (王字旁)',
+          stroke_count: 8,
+          mnemonic: 'จับหยกอัญมณี (王) มาหมุนเล่นเพลิดเพลิน = เล่น (玩)',
+          kid_mnemonic: 'วิ่งเล่นในสนามเด็กเล่น ยิ้มร่าเริง = 玩',
+          body_gesture: 'กระโดดสลับเท้าชูสองมืออย่างสนุกสนาน'
+        },
+        {
+          id: 'hsk1_0713',
+          hanzi: '手机',
+          pinyin: 'shǒujī',
+          display_pinyin: 'shǒujī',
+          pinyin_tone: 'shou3ji1',
+          meaning_th: 'โทรศัพท์มือถือ',
+          meaning_en: 'cell phone / mobile phone',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 10,
+          mnemonic: 'เครื่องจักรกลอุปกรณ์ (机) ขนาดกะทัดรัดที่ถือไว้ในมือ (手) = มือถือ (手机)',
+          kid_mnemonic: 'โทรศัพท์เครื่องจิ๋ว ไถฟีดคุยแชตกับเพื่อน = 手机',
+          body_gesture: 'ทำท่ายกนิ้วโป้งกับนิ้วก้อยแนบหูกับปากคุยโทรศัพท์'
+        },
+        {
+          id: 'hsk1_0714',
+          hanzi: '书',
+          pinyin: 'shū',
+          display_pinyin: 'shū',
+          pinyin_tone: 'shu1',
+          meaning_th: 'หนังสือ',
+          meaning_en: 'book',
+          radical: '乙',
+          radical_name_th: 'หมวดกิ่งสอง (乙字旁)',
+          stroke_count: 4,
+          mnemonic: 'ตัวอักษรที่บันทึกรวบรวมไว้เป็นเล่ม = หนังสือ (书)',
+          kid_mnemonic: 'เปิดหน้ากระดาษหนังสือ อ่านนิทานแสนสนุก = 书',
+          body_gesture: 'ประกบฝ่ามือสองข้างแล้วค่อยๆ กางเปิดออกเหมือนเปิดหนังสือ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'เสียงเบาในรูปประโยคคำถาม A-不-A: 喜不喜欢 (xǐ bu xǐhuan)',
+        description_th: 'เมื่อนำคำกริยามาตั้งคำถามแบบ A-不-A คำว่า 不 จะออกเสียงเบาและสั้น เป็น bu (ไม่ใช่ bù เสียง 4)',
+        example: '喜不喜欢 (xǐ bu xǐhuan)',
+        fun_metaphor: 'น้องปู้เมื่ออยู่ตรงกลางคำถาม จะทำตัวตัวเล็กเสียงเบา bu!',
+        reassurance: 'ออกเสียง xǐ-bu-xǐhuan ลื่นหู เป็นธรรมชาติอย่างแท้จริง!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้บอกความชอบและคำถาม A-不-A',
+        explanation_th: 'บอกความชอบใช้ 我喜欢 + กิจกรรม และตั้งคำถามเชิงเลือกใช้โครงสร้าง [กริยา] + 不 + [กริยา] (ไม่ต้องใส่ 吗 ท้ายประโยค)',
+        patterns: [
+          {
+            formula: '我喜欢 + [กิจกรรม/คำนาม] = ฉันชอบ...',
+            zh: '我喜欢看电影和听音乐。',
+            pinyin: 'Wǒ xǐhuan kàn diànyǐng hé tīng yīnyuè.',
+            th: 'ฉันชอบดูหนังและฟังเพลง',
+            en: 'I like watching movies and listening to music.'
+          },
+          {
+            formula: '你 [กริยา] 不 [กริยา] ...？ = คุณ...หรือไม่...?',
+            zh: '你喜不喜欢看电影？',
+            pinyin: 'Nǐ xǐ bu xǐhuan kàn diànyǐng?',
+            th: 'เธอชอบดูหนังไหม?',
+            en: 'Do you like watching movies or not?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: 'สมชาย，你下班以后喜欢做什么？',
+          pinyin: 'Somchai, nǐ xiàbān yǐhòu xǐhuan zuò shénme?',
+          th: 'สมชาย หลังเลิกงานนายชอบทำอะไรเหรอ?',
+          en: 'Somchai, what do you like doing after work?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我喜欢在家里玩手机、看书，有时候听音乐。你呢？',
+          pinyin: 'Wǒ xǐhuan zài jiā lǐ wán shǒujī, kàn shū, yǒu shíhou tīng yīnyuè. Nǐ ne?',
+          th: 'ฉันชอบเล่นมือถือ อ่านหนังสืออยู่ที่บ้าน บางครั้งก็ฟังเพลง แล้วนายล่ะ?',
+          en: 'I like playing on my phone, reading at home, sometimes listening to music. You?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '我最喜欢看电影！你喜不喜欢看中国电影？',
+          pinyin: 'Wǒ zuì xǐhuan kàn diànyǐng! Nǐ xǐ bu xǐhuan kàn Zhōngguó diànyǐng?',
+          th: 'ฉันชอบดูหนังที่สุด! นายชอบดูหนังจีนไหม?',
+          en: 'I like watching movies the most! Do you like watching Chinese movies?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我很喜欢！电影很有意思。',
+          pinyin: 'Wǒ hěn xǐhuan! Diànyǐng hěn yǒu yìsi.',
+          th: 'ชอบมากเลย! หนังสนุกน่าสนใจมาก',
+          en: 'I really like it! Movies are very interesting.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'xǐhuan tīng yīnyuè' แปลว่าชอบทำอะไร?",
+          options: [
+            'ชอบฟังเพลง',
+            'ชอบดูหนัง',
+            'ชอบอ่านหนังสือ',
+            'ชอบเล่นโทรศัพท์'
+          ],
+          correct_index: 0,
+          explanation_th: 'xǐhuan คือ ชอบ และ tīng yīnyuè คือ ฟังเพลง รวมกันคือ ชอบฟังเพลง',
+          encouragement: 'ฟังคำศัพท์งานอดิเรกได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '看' (ดู/มอง) มีมือ '手' ป้องอยู่เหนือสิ่งใด?",
+          options: [
+            'ดวงตา (目)',
+            'ดวงอาทิตย์ (日)',
+            'ปาก (口)',
+            'ผืนดิน (土)'
+          ],
+          correct_index: 0,
+          explanation_th: '看 ประกอบด้วย 手 (มือ) วางอยู่เหนือ 目 (ดวงตา) ทำท่าป้องแดดเพื่อมองดู',
+          encouragement: 'เข้าใจภาพจินตนาการอักษร 看 ได้ลึกซึ้งมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ฉันชอบดูหนัง"',
+          tokens: [
+            '看电影',
+            '我',
+            '喜欢'
+          ],
+          correct_sequence: [
+            '我',
+            '喜欢',
+            '看电影'
+          ],
+          pinyin: 'Wǒ xǐhuan kàn diànyǐng',
+          meaning_th: 'ฉันชอบดูหนัง',
+          explanation_th: 'ประธาน (我) + กริยาชอบ (喜欢) + กิจกรรม (看电影)',
+          encouragement: 'เรียงประโยคบอกความชอบได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'เมื่อต้องการตั้งคำถามแบบ A-不-A ถามว่า "ชอบหรือไม่ชอบ" ต้องพูดว่าอย่างไร?',
+          options: [
+            '喜不喜欢 (xǐ bu xǐhuan)',
+            '喜欢吗不 (xǐhuan ma bù)',
+            '不喜不喜欢 (bù xǐ bu xǐhuan)',
+            '是不是喜欢 (shì bu shì xǐhuan)'
+          ],
+          correct_index: 0,
+          explanation_th: '喜不喜欢 เป็นโครงสร้าง A-不-A โดยคำว่า 不 จะออกเสียงเบาว่า bu',
+          encouragement: 'แม่นยำไวยากรณ์ A-不-A มาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'เพื่อนคนจีนถามคุณว่า: "你喜不喜欢看中国电影？" คุณชอบดูหนังจีนมาก ต้องตอบว่าอย่างไรจึงจะชัดเจนและเป็นธรรมชาติที่สุด?',
+        options: [
+          '我很喜欢看中国电影！ (Wǒ hěn xǐhuan kàn Zhōngguó diànyǐng!)',
+          '我不喜欢，多少钱？ (Wǒ bù xǐhuan, duōshao qián?)',
+          '洗手间在电影院。 (Xǐshǒujiān zài diànyǐngyuàn.)',
+          '这是我妈妈。 (Zhè shì wǒ māma.)'
+        ],
+        correct_index: 0,
+        explanation_th: '我很喜欢看中国电影！ เป็นการตอบรับที่ตรงประเด็นและแสดงความกระตือรือร้นได้อย่างยอดเยี่ยม!',
+        encouragement: '🎉 สนทนาเรื่องงานอดิเรกได้อย่างเป็นธรรมชาติและน่าประทับใจ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u07_l02',
+        badge_name: 'ผู้รักศิลปะและดนตรี 🎬🐰',
+        message_th: 'ยอดเยี่ยมมาก! คุณพูดถึงงานอดิเรก ดูหนัง ฟังเพลง เล่นมือถือได้คล่องตัวแล้ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u07_l03',
+      lesson_number: 3,
+      title: {
+        zh: '周末跟朋友一起',
+        th: 'วันหยุดสุดสัปดาห์ไปไหนด้วยกัน?',
+        en: 'Weekends Together with Friends'
+      },
+      can_do: {
+        th: 'ชวนเพื่อนทำกิจกรรมด้วยกันในวันหยุดสุดสัปดาห์ ใช้ 跟...一起 ได้อย่างถูกต้องตามหลักภาษา',
+        en: 'Invite friends for weekend activities and use 跟...一起 structure correctly'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นัดชวนเพื่อนไปเที่ยวหรือซื้อของด้วยกันในวันหยุดได้!',
+      vocabulary: [
+        {
+          id: 'hsk1_0715',
+          hanzi: '周末',
+          pinyin: 'zhōumò',
+          display_pinyin: 'zhōumò',
+          pinyin_tone: 'zhou1mo4',
+          meaning_th: 'วันหยุดสุดสัปดาห์ (เสาร์-อาทิตย์)',
+          meaning_en: 'weekend',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 13,
+          mnemonic: 'รอบสัปดาห์ (周) หมุนเวียนมาถึงช่วงปลายสุด (末) = วันหยุดสุดสัปดาห์ (周末)',
+          kid_mnemonic: 'เสาร์อาทิตย์ เย้! ได้หยุดพักผ่อนเที่ยวเล่น = 周末',
+          body_gesture: 'กางสองแขนออกสูดอากาศบริสุทธิ์ในวันหยุด'
+        },
+        {
+          id: 'hsk1_0716',
+          hanzi: '常常',
+          pinyin: 'chángcháng',
+          display_pinyin: 'chángcháng',
+          pinyin_tone: 'chang2chang2',
+          meaning_th: 'บ่อยๆ/เสมอๆ',
+          meaning_en: 'often / frequently',
+          radical: '巾',
+          radical_name_th: 'หมวดผ้าเช็ดหน้า (巾字底)',
+          stroke_count: 22,
+          mnemonic: 'ทำสิ่งเดิมซ้ำๆ สม่ำเสมอเป็นประจำ = บ่อยๆ (常常)',
+          kid_mnemonic: 'กระดิกนิ้วสองข้าง ทำเรื่องสนุกบ่อยๆ เลย = 常常',
+          body_gesture: 'ทำมือกวักซ้ำๆ ติดต่อกันอย่างคุ้นเคย'
+        },
+        {
+          id: 'hsk1_0717',
+          hanzi: '一起',
+          pinyin: 'yìqǐ',
+          display_pinyin: 'yì qǐ',
+          pinyin_tone: 'yi1qi3',
+          meaning_th: 'ด้วยกัน/ร่วมกัน',
+          meaning_en: 'together',
+          radical: '走',
+          radical_name_th: 'หมวดก้าววิ่งเดิน (走字旁)',
+          stroke_count: 8,
+          mnemonic: 'ลุกขึ้นก้าวเดิน (起) ไปพร้อมกันเป็นหนึ่งเดียว (一) = ด้วยกัน (一起)',
+          kid_mnemonic: 'จับมือเพื่อนก้าวไปพร้อมๆ กัน ลุยไปด้วยกัน = 一起',
+          body_gesture: 'กุมมือสองข้างดึงเข้ามาแนบอกอย่างสามัคคี',
+          sandhi_rule: 'yi'
+        },
+        {
+          id: 'hsk1_0718',
+          hanzi: '想',
+          pinyin: 'xiǎng',
+          display_pinyin: 'xiǎng',
+          pinyin_tone: 'xiang3',
+          meaning_th: 'อยาก/คิด/คิดถึง',
+          meaning_en: 'want / think / miss',
+          radical: '心',
+          radical_name_th: 'หมวดหัวใจ (心字底)',
+          stroke_count: 13,
+          mnemonic: 'ในหัวใจ (心) นึกถึงภาพสิ่งต่างๆ (相) = อยาก/คิด (想)',
+          kid_mnemonic: 'เอานิ้วแตะแก้ม คิดฝันอยากกินไอศกรีม = 想',
+          body_gesture: 'เอานิ้วชี้แตะขมับทำท่าครุ่นคิด'
+        },
+        {
+          id: 'hsk1_0719',
+          hanzi: '买东西',
+          pinyin: 'mǎi dōngxi',
+          display_pinyin: 'mǎi dōngxi',
+          pinyin_tone: 'mai3 dong1xi',
+          meaning_th: 'ซื้อของ/ช็อปปิ้ง',
+          meaning_en: 'shopping / buy things',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 14,
+          mnemonic: 'ใช้เงินซื้อ (买) สิ่งของจากทิศตะวันออกและตก (东西) = ซื้อของ',
+          kid_mnemonic: 'หิ้วถุงช็อปปิ้งเดินตลาด ซื้อขนมอร่อยๆ = 买东西',
+          body_gesture: 'สองมือทำท่าหิ้วถุงช็อปปิ้งแกว่งไปมา'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi ของ 一 หน้าเสียง 3: 一起 (yì qǐ)',
+        description_th: 'คำว่า 一 (เดิมเสียง 1: yī) เมื่ออยู่หน้าคำเสียง 3 (qǐ) จะผันเป็นเสียง 4 คือ yì qǐ',
+        example: '一起 (yī + qǐ -> yì qǐ)',
+        fun_metaphor: 'น้องอีหน้าเสียงสาม ทิ้งน้ำหนักลงเป็นเสียงสี่ yì qǐ หนักแน่น!',
+        reassurance: 'พูด yì qǐ หนักแน่น คล่องปาก ชวนใครใครก็อยากไปด้วย!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ทำกิจกรรมร่วมกันระดับโปร',
+        explanation_th: 'โครงสร้างทำอะไรร่วมกับใคร: ประธาน + 跟/和 [คน] + 一起 + [กริยา] (คนไทยชอบพูด "ฉันไปดูหนังกับเธอ" แต่จีนต้องพูด "ฉันกับเธอไปด้วยกันดูหนัง")',
+        patterns: [
+          {
+            formula: '[ประธาน] + 跟/和 [คน] + 一起 + [กริยา] = ...ทำ...ด้วยกันกับ...',
+            zh: '我周末常常跟朋友一起去买东西。',
+            pinyin: 'Wǒ zhōumò chángcháng gēn péngyou yìqǐ qù mǎi dōngxi.',
+            th: 'วันหยุดสุดสัปดาห์ฉันมักจะไปซื้อของด้วยกันกับเพื่อน',
+            en: 'On weekends I often go shopping together with friends.'
+          },
+          {
+            formula: '我想跟你一起 + [กริยา] = ฉันอยาก...ด้วยกันกับเธอ',
+            zh: '我想跟你一起看电影。',
+            pinyin: 'Wǒ xiǎng gēn nǐ yìqǐ kàn diànyǐng.',
+            th: 'ฉันอยากไปดูหนังด้วยกันกับเธอ',
+            en: 'I want to watch a movie together with you.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '王明，这个周末你常常做什么？',
+          pinyin: 'Wáng Míng, zhè ge zhōumò nǐ chángcháng zuò shénme?',
+          th: 'หวังหมิง วันหยุดสุดสัปดาห์นี้นายมักจะทำอะไรเหรอ?',
+          en: 'Wang Ming, what do you usually do this weekend?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '我常常跟朋友一起去商场买东西。你周末有时间吗？',
+          pinyin: 'Wǒ chángcháng gēn péngyou yìqǐ qù shāngchǎng mǎi dōngxi. Nǐ zhōumò yǒu shíjiān ma?',
+          th: 'ฉันมักจะไปซื้อของที่ห้างกับเพื่อน นายมีเวลาว่างไหมสุดสัปดาห์นี้?',
+          en: 'I often go shopping at the mall with friends. Do you have time this weekend?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '有啊！我想跟你一起去买东西。',
+          pinyin: 'Yǒu a! Wǒ xiǎng gēn nǐ yìqǐ qù mǎi dōngxi.',
+          th: 'มีสิ! ฉันอยากไปซื้อของด้วยกันกับนายนะ',
+          en: 'Yes! I want to go shopping together with you.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '太好了！周六下午两点我们在地铁站见，好吗？',
+          pinyin: 'Tài hǎo le! Zhōuliù xiàwǔ liǎng diǎn wǒmen zài dìtiězhàn jiàn, hǎo ma?',
+          th: 'เยี่ยมเลย! วันเสาร์บ่ายสองโมงพวกเราเจอกันที่สถานีรถไฟใต้ดิน โอเคไหม?',
+          en: 'Great! Saturday 2:00 PM we meet at the subway station, okay?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，周六见！',
+          pinyin: 'Hǎode, zhōuliù jiàn!',
+          th: 'โอเค เจอกันวันเสาร์นะ!',
+          en: 'Okay, see you Saturday!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'gēn péngyou yìqǐ' แปลว่าอะไร?",
+          options: [
+            'ไปด้วยกันกับเพื่อน',
+            'ไปคนเดียว',
+            'อยู่บ้านกับครอบครัว',
+            'ไปทำงาน'
+          ],
+          correct_index: 0,
+          explanation_th: 'gēn แปลว่า กับ, péngyou แปลว่า เพื่อน และ yìqǐ แปลว่า ด้วยกัน รวมกันคือ ไปด้วยกันกับเพื่อน',
+          encouragement: 'ฟังโครงสร้างชวนเพื่อนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '起' ใน '一起' (ด้วยกัน) มีหมวดนำใด?",
+          options: [
+            'หมวดก้าววิ่งเดิน (走 走字旁)',
+            'หมวดมือ (扌)',
+            'หมวดน้ำ (氵)',
+            'หมวดดวงอาทิตย์ (日)'
+          ],
+          correct_index: 0,
+          explanation_th: '起 มีหมวดนำ 走 (เดิน/ก้าว) สื่อถึงการลุกขึ้นก้าวไปด้วยกัน',
+          encouragement: 'จำหมวดนำ 走 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ฉันอยากไปดูหนังด้วยกันกับคุณ"',
+          tokens: [
+            '看电影',
+            '我想',
+            '跟你一起'
+          ],
+          correct_sequence: [
+            '我想',
+            '跟你一起',
+            '看电影'
+          ],
+          pinyin: 'Wǒ xiǎng gēn nǐ yìqǐ kàn diànyǐng',
+          meaning_th: 'ฉันอยากไปดูหนังด้วยกันกับคุณ',
+          explanation_th: 'โครงสร้าง: ประธานอยาก (我想) + กับคุณด้วยกัน (跟你一起) + กริยา (看电影)',
+          encouragement: 'ยอดเยี่ยมมาก! วางโครงสร้าง 跟...一起 ได้ถูกต้องเป๊ะ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'คำว่า 一 ใน 一起 (ด้วยกัน) มีการผันเสียง Tone Sandhi เป็นเสียงใด?',
+          options: [
+            'เสียง 4 (yì qǐ) - ผันเป็นเสียง 4 เมื่ออยู่หน้าเสียง 3',
+            'เสียง 1 (yī qǐ)',
+            'เสียง 2 (yí qǐ)',
+            'เสียงเบา (yi qǐ)'
+          ],
+          correct_index: 0,
+          explanation_th: '一 เมื่ออยู่หน้าคำเสียง 1, 2, 3 จะผันเป็นเสียง 4 คือ yì ดังนั้น 一起 จึงอ่านว่า yì qǐ',
+          encouragement: 'จำกฎการผันเสียงของ 一 ได้อย่างเฉียบขาด!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณต้องการชวนเพื่อนคนจีนไปซื้อของด้วยกันในวันหยุดสุดสัปดาห์ ต้องพูดชวนว่าอย่างไรจึงจะถูกต้องและเป็นธรรมชาติที่สุด?',
+        options: [
+          '周末我们一起去买东西，好吗？ (Zhōumò wǒmen yìqǐ qù mǎi dōngxi, hǎo ma?)',
+          '我去买东西和你。 (Wǒ qù mǎi dōngxi hé nǐ.)',
+          '洗手间在哪儿？ (Xǐshǒujiān zài nǎr?)',
+          '多少钱一碗？ (Duōshao qián yì wǎn?)'
+        ],
+        correct_index: 0,
+        explanation_th: '周末我们一起去买东西，好吗？ เป็นประโยคชวนที่ถูกต้องตามไวยากรณ์จีน 100% และสุภาพเป็นกันเอง!',
+        encouragement: '🎉 สไตล์การชวนน่ารักมาก! เพื่อนตอบตกลงไปเที่ยวด้วยทันที!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u07_l03',
+        badge_name: 'ผู้นำก๊วนเพื่อนเที่ยว 🛍️🐰',
+        message_th: 'สุดยอดมาก! คุณใช้ 跟...一起 ชวนเพื่อนไปเที่ยววันหยุดได้อย่างคล่องแคล่วแล้ว!',
+        xp_reward: 45
+      }
+    },
+    {
+      lesson_id: 't1_u07_l04',
+      lesson_number: 4,
+      title: {
+        zh: '约中国朋友周六看电影通关',
+        th: 'Boss Challenge: ชวนเพื่อนชาวจีนไปดูหนังวันเสาร์',
+        en: 'Boss Challenge: Invite Chinese Friend to Movie on Saturday'
+      },
+      can_do: {
+        th: 'บูรณาการการบอกเวลา วันในสัปดาห์ นัดหมายสถานที่ และชวนเพื่อนไปดูหนังได้อย่างครบวงจร',
+        en: 'Integrate time, day of week, meeting point, and cinema invitations with Chinese friends'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่ Unit 7 นัดเพื่อนไปดูหนังและกินข้าวสำเร็จ!',
+      vocabulary: [
+        {
+          id: 'hsk1_0720',
+          hanzi: '太好了',
+          pinyin: 'tài hǎo le',
+          display_pinyin: 'tài hǎo le',
+          pinyin_tone: 'tai4 hao3 le',
+          meaning_th: 'เยี่ยมไปเลย/ดีเหลือเกิน',
+          meaning_en: 'great / awesome / wonderful',
+          radical: '大',
+          radical_name_th: 'หมวดใหญ่ (大字旁)',
+          stroke_count: 9,
+          mnemonic: 'ดี (好) เหลือล้นเกินขอบเขต (太) จนต้องเปล่งอุทาน (了) = เยี่ยมไปเลย!',
+          kid_mnemonic: 'กระโดดเฮลั่น ไชโย! เยี่ยมที่สุดเลย = 太好了',
+          body_gesture: 'กระโดดยกสองมือขึ้นทำท่าดีใจสุดขีด'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การอุทาน 太好了 (tài hǎo le) อย่างมีชีวิตชีวา',
+        description_th: 'คำว่า 太 (tài) เป็นเสียง 4 หนักแน่น ตามด้วย hǎo เสียง 3 และ le เสียงเบาสบาย',
+        example: '太好了！ (tài hǎo le!)',
+        fun_metaphor: 'น้องไท่ส่งพลังเสียง 4 น้องห่าวทอดรับ แล้วน้องเลอะปิดท้ายเบาๆ!',
+        reassurance: 'พูดคำนี้คนจีนรู้ทันทีว่าคุณกำลังดีใจและมีความสุขสุดๆ!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้นัดหมายครบวงจร',
+        explanation_th: 'บูรณาการวัน เวลา สถานที่ และประโยคตกลง: [วัน/เวลา] + เราเจอกันที่ [สถานที่] + 好不好？',
+        patterns: [
+          {
+            formula: '我们 [เวลา] 在 [สถานที่] 见 = พวกเราเจอกันตอน...ที่...',
+            zh: '我们下午三点半在电影院门口见！',
+            pinyin: 'Wǒmen xiàwǔ sān diǎn bàn zài diànyǐngyuàn ménkǒu jiàn!',
+            th: 'พวกเราเจอกันตอนบ่าย 3 โมงครึ่งที่หน้าประตูโรงหนังนะ!',
+            en: 'We meet at 3:30 PM at the cinema entrance!'
+          },
+          {
+            formula: '...好不好？ / 好吗？ = ...ดีไหม/โอเคไหม?',
+            zh: '我们一起去看电影，好不好？',
+            pinyin: 'Wǒmen yìqǐ qù kàn diànyǐng, hǎo bu hǎo?',
+            th: 'พวกเราไปดูหนังด้วยกัน ดีไหม?',
+            en: 'We go watch a movie together, okay?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '王明，你周六有时间吗？',
+          pinyin: 'Wáng Míng, nǐ zhōuliù yǒu shíjiān ma?',
+          th: 'หวังหมิง วันเสาร์นี้นายมีเวลาว่างไหม?',
+          en: 'Wang Ming, do you have time this Saturday?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '有啊！周六我不上班。怎么了？',
+          pinyin: 'Yǒu a! Zhōuliù wǒ bù shàngbān. Zěnme le?',
+          th: 'มีสิ! วันเสาร์ฉันไม่ทำงาน มีอะไรเหรอ?',
+          en: 'Yes! I don\'t work on Saturday. What\'s up?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我们一起去看中国电影，好不好？',
+          pinyin: 'Wǒmen yìqǐ qù kàn Zhōngguó diànyǐng, hǎo bu hǎo?',
+          th: 'พวกเราไปดูหนังจีนด้วยกัน ดีไหม?',
+          en: 'Let\'s go watch a Chinese movie together, okay?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '太好了！我想看那个新电影。几点见？',
+          pinyin: 'Tài hǎo le! Wǒ xiǎng kàn nà ge xīn diànyǐng. Jǐ diǎn jiàn?',
+          th: 'เยี่ยมเลย! ฉันอยากดูหนังเรื่องใหม่นั้นพอดี เจอกันกี่โมงดี?',
+          en: 'Awesome! I want to see that new movie. What time shall we meet?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '下午三点半，在电影院门口见！看完电影我们一起喝茶。',
+          pinyin: 'Xiàwǔ sān diǎn bàn, zài diànyǐngyuàn ménkǒu jiàn! Kàn wán diànyǐng wǒmen yìqǐ hē chá.',
+          th: 'บ่าย 3 โมงครึ่ง เจอกันหน้าโรงหนังนะ! ดูหนังเสร็จพวกเราไปดื่มชาด้วยกัน',
+          en: '3:30 PM at the cinema entrance! After the movie we drink tea together.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หวังหมิง 🧑',
+          zh: '太棒了！周六下午三点半见！',
+          pinyin: 'Tài bàng le! Zhōuliù xiàwǔ sān diǎn bàn jiàn!',
+          th: 'สุดยอดเลย! วันเสาร์บ่ายสามโมงครึ่งเจอกัน!',
+          en: 'Wonderful! See you Saturday at 3:30 PM!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ได้ยินเสียง 'xiàwǔ sān diǎn bàn jiàn' แปลว่านัดเจอกันตอนไหน? (ทบทวน Unit 2)",
+          options: [
+            'เจอกันบ่าย 3 โมงครึ่ง',
+            'เจอกันบ่าย 2 โมง',
+            'เจอกันตอนเช้า 8 โมง',
+            'เจอกันตอนเที่ยงตรง'
+          ],
+          correct_index: 0,
+          explanation_th: 'xiàwǔ คือ ตอนบ่าย, sān diǎn bàn คือ 3 โมงครึ่ง และ jiàn คือ พบ/เจอ',
+          encouragement: 'จำเวลาและคำว่าพบกันได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '好' ใน '太好了' ประกอบด้วยอักษรใดสองตัว?",
+          options: [
+            'ผู้หญิง (女) และ เด็ก/ลูก (子)',
+            'ดวงอาทิตย์ (日) และ ดวงจันทร์ (月)',
+            'คน (人) และ ต้นไม้ (木)',
+            'ปาก (口) และ มีด (刀)'
+          ],
+          correct_index: 0,
+          explanation_th: '好 ประกอบด้วย 女 (แม่) และ 子 (ลูก) สื่อถึงความรักความดีงามสมบูรณ์แบบ',
+          encouragement: 'จดจำรากศัพท์คำว่า 好 ได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยคนัดหมาย: "พวกเราเจอกันตอนบ่ายสามโมงครึ่ง"',
+          tokens: [
+            '见',
+            '下午三点半',
+            '我们'
+          ],
+          correct_sequence: [
+            '我们',
+            '下午三点半',
+            '见'
+          ],
+          pinyin: 'Wǒmen xiàwǔ sān diǎn bàn jiàn',
+          meaning_th: 'พวกเราเจอกันตอนบ่ายสามโมงครึ่ง',
+          explanation_th: 'ประธาน (我们) + เวลา (下午三点半) + กริยา (见)',
+          encouragement: 'เรียงประโยคนัดหมายได้อย่างไร้ที่ติ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: 'เมื่อเพื่อนตอบรับข้อเสนอที่น่าตื่นเต้น แล้วพูดว่า "太好了！" แปลว่าอะไร?',
+          options: [
+            'เยี่ยมไปเลย! / ดีเหลือเกิน!',
+            'ไม่เป็นไร',
+            'ขอโทษด้วย',
+            'ไม่ชอบเลย'
+          ],
+          correct_index: 0,
+          explanation_th: '太好了 (tài hǎo le) คือคำอุทานแสดงความดีใจ แปลว่า เยี่ยมไปเลย!',
+          encouragement: 'เข้าใจอารมณ์และสำนวนจีนได้อย่างแท้จริง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณต้องการส่งข้อความชวนเพื่อนคนจีนว่า "วันเสาร์นี้พวกเราไปดูหนังด้วยกัน ดีไหม?" ต้องพิมพ์เป็นภาษาจีนว่าอย่างไร?',
+        options: [
+          '周六我们一起去看电影，好不好？ (Zhōuliù wǒmen yìqǐ qù kàn diànyǐng, hǎo bu hǎo?)',
+          '周六我去买东西和你。 (Zhōuliù wǒ qù mǎi dōngxi hé nǐ.)',
+          '洗手间在周六。 (Xǐshǒujiān zài zhōuliù.)',
+          '这是我哥哥，谢谢。 (Zhè shì wǒ gēge, xièxie.)'
+        ],
+        correct_index: 0,
+        explanation_th: '周六我们一起去看电影，好不好？ บูรณาการทั้งวันในสัปดาห์ โครงสร้าง 一起 และคำถามลงท้ายได้อย่างสมบูรณ์แบบ 100%!',
+        encouragement: '🎉 มหัศจรรย์มาก! คุณพิชิต Grand Boss Challenge ของ Unit 7 ได้อย่างสง่างาม!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t1_u07_master',
+        badge_name: 'เซียนใช้ชีวิตและงานอดิเรก ⏰🐰',
+        message_th: 'ขอแสดงความยินดีด้วย! คุณผ่านบทเรียนกิจวัตรประจำวันและงานอดิเรกระดับ Tier 1 ครบทั้ง 4 บทย่อยแล้ว!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

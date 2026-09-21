@@ -7,7 +7,7 @@
 
 ## 🚨 แถบสถานะงานด่วนฉุกเฉิน (Active Hotfix / Incident)
 
-> 🟢 **สถานะปัจจุบัน:** ไม่มีงานด่วนฉุกเฉินแทรกคิว (System Healthy — All 277 Tests Passing)
+> 🟢 **สถานะปัจจุบัน:** ไม่มีงานด่วนฉุกเฉินแทรกคิว (System Healthy — All 413 Tests Passing)
 
 *หมายเหตุ: หากมีงานด่วนแทรก (เช่น บั๊กเสียงฉุกเฉิน, ระบบบันทึกข้อมูลพัง) ให้เปิดไฟล์ชื่อ `YYYY-MM-DD_HOTFIX_[Slug].md` ทันที และอัปเดตแถบนี้เป็นสีส้ม/แดงเพื่อพักงานปกติไว้ชั่วคราว*
 
@@ -28,12 +28,12 @@
 | **2026-09-18** | `TASK-100` | Scaffolding, Core Web Audio & Resilience Engines | P01 | `web_dev` | `DONE` ✅ | [`2026-09-18_P01_...`](./2026-09-18_P01_foundation-and-engines.md) |
 | **2026-09-19** | `TASK-200` | Unit 1 Complete Lesson Experience (Vertical Slice) | P02 | `web_dev` | `DONE` ✅ | [`2026-09-19_P02_...`](./2026-09-19_P02_unit1-complete-experience.md) |
 | **2026-09-20** | `TASK-300` | Gamification, Safe Practice Zone & SRS Persistence | P03 | `web_dev` | `DONE` ✅ | [`2026-09-20_P03_...`](./2026-09-20_P03_gamification-and-srs.md) |
-| **2026-09-21** | `TASK-400` | Tier 0 Pinyin Mastery, Phonics Games & Onboarding | P04 | `web_dev` | `DONE` ✅ | [`2026-09-21_P04_...`](./2026-09-21_P04_tier0-pinyin-mastery.md) |
-| *2026-09-21* | `TASK-501` | สคริปต์ตรวจความถูกต้องของบทเรียน (`validateCurriculum.ts`) | P05 | `web_dev` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_curriculum-validator.md) |
-| *2026-09-21* | `TASK-502` | ปล่อยเนื้อหา Tier 1 Batch A: Unit 2 - 4 (ตัวเลข อาหาร ช็อปปิ้ง) | P05 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-a-content.md) |
-| *2026-09-21* | `TASK-503` | ปล่อยเนื้อหา Tier 1 Batch B & C: Unit 5 - 10 + Grand Boss Quest | P05 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-bc-content.md) |
-| *2026-09-22* | `TASK-504` | Local Diagnostics & Playwright E2E Testing Suite | P05 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_playwright-e2e-suite.md) |
+| **2026-09-21** | `TASK-501` | สคริปต์ตรวจความถูกต้องของบทเรียน (`validateCurriculum.ts`) | P05 | `web_dev` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_curriculum-validator.md) |
+| **2026-09-21** | `TASK-502` | ปล่อยเนื้อหา Tier 1 Batch A: Unit 2 - 4 (ตัวเลข อาหาร ช็อปปิ้ง) | P05 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-a-content.md) |
+| **2026-09-21** | `TASK-503` | ปล่อยเนื้อหา Tier 1 Batch B & C: Unit 5 - 10 + Grand Boss Quest | P05 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-bc-content.md) |
+| **2026-09-21** | `TASK-504` | Local Diagnostics & Playwright E2E Testing Suite | P05 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P05_...`](./2026-09-21_P05_playwright-e2e-suite.md) |
 | *2026-09-22* | `TASK-505` | GitHub Actions CI/CD Pipeline & GitHub Pages Deploy | P05 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_cicd-github-pages-deploy.md) |
+| *2026-09-22* | `TASK-506` | Zero-Knowledge Alpha Playtest Protocol & Feedback Triage | P05 | `ux_ui_designer` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_zero-knowledge-alpha-playtest.md) |
 
 ---
 

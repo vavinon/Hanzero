@@ -16,6 +16,7 @@ import {
   saveStrokeCache,
   checkStorageHealth,
   requestStoragePersistence,
+  _resetStorageEngineForTesting,
 } from './storageEngine';
 import { migrateUserState, stripPollution, clampNumber } from './migration';
 import { normalizeQuickSyncCode, parseQuickSyncCode } from './quickSync';
@@ -442,6 +443,25 @@ describe('Tiered Storage Engine (Slice 1.3)', () => {
       expect(INDEXEDDB_CONFIG.DB_NAMES.SRS).toBe('hanzero_srs_db');
       expect(INDEXEDDB_CONFIG.DB_NAMES.STROKES).toBe('hanzero_strokes_db');
       expect(INDEXEDDB_CONFIG.DB_NAMES.MIRROR).toBe('hanzero_mirror_db');
+    });
+
+    it('blocks zombie auto-resurrection when resetStorage is called and page initializes', async () => {
+      // 1. Seed state with XP and lesson progress
+      const state = getStoredUserStateSync();
+      state.progress.xp = 500;
+      state.progress.completed_lessons = ['t0_u01_l01', 't0_u01_l02'];
+      await saveUserState(state);
+
+      // 2. User requests resetStorage()
+      await resetStorage();
+
+      // 3. Simulate page reload by resetting memory variables and calling initializeStorage()
+      _resetStorageEngineForTesting();
+      const cleanBootState = await initializeStorage();
+
+      // 4. Assert clean default state (0 XP, no lessons, zero-resurrection)
+      expect(cleanBootState.progress.xp).toBe(0);
+      expect(cleanBootState.progress.completed_lessons.length).toBe(0);
     });
   });
 });

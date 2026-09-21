@@ -14,6 +14,7 @@ export interface SRSCardRecord {
   card_id: string; // word_id, e.g. "u01_w01_nihao"
   hanzi: string;
   pinyin: string;
+  display_pinyin?: string;
   meaning_th: string;
   meaning_en: string;
   mnemonic?: string;

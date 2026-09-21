@@ -96,6 +96,7 @@ export const VoiceHealthModal: React.FC<VoiceHealthModalProps> = ({
       onClick={onClose}
     >
       <div
+        data-testid="voice-health-modal"
         style={{
           backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-lg)',
@@ -128,6 +129,7 @@ export const VoiceHealthModal: React.FC<VoiceHealthModalProps> = ({
           </div>
           <button
             onClick={onClose}
+            data-testid="btn-close-voice-health"
             aria-label="ปิดหน้าต่าง"
             style={{
               background: 'transparent',
@@ -148,6 +150,7 @@ export const VoiceHealthModal: React.FC<VoiceHealthModalProps> = ({
 
         {/* Current Health Status Card */}
         <div
+          data-testid="voice-health-badge"
           style={{
             backgroundColor: gradeInfo.badgeBg,
             border: `1.5px solid ${gradeInfo.badgeBorder}`,
@@ -261,6 +264,7 @@ export const VoiceHealthModal: React.FC<VoiceHealthModalProps> = ({
               return (
                 <button
                   key={osKey}
+                  data-testid={`tab-os-${osKey}`}
                   onClick={() => setActiveOsTab(osKey)}
                   style={{
                     flex: 1,

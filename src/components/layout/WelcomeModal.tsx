@@ -58,6 +58,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({
       }}
     >
       <div
+        data-testid="welcome-modal"
         style={{
           backgroundColor: '#FFFFFF',
           borderRadius: 'var(--radius-lg)',
@@ -238,6 +239,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({
 
           <button
             onClick={onOpenVoiceHealth}
+            data-testid="btn-open-voice-health"
             style={{
               background: 'transparent',
               border: 'none',
@@ -271,6 +273,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({
           <span>เปิดเสียงอ่านและเสียงประกอบอัตโนมัติ</span>
           <input
             type="checkbox"
+            data-testid="toggle-silent-mode"
             checked={!silentMode}
             onChange={(e) => setSilentMode(!e.target.checked)}
             style={{ width: '18px', height: '18px', accentColor: 'var(--color-jade-primary)', cursor: 'pointer' }}
@@ -280,6 +283,7 @@ export const WelcomeModal: React.FC<WelcomeModalProps> = ({
         {/* Start Journey Button */}
         <button
           onClick={handleStart}
+          data-testid="btn-start-journey"
           className="btn-tactile-primary"
           style={{
             width: '100%',

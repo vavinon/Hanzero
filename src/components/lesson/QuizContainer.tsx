@@ -51,6 +51,7 @@ import {
   playFanfare,
   playClick,
 } from '../../engines/audio/audioEngine';
+import { recordQuestionError } from '../../engines/storage';
 
 export interface QuizResult {
   passed: boolean;
@@ -267,6 +268,30 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       shakeTimerRef.current = setTimeout(() => {
         if (!isUnmountedRef.current) setIsShaking(false);
       }, 400);
+
+      // Record mistake into Local Diagnostics telemetry
+      if (currentQuiz) {
+        let wrongStr = 'unknown';
+        let correctStr = 'unknown';
+        if (currentQuiz.type !== 'sentence_scramble') {
+          const mc = currentQuiz as MultipleChoiceQuiz;
+          wrongStr = selectedOption !== null ? mc.options[selectedOption] || '' : '';
+          correctStr = mc.options[mc.correct_index] || '';
+        } else {
+          const sc = currentQuiz as SentenceScrambleQuiz;
+          wrongStr = placedTokens.map((t) => t.text).join(' ');
+          correctStr = sc.correct_sequence.join(' ');
+        }
+        recordQuestionError({
+          question_id: `q_${currentIndex}_${currentQuiz.type}`,
+          unit_id: 'quiz',
+          lesson_id: 'lesson',
+          prompt: currentQuiz.question_th,
+          user_wrong_answer: wrongStr,
+          correct_answer: correctStr,
+          error_type: currentQuiz.type === 'sentence_scramble' ? 'scramble' : 'meaning',
+        });
+      }
 
       if (!isSafeZone) {
         const nextHearts = Math.max(0, hearts - 1);
@@ -508,6 +533,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
   return (
     <div
+      data-testid="quiz-container"
       role="region"
       aria-label="แบบทดสอบบทเรียน"
       className={`quiz-container ${isShaking ? 'hanzero-shake' : ''} ${className}`}
@@ -597,6 +623,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
         {/* Hearts / Safe Zone Badge */}
         {isSafeZone ? (
           <div
+            data-testid="safe-zone-banner"
             className="badge-capsule"
             style={{
               backgroundColor: 'rgba(16, 185, 129, 0.12)',
@@ -613,6 +640,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           </div>
         ) : (
           <div
+            data-testid="quiz-heart-badge"
             className="badge-capsule"
             style={{
               backgroundColor: 'var(--color-vermilion-surface, #FEF2F2)',
@@ -760,6 +788,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                     key={idx}
                     type="button"
                     role="radio"
+                    data-testid={`quiz-option-card-${idx}`}
                     aria-checked={isSelected}
                     disabled={isAnswerChecked}
                     onClick={() => handleSelectOption(idx)}
@@ -799,7 +828,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
                 gap: '4px',
               }}
             >
-              <span>พินอิน: <strong>{(currentQuiz as SentenceScrambleQuiz).pinyin}</strong></span>
+              <span style={{ lineHeight: 1.35, paddingTop: '2px' }}>พินอิน: <strong style={{ lineHeight: 1.35, paddingTop: '2px', display: 'inline-block' }}>{(currentQuiz as SentenceScrambleQuiz).pinyin}</strong></span>
               <span>ความหมาย: {(currentQuiz as SentenceScrambleQuiz).meaning_th}</span>
             </div>
 
@@ -943,6 +972,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           {!isAnswerChecked ? (
             <button
               type="button"
+              data-testid="btn-check-answer"
               onClick={handleCheckAnswer}
               disabled={
                 isBossStage || (currentQuiz && currentQuiz.type !== 'sentence_scramble')
@@ -981,6 +1011,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           ) : (
             <button
               type="button"
+              data-testid="btn-next-question"
               onClick={handleNextQuestion}
               className="btn-tactile-primary"
               style={{
@@ -1003,6 +1034,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
       {showHeartRefillModal && (
         <div
           role="dialog"
+          data-testid="heart-refill-modal"
           aria-modal="true"
           aria-label="หน้าต่างเติมพลังใจ"
           style={{
@@ -1058,6 +1090,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
 
             <button
               type="button"
+              data-testid="btn-refill-hearts"
               onClick={handleRefillHearts}
               className="btn-tactile-primary"
               style={{ width: '100%', minHeight: '48px', gap: '6px' }}

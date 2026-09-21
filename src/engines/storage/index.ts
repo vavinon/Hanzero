@@ -9,3 +9,4 @@ export * from './migration';
 export * from './quickSync';
 export * from './snapshot';
 export * from './storageEngine';
+export * from './localDiagnostics';

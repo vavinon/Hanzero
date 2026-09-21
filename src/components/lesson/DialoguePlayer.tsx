@@ -908,6 +908,7 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
                             : 'var(--color-jade-deep)',
                         marginTop: '2px',
                         lineHeight: 1.4,
+                        paddingTop: '2px',
                       }}
                     >
                       {line.pinyin}

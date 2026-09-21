@@ -42,6 +42,7 @@ export const App: React.FC = () => {
     updatePreferences,
     completeOnboarding,
     refreshQueue,
+    deductHeart,
   } = useUserState();
 
   // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck)
@@ -76,6 +77,14 @@ export const App: React.FC = () => {
       setShowInAppAlert(true);
     }
     checkStorageHealth().then(setStorageHealth).catch(() => {});
+
+    // Check URL Trigger ?diagnostics=1
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('diagnostics') === '1') {
+        setShowDevDrawer(true);
+      }
+    }
   }, []);
 
   // Global First-Touch iOS Audio Unlock
@@ -187,6 +196,8 @@ export const App: React.FC = () => {
             <LessonView
               lessonId={activeLessonId}
               silentMode={userState.preferences.silent_mode}
+              currentHearts={userState.progress.hearts.current}
+              onHeartLost={() => deductHeart(false)}
               onBackToMap={() => setCurrentView('map')}
               onLessonComplete={handleLessonComplete}
             />
@@ -222,6 +233,7 @@ export const App: React.FC = () => {
             userState={userState}
             storageHealth={storageHealth}
             strokeCacheStatus={strokeCacheStatus}
+            defaultOpen={true}
             onInspectStrokeCache={handleInspectStrokeCache}
             onRestoreState={() => {
               window.location.reload();

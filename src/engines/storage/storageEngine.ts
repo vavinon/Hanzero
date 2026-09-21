@@ -18,6 +18,7 @@ import {
 import {
   readHotItemSync,
   writeHotItemSync,
+  removeHotItemSync,
   clearHotStorageSync,
   isLocalStorageAvailable,
   _resetHotStorageForTesting,
@@ -76,6 +77,13 @@ export function getStoredUserStateSync(): UserStateSchema {
     return deepClone(cachedUserState);
   }
 
+  // 0. If a reset tombstone is present, return clean default state synchronously
+  const hasTombstone = readHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE);
+  if (hasTombstone) {
+    cachedUserState = createDefaultUserState();
+    return deepClone(cachedUserState);
+  }
+
   const raw = readHotItemSync(STORAGE_KEYS.HOT_USER_STATE);
   if (raw) {
     try {
@@ -103,6 +111,21 @@ export async function initializeStorage(): Promise<UserStateSchema> {
   }
 
   initPromise = (async () => {
+    // 0. Anti-Zombie Resurrection Gate: If tombstone was set by user, skip cold recovery
+    const hasTombstone = readHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE);
+    if (hasTombstone) {
+      console.info('[Hanzero Storage] 🛡️ Reset Tombstone detected! Purging cold mirror and starting clean state.');
+      removeHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE);
+      await clearColdStorage();
+      const freshState = createDefaultUserState();
+      cachedUserState = freshState;
+      writeHotItemSync(STORAGE_KEYS.HOT_USER_STATE, JSON.stringify(freshState));
+      await saveColdMirror(freshState);
+      await requestStoragePersistence();
+      isInitialized = true;
+      return deepClone(cachedUserState);
+    }
+
     // 1. Check Hot Storage
     const hotRaw = readHotItemSync(STORAGE_KEYS.HOT_USER_STATE);
     let stateToUse: UserStateSchema | null = null;
@@ -452,13 +475,25 @@ export async function checkStorageHealth(): Promise<StorageDiagnostics> {
 }
 
 /**
- * Resets all user state and databases (for testing / account wipe)
+ * Resets all user state and databases (for testing / account wipe).
+ * Synchronously sets a Tombstone flag first so that upon page refresh,
+ * Cold Mirror will NOT auto-resurrect old state.
  */
 export async function resetStorage(): Promise<void> {
+  // 1. Synchronously set Reset Tombstone first
+  writeHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE, '1');
+
+  // 2. Clear hot and cold storage
   clearHotStorageSync();
+  writeHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE, '1');
+
   await clearColdStorage();
   _resetHotStorageForTesting();
   _resetColdStorageForTesting();
+
+  // Re-write tombstone in storage so browser reload catches it
+  writeHotItemSync(STORAGE_KEYS.RESET_TOMBSTONE, '1');
+
   cachedUserState = null;
   initPromise = null;
   isInitialized = false;
