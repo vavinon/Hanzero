@@ -12,18 +12,18 @@ gantt
     dateFormat  YYYY-MM-DD
     section Phase 1: Foundations
     Curriculum & Pinyin Master Plan :done, p0, 2026-09-14, 1d
-    Web Foundation, PWA, CJK Font & Audio Resilience :active, p1, 2026-09-15, 2d
+    Web Foundation, PWA, CJK Font & Audio Resilience :done, p1, 2026-09-15, 2d
     section Phase 2: Vertical Slice
-    Unit 1 Golden Template (Vocab, Dialogue, Quiz) :p2, after p1, 3d
-    Silent Mode, Accessible Tones & Pinyin Fading :p3, after p2, 2d
+    Unit 1 Golden Template (Vocab, Dialogue, Quiz) :done, p2, after p1, 3d
+    Silent Mode, Accessible Tones & Pinyin Fading :done, p3, after p2, 2d
     section Phase 3: Gamification
-    Quest Map & Safe Practice Zone :p4, after p3, 3d
-    SM-2 SRS with Daily Cap & IndexedDB Mirror :p5, after p4, 3d
+    Quest Map & Safe Practice Zone :done, p4, after p3, 3d
+    SM-2 SRS with Daily Cap & IndexedDB Mirror :done, p5, after p4, 3d
     section Phase 4: Tier 0 Mastery
-    Welcome Onboarding & Placement Flow :p6, after p5, 2d
-    Bunny Tone Coaster, Echo Mic & Shareable Passport :p7, after p6, 4d
+    Welcome Onboarding & Placement Flow :done, p6, after p5, 2d
+    Bunny Tone Coaster, Echo Mic & Shareable Passport :done, p7, after p6, 4d
     section Phase 5: Production Rollout
-    Tier 1 Expansion (Units 2-10) & Pinyin Fading :p8, after p7, 5d
+    Tier 1 Expansion (Units 2-10) & Pinyin Fading :active, p8, 2026-09-21, 5d
     Zero-Knowledge Alpha Playtest & Production Launch :p9, after p8, 2d
     section Phase 6: Authoring Studio
     Web-based Lesson Builder & Pedagogical Linters :p10, after p9, 4d
@@ -44,8 +44,9 @@ gantt
 ## 📌 รายละเอียดของแต่ละระยะ
 
 ### 🏁 Phase 1: Web Foundation, Design System, PWA & Resilience Engines
+> **สถานะ:** `DONE` ✅ | [phase_01_web_foundation_engines.md](../plan/phase_01_web_foundation_engines.md)
+
 **เป้าหมาย:** สร้างรากฐาน Web Application ที่รวดเร็ว ลื่นไหล สไตล์ Modern Oriental พร้อมติดตั้ง PWA เพื่อป้องกัน Safari ล้างข้อมูล, วางกลยุทธ์ Font Subsetting ป้องกันเว็บหน่วง และระบบเสียงสองประสานที่มี Static Audio Pack สำรองสำหรับ Tier 0
-* [phase_01_web_foundation_engines.md](../plan/phase_01_web_foundation_engines.md)
 * Scaffolding: Vite + React + TypeScript + Vitest + ESLint
 * **PWA & Storage Mirror:** ติดตั้ง `vite-plugin-pwa` พร้อม IndexedDB Secondary Mirror รับมือ Safari 7-day inactivity wipe
 * **CJK Font Subsetting Strategy:** ควบคุมขนาดฟอนต์ `LXGW WenKai` / `Noto Sans SC` ไม่เกิน 300–500 KB ป้องกัน FOIT/FOUT
@@ -56,8 +57,9 @@ gantt
 ---
 
 ### 💻 Phase 2: Unit 1 Complete Lesson Experience (Vertical Slice)
+> **สถานะ:** `DONE` ✅ | [phase_02_unit1_lesson_experience.md](../plan/phase_02_unit1_lesson_experience.md)
+
 **เป้าหมาย:** สร้างบทเรียนแรก Unit 1 เพื่อเป็น **Engineering Vertical Slice & UX Golden Template** ทดสอบการผสานชิ้นส่วน Flashcard, Dialogue, Grammar และ Quiz พร้อมระบบค่อยๆ ซ่อนพินอิน (Progressive Pinyin Fading)
-* [phase_02_unit1_lesson_experience.md](../plan/phase_02_unit1_lesson_experience.md)
 * บัตรคำศัพท์ 3 ภาษา พร้อมปุ่ม Stroke Zoom Modal ขยายดูเส้นขีดในตาราง 120px
 * เครื่องเล่นบทสนทนา Interactive Dialogue Player แชตสไตล์โมเดิร์น
 * **Progressive Pinyin Fading:** ระบบสลับซ่อนพินอินหรือแตะเพื่อแอบดู เพื่อฝึกอ่านตัวอักษรจีนจริง
@@ -67,8 +69,9 @@ gantt
 ---
 
 ### 🎮 Phase 3: Gamification, Safe Practice Zone, Daily Goals & SRS Persistence
+> **สถานะ:** `DONE` ✅ | [phase_03_gamification_srs.md](../plan/phase_03_gamification_srs.md)
+
 **เป้าหมาย:** สร้างแรงจูงใจให้ผู้เรียนกลับมาเรียนทุกวัน กำหนดเป้าหมายรายวัน และทบทวนอย่างมีประสิทธิภาพโดยป้องกันอาการ "การบ้านทับถม (SRS Bankruptcy)"
-* [phase_03_gamification_srs.md](../plan/phase_03_gamification_srs.md)
 * แผนที่เส้นทางการเรียนรู้ Quest Map สลับดูได้ทั้ง Tier 0 และ Tier 1
 * **Safe Practice Zone:** ปิดการหักหัวใจในโหมดฝึกฟังพินอินและ SRS Flashcards เพื่อถนอมผู้เรียนมือใหม่
 * ระบบฟื้นฟูหัวใจ Practice-to-Earn (ฝึกคำศัพท์ถูก 5 คำ = 1 หัวใจ)
@@ -81,8 +84,9 @@ gantt
 ---
 
 ### 🌱 Phase 4: Tier 0 Pinyin Mastery, Echo Mic & Onboarding Flow
+> **สถานะ:** `DONE` ✅ | [phase_04_tier0_pinyin_mastery.md](../plan/phase_04_tier0_pinyin_mastery.md)
+
 **เป้าหมาย:** เปิดประตูต้อนรับผู้เรียนเริ่มต้นจากศูนย์เด็ดขาด ด้วยเส้นทาง Onboarding ที่เข้าใจง่าย ระบบเทียบเสียงพูดตนเอง และการ์ดแชร์ความสำเร็จ
-* [phase_04_tier0_pinyin_mastery.md](../plan/phase_04_tier0_pinyin_mastery.md)
 * หน้าต่างต้อนรับ `WelcomeModal.tsx` นำทางเลือกระหว่าง "เริ่มจาก 0" กับ "ข้ามไปบทสนทนา"
 * บรรจุบทเรียน Tier 0 ทั้ง 6 Units (รวมสระผสมและสระนาสิก) พร้อมระบบภาพช่วยจำรูปปากและ Static Audio Pack
 * มินิเกม Bunny Tone Coaster ฝึกลากเส้นวรรณยุกต์ 4 เสียง (Safe Zone ไม่หักหัวใจ)
@@ -93,8 +97,9 @@ gantt
 ---
 
 ### 🌿 Phase 5: Tier 1 Expansion, Alpha Playtest & Production Launch
+> **สถานะ:** `IN PROGRESS` ⏳ | [phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
+
 **เป้าหมาย:** ขยายเนื้อหา Tier 1 ครบถ้วนทั้ง 10 Units (40 บทย่อย) ดำเนินการทดสอบกับผู้เรียนจริง (Zero-Knowledge Alpha Playtest) และเปิดตัวสู่ผู้ใช้จริง
-* [phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
 * ปล่อยเนื้อหา Batch A, B, C ตามลำดับ พร้อมกฎ Interleaving 20%
 * สคริปต์ตรวจความถูกต้องของเนื้อหาอัตโนมัติ (`validateCurriculum.ts`)
 * **Zero-Knowledge Alpha Playtest:** ทดสอบการใช้งานจริงกับกลุ่มผู้ใช้คนไทยที่ไม่มีพื้นฐานภาษาจีน เพื่อเก็บ Feedback ปรับปรุง UX

@@ -1,3 +1,22 @@
+---
+plan_type: "ROADMAP_PHASE"
+phase: "04"
+created_at: "2026-09-18"
+updated_at: "2026-09-21"
+status: "COMPLETED"
+priority: "HIGH"
+target_engines: ["src/engines/audio/voiceHealthEngine.ts"]
+target_components: [
+  "src/components/layout/WelcomeModal.tsx",
+  "src/components/layout/VoiceHealthModal.tsx",
+  "src/components/games/ToneCoaster.tsx",
+  "src/components/games/EchoMicRecorder.tsx",
+  "src/components/games/MinimalPairBoard.tsx",
+  "src/components/games/RadicalPuzzle.tsx",
+  "src/components/layout/MilestonePassportModal.tsx"
+]
+---
+
 # 🌱 Phase 4: Tier 0 Pinyin Mastery (Pre-HSK 6 Units & Onboarding)
 
 เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 4** ของการพัฒนา Hanzero: ระบบปูพื้นฐานการออกเสียงพินอิน วรรณยุกต์ และอักษรจีนเบื้องต้นแบบ Dual-Track (เรียนเสียงคู่คำจริง) พร้อม **ระบบ Onboarding ต้อนรับผู้เรียนเข้าสู่เส้นทางที่ถูกต้อง**

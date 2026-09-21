@@ -1,3 +1,14 @@
+---
+plan_type: "ROADMAP_PHASE"
+phase: "05"
+created_at: "2026-09-19"
+updated_at: "2026-09-21"
+status: "IN_PROGRESS"
+priority: "HIGH"
+target_scripts: ["scripts/validateCurriculum.ts"]
+target_curriculum: ["src/data/lessons/tier1/"]
+---
+
 # 🌿 Phase 5: Tier 1 Content Rollout, Metrics & Production Launch
 
 เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 5** ของการพัฒนา Hanzero: ทยอยผลิต ตรวจทาน และปล่อยเนื้อหา Tier 1 ให้ครบทั้ง 10 Units (40 บทย่อย) พร้อมระบบตรวจสอบอัตโนมัติ (Automated Schema Validator), **ระบบวัดผลผลิตภัณฑ์ (Product Success KPIs & Diagnostics)** และการส่งมอบขึ้น GitHub Pages ฟรีตลอดชีพ
