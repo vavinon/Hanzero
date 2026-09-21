@@ -29,10 +29,11 @@
 | **2026-09-19** | `TASK-200` | Unit 1 Complete Lesson Experience (Vertical Slice) | P02 | `web_dev` | `DONE` ✅ | [`2026-09-19_P02_...`](./2026-09-19_P02_unit1-complete-experience.md) |
 | **2026-09-20** | `TASK-300` | Gamification, Safe Practice Zone & SRS Persistence | P03 | `web_dev` | `DONE` ✅ | [`2026-09-20_P03_...`](./2026-09-20_P03_gamification-and-srs.md) |
 | **2026-09-21** | `TASK-400` | Tier 0 Pinyin Mastery, Phonics Games & Onboarding | P04 | `web_dev` | `DONE` ✅ | [`2026-09-21_P04_...`](./2026-09-21_P04_tier0-pinyin-mastery.md) |
-| *2026-09-21* | `TASK-501` | สคริปต์ตรวจความถูกต้องของบทเรียน (`validateCurriculum.ts`) | P05 | `web_dev` | `TODO` ⏳ | *เตรียมเปิด Task* |
-| *2026-09-21* | `TASK-502` | ปล่อยเนื้อหา Tier 1 Batch A: Unit 2 - 4 (ตัวเลข อาหาร ช็อปปิ้ง) | P05 | `curriculum_tutor` | `TODO` ⏳ | *เตรียมเปิด Task* |
-| *2026-09-22* | `TASK-503` | ปล่อยเนื้อหา Tier 1 Batch B & C: Unit 5 - 10 + Grand Boss Quest | P05 | `curriculum_tutor` | `TODO` ⏳ | *เตรียมเปิด Task* |
-| *2026-09-22* | `TASK-504` | ติดตั้ง Playwright E2E Suite & GitHub Actions CI/CD Deploy | P05 | `technical_qa` | `TODO` ⏳ | *เตรียมเปิด Task* |
+| *2026-09-21* | `TASK-501` | สคริปต์ตรวจความถูกต้องของบทเรียน (`validateCurriculum.ts`) | P05 | `web_dev` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_curriculum-validator.md) |
+| *2026-09-21* | `TASK-502` | ปล่อยเนื้อหา Tier 1 Batch A: Unit 2 - 4 (ตัวเลข อาหาร ช็อปปิ้ง) | P05 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-a-content.md) |
+| *2026-09-21* | `TASK-503` | ปล่อยเนื้อหา Tier 1 Batch B & C: Unit 5 - 10 + Grand Boss Quest | P05 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_tier1-batch-bc-content.md) |
+| *2026-09-22* | `TASK-504` | Local Diagnostics & Playwright E2E Testing Suite | P05 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_playwright-e2e-suite.md) |
+| *2026-09-22* | `TASK-505` | GitHub Actions CI/CD Pipeline & GitHub Pages Deploy | P05 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P05_...`](./2026-09-21_P05_cicd-github-pages-deploy.md) |
 
 ---
 
