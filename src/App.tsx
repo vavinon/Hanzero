@@ -25,6 +25,10 @@ const EngineTestPanel = React.lazy(() =>
   import('./components/test/EngineTestPanel').then((m) => ({ default: m.EngineTestPanel }))
 );
 
+const StudioLayout = React.lazy(() =>
+  import('./components/studio/StudioLayout').then((m) => ({ default: m.StudioLayout }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -45,8 +49,8 @@ export const App: React.FC = () => {
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review'>('map');
+  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio)
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio'>('map');
   const [activeLessonId, setActiveLessonId] = useState<string>('t1_u01_l01');
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
@@ -78,11 +82,14 @@ export const App: React.FC = () => {
     }
     checkStorageHealth().then(setStorageHealth).catch(() => {});
 
-    // Check URL Trigger ?diagnostics=1
+    // Check URL Trigger ?diagnostics=1 or ?studio=1
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('diagnostics') === '1') {
         setShowDevDrawer(true);
+      }
+      if (params.get('studio') === '1') {
+        setCurrentView('studio');
       }
     }
   }, []);
@@ -226,6 +233,21 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* View 4: Content Authoring Studio (Phase 6) */}
+      {currentView === 'studio' && (
+        <main style={{ flex: 1 }}>
+          <React.Suspense
+            fallback={
+              <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                กำลังจัดเตรียม Hanzero Studio... 🎨🐰
+              </div>
+            }
+          >
+            <StudioLayout onExit={() => setCurrentView('map')} />
+          </React.Suspense>
+        </main>
+      )}
+
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
         <div style={{ maxWidth: '520px', width: '100%', margin: '0 auto', padding: '0 12px 24px 12px' }}>
@@ -241,6 +263,16 @@ export const App: React.FC = () => {
             onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
             onResetOnboarding={() => setShowWelcomeModal(true)}
           />
+          <button
+            onClick={() => {
+              setCurrentView('studio');
+              setShowDevDrawer(false);
+            }}
+            className="btn-tactile-primary"
+            style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
+          >
+            🎨 เปิด Content Authoring Studio (Phase 6)
+          </button>
           <button
             onClick={() => setShowTestPanel(true)}
             className="btn-tactile-secondary"

@@ -37,6 +37,31 @@ describe('Pinyin Engine Utilities (src/engines/pinyin/pinyinUtils.ts)', () => {
     it('handles umlaut ü (v notation)', () => {
       expect(toneNumberToMark('nv3')).toBe('nǚ');
       expect(toneNumberToMark('lv4')).toBe('lǜ');
+      expect(toneNumberToMark('lve4')).toBe('lüè');
+      expect(toneNumberToMark('nve4')).toBe('nüè');
+    });
+
+    it('applies Contextual Umlaut Ellipsis rule for j, q, x, y (ü/v drops dots to u)', () => {
+      expect(toneNumberToMark('jv4')).toBe('jù');
+      expect(toneNumberToMark('qv4')).toBe('qù');
+      expect(toneNumberToMark('xv2')).toBe('xú');
+      expect(toneNumberToMark('yv3')).toBe('yǔ');
+      expect(toneNumberToMark('jue2')).toBe('jué');
+    });
+
+    it('handles neutral tone (5 and 0)', () => {
+      expect(toneNumberToMark('de0')).toBe('de');
+      expect(toneNumberToMark('ma5')).toBe('ma');
+    });
+
+    it('preserves and detaches punctuation cleanly', () => {
+      expect(toneNumberToMark('ni3 hao3 ma5?')).toBe('nǐ hǎo ma?');
+      expect(toneNumberToMark('shi4! shi4!')).toBe('shì! shì!');
+    });
+
+    it('handles syllable-dividing apostrophe (隔音符号)', () => {
+      expect(toneNumberToMark("xi1'an1")).toBe("xī'ān");
+      expect(toneNumberToMark("tian1'an1men2")).toBe("tiān'ānmén");
     });
 
     it('converts full sentences with numbers', () => {

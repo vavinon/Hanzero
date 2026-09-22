@@ -114,20 +114,49 @@ export function getSyllableTone(syllable: string): 1 | 2 | 3 | 4 | 5 {
  * Places the appropriate tone mark on a single pinyin syllable string.
  */
 export function convertSyllableNumberToMark(syllableWithNum: string): string {
-  const match = syllableWithNum.match(/^([a-zA-ZüÜvV]+)([1-5]?)$/);
+  // Handle leading/trailing punctuation (e.g., "ma5?", "!shi4", "hao3,")
+  const puncMatch = syllableWithNum.match(/^([^a-zA-Z0-9üÜvV]+)?([a-zA-Z0-9üÜvV]+)([^a-zA-Z0-9üÜvV]+)?$/);
+  if (puncMatch && (puncMatch[1] || puncMatch[3])) {
+    const leading = puncMatch[1] || '';
+    const core = puncMatch[2];
+    const trailing = puncMatch[3] || '';
+    return leading + convertSyllableNumberToMark(core) + trailing;
+  }
+
+  // Handle syllable-dividing apostrophe (e.g., "xi1'an1" -> "xī'ān")
+  if (syllableWithNum.includes("'") || syllableWithNum.includes("’")) {
+    const sep = syllableWithNum.includes("'") ? "'" : "’";
+    return syllableWithNum
+      .split(sep)
+      .map((part) => convertSyllableNumberToMark(part))
+      .join(sep);
+  }
+
+  const match = syllableWithNum.match(/^([a-zA-ZüÜvV]+)([0-5]?)$/);
   if (!match) return syllableWithNum;
 
-  const rawSyllable = match[1].replace(/v/g, 'ü').replace(/V/g, 'Ü');
+  let rawSyllable = match[1];
+
+  // Contextual Umlaut Normalization (GB/T 16159-2012):
+  // After j, q, x, y, ü/v drops dots and becomes u (e.g. jv4 -> jù, qv4 -> qù, xv2 -> xú, yv3 -> yǔ)
+  if (/^[jqxy][vü]/i.test(rawSyllable)) {
+    rawSyllable = rawSyllable.replace(/[vVüÜ]/g, (ch) => (ch === 'V' || ch === 'Ü' ? 'U' : 'u'));
+  } else {
+    // For l, n, etc., v becomes ü (e.g. lv4 -> lǜ, nv3 -> nǚ, lve4 -> lüè)
+    rawSyllable = rawSyllable.replace(/v/g, 'ü').replace(/V/g, 'Ü');
+  }
+
   const tone = match[2] ? parseInt(match[2], 10) : 5;
 
-  if (tone === 5 || tone < 1 || tone > 4) {
+  // Tone 0 or 5 is neutral tone
+  if (tone === 0 || tone === 5 || tone < 1 || tone > 4) {
     return rawSyllable;
   }
 
   const toneIndex = (tone - 1) as 0 | 1 | 2 | 3;
   const lower = rawSyllable.toLowerCase();
 
-  // Rule 1: 'a' or 'e' always gets the mark
+  // Rule 1: 'a' or 'e' always gets the mark (handles 'lüè', 'nüè', 'jié', 'hǎo')
   if (lower.includes('a')) {
     const isUpper = rawSyllable[lower.indexOf('a')] === 'A';
     const mark = TONE_MARKS.a[toneIndex];
@@ -146,7 +175,7 @@ export function convertSyllableNumberToMark(syllableWithNum: string): string {
     return rawSyllable.replace(/o/i, isUpper ? mark.toUpperCase() : mark);
   }
 
-  // Rule 3: Otherwise mark the last vowel (e.g. 'iu' -> 'u', 'ui' -> 'i')
+  // Rule 3: Otherwise mark the last vowel (e.g. 'iu' -> 'u', 'ui' -> 'i', 'lü' -> 'ü')
   const vowels = ['a', 'o', 'e', 'i', 'u', 'ü'];
   let lastVowelIndex = -1;
   for (let i = rawSyllable.length - 1; i >= 0; i--) {
@@ -175,13 +204,36 @@ export function convertSyllableNumberToMark(syllableWithNum: string): string {
 
 /**
  * Converts a string with tone numbers to pinyin with standard unicode tone marks.
- * e.g. "ni3 hao3" -> "nǐ hǎo", "lv4" -> "lǜ"
+ * e.g. "ni3 hao3" -> "nǐ hǎo", "lv4" -> "lǜ", "jv4" -> "jù", "xi1'an1" -> "xī'ān", "tian1'an1men2" -> "tiān'ānmén"
  */
 export function toneNumberToMark(pinyinWithNumbers: string): string {
   if (!pinyinWithNumbers) return '';
   return pinyinWithNumbers
     .split(/\s+/)
-    .map((word) => convertSyllableNumberToMark(word))
+    .map((word) => {
+      if (word.includes("'") || word.includes("’")) {
+        const sep = word.includes("'") ? "'" : "’";
+        return word
+          .split(sep)
+          .map((part) => {
+            return part
+              .replace(/([0-5])([a-zA-ZüÜvV])/g, '$1 $2')
+              .split(/\s+/)
+              .map(convertSyllableNumberToMark)
+              .join('');
+          })
+          .join(sep);
+      }
+      // Handle run-on syllables without spaces like "ni3hao3"
+      if (/([0-5])([a-zA-ZüÜvV])/.test(word)) {
+        return word
+          .replace(/([0-5])([a-zA-ZüÜvV])/g, '$1 $2')
+          .split(/\s+/)
+          .map(convertSyllableNumberToMark)
+          .join('');
+      }
+      return convertSyllableNumberToMark(word);
+    })
     .join(' ');
 }
 

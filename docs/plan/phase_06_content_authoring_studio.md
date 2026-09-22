@@ -53,7 +53,7 @@ flowchart TD
 ## 📋 แผนงานปฏิบัติการ 5 Micro-Slices (Actionable Task Slices)
 
 ### `TASK-601`: In-Browser Pedagogical Linter & Pinyin Auto-Converter Engine
-- [ ] พัฒนา Pure TypeScript Engine ใน `src/engines/studio/studioLinterEngine.ts`:
+- [x] พัฒนา Pure TypeScript Engine ใน `src/engines/studio/studioLinterEngine.ts`:
   - **Auto Pinyin Tone Placer:** พิมพ์ตัวเลขวรรณยุกต์ (เช่น `ni3hao3`) แล้วแปลงเป็นเครื่องหมายมาตรฐานสากล (`nǐhǎo`, `lv4` ➔ `lǜ`)
   - **Tone Sandhi Detector:** ตรวจจับคำที่มีการผันเสียงอัตโนมัติ (`一`, `不`, และกฎเสียง 3 ชน 3) แจ้งเตือนผู้เขียนให้ระบุเสียงตามกฎ
   - **Traditional Chinese & Forbidden Grammar Guard:** สกัดกั้นอักษรตัวเต็ม 100% จาก Blacklist และบล็อกไวยากรณ์ต้องห้าม (เช่น `不有`)
@@ -69,11 +69,12 @@ flowchart TD
   - Unit Tests สำหรับ Round-trip Import/Export 100% กับ `unit01_greetings.json` และ `unit02_numbers_time.json`
 
 ### `TASK-603`: Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms)
-- [ ] พัฒนา UI Components ใน `src/components/studio/`:
+- [x] พัฒนา UI Components ใน `src/components/studio/`:
   - **LessonMetadataForm:** ตั้งค่า Tier (0–4), Unit ID, Lesson ID, และชื่อบท 3 ภาษา (🇨🇳, 🇹🇭, 🇬🇧)
   - **VocabComposer:** เพิ่ม/ลบ/เรียงการ์ดคำศัพท์ พร้อม Pinyin assist, Radical selector, และปุ่มลองฟังเสียง
   - **DialogueComposer:** สร้างบทสนทนา A/B กำหนดผู้พูดและเลือกเสียงสังเคราะห์
   - **QuizComposer:** สร้างแบบฝึกหัด 4 รูปแบบ (Multiple Choice, Hanzi Stroke Order, Sentence Scramble, Tone Discrimination) พร้อมระบบตรวจสมดุลเฉลย
+  - **StudioNavbar & StudioReviewPanel & StudioLayout:** ควบคุมการเปลี่ยนแท็บ ตรวจสอบสถานะการบันทึก และส่งออก JSON สะดวก
 
 ### `TASK-604`: Live Interactive Mobile Device Preview & Audio Sandbox
 - [ ] พัฒนาหน้าจอจำลองและการโต้ตอบสด:

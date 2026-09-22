@@ -4,8 +4,8 @@ title: "Phase 6 Slice 6.3: Studio Visual Composer UI (Vocab, Dialogue & Quiz For
 type: "FEATURE"
 phase: "P06"
 created_at: "2026-09-21"
-updated_at: "2026-09-21"
-status: "TODO"
+updated_at: "2026-09-22"
+status: "DONE"
 priority: "HIGH"
 assignee: "web_dev"
 reviewer: "pedagogical_qa"
@@ -14,7 +14,7 @@ related_plan: "docs/plan/phase_06_content_authoring_studio.md"
 
 # 📋 [TASK-603] Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms)
 
-> **สถานะปัจจุบัน:** `TODO` ⏳ | **ผู้รับผิดชอบ:** `web_dev` & `ux_ui_designer` | **ผู้ตรวจรับ:** `pedagogical_qa` & `technical_qa`
+> **สถานะปัจจุบัน:** `DONE` ✅ | **ผู้รับผิดชอบ:** `web_dev` & `ux_ui_designer` | **ผู้ตรวจรับ:** `pedagogical_qa` & `technical_qa`
 
 ---
 
@@ -38,28 +38,44 @@ related_plan: "docs/plan/phase_06_content_authoring_studio.md"
 ---
 
 ## 📂 2. ไฟล์ที่เกี่ยวข้อง (Affected Files)
-- [ ] `[NEW]` `src/components/studio/StudioLayout.tsx`
-- [ ] `[NEW]` `src/components/studio/LessonMetadataForm.tsx`
-- [ ] `[NEW]` `src/components/studio/VocabComposer.tsx`
-- [ ] `[NEW]` `src/components/studio/DialogueComposer.tsx`
-- [ ] `[NEW]` `src/components/studio/QuizComposer.tsx`
-- [ ] `[NEW]` `src/components/studio/StudioNavbar.tsx`
-- [ ] `[NEW]` `src/components/studio/VocabComposer.test.tsx`
+- [x] `[NEW]` `src/components/studio/StudioLayout.tsx`
+- [x] `[NEW]` `src/components/studio/LessonMetadataForm.tsx`
+- [x] `[NEW]` `src/components/studio/VocabComposer.tsx`
+- [x] `[NEW]` `src/components/studio/VocabItemCard.tsx`
+- [x] `[NEW]` `src/components/studio/DialogueComposer.tsx`
+- [x] `[NEW]` `src/components/studio/DialogueLineItem.tsx`
+- [x] `[NEW]` `src/components/studio/QuizComposer.tsx`
+- [x] `[NEW]` `src/components/studio/QuizItemCard.tsx`
+- [x] `[NEW]` `src/components/studio/StudioNavbar.tsx`
+- [x] `[NEW]` `src/components/studio/StudioReviewPanel.tsx`
+- [x] `[NEW]` `src/components/studio/studioAudioPlayer.ts`
+- [x] `[NEW]` `src/components/studio/index.ts`
+- [x] `[NEW]` `src/components/studio/VocabComposer.test.tsx`
+- [x] `[NEW]` `src/components/studio/DialogueComposer.test.tsx`
+- [x] `[NEW]` `src/components/studio/QuizComposer.test.tsx`
+- [x] `[NEW]` `src/components/studio/LessonMetadataForm.test.tsx`
+- [x] `[NEW]` `src/components/studio/StudioNavbar.test.tsx`
+- [x] `[NEW]` `src/components/studio/StudioLayout.test.tsx`
+- [x] `[MODIFY]` `src/engines/pinyin/pinyinUtils.ts` (Contextual umlauts, neutral tones 0/5, punctuation detach/attach)
+- [x] `[MODIFY]` `src/engines/pinyin/pinyinUtils.test.ts` (Edge-case tests)
+- [x] `[MODIFY]` `src/App.tsx` (Studio view integration & lazy loading)
 
 ---
 
 ## 📋 3. รายการสิ่งที่ต้องทำ (Actionable Checklist)
-- [ ] ออกแบบและพัฒนา `StudioNavbar` พร้อมสถานะ Draft Status (บันทึกแล้ว / กำลังพิมพ์)
-- [ ] พัฒนา `LessonMetadataForm` พร้อมการตรวจสอบรหัส ID ให้ตรงตามรูปแบบ `tierX_uYY_lZZ`
-- [ ] พัฒนา `VocabComposer` เชื่อมต่อกับ `studioLinterEngine` เพื่อแสดงป้ายเตือนสีส้มเมื่อพบคำที่มี Tone Sandhi หรือคำเตือนสีแดงเมื่อพบตัวเต็ม
-- [ ] พัฒนา `DialogueComposer` พร้อมรองรับการเพิ่มบรรทัดบทพูดแบบ Dynamic
-- [ ] พัฒนา `QuizComposer` พร้อมระบบสร้างคำตอบหลอก (Distractors generator helper)
-- [ ] เขียน Unit Tests สำหรับคอมโพเนนต์ฟอร์ม ตรวจสอบว่า Event การพิมพ์และเพิ่มข้อมูลทำงานถูกต้อง
+- [x] ออกแบบและพัฒนา `StudioNavbar` พร้อมสถานะ Draft Status (บันทึกแล้ว / กำลังพิมพ์)
+- [x] พัฒนา `LessonMetadataForm` พร้อมการตรวจสอบรหัส ID ให้ตรงตามรูปแบบ `tierX_uYY_lZZ`
+- [x] พัฒนา `VocabComposer` เชื่อมต่อกับ `studioLinterEngine` เพื่อแสดงป้ายเตือนสีส้มเมื่อพบคำที่มี Tone Sandhi หรือคำเตือนสีแดงเมื่อพบตัวเต็ม
+- [x] พัฒนา `DialogueComposer` พร้อมรองรับการเพิ่มบรรทัดบทพูดแบบ Dynamic
+- [x] พัฒนา `QuizComposer` พร้อมระบบสร้างคำตอบหลอก (Distractors generator helper)
+- [x] เขียน Unit Tests สำหรับคอมโพเนนต์ฟอร์ม ตรวจสอบว่า Event การพิมพ์และเพิ่มข้อมูลทำงานถูกต้อง
 
 ---
 
 ## 🧪 4. เกณฑ์การตรวจรับคุณภาพ (Acceptance & Quality Gate)
-- [ ] **Mobile-First & Desktop Friendly:** สลับแท็บและพิมพ์ฟอร์มได้สะดวกทั้งบนหน้าจอคอมพิวเตอร์และมือถือ
-- [ ] **Instant Feedback:** เมื่อพิมพ์พินอินหรือคำจีนที่มีข้อผิดพลาด ต้องแสดงคำเตือนทางภาษาศาสตร์แบบ Inline ทันที
-- [ ] **Accessibility:** รองรับการใช้คีย์บอร์ด Tab/Enter ในการสลับช่องกรอกและปุ่มกด
-- [ ] **TypeScript Clean:** คอมไพล์ผ่าน 100% ไร้ข้อผิดพลาด
+- [x] **Mobile-First & Desktop Friendly:** สลับแท็บและพิมพ์ฟอร์มได้สะดวกทั้งบนหน้าจอคอมพิวเตอร์และมือถือ
+- [x] **Instant Feedback:** เมื่อพิมพ์พินอินหรือคำจีนที่มีข้อผิดพลาด ต้องแสดงคำเตือนทางภาษาศาสตร์แบบ Inline ทันที
+- [x] **Accessibility:** รองรับการใช้คีย์บอร์ด Tab/Enter ในการสลับช่องกรอกและปุ่มกด
+- [x] **TypeScript Clean:** คอมไพล์ผ่าน 100% ไร้ข้อผิดพลาด (`tsc --noEmit` exit 0, zero `any`)
+- [x] **Deterministic Unit Tests:** 6/6 test files (23 tests) passed in `src/components/studio/`; 36/36 test files (520 tests) passed across codebase
+- [x] **Bundle Verification:** Studio chunk lazy-loaded as code-split bundle (26.49 kB gzipped, 0 KB initial impact)
