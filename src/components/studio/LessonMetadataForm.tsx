@@ -148,7 +148,7 @@ export const LessonMetadataForm: React.FC<LessonMetadataFormProps> = ({
         </div>
 
         {/* Unit Title Trilingual */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '16px', marginBottom: '16px' }}>
           <div>
             <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-secondary)' }}>
               ชื่อยูนิตภาษาจีน (🇨🇳)
@@ -290,7 +290,7 @@ export const LessonMetadataForm: React.FC<LessonMetadataFormProps> = ({
         </div>
 
         {/* Lesson Title Trilingual */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 200px), 1fr))', gap: '16px', marginBottom: '16px' }}>
           <div>
             <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-secondary)' }}>
               ชื่อบทเรียนภาษาจีน (🇨🇳)
@@ -365,7 +365,7 @@ export const LessonMetadataForm: React.FC<LessonMetadataFormProps> = ({
         </div>
 
         {/* Can-Do Goals (Bilingual) */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px', marginBottom: '16px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '16px', marginBottom: '16px' }}>
           <div>
             <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, marginBottom: '6px', color: 'var(--text-ink-secondary)' }}>
               🎯 Can-Do Objective (ภาษาไทย)

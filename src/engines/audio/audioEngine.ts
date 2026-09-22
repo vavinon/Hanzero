@@ -1032,14 +1032,19 @@ export function speak(text: string, options: SpeakOptions = {}): Promise<void> {
         finalize(new Error(event.error || 'SpeechSynthesis error occurred'));
       };
 
-      // 3-second Watchdog: If browser locks up or fails to trigger onend/onerror
+      // Dynamic Watchdog: Scale timeout based on character count and speech rate for long dialogues (min 3000ms)
+      const speechRate = options.rate || 1.0;
+      const calculatedDuration = Math.ceil((text.length * 350) / speechRate) + 1000;
+      const watchdogTimeoutMs = Math.max(3000, calculatedDuration);
+      const watchdogLabel = watchdogTimeoutMs === 3000 ? '3s watchdog triggered' : `${watchdogTimeoutMs}ms watchdog triggered`;
+
       watchdogTimer = setTimeout(() => {
         if (!isCompleted && currentSessionId === activeSessionId) {
           stopSpeaking();
           playToneContour(1, 0.2); // Fallback tone
-          finalize(new Error('SpeechSynthesis timed out (3s watchdog triggered)'));
+          finalize(new Error(`SpeechSynthesis timed out (${watchdogLabel})`));
         }
-      }, 3000);
+      }, watchdogTimeoutMs);
 
       window.speechSynthesis.speak(utterance);
     } catch (err) {

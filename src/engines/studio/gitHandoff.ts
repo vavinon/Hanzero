@@ -36,14 +36,16 @@ export function slugifyTitle(title: string): string {
  * Generates standardized curriculum filename, e.g. "unit01_first_greetings.json"
  */
 export function generateSuggestedFilename(draft: StudioDraftState): string {
-  const unitPad = String(draft.unit_number || 1).padStart(2, '0');
+  const cleanUnit = String(draft.unit_number || 1).replace(/[^0-9]/g, '') || '1';
+  const unitPad = cleanUnit.padStart(2, '0');
   const enTitle = draft.title?.en || '';
   const slug = slugifyTitle(enTitle);
 
   if (slug && slug !== 'lesson' && slug !== 'new_unit') {
     return `unit${unitPad}_${slug}.json`;
   }
-  return `tier${draft.tier || 1}_u${unitPad}.json`;
+  const cleanTier = String(draft.tier || 1).replace(/[^0-9]/g, '') || '1';
+  return `tier${cleanTier}_u${unitPad}.json`;
 }
 
 /**
@@ -105,11 +107,13 @@ export function formatVocabMarkdownTable(vocabularies: StudioVocabDraft[]): stri
 
   const rows = vocabularies.map((v, idx) => {
     const hanzi = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(v.hanzi));
-    const pinyin = escapeMarkdownTableCell(v.display_pinyin || v.pinyin);
+    const rawPinyin = (v.display_pinyin || v.pinyin || '').replace(/`/g, "'");
+    const pinyin = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(rawPinyin));
     const th = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(v.meaning_th));
     const en = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(v.meaning_en));
-    const radical = escapeMarkdownTableCell(v.radical ? `${v.radical} (${v.radical_name_th || ''})` : '-');
-    const sandhi = escapeMarkdownTableCell(v.sandhi_rule || '-');
+    const rawRadical = v.radical ? `${v.radical} (${v.radical_name_th || ''})` : '-';
+    const radical = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(rawRadical));
+    const sandhi = escapeMarkdownTableCell(sanitizeHtmlInMarkdown(v.sandhi_rule || '-'));
 
     return `| ${idx + 1} | **${hanzi}** | \`${pinyin}\` | ${th} | ${en} | ${radical} | ${sandhi} |`;
   });
@@ -121,9 +125,16 @@ export function formatVocabMarkdownTable(vocabularies: StudioVocabDraft[]): stri
  * Generates terminal Git commands for local commit & PR push
  */
 export function generateGitCommandSnippet(draft: StudioDraftState, filename: string): string {
-  const branchName = `content/tier${draft.tier}-u${String(draft.unit_number).padStart(2, '0')}`;
-  const targetPath = `src/data/lessons/tier${draft.tier}/${filename}`;
-  const commitMsg = `feat(curriculum): add Tier ${draft.tier} Unit ${draft.unit_number} (${draft.title.en || draft.title.th})`;
+  const cleanFilename = filename.replace(/[^a-zA-Z0-9._-]/g, '');
+  const cleanUnitNum = String(draft.unit_number || 1).replace(/[^0-9]/g, '').padStart(2, '0');
+  const cleanTier = String(draft.tier || 1).replace(/[^0-9]/g, '') || '1';
+  const branchName = `content/tier${cleanTier}-u${cleanUnitNum}`;
+  const targetPath = `src/data/lessons/tier${cleanTier}/${cleanFilename}`;
+
+  // Strip shell metacharacters: quotes, backticks, $, ;, &, |, <, >, \, /, newlines
+  const rawTitle = (draft.title?.en || draft.title?.th || 'New Lesson').trim();
+  const safeTitle = rawTitle.replace(/["`$;|&<>\\/\r\n]/g, '').slice(0, 50);
+  const commitMsg = `feat(curriculum): add Tier ${cleanTier} Unit ${cleanUnitNum} (${safeTitle})`;
 
   return `# 1. สลับหรือสร้าง Branch ใหม่สำหรับเนื้อหา
 git checkout -b ${branchName}
@@ -208,7 +219,7 @@ ${vocabTable}
 <summary><b>คลิกเพื่อดูโค้ด JSON (${filename})</b></summary>
 
 \`\`\`json
-${jsonString}
+${jsonString.replace(/```/g, '`\u200B`\u200B`')}
 \`\`\`
 
 </details>

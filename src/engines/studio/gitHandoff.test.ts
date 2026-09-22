@@ -17,6 +17,7 @@ import {
   generatePullRequestTemplate,
 } from './gitHandoff';
 import { createBlankDraft } from './studioSerializer';
+import type { StudioVocabDraft } from './studioTypes';
 
 describe('Zero-Token Git Hand-off Engine (gitHandoff.ts)', () => {
   describe('Filename & Slug Generation', () => {
@@ -118,6 +119,54 @@ describe('Zero-Token Git Hand-off Engine (gitHandoff.ts)', () => {
       expect(snippet).toContain('src/data/lessons/tier1/unit01_greetings.json');
       expect(snippet).toContain('npm run validate:curriculum -- --strict');
       expect(snippet).toContain('git push -u origin content/tier1-u01');
+    });
+
+    it('neutralizes terminal command injection attempts in commit message', () => {
+      const draft = createBlankDraft(1, 2);
+      draft.title.en = 'Greetings" && calc.exe && git commit -m "pwned';
+      const snippet = generateGitCommandSnippet(draft, 'unit02_test.json');
+
+      expect(snippet).not.toContain('&&');
+      expect(snippet).not.toContain('" &&');
+      expect(snippet).toContain('git commit -m "feat(curriculum): add Tier 1 Unit 02 (Greetings  calc.exe  git commit -m pwned)"');
+    });
+
+    it('sanitizes HTML tags and escapes backticks in all vocab table columns', () => {
+      const maliciousVocab: StudioVocabDraft[] = [
+        {
+          _clientId: 'v1',
+          id: 'hsk1_01',
+          hanzi: '你好',
+          pinyin: 'nǐ hǎo',
+          pinyin_tone: 'ni3 hao3',
+          stroke_count: 7,
+          mnemonic: '',
+          kid_mnemonic: '',
+          body_gesture: '',
+          meaning_th: 'สวัสดี',
+          meaning_en: 'hello',
+          radical: '亻',
+          radical_name_th: '<script>alert(1)</script>',
+          sandhi_rule: '3+3',
+          display_pinyin: '`ní hǎo` <img src=x onerror=alert(1)>',
+        },
+      ];
+
+      const table = formatVocabMarkdownTable(maliciousVocab);
+      expect(table).not.toContain('<script>');
+      expect(table).toContain('&lt;script&gt;');
+      expect(table).not.toContain('<img');
+      expect(table).toContain('&lt;img');
+      expect(table).not.toContain('```'); // Backticks converted to single quotes
+    });
+
+    it('escapes triple backticks inside PR template JSON code fence to prevent breakout', () => {
+      const draft = createBlankDraft(1, 1);
+      const maliciousJson = JSON.stringify({ note: '```</details><script>alert(1)</script>' });
+      const prTemplate = generatePullRequestTemplate(draft, maliciousJson);
+
+      expect(prTemplate).not.toContain('```</details>');
+      expect(prTemplate).toContain('`\u200B`\u200B`');
     });
 
     it('generates comprehensive Pull Request template containing metadata, tables, and JSON details block', () => {

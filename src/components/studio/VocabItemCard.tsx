@@ -231,15 +231,15 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
         {/* Primary Row: Hanzi + Pinyin + Audio Button */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(120px, 1.2fr) minmax(140px, 1.8fr) auto',
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: '12px',
-            alignItems: 'start',
+            alignItems: 'flex-start',
             marginBottom: '14px',
           }}
         >
           {/* Hanzi Input */}
-          <div>
+          <div style={{ flex: '1 1 120px', minWidth: '0' }}>
             <label
               style={{
                 display: 'block',
@@ -281,7 +281,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
           </div>
 
           {/* Pinyin Input with Ink Flash */}
-          <div>
+          <div style={{ flex: '1.5 1 140px', minWidth: '0' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
               <label
                 style={{
@@ -338,7 +338,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
           </div>
 
           {/* Instant TTS Audio Probe */}
-          <div style={{ paddingTop: '22px' }}>
+          <div style={{ paddingTop: '22px', flexShrink: 0 }}>
             <button
               type="button"
               onClick={() => onPlayAudio(vocab._clientId, vocab.hanzi)}
@@ -453,7 +453,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))',
             gap: '12px',
             marginBottom: '14px',
           }}
@@ -524,15 +524,15 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
         {/* Radical & Stroke Count Row */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: '80px minmax(120px, 1fr) 100px',
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: '12px',
-            alignItems: 'end',
+            alignItems: 'flex-end',
             marginBottom: '14px',
           }}
         >
           {/* Radical Char */}
-          <div>
+          <div style={{ flex: '1 1 70px', minWidth: '0' }}>
             <label
               style={{
                 display: 'block',
@@ -565,7 +565,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
           </div>
 
           {/* Radical Name TH */}
-          <div>
+          <div style={{ flex: '2 1 120px', minWidth: '0' }}>
             <label
               style={{
                 display: 'block',
@@ -596,7 +596,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
           </div>
 
           {/* Stroke Count */}
-          <div>
+          <div style={{ flex: '1 1 80px', minWidth: '0' }}>
             <label
               style={{
                 display: 'block',

@@ -311,6 +311,29 @@ describe('audioEngine', () => {
       expect(mockCancel).toHaveBeenCalled();
     });
 
+    it('extends watchdog timeout dynamically for long sentences to prevent premature cutoff', async () => {
+      const onEndSpy = vi.fn();
+      const onErrorSpy = vi.fn();
+
+      // Long compound dialogue: 16 characters at 0.85 rate -> ~7500ms
+      const speakPromise = speak('你好！很高兴认识你，你是哪国人？', { rate: 0.85, onEnd: onEndSpy, onError: onErrorSpy });
+
+      // At 3100ms, watchdog should NOT trip
+      vi.advanceTimersByTime(3100);
+      expect(onErrorSpy).not.toHaveBeenCalled();
+
+      // Advance past dynamic timeout (another 5000ms, total 8100ms)
+      vi.advanceTimersByTime(5000);
+
+      await speakPromise;
+      expect(onErrorSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          message: expect.stringContaining('watchdog triggered'),
+        })
+      );
+      expect(onEndSpy).toHaveBeenCalled();
+    });
+
     it('handles stopSpeaking safely and unblocks in-flight session', async () => {
       const onEndSpy = vi.fn();
       const speakPromise = speak('你好', { onEnd: onEndSpy });

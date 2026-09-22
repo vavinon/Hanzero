@@ -177,15 +177,15 @@ export const DialogueLineItem: React.FC<DialogueLineItemProps> = React.memo(
         {/* Row 1: Speaker Role & Name */}
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: '90px 1fr auto',
+            display: 'flex',
+            flexWrap: 'wrap',
             gap: '12px',
-            alignItems: 'center',
+            alignItems: 'flex-end',
             marginBottom: '12px',
           }}
         >
           {/* Speaker Letter */}
-          <div>
+          <div style={{ flex: '1 1 80px', minWidth: '0' }}>
             <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, color: 'var(--text-ink-secondary)', marginBottom: '4px' }}>
               ผู้พูด (Role)
             </label>
@@ -211,7 +211,7 @@ export const DialogueLineItem: React.FC<DialogueLineItemProps> = React.memo(
           </div>
 
           {/* Speaker Name */}
-          <div>
+          <div style={{ flex: '2 1 160px', minWidth: '0' }}>
             <label style={{ display: 'block', fontSize: '11px', fontWeight: 600, color: 'var(--text-ink-secondary)', marginBottom: '4px' }}>
               ชื่อตัวละคร / ตำแหน่ง
             </label>
@@ -234,8 +234,8 @@ export const DialogueLineItem: React.FC<DialogueLineItemProps> = React.memo(
           </div>
 
           {/* Persona Presets Dropdown */}
-          <div style={{ paddingTop: '18px' }}>
-            <div style={{ display: 'flex', gap: '4px' }}>
+          <div style={{ paddingBottom: '2px', flexShrink: 0 }}>
+            <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
               {PERSONA_PRESETS.map((p) => (
                 <button
                   key={p.name}

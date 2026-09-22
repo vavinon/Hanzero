@@ -21,7 +21,7 @@ import {
   X,
   Copy,
 } from 'lucide-react';
-import { playFanfare, playClick, speak } from '../../engines/audio/audioEngine';
+import { playFanfare, playClick, speak, stopSpeaking } from '../../engines/audio/audioEngine';
 import { copyTextWithFallback } from '../../utils/clipboard';
 
 export interface MilestonePassportModalProps {
@@ -289,6 +289,14 @@ export const MilestonePassportModal: React.FC<MilestonePassportModalProps> = ({
       setCopiedNotification(false);
       setShareStatusMessage(null);
     }
+
+    return () => {
+      stopSpeaking();
+      if (canvasRef.current) {
+        canvasRef.current.width = 0;
+        canvasRef.current.height = 0;
+      }
+    };
   }, [isOpen, generatePassportImage]);
 
   // Resilient Web Share Cascade

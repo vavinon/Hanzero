@@ -240,7 +240,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
         </div>
 
         {/* Right: Master Actions */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
           <button
             onClick={onLoadSample}
             className="btn-tactile-secondary"

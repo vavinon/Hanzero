@@ -603,6 +603,10 @@ export function useStudioDraft(initialUnit?: UnitLessonData): UseStudioDraftRetu
       setIsSaving(false);
       timerRef.current = null;
     }, AUTO_SAVE_DEBOUNCE_MS);
+
+    return () => {
+      cancelPendingSave();
+    };
   }, [draft, cancelPendingSave, writeToStorage]);
 
   /**

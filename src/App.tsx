@@ -1,17 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import {
-  HeaderBar,
-  QuestMap,
-  DevStorageDrawer,
-  DailyCompletionModal,
-  WelcomeModal,
-  VoiceHealthModal,
-  MilestonePassportModal,
-} from './components/layout';
+import { HeaderBar, QuestMap } from './components/layout';
 import { useUserState } from './hooks/useUserState';
 import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine';
 import { checkStorageHealth, StorageDiagnostics, loadStrokeCache } from './engines/storage';
 import { SRSGrade } from './types/srs';
+
+const DevStorageDrawer = React.lazy(() =>
+  import('./components/layout/DevStorageDrawer').then((m) => ({ default: m.DevStorageDrawer }))
+);
+
+const DailyCompletionModal = React.lazy(() =>
+  import('./components/layout/DailyCompletionModal').then((m) => ({ default: m.DailyCompletionModal }))
+);
+
+const WelcomeModal = React.lazy(() =>
+  import('./components/layout/WelcomeModal').then((m) => ({ default: m.WelcomeModal }))
+);
+
+const VoiceHealthModal = React.lazy(() =>
+  import('./components/layout/VoiceHealthModal').then((m) => ({ default: m.VoiceHealthModal }))
+);
+
+const MilestonePassportModal = React.lazy(() =>
+  import('./components/layout/MilestonePassportModal').then((m) => ({ default: m.MilestonePassportModal }))
+);
 
 const LessonView = React.lazy(() =>
   import('./components/lesson/LessonView').then((m) => ({ default: m.LessonView }))
@@ -262,82 +274,94 @@ export const App: React.FC = () => {
 
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
-        <div style={{ maxWidth: '520px', width: '100%', margin: '0 auto', padding: '0 12px 24px 12px' }}>
-          <DevStorageDrawer
-            userState={userState}
-            storageHealth={storageHealth}
-            strokeCacheStatus={strokeCacheStatus}
-            defaultOpen={true}
-            onInspectStrokeCache={handleInspectStrokeCache}
-            onRestoreState={() => {
-              window.location.reload();
-            }}
-            onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
-            onResetOnboarding={() => setShowWelcomeModal(true)}
-            onOpenStudio={() => {
-              setCurrentView('studio');
-              setShowDevDrawer(false);
-            }}
-          />
-          <button
-            onClick={() => {
-              setCurrentView('studio');
-              setShowDevDrawer(false);
-            }}
-            className="btn-tactile-primary"
-            style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
-          >
-            🎨 เปิด Content Authoring Studio (Phase 6)
-          </button>
-          <button
-            onClick={() => setShowTestPanel(true)}
-            className="btn-tactile-secondary"
-            style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
-          >
-            🧪 เปิด Engine Test Panel (Lab Sandbox)
-          </button>
-        </div>
+        <React.Suspense fallback={null}>
+          <div style={{ maxWidth: '520px', width: '100%', margin: '0 auto', padding: '0 12px 24px 12px' }}>
+            <DevStorageDrawer
+              userState={userState}
+              storageHealth={storageHealth}
+              strokeCacheStatus={strokeCacheStatus}
+              defaultOpen={true}
+              onInspectStrokeCache={handleInspectStrokeCache}
+              onRestoreState={() => {
+                window.location.reload();
+              }}
+              onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
+              onResetOnboarding={() => setShowWelcomeModal(true)}
+              onOpenStudio={() => {
+                setCurrentView('studio');
+                setShowDevDrawer(false);
+              }}
+            />
+            <button
+              onClick={() => {
+                setCurrentView('studio');
+                setShowDevDrawer(false);
+              }}
+              className="btn-tactile-primary"
+              style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
+            >
+              🎨 เปิด Content Authoring Studio (Phase 6)
+            </button>
+            <button
+              onClick={() => setShowTestPanel(true)}
+              className="btn-tactile-secondary"
+              style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
+            >
+              🧪 เปิด Engine Test Panel (Lab Sandbox)
+            </button>
+          </div>
+        </React.Suspense>
       )}
 
-      {/* Daily Completion Celebration Modal */}
-      <DailyCompletionModal
-        isOpen={dailyCelebration.isOpen}
-        xpEarnedToday={dailyCelebration.xp}
-        streakCount={userState.progress.streak.count}
-        onClose={() => setDailyCelebration({ isOpen: false, xp: 0 })}
-      />
+      <React.Suspense fallback={null}>
+        {/* Daily Completion Celebration Modal */}
+        {dailyCelebration.isOpen && (
+          <DailyCompletionModal
+            isOpen={dailyCelebration.isOpen}
+            xpEarnedToday={dailyCelebration.xp}
+            streakCount={userState.progress.streak.count}
+            onClose={() => setDailyCelebration({ isOpen: false, xp: 0 })}
+          />
+        )}
 
-      {/* First-Run Welcome / Onboarding Modal */}
-      <WelcomeModal
-        isOpen={showWelcomeModal}
-        onSelectTrack={async (track, silent) => {
-          await completeOnboarding(track, silent);
-          setShowWelcomeModal(false);
-          if (track === 'tier0') {
-            setCurrentView('map');
-          } else {
-            setActiveLessonId('t1_u01_l01');
-          }
-        }}
-        onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
-      />
+        {/* First-Run Welcome / Onboarding Modal */}
+        {showWelcomeModal && (
+          <WelcomeModal
+            isOpen={showWelcomeModal}
+            onSelectTrack={async (track, silent) => {
+              await completeOnboarding(track, silent);
+              setShowWelcomeModal(false);
+              if (track === 'tier0') {
+                setCurrentView('map');
+              } else {
+                setActiveLessonId('t1_u01_l01');
+              }
+            }}
+            onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
+          />
+        )}
 
-      {/* Tutu Bunny Voice Health Modal */}
-      <VoiceHealthModal
-        isOpen={showVoiceHealthModal}
-        onClose={() => setShowVoiceHealthModal(false)}
-        isSilentMode={userState.preferences.silent_mode}
-        onToggleSilentMode={(silent) => updatePreferences({ silent_mode: silent })}
-      />
+        {/* Tutu Bunny Voice Health Modal */}
+        {showVoiceHealthModal && (
+          <VoiceHealthModal
+            isOpen={showVoiceHealthModal}
+            onClose={() => setShowVoiceHealthModal(false)}
+            isSilentMode={userState.preferences.silent_mode}
+            onToggleSilentMode={(silent) => updatePreferences({ silent_mode: silent })}
+          />
+        )}
 
-      {/* Tier 0 Graduation Milestone Passport Modal */}
-      <MilestonePassportModal
-        isOpen={showPassportModal}
-        onClose={() => setShowPassportModal(false)}
-        userName="นักเรียนฮั่นซีโร่ 🐰"
-        streakCount={userState.progress.streak.count}
-        totalXp={userState.progress.xp}
-      />
+        {/* Tier 0 Graduation Milestone Passport Modal */}
+        {showPassportModal && (
+          <MilestonePassportModal
+            isOpen={showPassportModal}
+            onClose={() => setShowPassportModal(false)}
+            userName="นักเรียนฮั่นซีโร่ 🐰"
+            streakCount={userState.progress.streak.count}
+            totalXp={userState.progress.xp}
+          />
+        )}
+      </React.Suspense>
 
       {/* Engine Test Panel Modal */}
       {showTestPanel && (

@@ -232,6 +232,26 @@ export const EchoMicRecorder: React.FC<EchoMicRecorderProps> = ({
     }
   };
 
+  // Hardware & Tab Visibility Guard: Stop recording immediately if tab is hidden or backgrounded
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
+          stopRecording();
+        }
+      }
+    };
+
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+    }
+    return () => {
+      if (typeof document !== 'undefined') {
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+      }
+    };
+  }, []);
+
   // Dual Echo Sequence: 1. Native -> 2. User recording
   const triggerDualEcho = useCallback(
     (targetAudioUrl?: string) => {
