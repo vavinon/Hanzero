@@ -23,13 +23,13 @@ gantt
     Welcome Onboarding & Placement Flow :done, p6, after p5, 2d
     Bunny Tone Coaster, Echo Mic & Shareable Passport :done, p7, after p6, 4d
     section Phase 5: Production Rollout
-    Tier 1 Expansion (Units 2-10) & Pinyin Fading :active, p8, 2026-09-21, 5d
-    Zero-Knowledge Alpha Playtest & Production Launch :p9, after p8, 2d
+    Tier 1 Expansion (Units 2-10) & Pinyin Fading :done, p8, 2026-09-21, 5d
+    Zero-Knowledge Alpha Playtest & Production Launch :done, p9, after p8, 2d
     section Phase 6: Authoring Studio
-    Web-based Lesson Builder & Pedagogical Linters :p10, after p9, 4d
-    Git Hand-off & 1-Click GitHub PR Engine :p11, after p10, 2d
+    Web-based Lesson Builder & Pedagogical Linters :done, p10, after p9, 4d
+    Git Hand-off & 1-Click GitHub PR Engine :done, p11, after p10, 2d
     section Phase 7: Tier 2 Traveler
-    Branching Dialogues & Grammar Slot Sandboxes :p12, after p11, 4d
+    Branching Dialogues & Grammar Slot Sandboxes :active, p12, after p11, 4d
     Units 11-25 Rollout & HSR Metro Quest Map :p13, after p12, 6d
     section Phase 8: Tier 3-4 Immersion
     Smart Immersion Reader & Intl.Segmenter :p14, after p13, 5d
@@ -97,7 +97,7 @@ gantt
 ---
 
 ### 🌿 Phase 5: Tier 1 Expansion, Alpha Playtest & Production Launch
-> **สถานะ:** `IN PROGRESS` ⏳ | [phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
+> **สถานะ:** `DONE` ✅ | [phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
 
 **เป้าหมาย:** ขยายเนื้อหา Tier 1 ครบถ้วนทั้ง 10 Units (40 บทย่อย) ดำเนินการทดสอบกับผู้เรียนจริง (Zero-Knowledge Alpha Playtest) และเปิดตัวสู่ผู้ใช้จริง
 * ปล่อยเนื้อหา Batch A, B, C ตามลำดับ พร้อมกฎ Interleaving 20%
@@ -110,6 +110,8 @@ gantt
 ---
 
 ### 🛠️ Phase 6: Content Authoring Studio & Community Contribution
+> **สถานะ:** `DONE` ✅ | [phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
+
 **เป้าหมาย:** สร้างเครื่องมือจัดการและผลิตเนื้อหาผ่าน Web GUI แบบ Zero-Backend เพื่อปลดล็อกคอขวดของทีม พัฒนาระบบ Linter ตรวจจับความผิดพลาดทางภาษาศาสตร์ และเชื่อมต่อ GitHub Pull Request
 * [phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
 * **Visual Lesson Studio GUI (`/studio`):** หน้าต่างสร้างการ์ดคำศัพท์ บทสนทนา และควิซแบบเห็นตัวอย่างทันที (Live Phone Preview) รองรับการสร้างเนื้อหา 3 ภาษา (中-泰-英)
@@ -124,6 +126,8 @@ gantt
 ---
 
 ### 🎋 Phase 7: Tier 2 Traveler Rollout & HSK 3-4 Quest Map
+> **สถานะ:** `IN PROGRESS` 🔄 | [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
+
 **เป้าหมาย:** ยกระดับสู่การใช้ชีวิตจริงและการท่องเที่ยวในจีน (15 Units / 60 บทเรียน) พร้อมรองรับไวยากรณ์ขั้นกลางที่ซับซ้อนและการจำลองบทสนทนาแตกกิ่ง
 * [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
 * **Branching Dialogues (`InteractiveScenarioPlayer.tsx`):** บทสนทนาแตกกิ่งกับ NPC พร้อมแถบความพึงพอใจและมารยาททางสังคม (Patience Bar) และเกร็ดวัฒนธรรม

@@ -15,9 +15,9 @@
 
 ## 🎯 โฟกัสปัจจุบัน (Current Sprint Focus)
 
-* **เฟสปัจจุบัน:** **Phase 6: Content Authoring Studio & Community Contribution**
-* **แผนแม่บท:** [docs/plan/phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
-* **เป้าหมายสปรินต์:** สร้างเครื่องมือ Authoring Studio บนเบราว์เซอร์ (Zero-Backend Web GUI) พร้อม In-Browser Pedagogical Linter, Reactive Draft Persistence, Live Mobile Device Preview, และ Zero-Token Git Hand-off สำหรับส่งออกบทเรียน
+* **เฟสปัจจุบัน:** **Phase 7: Tier 2 Content Rollout & HSK 3-4 Quest Map**
+* **แผนแม่บท:** [docs/plan/phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
+* **เป้าหมายสปรินต์:** พัฒนาเนื้อหา Tier 2: Traveler (Units 11-25 รวม 15 Units / 60 บทเรียน), Branching Dialogue Engine, Grammar Slot Sandboxes (把/被), Dynamic Pinyin Fading 2.0 (Hold-to-Peek), และ HSR Metro Quest Map
 
 ---
 
@@ -39,6 +39,12 @@
 | **2026-09-21** | `TASK-603` | Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms) | P06 | `web_dev` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-visual-composers.md) |
 | **2026-09-21** | `TASK-604` | Live Interactive Mobile Device Preview & Audio Sandbox | P06 | `ux_ui_designer` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-live-mobile-preview.md) |
 | **2026-09-21** | `TASK-605` | Zero-Token Git Hand-off, PR Template & Playwright E2E Suite | P06 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-git-handoff-e2e.md) |
+| **2026-09-22** | `TASK-701` | Tier 2 Traveler Curriculum Batch 1 (Units 11–15) | P07 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-a-curriculum.md) |
+| **2026-09-22** | `TASK-702` | Branching Dialogue & Scenario Decision Engine | P07 | `web_dev` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_branching-dialogue-engine.md) |
+| **2026-09-22** | `TASK-703` | Complex Grammar Sandbox & Dynamic Pinyin Fading 2.0 | P07 | `web_dev` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_grammar-slot-and-pinyin-fading.md) |
+| **2026-09-22** | `TASK-704` | Tier 2 Traveler Curriculum Batch 2 (Units 16–20) | P07 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-b-curriculum.md) |
+| **2026-09-22** | `TASK-705` | Tier 2 Traveler Curriculum Batch 3 & Grand Boss (Units 21–25) | P07 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-c-curriculum.md) |
+| **2026-09-22** | `TASK-706` | HSR Metro Quest Map, Stamped Tickets & 4-Tier Verification | P07 | `ux_ui_designer` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_hsr-quest-map-and-verification.md) |
 
 ---
 

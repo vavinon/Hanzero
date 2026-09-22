@@ -1,0 +1,927 @@
+/**
+ * scripts/tier2_batch_a/unit11.ts
+ * Tier 2 Unit 11: 扫码支付 (Scan & Pay: Digital Wallets)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit11 = {
+  unit_id: 'tier2_u11',
+  tier: 2,
+  unit_number: 11,
+  title: {
+    zh: '扫码支付',
+    th: 'สแกนจ่ายเงิน & กระเป๋าดิจิทัล',
+    en: 'Scan & Pay: Digital Wallets'
+  },
+  description: 'ใช้ชีวิตไร้เงินสดในจีนอย่างมั่นใจ สแกนจ่าย WeChat Pay, Alipay, เลือกระหว่าง "ฉันสแกนเธอ" หรือ "เธอสแกนฉัน", โอนเงิน และจัดการเงินทอน',
+  lessons: [
+    {
+      lesson_id: 't2_u11_l01',
+      lesson_number: 1,
+      title: {
+        zh: '微信与支付宝',
+        th: 'WeChat Pay & Alipay',
+        en: 'WeChat & Alipay'
+      },
+      can_do: {
+        th: 'ระบุวิธีการจ่ายเงินดิจิทัล WeChat Pay / Alipay เปิดคิวอาร์โค้ด และใช้โครงสร้าง 把 ในการแสดงหน้าจอมือถือ',
+        en: 'Specify WeChat / Alipay payment, open QR codes, and use 把 construction to show mobile screen'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เปิดหน้าแอป WeChat หรือ Alipay แล้วพูดขอสแกนจ่ายเงินได้อย่างมั่นใจ!',
+      vocabulary: [
+        {
+          id: 'hsk2_1101',
+          hanzi: '微信',
+          pinyin: 'wēixìn',
+          display_pinyin: 'wēixìn',
+          pinyin_tone: 'wei1xin4',
+          meaning_th: 'วีแชต (WeChat)',
+          meaning_en: 'WeChat',
+          radical: '彳',
+          radical_name_th: 'หมวดก้าวเดินคู่ (双人旁)',
+          stroke_count: 13,
+          mnemonic: 'ก้าวเดิน (彳) อย่างละเอียดอ่อนเพื่อส่งจดหมายและข่าวสาร (信) = WeChat',
+          kid_mnemonic: 'แอปไอคอนสีเขียวคุยส่งเสียงจุ๊กจิ๊กข้ามประเทศ = วีแชต (微信)',
+          body_gesture: 'ยกสองมือทำท่าแตะแป้นพิมพ์ส่งข้อความในมือถือ'
+        },
+        {
+          id: 'hsk2_1102',
+          hanzi: '支付宝',
+          pinyin: 'zhīfùbǎo',
+          display_pinyin: 'zhīfùbǎo',
+          pinyin_tone: 'zhi1fu4bao3',
+          meaning_th: 'อาลีเพย์ (Alipay)',
+          meaning_en: 'Alipay',
+          radical: '支',
+          radical_name_th: 'หมวดกิ่งไม้/จ่าย (支部)',
+          stroke_count: 18,
+          mnemonic: 'กิ่งไม้ (支) จ่ายเงิน (付) ดูแลปกป้องสมบัติ (宝) = อาลีเพย์',
+          kid_mnemonic: 'หีบสมบัติสีฟ้า (宝) มีโลโก้ตัว 支 จ่ายเงินซื้อของวิเศษ = อาลีเพย์ (支付宝)',
+          body_gesture: 'ทำมือขวาเป็นรูปตัว V หงายขึ้นแล้วหักนิ้วลงเหมือนโลโก้支'
+        },
+        {
+          id: 'hsk2_1103',
+          hanzi: '扫一扫',
+          pinyin: 'sǎoyisǎo',
+          display_pinyin: 'sǎoyisǎo',
+          pinyin_tone: 'sao3yi1sao3',
+          meaning_th: 'สแกน (ฟังก์ชันสแกนในแอป)',
+          meaning_en: 'scan (app feature)',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 12,
+          mnemonic: 'ใช้มือ (扌) กวาดสายตาและกล้องถ่ายรูปสแกนโค้ด = สแกน',
+          kid_mnemonic: 'มือน้อยถือไม้กวาดวิเศษกวาดสแกนติ๊ดๆ = 扫一扫',
+          body_gesture: 'ยื่นมือถือทำท่าสแกนหน้าอกของเพื่อนเบาๆ'
+        },
+        {
+          id: 'hsk2_1104',
+          hanzi: '二维码',
+          pinyin: 'èrwéimǎ',
+          display_pinyin: 'èrwéimǎ',
+          pinyin_tone: 'er4wei2ma3',
+          meaning_th: 'คิวอาร์โค้ด',
+          meaning_en: 'QR code',
+          radical: '二',
+          radical_name_th: 'หมวดสองขีด (二部)',
+          stroke_count: 17,
+          mnemonic: 'รหัสสองมิติ (二) ล้อมรอบด้วยตารางสี่เหลี่ยม (维) ที่มีตัวเลขกำกับ (码) = คิวอาร์โค้ด',
+          kid_mnemonic: 'กล่องสี่เหลี่ยมจุดๆ ขาวดำ มีตาสามตา = 二维码',
+          body_gesture: 'ใช้นิ้วชี้สองข้างวาดกรอบสี่เหลี่ยมในอากาศ'
+        },
+        {
+          id: 'hsk2_1105',
+          hanzi: '打开',
+          pinyin: 'dǎkāi',
+          display_pinyin: 'dǎkāi',
+          pinyin_tone: 'da3kai1',
+          meaning_th: 'เปิด (แอป/หน้าจอ)',
+          meaning_en: 'to open / turn on',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 7,
+          mnemonic: 'ใช้มือ (扌) ผลักประตูให้เปิดออก (开) = เปิด',
+          kid_mnemonic: 'มือน้อยแตะจอชึ้บ แอปเปิดสว่างวาบ = 打开',
+          body_gesture: 'ประกบสองมือแล้วผายเปิดออกเหมือนเปิดหนังสือ'
+        },
+        {
+          id: 'hsk2_1106',
+          hanzi: '拿出',
+          pinyin: 'náchū',
+          display_pinyin: 'náchū',
+          pinyin_tone: 'na2chu1',
+          meaning_th: 'หยิบออกมา',
+          meaning_en: 'to take out',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 15,
+          mnemonic: 'ประสานมือ (拿) ล้วงหยิบสิ่งของพ้นออกจากกระเป๋า (出) = หยิบออกมา',
+          kid_mnemonic: 'ล้วงกระเป๋ากางเกงแล้วชูมือถือขึ้นมา = 拿出',
+          body_gesture: 'ทำท่าล้วงของจากกระเป๋าเสื้อแล้วชูขึ้นมาข้างหน้า'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎเสียงเบาของ 一 ในโครงสร้างกริยาซ้ำ A-一-A',
+        description_th: 'เมื่อคำว่า 一 แทรกอยู่ตรงกลางระหว่างคำกริยาซ้ำสองคำ เช่น 扫一扫 คำว่า 一 จะลดทอนน้ำหนักเสียงลงกลายเป็นเสียงเบา (yi)',
+        example: '扫一扫 (sǎoyisǎo), 看一看 (kànyikàn), 试一试 (shìyishì)',
+        fun_metaphor: 'น้องหนึ่งแอบแทรกอยู่ตรงกลางระหว่างกริยาฝาแฝด เลยต้องทำตัวลีบๆ เบาๆ กระซิบกระซาบ!',
+        reassurance: 'อ่านออกเสียงคำตรงกลางสั้นและเบา ไม่ต้องลากเสียงยาว เท่านี้ก็ฟังดูธรรมชาติแบบเจ้าของภาษาแล้ว!'
+      },
+      grammar_bite: {
+        title: 'โครงสร้าง 把 ขั้นพื้นฐาน: จัดการสิ่งของให้เกิดผลลัพธ์',
+        explanation_th: 'โครงสร้าง 把 ใช้เมื่อต้องการบอกว่า "นำสิ่งของนั้นไปจัดการทำอะไรต่อ" เช่น นำมือถือออกมา หรือเปิดคิวอาร์โค้ด',
+        patterns: [
+          {
+            formula: '把 + [สิ่งของ] + [กริยา] + [ทิศทาง/ผลลัพธ์]',
+            zh: '把手机拿出来。',
+            pinyin: 'Bǎ shǒujī ná chūlai.',
+            th: 'หยิบโทรศัพท์มือถือออกมา',
+            en: 'Take out the mobile phone.'
+          },
+          {
+            formula: '请 + 把 + [สิ่งของ] + [กริยา]',
+            zh: '请把二维码打开。',
+            pinyin: 'Qǐng bǎ èrwéimǎ dǎkāi.',
+            th: 'กรุณาเปิดคิวอาร์โค้ดครับ/ค่ะ',
+            en: 'Please open the QR code.'
+          },
+          {
+            formula: '可以 + 用 + [วิธี] + 支付吗？',
+            zh: '可以用微信支付吗？',
+            pinyin: 'Kěyǐ yòng Wēixìn zhīfù ma?',
+            th: 'สามารถใช้ WeChat Pay จ่ายได้ไหมครับ?',
+            en: 'Can I pay using WeChat Pay?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'พนักงานแคชเชียร์ 👩‍💼',
+          zh: '你好！一共是三十五块钱。',
+          pinyin: 'Nǐ hǎo! Yígòng shì sānshíwǔ kuài qián.',
+          th: 'สวัสดีค่ะ! ทั้งหมดเป็นเงิน 35 หยวนค่ะ',
+          en: 'Hello! Total is 35 yuan.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！请问可以用微信支付吗？',
+          pinyin: 'Nǐ hǎo! Qǐngwèn kěyǐ yòng Wēixìn zhīfù ma?',
+          th: 'สวัสดีครับ! ขอถามหน่อย ใช้ WeChat Pay จ่ายได้ไหมครับ?',
+          en: 'Hello! Excuse me, can I pay with WeChat Pay?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'พนักงานแคชเชียร์ 👩‍💼',
+          zh: '可以的！请把手机拿出来，打开二维码。',
+          pinyin: 'Kěyǐ de! Qǐng bǎ shǒujī ná chūlai, dǎkāi èrwéimǎ.',
+          th: 'ได้แน่นอนค่ะ! กรุณาหยิบมือถือออกมา แล้วเปิดคิวอาร์โค้ดนะคะ',
+          en: 'Sure! Please take out your phone and open the QR code.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，我已经打开了，谢谢你！',
+          pinyin: 'Hǎo de, wǒ yǐjīng dǎkāi le, xièxie nǐ!',
+          th: 'ได้ครับ ผมเปิดเรียบร้อยแล้ว ขอบคุณครับ!',
+          en: 'Okay, I opened it already, thank you!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อพนักงานร้านสะดวกซื้อบอกว่า '请把二维码打开' หมายถึงข้อใด?",
+          options: [
+            'กรุณาเปิดคิวอาร์โค้ด',
+            'กรุณาเก็บโทรศัพท์มือถือ',
+            'กรุณาจ่ายเป็นเงินสด',
+            'กรุณารอสักครู่'
+          ],
+          correct_index: 0,
+          explanation_th: "'打开' แปลว่า เปิด และ '二维码' คือ คิวอาร์โค้ด ประโยคนี้แปลว่า กรุณาเปิดคิวอาร์โค้ด",
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจโครงสร้าง 把 และคำศัพท์ดิจิทัลได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '扫' (กวาด/สแกน) ในคำว่า '扫一扫' มีหมวดนำใด?",
+          options: [
+            '扌 (หมวดมือ 提手旁)',
+            '亻 (หมวดคน 單人旁)',
+            '口 (หมวดปาก 口字旁)',
+            '氵 (หมวดน้ำ 三点水)'
+          ],
+          correct_index: 0,
+          explanation_th: "'扫' ใช้หมวดนำมือ '扌' สื่อถึงการใช้มือกวาดหรือถือเครื่องสแกน",
+          encouragement: 'ตาไวมาก! หมวดนำมือ 扌 จดจำได้ขึ้นใจแล้ว!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "หยิบโทรศัพท์มือถือออกมา"',
+          tokens: ['拿出来', '手机', '把'],
+          correct_sequence: ['把', '手机', '拿出来'],
+          pinyin: 'Bǎ shǒujī ná chūlai',
+          meaning_th: 'หยิบโทรศัพท์มือถือออกมา',
+          explanation_th: 'โครงสร้าง 把: 把 + คำนาม (手机) + กริยาและทิศทาง (拿出来)',
+          encouragement: 'ถูกต้องที่สุด! ต่อประโยค 把 ได้คล่องแคล่วมาก!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "หากต้องการถามว่า 'สามารถใช้ Alipay จ่ายเงินได้ไหม' ควรพูดว่าอย่างไร?",
+          options: [
+            '可以用支付宝吗？ (Kěyǐ yòng Zhīfùbǎo ma?)',
+            '这是什么手机？ (Zhè shì shénme shǒujī?)',
+            '多少钱一斤？ (Duōshao qián yì jīn?)',
+            '他在哪儿？ (Tā zài nǎr?)'
+          ],
+          correct_index: 0,
+          explanation_th: "'支付宝' คือ Alipay และ '可以用...吗' แปลว่า สามารถใช้...ได้ไหม",
+          encouragement: 'ตอบได้ทันทีแบบมืออาชีพ! เอาตัวรอดในจีนได้แน่นอน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณไปซื้อของที่ร้านผลไม้ในเฉิงตู พ่อค้ากำลังคิดเงิน 28 หยวน คุณต้องการจ่ายผ่าน Alipay และขอให้พ่อค้าสแกนหน้าจอมือถือของคุณ ควรพูดอย่างไร?',
+        options: [
+          '可以用支付宝吗？请扫我的手机。 (Kěyǐ yòng Zhīfùbǎo ma? Qǐng sǎo wǒ de shǒujī.)',
+          '不要苹果，太贵了。 (Bú yào píngguǒ, tài guì le.)',
+          '请问洗手间在哪儿？ (Qǐngwèn xǐshǒujiān zài nǎr?)',
+          '我是泰国人。 (Wǒ shì Tàiguó rén.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '可以用支付宝吗？请扫我的手机。' สื่อสารความต้องการได้ชัดเจน ถูกต้องตามมารยาท และตรงประเด็นที่สุด",
+        encouragement: 'สุดยอดมาก! ซื้อผลไม้แล้วจ่ายเงินดิจิทัลผ่านฉลุย!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u11_l01',
+        badge_name: 'ปรมาจารย์สแกนโค้ด 📱✨',
+        message_th: 'ยินดีด้วยนะคนเก่ง! คุณสามารถเปิดแอป WeChat และ Alipay เพื่อสแกนจ่ายเงินได้อย่างมั่นใจแล้ว!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u11_l02',
+      lesson_number: 2,
+      title: {
+        zh: '扫我还是我扫你',
+        th: 'สแกนฉันหรือฉันสแกนคุณ?',
+        en: 'Scan Me or I Scan You?'
+      },
+      can_do: {
+        th: 'แยกระหว่างรหัสรับเงิน (收款码) กับรหัสจ่ายเงิน (付款码) และใช้คำถามทางเลือก "A 还是 B"',
+        en: 'Distinguish receive code from payment code and formulate alternative questions with "A 还是 B"'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ฟังคนจีนพูดว่า "你扫我还是我扫你" แล้วตอบรับได้อย่างถูกต้องทันที!',
+      vocabulary: [
+        {
+          id: 'hsk2_1107',
+          hanzi: '扫我',
+          pinyin: 'sǎo wǒ',
+          display_pinyin: 'sáo wǒ',
+          sandhi_rule: '3+3',
+          pinyin_tone: 'sao3wo3',
+          meaning_th: 'สแกนฉัน (ฉันเปิดโค้ดรับเงินให้คุณสแกน)',
+          meaning_en: 'scan me (scan my code)',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 18,
+          mnemonic: '扫 (เสียง 3) + 我 (เสียง 3) ชนกัน ผันเสียงเป็น sáo wǒ',
+          kid_mnemonic: 'ยกป้ายขึ้นมาบอกว่า "สแกนหนูได้เลยจ้า" = 扫我',
+          body_gesture: 'ชี้สองนิ้วเข้าหาตัวเองอย่างร่าเริง'
+        },
+        {
+          id: 'hsk2_1108',
+          hanzi: '我扫你',
+          pinyin: 'wǒ sǎo nǐ',
+          display_pinyin: 'wó sáo nǐ',
+          sandhi_rule: '3+3',
+          pinyin_tone: 'wo3sao3ni3',
+          meaning_th: 'ฉันสแกนคุณ (คุณเปิดโค้ดมา ฉันเอากล้องจ่อ)',
+          meaning_en: 'I scan you',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 25,
+          mnemonic: 'เสียง 3 สามคำติดกัน (wǒ sǎo nǐ) คำแรกและคำสองผันเป็นเสียงสอง = wó sáo nǐ',
+          kid_mnemonic: 'ถือกล้องเล็งไปที่เพื่อน ติ๊ดๆ ฉันสแกนเธอแล้วนะ = 我扫你',
+          body_gesture: 'ทำมือถือกล้องเล็งไปข้างหน้าเพื่อน'
+        },
+        {
+          id: 'hsk2_1109',
+          hanzi: '收款码',
+          pinyin: 'shōukuǎnmǎ',
+          display_pinyin: 'shōukuǎnmǎ',
+          pinyin_tone: 'shou1kuan3ma3',
+          meaning_th: 'คิวอาร์โค้ดรับเงิน (ร้านค้าตั้งไว้)',
+          meaning_en: 'merchant receive code',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะเบาๆ (反文旁)',
+          stroke_count: 20,
+          mnemonic: 'รับเงิน (收款) มีป้ายรหัสตั้งบนโต๊ะ (码) = คิวอาร์โค้ดรับเงิน',
+          kid_mnemonic: 'ป้ายตั้งหน้าร้าน มีรูปกระต่ายถือถุงเงิน = 收款码',
+          body_gesture: 'กางสองมือรองรับเงินระดับหน้าอก'
+        },
+        {
+          id: 'hsk2_1110',
+          hanzi: '付款码',
+          pinyin: 'fùkuǎnmǎ',
+          display_pinyin: 'fùkuǎnmǎ',
+          pinyin_tone: 'fu4kuan3ma3',
+          meaning_th: 'บาร์โค้ด/คิวอาร์โค้ดจ่ายเงิน (ลูกค้าเปิดในมือถือ)',
+          meaning_en: 'user payment code',
+          radical: '亻',
+          radical_name_th: 'หมวดคนยืน (单人旁)',
+          stroke_count: 16,
+          mnemonic: 'คน (亻) มอบเงินจ่าย (付) ให้แก่ผู้ขายผ่านรหัส (码) = คิวอาร์โค้ดจ่ายเงิน',
+          kid_mnemonic: 'เปิดมือถือมีแถบขีดๆ บาร์โค้ดพร้อมยื่นให้เครื่องยิง = 付款码',
+          body_gesture: 'ยื่นมือถือออกไปข้างหน้าให้แคชเชียร์ยิงบาร์โค้ด'
+        },
+        {
+          id: 'hsk2_1111',
+          hanzi: '扫码',
+          pinyin: 'sǎomǎ',
+          display_pinyin: 'sáomǎ',
+          sandhi_rule: '3+3',
+          pinyin_tone: 'sao3ma3',
+          meaning_th: 'สแกนรหัสคิวอาร์โค้ด',
+          meaning_en: 'to scan code',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 19,
+          mnemonic: '扫 (เสียง 3) + 码 (เสียง 3) ชนกัน ผันเป็น sáomǎ',
+          kid_mnemonic: 'สแกนรหัสเสียงดัง ติ๊ด! = 扫码',
+          body_gesture: 'เอียงมือถือลง 45 องศาทำท่าสแกน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎผันเสียงสามซ้อนสามพยางค์: 我扫你 (wǒ sǎo nǐ ➔ wó sáo nǐ)',
+        description_th: 'เมื่อมีวรรณยุกต์เสียงที่ 3 เรียงติดกันสามคำ โดยโครงสร้างเป็น ประธาน + กริยา + กรรม สองพยางค์แรกจะผันขึ้นเป็นเสียงที่ 2 ทั้งคู่',
+        example: '我扫你 (wǒ sǎo nǐ) ➔ อ่านออกเสียงจริงว่า wó sáo nǐ (หวอ ส๋าว หนี่)',
+        fun_metaphor: 'คลื่นทะเลสองลูกแรกต้องยกตัวสูงขึ้น เพื่อส่งลูกที่สามให้ตกลงสู่ฝั่งอย่างนุ่มนวล!',
+        reassurance: 'ลองพูดช้าๆ: หวอ-ส๋าว-หนี่ ลื่นไหลและเป็นธรรมชาติมาก ไม่ต้องสะดุดคอเลย!'
+      },
+      grammar_bite: {
+        title: 'ประโยคคำถามทางเลือก: A 还是 B？ (A หรือว่า B?)',
+        explanation_th: 'ใช้คำว่า 还是 (háishi) คั่นระหว่างสองตัวเลือกเพื่อถามคู่สนทนาว่าจะเลือกแบบไหน',
+        patterns: [
+          {
+            formula: '[ตัวเลือก A] + 还是 + [ตัวเลือก B]？',
+            zh: '扫我还是我扫你？',
+            pinyin: 'Sáo wǒ háishi wó sáo nǐ?',
+            th: 'สแกนฉันหรือฉันสแกนคุณ?',
+            en: 'Scan me or I scan you?'
+          },
+          {
+            formula: '这 + 是 + [ประเภทของโค้ด]',
+            zh: '这是收款码，请扫这里。',
+            pinyin: 'Zhè shì shōukuǎnmǎ, qǐng sǎo zhèlǐ.',
+            th: 'นี่คือโค้ดรับเงิน กรุณาสแกนตรงนี้ครับ',
+            en: 'This is the receive code, please scan here.'
+          },
+          {
+            formula: '请 + 出示 + [สิ่งของ]',
+            zh: '请出示付款码。',
+            pinyin: 'Qǐng chūshì fùkuǎnmǎ.',
+            th: 'กรุณาแสดงบาร์โค้ดจ่ายเงินด้วยครับ',
+            en: 'Please show your payment code.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'คนขายชานม 🧑‍🍳',
+          zh: '你好！一共是十六块钱。扫我还是我扫你？',
+          pinyin: 'Nǐ hǎo! Yígòng shì shíliù kuài qián. Sáo wǒ háishi wó sáo nǐ?',
+          th: 'สวัสดีครับ! ทั้งหมด 16 หยวนครับ สแกนผมหรือผมสแกนคุณดีครับ?',
+          en: 'Hello! Total is 16 yuan. Scan me or I scan you?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我扫你吧！请问收款码在哪儿？',
+          pinyin: 'Wó sáo nǐ ba! Qǐngwèn shōukuǎnmǎ zài nǎr?',
+          th: 'ฉันสแกนคุณดีกว่าครับ! ขอถามหน่อย โค้ดรับเงินอยู่ที่ไหนครับ?',
+          en: 'I scan you then! Where is the receive code?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'คนขายชานม 🧑‍🍳',
+          zh: '在这儿，绿色的是微信，蓝色的是支付宝。',
+          pinyin: 'Zài zhèr, lǜsè de shì Wēixìn, lánsè de shì Zhīfùbǎo.',
+          th: 'อยู่ตรงนี้ครับ สีเขียวคือ WeChat ส่วนสีฟ้าคือ Alipay ครับ',
+          en: 'Right here, green is WeChat and blue is Alipay.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，扫好了！你看一下。',
+          pinyin: 'Hǎo de, sǎo hǎo le! Nǐ kàn yíxià.',
+          th: 'โอเค สแกนเสร็จเรียบร้อยแล้วครับ คุณช่วยดูหน่อยนะครับ',
+          en: 'Okay, scanned done! Please take a look.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อแม่ค้าพูดว่า '你扫我' หมายความว่าให้คุณทำสิ่งใด?",
+          options: [
+            'ให้คุณเปิดกล้องในมือถือเพื่อสแกนคิวอาร์โค้ดของแม่ค้า',
+            'ให้คุณเปิดบาร์โค้ดจ่ายเงินแล้วยื่นให้แม่ค้ายิง',
+            'ให้คุณจ่ายเงินสด',
+            'ให้คุณรอเงินทอน'
+          ],
+          correct_index: 0,
+          explanation_th: "'你扫我' แปลว่า 'คุณสแกนฉัน' หมายถึงลูกค้านำมือถือมาสแกนโค้ดของทางร้าน",
+          encouragement: 'เข้าใจลึกซึ้ง! ไม่สับสนระหว่างคุณสแกนฉันกับฉันสแกนคุณแล้ว!'
+        },
+        {
+          type: 'tone_match',
+          question_th: "วลี '我扫你' (wǒ sǎo nǐ) เมื่ออ่านตามกฎการผันเสียงสามชนกัน ต้องออกเสียงตามข้อใด?",
+          options: [
+            'wó sáo nǐ (หวอ ส๋าว หนี่)',
+            'wǒ sǎo nǐ (หว่อ ส่าว หนี่)',
+            'wò sào nǐ (โว่ ซ่าว หนี่)',
+            'wō sāō nī (วอ ซาว นี)'
+          ],
+          correct_index: 0,
+          explanation_th: "เสียง 3 เรียงกัน 3 คำตามโครงสร้าง ประธาน + กริยา + กรรม สองคำแรกจะผันเป็นเสียง 2 คือ 'wó sáo nǐ'",
+          encouragement: 'หูเฉียบคมมาก! กฎผันเสียงสามซ้อนสามเข้าใจทะลุปรุโปร่ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยคคำถามทางเลือก: "สแกนฉันหรือฉันสแกนคุณ?"',
+          tokens: ['还是', '我扫你', '扫我'],
+          correct_sequence: ['扫我', '还是', '我扫你'],
+          pinyin: 'Sáo wǒ háishi wó sáo nǐ',
+          meaning_th: 'สแกนฉันหรือฉันสแกนคุณ?',
+          explanation_th: 'โครงสร้าง A 还是 B: 扫我 (A) + 还是 (หรือ) + 我扫你 (B)',
+          encouragement: 'เรียงประโยคยอดฮิตได้เป๊ะ 100% เลย!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "ป้ายคิวอาร์โค้ดตั้งโต๊ะของร้านค้า เรียกว่าอะไรในภาษาจีน?",
+          options: [
+            '收款码 (shōukuǎnmǎ)',
+            '付款码 (fùkuǎnmǎ)',
+            '密码 (mìmǎ)',
+            '电话号码 (diànhuà hàomǎ)'
+          ],
+          correct_index: 0,
+          explanation_th: "'收款码' คือ รหัสสำหรับรับเงิน (ร้านค้าตั้งไว้ให้ลูกค้าสแกน)",
+          encouragement: 'แม่นยำมาก! ไม่หยิบผิดรหัสแน่นอน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'แม่ค้าแผงขายผลไม้ชี้ไปที่แผ่นป้ายสี่เหลี่ยมสีเขียวบนโต๊ะ แล้วพูดว่า "你扫我吧，扫完让我看一下屏幕。" คุณควรทำอย่างไร?',
+        options: [
+          'เปิดแอป WeChat กดเมนูสแกน (扫一扫) จ่อไปที่ป้าย แล้วโชว์หน้าจอที่จ่ายสำเร็จให้แม่ค้าดู',
+          'ยื่นโทรศัพท์ให้แม่ค้าถือไปกดเอง',
+          'เปิดกระเป๋าตังค์หยิบเงินเหรียญออกมานับ',
+          'บอกแม่ค้าว่าไม่ซื้อแล้วและเดินหนี'
+        ],
+        correct_index: 0,
+        explanation_th: "แม่ค้าบอกว่า '你扫我吧' คือให้เราสแกนป้ายของร้าน และ '让我看一下屏幕' คือขอดูหน้าจอยืนยันการโอนเงิน",
+        encouragement: 'เยี่ยมยอด! ซื้อของตลาดสดในจีนได้ราบรื่นเหมือนคนท้องถิ่น!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u11_l02',
+        badge_name: 'ผู้เชี่ยวชาญรหัสคู่ดิจิทัล 🎯💳',
+        message_th: 'ยินดีด้วยนะคนเก่ง! ตอนนี้คุณแยก 收款码 กับ 付款码 และตอบโต้ประโยค 扫我还是我扫你 ได้อย่างคล่องแคล่ว!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u11_l03',
+      lesson_number: 3,
+      title: {
+        zh: '转账与零钱',
+        th: 'โอนเงิน & เงินทอน',
+        en: 'Transfer & Small Change'
+      },
+      can_do: {
+        th: 'พูดขอโอนเงิน ตรวจสอบยอดเงินคงเหลือ และจัดการกรณีต้องใช้เงินสดหรือขอเงินทอน',
+        en: 'Discuss money transfer, check balance, and manage cash or small change when necessary'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พูดถามว่า "ยอดเงินเหลือเท่าไหร่" และ "มีเงินทอนไหม" เป็นภาษาจีนได้คล่อง!',
+      vocabulary: [
+        {
+          id: 'hsk2_1112',
+          hanzi: '转账',
+          pinyin: 'zhuǎnzhàng',
+          display_pinyin: 'zhuǎnzhàng',
+          pinyin_tone: 'zhuan3zhang4',
+          meaning_th: 'โอนเงิน',
+          meaning_en: 'to transfer money',
+          radical: '车',
+          radical_name_th: 'หมวดรถ (车字旁)',
+          stroke_count: 18,
+          mnemonic: 'ล้อรถ (车) ขับเคลื่อนส่งต่อบัญชีเงินตรา (账) = โอนเงิน',
+          kid_mnemonic: 'รถบรรทุกเหรียญทองวิ่งข้ามจากเครื่องเราไปเครื่องเพื่อน = 转账',
+          body_gesture: 'ทำมือผลักไปข้างหน้าเหมือนส่งเงินให้เพื่อน'
+        },
+        {
+          id: 'hsk2_1113',
+          hanzi: '余额',
+          pinyin: 'yú\'é',
+          display_pinyin: 'yú\'é',
+          pinyin_tone: 'yu2e2',
+          meaning_th: 'ยอดเงินคงเหลือ',
+          meaning_en: 'balance / remaining amount',
+          radical: '人',
+          radical_name_th: 'หมวดคน (人字旁)',
+          stroke_count: 22,
+          mnemonic: 'สิ่งของที่ยังเหลืออยู่ (余) ในบัญชีจำนวนเต็ม (额) = ยอดเงินคงเหลือ',
+          kid_mnemonic: 'เปิดดูกระปุกออมสิน นับดูว่าเหลือกี่เหรียญ = 余额',
+          body_gesture: 'เอามือแตะหน้าผากดูตัวเลขในหน้าจอ'
+        },
+        {
+          id: 'hsk2_1114',
+          hanzi: '零钱',
+          pinyin: 'língqián',
+          display_pinyin: 'língqián',
+          pinyin_tone: 'ling2qian2',
+          meaning_th: 'เศษเงิน / เงินทอน / เงินย่อย',
+          meaning_en: 'small change / pocket money',
+          radical: '雨',
+          radical_name_th: 'หมวดฝน (雨字头)',
+          stroke_count: 23,
+          mnemonic: 'หยดฝนเม็ดเล็กๆ (零) เทียบกับเหรียญเงินกริ๊งกร๊าง (钱) = เศษเงิน',
+          kid_mnemonic: 'เหรียญห้าเหรียญสิบในกระเป๋าเสื้อดังกริ๊งๆ = 零钱',
+          body_gesture: 'เขย่ากระเป๋ากางเกงทำเสียงเหรียญกระทบกัน'
+        },
+        {
+          id: 'hsk2_1115',
+          hanzi: '现金',
+          pinyin: 'xiànjīn',
+          display_pinyin: 'xiànjīn',
+          pinyin_tone: 'xian4jin1',
+          meaning_th: 'เงินสด',
+          meaning_en: 'cash',
+          radical: '王',
+          radical_name_th: 'หมวดหยก/ราชา (王字旁)',
+          stroke_count: 16,
+          mnemonic: 'สิ่งมีค่าที่ปรากฏอยู่ตรงหน้าตอนนี้ (现) เป็นโลหะทองคำ (金) = เงินสด',
+          kid_mnemonic: 'หยิบธนบัตรสีแดงใบใหญ่ๆ ออกมาถือ = 现金',
+          body_gesture: 'ทำมือนับธนบัตรอย่างระมัดระวัง'
+        },
+        {
+          id: 'hsk2_1116',
+          hanzi: '找零',
+          pinyin: 'zhǎolíng',
+          display_pinyin: 'zhǎolíng',
+          pinyin_tone: 'zhao3ling2',
+          meaning_th: 'ทอนเงิน',
+          meaning_en: 'to give change',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 19,
+          mnemonic: 'ใช้มือค้นหา (找) เหรียญย่อยๆ (零) ส่งคืนลูกค้า = ทอนเงิน',
+          kid_mnemonic: 'แม่ค้าค้นเหรียญในลิ้นชักมายื่นให้หนู = 找零',
+          body_gesture: 'ผายมือยื่นเงินทอนให้คู่สนทนา'
+        },
+        {
+          id: 'hsk2_1117',
+          hanzi: '充值',
+          pinyin: 'chōngzhí',
+          display_pinyin: 'chōngzhí',
+          pinyin_tone: 'chong1zhi2',
+          meaning_th: 'เติมเงิน',
+          meaning_en: 'to recharge / top up',
+          radical: '亠',
+          radical_name_th: 'หมวดหัวหมวก (文字头)',
+          stroke_count: 16,
+          mnemonic: 'เติมให้เต็มเปี่ยม (充) เพื่อเพิ่มมูลค่าเงินในบัญชี (值) = เติมเงิน',
+          kid_mnemonic: 'เสียบสายชาร์จพลังเหรียญทองให้กระเป๋าตังค์ = 充值',
+          body_gesture: 'ชูกำปั้นขึ้นแล้วทุบลงเบาๆ เหมือนปั๊มพลัง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การทอดเสียงต่ำของวรรณยุกต์เสียงที่ 3 ในคำว่า 找零 (zhǎolíng)',
+        description_th: 'เมื่อเสียง 3 อยู่หน้าเสียง 2 คำว่า 找 (zhǎo) จะออกเป็นเสียงครึ่งเสียงสาม (Half-Third Tone) โดยกดเสียงลงต่ำที่ระดับ 21 แล้วสไลด์ขึ้นตามเสียง 2 (líng)',
+        example: '找零 (zhǎolíng), 找钱 (zhǎoqián), 买茶 (mǎichá)',
+        fun_metaphor: 'เหมือนก้าวลงบันไดขั้นล่างสุดก่อน แล้วค่อยกระโดดสไลด์ขึ้นบันไดเลื่อน!',
+        reassurance: 'กดเสียงต่ำลงแล้วเชิดหน้าขึ้นตามเสียง líng ได้อย่างสบายใจเลย!'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการทอนเงิน: 找 + [ผู้รับ] + [จำนวนเงิน]',
+        explanation_th: 'คำว่า 找 (zhǎo) นอกจากแปลว่า "หา" แล้ว ยังแปลว่า "ทอนเงิน" เมื่อตามด้วยผู้รับและจำนวนเงินทอน',
+        patterns: [
+          {
+            formula: '找 + [ผู้รับ] + [จำนวนเงิน]',
+            zh: '找您十五块钱。',
+            pinyin: 'Zhǎo nín shíwǔ kuài qián.',
+            th: 'ทอนเงินให้ท่าน 15 หยวนครับ',
+            en: 'Give you 15 yuan change.'
+          },
+          {
+            formula: '[ประธาน] + 没有 + 网，可以 + 用现金吗？',
+            zh: '我的手机没有网，可以用现金吗？',
+            pinyin: 'Wǒ de shǒujī méiyǒu wǎng, kěyǐ yòng xiànjīn ma?',
+            th: 'มือถือฉันไม่มีเน็ต ใช้เงินสดได้ไหมครับ?',
+            en: 'My phone has no internet, can I use cash?'
+          },
+          {
+            formula: '余额 + 不够 + 了，需要 + 充值',
+            zh: '微信余额不够了，我需要充值。',
+            pinyin: 'Wēixìn yú\'é bú gòu le, wǒ xūyào chōngzhí.',
+            th: 'ยอดเงินใน WeChat ไม่พอแล้ว ฉันต้องเติมเงิน',
+            en: 'WeChat balance is not enough, I need to top up.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我的手机没有网了，请问可以收现金吗？',
+          pinyin: 'Nǐ hǎo! Wǒ de shǒujī méiyǒu wǎng le, qǐngwèn kěyǐ shōu xiànjīn ma?',
+          th: 'สวัสดีครับ! มือถือผมไม่มีเน็ตแล้ว ขอถามหน่อยรับเงินสดได้ไหมครับ?',
+          en: 'Hello! My phone has no network, may I ask if you accept cash?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ลุงร้านผลไม้ 👨‍🦳',
+          zh: '可以的！一共是三十五块，你有零钱吗？',
+          pinyin: 'Kěyǐ de! Yígòng shì sānshíwǔ kuài, nǐ yǒu língqián ma?',
+          th: 'ได้สิหลาน! ทั้งหมด 35 หยวน เธอมีเศษเงินไหม?',
+          en: 'Sure! Total is 35 yuan, do you have change?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我只有一百块现金。',
+          pinyin: 'Wǒ zhǐ yǒu yìbǎi kuài xiànjīn.',
+          th: 'ผมมีแต่แบงก์ร้อยหยวนครับ',
+          en: 'I only have a 100 yuan cash bill.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ลุงร้านผลไม้ 👨‍🦳',
+          zh: '没问题，找你六十五块钱，拿好啊！',
+          pinyin: 'Méi wèntí, zhǎo nǐ liùshíwǔ kuài qián, ná hǎo a!',
+          th: 'ไม่มีปัญหา ทอนเธอ 65 หยวน เก็บไว้ให้ดีนะ!',
+          en: 'No problem, here is 65 yuan change, keep it safe!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อแม่ค้าทอนเงินให้คุณแล้วพูดว่า '找你十五块' หมายถึงสิ่งใด?",
+          options: [
+            'ทอนเงินให้คุณ 15 หยวน',
+            'ขอเก็บเงินเพิ่ม 15 หยวน',
+            'ลดราคาให้ 15 หยวน',
+            'ให้คุณจ่ายเงินสด 15 หยวน'
+          ],
+          correct_index: 0,
+          explanation_th: "'找你 + [จำนวน]' แปลว่า ทอนเงินให้คุณ... ดังนั้น '找你十五块' คือ ทอนเงินให้คุณ 15 หยวน",
+          encouragement: 'เก่งมาก! จำความหมายคำว่า 找 ในบริบทซื้อขายได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ทอนเงินให้ท่าน 15 หยวน"',
+          tokens: ['十五块钱', '找', '您'],
+          correct_sequence: ['找', '您', '十五块钱'],
+          pinyin: 'Zhǎo nín shíwǔ kuài qián',
+          meaning_th: 'ทอนเงินให้ท่าน 15 หยวน',
+          explanation_th: 'โครงสร้าง 找: 找 (ทอน) + ผู้รับ (您) + จำนวนเงิน (十五块钱)',
+          encouragement: 'เรียงประโยคทอนเงินได้คล่องแคล่วเป๊ะสุดๆ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '金' ในคำว่า '现金' (เงินสด) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'โลหะและทองคำ',
+            'สายน้ำไหล',
+            'เปลวไฟร้อน',
+            'ผืนแผ่นดิน'
+          ],
+          correct_index: 0,
+          explanation_th: "หมวด '金' หมายถึง โลหะ หรือ ทองคำ ซึ่งเป็นสื่อกลางการแลกเปลี่ยนเงินสดในอดีต",
+          encouragement: 'ยอดเยี่ยมมาก! รู้ลึกถึงที่มาของตัวอักษรจีนเลย!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "หากต้องการบอกว่า 'มือถือของฉันไม่มีอินเทอร์เน็ต' ควรพูดว่าอย่างไร?",
+          options: [
+            '我的手机没有网。 (Wǒ de shǒujī méiyǒu wǎng.)',
+            '我的手机很贵。 (Wǒ de shǒujī hěn guì.)',
+            '请给我发票。 (Qǐng gěi wǒ fāpiào.)',
+            '我认识他。 (Wǒ rènshi tā.)'
+          ],
+          correct_index: 0,
+          explanation_th: "'没有网' หมายถึง ไม่มีเน็ต / ไม่มีสัญญาณอินเทอร์เน็ต",
+          encouragement: 'ตอบได้ฉับไว! แก้ปัญหาเฉพาะหน้าในจีนได้สบาย!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณต้องการเติมเงินบัตรเดินทางแต่หน้าจอมือถือขึ้นแจ้งเตือนว่า "余额不足" (ยอดเงินไม่พอ) คุณต้องการแจ้งพนักงานที่เคาน์เตอร์ว่าขอจ่ายด้วยเงินสด ควรพูดว่าอย่างไร?',
+        options: [
+          '你好！我的余额不够了，可以用现金充值吗？ (Nǐ hǎo! Wǒ de yú\'é bú gòu le, kěyǐ yòng xiànjīn chōngzhí ma?)',
+          '再见，明天见！ (Zàijiàn, míngtiān jiàn!)',
+          '对不起，我不是中国人。 (Duìbuqǐ, wǒ bú shì Zhōngguó rén.)',
+          '这个太辣了。 (Zhè ge tài là le.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '我的余额不够了，可以用现金充值吗？' ครอบคลุมทั้งปัญหา (ยอดเงินไม่พอ) และวิธีแก้ไข (ขอใช้เงินสดเติมเงิน)",
+        encouragement: 'ชาญฉลาดมาก! เอาชีวิตรอดในสถานการณ์เงินดิจิทัลติดขัดได้สมบูรณ์แบบ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u11_l03',
+        badge_name: 'ผู้จัดการเงินสดและดิจิทัล 💰🤝',
+        message_th: 'ยินดีด้วยนะคนเก่ง! คุณสามารถขอจ่ายเงินสด ตรวจสอบยอดเงิน และรับเงินทอนได้อย่างถูกต้องแม่นยำ!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u11_l04',
+      lesson_number: 4,
+      title: {
+        zh: '菜市场扫码通关',
+        th: 'บอสชาเลนจ์: เอาชีวิตรอดตลาดสดเฉิงตู',
+        en: 'Boss Challenge: Chengdu Market Pay'
+      },
+      can_do: {
+        th: 'บูรณาการทักษะการสแกนจ่าย WeChat/Alipay การแก้ปัญหาเน็ตช้า และการขอเงินทอนอย่างราบรื่นในสถานการณ์ตลาดจริง',
+        en: 'Integrate WeChat/Alipay scan & pay, handling network delays, and asking for change smoothly in real market scenarios'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่ สแกนจ่ายค่าผลไม้ที่ตลาดสดในเฉิงตูสำเร็จ 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_1118',
+          hanzi: '网络',
+          pinyin: 'wǎngluò',
+          display_pinyin: 'wǎngluò',
+          pinyin_tone: 'wang3luo4',
+          meaning_th: 'อินเทอร์เน็ต / เครือข่าย',
+          meaning_en: 'network / internet',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 15,
+          mnemonic: 'เส้นไหมร้อยเรียงกันเป็นตาข่ายคลุมโลก (网 + 络) = เครือข่ายอินเทอร์เน็ต',
+          kid_mnemonic: 'ใยแมงมุมวิเศษเชื่อมโยงคอมพิวเตอร์ทั่วโลก = 网络',
+          body_gesture: 'กางนิ้วมือทั้งสองข้างสานกันเป็นตาข่าย'
+        },
+        {
+          id: 'hsk2_1119',
+          hanzi: '慢',
+          pinyin: 'màn',
+          display_pinyin: 'màn',
+          pinyin_tone: 'man4',
+          meaning_th: 'ช้า',
+          meaning_en: 'slow',
+          radical: '忄',
+          radical_name_th: 'หมวดใจยืน (竖心旁)',
+          stroke_count: 14,
+          mnemonic: 'หัวใจ (忄) ที่ใจเย็นไม่รีบร้อนเคลื่อนไหว = ช้า',
+          kid_mnemonic: 'เจ้าเต่าตัวน้อยค่อยๆ คลานต้วมเตี้ยม = 慢',
+          body_gesture: 'ก้าวเท้าช้าๆ เหมือนเต่าเดิน'
+        },
+        {
+          id: 'hsk2_1120',
+          hanzi: '稍等',
+          pinyin: 'shāoděng',
+          display_pinyin: 'shāoděng',
+          pinyin_tone: 'shao1deng3',
+          meaning_th: 'รอสักครู่',
+          meaning_en: 'wait a moment',
+          radical: '禾',
+          radical_name_th: 'หมวดรวงข้าว (禾木旁)',
+          stroke_count: 24,
+          mnemonic: 'ต้นข้าว (禾) ค่อยๆ โต ขอให้คอยท่า (等) สักครู่หนึ่ง = รอสักครู่',
+          kid_mnemonic: 'ยกนิ้วชี้บอกเพื่อนว่า "แป๊บเดียวนะจ๊ะ" = 稍等',
+          body_gesture: 'ยกฝ่ามือข้างขวาตั้งขึ้นระดับอกเป็นสัญญาณให้รอสักครู่'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำสุภาพ 稍等 (shāoděng) อย่างเป็นมิตร',
+        description_th: 'คำว่า 稍 (shāo) เป็นเสียง 1 สูงยาว ส่วน 等 (děng) เป็นเสียง 3 ต่ำลึก เมื่อพูดติดกันให้ทอดเสียงเบาๆ นุ่มนวลเพื่อแสดงความเกรงใจ',
+        example: '请稍等一下 (Qǐng shāoděng yíxià)',
+        fun_metaphor: 'เหมือนเสียงกระดิ่งใสๆ กริ๊งหนึ่งทีก่อนบอกให้เพื่อนนั่งพักสักครู่!',
+        reassurance: 'พูดประโยคนี้พร้อมรอยยิ้ม คนฟังจะรู้สึกอบอุ่นและยินดีรอเสมอ!'
+      },
+      grammar_bite: {
+        title: 'สูตรขอให้รอสักครู่: 请 + 稍等 + 一下',
+        explanation_th: 'เมื่อเกิดความล่าช้าทางเทคนิค เช่น เน็ตหมุน หรือกำลังเปิดแอป ให้ใช้คำว่า 请稍等一下 เพื่อให้บรรยากาศการสนทนาเป็นไปอย่างราบรื่น',
+        patterns: [
+          {
+            formula: '网络 + 有点儿 + 慢，请 + 稍等',
+            zh: '网络有点儿慢，请稍等一下。',
+            pinyin: 'Wǎngluò yǒudiǎnr màn, qǐng shāoděng yíxià.',
+            th: 'สัญญาณเน็ตช้าไปนิดนึง กรุณารอสักครู่นะครับ',
+            en: 'The network is a bit slow, please wait a moment.'
+          },
+          {
+            formula: '付 + 成功 + 了，您 + 看一下',
+            zh: '已经支付成功了，您看一下。',
+            pinyin: 'Yǐjīng zhīfù chénggōng le, nín kàn yíxià.',
+            th: 'จ่ายเงินสำเร็จเรียบร้อยแล้ว ท่านช่วยตรวจดูหน่อยนะครับ',
+            en: 'Payment is successful, please take a look.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'ป้าขายผลไม้เฉิงตู 👵',
+          zh: '小伙子，这箱草莓一共四十五块钱。扫码还是现金？',
+          pinyin: 'Xiǎohuǒzi, zhè xiāng cǎoméi yígòng sìshíwǔ kuài qián. Sáomǎ háishi xiànjīn?',
+          th: 'พ่อหนุ่ม สตรอว์เบอร์รีกล่องนี้ทั้งหมด 45 หยวนจ้ะ สแกนโค้ดหรือเงินสดดี?',
+          en: 'Young man, this box of strawberries is 45 yuan. Scan code or cash?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我扫您的微信收款码！不过这里的网络有点儿慢，请稍等一下。',
+          pinyin: 'Wó sáo nín de Wēixìn shōukuǎnmǎ! Búguò zhèlǐ de wǎngluò yǒudiǎnr màn, qǐng shāoděng yíxià.',
+          th: 'ผมสแกนคิวอาร์โค้ด WeChat ของคุณป้าครับ! แต่เน็ตตรงนี้ช้าไปนิดนึง กรุณารอสักครู่นะครับ',
+          en: 'I scan your WeChat receive code! But network here is a bit slow, please wait a moment.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'ป้าขายผลไม้เฉิงตู 👵',
+          zh: '不着急，慢慢来！连上菜市场的免费Wi-Fi了吗？',
+          pinyin: 'Bù zháojí, mànmàn lái! Lián shàng càishìchǎng de miǎnfèi Wi-Fi le ma?',
+          th: 'ไม่ต้องรีบ ค่อยๆ ทำจ้ะ! ต่อไวไฟฟรีของตลาดสดได้ไหม?',
+          en: 'No hurry, take your time! Connected to the market free Wi-Fi?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '连上了！四十五块付好了，您看屏幕，谢谢您！',
+          pinyin: 'Lián shàng le! Sìshíwǔ kuài fù hǎo le, nín kàn píngmù, xièxie nín!',
+          th: 'ต่อติดแล้วครับ! จ่าย 45 หยวนเรียบร้อยแล้ว ป้าดูหน้าจอได้เลยครับ ขอบคุณครับ!',
+          en: 'Connected! 45 yuan paid, please check the screen, thank you!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อสัญญาณอินเทอร์เน็ตหมุนช้า ประโยคใดเหมาะสมที่สุดในการบอกคู่สนทนา?",
+          options: [
+            '网络有点儿慢，请稍等一下。',
+            '我不要了，谢谢。',
+            '这太便宜了。',
+            '请问高铁站在哪儿？'
+          ],
+          correct_index: 0,
+          explanation_th: "'网络有点儿慢，请稍等一下。' แปลว่า สัญญาณเน็ตช้าไปนิดนึง กรุณารอสักครู่นะครับ สุภาพและตรงตามสถานการณ์ที่สุด",
+          encouragement: 'แม่นยำและสุภาพมาก! บ่งบอกถึงความเป็นมืออาชีพ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '慢' (ช้า) มีหมวดนำใจยืน '忄' สื่อถึงสิ่งใด?",
+          options: [
+            'สภาวะอารมณ์และจิตใจที่ไม่รีบร้อน',
+            'การก้าวเท้าเดิน',
+            'ยานพาหนะติดไฟแดง',
+            'สายน้ำไหลเชี่ยว'
+          ],
+          correct_index: 0,
+          explanation_th: "หมวด '忄' (竖心旁) สื่อถึงจิตใจและความรู้สึก ช้าๆ ใจเย็นๆ ไม่รีบร้อน",
+          encouragement: 'จำหมวดนำได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สัญญาณเน็ตช้าไปนิดนึง กรุณารอสักครู่"',
+          tokens: ['请稍等', '慢', '有点儿', '网络'],
+          correct_sequence: ['网络', '有点儿', '慢', '请稍等'],
+          pinyin: 'Wǎngluò yǒudiǎnr màn, qǐng shāoděng',
+          meaning_th: 'สัญญาณเน็ตช้าไปนิดนึง กรุณารอสักครู่',
+          explanation_th: 'หัวข้อ (网络) + ระดับ (有点儿) + คุณศัพท์ (慢) + คำขอร้อง (请稍等)',
+          encouragement: 'ต่อบล็อกเลโก้ประโยคยาวได้เนียนกริบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '稍等' (shāoděng) มีความหมายตรงกับภาษาไทยว่าอย่างไร?",
+          options: [
+            'รอสักครู่',
+            'ไปเดี๋ยวนี้',
+            'เสร็จเรียบร้อย',
+            'ไม่เป็นไร'
+          ],
+          correct_index: 0,
+          explanation_th: "'稍等' แปลว่า รอสักครู่ มักใช้คู่กับ 一下 เป็น '稍等一下'",
+          encouragement: 'จำศัพท์สำคัญได้ขึ้นใจแล้ว!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณยืนอยู่ที่แผงขายผลไม้ในเฉิงตู พ่อค้าแจ้งยอด 45 หยวน หน้าจอมือถือของคุณหมุนเพราะสัญญาณเน็ตช้า พ่อค้าเริ่มมองหน้า คุณควรพูดประโยคใดเพื่อให้พ่อค้าสบายใจและรอคุณสแกนจ่าย?',
+        options: [
+          '老板，这里的网络有点儿慢，请稍等一下，我马上扫！ (Lǎobǎn, zhèlǐ de wǎngluò yǒudiǎnr màn, qǐng shāoděng yíxià, wǒ mǎshàng sǎo!)',
+          '不要看了，再见！ (Bú yào kàn le, zàijiàn!)',
+          '苹果太贵了，能不能免费？ (Píngguǒ tài guì le, néng bu néng miǎnfèi?)',
+          '他是哪国人？ (Tā shì nǎ guó rén?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '老板，这里的网络有点儿慢，请稍等一下，我马上扫！' แจ้งทั้งสาเหตุ ขอให้รออย่างสุภาพ และยืนยันว่าจะจ่ายทันที พ่อค้าจะประทับใจและรอด้วยรอยยิ้ม",
+        encouragement: 'ยินดีด้วย! คุณพิชิตบอสใหญ่ สแกนจ่ายในตลาดสดเฉิงตูสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u11_master',
+        badge_name: 'ผู้พิชิตกระเป๋าเงินดิจิทัลไร้พรมแดน 🏆📱',
+        message_th: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Unit 11 สมบูรณ์แบบ พร้อมใช้ชีวิตไร้เงินสด สแกนจ่ายในประเทศจีนได้อย่างมั่นใจ!',
+        xp_reward: 200
+      }
+    }
+  ]
+};
