@@ -77,11 +77,11 @@ flowchart TD
   - **StudioNavbar & StudioReviewPanel & StudioLayout:** ควบคุมการเปลี่ยนแท็บ ตรวจสอบสถานะการบันทึก และส่งออก JSON สะดวก
 
 ### `TASK-604`: Live Interactive Mobile Device Preview & Audio Sandbox
-- [ ] พัฒนาหน้าจอจำลองและการโต้ตอบสด:
-  - **Split-Screen Layout:** ด้านซ้ายเป็นพื้นที่แก้ไข (Editor Form) และด้านขวาเป็นกรอบสมาร์ตโฟนจำลอง (Mobile Device Frame)
-  - **Hot Real-time Rendering:** นำคอมโพเนนต์จริง (`VocabCard`, `DialoguePlayer`, `QuizContainer`) มารันในกรอบมือถือ ตอบสนองทันทีที่พิมพ์ข้อมูล
-  - **In-Studio Audio Sandbox:** ปุ่มทดสอบเสียงภาษาจีนกลาง (`zh-CN`) ปรับความเร็วได้ (0.75x, 1.0x)
-  - Responsive Mobile Adaptability: รองรับการสลับแท็บไป-มาเมื่อเปิดใช้งานบนหน้าจอมือถือหรือแท็บเล็ต
+- [x] พัฒนาหน้าจอจำลองและการโต้ตอบสด:
+  - **Split-Screen Layout:** ด้านซ้ายเป็นพื้นที่แก้ไข (Editor Form) และด้านขวาเป็นกรอบสมาร์ตโฟนจำลอง (Mobile Device Frame) พร้อมปุ่มย่อ/ขยาย
+  - **Hot Real-time Rendering:** นำคอมโพเนนต์จริง (`VocabCard`, `DialoguePlayer`, `QuizContainer`) มารันในกรอบมือถือ ตอบสนองทันทีที่พิมพ์ข้อมูล พร้อมระบบ Carousel Pager และ Reset Quiz
+  - **In-Studio Audio Sandbox:** ปุ่มทดสอบเสียงภาษาจีนกลาง (`zh-CN`) ปรับความเร็วได้ (0.75x, 1.0x) พร้อมระบบวิเคราะห์ Tone Sandhi (3+3 -> 2+3)
+  - Responsive Mobile Adaptability: รองรับการสลับแท็บไป-มาเมื่อเปิดใช้งานบนหน้าจอมือถือหรือแท็บเล็ต ด้วย Floating Action Button (FAB) และ Slide-over Overlay Drawer
 
 ### `TASK-605`: Zero-Token Git Hand-off, PR Template & Playwright E2E Suite
 - [ ] พัฒนาระบบส่งมอบงานสู่ GitHub และชุดทดสอบอัตโนมัติ:

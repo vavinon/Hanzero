@@ -67,8 +67,8 @@ export interface DialoguePlayerProps {
 /**
  * Extracts a friendly avatar emoji / badge based on speaker name or identifier.
  */
-function getSpeakerAvatar(speaker: 'A' | 'B' | 'C', speakerName: string): string {
-  const lowerName = speakerName.toLowerCase();
+function getSpeakerAvatar(speaker: 'A' | 'B' | 'C', speakerName?: string): string {
+  const lowerName = (speakerName || '').toLowerCase();
   if (lowerName.includes('🐰') || lowerName.includes('tutu') || lowerName.includes('ทู่ทู่')) {
     return '🐰';
   }

@@ -14,4 +14,6 @@ export * from './DialogueComposer';
 export * from './QuizItemCard';
 export * from './QuizComposer';
 export * from './StudioReviewPanel';
+export * from './AudioPreviewSandbox';
+export * from './MobilePreviewFrame';
 export * from './StudioLayout';

@@ -20,7 +20,8 @@ import { VocabComposer } from './VocabComposer';
 import { DialogueComposer } from './DialogueComposer';
 import { QuizComposer } from './QuizComposer';
 import { StudioReviewPanel } from './StudioReviewPanel';
-import { AlertCircle, Upload, X, AlertTriangle } from 'lucide-react';
+import { MobilePreviewFrame } from './MobilePreviewFrame';
+import { AlertCircle, Upload, X, AlertTriangle, Smartphone } from 'lucide-react';
 
 export interface StudioLayoutProps {
   onExit: () => void;
@@ -58,6 +59,8 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
   } = useStudioDraft();
 
   const [activeTab, setActiveTab] = useState<StudioTab>('metadata');
+  const [showDesktopPreview, setShowDesktopPreview] = useState<boolean>(true);
+  const [showMobileDrawer, setShowMobileDrawer] = useState<boolean>(false);
   const [showImportModal, setShowImportModal] = useState(false);
   const [showResetModal, setShowResetModal] = useState(false);
   const [importText, setImportText] = useState('');
@@ -171,65 +174,233 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
         onExit={onExit}
       />
 
-      {/* Main Content Area (Persistent Tabs via CSS Visibility) */}
-      <main style={{ flex: 1, paddingBottom: '60px' }}>
-        {/* Tab 1: Metadata */}
-        <div style={{ display: activeTab === 'metadata' ? 'block' : 'none' }}>
-          <LessonMetadataForm
-            draft={draft}
-            activeLesson={currentLesson}
-            onUpdateUnitMetadata={updateUnitMetadata}
-            onUpdateLessonMetadata={updateLessonMetadata}
-            onSelectLessonIndex={setActiveLessonIndex}
-          />
-        </div>
+      {/* Responsive Media Query Styles */}
+      <style>{`
+        @media (max-width: 1023px) {
+          .studio-desktop-preview-pane {
+            display: none !important;
+          }
+          .studio-mobile-preview-fab {
+            display: flex !important;
+          }
+          .studio-preview-toggle-btn {
+            display: none !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          .studio-mobile-preview-fab {
+            display: none !important;
+          }
+          .studio-preview-toggle-btn {
+            display: inline-flex !important;
+          }
+        }
+      `}</style>
 
-        {/* Tab 2: Vocab */}
-        <div style={{ display: activeTab === 'vocab' ? 'block' : 'none' }}>
-          <VocabComposer
-            vocabList={currentLesson.vocabulary}
-            onAddVocab={addVocab}
-            onUpdateVocab={updateVocab}
-            onRemoveVocab={removeVocab}
-            onReorderVocab={reorderVocab}
-          />
-        </div>
+      {/* Desktop Preview Toggle Bar */}
+      <div
+        style={{
+          maxWidth: '1600px',
+          width: '100%',
+          margin: '0 auto',
+          padding: '8px 16px 0 16px',
+          display: 'flex',
+          justifyContent: 'flex-end',
+          boxSizing: 'border-box',
+        }}
+      >
+        <button
+          type="button"
+          data-testid="toggle-desktop-preview-btn"
+          className="studio-preview-toggle-btn"
+          onClick={() => setShowDesktopPreview((prev) => !prev)}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '6px',
+            padding: '6px 14px',
+            backgroundColor: showDesktopPreview ? '#ECFDF5' : '#FFFFFF',
+            color: showDesktopPreview ? '#065F46' : '#4B5563',
+            border: `1px solid ${showDesktopPreview ? '#A7F3D0' : '#E5E7EB'}`,
+            borderRadius: '8px',
+            fontSize: '12px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          <Smartphone size={15} />
+          <span>{showDesktopPreview ? 'ซ่อนกรอบมือถือ' : '📱 แสดงกรอบมือถือ'}</span>
+        </button>
+      </div>
 
-        {/* Tab 3: Dialogue */}
-        <div style={{ display: activeTab === 'dialogue' ? 'block' : 'none' }}>
-          <DialogueComposer
-            dialogueList={currentLesson.dialogue}
+      {/* Main Container with Responsive Split-Screen */}
+      <div
+        style={{
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'row',
+          maxWidth: '1600px',
+          width: '100%',
+          margin: '0 auto',
+          padding: '16px',
+          gap: '24px',
+          alignItems: 'flex-start',
+          boxSizing: 'border-box',
+        }}
+      >
+        {/* Left Column: Form Editor (Persistent Tabs via CSS Visibility) */}
+        <main style={{ flex: 1, minWidth: 0, paddingBottom: '60px' }}>
+          {/* Tab 1: Metadata */}
+          <div style={{ display: activeTab === 'metadata' ? 'block' : 'none' }}>
+            <LessonMetadataForm
+              draft={draft}
+              activeLesson={currentLesson}
+              onUpdateUnitMetadata={updateUnitMetadata}
+              onUpdateLessonMetadata={updateLessonMetadata}
+              onSelectLessonIndex={setActiveLessonIndex}
+            />
+          </div>
+
+          {/* Tab 2: Vocab */}
+          <div style={{ display: activeTab === 'vocab' ? 'block' : 'none' }}>
+            <VocabComposer
+              vocabList={currentLesson.vocabulary}
+              onAddVocab={addVocab}
+              onUpdateVocab={updateVocab}
+              onRemoveVocab={removeVocab}
+              onReorderVocab={reorderVocab}
+            />
+          </div>
+
+          {/* Tab 3: Dialogue */}
+          <div style={{ display: activeTab === 'dialogue' ? 'block' : 'none' }}>
+            <DialogueComposer
+              dialogueList={currentLesson.dialogue}
+              tier={draft.tier}
+              onAddLine={addDialogueLine}
+              onUpdateLine={updateDialogueLine}
+              onRemoveLine={removeDialogueLine}
+              onReorderLine={reorderDialogue}
+            />
+          </div>
+
+          {/* Tab 4: Quiz */}
+          <div style={{ display: activeTab === 'quiz' ? 'block' : 'none' }}>
+            <QuizComposer
+              quizList={currentLesson.quizzes}
+              availableVocabs={currentLesson.vocabulary}
+              onAddQuiz={addQuiz}
+              onUpdateQuiz={updateQuiz}
+              onRemoveQuiz={removeQuiz}
+              onReorderQuiz={reorderQuiz}
+            />
+          </div>
+
+          {/* Tab 5: Review & Export */}
+          <div style={{ display: activeTab === 'review' ? 'block' : 'none' }}>
+            <StudioReviewPanel
+              draft={draft}
+              validationErrors={validation.errors}
+              validationWarnings={validation.warnings}
+              onNavigateToTab={setActiveTab}
+              exportJson={exportJson}
+            />
+          </div>
+        </main>
+
+        {/* Right Column: Sticky Live Mobile Preview Frame on Desktop */}
+        {showDesktopPreview && (
+          <aside
+            data-testid="studio-desktop-preview-pane"
+            className="studio-desktop-preview-pane"
+            style={{
+              width: '400px',
+              flexShrink: 0,
+              position: 'sticky',
+              top: '20px',
+              maxHeight: 'calc(100vh - 40px)',
+              overflowY: 'auto',
+              paddingBottom: '20px',
+            }}
+          >
+            <MobilePreviewFrame
+              lesson={currentLesson}
+              tier={draft.tier}
+              unitNumber={draft.unit_number}
+              activeStudioTab={activeTab}
+            />
+          </aside>
+        )}
+      </div>
+
+      {/* Floating Action Button (FAB) for Mobile / Tablet Viewports (< 1024px) */}
+      <button
+        type="button"
+        data-testid="mobile-preview-fab"
+        className="studio-mobile-preview-fab"
+        onClick={() => setShowMobileDrawer(true)}
+        aria-label="ดูพรีวิวสดบนมือถือ"
+        style={{
+          position: 'fixed',
+          bottom: '24px',
+          right: '24px',
+          display: 'none',
+          alignItems: 'center',
+          gap: '8px',
+          padding: '12px 20px',
+          backgroundColor: '#111827',
+          color: '#FFFFFF',
+          borderRadius: '999px',
+          border: '2px solid rgba(255, 255, 255, 0.2)',
+          boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.3)',
+          cursor: 'pointer',
+          zIndex: 90,
+          fontWeight: 700,
+          fontSize: '14px',
+          minHeight: '48px',
+        }}
+      >
+        <Smartphone size={18} color="var(--color-jade-primary, #10B981)" />
+        <span>ดูพรีวิวสด</span>
+      </button>
+
+      {/* Mobile / Tablet Overlay Drawer Modal */}
+      {showMobileDrawer && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="พรีวิวสมาร์ตโฟนจำลอง"
+          data-testid="mobile-preview-drawer-backdrop"
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              setShowMobileDrawer(false);
+            }
+          }}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            backgroundColor: 'rgba(17, 24, 39, 0.7)',
+            backdropFilter: 'blur(4px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '16px',
+            overflowY: 'auto',
+          }}
+        >
+          <MobilePreviewFrame
+            lesson={currentLesson}
             tier={draft.tier}
-            onAddLine={addDialogueLine}
-            onUpdateLine={updateDialogueLine}
-            onRemoveLine={removeDialogueLine}
-            onReorderLine={reorderDialogue}
+            unitNumber={draft.unit_number}
+            activeStudioTab={activeTab}
+            isDrawer={true}
+            onCloseDrawer={() => setShowMobileDrawer(false)}
           />
         </div>
-
-        {/* Tab 4: Quiz */}
-        <div style={{ display: activeTab === 'quiz' ? 'block' : 'none' }}>
-          <QuizComposer
-            quizList={currentLesson.quizzes}
-            availableVocabs={currentLesson.vocabulary}
-            onAddQuiz={addQuiz}
-            onUpdateQuiz={updateQuiz}
-            onRemoveQuiz={removeQuiz}
-            onReorderQuiz={reorderQuiz}
-          />
-        </div>
-
-        {/* Tab 5: Review & Export */}
-        <div style={{ display: activeTab === 'review' ? 'block' : 'none' }}>
-          <StudioReviewPanel
-            draft={draft}
-            validationErrors={validation.errors}
-            validationWarnings={validation.warnings}
-            onNavigateToTab={setActiveTab}
-            exportJson={exportJson}
-          />
-        </div>
-      </main>
+      )}
 
       {/* Modal 1: Import JSON Dialog */}
       {showImportModal && (

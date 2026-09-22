@@ -206,4 +206,69 @@ describe('StudioLayout Component', () => {
 
     expect(onExit).toHaveBeenCalledTimes(1);
   });
+
+  it('renders desktop preview pane and toggles visibility via toggle button (TASK-604)', async () => {
+    const onExit = vi.fn();
+
+    await act(async () => {
+      root?.render(<StudioLayout onExit={onExit} />);
+    });
+
+    // Preview pane should initially exist on desktop
+    const previewPane = container?.querySelector('[data-testid="studio-desktop-preview-pane"]');
+    expect(previewPane).not.toBeNull();
+    expect(container?.querySelector('[data-testid="mobile-device-chassis"]')).not.toBeNull();
+
+    // Find toggle button
+    const toggleBtn = container?.querySelector('[data-testid="toggle-desktop-preview-btn"]') as HTMLButtonElement;
+    expect(toggleBtn).not.toBeNull();
+    expect(toggleBtn.textContent).toContain('ซ่อนกรอบมือถือ');
+
+    // Click to hide
+    await act(async () => {
+      toggleBtn.click();
+    });
+    expect(container?.querySelector('[data-testid="studio-desktop-preview-pane"]')).toBeNull();
+    expect(toggleBtn.textContent).toContain('แสดงกรอบมือถือ');
+
+    // Click to show again
+    await act(async () => {
+      toggleBtn.click();
+    });
+    expect(container?.querySelector('[data-testid="studio-desktop-preview-pane"]')).not.toBeNull();
+  });
+
+  it('opens and closes mobile preview drawer via FAB and close button (TASK-604)', async () => {
+    const onExit = vi.fn();
+
+    await act(async () => {
+      root?.render(<StudioLayout onExit={onExit} />);
+    });
+
+    // Mobile FAB should exist
+    const fab = container?.querySelector('[data-testid="mobile-preview-fab"]') as HTMLButtonElement;
+    expect(fab).not.toBeNull();
+
+    // Drawer should not exist initially
+    expect(container?.querySelector('[data-testid="mobile-preview-drawer-backdrop"]')).toBeNull();
+
+    // Click FAB to open drawer
+    await act(async () => {
+      fab.click();
+    });
+
+    const backdrop = container?.querySelector('[data-testid="mobile-preview-drawer-backdrop"]');
+    expect(backdrop).not.toBeNull();
+
+    // Click close drawer button
+    const closeBtn = container?.querySelector('[data-testid="close-preview-drawer-btn"]') as HTMLButtonElement;
+    expect(closeBtn).not.toBeNull();
+
+    await act(async () => {
+      closeBtn.click();
+    });
+
+    expect(container?.querySelector('[data-testid="mobile-preview-drawer-backdrop"]')).toBeNull();
+  });
 });
+
