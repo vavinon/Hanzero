@@ -1,0 +1,189 @@
+{
+  "id": "scenario_u12_delivery_gate",
+  "title": {
+    "zh": "外卖到达：单元门禁与交接",
+    "th": "เดลิเวอรี่มาถึง: รหัสผ่านประตูคอนโดและการรับมอบอาหาร",
+    "en": "Food Delivery: Gate Code & Drop-off"
+  },
+  "npc": {
+    "id": "rider_zhang",
+    "name": "张师傅 (ไรเดอร์จาง)",
+    "role": "rider",
+    "avatar": "🛵",
+    "initialMood": "friendly"
+  },
+  "initialPatience": 75,
+  "startNodeId": "node_call_arrival",
+  "nodes": {
+    "node_call_arrival": {
+      "id": "node_call_arrival",
+      "speaker": {
+        "name": "张师傅",
+        "role": "rider",
+        "avatar": "🛵"
+      },
+      "text": {
+        "zh": "您好！美团外卖。我到您楼下了，单元门关着进不去，麻烦开一下门！",
+        "pinyin": "Nín hǎo! Měituán wàimài. Wǒ dào nín lóuxià le, dānyuán mén guānzhe jìn bu qù, máfan kāi yíxià mén!",
+        "th": "สวัสดีครับ! เม่อถวนเดลิเวอรี่ ผมถึงใต้ตึกแล้ว ประตูอาคารปิดล็อกเข้าไม่ได้ รบกวนเปิดประตูหน่อยครับ!",
+        "en": "Hello! Meituan delivery. I am downstairs, but the unit gate is locked. Could you please open it?"
+      },
+      "culturalNote": {
+        "id": "culture_delivery_courtesy",
+        "category": "digital_life",
+        "titleTh": "ศิลปะการสื่อสารกับไรเดอร์ส่งอาหารจีน",
+        "insightTh": "ไรเดอร์จีนมีระบบอัลกอริทึมจับเวลานับถอยหลังที่เข้มงวด การบอกรหัสประตูห้องและสถานที่วางชัดเจนคือมารยาทอันดับหนึ่งในสังคมเมืองจีน",
+        "doAndDont": {
+          "doTh": "ใช้คำว่า '师傅辛苦了' (พี่เหนื่อยหน่อยนะครับ) และบอกรหัสประตูพร้อมเครื่องหมาย #",
+          "dontTh": "อย่าชวนคุยทักทายยืดยาว หรือปล่อยให้ไรเดอร์ยืนรอหน้าตึกโดยไม่บอกรหัสผ่าน"
+        },
+        "goldenPhrase": {
+          "zh": "师傅辛苦了，放门口就好！",
+          "pinyin": "Shīfu xīnkǔ le, fàng ménkǒu jiù hǎo!",
+          "th": "พี่เหนื่อยหน่อยนะครับ วางไว้หน้าประตูห้องได้เลยครับ!"
+        },
+        "badgeReward": "เหรียญผู้สั่งเดลิเวอรี่มือโปร 🛵✨"
+      },
+      "branches": [
+        {
+          "id": "branch_give_passcode_sharp",
+          "text": {
+            "zh": "师傅辛苦了！门禁密码是8866#，麻烦放在802门口就好。",
+            "pinyin": "Shīfu xīnkǔ le! Mènjìn mìmǎ shì 8866#, máfan fàng zài 802 ménkǒu jiù hǎo.",
+            "th": "พี่เหนื่อยหน่อยนะครับ! รหัสประตูคือ 8866# รบกวนวางไว้ที่หน้าห้อง 802 ได้เลยครับ",
+            "en": "Thanks for your hard work! The gate code is 8866#, please leave it at door 802."
+          },
+          "nextNodeId": "node_rider_delivered_door",
+          "patienceDelta": 15,
+          "pragmaticType": "optimal",
+          "feedbackTh": "ยอดเยี่ยมระดับเจ้าของภาษา! ทักทายด้วยความเห็นใจ บอกรหัสพร้อมเครื่องหมาย # และระบุเลขห้องชัดเจน"
+        },
+        {
+          "id": "branch_ask_come_up_no_sharp",
+          "text": {
+            "zh": "密码是8866，你按一下上来吧。",
+            "pinyin": "Mìmǎ shì 8866, nǐ àn yíxià shànglái ba.",
+            "th": "รหัสคือ 8866 คุณกดแล้วขึ้นมาเลย",
+            "en": "Code is 8866, press it and come up."
+          },
+          "nextNodeId": "node_rider_missing_sharp",
+          "patienceDelta": -5,
+          "pragmaticType": "acceptable",
+          "feedbackTh": "สื่อสารเข้าใจ แต่ลืมบอกเครื่องหมาย # ทำให้ไรเดอร์กดรหัสไม่ผ่านในครั้งแรก"
+        },
+        {
+          "id": "branch_complain_slow",
+          "text": {
+            "zh": "怎么这么慢啊？超时了快送上来！",
+            "pinyin": "Zěnme zhème màn a? Chāoshí le kuài sòng shànglái!",
+            "th": "ทำไมช้าจัง? เกินเวลาแล้วรีบเอาขึ้นมาส่งสิ!",
+            "en": "Why so slow? It's overdue, bring it up quickly!"
+          },
+          "nextNodeId": "node_rider_leave_station",
+          "patienceDelta": -30,
+          "pragmaticType": "impolite_awkward",
+          "feedbackTh": "ผิดกาลเทศะอย่างรุนแรง! ในจีนไรเดอร์เจอปัญหารถติดและฝนตกบ่อยครั้ง การตำหนิจะทำให้ความสัมพันธ์ตึงเครียดทันที"
+        }
+      ]
+    },
+    "node_rider_missing_sharp": {
+      "id": "node_rider_missing_sharp",
+      "speaker": {
+        "name": "张师傅",
+        "role": "rider",
+        "avatar": "🛵"
+      },
+      "text": {
+        "zh": "按了8866门没开啊，后面要按井号键吗？我这单快超时了！",
+        "pinyin": "Àn le 8866 mén méi kāi a, hòumiàn yào àn jǐnghàojiàn ma? Wǒ zhè dān kuài chāoshí le!",
+        "th": "กด 8866 แล้วประตูไม่เปิด ด้านหลังต้องกดปุ่มเครื่องหมาย # ด้วยไหม? ออเดอร์นี้ผมใกล้เกินเวลาแล้วนะ!",
+        "en": "Pressed 8866 but gate didn't open. Do I need to press '#' at the end? I am running out of time!"
+      },
+      "branches": [
+        {
+          "id": "branch_confirm_sharp_apology",
+          "text": {
+            "zh": "不好意思！后面要按井号键“#”，辛苦您了！",
+            "pinyin": "Bù hǎoyìsi! Hòumiàn yào àn jǐnghàojiàn \"#\", xīnkǔ nín le!",
+            "th": "ขอโทษด้วยครับ! ด้านหลังต้องกดปุ่มสี่เหลี่ยม '#' ครับ เหนื่อยหน่อยนะครับ!",
+            "en": "My apologies! Yes, press '#' afterwards. Thank you for your patience!"
+          },
+          "nextNodeId": "node_rider_delivered_door",
+          "patienceDelta": 10,
+          "pragmaticType": "optimal",
+          "feedbackTh": "ดีมาก! กล่าวขอโทษอย่างจริงใจและยืนยันปุ่ม '#' ทันที"
+        },
+        {
+          "id": "branch_go_downstairs",
+          "text": {
+            "zh": "别急，我现在马上下楼拿。",
+            "pinyin": "Bié jí, wǒ xiànzài mǎshàng xiàlóu ná.",
+            "th": "ไม่ต้องรีบครับ เดี๋ยวผมลงไปรับชั้นล่างทันที",
+            "en": "No rush, I will come downstairs right now to get it."
+          },
+          "nextNodeId": "node_rider_meet_downstairs",
+          "patienceDelta": 5,
+          "pragmaticType": "acceptable",
+          "feedbackTh": "การเสนอลงไปรับเองช่วยประหยัดเวลาของไรเดอร์ได้มาก"
+        }
+      ]
+    },
+    "node_rider_delivered_door": {
+      "id": "node_rider_delivered_door",
+      "speaker": {
+        "name": "张师傅",
+        "role": "rider",
+        "avatar": "🛵"
+      },
+      "text": {
+        "zh": "门开了！外卖放在802门口地垫上了，拍照发您了，祝您用餐愉快！",
+        "pinyin": "Mén kāi le! Wàimài fàng zài 802 ménkǒu dìdiàn shàng le, pāizhào fā nín le, zhù nín yòngcān yúkuài!",
+        "th": "ประตูเปิดแล้วครับ! อาหารวางไว้บนพรมหน้าห้อง 802 ถ่ายรูปส่งให้ในแอปแล้ว ทานให้อร่อยนะครับ!",
+        "en": "Gate opened! Food is placed on the mat in front of 802. Sent you a photo, enjoy your meal!"
+      },
+      "branches": [],
+      "isEnding": true,
+      "endingType": "grand_pass",
+      "endingTitleTh": "ภารกิจสำเร็จยอดเยี่ยม! 🌟",
+      "endingMessageTh": "คุณสื่อสารกับไรเดอร์อย่างราบรื่น ได้รับอาหารตรงหน้าห้อง และสร้างความประทับใจให้แก่กัน"
+    },
+    "node_rider_meet_downstairs": {
+      "id": "node_rider_meet_downstairs",
+      "speaker": {
+        "name": "张师傅",
+        "role": "rider",
+        "avatar": "🛵"
+      },
+      "text": {
+        "zh": "太感谢您了！外卖交到您手上了，祝您生活愉快！",
+        "pinyin": "Tài gǎnxiè nín le! Wàimài jiāo dào nín shǒu shàng le, zhù nín shēnghuó yúkuài!",
+        "th": "ขอบคุณมากเลยครับ! อาหารส่งถึงมือคุณเรียบร้อย ขอให้มีความสุขในชีวิตนะครับ!",
+        "en": "Thank you so much! Food delivered to your hands, have a wonderful day!"
+      },
+      "branches": [],
+      "isEnding": true,
+      "endingType": "cozy_pass",
+      "endingTitleTh": "รับอาหารสำเร็จอย่างอบอุ่น 🍵",
+      "endingMessageTh": "คุณลงมารับอาหารชั้นล่างอย่างเห็นอกเห็นใจ ไรเดอร์สามารถทำเวลาส่งออเดอร์ถัดไปได้ทัน"
+    },
+    "node_rider_leave_station": {
+      "id": "node_rider_leave_station",
+      "speaker": {
+        "name": "张师傅",
+        "role": "rider",
+        "avatar": "🛵"
+      },
+      "text": {
+        "zh": "实在抱歉，后面还有三个单马上超时了，只能先放在小区门口的快递柜了，取件码稍后发您短信！",
+        "pinyin": "Shízài bàoqiàn, hòumiàn hái yǒu sān ge dān mǎshàng chāoshí le, zhǐ néng xiān fàng zài xiǎoqū ménkǒu de kuàidìguì le, qǔjiànmǎ shāohòu fā nín duǎnxìn!",
+        "th": "ขออภัยจริงๆ ครับ ด้านหลังยังมีอีก 3 ออเดอร์กำลังจะเกินเวลา จึงต้องฝากไว้ในตู้ล็อกเกอร์หน้าหมู่บ้าน รหัสรับพัสดุจะส่ง SMS ให้นะครับ!",
+        "en": "Really sorry, I have 3 orders about to be overdue. Placed it in the parcel locker at compound gate. Pickup code will be sent via SMS!"
+      },
+      "branches": [],
+      "isEnding": true,
+      "endingType": "tutu_replay",
+      "endingTitleTh": "อาหารอยู่ที่ตู้ล็อกเกอร์หน้าหมู่บ้าน 🐰",
+      "endingMessageTh": "ไรเดอร์จำเป็นต้องรีบไปส่งออเดอร์อื่น คุณต้องเดินออกไปรับอาหารที่ตู้ล็อกเกอร์หน้าหมู่บ้าน ลองฝึกใหม่อีกครั้งเพื่อรับอาหารที่หน้าประตูห้องนะ!"
+    }
+  }
+}

@@ -109,21 +109,21 @@ flowchart TD
 
 ---
 
-### `TASK-702`: Branching Dialogue & Scenario Decision Engine
-- [ ] **Pure TypeScript Engine (`src/engines/scenario/branchingDialogueEngine.ts`):**
-  - Data structure: `ScenarioNode`, `DecisionBranch`, `ScenarioSession`, `CulturalNote`, `NPCMood`
-  - Pure functions: `createScenarioSession`, `makeChoice`, `calculatePatienceDelta`, `validateScenarioTree`
-  - ตรวจจับ Directed Acyclic Graph (DAG), ป้องกัน Dead ends, ป้องกันค่า Patience หลุดช่วง 0–100
-- [ ] **UI Component (`src/components/scenario/InteractiveScenarioPlayer.tsx`):**
-  - แถบอารมณ์/ความพึงพอใจของ NPC (Patience Bar) พร้อมสีตอบสนอง (เขียว/เหลือง/แดง)
+### `TASK-702`: Branching Dialogue & Scenario Decision Engine `DONE` ✅
+- [x] **Pure TypeScript Engine (`src/engines/scenario/branchingDialogueEngine.ts`):**
+  - Data structure: `ScenarioNode`, `DecisionBranch`, `ScenarioSession`, `CulturalEtiquetteNote`, `NPCMood`, `ScenarioText`
+  - Pure functions: `createScenarioSession`, `makeChoice`, `calculatePatienceDelta`, `validateScenarioTree`, `applyTutuRescue`, `calculateScenarioScore`
+  - 3-Color DFS DAG Validation ตรวจจับวงวน Cycles พร้อมรายงาน cyclePath, ป้องกัน Dead ends/Orphans, ป้องกันค่า Patience หลุดช่วง 0–100
+- [x] **UI Component (`src/components/scenario/InteractiveScenarioPlayer.tsx`):**
+  - แถบ Zen Mood Gauge (Patience Bar) พร้อมสีตอบสนอง (เขียว/เหลือง/ส้ม/แดง)
   - กล่องคำพูด NPC พร้อม Avatar ตัวละคร (ไรเดอร์, คนขับรถ, หมอ, พนักงานโรงแรม, ตำรวจ)
-  - ปุ่มตัวเลือกคำตอบขนาด $\ge 44$px
-  - การ์ดแนะนำมารยาททางสังคมจีน (Cultural Etiquette Note)
-  - เสียงตอบสนองสังเคราะห์ Web Audio SFX
-- [ ] **Unit Tests & Adversarial Verification:**
-  - Vitest Unit Tests: `branchingDialogueEngine.test.ts` ครอบคลุม 100%
-  - Component Tests: `InteractiveScenarioPlayer.test.tsx`
-  - Red Team: ทดสอบสแปมกดตัวเลือก และตรวจสอบไม่พบบั๊กทางตันในทุกเคส
+  - ปุ่มตัวเลือกคำตอบขนาด $\ge 48$px Touch Ergonomics
+  - การ์ดแนะนำมารยาททางสังคมจีน (Cultural Etiquette Parchment) และ Dynamic Pinyin Fading 2.0 (Hold-to-Peek)
+  - เสียงตอบสนองสังเคราะห์ Web Audio SFX และเสียงพูดภาษาจีน TTS 0.85x
+- [x] **Unit Tests & Adversarial Verification:**
+  - Vitest Unit Tests: `branchingDialogueEngine.test.ts` (21 tests ผ่าน 100%)
+  - Component Tests: `InteractiveScenarioPlayer.test.tsx` (8 tests ผ่าน 100%)
+  - Red Team: ทดสอบสแปมกดตัวเลือก 50 ครั้งด้วย `isTransitioningRef` และ Audio Teardown ผ่าน 100%
 
 ---
 
