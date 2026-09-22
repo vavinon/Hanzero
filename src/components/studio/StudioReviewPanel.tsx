@@ -24,6 +24,7 @@ import {
   MessageSquare,
   Sparkles,
   Check,
+  GitPullRequest,
 } from 'lucide-react';
 import type { StudioDraftState, StudioValidationError } from '../../engines/studio/studioTypes';
 import { copyTextWithFallback } from '../../utils/clipboard';
@@ -35,6 +36,7 @@ export interface StudioReviewPanelProps {
   validationWarnings: StudioValidationError[];
   onNavigateToTab: (tab: StudioTab) => void;
   exportJson: () => { jsonString: string; isValid: boolean; errors: string[] };
+  onOpenExportModal?: () => void;
 }
 
 export const StudioReviewPanel: React.FC<StudioReviewPanelProps> = ({
@@ -43,6 +45,7 @@ export const StudioReviewPanel: React.FC<StudioReviewPanelProps> = ({
   validationWarnings,
   onNavigateToTab,
   exportJson,
+  onOpenExportModal,
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -100,7 +103,29 @@ export const StudioReviewPanel: React.FC<StudioReviewPanelProps> = ({
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: '8px' }}>
+        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+          {onOpenExportModal && (
+            <button
+              type="button"
+              onClick={onOpenExportModal}
+              data-testid="btn-review-open-export"
+              className="btn-tactile-primary"
+              style={{
+                padding: '8px 16px',
+                minHeight: '44px',
+                fontSize: '13px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                backgroundColor: 'var(--color-jade-deep)',
+                color: '#FFFFFF',
+              }}
+            >
+              <GitPullRequest size={16} />
+              <span>🚀 ส่งออก GitHub PR</span>
+            </button>
+          )}
+
           <button
             type="button"
             onClick={handleCopyJson}
@@ -121,7 +146,7 @@ export const StudioReviewPanel: React.FC<StudioReviewPanelProps> = ({
           <button
             type="button"
             onClick={handleDownloadJson}
-            className="btn-tactile-primary"
+            className="btn-tactile-secondary"
             style={{
               padding: '8px 16px',
               minHeight: '44px',

@@ -131,6 +131,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
 
     return (
       <div
+        data-testid={`vocab-card-${index}`}
         style={{
           backgroundColor: '#FFFFFF',
           borderRadius: '16px',
@@ -252,6 +253,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
             </label>
             <input
               type="text"
+              data-testid="input-hanzi"
               value={vocab.hanzi}
               placeholder="เช่น 你好"
               onChange={(e) => {
@@ -293,6 +295,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
               {/[0-5]/.test(vocab.pinyin) && (
                 <button
                   type="button"
+                  data-testid="btn-smart-pinyin"
                   onClick={triggerSmartPinyin}
                   style={{
                     fontSize: '11px',
@@ -311,6 +314,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
             </div>
             <input
               type="text"
+              data-testid="input-pinyin"
               value={vocab.pinyin}
               placeholder="เช่น nǐ hǎo หรือ ni3 hao3"
               onChange={(e) => onUpdate(vocab._clientId, { pinyin: e.target.value })}
@@ -468,6 +472,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
             </label>
             <input
               type="text"
+              data-testid="input-meaning-th"
               value={vocab.meaning_th}
               placeholder="เช่น สวัสดี"
               onChange={(e) => onUpdate(vocab._clientId, { meaning_th: e.target.value })}
@@ -498,6 +503,7 @@ export const VocabItemCard: React.FC<VocabItemCardProps> = React.memo(
             </label>
             <input
               type="text"
+              data-testid="input-meaning-en"
               value={vocab.meaning_en}
               placeholder="e.g. Hello"
               onChange={(e) => onUpdate(vocab._clientId, { meaning_en: e.target.value })}

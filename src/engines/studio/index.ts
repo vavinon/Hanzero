@@ -4,3 +4,6 @@
  */
 
 export * from './studioLinterEngine';
+export * from './studioSerializer';
+export * from './studioTypes';
+export * from './gitHandoff';

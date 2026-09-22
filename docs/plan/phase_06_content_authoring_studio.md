@@ -2,8 +2,8 @@
 plan_type: "ROADMAP_PHASE"
 phase: "06"
 created_at: "2026-09-21"
-updated_at: "2026-09-21"
-status: "IN_PROGRESS"
+updated_at: "2026-09-22"
+status: "DONE"
 priority: "HIGH"
 target_tasks: ["TASK-601", "TASK-602", "TASK-603", "TASK-604", "TASK-605"]
 target_modules: ["src/engines/studio/", "src/components/studio/", "src/hooks/useStudioDraft.ts"]
@@ -84,7 +84,7 @@ flowchart TD
   - Responsive Mobile Adaptability: รองรับการสลับแท็บไป-มาเมื่อเปิดใช้งานบนหน้าจอมือถือหรือแท็บเล็ต ด้วย Floating Action Button (FAB) และ Slide-over Overlay Drawer
 
 ### `TASK-605`: Zero-Token Git Hand-off, PR Template & Playwright E2E Suite
-- [ ] พัฒนาระบบส่งมอบงานสู่ GitHub และชุดทดสอบอัตโนมัติ:
+- [x] พัฒนาระบบส่งมอบงานสู่ GitHub และชุดทดสอบอัตโนมัติ:
   - **1-Click JSON Download:** ส่งออกไฟล์ `.json` ที่พร้อมใช้งานใน `src/data/lessons/`
   - **Zero-Token PR Generator:** สร้างเทมเพลต GitHub Issue / PR พร้อมก็อปปี้ JSON Payload ปลอดภัย ไม่ต้องใช้ Personal Access Token
   - **Playwright E2E Test Suite (`e2e/studio.spec.ts`):** ทดสอบ User Journey การแต่งบทเรียนตั้งแต่เริ่มต้นจนถึงส่งออกไฟล์

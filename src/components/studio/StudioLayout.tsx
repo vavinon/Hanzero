@@ -21,6 +21,7 @@ import { DialogueComposer } from './DialogueComposer';
 import { QuizComposer } from './QuizComposer';
 import { StudioReviewPanel } from './StudioReviewPanel';
 import { MobilePreviewFrame } from './MobilePreviewFrame';
+import { GitExportModal } from './GitExportModal';
 import { AlertCircle, Upload, X, AlertTriangle, Smartphone } from 'lucide-react';
 
 export interface StudioLayoutProps {
@@ -63,6 +64,7 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
   const [showMobileDrawer, setShowMobileDrawer] = useState<boolean>(false);
   const [showImportModal, setShowImportModal] = useState(false);
   const [showResetModal, setShowResetModal] = useState(false);
+  const [showExportModal, setShowExportModal] = useState(false);
   const [importText, setImportText] = useState('');
   const [importErrors, setImportErrors] = useState<string[]>([]);
 
@@ -171,6 +173,7 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
           setImportErrors([]);
           setShowImportModal(true);
         }}
+        onOpenExportModal={() => setShowExportModal(true)}
         onExit={onExit}
       />
 
@@ -306,6 +309,7 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
               validationWarnings={validation.warnings}
               onNavigateToTab={setActiveTab}
               exportJson={exportJson}
+              onOpenExportModal={() => setShowExportModal(true)}
             />
           </div>
         </main>
@@ -384,7 +388,7 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
             backgroundColor: 'rgba(17, 24, 39, 0.7)',
             backdropFilter: 'blur(4px)',
             display: 'flex',
-            alignItems: 'center',
+            alignItems: 'flex-start',
             justifyContent: 'center',
             zIndex: 1000,
             padding: '16px',
@@ -597,6 +601,17 @@ export const StudioLayout: React.FC<StudioLayoutProps> = ({ onExit }) => {
           </div>
         </div>
       )}
+
+      {/* Modal 3: Zero-Token Git Hand-off & PR Generator Modal */}
+      <GitExportModal
+        isOpen={showExportModal}
+        onClose={() => setShowExportModal(false)}
+        draft={draft}
+        jsonString={exportJson().jsonString}
+        isValid={validation.isValid}
+        validationErrors={validation.errors}
+        validationWarnings={validation.warnings}
+      />
     </div>
   );
 };

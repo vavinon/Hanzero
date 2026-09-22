@@ -32,6 +32,7 @@ export interface DevStorageDrawerProps {
   onRestoreState: (state: UserStateSchema) => void;
   onOpenVoiceHealth?: () => void;
   onResetOnboarding?: () => void;
+  onOpenStudio?: () => void;
   defaultOpen?: boolean;
 }
 
@@ -47,6 +48,7 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
   onRestoreState,
   onOpenVoiceHealth,
   onResetOnboarding,
+  onOpenStudio,
   defaultOpen = true,
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(defaultOpen);
@@ -454,11 +456,33 @@ export const DevStorageDrawer: React.FC<DevStorageDrawerProps> = ({
             )}
             {onResetOnboarding && (
               <button
+                type="button"
                 onClick={onResetOnboarding}
+                data-testid="btn-reopen-onboarding"
                 className="btn-tactile-secondary"
                 style={{ width: '100%', minHeight: '44px', gap: '6px' }}
               >
                 <span>🐰 ทดสอบเปิด Onboarding Modal อีกครั้ง</span>
+              </button>
+            )}
+
+            {onOpenStudio && (
+              <button
+                type="button"
+                onClick={onOpenStudio}
+                data-testid="btn-open-studio"
+                className="btn-tactile-secondary"
+                style={{
+                  width: '100%',
+                  minHeight: '44px',
+                  gap: '6px',
+                  color: 'var(--color-jade-deep)',
+                  borderColor: 'var(--color-jade-surface)',
+                  backgroundColor: 'var(--color-jade-surface)',
+                  fontWeight: 600,
+                }}
+              >
+                <span>🎨 เปิด Hanzero Content Studio (แต่งบทเรียน)</span>
               </button>
             )}
           </div>

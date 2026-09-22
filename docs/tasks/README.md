@@ -7,7 +7,7 @@
 
 ## 🚨 แถบสถานะงานด่วนฉุกเฉิน (Active Hotfix / Incident)
 
-> 🟢 **สถานะปัจจุบัน:** ไม่มีงานด่วนฉุกเฉินแทรกคิว (System Healthy — All 413 Tests Passing)
+> 🟢 **สถานะปัจจุบัน:** ไม่มีงานด่วนฉุกเฉินแทรกคิว (System Healthy — All 548 Unit Tests & 15 Playwright E2E Scenarios Passing)
 
 *หมายเหตุ: หากมีงานด่วนแทรก (เช่น บั๊กเสียงฉุกเฉิน, ระบบบันทึกข้อมูลพัง) ให้เปิดไฟล์ชื่อ `YYYY-MM-DD_HOTFIX_[Slug].md` ทันที และอัปเดตแถบนี้เป็นสีส้ม/แดงเพื่อพักงานปกติไว้ชั่วคราว*
 
@@ -38,7 +38,7 @@
 | **2026-09-21** | `TASK-602` | Studio Draft State Engine, Recovery & JSON Serialization | P06 | `web_dev` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-state-serializer.md) |
 | **2026-09-21** | `TASK-603` | Studio Visual Composer UI (Vocab, Dialogue & Quiz Forms) | P06 | `web_dev` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-visual-composers.md) |
 | **2026-09-21** | `TASK-604` | Live Interactive Mobile Device Preview & Audio Sandbox | P06 | `ux_ui_designer` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-live-mobile-preview.md) |
-| **2026-09-21** | `TASK-605` | Zero-Token Git Hand-off, PR Template & Playwright E2E Suite | P06 | `technical_qa` | `TODO` ⏳ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-git-handoff-e2e.md) |
+| **2026-09-21** | `TASK-605` | Zero-Token Git Hand-off, PR Template & Playwright E2E Suite | P06 | `technical_qa` | `DONE` ✅ | [`2026-09-21_P06_...`](./2026-09-21_P06_studio-git-handoff-e2e.md) |
 
 ---
 

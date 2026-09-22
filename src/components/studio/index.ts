@@ -17,3 +17,4 @@ export * from './StudioReviewPanel';
 export * from './AudioPreviewSandbox';
 export * from './MobilePreviewFrame';
 export * from './StudioLayout';
+export * from './GitExportModal';

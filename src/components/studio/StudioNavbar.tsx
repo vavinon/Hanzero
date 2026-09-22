@@ -23,6 +23,7 @@ import {
   RotateCcw,
   Upload,
   ArrowLeft,
+  GitPullRequest,
 } from 'lucide-react';
 import type { StorageStatus, StudioValidationError } from '../../engines/studio/studioTypes';
 
@@ -48,6 +49,7 @@ export interface StudioNavbarProps {
   onReset: () => void;
   onLoadSample: () => void;
   onOpenImport: () => void;
+  onOpenExportModal?: () => void;
   onExit: () => void;
 }
 
@@ -71,6 +73,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
   onReset,
   onLoadSample,
   onOpenImport,
+  onOpenExportModal,
   onExit,
 }) => {
   // Format last saved time
@@ -272,6 +275,29 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
             <Save size={14} />
             บันทึก
           </button>
+          {onOpenExportModal && (
+            <button
+              type="button"
+              onClick={onOpenExportModal}
+              data-testid="btn-open-export"
+              className="btn-tactile-primary"
+              title="ส่งออกบทเรียน & เปิด GitHub PR"
+              style={{
+                padding: '6px 12px',
+                minHeight: '36px',
+                fontSize: '12px',
+                borderRadius: '8px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                backgroundColor: 'var(--color-jade-deep)',
+                color: '#FFFFFF',
+              }}
+            >
+              <GitPullRequest size={14} />
+              ส่งออก PR
+            </button>
+          )}
           <button
             onClick={onReset}
             className="btn-tactile-secondary"
@@ -307,6 +333,7 @@ export const StudioNavbar: React.FC<StudioNavbarProps> = ({
             <button
               key={step.id}
               data-tab={step.id}
+              data-testid={`studio-tab-${step.id}`}
               onClick={() => onSelectTab(step.id)}
               role="tab"
               aria-selected={isActive}

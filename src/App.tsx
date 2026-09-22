@@ -50,7 +50,18 @@ export const App: React.FC = () => {
   } = useUserState();
 
   // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio'>('map');
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio'>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('view') === 'studio' || params.get('studio') === '1') {
+        return 'studio';
+      }
+      if (params.get('view') === 'review') {
+        return 'review';
+      }
+    }
+    return 'map';
+  });
   const [activeLessonId, setActiveLessonId] = useState<string>('t1_u01_l01');
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
@@ -69,11 +80,12 @@ export const App: React.FC = () => {
   useEffect(() => {
     if (
       !userState.progress.onboarding_completed &&
-      userState.progress.completed_lessons.length === 0
+      userState.progress.completed_lessons.length === 0 &&
+      currentView !== 'studio'
     ) {
       setShowWelcomeModal(true);
     }
-  }, [userState.progress.onboarding_completed, userState.progress.completed_lessons.length]);
+  }, [userState.progress.onboarding_completed, userState.progress.completed_lessons.length, currentView]);
 
   // Check In-App WebView & Storage Health
   useEffect(() => {
@@ -82,13 +94,13 @@ export const App: React.FC = () => {
     }
     checkStorageHealth().then(setStorageHealth).catch(() => {});
 
-    // Check URL Trigger ?diagnostics=1 or ?studio=1
+    // Check URL Trigger ?diagnostics=1 or ?studio=1 or ?view=studio
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('diagnostics') === '1') {
         setShowDevDrawer(true);
       }
-      if (params.get('studio') === '1') {
+      if (params.get('view') === 'studio' || params.get('studio') === '1') {
         setCurrentView('studio');
       }
     }
@@ -262,6 +274,10 @@ export const App: React.FC = () => {
             }}
             onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}
             onResetOnboarding={() => setShowWelcomeModal(true)}
+            onOpenStudio={() => {
+              setCurrentView('studio');
+              setShowDevDrawer(false);
+            }}
           />
           <button
             onClick={() => {
