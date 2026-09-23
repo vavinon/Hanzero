@@ -1,0 +1,870 @@
+/**
+ * scripts/tier3_batch_a/unit34.ts
+ * Tier 3 Unit 34: 教育与内卷现象 (Education & Involution: การศึกษาและภาวะกดดัน)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit34 = {
+  unit_id: 'tier3_u34',
+  tier: 3,
+  unit_number: 34,
+  title: {
+    zh: '教育与内卷现象',
+    th: 'ระบบการศึกษาและภาวะกดดัน',
+    en: 'Education & Involution'
+  },
+  description: 'เข้าใจปรากฏการณ์สังคมจีนร่วมสมัยผ่านเลนส์การศึกษาและจิตวิทยาสังคม: การสอบเกาเข่าและความหวังของครอบครัว (高考与家庭寄托), ภาวะกดดันแข่งขัน "เน่ย์เจวี่ยน" และสแลง "ถั่งผิง" (内卷、躺平与摆烂), ตลอดจนแนวคิดการเรียนรู้ตลอดชีวิต (终身学习)',
+  lessons: [
+    {
+      lesson_id: 't3_u34_l01',
+      lesson_number: 1,
+      title: {
+        zh: '高考与家庭寄托',
+        th: 'การสอบเกาเข่าและความหวังครอบครัว',
+        en: 'Gaokao & Family Hopes'
+      },
+      can_do: {
+        th: 'อธิบายระบบการสอบเกาเข่า (高考) การเลือกอันดับมหาวิทยาลัย ความหวังของครอบครัว และใช้สำนวน 望子成龙',
+        en: 'Explain Gaokao, university applications, family aspirations, and use idiom 望子成龙'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการสอบเกาเข่าและเข้าใจความกดดันและความมุ่งมั่นของครอบครัวจีน!',
+      vocabulary: [
+        {
+          id: 'hsk3_3401',
+          hanzi: '高考',
+          pinyin: 'gāokǎo',
+          display_pinyin: 'gāokǎo',
+          pinyin_tone: 'gao1kao3',
+          meaning_th: 'เกาเข่า (การสอบเข้ามหาวิทยาลัยแห่งชาติของจีน)',
+          meaning_en: 'National College Entrance Examination (Gaokao)',
+          radical: '高',
+          radical_name_th: 'หมวดสูง (高字旁)',
+          stroke_count: 16,
+          mnemonic: 'การสอบคัดเลือก (考) ระดับสูงสุดในชีวิตนักเรียน (高) = การสอบเกาเข่า',
+          kid_mnemonic: 'สมุดข้อสอบเล่มหนาที่มีธงสีแดงปักบนยอดเขา = 高考',
+          body_gesture: 'กำปากกาเขียนหนังสืออย่างตั้งใจไม่ละสายตา'
+        },
+        {
+          id: 'hsk3_3402',
+          hanzi: '独木桥',
+          pinyin: 'dúmùqiáo',
+          display_pinyin: 'dúmùqiáo',
+          pinyin_tone: 'du2mu4qiao2',
+          meaning_th: 'สะพานไม้ซุงเดี่ยว (อุปมาถึงเส้นทางแข่งขันสุดหิน)',
+          meaning_en: 'single-plank bridge (difficult path)',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 29,
+          mnemonic: 'สะพาน (桥) ที่ทำจากท่อนไม้ซุงเดี่ยวเพียงท่อนเดียว (独木) = สะพานไม้ข้ามยาก',
+          kid_mnemonic: 'สะพานไม้ท่อนเล็กๆ ข้ามหุบเขาที่ทุกคนต้องค่อยๆ เดิน = 独木桥',
+          body_gesture: 'กางสองแขนรักษาสมดุลเหมือนเดินบนท่อนไม้แคบๆ'
+        },
+        {
+          id: 'hsk3_3403',
+          hanzi: '志愿',
+          pinyin: 'zhìyuàn',
+          display_pinyin: 'zhìyuàn',
+          pinyin_tone: 'zhi4yuan4',
+          meaning_th: 'อันดับคณะ/มหาวิทยาลัยที่เลือกสมัคร (ความปรารถนา)',
+          meaning_en: 'aspiration / college choice application',
+          radical: '心',
+          radical_name_th: 'หมวดใจ (心字底)',
+          stroke_count: 22,
+          mnemonic: 'ความมุ่งมั่นในใจ (志) ความปรารถนาอันแรงกล้า (愿) = ใบสมัครเลือกอันดับ',
+          kid_mnemonic: 'แผ่นกระดาษเขียนชื่อมหาวิทยาลัยในฝันแล้วกอดแนบอก = 志愿',
+          body_gesture: 'สองมือกุมกระดาษแนบอกด้วยความหวัง'
+        },
+        {
+          id: 'hsk3_3404',
+          hanzi: '名校',
+          pinyin: 'míngxiào',
+          display_pinyin: 'míngxiào',
+          pinyin_tone: 'ming2xiao4',
+          meaning_th: 'มหาวิทยาลัยชื่อดังชั้นนำ (Top University เช่น ชิงหัว, ปักกิ่ง)',
+          meaning_en: 'prestigious university / top school',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 16,
+          mnemonic: 'โรงเรียนสถาบัน (校) ที่มีชื่อเสียงโด่งดังระดับโลก (名) = สถาบันชื่อดัง',
+          kid_mnemonic: 'ซุ้มประตูมหาวิทยาลัยโบราณที่สลักชื่อสีทองอร่าม = 名校',
+          body_gesture: 'ชูสองนิ้วทำเครื่องหมายชัยชนะหน้าประตูมหาวิทยาลัย'
+        },
+        {
+          id: 'hsk3_3405',
+          hanzi: '望子成龙',
+          pinyin: 'wàngzǐchénglóng',
+          display_pinyin: 'wàngzǐchénglóng',
+          pinyin_tone: 'wang4zi3cheng2long2',
+          meaning_th: 'หวังให้บุตรหลานเจริญก้าวหน้าเป็นเอก (หวังให้ลูกเป็นมังกร)',
+          meaning_en: 'hope one’s child becomes a dragon (succeeds in life)',
+          radical: '月',
+          radical_name_th: 'หมวดดวงจันทร์ (月字旁)',
+          stroke_count: 25,
+          mnemonic: 'เฝ้าหวังมองดู (望) ลูกหลาน (子) เติบโตสำเร็จเป็นพญามังกร (成龙) = หวังให้ลูกเป็นมังกร',
+          kid_mnemonic: 'คุณพ่อคุณแม่มองดูลูกน้อยที่กลายร่างเป็นมังกรทองบินขึ้นฟ้า = 望子成龙',
+          body_gesture: 'ยกสองมือวาดลำตัวมังกรเลื้อยทะยานขึ้นสู่ท้องฟ้า'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 望子成龙 (wàngzǐchénglóng) จังหวะเสียง 4-3-2-2',
+        description_th: 'พยางค์: wàng (4), zǐ (3), chéng (2), lóng (2) — เริ่มด้วยความหวังอันหนักแน่น แล้วค่อยๆ ทอดเสียงเหินขึ้นดั่งมังกรบิน',
+        example: '天下父母无不望子成龙 (พ่อแม่ทุกคนในโลกล้วนหวังให้ลูกเจริญก้าวหน้า)',
+        fun_metaphor: 'เหมือนมังกรน้อยทะยานจากพื้นน้ำแล้วเหินเวหาขึ้นสู่ปุยเมฆ!',
+        reassurance: 'สำนวนนี้อธิบายหัวอกของพ่อแม่ชาวจีนได้อย่างลึกซึ้งที่สุด ออกเสียงให้หนักแน่น'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างความหวังอันหนักอึ้ง: 寄托着...厚望，犹如千军万马过独木桥',
+        explanation_th: 'สำนวนภาษาเขียนที่ใช้พรรณนาถึงการสอบเกาเข่าของจีน',
+        patterns: [
+          {
+            formula: '高考寄托了无数家庭望子成龙的厚望',
+            zh: '每年六月的高考，寄托了全中国无数家庭望子成龙的殷切厚望。',
+            pinyin: 'Měinián liùyuè de Gāokǎo, jìtuō le quán Zhōngguó wúshù jiātíng wàngzǐchénglóng de yīnqiè hòuwàng.',
+            th: 'การสอบเกาเข่าในเดือนมิถุนายนของทุกปี แบกรับความหวังอันเปี่ยมล้นของครอบครัวชาวจีนนับไม่ถ้วนที่หวังให้บุตรหลานประสบความสำเร็จ',
+            en: 'Every June, Gaokao carries the earnest hopes of countless Chinese families hoping their children become dragons.'
+          },
+          {
+            formula: '千军万马过独木桥，竞争极其激烈',
+            zh: '千军万马过独木桥，大家都希望能考上顶尖的名校。',
+            pinyin: 'Qiān jūn wàn mǎ guò dúmùqiáo, dàjiā dōu xīwàng néng kǎoshàng dǐngjiān de míngxiào.',
+            th: 'ดั่งกองทัพเรือนหมื่นเรือนแสนแย่งกันข้ามสะพานไม้ซุงเดี่ยว ทุกคนต่างหวังจะสอบเข้ามหาวิทยาลัยชั้นนำให้ได้',
+            en: 'Like tens of thousands of troops crossing a single-plank bridge, everyone hopes to enter top universities.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张姐，听说您儿子今年参加高考，成绩刚公布，全家都在忙着填报志愿吧？',
+          pinyin: 'Zhāng jiě, tīngshuō nín érzi jīnnián cānjiā Gāokǎo, chéngjì gāng gōngbù, quánjiā dōu zài mángzhe tiánbào zhìyuàn ba?',
+          th: 'พี่จางครับ ได้ยินว่าลูกชายพี่เข้าสอบเกาเข่าปีนี้ คะแนนเพิ่งประกาศ ทั้งบ้านกำลังยุ่งอยู่กับการเลือกอันดับมหาวิทยาลัยอยู่ใช่ไหมครับ?',
+          en: 'Sister Zhang, I heard your son took Gaokao this year; scores just released, is the whole family busy choosing colleges?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พี่จาง (ผู้จัดการฝ่ายการเงิน) 👩‍💼',
+          zh: '可不是嘛！这真是“千军万马过独木桥”啊！天天熬夜对分数线，就希望能冲进一所985名校。',
+          pinyin: 'Kě bú shì ma! Zhè zhēn shì “qiān jūn wàn mǎ guò dúmùqiáo” a! Tiāntiān áoyè duì fēnshùxiàn, jiù xīwàng néng chōng jìn yì suǒ 985 míngxiào.',
+          th: 'จะไม่ให้ยุ่งได้ยังไงล่ะคะ! เหมือน “ทัพเรือนแสนแย่งข้ามสะพานไม้ซุงเดี่ยว” จริงๆ ค่ะ! อดหลับอดนอนเทียบเกณฑ์คะแนนทุกวัน หวังแค่ว่าจะเบียดเข้า ม.ท็อป 985 ได้สักแห่ง',
+          en: 'Indeed! Truly like thousands crossing a single-plank bridge! Staying up nightly checking cutoffs, just hoping to enter a top 985 university.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '可怜天下父母心，大家都望子成龙。不过孩子平时的综合素质非常高，一定能如愿的！',
+          pinyin: 'Kělián tiānxià fùmǔ xīn, dàjiā dōu wàngzǐchénglóng. Búguò háizi píngshí de zōnghé sùzhì fēicháng gāo, yídìng néng rúyuàn de!',
+          th: 'หัวอกพ่อแม่น่าเห็นใจที่สุดครับ ใครๆ ก็อยากให้ลูกประสบความสำเร็จ แต่ปกติลูกพี่มีทักษะรอบด้านสูงมาก ต้องสมหวังดังใจแน่นอนครับ!',
+          en: 'Pity the hearts of parents worldwide, all hoping children succeed. But your boy has great overall qualities, he will surely fulfill his wish!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พี่จาง (ผู้จัดการฝ่ายการเงิน) 👩‍💼',
+          zh: '借你吉言！考上好大学固然重要，但只要他身心健康，未来的路还长着呢！如果孩子觉得压力太大，我们也可以多陪他散散步、吃点好吃的美食。',
+          pinyin: 'Jiè nǐ jíyán! Kǎoshàng hǎo dàxué gùrán zhòngyào, dàn zhǐyào tā shēnxīn jiànkāng, wèilái de lù hái cháng zhe ne! Rúguǒ háizi juéde yālì tài dà, wǒmen yě kěyǐ duō péi tā sànsànbù, chī diǎn hǎochī de měishí.',
+          th: 'ขอให้สมพรปากนะคะ! การสอบติด ม.ดีๆ แม้จะสำคัญ แต่ขอเพียงเขาสุขภาพกายใจแข็งแรง เส้นทางข้างหน้ายังอีกยาวไกลค่ะ! ถ้าเด็กรู้สึกกดดันเกินไป พวกเราก็สามารถอยู่เป็นเพื่อนพาไปเดินเล่น กินของอร่อยๆ ได้ค่ะ',
+          en: 'Thanks for your kind words! Entering a good college is important, but as long as he stays healthy, future roads are long! If the child feels too pressured, we can also keep him company, take walks, and enjoy delicious food.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '望子成龙' (wàngzǐchénglóng) มีความหมายตรงกับข้อใด?",
+          options: [
+            'พ่อแม่คาดหวังให้บุตรหลานประสบความสำเร็จและเจริญก้าวหน้าในชีวิต',
+            'การพาลูกไปเที่ยวชมสวนสัตว์มังกร',
+            'การซื้อเสื้อผ้าลายมังกรให้ลูกสวมใส่',
+            'การสอนลูกว่ายน้ำข้ามแม่น้ำ'
+          ],
+          correct_index: 0,
+          explanation_th: "'望子成龙' แปลว่า หวังให้ลูกเติบใหญ่เป็นมังกร คือปรารถนาให้บุตรหลานประสบความสำเร็จสูงสุด",
+          encouragement: 'จำสำนวนสะท้อนหัวใจพ่อแม่ชาวจีนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "วลี '千军万马过独木桥' มักใช้อุปมาถึงเหตุการณ์ใดในสังคมจีน?",
+          options: [
+            'การแข่งขันสอบเกาเข่าเข้ามหาวิทยาลัยอันดุเดือดเข้มข้น',
+            'การเดินสวนสนามในวันชาติ',
+            'การข้ามถนนในช่วงเวลาเร่งด่วน',
+            'การเดินทางท่องเที่ยวช่วงวันหยุดยาว'
+          ],
+          correct_index: 0,
+          explanation_th: "'独木桥' (สะพานไม้ซุงเดี่ยว) ใช้อุปมาถึงการสอบเกาเข่าที่มีผู้เข้าสอบนับสิบล้านคนแย่งชิงที่นั่งในมหาวิทยาลัยชั้นนำ",
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจบริบทการศึกษาจีนอย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "การสอบเกาเข่าแบกรับความหวังของครอบครัวที่อยากให้ลูกเจริญก้าวหน้า"',
+          tokens: ['高考寄托了', '望子成龙的厚望', '家庭'],
+          correct_sequence: ['高考寄托了', '家庭', '望子成龙的厚望'],
+          pinyin: 'Gāokǎo jìtuō le jiātíng wàngzǐchénglóng de hòuwàng',
+          meaning_th: 'การสอบเกาเข่าแบกรับความหวังของครอบครัวที่อยากให้ลูกเจริญก้าวหน้า',
+          explanation_th: 'ประธาน (高考) + กริยา (寄托了) + เจ้าของ (家庭) + กรรม (望子成龙的厚望)',
+          encouragement: 'ร้อยเรียงประโยคสะท้อนสังคมได้อย่างคมคาย!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '高考' ตัว '考' (สอบ) มีหมวดนำใด?",
+          options: [
+            '老 (หมวดคนแก่/อาวุโส 老字头)',
+            '子 (หมวดลูก 子字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '手 (หมวดมือ 手字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'考' มีหมวดนำ '老' (อาวุโส) สื่อถึงการทดสอบความรู้และประสบการณ์จากผู้ใหญ่",
+          encouragement: 'เข้าใจรากศัพท์อักษรจีนอย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในรายการสนทนาเรื่องการศึกษาข้ามวัฒนธรรม ผู้ดำเนินรายการถามว่า "การสอบเกาเข่ามีความหมายอย่างไรต่อคนรุ่นใหม่ในจีน?" คุณควรสรุปทัศนะอย่างไรให้ลึกซึ้งและรอบด้าน?',
+        options: [
+          '高考承载了无数普通家庭望子成龙的梦想，它固然犹如千军万马过独木桥，但同时也是社会阶层流动最公平的通道之一！ (Gāokǎo chéngzài le wúshù pǔtōng jiātíng wàngzǐchénglóng de mèngxiǎng, tā gùrán yóurú qiān jūn wàn mǎ guò dúmùqiáo, dàn tóngshí yě shì shèhuì jiēcéng liúdòng zuì gōngpíng de tōngdào zhīyī!)',
+          '高考一点用都没有，大家都不用读大学。 (Gāokǎo yìdiǎn yòng dōu méiyǒu, dàjiā dōu bú yòng dú dàxué.)',
+          '考试太累了，还是天天玩游戏比较舒服。 (Kǎoshì tài lèi le, háishi tiāntiān wán yóuxì bǐjiào shūfu.)',
+          '请问这道甜点可以用外卖点吗？ (Qǐngwèn zhè dào tiándiǎn kěyǐ yòng wàimài diǎn ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำตอบ '高考承载了无数普通家庭望子成龙的梦想...也是社会阶层流动最公平的通道之一！' มองเห็นทั้งความกดดันแข่งขันและคุณค่าความยุติธรรมในการเลื่อนชนชั้นทางสังคม (社会阶层流动) ได้อย่างสมดุลลึกซึ้ง",
+        encouragement: 'ทรรศนะเชิงสังคมวิทยายอดเยี่ยม ผ่านด่านเกาเข่าอย่างสง่างาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u34_l02',
+      lesson_number: 2,
+      title: {
+        zh: '内卷、躺平与摆烂',
+        th: 'ภาวะกดดัน การนอนเฉย และการเทงาน',
+        en: 'Involution, Tangping & Bailan'
+      },
+      can_do: {
+        th: 'อธิบายปรากฏการณ์ "เน่ย์เจวี่ยน (内卷)", "ถั่งผิง (躺平)", และความกดดัน โดยใช้โครงสร้าง 难免带来...以至于引发全社会的广泛思考',
+        en: 'Explain Involution, Tangping, Bailan using 难免带来...以至于引发全社会的广泛思考'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เข้าใจคำสแลงสังคมที่ทรงอิทธิพลที่สุดของคนรุ่นใหม่ในจีนและวิเคราะห์อย่างสร้างสรรค์!',
+      vocabulary: [
+        {
+          id: 'hsk3_3406',
+          hanzi: '内卷',
+          pinyin: 'nèijuǎn',
+          display_pinyin: 'nèijuǎn',
+          pinyin_tone: 'nei4juan3',
+          meaning_th: 'เน่ย์เจวี่ยน (การแข่งขันกดดันภายในอย่างไร้ผลลัพธ์คุ้มค่า)',
+          meaning_en: 'involution / intense rat-race competition',
+          radical: '冂',
+          radical_name_th: 'หมวดกรอบเปิดล่าง (同字框)',
+          stroke_count: 12,
+          mnemonic: 'ม้วนตัวเข้าไปข้างใน (内卷) แย่งชิงทรัพยากรเดิมๆ ซ้ำแล้วซ้ำเล่า = ภาวะกดดันไร้ทางออก',
+          kid_mnemonic: 'หนูตัวน้อยวิ่งหมุนวนในกงล้ออย่างเหน็ดเหนื่อยแต่ไม่ไปไหน = 内卷',
+          body_gesture: 'หมุนสองมือกวนเป็นวงกลมวนเข้าหาตัวเอง'
+        },
+        {
+          id: 'hsk3_3407',
+          hanzi: '躺平',
+          pinyin: 'tǎngpíng',
+          display_pinyin: 'tǎngpíng',
+          pinyin_tone: 'tang3ping2',
+          meaning_th: 'ถั่งผิง (การนอนเฉย / ลดความคาดหวัง ไม่เข้าร่วมการแข่งขันที่บ้าคลั่ง)',
+          meaning_en: 'lie flat / opting out of the rat race',
+          radical: '身',
+          radical_name_th: 'หมวดลำตัว (身字旁)',
+          stroke_count: 20,
+          mnemonic: 'ทอดตัวนอนลง (躺) ราบเรียบขนานกับพื้นดิน (平) = นอนราบไม่ยอมดิ้นรน',
+          kid_mnemonic: 'นอนเอกเขนกบนสนามหญ้าดูท้องฟ้าอย่างสบายใจ = 躺平',
+          body_gesture: 'หงายสองฝ่ามือผ่อนคลายทอดตัวลงพักผ่อน'
+        },
+        {
+          id: 'hsk3_3408',
+          hanzi: '摆烂',
+          pinyin: 'bǎilàn',
+          display_pinyin: 'bǎilàn',
+          pinyin_tone: 'bai3lan4',
+          meaning_th: 'การเทงาน / ปล่อยให้พังไปเลย ไม่พยายามแก้ไข',
+          meaning_en: 'let things rot / give up trying completely',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 22,
+          mnemonic: 'วางทิ้งไว้ (摆) ปล่อยให้เน่าเปื่อยพังไปตามยถากรรม (烂) = ปล่อยจอยเทงาน',
+          kid_mnemonic: 'ยกสองมือทิ้งของแล้วบอกว่า "ช่างมันเถอะ ไม่ทำแล้ว!" = 摆烂',
+          body_gesture: 'สะบัดสองมือทิ้งลงข้างตัวอย่างไม่แยแส'
+        },
+        {
+          id: 'hsk3_3409',
+          hanzi: '白热化',
+          pinyin: 'báirèhuà',
+          display_pinyin: 'báirèhuà',
+          pinyin_tone: 'bai2re4hua4',
+          meaning_th: 'ดุเดือดเข้มข้นถึงขีดสุด (White-hot)',
+          meaning_en: 'reach white-hot stage / reach fever pitch',
+          radical: '白',
+          radical_name_th: 'หมวดสีขาว (白字旁)',
+          stroke_count: 19,
+          mnemonic: 'ความร้อนสะสม (热) จนเปลวไฟเปลี่ยนเป็นสีขาวโพลน (白) = ร้อนแรงถึงขีดสุด',
+          kid_mnemonic: 'ปรอทวัดความร้อนพุ่งทะลุปรอทแตกกระจาย = 白热化',
+          body_gesture: 'ยกสองมือกำแน่นสั่นระริกแสดงความดุเดือด'
+        },
+        {
+          id: 'hsk3_3410',
+          hanzi: '焦虑',
+          pinyin: 'jiāolǜ',
+          display_pinyin: 'jiāolǜ',
+          pinyin_tone: 'jiao1lu:4',
+          meaning_th: 'ความวิตกกังวล / ความกระวนกระวายใจ',
+          meaning_en: 'anxiety / anxious',
+          radical: '灬',
+          radical_name_th: 'หมวดจุดไฟสี่จุด (四点底)',
+          stroke_count: 27,
+          mnemonic: 'จิตใจร้อนรุ่มดั่งไฟแผดเผาไหม้เกรียม (焦) ครุ่นคิดพะวงไม่หยุด (虑) = วิตกกังวล',
+          kid_mnemonic: 'กุมขมับมีเครื่องหมายคำถามและก้อนเมฆฝนลอยวนบนหัว = 焦虑',
+          body_gesture: 'กุมขมับขมวดคิ้วแสดงความกังวลใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 焦虑 (jiāolǜ)',
+        description_th: 'คำว่า 焦 (jiāo) เป็นเสียง 1 สูงยาว ส่วน 虑 (lǜ) เป็นเสียง 4 หนักแน่น (เสียงสระ ü ปากกลมจู๋)',
+        example: '缓解职场焦虑 (บรรเทาความวิตกกังวลในที่ทำงาน)',
+        fun_metaphor: 'เสียงเหินราบแล้วตอกหมุดแน่นเบาๆ!',
+        reassurance: 'คำนี้เป็นคำยอดฮิตในบทสนทนาเรื่องสุขภาพจิต ออกเสียง lǜ ให้ปากกลมชัดเจน'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการวิพากษ์สังคม: 难免带来...以至于引发全社会的广泛思考',
+        explanation_th: 'สำนวนภาษาเขียนระดับวิชาการเพื่อบรรยายถึงปัญหาสังคมที่ส่งผลกระทบในวงกว้าง',
+        patterns: [
+          {
+            formula: '过度的内卷竞争，难免带来 [ผลเสีย], 以至于引发 [ผลกระทบ]',
+            zh: '职场与升学中过度的内卷竞争，难免带来精神内耗，以至于引发了全社会的广泛思考。',
+            pinyin: 'Zhíchǎng yǔ shēngxué zhōng guòdù de nèijuǎn jìngzhēng, nánmiǎn dàilái jīngshén nèihào, yǐzhìyú yǐnfā le quán shèhuì de guǎngfàn sīkǎo.',
+            th: 'การแข่งขันกดดันที่รุนแรงเกินไปในที่ทำงานและการเรียน ย่อมเลี่ยงไม่ได้ที่จะนำมาซึ่งความเหนื่อยล้าทางจิตใจ จนกระทั่งจุดชนวนให้เกิดการขบคิดไตร่ตรองในวงกว้างของทั้งสังคม',
+            en: 'Excessive involution competition in school and workplace inevitably brings mental exhaustion, prompting widespread reflection across society.'
+          },
+          {
+            formula: '所谓的“躺平”，其实是对 [สิ่งใด] 的一种无声抗议',
+            zh: '所谓的“躺平”，其实是年轻人应对过大压力时的一种心理自我保护与无声抗议。',
+            pinyin: 'Suǒwèi de “tǎngpíng”, qíshí shì niánqīngrén yìngduì guò dà yālì shí de yì zhǒng xīnlǐ zìwǒ bǎohù yǔ wúshēng kàngyì.',
+            th: 'สิ่งที่เรียกว่า "การนอนเฉย (ถั่งผิง)" แท้จริงแล้วคือการปกป้องตนเองทางจิตใจและการประท้วงเงียบของคนรุ่นใหม่เมื่อเผชิญแรงกดดันที่มากเกินรับไหว',
+            en: 'The so-called "lying flat" is actually a form of psychological self-protection and silent protest against overwhelming pressure.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '小李，这几年中国网络上经常提到的“内卷”和“躺平”，到底该怎么理解？',
+          pinyin: 'Xiǎo Lǐ, zhè jǐ nián Zhōngguó wǎngluò shang jīngcháng tídào de “nèijuǎn” hé “tǎngpíng”, dàodǐ gāi zěnme lǐjiě?',
+          th: 'เสี่ยวหลี่ ในช่วงไม่กี่ปีมานี้บนอินเทอร์เน็ตจีนมักพูดถึงคำว่า “เน่ย์เจวี่ยน” กับ “ถั่งผิง” แท้จริงแล้วควรเข้าใจอย่างไรดีครับ?',
+          en: 'Xiao Li, how should we understand "involution" and "lying flat" frequently mentioned on the Chinese internet lately?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวหลี่ (โปรแกรมเมอร์รุ่นใหม่) 👨‍💻',
+          zh: '简单来说，“内卷”就是大家都拼命加班但谁也没多赚钱；而“躺平”就是我不陪你玩了，降维生活，知足常乐。',
+          pinyin: 'Jiǎndān lái shuō, “nèijuǎn” jiù shì dàjiā dōu pīnmìng jiābān dàn shéi yě méi duō zhuànqián; ér “tǎngpíng” jiù shì wǒ bù péi nǐ wán le, jiàngwéi shēnghuó, zhīzú-chánglè.',
+          th: 'พูดง่ายๆ คือ “เน่ย์เจวี่ยน” คือทุกคนทุ่มทำงานล่วงเวลาแทบตายแต่ไม่มีใครได้เงินเพิ่มขึ้น ส่วน “ถั่งผิง” คือฉันไม่ขอร่วมแข่งกับเธอแล้ว ขอลดเกณฑ์ชีวิตลง พอใจในสิ่งที่มีค่ะ',
+          en: 'Simply put, involution means everyone works crazy overtime but nobody earns more; lying flat means opting out to live simply and contentedly.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '竞争白热化难免带来群体焦虑，平时如果遇到困难，跟朋友聊聊天或者去医院做个检查，身心健康和好心情最重要！',
+          pinyin: 'Jìngzhēng báirèhuà nánmiǎn dàilái qúntǐ jiāolǜ, píngshí rúguǒ yùdào kùnnan, gēn péngyou liáoliáotiān huòzhě qù yīyuàn zuò ge jiǎnchá, shēnxīn jiànkāng hé hǎo xīnqíng zuì zhòngyào!',
+          th: 'การแข่งขันที่ดุเดือดถึงขีดสุดย่อมนำมาซึ่งความวิตกกังวลร่วม ปกติถ้าเจอปัญหา คุยกับเพื่อนๆ หรือไปโรงพยาบาลตรวจสุขภาพบ้าง สุขภาพกายใจและอารมณ์ที่ดีสำคัญที่สุดครับ!',
+          en: 'White-hot competition inevitably brings collective anxiety; when facing hardship, chatting with friends or visiting hospital for a check-up helps. Mental health and mood come first!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวหลี่ (โปรแกรมเมอร์รุ่นใหม่) 👨‍💻',
+          zh: '太懂了！大家嘴上说着躺平和摆烂，其实第二天还是准时去地铁站坐车上班。周末大家还是喜欢喝咖啡、吃火锅、看电影，努力把每一天生活过得开开心心！',
+          pinyin: 'Tài dǒng le! Dàjiā zuǐ shang shuōzhe tǎngpíng hé bǎilàn, qíshí dì-èr tiān háishi zhǔnshí qù dìtiězhàn zuò chē shàngbān. Zhōumò dàjiā háishi xǐhuan hē kāfēi, chī huǒguō, kàn diànyǐng, nǔlì bǎ měi yì tiān shēnghuó guò de kāikāi-xīnxīn!',
+          th: 'เข้าใจลึกซึ้งมากครับ! ปากทุกคนบอกว่าจะนอนเฉยกับเทงาน แต่พอรุ่งเช้าก็มาสถานีรถไฟใต้ดินนั่งรถไปทำงานตรงเวลาอยู่ดี วันหยุดสุดสัปดาห์ทุกคนก็ยังชอบดื่มกาแฟ กินหม้อไฟ ดูหนัง ทุ่มเททำให้ชีวิตทุกวันมีความสุขอยู่ดีครับ!',
+          en: 'Spot on! Folks talk about lying flat and giving up, but show up at the subway station on time next morning. On weekends everyone still enjoys coffee, hotpot, movies, striving to live joyfully every day!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '内卷' (nèijuǎn) ในสังคมจีนร่วมสมัยหมายถึงปรากฏการณ์ใด?",
+          options: [
+            'การแข่งขันกดดันกันเองอย่างดุเดือดโดยไม่ก่อให้เกิดการพัฒนาที่คุ้มค่า (Rat Race)',
+            'การม้วนเสื่อปิคนิค',
+            'การทำขนมปังโรลเนย',
+            'การฝึกโยคะในห้องแอร์'
+          ],
+          correct_index: 0,
+          explanation_th: "'内卷' คือ ภาวะการแข่งขันที่บ้าคลั่ง ทุ่มเททรัพยากรมหาศาลแต่ผลตอบแทนโดยรวมไม่ได้เพิ่มขึ้น",
+          encouragement: 'เข้าใจคำศัพท์ทางสังคมวิทยาที่โด่งดังที่สุดในจีนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '躺平' (tǎngpíng) สะท้อนถึงการปรับตัวของคนรุ่นใหม่อย่างไร?",
+          options: [
+            'การปฏิเสธการแข่งขันที่บ้าคลั่ง และหันมาใช้ชีวิตแบบเรียบง่ายพึ่งพาตนเอง',
+            'การนอนหลับกลางวันในห้องเรียน',
+            'การนอนดูดาวบนหลังคาบ้าน',
+            'การซื้อฟูกนอนราคาแพง'
+          ],
+          correct_index: 0,
+          explanation_th: "'躺平' คือ การลดความต้องการทางวัตถุ ปฏิเสธการทำงานหามรุ่งหามค่ำที่ไม่คุ้มค่า",
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจจิตวิทยาคนรุ่นใหม่อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "การแข่งขันที่ดุเดือดถึงขีดสุดย่อมนำมาซึ่งความวิตกกังวล"',
+          tokens: ['难免带来群体焦虑', '白热化的竞争', '在职场中'],
+          correct_sequence: ['在职场中', '白热化的竞争', '难免带来群体焦虑'],
+          pinyin: 'Zài zhíchǎng zhōng, báirèhuà de jìngzhēng nánmiǎn dàilái qúntǐ jiāolǜ',
+          meaning_th: 'ในที่ทำงาน การแข่งขันที่ดุเดือดถึงขีดสุดย่อมนำมาซึ่งความวิตกกังวลในกลุ่มคน',
+          explanation_th: 'สถานที่ (在职场中) + ประธาน (白热化的竞争) + ผลกระทบ (难免带来群体焦虑)',
+          encouragement: 'ต่อประโยควิเคราะห์สังคมได้คมกริบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '焦虑' ตัว '焦' (ไหม้เกรียม/กังวล) มีหมวดนำ '灬' (สี่จุด) ด้านล่าง สื่อถึงอะไร?",
+          options: [
+            'เปลวไฟที่เผาผลาญจนไหม้เกรียม (火)',
+            'สี่เหลี่ยมผืนผ้า',
+            'หยดเหงื่อสี่หยด',
+            'เมล็ดพืช'
+          ],
+          correct_index: 0,
+          explanation_th: "'灬' คือ รูปแปลงของอักษร '火' (ไฟ) สื่อถึงจิตใจที่ถูกความกังวลแผดเผาจนร้อนรุ่ม",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรจีนได้อย่างลึกซึ้ง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในงานเสวนาเยาวชน คุณถูกขอให้ออกความเห็นเกี่ยวกับคำว่า "内卷" และ "躺平" คุณควรแสดงทัศนะที่สร้างสรรค์และเข้าใจคนรุ่นใหม่อย่างไร?',
+        options: [
+          '“内卷”与“躺平”是年轻人在面对白热化竞争时的真实情绪呼喊。全社会应当提供更加多元的发展通道，用包容与理解替代盲目内耗！ ( “Nèijuǎn” yǔ “tǎngpíng” shì niánqīngrén zài miànduì báirèhuà jìngzhēng shí de zhēnshí qíngxù hūhǎn. Quán shèhuì yīngdāng tígōng gèngjiā duōyuán de fāzhǎn tōngdào, yòng bāoróng yǔ lǐjiě tìdài mángmù nèihào!)',
+          '年轻人就是吃不了苦，太矫情了。 (Niánqīngrén jiù shì chī bu liǎo kǔ, tài jiáoqing le.)',
+          '大家都要每天工作十八个小时，这才是对的。 (Dàjiā dōu yào měitiān gōngzuò shíbā ge xiǎoshí, zhè cái shì duì de.)',
+          '下雨了，我要收衣服去了。 (Xiàyǔ le, wǒ yào shōu yīfu qù le.)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำตอบ '“内卷”与“躺平”是年轻人在面对白热化竞争时的真实情绪呼喊...用包容与理解替代盲目内耗！' มีความเข้าอกเข้าใจ (Empathy) และเสนอทางออกเชิงสร้างสรรค์ให้แก่สังคมอย่างงดงาม",
+        encouragement: 'ทัศนคติแห่งการสร้างสรรค์สังคมยอดเยี่ยมระดับผู้นำทางความคิด!'
+      }
+    },
+    {
+      lesson_id: 't3_u34_l03',
+      lesson_number: 3,
+      title: {
+        zh: '职业教育与终身学习',
+        th: 'อาชีวศึกษาและการเรียนรู้ตลอดชีวิต',
+        en: 'Vocational Education & Lifelong Learning'
+      },
+      can_do: {
+        th: 'อธิบายการฝึกทักษะวิชาชีพ การก้าวข้ามกรอบเดิม (破局) โดยใช้โครงสร้าง 与其盲目焦虑，不如专注自身成长',
+        en: 'Explain vocational skills, breaking deadlocks (破局) using 与其盲目焦虑，不如专注自身成长'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ค้นพบทางออกแห่งการเติบโต ทลายกรอบการแข่งขันเดิมๆ ด้วยการพัฒนาทักษะตนเองตลอดชีวิต!',
+      vocabulary: [
+        {
+          id: 'hsk3_3411',
+          hanzi: '职业教育',
+          pinyin: 'zhíyè jiàoyù',
+          display_pinyin: 'zhíyè jiàoyù',
+          pinyin_tone: 'zhi2ye4 jiao4yu4',
+          meaning_th: 'อาชีวศึกษา (การศึกษาเชิงสายอาชีพและทักษะช่าง)',
+          meaning_en: 'vocational education',
+          radical: '耳',
+          radical_name_th: 'หมวดหู (耳字旁)',
+          stroke_count: 36,
+          mnemonic: 'สั่งสอนอบรมบ่มเพาะ (教育) ทักษะวิชาชีพลงมือทำจริง (职业) = อาชีวศึกษา',
+          kid_mnemonic: 'โรงเรียนฝึกช่างยนต์ ช่างไอที และเชฟฝีมือเยี่ยม = 职业教育',
+          body_gesture: 'สองมือทำท่าจับประแจขันน็อตแสดงการลงมือปฏิบัติจริง'
+        },
+        {
+          id: 'hsk3_3412',
+          hanzi: '技能培训',
+          pinyin: 'jìnéng péixùn',
+          display_pinyin: 'jìnéng péixùn',
+          pinyin_tone: 'ji4neng2 pei2xun4',
+          meaning_th: 'การฝึกอบรมทักษะเฉพาะทาง',
+          meaning_en: 'skills training',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 30,
+          mnemonic: 'บ่มเพาะฝึกฝน (培训) ความเชี่ยวชาญฝีมือและเทคนิค (技能) = อบรมทักษะ',
+          kid_mnemonic: 'เข้าคอร์สเรียนตัดต่อวิดีโอและเขียนโค้ดเพิ่มความเก่ง = 技能培训',
+          body_gesture: 'ยกสองมือเคาะแป้นพิมพ์และคลิกเมาส์ฝึกทักษะ'
+        },
+        {
+          id: 'hsk3_3413',
+          hanzi: '终身学习',
+          pinyin: 'zhōngshēn xuéxí',
+          display_pinyin: 'zhōngshēn xuéxí',
+          pinyin_tone: 'zhong1shen1 xue2xi2',
+          meaning_th: 'การเรียนรู้ตลอดชีวิต (Lifelong Learning)',
+          meaning_en: 'lifelong learning',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 27,
+          mnemonic: 'ตราบจนสิ้นสุดลมหายใจในชีวิต (终身) ก็ยังคงร่ำเรียนฝึกฝนไม่หยุด (学习) = เรียนรู้ตลอดชีวิต',
+          kid_mnemonic: 'คุณปู่สวมแว่นตาเปิดหนังสือเล่มใหม่ด้วยรอยยิ้มสดใส = 终身学习',
+          body_gesture: 'กางสองมือเปิดอ่านหนังสือเล่มใหญ่ด้วยความกระตือรือร้น'
+        },
+        {
+          id: 'hsk3_3414',
+          hanzi: '破局',
+          pinyin: 'pòjú',
+          display_pinyin: 'pòjú',
+          pinyin_tone: 'po4ju2',
+          meaning_th: 'การทลายกรอบเดิม / ฝ่าวงล้อมวิกฤตสู่โอกาสใหม่ (Break the Deadlock)',
+          meaning_en: 'break through deadlock / disrupt the game',
+          radical: '石',
+          radical_name_th: 'หมวดหิน (石字旁)',
+          stroke_count: 17,
+          mnemonic: 'ทุบทำลาย (破) กระดานหมากข้อจำกัดเดิม (局) = ทลายกรอบเดิม',
+          kid_mnemonic: 'เดินหมากตลบหลังเพื่อชนะทั้งกระดาน = 破局',
+          body_gesture: 'ใช้สันมือฟันแหวกผ่านม่านหมอกไปข้างหน้า'
+        },
+        {
+          id: 'hsk3_3415',
+          hanzi: '心态',
+          pinyin: 'xīntài',
+          display_pinyin: 'xīntài',
+          pinyin_tone: 'xin1tai4',
+          meaning_th: 'สภาพจิตใจ / กรอบความคิด (Mindset)',
+          meaning_en: 'mindset / mental attitude',
+          radical: '心',
+          radical_name_th: 'หมวดใจ (心字旁)',
+          stroke_count: 18,
+          mnemonic: 'ท่าทีและสภาวะ (态) ของจิตใจภายใน (心) = กรอบความคิด',
+          kid_mnemonic: 'หน้ายิ้มสดใสเปี่ยมพลังบวกในหัวใจ = 心态',
+          body_gesture: 'วางมือขวาทาบอกด้านซ้ายแล้วยิ้มอบอุ่น'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 破局 (pòjú)',
+        description_th: 'คำว่า 破 (pò) เป็นเสียง 4 หนักแน่นระเบิดออก ส่วน 局 (jú) เป็นเสียง 2 เหินขึ้นนุ่มนวล',
+        example: '寻求破局之道 (แสวงหาหนทางทลายกรอบเดิม)',
+        fun_metaphor: 'เหมือนเสียงทุบกำแพงแตกแล้วก้าวเหินขึ้นสู่ยอดเขา!',
+        reassurance: 'คำนี้เป็นคำศัพท์การบริหารยุทธศาสตร์ยอดนิยมในหมู่นักธุรกิจสตาร์ตอัปจีน'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการเลือกทางออกเชิงบวก: 与其...，不如...',
+        explanation_th: 'ใช้เปรียบเทียบระหว่างสองทางเลือก เพื่อชี้แนะว่าทางเลือกที่สองดีและคุ้มค่ากว่าอย่างชัดเจน',
+        patterns: [
+          {
+            formula: '与其盲目焦虑，不如专注自身成长',
+            zh: '与其在无休止的内卷中盲目焦虑，不如保持终身学习的心态，专注自身成长。',
+            pinyin: 'Yǔqí zài wúxiūzhǐ de nèijuǎn zhōng mángmù jiāolǜ, bùrú bǎochí zhōngshēn xuéxí de xīntài, zhuānzhù zìshēn chéngzhǎng.',
+            th: 'แทนที่จะจมอยู่กับความวิตกกังวลไร้ทิศทางในภาวะกดดันไม่สิ้นสุด สู้รักษาทัศนคติแห่งการเรียนรู้ตลอดชีวิตและมุ่งมั่นกับการเติบโตของตนเองดีกว่า',
+            en: 'Rather than blindly fretting in endless involution, it is better to maintain a lifelong learning mindset and focus on personal growth.'
+          },
+          {
+            formula: '掌握核心硬技能，才是真正 [สิ่งใด] 的关键',
+            zh: '通过高质量的职业技能培训，掌握一技之长，才是实现人生破局的关键。',
+            pinyin: 'Tōngguò gāo zhìliàng de zhíyè jìnéng péixùn, zhǎngwò yíjìzhīcháng, cái shì shíxiàn rénshēng pòjú de guānjiàn.',
+            th: 'การฝึกอบรมทักษะวิชาชีพคุณภาพสูงและมีวิชาติดตัวหนึ่งอย่างที่เชี่ยวชาญ นั่นแหละคือกุญแจสำคัญในการทลายกรอบชีวิตสู่ความสำเร็จ',
+            en: 'Gaining specialized skills through high-quality vocational training is the key to breaking life’s deadlocks.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张老师，当今社会面临AI技术的冲击，大家都在担心自己被替代，我们该如何应对？',
+          pinyin: 'Zhāng lǎoshī, dāngjīn shèhuì miànlín AI jìshù de chōngjī, dàjiā dōu zài dānxīn zìjǐ bèi tìdài, wǒmen gāi rúhé yìngduì?',
+          th: 'อาจารย์จางครับ สังคมยุคนี้เผชิญแรงกระแทกจากเทคโนโลยี AI ทุกคนกังวลว่าจะถูกแทนที่ เราควรรับมืออย่างไรดีครับ?',
+          en: 'Teacher Zhang, facing the impact of AI tech, everyone worries about being replaced; how should we respond?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'อาจารย์จาง (ผู้เชี่ยวชาญด้านการพัฒนาบุคลากร) 👨‍🏫',
+          zh: '与其盲目焦虑，不如专注自身成长！时代的变化正是倒逼我们破局的契机。',
+          pinyin: 'Yǔqí mángmù jiāolǜ, bùrú zhuānzhù zìshēn chéngzhǎng! Shídài de biànhuà zhèng shì dàobī wǒmen pòjú de qìjī.',
+          th: 'แทนที่จะวิตกกังวลอย่างไร้จุดหมาย สู้มุ่งมั่นพัฒนาตนเองดีกว่าครับ! ความเปลี่ยนแปลงของยุคสมัยนี่แหละคือโอกาสทองในการทลายกรอบเดิมของเรา',
+          en: 'Rather than worrying blindly, focus on self-growth! Epochal shifts are precisely opportunities to break deadlocks.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '所以职业技能培训和终身学习理念，越来越成为不可或缺的生存法则了！',
+          pinyin: 'Suǒyǐ zhíyè jìnéng péixùn hé zhōngshēn xuéxí lǐniàn, yuè lái yuè chéngwéi bùkěhuòquē de shēngcún fǎzé le!',
+          th: 'ดังนั้นการฝึกอบรมทักษะอาชีพและแนวคิดการเรียนรู้ตลอดชีวิต จึงยิ่งกลายเป็นกฎการอยู่รอดที่ขาดไม่ได้เลยนะครับ!',
+          en: 'So vocational skills training and lifelong learning mindsets increasingly become indispensable rules of survival!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'อาจารย์จาง 👨‍🏫',
+          zh: '完全正确！保持空杯心态，每天学一点新技能，你就永远跑在时代的前面。',
+          pinyin: 'Wánquán zhèngquè! Bǎochí kōngbēi xīntài, měi tiān xué yìdiǎn xīn jìnéng, nǐ jiù yǒngyuǎn pǎo zài shídài de qiánmian.',
+          th: 'ถูกต้องที่สุดครับ! รักษาทัศนคติแก้วเปล่า เรียนรู้ทักษะใหม่วันละนิด คุณก็จะวิ่งอยู่แถวหน้าของยุคสมัยเสมอครับ',
+          en: 'Exactly! Keep an empty-cup mindset, learn new skills daily, and you will forever run ahead of the times.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '破局' (pòjú) ในทางกลยุทธ์และการพัฒนาตนเองหมายถึงอะไร?",
+          options: [
+            'การทลายกรอบข้อจำกัดหรือทางตันเดิม เพื่อสร้างโอกาสใหม่',
+            'การทำลายกระดานหมากรุก',
+            'การฉีกสัญญาว่าจ้าง',
+            'การลาออกจากโรงเรียน'
+          ],
+          correct_index: 0,
+          explanation_th: "'破局' คือ การฝ่าวงล้อม การก้าวข้ามคอขวด หรือการทลายทางตันสู่มิติใหม่",
+          encouragement: 'จำคำศัพท์เชิงกลยุทธ์ยอดฮิตได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "โครงสร้าง '与其 A，不如 B' มีความหมายตรงกับภาษาไทยว่าอย่างไร?",
+          options: [
+            'แทนที่จะทำ A สู้ทำ B ดีกว่า',
+            'ทำทั้ง A และ B พร้อมกัน',
+            'ถ้าทำ A ไม่ได้ ก็ไม่ต้องทำ B',
+            'ห้ามทำทั้ง A และ B'
+          ],
+          correct_index: 0,
+          explanation_th: "'与其...不如...' แปลว่า แทนที่จะ... สู้... ดีกว่า ใช้เลือกสิ่งที่ดีกว่าอย่างชัดเจน",
+          encouragement: 'ยอดเยี่ยมมาก! ไวยากรณ์เปรียบเทียบเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แทนที่จะวิตกกังวล สู้มุ่งมั่นกับการเติบโตของตนเองดีกว่า"',
+          tokens: ['不如专注自身成长', '与其盲目焦虑', '我们'],
+          correct_sequence: ['我们', '与其盲目焦虑', '不如专注自身成长'],
+          pinyin: 'Wǒmen yǔqí mángmù jiāolǜ, bùrú zhuānzhù zìshēn chéngzhǎng',
+          meaning_th: 'พวกเราแทนที่จะวิตกกังวลไร้ทิศทาง สู้มุ่งมั่นกับการเติบโตของตนเองดีกว่า',
+          explanation_th: 'ประธาน (我们) + โครงสร้างเลือกทางออก (与其盲目焦虑，不如专注自身成长)',
+          encouragement: 'ต่อประโยคแนวคิดเชิงบวกได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '心态' ตัว '态' (สภาวะ/ท่าที) มีหมวดนำใด?",
+          options: [
+            '心 (หมวดใจ 心字底)',
+            '大 (หมวดใหญ่ 大字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'态' มีหมวดนำ '心' (ใจ) อยู่ด้านล่าง สื่อถึงท่าทีและสภาวะจิตใจภายใน",
+          encouragement: 'แม่นยำในหมวดนำอักษรจีน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'รุ่นน้องในทีมรู้สึกท้อแท้กับความกดดันในที่ทำงานและถามคุณว่าจะหาทางรอดอย่างไรในยุคแห่งการแข่งขันนี้ คุณควรกล่าวให้กำลังใจด้วยแนวคิดแห่งการเติบโตอย่างไร?',
+        options: [
+          '与其盲目焦虑，不如保持终身学习的心态！脚踏实地磨砺核心技能，找到属于自己的赛道，定能实现人生破局！ (Yǔqí mángmù jiāolǜ, bùrú bǎochí zhōngshēn xuéxí de xīntài! Jiǎotàshídì mólì héxīn jìnéng, zhǎodào shǔyú zìjǐ de sàidào, dìng néng shíxiàn rénshēng pòjú!)',
+          '没办法，大家都认命吧，回家躺平算啦。 (Méi bànfǎ, dàjiā dōu rènmìng ba, huíjiā tǎngpíng suàn la.)',
+          '辞职吧，什么都别干了。 (Cízhí ba, shénme dōu bié gàn le.)',
+          '请问今天公司的电费谁交？ (Qǐngwèn jīntiān gōngsī de diànfèi shéi jiāo?)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำพูด '与其盲目焦虑，不如保持终身学习的心态！脚踏实地磨砺核心技能...定能实现人生破局！' รวมทั้ง '终身学习', '脚踏实地', และ '破局' เปี่ยมด้วยพลังบวกและเป็นเข็มทิศชีวิตที่ยอดเยี่ยม",
+        encouragement: 'คำแนะนำสร้างแรงบันดาลใจระดับผู้นำตัวจริง ผ่านด่านได้อย่างสง่างาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u34_l04',
+      lesson_number: 4,
+      title: {
+        zh: 'Boss Challenge: 亚洲青年教育与职业生态辩论赛',
+        th: 'ภารกิจบอส: โต้วาทีการศึกษาและภาวะกดดันของคนรุ่นใหม่',
+        en: 'Boss Challenge: Debate on Youth Education & Involution in Asia'
+      },
+      can_do: {
+        th: 'อภิปรายและโต้วาทีเกี่ยวกับปรากฏการณ์การศึกษา ภาวะกดดัน และการพัฒนาที่หลากหลาย ผสาน 良性竞争, 精神内耗, และ 多元发展',
+        en: 'Debate youth education, involution, and diversity using 良性竞争, 精神内耗, and 多元发展'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตเวทีโต้วาทีระดับปัญญาชน ถกประเด็นการศึกษาและอนาคตของเยาวชนเอเชียอย่างสร้างสรรค์!',
+      vocabulary: [
+        {
+          id: 'hsk3_3416',
+          hanzi: '良性竞争',
+          pinyin: 'liángxìng jìngzhēng',
+          display_pinyin: 'liángxìng jìngzhēng',
+          pinyin_tone: 'liang2xing4 jing4zheng1',
+          meaning_th: 'การแข่งขันเชิงสร้างสรรค์ (แข่งกันพัฒนา ไม่ทำลายกัน)',
+          meaning_en: 'healthy competition / constructive competition',
+          radical: '艮',
+          radical_name_th: 'หมวดเกิ่น (艮字旁)',
+          stroke_count: 28,
+          mnemonic: 'คุณธรรมความดีงาม (良性) ในการประชันแข่งขัน (竞争) = การแข่งขันเชิงสร้างสรรค์',
+          kid_mnemonic: 'เพื่อนสองคนวิ่งแข่งกันแล้วเข้าเส้นชัยกอดคอปรบมือให้กัน = 良性竞争',
+          body_gesture: 'สองมือทำท่ายกนิ้วโป้งให้กันด้วยความชื่นชมในการแข่งขัน'
+        },
+        {
+          id: 'hsk3_3417',
+          hanzi: '精神内耗',
+          pinyin: 'jīngshén nèihào',
+          display_pinyin: 'jīngshén nèihào',
+          pinyin_tone: 'jing1shen2 nei4hao4',
+          meaning_th: 'ความเหนื่อยล้าทางจิตใจจากความกังวลภายใน (Overthinking Exhaustion)',
+          meaning_en: 'internal psychological drain / overthinking fatigue',
+          radical: '米',
+          radical_name_th: 'หมวดข้าว (米字旁)',
+          stroke_count: 35,
+          mnemonic: 'พลังจิตวิญญาณ (精神) ถูกเผาผลาญกัดกินอยู่ภายในใจ (内耗) = จิตใจเหนื่อยล้าสะสม',
+          kid_mnemonic: 'แบตเตอรี่ในหัวใจลดฮวบเพราะคิดมากกังวลไปเอง = 精神内耗',
+          body_gesture: 'กุมหน้าอกแล้วถอนหายใจยาวสะท้อนความเหนื่อยล้า'
+        },
+        {
+          id: 'hsk3_3418',
+          hanzi: '多元发展',
+          pinyin: 'duōyuán fāzhǎn',
+          display_pinyin: 'duōyuán fāzhǎn',
+          pinyin_tone: 'duo1yuan2 fa1zhan3',
+          meaning_th: 'การเติบโตและพัฒนาการที่หลากหลาย (ไม่จำกัดอยู่แค่ลู่เดียว)',
+          meaning_en: 'diversified development / pluralistic growth',
+          radical: '夕',
+          radical_name_th: 'หมวดค่ำ (夕字旁)',
+          stroke_count: 24,
+          mnemonic: 'หลากหลายต้นกำเนิดมิติ (多元) ก้าวหน้าพัฒนาเปิดกว้าง (发展) = เติบโตหลากหลาย',
+          kid_mnemonic: 'ต้นไม้ใหญ่แตกกิ่งก้านสาขาผลิดอกออกผลหลากสีสัน = 多元发展',
+          body_gesture: 'กางสองมือออกเป็นทรงพุ่มไม้แผ่ขยายหลากทิศทาง'
+        },
+        {
+          id: 'hsk3_3419',
+          hanzi: '唯分数论',
+          pinyin: 'wéifēnshùlùn',
+          display_pinyin: 'wéifēnshùlùn',
+          pinyin_tone: 'wei2fen1shu4lun4',
+          meaning_th: 'ค่านิยมตัดสินคนจากคะแนนสอบเพียงอย่างเดียว',
+          meaning_en: 'score-only obsession / test-score determinism',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 29,
+          mnemonic: 'ยึดถือเพียงตัวเลขคะแนนสอบ (唯分数) เป็นทฤษฎีตัดสินทุกสิ่ง (论) = ค่านิยมดูแต่คะแนน',
+          kid_mnemonic: 'มองแว่นขยายเห็นแต่เลข 100 บนกระดาษโดยไม่มองหน้าคน = 唯分数论',
+          body_gesture: 'ส่ายศีรษะแล้วโบกมือปฏิเสธค่านิยมดูแต่คะแนน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 唯分数论 (wéifēnshùlùn)',
+        description_th: 'พยางค์: wéi (2), fēn (1), shù (4), lùn (4) — มีการสลับจังหวะสูง-ต่ำ-หนัก-หนัก อย่างชัดเจน',
+        example: '破除唯分数论 (ทลายค่านิยมตัดสินคนจากคะแนนสอบ)',
+        fun_metaphor: 'เหมือนเสียงเคาะระฆังเตือนสติสังคมให้หันมามองคุณค่าความเป็นมนุษย์!',
+        reassurance: 'คำนี้เป็นศัพท์การปฏิรูปการศึกษาในระดับนโยบายของจีน'
+      },
+      grammar_bite: {
+        title: 'การสรุปญัตติในการโต้วาที: 告别...，构建...的健康生态',
+        explanation_th: 'สำนวนภาษาเขียนและวาทศิลป์ระดับสูงในการเสนอทางออกเชิงนโยบาย',
+        patterns: [
+          {
+            formula: '我们要告别“唯分数论”，停止无谓的 [สิ่งใด]',
+            zh: '我们必须告别“唯分数论”，停止无谓的精神内耗，倡导良性竞争。',
+            pinyin: 'Wǒmen bìxū gàobié “wéifēnshùlùn”, tíngzhǐ wúwèi de jīngshén nèihào, chàngdǎo liángxìng jìngzhēng.',
+            th: 'พวกเราต้องบอกลาค่านิยมตัดสินคนจากคะแนนสอบ ยุติการเผาผลาญพลังใจอย่างไร้ค่า และส่งเสริมการแข่งขันเชิงสร้างสรรค์',
+            en: 'We must bid farewell to test-score determinism, cease senseless mental drain, and champion healthy competition.'
+          },
+          {
+            formula: '唯有鼓励多元发展，才能让青年一代 + [ผลลัพธ์]',
+            zh: '唯有鼓励多元发展，才能让青年一代找到适合自己的人生坐标，实现真正的价值！',
+            pinyin: 'Wéiyǒu gǔlì duōyuán fāzhǎn, cái néng ràng qīngnián yídài zhǎodào shìhé zìjǐ de rénshēng zuòbiāo, shíxiàn zhēnzhèng de jiàzhí!',
+            th: 'มีเพียงการส่งเสริมการเติบโตที่หลากหลายเท่านั้น จึงจะช่วยให้คนรุ่นใหม่ค้นพบพิกัดชีวิตที่เหมาะสมกับตนเอง และบรรลุคุณค่าที่แท้จริงได้!',
+            en: 'Only by encouraging diversified growth can the youth generation find their own life coordinates and realize genuine value!'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (หัวหน้าทีมโต้วาที) 🧑‍💼',
+          zh: '各位评委、对方辩友，今天我们讨论的核心不是否定竞争，而是如何把“恶意内卷”转化为“良性竞争”。',
+          pinyin: 'Gèwèi píngwěi, duìfāng biànyǒu, jīntiān wǒmen tǎolùn de héxīn bú shì fǒudìng jìngzhēng, ér shì rúhé bǎ “èyì nèijuǎn” zhuǎnhuà wéi “liángxìng jìngzhēng”.',
+          th: 'ท่านคณะกรรมการและเพื่อนฝ่ายตรงข้าม หัวใจของการอภิปรายในวันนี้ไม่ใช่การปฏิเสธการแข่งขัน หากแต่อยู่ที่จะเปลี่ยนการกดดันกันเองให้กลายเป็นการแข่งขันเชิงสร้างสรรค์ได้อย่างไร',
+          en: 'Judges and worthy opponents, our discussion core is not denying competition, but transforming toxic involution into healthy competition.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ฝ่ายค้าน 👨‍🎓',
+          zh: '但不可否认，优质教育资源永远是稀缺的，大家不得不通过高考争夺名校席位！',
+          pinyin: 'Dàn bùkě fǒurèn, yōuzhì jiàoyù zīyuán yǒngyuǎn shì xīquē de, dàjiā bùdébù tōngguò Gāokǎo zhēngduó míngxiào xíwèi!',
+          th: 'แต่ปฏิเสธไม่ได้ว่าทรัพยากรการศึกษาชั้นดีย่อมมีจำกัดเสมอ ทุกคนจึงจำต้องแย่งชิงที่นั่งใน ม.ดังผ่านการสอบเกาเข่า!',
+          en: 'Incontrovertibly, quality education is always scarce; everyone must fight for elite college spots via Gaokao!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (หัวหน้าทีมโต้วาที) 🧑‍💼',
+          zh: '正因如此，我们才必须破除“唯分数论”！如果社会只有一条独木桥，结果只能是无限的精神内耗。唯有倡导多元发展，才能让行行出状元！',
+          pinyin: 'Zhèng yīn rúcǐ, wǒmen cái bìxū pòchú “wéifēnshùlùn”! Rúguǒ shèhuì zhǐyǒu yì tiáo dúmùqiáo, jiéguǒ zhǐ néng shì wúxiàn de jīngshén nèihào. Wéiyǒu chàngdǎo duōyuán fāzhǎn, cái néng ràng hángháng chū zhuàngyuan!',
+          th: 'ก็เพราะเป็นเช่นนี้ เราจึงต้องทลายค่านิยมยึดติดคะแนนสอบ! หากสังคมมีแต่สะพานไม้ซุงเดี่ยวเส้นเดียว ผลลัพธ์ย่อมมีแต่ความเหนื่อยล้าทางจิตใจที่ไม่มีวันสิ้นสุด มีเพียงการส่งเสริมการเติบโตที่หลากหลายเท่านั้น จึงจะทำให้ทุกสาขาวิชาชีพมีผู้เป็นเลิศได้!',
+          en: 'Precisely why we must dismantle score-only obsession! A single bridge brings endless mental drain. Only championing diversity allows mastership in every field!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'กรรมการตัดสิน 👩‍⚖️',
+          zh: '辩驳切中要害，充满人文关怀与建设性思考！本场胜出！',
+          pinyin: 'Biànbó qièzhòng yàohài, chōngmǎn rénwén guānhuái yǔ jiànshèxìng sīkǎo! Běn chǎng shèngchū!',
+          th: 'ข้อโต้แย้งตรงประเด็น เปี่ยมด้วยความเข้าอกเข้าใจความเป็นมนุษย์และความคิดเชิงสร้างสรรค์! ชนะการโต้วาทีในรอบนี้ครับ!',
+          en: 'Arguments hit the crux, full of humanistic care and constructive vision! You win this round!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '精神内耗' (jīngshén nèihào) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ความเหนื่อยล้าและหมดพลังใจจากความวิตกกังวลและความคิดมากภายในจิตใจ',
+            'การประหยัดพลังงานไฟฟ้าในบ้าน',
+            'การดื่มกาแฟมากเกินไป',
+            'การออกกำลังกายกลางแจ้ง'
+          ],
+          correct_index: 0,
+          explanation_th: "'精神内耗' คือ ภาวะที่พลังจิตใจถูกเผาผลาญจนหมดสิ้นจากความเครียด การคิดวกวน และความกดดัน",
+          encouragement: 'จำคำศัพท์จิตวิทยายอดฮิตในหมู่คนทำงานได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "สำนวน '行行出状元' (hángháng chū zhuàngyuan) สื่อถึงแนวคิดใด?",
+          options: [
+            'ทุกสายอาชีพหากตั้งใจจริง ย่อมสามารถก้าวขึ้นมาเป็นเลิศได้ทั้งสิ้น',
+            'ต้องสอบได้ที่หนึ่งในโรงเรียนเท่านั้น',
+            'ทุกคนต้องรับราชการเท่านั้นจึงจะประสบความสำเร็จ',
+            'การเป็นนักกีฬาเหรียญทอง'
+          ],
+          correct_index: 0,
+          explanation_th: "'行行出状元' เป็นคติพจน์สอนใจว่า ทุกสาขาอาชีพล้วนสามารถสร้างผู้ประสบความสำเร็จระดับจอหงวนได้",
+          encouragement: 'ยอดเยี่ยมมาก! สำนวนปรัชญาอาชีพเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "มีเพียงการส่งเสริมการเติบโตที่หลากหลายจึงจะช่วยให้คนรุ่นใหม่ค้นพบคุณค่า"',
+          tokens: ['才能让青年一代', '找到真正价值', '唯有鼓励多元发展'],
+          correct_sequence: ['唯有鼓励多元发展', '才能让青年一代', '找到真正价值'],
+          pinyin: 'Wéiyǒu gǔlì duōyuán fāzhǎn, cái néng ràng qīngnián yídài zhǎodào zhēnzhèng jiàzhí',
+          meaning_th: 'มีเพียงการส่งเสริมการเติบโตที่หลากหลาย จึงจะช่วยให้คนรุ่นใหม่ค้นพบคุณค่าที่แท้จริง',
+          explanation_th: 'เงื่อนไขเดียว (唯有鼓励多元发展) + ผลลัพธ์ (才能让青年一代找到真正价值)',
+          encouragement: 'ต่อประโยคโต้วาทีระดับปัญญาชนได้อย่างทรงพลัง!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '良性' ตัว '良' (ดี/ประเสริฐ) มีหมวดนำใด?",
+          options: [
+            '艮 (หมวดเกิ่น 艮字旁)',
+            '白 (หมวดขาว 白字旁)',
+            '心 (หมวดใจ 心字底)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'良' มีหมวดนำ '艮' สื่อถึงความดีงาม ความสมบูรณ์ และคุณธรรม",
+          encouragement: 'แม่นยำในหมวดนำอักษรจีน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณยืนอยู่บนโพเดียมโต้วาทีระดับนานาชาติ เพื่อกล่าวสรุปปิดท้ายในหัวข้อ "อนาคตการศึกษาและการทำงานของเยาวชนเอเชีย" ควรกล่าวสรุปอย่างไรให้ประทับใจกรรมการและผู้ชมทุกคน?',
+        options: [
+          '告别无谓的内卷与精神内耗，并不意味着放弃梦想！唯有破除“唯分数论”，倡导良性竞争与多元发展，才能让每一个青年在广阔天地中绽放属于自己的光芒！ (Gàobié wúwèi de nèijuǎn yǔ jīngshén nèihào, bìng bù yìwèizhe fàngqì mèngxiǎng! Wéiyǒu pòchú “wéifēnshùlùn”, chàngdǎo liángxìng jìngzhēng yǔ duōyuán fāzhǎn, cái néng ràng měi yí ge qīngnián zài guǎngkuò tiāndì zhōng zhànfàng shǔyú zìjǐ de guāngmáng!)',
+          '辩论结束了，大家各回各家吧。 (Biànlùn jiéshù le, dàjiā gè huí gè jiā ba.)',
+          '对方辩友说的全是错的，我不承认。 (Duìfāng biànyǒu shuō de quán shì cuò de, wǒ bù chéngrèn.)',
+          '请问这附近的夜市什么时候开门？ (Qǐngwèn zhè fùjìn de yèshì shénme shíhou kāimén?)'
+        ],
+        correct_index: 0,
+        explanation_th: "สุนทรพจน์ปิดท้าย '告别无谓的内卷与精神内耗...才能让每一个青年在广阔天地中绽放属于自己的光芒！' ยกระดับจากการโต้แย้งสู่การสร้างแรงบันดาลใจและให้ความหวังที่เปี่ยมพลัง สะกดใจผู้ฟังทั้งห้องประชุม",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge โต้วาทีระบบการศึกษาและภาวะกดดันสังคมสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u34_master',
+        badge_name: 'ปราชญ์ผู้ข้ามพ้นภาวะกดดันแห่งยุคสมัย 🌟🏆',
+        message_th: 'ขอแสดงความยินดี! คุณสำเร็จ Unit 34 เข้าใจปรากฏการณ์สังคม วัฒนธรรมการศึกษา และสแลงเน่ย์เจวี่ยน-ถั่งผิงของจีนได้อย่างลึกซึ้งและสร้างสรรค์!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

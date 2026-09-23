@@ -11,7 +11,7 @@ import * as path from 'path';
 
 export interface ValidationOptions {
   rootDir?: string;
-  tier?: '0' | '1' | '2' | 'all';
+  tier?: '0' | '1' | '2' | '3' | 'all';
   unitId?: string;
   strict?: boolean;
   verbose?: boolean;
@@ -190,6 +190,7 @@ export class CurriculumEngine {
     const tier0Dir = path.join(this.lessonsDir, 'tier0');
     const tier1Dir = path.join(this.lessonsDir, 'tier1');
     const tier2Dir = path.join(this.lessonsDir, 'tier2');
+    const tier3Dir = path.join(this.lessonsDir, 'tier3');
 
     const tier0Files = fs.existsSync(tier0Dir)
       ? fs.readdirSync(tier0Dir).filter((f) => f.startsWith('unit00_') && f.endsWith('.json'))
@@ -203,7 +204,11 @@ export class CurriculumEngine {
       ? fs.readdirSync(tier2Dir).filter((f) => f.startsWith('unit') && f.endsWith('.json'))
       : [];
 
-    if (tier0Files.length === 0 && tier1Files.length === 0 && tier2Files.length === 0) {
+    const tier3Files = fs.existsSync(tier3Dir)
+      ? fs.readdirSync(tier3Dir).filter((f) => f.startsWith('unit') && f.endsWith('.json'))
+      : [];
+
+    if (tier0Files.length === 0 && tier1Files.length === 0 && tier2Files.length === 0 && tier3Files.length === 0) {
       errors.push({
         stage: 1,
         severity: 'error',
@@ -229,7 +234,7 @@ export class CurriculumEngine {
     const cumulativeVocabLexicon = new Set<string>();
 
     // Pre-populate cumulative vocabulary from prior tiers if filtered
-    if (tierFilter === '1' || tierFilter === '2') {
+    if (tierFilter === '1' || tierFilter === '2' || tierFilter === '3') {
       for (const file of tier0Files) {
         const filePath = path.join(tier0Dir, file);
         try {
@@ -260,9 +265,27 @@ export class CurriculumEngine {
       }
     }
 
-    if (tierFilter === '2') {
+    if (tierFilter === '2' || tierFilter === '3') {
       for (const file of tier1Files) {
         const filePath = path.join(tier1Dir, file);
+        try {
+          const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          if (Array.isArray(content?.lessons)) {
+            for (const l of content.lessons as Record<string, unknown>[]) {
+              if (Array.isArray(l?.vocabulary)) {
+                for (const v of l.vocabulary as Record<string, unknown>[]) {
+                  if (typeof v?.hanzi === 'string') cumulativeVocabLexicon.add(v.hanzi);
+                }
+              }
+            }
+          }
+        } catch {}
+      }
+    }
+
+    if (tierFilter === '3') {
+      for (const file of tier2Files) {
+        const filePath = path.join(tier2Dir, file);
         try {
           const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           if (Array.isArray(content?.lessons)) {
@@ -461,6 +484,86 @@ export class CurriculumEngine {
 
           // Stage 5: Interleaving Calculator (Units >= 2)
           const unitNumber = typeof content.unit_number === 'number' ? content.unit_number : 11;
+          if (unitNumber >= 2 && cumulativeVocabLexicon.size > 0) {
+            const stat = this.calculateInterleaving(content, cumulativeVocabLexicon);
+            interleavingStats[unitId] = stat;
+
+            if (stat.rate < 20) {
+              const msg = `Interleaving rate is ${stat.rate.toFixed(1)}% (minimum requirement is 20%). Found ${stat.priorWordsMatched.length} recycled words in ${stat.totalTokens} unique tokens.`;
+              if (options.strict) {
+                errors.push({
+                  stage: 5,
+                  severity: 'error',
+                  unitId,
+                  rule: 'INTERLEAVING_MINIMUM',
+                  message: msg,
+                });
+              } else {
+                warnings.push({
+                  stage: 5,
+                  severity: 'warning',
+                  unitId,
+                  rule: 'INTERLEAVING_MINIMUM',
+                  message: msg,
+                });
+              }
+            }
+          }
+
+          // Add this unit's vocab to cumulative dictionary for subsequent units
+          for (const word of unitVocab) {
+            cumulativeVocabLexicon.add(word);
+          }
+        } catch (err: unknown) {
+          errors.push({
+            stage: 1,
+            severity: 'error',
+            unitId: file,
+            rule: 'JSON_SYNTAX',
+            message: `JSON parse error in ${file}: ${(err as Error).message}`,
+          });
+        }
+      }
+    }
+
+    // 4. Process Tier 3 Files if requested
+    if (tierFilter === '3' || tierFilter === 'all') {
+      for (const file of tier3Files) {
+        const filePath = path.join(tier3Dir, file);
+        try {
+          const content = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+          if (!content || typeof content !== 'object') {
+            errors.push({
+              stage: 1,
+              severity: 'error',
+              unitId: file,
+              rule: 'JSON_SCHEMA',
+              message: `Empty or non-object JSON content in ${file}`,
+            });
+            continue;
+          }
+
+          const unitId = typeof content.unit_id === 'string' ? content.unit_id : file;
+
+          if (targetUnitId && unitId !== targetUnitId) continue;
+          totalUnitsChecked++;
+
+          // Stage 2, 3, 4 for Tier 3
+          const unitVocab = this.validateTier1Unit(
+            content,
+            file,
+            errors,
+            warnings,
+            globalUnitIds,
+            globalLessonIds,
+            globalVocabIds
+          );
+
+          totalLessonsChecked += Array.isArray(content.lessons) ? content.lessons.length : 0;
+          totalVocabChecked += unitVocab.length;
+
+          // Stage 5: Interleaving Calculator (Units >= 2)
+          const unitNumber = typeof content.unit_number === 'number' ? content.unit_number : 26;
           if (unitNumber >= 2 && cumulativeVocabLexicon.size > 0) {
             const stat = this.calculateInterleaving(content, cumulativeVocabLexicon);
             interleavingStats[unitId] = stat;

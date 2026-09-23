@@ -1,0 +1,870 @@
+/**
+ * scripts/tier3_batch_a/unit30.ts
+ * Tier 3 Unit 30: 合同与法务初步 (Contracts & Legal Basics: ตรวจร่างสัญญาเบื้องต้น)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit30 = {
+  unit_id: 'tier3_u30',
+  tier: 3,
+  unit_number: 30,
+  title: {
+    zh: '合同与法务初步',
+    th: 'ตรวจร่างสัญญาเบื้องต้น',
+    en: 'Contracts & Legal Basics'
+  },
+  description: 'ปูพื้นฐานการอ่านและตรวจสอบสัญญาธุรกิจภาษาจีน: เงื่อนไขสำคัญและค่าปรับ (关键合同条款), สิทธิและหน้าที่ตามกฎหมาย (权利与义务), ตลอดจนกลไกการระงับข้อพิพาทและอนุญาโตตุลาการ (争议解决机制)',
+  lessons: [
+    {
+      lesson_id: 't3_u30_l01',
+      lesson_number: 1,
+      title: {
+        zh: '关键合同条款',
+        th: 'เงื่อนไขสำคัญในสัญญา',
+        en: 'Key Contract Clauses'
+      },
+      can_do: {
+        th: 'ระบุคู่สัญญา (甲方/乙方) ค่าปรับผิดสัญญา ข้อตกลงความลับ และเหตุสุดวิสัย โดยใช้โครงสร้าง 依照...之规定 / 予以...',
+        en: 'Identify Party A/B, breach damages, NDA, and force majeure using 依照...之规定 / 予以...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: อ่านร่างสัญญาธุรกิจภาษาจีน ตรวจสอบคู่สัญญา และระบุเงื่อนไขค่าปรับได้อย่างแม่นยำ!',
+      vocabulary: [
+        {
+          id: 'hsk3_3001',
+          hanzi: '甲方',
+          pinyin: 'jiǎfāng',
+          display_pinyin: 'jiǎfāng',
+          pinyin_tone: 'jia3fang1',
+          meaning_th: 'คู่สัญญาฝ่าย ก (ผู้ว่าจ้าง/ผู้ซื้อ)',
+          meaning_en: 'Party A (employer/buyer/first party)',
+          radical: '十',
+          radical_name_th: 'หมวดสิบ (十字旁)',
+          stroke_count: 9,
+          mnemonic: 'ลำดับที่หนึ่งของกิ่งก้านสวรรค์ (甲) ด้านฝ่ายสัญญา (方) = ฝ่าย ก',
+          kid_mnemonic: 'หัวหน้าทีมที่ถือกระดาษสัญญาลำดับแรก = 甲方',
+          body_gesture: 'ชูหนึ่งนิ้วชี้ไปทางซ้ายมือแสดงฝ่าย ก'
+        },
+        {
+          id: 'hsk3_3002',
+          hanzi: '乙方',
+          pinyin: 'yǐfāng',
+          display_pinyin: 'yǐfāng',
+          pinyin_tone: 'yi3fang1',
+          meaning_th: 'คู่สัญญาฝ่าย ข (ผู้รับจ้าง/ผู้ขาย)',
+          meaning_en: 'Party B (contractor/seller/second party)',
+          radical: '乙',
+          radical_name_th: 'หมวดลำดับสอง (乙部)',
+          stroke_count: 5,
+          mnemonic: 'ลำดับที่สองของกิ่งก้านสวรรค์ (乙) ด้านฝ่ายสัญญา (方) = ฝ่าย ข',
+          kid_mnemonic: 'เพื่อนคู่สัญญาคนที่สองที่เซ็นชื่อเคียงข้างกัน = 乙方',
+          body_gesture: 'ชูสองนิ้วชี้ไปทางขวามือแสดงฝ่าย ข'
+        },
+        {
+          id: 'hsk3_3003',
+          hanzi: '违约金',
+          pinyin: 'wéiyuējīn',
+          display_pinyin: 'wéiyuējīn',
+          pinyin_tone: 'wei2yue1jin1',
+          meaning_th: 'เบี้ยปรับผิดสัญญา (ค่าปรับ)',
+          meaning_en: 'liquidated damages / breach penalty',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 21,
+          mnemonic: 'ฝ่าฝืนละเมิด (违) ข้อสัญญา (约) ต้องชดใช้เป็นเงินทอง (金) = เบี้ยปรับผิดสัญญา',
+          kid_mnemonic: 'กล่องปรับเงินถ้าใครไม่ทำตามกฎที่ตกลงกันไว้ = 违约金',
+          body_gesture: 'สองมือทำกากบาทแล้วตบลงบนฝ่ามือเตือนสติ'
+        },
+        {
+          id: 'hsk3_3004',
+          hanzi: '保密协议',
+          pinyin: 'bǎomì xiéyì',
+          display_pinyin: 'bǎomì xiéyì',
+          pinyin_tone: 'bao3mi4 xie2yi4',
+          meaning_th: 'ข้อตกลงรักษาความลับ (NDA)',
+          meaning_en: 'non-disclosure agreement (NDA)',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 30,
+          mnemonic: 'ปกป้องรักษา (保) เรื่องลับส่วนตัว (密) ตามข้อตกลงร่วมกัน (协议) = สัญญา NDA',
+          kid_mnemonic: 'แม่กุญแจทองคำล็อกเอกสารสำคัญไม่ให้ใครแอบดู = 保密协议',
+          body_gesture: 'ยกนิ้วชี้แตะริมฝีปากทำท่ารักษาความลับ'
+        },
+        {
+          id: 'hsk3_3005',
+          hanzi: '不可抗力',
+          pinyin: 'bùkěkànglì',
+          display_pinyin: 'bùkěkànglì',
+          pinyin_tone: 'bu4ke3kang4li4',
+          meaning_th: 'เหตุสุดวิสัย (Force Majeure เช่น ภัยธรรมชาติ สงคราม)',
+          meaning_en: 'force majeure / act of God',
+          radical: '一',
+          radical_name_th: 'หมวดหนึ่ง (一部)',
+          stroke_count: 17,
+          mnemonic: 'ไม่สามารถ (不可) ใช้พลังมนุษย์ต่อต้านขัดขืนได้ (抗力) = เหตุสุดวิสัย',
+          kid_mnemonic: 'พายุฝนฟ้าคะนองรุนแรงที่ไม่มีใครห้ามได้ = 不可抗力',
+          body_gesture: 'ยกสองแขนไขว้กันป้องศีรษะหลบพายุฝน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 不可抗力 (bùkěkànglì)',
+        description_th: 'คำว่า 不 (bù) นำหน้า 可 (kě ซึ่งเป็นเสียง 3) ดังนั้น 不 จะคงเสียง 4 เป็น bù ไม่ผันเป็น bú',
+        example: '因不可抗力导致延期 (ล่าช้าเนื่องจากเหตุสุดวิสัย)',
+        fun_metaphor: 'น้ำเสียงหนักแน่นเด็ดขาดดั่งขุนเขาต้านพายุ!',
+        reassurance: 'คำนี้เป็นภาษากฎหมายระดับสากล ออกเสียง bù ให้หนักแน่น'
+      },
+      grammar_bite: {
+        title: 'ภาษากฎหมายทางการ: 依照...之规定 / 予以...',
+        explanation_th: 'สำนวนภาษาเขียนระดับสูงที่พบในข้อสัญญาพาณิชย์จีนทุกฉบับ',
+        patterns: [
+          {
+            formula: '依照 + [มาตรา/กฎหมาย] + 之规定，违约方应 + [ผลตามกฎหมาย]',
+            zh: '依照本合同第十条之规定，违约方应支付合同总额百分之十的违约金。',
+            pinyin: 'Yīzhào běn hétong dì-shí tiáo zhī guīdìng, wéiyuēfāng yīng zhīfù hétong zǒng’é bǎifēnzhī shí de wéiyuējīn.',
+            th: 'ตามบทบัญญัติข้อ 10 ของสัญญานี้ ฝ่ายที่ผิดสัญญาจะต้องชำระเบี้ยปรับเป็น 10% ของมูลค่าสัญญารวม',
+            en: 'Pursuant to Clause 10 of this Contract, breaching party shall pay 10% of total contract value as liquidated damages.'
+          },
+          {
+            formula: '对于泄密行为，受损方有权 + 予以追究',
+            zh: '未经书面许可擅自泄露商业机密的，受损方有权依法予以追究法律责任。',
+            pinyin: 'Wèijīng shūmiàn xǔkě shànzì xièlòu shāngyè jīmì de, shòusǔnfāng yǒuquán yīfǎ yǔyǐ zhuījiū fǎlǜ zérèn.',
+            th: 'หากเปิดเผยความลับทางการค้าโดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษร ฝ่ายที่เสียหายมีสิทธิ์ดำเนินคดีตามกฎหมาย',
+            en: 'Disclosing trade secrets without written consent, injured party has right to pursue legal liability according to law.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ผู้จัดการฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '张律师，请您帮我们把关一下这份中泰采购合同的违约条款。',
+          pinyin: 'Zhāng lǜshī, qǐng nín bāng wǒmen bǎguān yíxià zhè fèn Zhōng-Tài cǎigòu hétong de wéiyuē tiáokuǎn.',
+          th: 'ทนายจางครับ รบกวนช่วยตรวจทานข้อกำหนดเรื่องการผิดสัญญาในสัญญาจัดซื้อไทย-จีนฉบับนี้ให้หน่อยครับ',
+          en: 'Lawyer Zhang, please help us vet the breach clauses in this Sino-Thai procurement contract.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง (ฝ่ายกฎหมาย) 👨‍⚖️',
+          zh: '好的。我注意到第六条：如果乙方延期交货，每日需向甲方支付千分之三的违约金。',
+          pinyin: 'Hǎo de. Wǒ zhùyì dào dì-liù tiáo: Rúguǒ Yǐfāng yánqī jiāohuò, měi rì xū xiàng Jiǎfāng zhīfù qiānfēnzhī sān de wéiyuējīn.',
+          th: 'ได้ครับ ผมสังเกตเห็นข้อ 6: หากฝ่าย ข ส่งมอบสินค้าล่าช้า จะต้องจ่ายเบี้ยปรับให้ฝ่าย ก ในอัตรา 0.3% ต่อวัน',
+          en: 'Sure. I noted Clause 6: If Party B delays delivery, it pays Party A 0.3% daily breach penalty.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ผู้จัดการฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '这个比例合理吗？如果遇到台风或者海关查验等不可抗力呢？',
+          pinyin: 'Zhè ge bǐlì hélǐ ma? Rúguǒ yùdào táifēng huòzhě hǎiguān cháyàn děng bùkěkànglì ne?',
+          th: 'สัดส่วนนี้สมเหตุสมผลไหมครับ? แล้วถ้าเจอเหตุสุดวิสัยอย่างพายุไต้ฝุ่นหรือศุลกากรตรวจสอบล่ะครับ?',
+          en: 'Is this proportion reasonable? What if encountering force majeure like typhoons or customs inspection?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง (ฝ่ายกฎหมาย) 👨‍⚖️',
+          zh: '问得很专业！合同必须明确不可抗力的豁免条款，同时双方必须严格遵守保密协议。',
+          pinyin: 'Wèn de hěn zhuānyè! Hétong bìxū míngquè bùkěkànglì de huòmiǎn tiáokuǎn, tóngshí shuāngfāng bìxū yángé zūnshǒu bǎomì xiéyì.',
+          th: 'ถามได้เป็นมืออาชีพมากครับ! สัญญาต้องระบุข้อยกเว้นกรณีเหตุสุดวิสัยให้ชัดเจน และทั้งสองฝ่ายต้องปฏิบัติตามสัญญา NDA อย่างเคร่งครัด',
+          en: 'Very professional question! Contract must specify force majeure exemptions, and both must strictly follow NDA.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในสัญญาสากลภาษาจีน '甲方' (jiǎfāng) และ '乙方' (yǐfāng) หมายถึงฝ่ายใด?",
+          options: [
+            'คู่สัญญาฝ่าย ก และคู่สัญญาฝ่าย ข',
+            'หัวหน้าและลูกน้องในแผนก',
+            'ผู้พิพากษาและทนายความ',
+            'เจ้าของร้านและลูกค้าปลีก'
+          ],
+          correct_index: 0,
+          explanation_th: "'甲方' (Party A) และ '乙方' (Party B) คือ คำเรียกแทนคู่สัญญาสองฝ่ายตามมาตรฐานสากล",
+          encouragement: 'จำคำศัพท์หลักของสัญญากฎหมายจีนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เหตุการณ์ทางธรรมชาติหรือภัยพิบัติที่มนุษย์ไม่สามารถควบคุมได้ เรียกว่าอะไร?",
+          options: [
+            '不可抗力 (bùkěkànglì)',
+            '讨价还价 (tǎojiàhuánjià)',
+            '货真价实 (huòzhēnjiàshí)',
+            '脚踏实地 (jiǎotàshídì)'
+          ],
+          correct_index: 0,
+          explanation_th: "'不可抗力' คือ เหตุสุดวิสัย หรือ Force Majeure",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์กฎหมายแม่นเป๊ะ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ฝ่ายที่ผิดสัญญาต้องชำระเบี้ยปรับผิดสัญญาตามกฎหมาย"',
+          tokens: ['违约方应支付', '依照合同规定', '违约金'],
+          correct_sequence: ['依照合同规定', '违约方应支付', '违约金'],
+          pinyin: 'Yīzhào hétong guīdìng, wéiyuēfāng yīng zhīfù wéiyuējīn',
+          meaning_th: 'ตามข้อกำหนดของสัญญา ฝ่ายที่ผิดสัญญาต้องชำระเบี้ยปรับผิดสัญญา',
+          explanation_th: 'อ้างอิง (依照合同规定) + ประธาน (违约方) + กริยาและกรรม (应支付违约金)',
+          encouragement: 'ร้อยเรียงประโยคภาษากฎหมายได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '违约' (ผิดสัญญา) ตัว '违' มีหมวดนำใด?",
+          options: [
+            '辶 (หมวดก้าวเดิน 走之底)',
+            '讠 (หมวดคำพูด 言字旁)',
+            '扌 (หมวดมือ 提手旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'违' มีหมวดนำ '辶' (ก้าวเดิน) สื่อถึงการเดินเบี่ยงเบนออกนอกลู่นอกทางหรือฝ่าฝืน",
+          encouragement: 'เข้าใจรากศัพท์อักษรจีนอย่างลึกซึ้ง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณพบว่าในร่างสัญญาจัดซื้อ ไม่มีข้อกำหนดเรื่องข้อยกเว้นกรณีพายุไต้ฝุ่นหรือภัยธรรมชาติ (不可抗力) คุณต้องการแจ้งทนายความให้เพิ่มวรรคนี้เข้าไป ควรพูดอย่างไร?',
+        options: [
+          '张律师，为了防范风险，建议在合同中补充不可抗力免责条款。 (Zhāng lǜshī, wèile fángfàn fēngxiǎn, jiànyì zài hétong zhōng bǔchōng bùkěkànglì miǎnzé tiáokuǎn.)',
+          '合同太长了，我们别签了。 (Hétong tài cháng le, wǒmen bié qiān le.)',
+          '今天中午我们去吃烤鸭吧。 (Jīntiān zhōngwǔ wǒmen qù chī kǎoyā ba.)',
+          '请把空调温度调高一点儿。 (Qǐng bǎ kōngtiáo wēndù tiáo gāo yìdiǎnr.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '张律师，为了防范风险，建议在合同中补充不可抗力免责条款。' ชัดเจน รัดกุม และแสดงถึงความรอบคอบในการป้องกันความเสี่ยงทางธุรกิจระดับสากล",
+        encouragement: 'ผ่านด่านตรวจร่างสัญญาเบื้องต้นได้อย่างยอดเยี่ยม!'
+      }
+    },
+    {
+      lesson_id: 't3_u30_l02',
+      lesson_number: 2,
+      title: {
+        zh: '权利与义务',
+        th: 'สิทธิและหน้าที่ตามสัญญา',
+        en: 'Rights & Obligations'
+      },
+      can_do: {
+        th: 'อธิบายการส่งมอบตามหน้าที่ การมอบอำนาจ ข้อยกเว้น และใช้สำนวน 一清二楚',
+        en: 'Explain fulfillment, obligations, authorization, and use idiom 一清二楚'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: แจกแจงสิทธิและหน้าที่ของแต่ละฝ่ายในสัญญาให้กระจ่างแจ้งแจ่มแจ้ง ไร้ข้อคลุมเครือ!',
+      vocabulary: [
+        {
+          id: 'hsk3_3006',
+          hanzi: '义务',
+          pinyin: 'yìwù',
+          display_pinyin: 'yìwù',
+          pinyin_tone: 'yi4wu4',
+          meaning_th: 'หน้าที่ความรับผิดชอบตามกฎหมาย',
+          meaning_en: 'obligation / legal duty',
+          radical: '人',
+          radical_name_th: 'หมวดคน (人字头)',
+          stroke_count: 7,
+          mnemonic: 'หลักคุณธรรมความถูกต้อง (义) ต่องานหน้าที่ที่ต้องปฏิบัติ (务) = หน้าที่ตามกฎหมาย',
+          kid_mnemonic: 'สมุดบันทึกรายการหน้าที่ที่ต้องทำให้เสร็จเรียบร้อย = 义务',
+          body_gesture: 'เอามือกุมหน้าอกยืนตรงแสดงความรับผิดชอบต่อหน้าที่'
+        },
+        {
+          id: 'hsk3_3007',
+          hanzi: '授权',
+          pinyin: 'shòuquán',
+          display_pinyin: 'shòuquán',
+          pinyin_tone: 'shou4quan2',
+          meaning_th: 'การมอบอำนาจ / การอนุญาตให้ดำเนินการแทน',
+          meaning_en: 'authorize / empower',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'ยื่นส่งมอบด้วยมือ (授) อำนาจและสิทธิ์ (权) = การมอบอำนาจ',
+          kid_mnemonic: 'ยื่นคทาวิเศษส่งต่อให้เพื่อนไปดูแลภารกิจแทน = 授权',
+          body_gesture: 'ยื่นสองมือส่งเอกสารมอบอำนาจให้คู่ค้า'
+        },
+        {
+          id: 'hsk3_3008',
+          hanzi: '豁免',
+          pinyin: 'huòmiǎn',
+          display_pinyin: 'huòmiǎn',
+          pinyin_tone: 'huo4mian3',
+          meaning_th: 'การยกเว้นไม่ต้องรับผิดชอบ',
+          meaning_en: 'exempt / waive liability',
+          radical: '谷',
+          radical_name_th: 'หมวดหุบเขา (谷字旁)',
+          stroke_count: 24,
+          mnemonic: 'ใจกว้างดั่งหุบเขา (豁) ยกเว้นให้พ้นโทษ (免) = ยกเว้นความรับผิด',
+          kid_mnemonic: 'โบกคทาวิเศษแล้วตราประทับเขียนว่า "ยกเว้นโทษจ้า" = 豁免',
+          body_gesture: 'ปัดฝ่ามือออกด้านข้างแสดงการยกเว้น'
+        },
+        {
+          id: 'hsk3_3009',
+          hanzi: '纠纷',
+          pinyin: 'jiūfēn',
+          display_pinyin: 'jiūfēn',
+          pinyin_tone: 'jiu1fen1',
+          meaning_th: 'ข้อพิพาท / ข้อขัดแย้ง',
+          meaning_en: 'dispute / conflict',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 9,
+          mnemonic: 'เส้นไหมพันกันยุ่งเหยิง (纠) สับสนวุ่นวาย (纷) = ข้อพิพาท',
+          kid_mnemonic: 'ด้ายสองกลุ่มพันกันยุ่งเหยิงต้องค่อยๆ สาง = 纠纷',
+          body_gesture: 'สองมือทำท่าพันกันวนไปมาแสดงความยุ่งยาก'
+        },
+        {
+          id: 'hsk3_3010',
+          hanzi: '一清二楚',
+          pinyin: 'yìqīng’èrchǔ',
+          display_pinyin: 'yìqīng’èrchǔ',
+          pinyin_tone: 'yi4qing1’er4chu3',
+          meaning_th: 'ชัดเจนแจ่มแจ้ง ไร้ข้อคลุมเครือ',
+          meaning_en: 'crystal clear / completely plain',
+          radical: '一',
+          radical_name_th: 'หมวดหนึ่ง (一部)',
+          stroke_count: 27,
+          mnemonic: 'อย่างที่หนึ่งก็สะอาดใส (一清) อย่างที่สองก็แจ่มแจ้งชัดเจน (二楚) = ชัดเจนแจ่มแจ้ง',
+          kid_mnemonic: 'เช็ดกระจกจนใสแจ๋ว มองเห็นทุกอย่างชัดเป๊ะ = 一清二楚',
+          body_gesture: 'สองมือทำท่าเปิดม่านแล้วทำตาโตมองเห็นชัดเจน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 一清二楚 (yìqīng’èrchǔ) กฎวรรณยุกต์ 一',
+        description_th: 'คำว่า 清 (qīng) เป็นเสียง 1 ดังนั้น คำว่า 一 จะผันเป็นเสียง 4 เป็น yì (yìqīng’èrchǔ)',
+        example: '条款写得一清二楚 (เงื่อนไขระบุไว้อย่างชัดเจนแจ่มแจ้ง)',
+        fun_metaphor: 'เหมือนตอกหมุดแน่นเปรี๊ยะแล้วเปิดไฟสปอตไลต์สว่างจ้า!',
+        reassurance: 'สำนวนนี้ใช้บ่อยมากทั้งในสัญญาและการสนทนาทั่วไป ออกเสียง yìqīng’èrchǔ ให้กังวาน'
+      },
+      grammar_bite: {
+        title: 'การระบุสิทธิและหน้าที่: 既享有...权利，又承担...义务',
+        explanation_th: 'โครงสร้างทางกฎหมายที่ระบุความสมดุลระหว่างสิทธิที่ได้รับและหน้าที่ที่ต้องปฏิบัติ',
+        patterns: [
+          {
+            formula: '双方在合同中，既享有...权利，又承担...义务',
+            zh: '双方在合同中既享有合法权利，又必须严格履行相应义务。',
+            pinyin: 'Shuāngfāng zài hétong zhōng jì xiǎngyǒu héfǎ quánlì, yòu bìxū yángé lǚxíng xiāngyìng yìwù.',
+            th: 'ทั้งสองฝ่ายในสัญญานี้ ทั้งได้รับสิทธิตามกฎหมาย และต้องปฏิบัติตามหน้าที่ที่เกี่ยวข้องอย่างเคร่งครัด',
+            en: 'Both parties in the contract enjoy legal rights while strictly fulfilling corresponding obligations.'
+          },
+          {
+            formula: '把 [สิ่งใด] 规定得一清二楚',
+            zh: '合同已经把交货时间与验收标准写得一清二楚。',
+            pinyin: 'Hétong yǐjīng bǎ jiāohuò shíjiān yǔ yànshōu biāozhǔn xiě de yìqīng’èrchǔ.',
+            th: 'สัญญาได้ระบุกำหนดเวลาส่งมอบและมาตรฐานการตรวจรับไว้อย่างชัดเจนแจ่มแจ้งแล้ว',
+            en: 'The contract has specified delivery dates and acceptance criteria crystal clearly.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张律师，我们作为采购方，在这份合同里的核心权利和义务有哪些？',
+          pinyin: 'Zhāng lǜshī, wǒmen zuòwéi cǎigòufāng, zài zhè fèn hétong lǐ de héxīn quánlì hé yìwù yǒu nǎxiē?',
+          th: 'ทนายจางครับ ในฐานะผู้ซื้อ สิทธิและหน้าที่หลักของเราในสัญญานี้มีอะไรบ้างครับ?',
+          en: 'Lawyer Zhang, as the buyer, what are our core rights and obligations in this contract?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '你们的核心权利是按期检验货物，核心义务是按约付款。条款写得一清二楚。',
+          pinyin: 'Nǐmen de héxīn quánlì shì ànqī jiǎnyàn huòwù, héxīn yìwù shì àn yuē fùkuǎn. Tiáokuǎn xiě de yìqīng’èrchǔ.',
+          th: 'สิทธิหลักของพวกคุณคือการตรวจรับสินค้าตามกำหนด และหน้าที่หลักคือการชำระเงินตามสัญญา เงื่อนไขระบุไว้ชัดเจนแจ่มแจ้งครับ',
+          en: 'Your core right is inspecting goods on schedule; your core obligation is paying as agreed. It is crystal clear.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '如果对方交货出现质量瑕疵，我们是否有权拒收？',
+          pinyin: 'Rúguǒ duìfāng jiāohuò chūxiàn zhìliàng xiácī, wǒmen shìfǒu yǒuquán jùshōu?',
+          th: 'หากสินค้าที่อีกฝ่ายส่งมอบมีตำหนิด้านคุณภาพ พวกเรามีสิทธิ์ปฏิเสธการรับมอบไหมครับ?',
+          en: 'If their delivery has quality defects, do we have the right to reject acceptance?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '完全有权！合同授权买方在收到货物七天内提出异议，避免日后产生商业纠纷。',
+          pinyin: 'Wánquán yǒuquán! Hétong shòuquán mǎifāng zài shōudào huòwù qī tiān nèi tíchū yìyì, bìmiǎn rìhòu chǎnshēng shāngyè jiūfēn.',
+          th: 'มีสิทธิ์เต็มที่ครับ! สัญญามอบอำนาจให้ผู้ซื้อยื่นท้วงติงได้ภายใน 7 วันหลังรับของ เพื่อป้องกันไม่ให้เกิดข้อพิพาททางธุรกิจในภายหลัง',
+          en: 'Fully entitled! The contract authorizes the buyer to raise objections within 7 days, avoiding future disputes.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '一清二楚' (yìqīng’èrchǔ) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ชัดเจนแจ่มแจ้ง ไร้ข้อคลุมเครือ (Crystal clear)',
+            'สับสนวุ่นวาย',
+            'ราคาถูกมาก',
+            'ล่าช้ากว่ากำหนด'
+          ],
+          correct_index: 0,
+          explanation_th: "'一清二楚' แปลว่า ชัดเจนแจ่มแจ้ง ไม่มีข้อสงสัยหรือคลุมเครือ",
+          encouragement: 'จำสำนวนจีนยอดนิยมได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '纠纷' (jiūfēn) ในทางธุรกิจและกฎหมายหมายถึงอะไร?",
+          options: [
+            'ข้อพิพาทหรือข้อขัดแย้ง',
+            'งานเลี้ยงฉลองปีใหม่',
+            'การได้รับรางวัลเกียรติยศ',
+            'การเปิดสาขาใหม่'
+          ],
+          correct_index: 0,
+          explanation_th: "'纠纷' คือ ข้อพิพาทหรือความขัดแย้ง เช่น 商业纠纷 (ข้อพิพาททางการค้า)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์กฎหมายเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สัญญาได้ระบุสิทธิและหน้าที่ไว้อย่างชัดเจนแจ่มแจ้ง"',
+          tokens: ['写得一清二楚', '把权利与义务', '合同已经'],
+          correct_sequence: ['合同已经', '把权利与义务', '写得一清二楚'],
+          pinyin: 'Hétong yǐjīng bǎ quánlì yǔ yìwù xiě de yìqīng’èrchǔ',
+          meaning_th: 'สัญญาได้ระบุสิทธิและหน้าที่ไว้อย่างชัดเจนแจ่มแจ้ง',
+          explanation_th: 'ประธาน (合同已经) + โครงสร้าง 把 (把权利与义务) + ผลลัพธ์ (写得一清二楚)',
+          encouragement: 'ต่อโครงสร้าง 把 ผสานสำนวนได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '纠纷' ตัว '纠' และ '纷' ต่างมีหมวดนำใดเหมือนกัน?",
+          options: [
+            '纟 (หมวดเส้นไหม 绞丝旁)',
+            '讠 (หมวดคำพูด 言字旁)',
+            '亻 (หมวดคน 单人旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "ทั้ง '纠' และ '纷' ใช้หมวดนำ '纟' (เส้นไหม) สื่อถึงเชือกหรือด้ายที่พันกันยุ่งเหยิง",
+          encouragement: 'ช่างสังเกตรากศัพท์อักษรจีน ยอดเยี่ยมมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในการเจรจาร่างสัญญา ฝ่ายคู่ค้าเขียนเงื่อนไขการตรวจรับสินค้าคลุมเครือ คุณต้องการยืนกรานให้ระบุระยะเวลาตรวจรับและสิทธิ์คืนของให้ชัดเจนเป็นลายลักษณ์อักษร ควรพูดอย่างไร?',
+        options: [
+          '为了避免未来的履约纠纷，必须把验收期限和退货权利在合同中写得一清二楚！ (Wèile bìmiǎn wèilái de lǚyuē jiūfēn, bìxū bǎ yànshōu qīxiàn hé tuìhuò quánlì zài hétong zhōng xiě de yìqīng’èrchǔ!)',
+          '差不多就行了，没必要写那么清楚。 (Chàbuduō jiù xíng le, méi bìyào xiě nàme qīngchu.)',
+          '我不看了，你们自己定吧。 (Wǒ bù kàn le, nǐmen zìjǐ dìng ba.)',
+          '请问这道菜里有花生吗？ (Qǐngwèn zhè dào cài lǐ yǒu huāshēng ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "การยืนกราน '为了避免未来的履约纠纷，必须把验收期限和退货权利在合同中写得一清二楚！' ปกป้องผลประโยชน์ของบริษัทได้อย่างเฉียบคมและเป็นมืออาชีพ",
+        encouragement: 'ปกป้องสิทธิ์ของบริษัทได้สำเร็จอย่างยอดเยี่ยม!'
+      }
+    },
+    {
+      lesson_id: 't3_u30_l03',
+      lesson_number: 3,
+      title: {
+        zh: '争议解决机制',
+        th: 'กลไกการระงับข้อพิพาท',
+        en: 'Dispute Resolution Mechanisms'
+      },
+      can_do: {
+        th: 'อธิบายขั้นตอนการไกล่เกลี่ย อนุญาโตตุลาการ และเขตอำนาจศาล โดยใช้โครงสร้าง 如发生争议，双方应先行友好协商...',
+        en: 'Explain mediation, arbitration, jurisdiction using 如发生争议，双方应先行友好协商...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: กำหนดกลไกการระงับข้อพิพาท เลือกระหว่างอนุญาโตตุลาการหรือศาล และกำหนดเขตอำนาจศาล!',
+      vocabulary: [
+        {
+          id: 'hsk3_3011',
+          hanzi: '协商',
+          pinyin: 'xiéshāng',
+          display_pinyin: 'xiéshāng',
+          pinyin_tone: 'xie2shang1',
+          meaning_th: 'ปรึกษาหารือ / เจรจาด้วยมิตรภาพ',
+          meaning_en: 'consult / negotiate amicably',
+          radical: '十',
+          radical_name_th: 'หมวดสิบ (十字旁)',
+          stroke_count: 17,
+          mnemonic: 'ร่วมใจกันสิบคน (协) พูดคุยปรึกษาหารือ (商) = เจรจาหาทางออก',
+          kid_mnemonic: 'เพื่อนสองคนนั่งคุยกันดีๆ ปรับความเข้าใจกัน = 协商',
+          body_gesture: 'ผายสองมือเข้าหากันแสดงการเจรจาฉันมิตร'
+        },
+        {
+          id: 'hsk3_3012',
+          hanzi: '调解',
+          pinyin: 'tiáojiě',
+          display_pinyin: 'tiáojiě',
+          pinyin_tone: 'tiao2jie3',
+          meaning_th: 'การไกล่เกลี่ยคนกลาง (Mediation)',
+          meaning_en: 'mediate / mediation',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 23,
+          mnemonic: 'ใช้คำพูดปรับจูน (调) เพื่อคลี่คลายปมปัญหา (解) = การไกล่เกลี่ย',
+          kid_mnemonic: 'คุณครูคนกลางเดินเข้ามาช่วยปรับความเข้าใจให้เพื่อนทั้งสอง = 调解',
+          body_gesture: 'สองมือทำท่าคลี่คลายเชือกที่พันกันให้หลุดออก'
+        },
+        {
+          id: 'hsk3_3013',
+          hanzi: '仲裁',
+          pinyin: 'zhòngcái',
+          display_pinyin: 'zhòngcái',
+          pinyin_tone: 'zhong4cai2',
+          meaning_th: 'อนุญาโตตุลาการ (Arbitration)',
+          meaning_en: 'arbitration',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 18,
+          mnemonic: 'คนกลางคนสำคัญ (仲) ตัดสินชี้ขาดอย่างเที่ยงธรรม (裁) = อนุญาโตตุลาการ',
+          kid_mnemonic: 'กรรมการเป่านกหวีดยกป้ายชี้ขาดคำตัดสิน = 仲裁',
+          body_gesture: 'สับฝ่ามือลงบนโต๊ะเหมือนเคาะค้อนชี้ขาด'
+        },
+        {
+          id: 'hsk3_3014',
+          hanzi: '诉讼',
+          pinyin: 'sùsòng',
+          display_pinyin: 'sùsòng',
+          pinyin_tone: 'su4song4',
+          meaning_th: 'การฟ้องร้องคดีในศาล (Litigation)',
+          meaning_en: 'litigation / lawsuit',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 18,
+          mnemonic: 'ร้องเรียนบอกเล่า (诉) ความในศาลยุติธรรม (讼) = การฟ้องร้องคดี',
+          kid_mnemonic: 'ยื่นเอกสารฟ้องร้องต่อศาลเพื่อขอความเป็นธรรม = 诉讼',
+          body_gesture: 'ชูสองมือเสมือนยื่นเอกสารฟ้องต่อหน้าผู้พิพากษา'
+        },
+        {
+          id: 'hsk3_3015',
+          hanzi: '管辖权',
+          pinyin: 'guǎnxiáquán',
+          display_pinyin: 'guǎnxiáquán',
+          pinyin_tone: 'guan3xia2quan2',
+          meaning_th: 'เขตอำนาจศาล (Jurisdiction)',
+          meaning_en: 'jurisdiction',
+          radical: '竹',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 32,
+          mnemonic: 'ควบคุมดูแล (管) ภายใต้ขอบเขตดินแดน (辖) มีอำนาจตัดสิน (权) = เขตอำนาจศาล',
+          kid_mnemonic: 'วาดเส้นแบ่งเขตแผนที่ศาลที่มีสิทธิ์ตัดสินคดี = 管辖权',
+          body_gesture: 'ใช้นิ้วชี้ลากกรอบสี่เหลี่ยมกำหนดอาณาเขตอำนาจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 诉讼 (sùsòng)',
+        description_th: 'ทั้ง 诉 (sù) และ 讼 (sòng) เป็นเสียง 4 หนักแน่นทั้งคู่ ออกเสียงสั้น ชัดเจน และหนักแน่น',
+        example: '提起诉讼 (tíqǐ sùsòng: ยื่นฟ้องร้องต่อศาล)',
+        fun_metaphor: 'เหมือนเสียงเคาะค้อนผู้พิพากษา ปัง ปัง สองครั้งติดกัน!',
+        reassurance: 'ออกเสียงให้หนักแน่นจะสะท้อนถึงอำนาจและความชอบธรรมตามกฎหมาย'
+      },
+      grammar_bite: {
+        title: 'เงื่อนไขมาตรฐานระงับข้อพิพาท: 先行友好协商，协商不成，提交仲裁',
+        explanation_th: 'ลำดับขั้นตอนมาตรฐานของสัญญาระหว่างประเทศ: เริ่มจากเจรจาด้วยดี หากไม่สำเร็จจึงเข้าสู่กระบวนการอนุญาโตตุลาการ',
+        patterns: [
+          {
+            formula: '如发生争议，双方应先行友好协商；协商不成，提交 + [สถาบันอนุญาโตตุลาการ]',
+            zh: '如发生争议，双方应先行友好协商；协商不成，提交中国国际经济贸易仲裁委员会仲裁。',
+            pinyin: 'Rú fāshēng zhēngyì, shuāngfāng yīng xiānxíng yǒuhǎo xiéshāng; xiéshāng bùchéng, tíjiāo Zhōngguó Guójì Jīngjì Màoyì Zhòngcái Wěiyuánhuì zhòngcái.',
+            th: 'หากเกิดข้อพิพาท ทั้งสองฝ่ายควรเจรจาด้วยมิตรภาพก่อน หากเจรจาไม่สำเร็จ ให้ยื่นต่อ CIETAC เพื่อชี้ขาด',
+            en: 'In case of dispute, parties shall first consult amicably; failing that, submit to CIETAC for arbitration.'
+          },
+          {
+            formula: '本合同适用 + [กฎหมายประเทศใด] + 法律，由 + [สถานที่] + 法院管辖',
+            zh: '本合同适用中华人民共和国法律，由甲方所在地人民法院管辖。',
+            pinyin: 'Běn hétong shìyòng Zhōnghuá Rénmín Gònghéguó fǎlǜ, yóu Jiǎfāng suǒzàidì rénmín fǎyuàn guǎnxiá.',
+            th: 'สัญญานี้บังคับใช้ตามกฎหมายแห่งสาธารณรัฐประชาชนจีน และอยู่ภายใต้เขตอำนาจศาลประชาชน ณ ถิ่นที่อยู่ของฝ่าย ก',
+            en: 'This contract is governed by PRC law and subject to the jurisdiction of the People’s Court where Party A is located.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张律师，跨国贸易合同万一出现纠纷，选择法院诉讼还是商事仲裁更有利？',
+          pinyin: 'Zhāng lǜshī, kuàguó màoyì hétong wànyī chūxiàn jiūfēn, xuǎnzé fǎyuàn sùsòng háishi shāngshì zhòngcái gèng yǒulì?',
+          th: 'ทนายจางครับ สัญญาการค้าข้ามชาติหากเกิดข้อพิพาทขึ้นมา เลือกระหว่างฟ้องศาลกับอนุญาโตตุลาการพาณิชย์ แบบไหนได้เปรียบกว่ากันครับ?',
+          en: 'Lawyer Zhang, if cross-border disputes arise, is litigation or commercial arbitration more advantageous?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '对于跨国业务，强烈建议选择商事仲裁！仲裁裁决在一百七十多个国家具有执行力，而且保密性极高。',
+          pinyin: 'Duìyú kuàguó yèwù, qiángliè jiànyì xuǎnzé shāngshì zhòngcái! Zhòngcái cáijué zài yībǎiqīshí duō ge guójiā jùyǒu zhíxínglì, érqiě bǎomìxìng jí gāo.',
+          th: 'สำหรับธุรกิจข้ามชาติ ขอแนะนำอนุญาโตตุลาการพาณิชย์เป็นอย่างยิ่งครับ! คำชี้ขาดของอนุญาโตตุลาการมีผลบังคับใช้ได้ในกว่า 170 ประเทศตามอนุสัญญานิวยอร์ก และรักษาความลับได้ดีมากครับ',
+          en: 'For international business, commercial arbitration is strongly recommended! Awards are enforceable in over 170 countries and highly confidential.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '那我们在合同里约定：发生争议时先行友好协商，协商不成提交仲裁，这样妥当吗？',
+          pinyin: 'Nà wǒmen zài hétong lǐ yuēdìng: fāshēng zhēngyì shí xiānxíng yǒuhǎo xiéshāng, xiéshāng bùchéng tíjiāo zhòngcái, zhèyàng tuǒdang ma?',
+          th: 'งั้นพวกเราระบุในสัญญาว่า: เมื่อเกิดข้อพิพาทให้เจรจาด้วยดีก่อน หากไม่สำเร็จจึงยื่นอนุญาโตตุลาการ แบบนี้เหมาะสมไหมครับ?',
+          en: 'Then can we stipulate: first consult amicably, if failed submit to arbitration; is this appropriate?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '非常妥当！这就是国际贸易中最标准的梯级争议解决条款。',
+          pinyin: 'Fēicháng tuǒdang! Zhè jiù shì guójì màoyì zhōng zuì biāozhǔn de tījī zhēngyì jiějué tiáokuǎn.',
+          th: 'เหมาะสมอย่างยิ่งครับ! นี่คือข้อกำหนดการระงับข้อพิพาทแบบขั้นบันไดที่เป็นมาตรฐานที่สุดในการค้าระหว่างประเทศ',
+          en: 'Very appropriate! This is the most standard tiered dispute resolution clause in international trade.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เหตุใดการค้าระหว่างประเทศจึงนิยมเลือก '仲裁' (อนุญาโตตุลาการ) มากกว่าการฟ้องศาล?",
+          options: [
+            'เพราะคำชี้ขาดสามารถบังคับคดีข้ามประเทศได้ตามอนุสัญญานิวยอร์กและรักษาความลับทางธุรกิจได้ดี',
+            'เพราะไม่มีค่าใช้จ่ายใดๆ ทั้งสิ้น',
+            'เพราะสามารถเปลี่ยนผู้พิพากษาได้ทุกวัน',
+            'เพราะไม่ต้องใช้เอกสารสัญญา'
+          ],
+          correct_index: 0,
+          explanation_th: "อนุญาโตตุลาการ (Arbitration) ได้รับความนิยมสูงสุดในการค้าระหว่างประเทศเพราะสามารถบังคับคดีข้ามพรมแดนได้ง่ายและเป็นความลับ",
+          encouragement: 'เข้าใจกลยุทธ์กฎหมายการค้าระหว่างประเทศได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '管辖权' (guǎnxiáquán) หมายถึงอะไร?",
+          options: [
+            'เขตอำนาจศาลในการรับฟ้องและตัดสินคดี',
+            'อำนาจในการสั่งซื้อสินค้า',
+            'สิทธิ์ในการเบิกเงินสด',
+            'การบริหารงานฝ่ายบุคคล'
+          ],
+          correct_index: 0,
+          explanation_th: "'管辖权' คือ เขตอำนาจศาล หรือ Jurisdiction",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์กฎหมายแม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "หากเกิดข้อพิพาท ทั้งสองฝ่ายควรเจรจาด้วยมิตรภาพก่อน"',
+          tokens: ['如发生争议', '先行友好协商', '双方应'],
+          correct_sequence: ['如发生争议', '双方应', '先行友好协商'],
+          pinyin: 'Rú fāshēng zhēngyì, shuāngfāng yīng xiānxíng yǒuhǎo xiéshāng',
+          meaning_th: 'หากเกิดข้อพิพาท ทั้งสองฝ่ายควรเจรจาด้วยมิตรภาพก่อน',
+          explanation_th: 'เงื่อนไข (如发生争议) + ประธาน (双方应) + การกระทำ (先行友好协商)',
+          encouragement: 'ต่อประโยคสัญญามาตรฐานสากลได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '仲裁' ตัว '裁' (ตัดสิน/ตัด) มีหมวดนำใด?",
+          options: [
+            '衣 (หมวดเสื้อผ้า 衣字底)',
+            '戈 (หมวดหอก 戈字旁)',
+            '木 (หมวดไม้ 木字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'裁' มีหมวดนำ '衣' (เสื้อผ้า) เดิมหมายถึงการตัดเย็บ ต่อมาขยายความหมายถึงการตัดการตัดสินชี้ขาด",
+          encouragement: 'รอบรู้รากศัพท์อักษรจีนเป็นเลิศ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คู่ค้าเสนอให้ข้อพิพาททั้งหมดขึ้นศาลท้องถิ่นในมณฑลของเขา คุณต้องการเปลี่ยนเป็นให้ยื่นต่อสถาบันอนุญาโตตุลาการที่เป็นกลาง (เช่น CIETAC หรือ SIAC) เพื่อความยุติธรรม ควรพูดอย่างไร?',
+        options: [
+          '为了保证裁决的公允与国际执行力，我们建议将争议解决机构调整为国际商事仲裁委员会。 (Wèile bǎozhèng cáijué de gōngyǔn yǔ guójì zhíxínglì, wǒmen jiànyì jiāng zhēngyì jiějué jīgòu tiáozhěng wéi guójì shāngshì zhòngcái wěiyuánhuì.)',
+          '你们的法院不可信，我坚决不去！ (Nǐmen de fǎyuàn bù kěxìn, wǒ jiānjué bú qù!)',
+          '随便哪个法官判都行，我不在乎。 (Suíbiàn nǎge fǎguān pàn dōu xíng, wǒ bú zàihu.)',
+          '请问发票开抬头需要写什么？ (Qǐngwèn fāpiào kāi táitóu xūyào xiě shénme?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '为了保证裁决的公允与国际执行力，我们建议将争议解决机构调整为国际商事仲裁委员会。' สุภาพ เป็นสากล และมีเหตุผลทางกฎหมายรองรับอย่างสมบูรณ์",
+        encouragement: 'ผ่านด่านเจรจากลไกระงับข้อพิพาทอย่างสง่างาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u30_l04',
+      lesson_number: 4,
+      title: {
+        zh: 'Boss Challenge: 采购合同红线审查与法务备忘录',
+        th: 'ภารกิจบอส: ตรวจสัญญาจัดซื้อ & ทำบันทึกท้วงติง',
+        en: 'Boss Challenge: Contract Redline Audit & Legal Memo'
+      },
+      can_do: {
+        th: 'ตรวจพบเงื่อนไขที่คลุมเครือในสัญญาจัดซื้อระหว่างประเทศ ร่างบันทึกท้วงติง และแก้ไขข้อสัญญาให้รัดกุม',
+        en: 'Identify ambiguous clauses, draft legal redline memo, and optimize contract language'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ค้นหาช่องโหว่ในสัญญา 3 จุด ทำบันทึกท้วงติงฝ่ายกฎหมาย และปกป้องผลประโยชน์ของบริษัท!',
+      vocabulary: [
+        {
+          id: 'hsk3_3016',
+          hanzi: '瑕疵',
+          pinyin: 'xiácī',
+          display_pinyin: 'xiácī',
+          pinyin_tone: 'xia2ci1',
+          meaning_th: 'ตำหนิ / ข้อบกพร่อง (ทางกายภาพหรือกฎหมาย)',
+          meaning_en: 'defect / flaw / blemish',
+          radical: '王',
+          radical_name_th: 'หมวดหยก/ราชา (王字旁)',
+          stroke_count: 25,
+          mnemonic: 'หยกเนื้อดี (王) แต่มีจุดด่างพร้อย (瑕疵) = ตำหนิข้อบกพร่อง',
+          kid_mnemonic: 'แก้วน้ำใบสวยแต่มีรอยร้าวเล็กๆ ตรงขอบ = 瑕疵',
+          body_gesture: 'ใช้นิ้วชี้ชี้ไปที่จุดตำหนิบนฝ่ามือ'
+        },
+        {
+          id: 'hsk3_3017',
+          hanzi: '补救',
+          pinyin: 'bǔjiù',
+          display_pinyin: 'bǔjiù',
+          pinyin_tone: 'bu3jiu4',
+          meaning_th: 'เยียวยาแก้ไข / มาตรการชดเชยแก้ไข',
+          meaning_en: 'remedy / rectify / make amends',
+          radical: '衤',
+          radical_name_th: 'หมวดเสื้อผ้า (衣字旁)',
+          stroke_count: 23,
+          mnemonic: 'เย็บปะเสื้อผ้าที่ขาด (补) เพื่อกอบกู้ช่วยเหลือ (救) = เยียวยาแก้ไข',
+          kid_mnemonic: 'หยิบพลาสเตอร์ยามาแปะแผลเพื่อรักษาให้หายดี = 补救',
+          body_gesture: 'สองมือทำท่าประคองและรักษา'
+        },
+        {
+          id: 'hsk3_3018',
+          hanzi: '违约责任',
+          pinyin: 'wéiyuē zérèn',
+          display_pinyin: 'wéiyuē zérèn',
+          pinyin_tone: 'wei2yue1 ze2ren4',
+          meaning_th: 'ความรับผิดชอบเมื่อผิดสัญญา',
+          meaning_en: 'liability for breach of contract',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 28,
+          mnemonic: 'การละเมิดสัญญา (违约) มีหน้าที่ภาระที่ต้องรับผิดชอบ (责任) = ความรับผิดฐานผิดสัญญา',
+          kid_mnemonic: 'ป้ายกฎระเบียบบอกบทลงโทษสำหรับคนไม่ทำตามคำพูด = 违约责任',
+          body_gesture: 'สองมือตั้งการ์ดขึ้นระดับอกแสดงความรับผิดชอบ'
+        },
+        {
+          id: 'hsk3_3019',
+          hanzi: '交付期限',
+          pinyin: 'jiāofù qīxiàn',
+          display_pinyin: 'jiāofù qīxiàn',
+          pinyin_tone: 'jiao1fu4 qi1xian4',
+          meaning_th: 'กำหนดเวลาส่งมอบสินค้า',
+          meaning_en: 'delivery deadline / delivery period',
+          radical: '亠',
+          radical_name_th: 'หมวดหัว (点横头)',
+          stroke_count: 20,
+          mnemonic: 'ยื่นจ่ายส่งมอบของ (交付) ภายในกรอบกำหนดเวลา (期限) = กำหนดเวลาส่งมอบ',
+          kid_mnemonic: 'นาฬิกาทรายที่นับถอยหลังถึงวันส่งของ = 交付期限',
+          body_gesture: 'เคาะหน้าปัดนาฬิกาข้อมือเตือนเรื่องกำหนดเวลา'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 瑕疵 (xiácī)',
+        description_th: 'คำว่า 瑕 (xiá) เป็นเสียง 2 สูงขึ้น ส่วน 疵 (cī) เป็นเสียง 1 สูงยาวเรียบ',
+        example: '产品质量瑕疵 (ข้อบกพร่องด้านคุณภาพสินค้า)',
+        fun_metaphor: 'เหมือนเสียงเหินขึ้นฟ้าแล้วทอดยาวอย่างนิ่งสนิท!',
+        reassurance: 'คำนี้เป็นคำศัพท์เฉพาะทางกฎหมายพาณิชย์ ออกเสียง cī ให้มีลมเสียดแทรกเบาๆ'
+      },
+      grammar_bite: {
+        title: 'การร่างบันทึกท้วงติงสัญญา (Contract Redline Memo): 鉴于...条款语意模糊，建议修订为...',
+        explanation_th: 'รูปแบบการทำบันทึกข้อเสนอแนะส่งฝ่ายกฎหมายหรือทนายความ',
+        patterns: [
+          {
+            formula: '鉴于 [ข้อใด] 语意模糊，存在法律风险，建议修订为：...',
+            zh: '鉴于原合同交付期限条款语意模糊，建议明确约定为：“合同生效后三十个工作日内交付”。',
+            pinyin: 'Jiànyú yuán hétong jiāofù qīxiàn tiáokuǎn yǔyì móhu, jiànyì míngquè yuēdìng wéi: “Hétong shēngxiào hòu sānshí ge gōngzuòrì nèi jiāofù”.',
+            th: 'เนื่องจากกำหนดเวลาส่งมอบในสัญญาเดิมมีความคลุมเครือ ขอเสนอให้ระบุชัดเจนว่า: “ส่งมอบภายใน 30 วันทำการหลังสัญญามีผลบังคับใช้”',
+            en: 'Given ambiguous delivery deadline clause, suggest clarifying as: "deliver within 30 working days upon contract effective date".'
+          },
+          {
+            formula: '如出现质量瑕疵，买方有权要求 + [มาตรการเยียวยา]',
+            zh: '如出现质量瑕疵，买方有权要求卖方无条件更换或采取其他有效补救措施。',
+            pinyin: 'Rú chūxiàn zhìliàng xiácī, mǎifāng yǒuquán yāoqiú màifāng wútiáojiàn gēnghuàn huò cǎiqǔ qítā yǒuxiào bǔjiù cuòshī.',
+            th: 'หากพบตำหนิด้านคุณภาพ ผู้ซื้อมีสิทธิ์เรียกร้องให้ผู้ขายเปลี่ยนสินค้าใหม่โดยไม่มีเงื่อนไข หรือใช้มาตรการเยียวยาที่ได้ผลอื่นๆ',
+            en: 'If quality defects occur, buyer has right to demand unconditional replacement or other effective remedies.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张律师，这是我对采购合同初稿做的法务备忘录，请您过目。',
+          pinyin: 'Zhāng lǜshī, zhè shì wǒ duì cǎigòu hétong chūgǎo zuò de fǎwù bèiwànglù, qǐng nín guòmù.',
+          th: 'ทนายจางครับ นี่คือบันทึกช่วยจำฝ่ายกฎหมายที่ผมทำขึ้นสำหรับร่างสัญญาจัดซื้อฉบับแรก เรียนเชิญท่านพิจารณาครับ',
+          en: 'Lawyer Zhang, this is the legal memo I drafted on the procurement contract first draft for your review.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '做得太细致了！你圈出的三个风险点非常关键：交付期限、瑕疵补救和违约责任。',
+          pinyin: 'Zuò de tài xìzhì le! Nǐ quān chū de sān ge fēngxiǎn diǎn fēicháng guānjiàn: jiāofù qīxiàn, xiácī bǔjiù hé wéiyuē zérèn.',
+          th: 'ทำได้ละเอียดมากครับ! จุดเสี่ยง 3 จุดที่คุณวงเอาไว้สำคัญมาก: กำหนดส่งมอบ, การเยียวยาเมื่อมีตำหนิ, และความรับผิดฐานผิดสัญญา',
+          en: 'Meticulously done! The three risk points you flagged are vital: delivery deadline, defect remedy, and breach liability.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '原条款只写了“尽快交付”，语意模糊。我修改为“自收到预付款之日起三十天内交付”，责任一清二楚。',
+          pinyin: 'Yuán tiáokuǎn zhǐ xiě le “jǐnkuài jiāofù”, yǔyì móhu. Wǒ xiūgǎi wéi “zì shōudào yùfùkuǎn zhī rì qǐ sānshí tiān nèi jiāofù”, zérèn yìqīng’èrchǔ.',
+          th: 'ข้อกำหนดเดิมเขียนแค่ว่า “ส่งมอบโดยเร็วที่สุด” ซึ่งคลุมเครือมาก ผมจึงแก้เป็น “ส่งมอบภายใน 30 วันนับแต่วันที่ได้รับเงินมัดจำ” หน้าที่ชัดเจนแจ่มแจ้งครับ',
+          en: 'Original clause merely said "deliver promptly", which was vague. I revised to "deliver within 30 days from deposit receipt", crystal clear.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ทนายจาง 👨‍⚖️',
+          zh: '完美！这份备忘录可以直接作为我们的修改稿发给对方，胜券在握！',
+          pinyin: 'Wánměi! Zhè fèn bèiwànglù kěyǐ zhíjiē zuòwéi wǒmen de xiūgǎigǎo fā gěi duìfāng, shèngquàn zài wò!',
+          th: 'สมบูรณ์แบบครับ! บันทึกข้อท้วงติงฉบับนี้ส่งให้อีกฝ่ายเป็นร่างแก้ไขได้ทันที ชัยชนะอยู่ในมือเราแล้วครับ!',
+          en: 'Perfect! This memo can be directly sent to counterparty as our redline version; victory is in hand!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '瑕疵' (xiácī) ในภาษากฎหมายสัญญาหมายถึงข้อใด?",
+          options: [
+            'ตำหนิหรือข้อบกพร่องของสินค้าหรือสิทธิ',
+            'ส่วนลดพิเศษเมื่อซื้อจำนวนมาก',
+            'ใบเสร็จรับเงินที่ถูกต้อง',
+            'การชำระเงินตรงเวลา'
+          ],
+          correct_index: 0,
+          explanation_th: "'瑕疵' คือ ตำหนิ ข้อบกพร่อง หรือความชำรุดเสียหายของสินค้า (Quality Defect)",
+          encouragement: 'จำศัพท์กฎหมายพาณิชย์ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อพบข้อบกพร่องและต้องการ 'มาตรการเยียวยาแก้ไข' ควรใช้คำว่าอะไร?",
+          options: [
+            '补救 (bǔjiù)',
+            '报销 (bàoxiāo)',
+            '请假 (qǐngjià)',
+            '打包 (dǎbāo)'
+          ],
+          correct_index: 0,
+          explanation_th: "'补救' แปลว่า การเยียวยาแก้ไข หรือมาตรการชดเชย",
+          encouragement: 'ยอดเยี่ยมมาก! เลือกคำศัพท์ได้ตรงเป้าหมาย!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "หากเกิดตำหนิด้านคุณภาพ ผู้ซื้อมีสิทธิ์เรียกร้องมาตรการเยียวยา"',
+          tokens: ['买方有权要求', '如出现质量瑕疵', '有效补救措施'],
+          correct_sequence: ['如出现质量瑕疵', '买方有权要求', '有效补救措施'],
+          pinyin: 'Rú chūxiàn zhìliàng xiácī, mǎifāng yǒuquán yāoqiú yǒuxiào bǔjiù cuòshī',
+          meaning_th: 'หากเกิดตำหนิด้านคุณภาพ ผู้ซื้อมีสิทธิ์เรียกร้องมาตรการเยียวยาที่มีประสิทธิผล',
+          explanation_th: 'เงื่อนไข (如出现质量瑕疵) + ประธานและกริยา (买方有权要求) + กรรม (有效补救措施)',
+          encouragement: 'โครงสร้างประโยคระเบียบกฎหมายสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '补救' ตัว '补' (ปะ/เสริม) มีหมวดนำใด?",
+          options: [
+            '衤 (หมวดเสื้อผ้า 衣字旁)',
+            '礻 (หมวดเซ่นไหว้ 示字旁)',
+            '扌 (หมวดมือ 提手旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'补' มีหมวดนำ '衤' (เสื้อผ้า) เดิมหมายถึงการปะชุนเสื้อผ้าที่ขาด",
+          encouragement: 'แยกแยะ 衤 กับ 礻 ได้อย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณส่งร่างสัญญาฉบับแก้ไข (Redline) ให้คู่ค้า พร้อมระบุว่าการแก้ไขกำหนดส่งมอบและมาตรการเยียวยาตำหนิ เป็นไปเพื่อความยุติธรรมและสร้างความร่วมมือระยะยาว ควรเขียนข้อความสรุปอย่างไร?',
+        options: [
+          '鉴于原条款语意模糊，我们明确了交付期限与瑕疵补救机制，权责一清二楚，期待双方顺利签署！ (Jiànyú yuán tiáokuǎn yǔyì móhu, wǒmen míngquè le jiāofù qīxiàn yǔ xiácī bǔjiù jīzhì, quánzé yìqīng’èrchǔ, qīdài shuāngfāng shùnlì qiānshǔ!)',
+          '你们的合同漏洞百出，根本不懂法。 (Nǐmen de hétong lòudòngbǎichū, gēnběn bù dǒng fǎ.)',
+          '爱签不签，不签拉倒。 (Ài qiān bù qiān, bù qiān lādǎo.)',
+          '请问这附近哪家餐厅最好吃？ (Qǐngwèn zhè fùjìn nǎ jiā cāntīng zuì hǎochī?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ข้อความ '鉴于原条款语意模糊，我们明确了交付期限与瑕疵补救机制，权责一清二楚，期待双方顺利签署！' ชี้แจงเหตุผลอย่างเป็นมืออาชีพ ยึดหลักความชัดเจน และมุ่งหวังให้สัญญาสำเร็จด้วยดี",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge ตรวจร่างสัญญาธุรกิจระหว่างประเทศสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u30_master',
+        badge_name: 'ผู้พิทักษ์สัญญาธุรกิจระหว่างประเทศ ⚖️🏆',
+        message_th: 'ขอแสดงความยินดี! คุณสำเร็จ Unit 30 สามารถอ่าน ตรวจร่างสัญญา และจัดการความเสี่ยงทางกฎหมายธุรกิจจีนได้อย่างมืออาชีพ!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

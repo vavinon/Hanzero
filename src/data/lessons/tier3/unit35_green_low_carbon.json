@@ -1,0 +1,908 @@
+{
+  "unit_id": "tier3_u35",
+  "tier": 3,
+  "unit_number": 35,
+  "title": {
+    "zh": "环境保护与低碳",
+    "th": "การอนุรักษ์สิ่งแวดล้อมและเทคโนโลยีคาร์บอนต่ำ",
+    "en": "Environment & Green Tech"
+  },
+  "description": "เรียนรู้คำศัพท์และมิติเศรษฐกิจสีเขียวของจีนยุคใหม่: ยุทธศาสตร์ \"เป้าหมายคาร์บอนคู่\" (双碳目标), การคัดแยกขยะและไลฟ์สไตล์คาร์บอนต่ำ (垃圾分类与低碳出行), การฟื้นฟูระบบนิเวศและเศรษฐกิจหมุนเวียน (生态治理与循环经济), และการขับเคลื่อนองค์กรสู่ความยั่งยืน (绿色办公与可持续发展)",
+  "lessons": [
+    {
+      "lesson_id": "t3_u35_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "双碳目标与绿色转型",
+        "th": "เป้าหมายคาร์บอนคู่และการเปลี่ยนผ่านสีเขียว",
+        "en": "Dual Carbon Goals & Green Transition"
+      },
+      "can_do": {
+        "th": "อธิบายเป้าหมาย \"คาร์บอนพีค\" และ \"คาร์บอนเป็นกลาง\" (碳达峰、碳中和) รวมถึงแนวคิดพลังงานสะอาดและสำนวน 绿水青山",
+        "en": "Explain carbon peak, carbon neutrality, clean energy, and the proverb 绿水青山"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาภาพรวมนโยบายพลังงานสะอาดและเป้าหมายคาร์บอนคู่ระดับประเทศ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3501",
+          "hanzi": "碳达峰",
+          "pinyin": "tàndàfēng",
+          "display_pinyin": "tàndàfēng",
+          "pinyin_tone": "tan4da4feng1",
+          "meaning_th": "คาร์บอนพีค (จุดสูงสุดของการปล่อยคาร์บอน)",
+          "meaning_en": "carbon peak",
+          "radical": "石",
+          "radical_name_th": "หมวดหิน (石字旁)",
+          "stroke_count": 24,
+          "mnemonic": "ธาตุคาร์บอน (碳) พุ่งถึงระดับ (达) ยอดเขาสูงสุด (峰) = จุดปล่อยคาร์บอนสูงสุด",
+          "kid_mnemonic": "กราฟภูเขาสีดำที่พุ่งขึ้นไปแตะยอดธงแล้วเริ่มลดลง = 碳达峰",
+          "body_gesture": "ยกมือขวาทำท่าแตะยอดภูเขาแล้วชี้ระดับคงที่"
+        },
+        {
+          "id": "hsk3_3502",
+          "hanzi": "碳中和",
+          "pinyin": "tànzhōnghé",
+          "display_pinyin": "tànzhōnghé",
+          "pinyin_tone": "tan4zhong1he2",
+          "meaning_th": "ความเป็นกลางทางคาร์บอน (Carbon Neutrality)",
+          "meaning_en": "carbon neutrality",
+          "radical": "石",
+          "radical_name_th": "หมวดหิน (石字旁)",
+          "stroke_count": 22,
+          "mnemonic": "คาร์บอน (碳) ที่ถูกชดเชยและดูดซับจนสมดุลอยู่ตรงกลางพอดี (中和) = ความเป็นกลางทางคาร์บอน",
+          "kid_mnemonic": "ตาชั่งสองข้าง ข้างหนึ่งปล่อยควัน อีกข้างปลูกต้นไม้เท่ากันพอดี = 碳中和",
+          "body_gesture": "กางสองมือออกระดับอกให้สมดุลเท่ากันทั้งซ้ายขวา"
+        },
+        {
+          "id": "hsk3_3503",
+          "hanzi": "清洁能源",
+          "pinyin": "qīngjiénéngyuán",
+          "display_pinyin": "qīngjiénéngyuán",
+          "pinyin_tone": "qing1jie2neng2yuan2",
+          "meaning_th": "พลังงานสะอาด (เช่น ลม, แสงอาทิตย์, น้ำ)",
+          "meaning_en": "clean energy",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 38,
+          "mnemonic": "พลังงาน (能源) ที่บริสุทธิ์สะอาดปราศจากมลพิษ (清洁) = พลังงานสะอาด",
+          "kid_mnemonic": "กังหันลมสีขาวและแผงโซลาร์เซลล์ส่องแสงวิบวับ = 清洁能源",
+          "body_gesture": "หมุนสองมือวนเป็นรูปกังหันลมกลางอากาศ"
+        },
+        {
+          "id": "hsk3_3504",
+          "hanzi": "减排",
+          "pinyin": "jiǎnpái",
+          "display_pinyin": "jiǎnpái",
+          "pinyin_tone": "jian3pai2",
+          "meaning_th": "การลดการปล่อยก๊าซเรือนกระจก/มลพิษ",
+          "meaning_en": "emission reduction",
+          "radical": "冫",
+          "radical_name_th": "หมวดน้ำแข็งสองจุด (两点水)",
+          "stroke_count": 20,
+          "mnemonic": "การลดลง (减) ของการระบายหรือปล่อยของเสีย (排) = ลดการปล่อยมลพิษ",
+          "kid_mnemonic": "วาล์วท่อควันที่ค่อยๆ ถูกหมุนปิดให้ควันเหลือนิดเดียว = 减排",
+          "body_gesture": "ทำท่าหมุนวาล์วปิดแล้วเลื่อนมือลงด้านล่าง"
+        },
+        {
+          "id": "hsk3_3505",
+          "hanzi": "绿水青山",
+          "pinyin": "lǜshuǐqīngshān",
+          "display_pinyin": "lǜshuǐqīngshān",
+          "pinyin_tone": "lv4shui3qing1shan1",
+          "meaning_th": "ภูเขาเขียวสายน้ำใส (อุปมาถึงธรรมชาติสิ่งแวดล้อมอันบริสุทธิ์และมีค่า)",
+          "meaning_en": "lucid waters and lush mountains (invaluable natural ecology)",
+          "radical": "纟",
+          "radical_name_th": "หมวดไหม (绞丝旁)",
+          "stroke_count": 28,
+          "mnemonic": "สายน้ำสีมรกตใสสะอาด (绿水) เคียงคู่ขุนเขาเขียวขจี (青山) = ธรรมชาติอันอุดมสมบูรณ์",
+          "kid_mnemonic": "ภาพวาดทิวทัศน์จีนที่มีแม่น้ำสีเขียวมรกตและภูเขาสูงเขียวขจี = 绿水青山",
+          "body_gesture": "วาดมือเป็นคลื่นน้ำแล้วยกมือทำรูปยอดเขา"
+        }
+      ],
+      "tone_focus": {
+        "rule_name": "Tone Contrast: เสียง 4 หนักแน่น (tàn/dà) ตัดกับเสียง 1 ลากยาว (fēng/qīng)",
+        "target_tone": "Tone 4 + Tone 1 Contrast",
+        "description_th": "คำว่า 碳 (tàn) และ 达 (dá) มีจังหวะเสียงสั้นกระชับ ส่วน 峰 (fēng) และ 青 (qīng) เป็นเสียง 1 สูงยาวลอยตัว สดใสและมั่นคง",
+        "example": "碳达峰 (tàndàfēng) / 绿水青山 (lǜshuǐqīngshān)",
+        "fun_metaphor": "กระแทกลงส้นเท้าอย่างมั่นคง แล้วกางปีกบินร่อนลมสูง!",
+        "reassurance": "ออกเสียง 碳 ให้ลงลึกและชัดเจน ก่อนยกเสียงขึ้นสูงใสที่คำว่า 峰 จะไพเราะมาก"
+      },
+      "grammar_bite": {
+        "title": "ยุทธศาสตร์และการดำเนินงาน: 以……为契机 / 采取措施以期…… / 绝不是……而是……",
+        "explanation_th": "โครงสร้างภาษาทางการสำหรับการอธิบายวิสัยทัศน์และการเปลี่ยนผ่านทางเศรษฐกิจ",
+        "patterns": [
+          {
+            "formula": "采取 + [มาตรการ] + 以期 + [เป้าหมายที่คาดหวัง]",
+            "zh": "我们必须采取切实有力的节能措施，以期在短时间内见到减排成效。",
+            "pinyin": "Wǒmen bìxū cǎiqǔ qièshí yǒulì de jiénéng cuòshī, yǐqī zài duǎn shíjiān nèi jiàn dào jiǎnpái chéngxiào.",
+            "th": "พวกเราต้องดำเนินมาตรการประหยัดพลังงานที่มีประสิทธิภาพและเป็นรูปธรรม เพื่อมุ่งหวังว่าจะได้เห็นผลสัมฤทธิ์การลดมลพิษในระยะเวลาอันสั้น",
+            "en": "We must take concrete and effective energy-saving measures, with a view to seeing emission reduction results in a short time."
+          },
+          {
+            "formula": "绝不是 + [ข้อปฏิเสธ], 而是 + [ข้อเท็จจริง/วิสัยทัศน์]",
+            "zh": "节能减排绝不是企业的短期负担，而是赢得长远发展的核心竞争力。",
+            "pinyin": "Jiénéng jiǎnpái jué bú shì qǐyè de duǎnqī fùdān, ér shì yíngdé chángyuǎn fāzhǎn de héxīn jìngzhēnglì.",
+            "th": "การประหยัดพลังงานและลดมลพิษไม่ได้เป็นภาระระยะสั้นขององค์กรอย่างแน่นอน แต่เป็นขีดความสามารถการแข่งขันแกนหลักเพื่อการพัฒนายาวนาน",
+            "en": "Energy conservation and emission reduction are certainly not a short-term corporate burden, but core competitiveness for long-term growth."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หวังจง (CEO) 👨‍💼",
+          "zh": "各位同事，我们集团今年必须加速推进绿色转型，重点落实减排工作目标。",
+          "pinyin": "Gèwèi tóngshì, wǒmen jítuán jīnnián bìxū jiāsù tuījìn lǜsè zhuǎnxíng, zhòngdiǎn luòshí jiǎnpái gōngzuò mùbiāo.",
+          "th": "เพื่อนร่วมงานทุกท่าน กลุ่มบริษัทของเราในปีนี้ต้องเร่งผลักดันการเปลี่ยนผ่านสีเขียว โดยเน้นการบรรลุเป้าหมายการลดการปล่อยมลพิษเป็นสำคัญครับ",
+          "en": "Colleagues, our group must accelerate green transition this year, focusing on delivering emission reduction targets."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หลี่จิงหลี่ (ผู้จัดการฝ่ายพัฒนาที่ยั่งยืน) 👩‍💼",
+          "zh": "是的王总，国家提出碳达峰与碳中和战略，我们厂区已经全面改用清洁能源，大家工作热情都很高！",
+          "pinyin": "Shì de Wáng zǒng, guójiā tíchū tàndàfēng yǔ tànzhōnghé zhànlüè, wǒmen chǎngqū yǐjīng quánmiàn gǎiyòng qīngjiénéngyuán, dàjiā gōngzuò rèqíng dōu hěn gāo!",
+          "th": "ใช่ค่ะคุณหวัง ประเทศได้เสนอยุทธศาสตร์คาร์บอนพีคและคาร์บอนเป็นกลาง โรงงานของเราจึงได้เปลี่ยนมาใช้พลังงานสะอาดอย่างรอบด้าน ทุกคนต่างกระตือรือร้นในการทำงานมากค่ะ!",
+          "en": "Yes Director Wang, the state proposed carbon peak and neutrality; our factory has fully switched to clean energy, and everyone is working enthusiastically!"
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หวังจง (CEO) 👨‍💼",
+          "zh": "很好！绿水青山就是金山银山，环保投入绝不是企业的负担，而是我们为社会解决问题的长远担当。",
+          "pinyin": "Hěn hǎo! Lǜshuǐqīngshān jiù shì jīnshānyínshān, huánbǎo tóurù jué bú shì qǐyè de fùdān, ér shì wǒmen wèi shèhuì jiějué wèntí de chángyuǎn dāndāng.",
+          "th": "ดีมากครับ! น้ำใสภูเขาเขียวก็คือภูเขาทองภูเขาเงิน การลงทุนด้านสิ่งแวดล้อมไม่ได้เป็นภาระขององค์กร แต่เป็นความรับผิดชอบระยะยาวที่พวกเราช่วยสังคมแก้ปัญหาครับ",
+          "en": "Very good! Clear waters and lush mountains are invaluable assets. Green investment is not a burden, but our long-term duty to solve problems for society."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หลี่จิงหลี่ (ผู้จัดการฝ่ายพัฒนาที่ยั่งยืน) 👩‍💼",
+          "zh": "我们正与几家新能源科技公司深入合作，共同学习新技术，期待早日实现零碳排放！",
+          "pinyin": "Wǒmen zhèng yǔ jǐ jiā xīnnéngyuán kējì gōngsī shēnrù hézuò, gòngtóng xuéxí xīn jìshù, qīdài zǎorì shíxiàn líng tàn páifàng!",
+          "th": "พวกเรากำลังร่วมมืออย่างลึกซึ้งกับบริษัทเทคโนโลยีพลังงานใหม่หลายแห่ง เพื่อเรียนรู้เทคโนโลยีใหม่ร่วมกัน หวังว่าจะบรรลุการปล่อยคาร์บอนสุทธิเป็นศูนย์โดยเร็วค่ะ!",
+          "en": "We are partnering deeply with new energy tech firms, learning new tech together, expecting to achieve net-zero emissions soon!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '碳中和' (tànzhōnghé) มีความหมายทางวิทยาศาสตร์และสิ่งแวดล้อมตรงกับข้อใด?",
+          "options": [
+            "การชดเชยและดูดซับกักเก็บคาร์บอนจนเกิดสมดุลสุทธิเป็นศูนย์",
+            "การเร่งปล่อยควันดำในโรงงานอุตสาหกรรม",
+            "การหยุดใช้ไฟฟ้าทุกครัวเรือน",
+            "การเพิ่มการขุดเจาะถ่านหิน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'碳中和' (Carbon Neutrality) หมายถึง การดูดซับหรือชดเชยปริมาณคาร์บอนที่ปล่อยออกมาทั้งหมด จนทำให้การปล่อยก๊าซเรือนกระจกสุทธิเท่ากับศูนย์",
+          "encouragement": "เข้าใจศัพท์ยุทธศาสตร์สีเขียวระดับโลกได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "สำนวน '绿水青山' (lǜshuǐqīngshān) สะท้อนถึงสิ่งใด?",
+          "options": [
+            "ธรรมชาติสิ่งแวดล้อมอันอุดมสมบูรณ์บริสุทธิ์และมีค่ายิ่งกว่าทรัพย์สินเงินทอง",
+            "การเดินทางไปเที่ยวทะเลในฤดูร้อน",
+            "ร้านขายสีวาดภาพธรรมชาติ",
+            "การแข่งขันปีนหน้าผาสูงชัน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'绿水青山' เป็นสำนวนและแนวคิดระดับชาติที่ชี้ว่าสิ่งแวดล้อมที่บริสุทธิ์งดงามคือทรัพย์สินที่ล้ำค่าและยั่งยืนที่สุด",
+          "encouragement": "จำสำนวนสิ่งแวดล้อมสำคัญของจีนได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"เราต้องผลักดันการลดมลพิษและการใช้พลังงานสะอาดอย่างรอบด้าน\"",
+          "tokens": [
+            "清洁能源",
+            "必须全面推进",
+            "减排与",
+            "我们"
+          ],
+          "correct_sequence": [
+            "我们",
+            "必须全面推进",
+            "减排与",
+            "清洁能源"
+          ],
+          "pinyin": "Wǒmen bìxū quánmiàn tuījìn jiǎnpái yǔ qīngjiénéngyuán",
+          "meaning_th": "เราต้องผลักดันการลดมลพิษและการใช้พลังงานสะอาดอย่างรอบด้าน",
+          "explanation_th": "ประธาน (我们) + กริยานุเคราะห์และกริยา (必须全面推进) + กรรมผสม (减排与清洁能源)",
+          "encouragement": "เรียงประโยคเชิงนโยบายได้สละสลวยมาก!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '清洁能源' ตัว '清' (สะอาดบริสุทธิ์) มีหมวดนำใด?",
+          "options": [
+            "氵 (หมวดน้ำ สามจุดน้ำ 三点水)",
+            "火 (หมวดไฟ 火字旁)",
+            "木 (หมวดไม้ 木字旁)",
+            "口 (หมวดปาก 口字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'清' ประกอบด้วยหมวดนำ '氵' (น้ำ) สื่อถึงสายน้ำใสสะอาดบริสุทธิ์ปราศจากสิ่งเจือปน",
+          "encouragement": "จำหมวดนำอักษรจีนได้อย่างแม่นยำ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในฟอรัมความยั่งยืนสากล ตัวแทนสื่อมวลชนถามว่า \"องค์กรจะสร้างสมดุลระหว่างผลกำไรกับการลงทุนด้านพลังงานสะอาดได้อย่างไร?\" คุณควรตอบอย่างไรให้เปี่ยมวิสัยทัศน์?",
+        "options": [
+          "绿水青山就是金山银山，清洁能源投入绝不是企业的负担，而是赢得长远可持续发展的核心动力！ (Lǜshuǐqīngshān jiù shì jīnshānyínshān, qīngjiénéngyuán tóurù jué bú shì qǐyè de fùdān, ér shì yíngdé chángyuǎn kěchíxù fāzhǎn de héxīn dònglì!)",
+          "环保太贵了，我们打算明年再考虑。 (Huánbǎo tài guì le, wǒmen dǎsuàn míngnián zài kǎolǜ.)",
+          "只要有钱赚，环境怎么样都可以。 (Zhǐyào yǒu qián zhuàn, huánjìng zěnmeyàng dōu kěyǐ.)",
+          "请问今天中午吃什么泰国菜？ (Qǐngwèn jīntiān zhōngwǔ chī shénme Tàiguócài?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '绿水青山就是金山银山...而是赢得长远可持续发展的核心动力！' สื่อสารทั้งปรัชญาธรรมชาติและวิสัยทัศน์ความคุ้มค่าเชิงเศรษฐกิจได้อย่างมืออาชีพสูงสุด",
+        "encouragement": "ตอบคำถามได้อย่างยอดเยี่ยม เปี่ยมเสน่ห์ผู้นำยุคสีเขียว!"
+      }
+    },
+    {
+      "lesson_id": "t3_u35_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "垃圾分类与低碳出行",
+        "th": "การแยกขยะและการเดินทางคาร์บอนต่ำ",
+        "en": "Waste Sorting & Low-Carbon Commute"
+      },
+      "can_do": {
+        "th": "สนทนาเกี่ยวกับกฎระเบียบการแยกขยะในเมือง (垃圾分类), การเดินทางด้วยจักรยานแชร์ริ่ง (共享单车) และการปลูกจิตสำนึกรักษ์โลก",
+        "en": "Discuss urban waste sorting rules, bike-sharing commutes, and cultivating environmental awareness"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้ชีวิตประจำวันแบบรักษ์โลกตามมาตรฐานเมืองใหญ่ในประเทศจีน!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3506",
+          "hanzi": "垃圾分类",
+          "pinyin": "lājīfēnlèi",
+          "display_pinyin": "lājīfēnlèi",
+          "pinyin_tone": "la1ji1fen1lei4",
+          "meaning_th": "การคัดแยกขยะ (ขยะเปียก ขยะรีไซเคิล ขยะอันตราย ฯลฯ)",
+          "meaning_en": "waste sorting / garbage classification",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน (提土旁)",
+          "stroke_count": 24,
+          "mnemonic": "ขยะสิ่งปฏิกูล (垃圾) ถูกคัดแยกออกเป็นหมวดหมู่ชัดเจน (分类) = การคัดแยกขยะ",
+          "kid_mnemonic": "ถังขยะ 4 สีเรียงกัน แต่ละถังมีป้ายบอกประเภทขยะชัดเจน = 垃圾分类",
+          "body_gesture": "ทำท่าหยิบสิ่งของแล้วหย่อนลงถังขยะคนละฝั่ง"
+        },
+        {
+          "id": "hsk3_3507",
+          "hanzi": "低碳",
+          "pinyin": "dītàn",
+          "display_pinyin": "dītàn",
+          "pinyin_tone": "di1tan4",
+          "meaning_th": "คาร์บอนต่ำ (การใช้ชีวิตหรือกระบวนการที่ลดคาร์บอน)",
+          "meaning_en": "low-carbon",
+          "radical": "亻",
+          "radical_name_th": "หมวดคน (单人旁)",
+          "stroke_count": 21,
+          "mnemonic": "ปริมาณที่ต่ำลง (低) ของคาร์บอนและของเสีย (碳) = คาร์บอนต่ำ",
+          "kid_mnemonic": "ใบไม้สีเขียวที่ปกป้องโลกไม่ให้ถูกรมควันดำ = 低碳",
+          "body_gesture": "คว่ำฝ่ามือกดลงต่ำเพื่อแสดงระดับที่ลดลง"
+        },
+        {
+          "id": "hsk3_3508",
+          "hanzi": "绿色出行",
+          "pinyin": "lǜsèchūxíng",
+          "display_pinyin": "lǜsèchūxíng",
+          "pinyin_tone": "lv4se4chu1xing2",
+          "meaning_th": "การเดินทางสีเขียว (เช่น รถไฟฟ้า ปั่นจักรยาน เดินเท้า)",
+          "meaning_en": "green travel / eco-friendly commuting",
+          "radical": "纟",
+          "radical_name_th": "หมวดไหม (绞丝旁)",
+          "stroke_count": 26,
+          "mnemonic": "การออกเดินทางสัญจร (出行) ด้วยวิธีการที่เป็นมิตรต่อสิ่งแวดล้อม (绿色) = การเดินทางสีเขียว",
+          "kid_mnemonic": "รองเท้าผ้าใบสีเขียวและจักรยานคู่ใจสำหรับเดินทาง = 绿色出行",
+          "body_gesture": "ทำท่าปั่นจักรยานอย่างร่าเริง"
+        },
+        {
+          "id": "hsk3_3509",
+          "hanzi": "共享单车",
+          "pinyin": "gòngxiǎngdānchē",
+          "display_pinyin": "gòngxiǎngdānchē",
+          "pinyin_tone": "gong4xiang3dan1che1",
+          "meaning_th": "จักรยานแชร์ริ่ง (สแกนปลดล็อกใช้งานผ่านแอป)",
+          "meaning_en": "bike-sharing / shared bicycle",
+          "radical": "八",
+          "radical_name_th": "หมวดแปด (八字底)",
+          "stroke_count": 26,
+          "mnemonic": "จักรยาน (单车) ที่ประชาชนใช้ร่วมกันผ่านระบบแชร์ริ่ง (共享) = จักรยานแชร์ริ่ง",
+          "kid_mnemonic": "จักรยานสีเหลืองหรือสีฟ้าที่มี QR Code บนแฮนด์รถ = 共享单车",
+          "body_gesture": "ยกโทรศัพท์สแกน QR Code แล้วจับแฮนด์จักรยาน"
+        },
+        {
+          "id": "hsk3_3510",
+          "hanzi": "环保意识",
+          "pinyin": "huánbǎoyìshí",
+          "display_pinyin": "huánbǎoyìshí",
+          "pinyin_tone": "huan2bao3yi4shi2",
+          "meaning_th": "จิตสำนึกด้านการอนุรักษ์สิ่งแวดล้อม",
+          "meaning_en": "environmental awareness",
+          "radical": "王",
+          "radical_name_th": "หมวดหยก (王字旁)",
+          "stroke_count": 36,
+          "mnemonic": "ความตระหนักรู้และความเข้าใจ (意识) เกี่ยวกับการปกป้องสิ่งแวดล้อม (环保) = จิตสำนึกรักษ์โลก",
+          "kid_mnemonic": "สมองที่มีต้นไม้เล็กๆ ผลิดอกออกผลสีเขียว = 环保意识",
+          "body_gesture": "ชี้นิ้วชี้แตะที่ขมับแล้วประสานมือวางที่อก"
+        }
+      ],
+      "tone_focus": {
+        "rule_name": "Tone Consistency: เสียง 1 ราบเรียบ (lā/jī/fēn) ผสานเสียง 4 ชัดเจน (lèi/tàn)",
+        "target_tone": "Tone 1 Flow + Tone 4 Ending",
+        "description_th": "การออกเสียง 垃圾分 (lājīfēn) เป็นเสียง 1 ยาวต่อเนื่องกันอย่างนุ่มนวล ก่อนจะลงท้ายด้วย 类 (lèi) เสียง 4 สั้นหนักแน่น",
+        "example": "垃圾分类 (lājīfēnlèi) / 低碳 (dītàn)",
+        "fun_metaphor": "ลำธารไหลเรียบสงบนิ่ง แล้วลงน้ำตกกระทบโขดหินเปรี้ยง!",
+        "reassurance": "ควบคุมลมหายใจให้สม่ำเสมอในสามพยางค์แรก แล้วลงน้ำหนักชัดที่พยางค์สุดท้าย"
+      },
+      "grammar_bite": {
+        "title": "ไลฟ์สไตล์สองต่อ: 既……又……，一举两得 / 践行……理念",
+        "explanation_th": "สำนวนและไวยากรณ์สำหรับบอกประโยชน์หลายด้านและการลงมือทำวิถีชีวิตจริง",
+        "patterns": [
+          {
+            "formula": "既 + [ประโยชน์ที่ 1] + 又 + [ประโยชน์ที่ 2]，真是一举两得",
+            "zh": "我们骑共享单车上下班，既锻炼身体又保护环境，真是一举两得！",
+            "pinyin": "Wǒmen qí gòngxiǎngdānchē shàng-xiàbān, jì duànliàn shēntǐ yòu bǎohù huánjìng, zhēn shì yìjǔliǎngdé!",
+            "th": "พวกเราปั่นจักรยานแชร์ริ่งไปกลับที่ทำงาน ทั้งได้ออกกำลังกายและได้ปกป้องสิ่งแวดล้อม ยิงปืนนัดเดียวได้นกสองตัวจริงๆ!",
+            "en": "Riding shared bikes to work exercises the body and protects the environment—killing two birds with one stone!"
+          },
+          {
+            "formula": "践行 + [แนวคิด/วิถีชีวิต] + 的理念",
+            "zh": "越来越多年轻人乐意在日常生活中积极践行低碳绿色的环保理念。",
+            "pinyin": "Yuèláiyuè duō niánqīngrén lèyì zài rìcháng shēnghuó zhōng jījí jiànxíng dītàn lǜsè de huánbǎo lǐniàn.",
+            "th": "คนรุ่นใหม่จำนวนมากยิ่งขึ้นยินดีนำแนวคิดการอนุรักษ์สิ่งแวดล้อมสีเขียวคาร์บอนต่ำไปปฏิบัติจริงในชีวิตประจำวัน",
+            "en": "More and more youths are eager to practice low-carbon green environmental concepts in daily life."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "เสี่ยวเฉิน (เพื่อนร่วมงาน) 👨‍💻",
+          "zh": "小宋，我们小区的垃圾分类要求很严格，每天出门大家都要仔细分类投放。",
+          "pinyin": "Xiǎo Sòng, wǒmen xiǎoqū de lājīfēnlèi yāoqiú hěn yángé, měitiān chūmén dàjiā dōu yào zǐxì fēnlèi tóufàng.",
+          "th": "เสี่ยวซ่ง หมู่บ้านพวกเรามีระเบียบการแยกขยะที่เข้มงวดมาก ทุกวันเวลาออกจากบ้านทุกคนต้องแยกขยะอย่างละเอียดก่อนทิ้งนะ",
+          "en": "Xiao Song, our community has strict waste sorting rules; every day when leaving home everyone must sort carefully."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "刚来中国时我还有点不习惯，但现在全社会的环保意识都提高了，习惯了就觉得非常好！",
+          "pinyin": "Gāng lái Zhōngguó shí wǒ hái yǒudiǎn bù xíguàn, dàn xiànzài quán shèhuì de huánbǎoyìshí dōu tígāo le, xíguàn le jiù juéde fēicháng hǎo!",
+          "th": "ตอนมาจีนใหม่ๆ ผมยังไม่ค่อยชินเท่าไหร่ครับ แต่ตอนนี้จิตสำนึกรักษ์โลกของคนทั้งสังคมสูงขึ้นมาก พอคุ้นชินแล้วก็รู้สึกว่าดีเยี่ยมจริงๆ ครับ!",
+          "en": "When I first came to China I was not used to it, but now environmental awareness is high; once accustomed it feels great!"
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "เสี่ยวเฉิน (เพื่อนร่วมงาน) 👨‍💻",
+          "zh": "今天天气特别舒服，下班后我们一起扫共享单车骑回家吧，体验一下绿色出行！",
+          "pinyin": "Jīntiān tiānqì tèbié shūfu, xiàbān hòu wǒmen yìqǐ sǎo gòngxiǎngdānchē qí huí jiā ba, tǐyàn yíxià lǜsèchūxíng!",
+          "th": "วันนี้อากาศสบายเป็นพิเศษ เลิกงานแล้วพวกเราไปสแกนจักรยานแชร์ริ่งปั่นกลับบ้านด้วยกันเถอะ ไปสัมผัสการเดินทางสีเขียวกัน!",
+          "en": "The weather is great today. Let’s scan shared bikes and ride home together after work to experience green travel!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "好主意！既省钱又健身，还能为城市低碳减排做贡献，真是一举两得！",
+          "pinyin": "Hǎo zhǔyì! Jì shěngqián yòu jiànshēn, hái néng wèi chéngshì dītàn jiǎnpái zuò gòngxiàn, zhēn shì yìjǔliǎngdé!",
+          "th": "เป็นความคิดที่ดีมากครับ! ทั้งประหยัดเงิน ได้ออกกำลังกาย และยังมีส่วนช่วยลดมลพิษคาร์บอนต่ำให้เมือง ยิงปืนนัดเดียวได้นกสองตัวจริงๆ!",
+          "en": "Great idea! It saves money, keeps us fit, and contributes to city emission reduction—killing two birds with one stone!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '共享单车' (gòngxiǎngdānchē) หมายถึงยานพาหนะรูปแบบใด?",
+          "options": [
+            "จักรยานสาธารณะที่สแกนปลดล็อกใช้งานผ่านสมาร์ตโฟน",
+            "รถยนต์ส่วนบุคคลขนาดใหญ่",
+            "รถไฟใต้ดินความเร็วสูง",
+            "เครื่องบินขนส่งสินค้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'共享单车' (Bike-sharing) คือ ระบบจักรยานสาธารณะที่ผู้ใช้งานสามารถสแกนปลดล็อกผ่านแอปพลิเคชันเพื่อปั่นสัญจรในเมือง",
+          "encouragement": "เลือกคำตอบด้านไลฟ์สไตล์ทันสมัยได้อย่างถูกต้อง!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "ข้อใดถือเป็นตัวอย่างของการ '绿色出行' (lǜsèchūxíng)?",
+          "options": [
+            "การปั่นจักรยานหรือเดินเท้าไปทำงานเพื่อลดการปล่อยควันมลพิษ",
+            "การติดเครื่องยนต์รถทิ้งไว้ขณะจอดซื้อของ",
+            "การขับรถสปอร์ตใช้น้ำมันปริมาณมากในชั่วโมงเร่งด่วน",
+            "การเดินทางด้วยเฮลิคอปเตอร์ส่วนตัว"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'绿色出行' เน้นการเดินทางที่เป็นมิตรต่อสิ่งแวดล้อม เช่น รถไฟฟ้า จักรยาน หรือเดินเท้า",
+          "encouragement": "เข้าใจหัวใจของการเดินทางสีเขียวอย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การแยกขยะช่วยยกระดับจิตสำนึกด้านสิ่งแวดล้อมของประชาชน\"",
+          "tokens": [
+            "环保意识",
+            "垃圾分类",
+            "全社会的",
+            "有助于提升"
+          ],
+          "correct_sequence": [
+            "垃圾分类",
+            "有助于提升",
+            "全社会的",
+            "环保意识"
+          ],
+          "pinyin": "Lājīfēnlèi yǒuzhùyú tíshēng quán shèhuì de huánbǎoyìshí",
+          "meaning_th": "การแยกขยะช่วยยกระดับจิตสำนึกด้านสิ่งแวดล้อมของคนในสังคม",
+          "explanation_th": "ประธาน (垃圾分类) + กริยาวลี (有助于提升) + ส่วนขยายเจ้าของ (全社会的) + กรรม (环保意识)",
+          "encouragement": "เรียงประโยคสื่อความหมายได้แม่นยำไร้ที่ติ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '垃圾' (lājī: ขยะ) มีหมวดนำใดที่เหมือนกันทั้งสองตัวอักษร?",
+          "options": [
+            "土 (หมวดดิน 提土旁)",
+            "木 (หมวดไม้ 木字旁)",
+            "日 (หมวดพระอาทิตย์ 日字旁)",
+            "金 (หมวดโลหะ 金字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "ทั้ง '垃' และ '圾' ใช้หมวดนำ '土' (ดิน) สื่อถึงฝุ่นผง เศษดิน และสิ่งปฏิกูลที่ตกค้างบนพื้นดิน",
+          "encouragement": "จำหมวดนำอักษรจีนคู่ได้อย่างยอดเยี่ยม!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "เพื่อนร่วมงานชาวจีนชวนคุณคุยว่า \"การแยกขยะและการปั่นจักรยานแชร์ริ่งสร้างการเปลี่ยนแปลงอะไรให้กับเมืองบ้าง?\" คุณควรแสดงทัศนะอย่างไรให้สะท้อนความเข้าใจในสังคม?",
+        "options": [
+          "这不仅让城市生活更加整洁健康，更在潜移默化中提升了全社会的环保意识，让我们践行了真正的低碳生活！ (Zhè bùjǐn ràng chéngshì shēnghuó gèngjiā zhěngjié jiànkāng, gèng zài qiányí-mòhuà zhōng tíshēng le quán shèhuì de huánbǎoyìshí, ràng wǒmen jiànxíng le zhēnzhèng de dītàn shēnghuó!)",
+          "我觉得分类太麻烦了，还是随便乱扔比较方便。 (Wǒ juéde fēnlèi tài máfan le, háishi suíbiàn luànrēng bǐjiào fāngbiàn.)",
+          "骑车太累了，大家最好都买大排量汽车。 (Qíchē tài lèi le, dàjiā zuìhǎo dōu mǎi dà páiliàng qìchē.)",
+          "这家咖啡馆的服务员态度非常好。 (Zhè jiā kāfēiguǎn de fúwùyuán tàidu fēicháng hǎo.)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '这不仅让城市生活更加整洁健康...更在潜移默化中提升了全社会的环保意识！' สะท้อนความเข้าใจเชิงสังคมและวัฒนธรรมสมัยใหม่ได้อย่างลึกซึ้ง",
+        "encouragement": "วิเคราะห์ปรากฏการณ์เมืองได้อย่างคมคายและสร้างสรรค์!"
+      }
+    },
+    {
+      "lesson_id": "t3_u35_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "生态保护与循环经济",
+        "th": "การอนุรักษ์ระบบนิเวศและเศรษฐกิจหมุนเวียน",
+        "en": "Ecological Conservation & Circular Economy"
+      },
+      "can_do": {
+        "th": "อธิบายการปลูกป่า (植树造林) การป้องกันทะเลทราย (荒漠化治理) และแนวคิดเศรษฐกิจหมุนเวียน (循环经济)",
+        "en": "Explain afforestation, desertification control, and circular economy concepts"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องการฟื้นฟูธรรมชาติและการใช้ทรัพยากรหมุนเวียนอย่างมีประสิทธิภาพ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3511",
+          "hanzi": "植树造林",
+          "pinyin": "zhíshùzàolín",
+          "display_pinyin": "zhíshùzàolín",
+          "pinyin_tone": "zhi2shu4zao4lin2",
+          "meaning_th": "การปลูกต้นไม้สร้างป่า / การฟื้นฟูป่าไม้",
+          "meaning_en": "afforestation / tree planting",
+          "radical": "木",
+          "radical_name_th": "หมวดไม้ (木字旁)",
+          "stroke_count": 36,
+          "mnemonic": "การปลูกต้นไม้ (植树) เพื่อสร้างผืนป่าอันกว้างใหญ่ (造林) = การปลูกป่าฟื้นฟูธรรมชาติ",
+          "kid_mnemonic": "คนช่วยกันถือจอบขุดหลุมปลูกต้นกล้าเล็กๆ จนกลายเป็นป่าใหญ่ = 植树造林",
+          "body_gesture": "ทำท่าขุดดินแล้วประคองต้นกล้าลงหลุมอย่างทะนุถนอม"
+        },
+        {
+          "id": "hsk3_3512",
+          "hanzi": "生态红线",
+          "pinyin": "shēngtàihóngxiàn",
+          "display_pinyin": "shēngtàihóngxiàn",
+          "pinyin_tone": "sheng1tai4hong2xian4",
+          "meaning_th": "เส้นแดงคุ้มครองระบบนิเวศ (ขอบเขตห้ามทำลายเด็ดขาด)",
+          "meaning_en": "ecological protection red line",
+          "radical": "生",
+          "radical_name_th": "หมวดเกิด (生字旁)",
+          "stroke_count": 30,
+          "mnemonic": "เส้นขีดสีแดง (红线) ที่ห้ามใครล่วงล้ำในการทำลายระบบนิเวศ (生态) = เส้นแดงคุ้มครองนิเวศ",
+          "kid_mnemonic": "เส้นเชือกสีแดงกั้นแนวเขตป่าสงวนที่มีสัตว์ป่าอาศัยอยู่ = 生态红线",
+          "body_gesture": "กางสองมือออกทำสัญลักษณ์ห้ามก้าวข้ามเส้น"
+        },
+        {
+          "id": "hsk3_3513",
+          "hanzi": "荒漠化",
+          "pinyin": "huāngmòhuà",
+          "display_pinyin": "huāngmòhuà",
+          "pinyin_tone": "huang1mo4hua4",
+          "meaning_th": "ภาวะการกลายเป็นทะเลทราย (ดินเสื่อมโทรมแห้งแล้ง)",
+          "meaning_en": "desertification",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 26,
+          "mnemonic": "พื้นที่รกร้าง (荒) ที่แปรสภาพกลายเป็นทะเลทราย (漠化) = ภาวะแปรสภาพเป็นทะเลทราย",
+          "kid_mnemonic": "พื้นดินแตกระแหงสีเหลืองที่ไม่มีต้นไม้ขึ้นเลย = 荒漠化",
+          "body_gesture": "ผายมือออกแล้วส่ายหน้าแสดงความแห้งแล้ง"
+        },
+        {
+          "id": "hsk3_3514",
+          "hanzi": "循环",
+          "pinyin": "xúnhuán",
+          "display_pinyin": "xúnhuán",
+          "pinyin_tone": "xun2huan2",
+          "meaning_th": "หมุนเวียน / วนซ้ำ (เช่น รีไซเคิล หมุนเวียนทรัพยากร)",
+          "meaning_en": "circulate / cycle / recycle",
+          "radical": "彳",
+          "radical_name_th": "หมวดก้าวเดินสองก้าว (双人旁)",
+          "stroke_count": 21,
+          "mnemonic": "การเคลื่อนที่ตามลำดับ (循) เป็นวงกลมรอบทิศ (环) = การหมุนเวียนวนรอบ",
+          "kid_mnemonic": "ลูกศร 3 ดอกวิ่งวนตามกันเป็นวงกลมสัญลักษณ์รีไซเคิล = 循环",
+          "body_gesture": "หมุนสองมือวนเป็นวงกลมต่อเนื่อง"
+        },
+        {
+          "id": "hsk3_3515",
+          "hanzi": "治理",
+          "pinyin": "zhìlǐ",
+          "display_pinyin": "zhìlǐ",
+          "pinyin_tone": "zhi4li3",
+          "meaning_th": "การบริหารจัดการ / การบำบัดฟื้นฟู (สิ่งแวดล้อม น้ำเสีย)",
+          "meaning_en": "govern / manage / remediate / treat",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 15,
+          "mnemonic": "การจัดการบำบัดน้ำและสิ่งแวดล้อม (治) ให้กลับมามีระเบียบตามหลักการ (理) = การบำบัดฟื้นฟู",
+          "kid_mnemonic": "คุณหมอดินและน้ำถือเครื่องมือตรวจวัดความสะอาด = 治理",
+          "body_gesture": "ประสานสองมือเข้าหากันอย่างมั่นคงในท่าบริหาร"
+        }
+      ],
+      "tone_focus": {
+        "rule_name": "Tone Balance: เสียง 2 ไหลลื่น (zhí/lín/xún/huán) เคียงคู่เสียง 4 หนักแน่น (shù/zào)",
+        "target_tone": "Tone 2 Rhythm in Nature Words",
+        "description_th": "คำว่า 植树造林 (zhíshùzàolín) มีจังหวะสลับระหว่างเสียง 2 และเสียง 4 ทำให้คำอ่านมีพลังและความไพเราะ",
+        "example": "植树造林 (zhíshùzàolín) / 循环 (xúnhuán)",
+        "fun_metaphor": "ปีนขึ้นเนินเขาแล้วปักธง จากนั้นขึ้นเนินอีกลูกแล้วหยั่งรากลึก!",
+        "reassurance": "คำว่า 植 และ 林 เป็นเสียง 2 ทั้งคู่ ให้เปล่งเสียงขึ้นสูงคล้ายเครื่องดนตรีสาย"
+      },
+      "grammar_bite": {
+        "title": "การบริหารและขอบเขต: 将……与……相结合 / 坚决守住……红线",
+        "explanation_th": "โครงสร้างระดับทางการสำหรับแผนยุทธศาสตร์และการรักษาความมั่นคงทางนิเวศ",
+        "patterns": [
+          {
+            "formula": "将 + [การอนุรักษ์/สิ่งแวดล้อม] + 与 + [เศรษฐกิจ/อุตสาหกรรม] + 紧密结合",
+            "zh": "这个绿色项目将生态保护与循环经济紧密结合，取得了显著效益。",
+            "pinyin": "Zhè ge lǜsè xiàngmù jiāng shēngtài bǎohù yǔ xúnhuán jīngjì jǐnmì jiéhé, qǔdé le xiǎnzhù xiàoyì.",
+            "th": "โครงการสีเขียวนี้ได้นำการปกป้องระบบนิเวศมาผสานเข้ากับเศรษฐกิจหมุนเวียนอย่างแนบแน่น ได้รับประสิทธิผลอย่างเห็นได้ชัด",
+            "en": "This green project tightly combined ecological conservation with circular economy, achieving significant returns."
+          },
+          {
+            "formula": "坚决守住 + [เส้นบรรทัดฐาน/เส้นแดง]",
+            "zh": "在推进城市发展与工业建设的过程中，我们必须坚决守住生态红线。",
+            "pinyin": "Zài tuījìn chéngshì fāzhǎn yǔ gōngyè jiànshè de guòchéng zhōng, wǒmen bìxū jiānjué shǒuzhù shēngtàihóngxiàn.",
+            "th": "ในกระบวนการผลักดันการพัฒนาเมืองและการก่อสร้างอุตสาหกรรม พวกเราต้องรักษาเส้นแดงคุ้มครองระบบนิเวศไว้อย่างเด็ดเดี่ยว",
+            "en": "In the process of urban development and industrial construction, we must firmly uphold ecological red lines."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิววิศวกร (ผู้เชี่ยวชาญด้านป่าไม้) 👨‍🔬",
+          "zh": "小宋，经过几十年的植树造林，中国北方的荒漠化治理取得了举世瞩目的伟大成就！",
+          "pinyin": "Xiǎo Sòng, jīngguò jǐshí nián de zhíshùzàolín, Zhōngguó běifāng de huāngmòhuà zhìlǐ qǔdé le jǔshìzhǔmù de wěidà chéngjiù!",
+          "th": "เสี่ยวซ่ง ผ่านการปลูกป่าฟื้นฟูมาหลายสิบปี การบำบัดฟื้นฟูพื้นที่กลายเป็นทะเลทรายทางตอนเหนือของจีนประสบความสำเร็จยิ่งใหญ่ที่ทั่วโลกจับตามอง!",
+          "en": "Xiao Song, through decades of afforestation, desertification control in northern China has achieved world-renowned success!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "我在新闻里看到了，很多原本干旱的沙漠如今变成了绿洲，大家坚决守住了生态红线！",
+          "pinyin": "Wǒ zài xīnwén lǐ kàndào le, hěn duō yuánběn gānhàn de shāmò rújīn biànchéng le lǜzhōu, dàjiā jiānjué shǒuzhù le shēngtàihóngxiàn!",
+          "th": "ผมเห็นในข่าวแล้วครับ ทะเลทรายที่เดิมทีแห้งแล้งจำนวนมากปัจจุบันกลายเป็นโอเอซิส ทุกคนร่วมกันรักษาเส้นแดงคุ้มครองระบบนิเวศไว้อย่างเหนียวแน่นครับ!",
+          "en": "I saw it in the news: many formerly arid deserts have now turned into oases, with everyone firmly guarding the ecological red line!"
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิววิศวกร (ผู้เชี่ยวชาญด้านป่าไม้) 👨‍🔬",
+          "zh": "不仅如此，当地还将生态治理与循环农业相结合，让老百姓既有了好工作，又有了好生活。",
+          "pinyin": "Bùjǐn rúcǐ, dāngdì hái jiāng shēngtài zhìlǐ yǔ xúnhuán nóngyè xiāng jiéhé, ràng lǎobǎixìng jì yǒu le hǎo gōngzuò, yòu yǒu le hǎo shēnghuó.",
+          "th": "ไม่เพียงเท่านั้น ท้องถิ่นยังนำการบำบัดระบบนิเวศมาผสานเข้ากับเกษตรกรรมหมุนเวียน ทำให้ชาวบ้านทั้งมีงานที่ดีและมีชีวิตความเป็นอยู่ที่ดีขึ้นด้วย",
+          "en": "Moreover, local areas combined ecological remediation with circular farming, providing people with both good jobs and better lives."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "太令人钦佩了！这种经验非常值得我们泰国以及更多国际朋友们深入学习和合作！",
+          "pinyin": "Tài lìng rén qīnpèi le! Zhè zhǒng jīngyàn fēicháng zhídé wǒmen Tàiguó yǐjí gèng duō guójì péngyoumen shēnrù xuéxí hé hézuò!",
+          "th": "น่าชื่นชมเป็นอย่างยิ่งครับ! ประสบการณ์เช่นนี้คุ้มค่ามากที่พวกเราชาวไทยและมิตรสหายสากลจะได้เรียนรู้และร่วมมือกันอย่างลึกซึ้งครับ!",
+          "en": "Truly admirable! This experience is well worth in-depth study and cooperation for Thailand and international partners!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '荒漠化治理' (huāngmòhuà zhìlǐ) หมายถึงภารกิจใด?",
+          "options": [
+            "การบำบัดฟื้นฟูพื้นที่ดินแห้งแล้งเสื่อมโทรมไม่ให้กลายสภาพเป็นทะเลทราย",
+            "การสร้างห้างสรรพสินค้ากลางทะเลทราย",
+            "การตักทรายไปขายต่างประเทศ",
+            "การปิดเส้นทางคมนาคมทางบก"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'荒漠化治理' หมายถึง การบริหารจัดการ ปลูกพืชคลุมดิน และฟื้นฟูระบบนิเวศเพื่อป้องกันการกลายสภาพเป็นทะเลทราย",
+          "encouragement": "เข้าใจศัพท์วิทยาศาสตร์สิ่งแวดล้อมได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '生态红线' (shēngtàihóngxiàn) มีความสำคัญอย่างไรในกฎหมายผังเมืองและสิ่งแวดล้อม?",
+          "options": [
+            "เป็นแนวเขตพื้นที่คุ้มครองธรรมชาติขั้นเด็ดขาดที่ห้ามบุกรุกทำลาย",
+            "เป็นลู่วิ่งสำหรับแข่งกีฬาในเมือง",
+            "เป็นเส้นทางรถไฟความเร็วสูงสายใหม่",
+            "เป็นเขตพื้นที่อนุญาตให้สร้างโรงงานเคมี"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'生态红线' (Ecological Red Line) คือ ขอบเขตทางภูมิศาสตร์และสิ่งแวดล้อมที่มีความสำคัญยิ่งยวดและมีกฎหมายคุ้มครองห้ามพัฒนาบุกรุกโดยเด็ดขาด",
+          "encouragement": "จำคำศัพท์เชิงนโยบายระดับสูงได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การพัฒนาเศรษฐกิจหมุนเวียนช่วยส่งเสริมการอนุรักษ์ระบบนิเวศ\"",
+          "tokens": [
+            "生态保护",
+            "循环经济",
+            "大力发展",
+            "促进了"
+          ],
+          "correct_sequence": [
+            "大力发展",
+            "循环经济",
+            "促进了",
+            "生态保护"
+          ],
+          "pinyin": "Dàlì fāzhǎn xúnhuán jīngjì cùjìn le shēngtài bǎohù",
+          "meaning_th": "การพัฒนาเศรษฐกิจหมุนเวียนอย่างจริงจังช่วยส่งเสริมการปกป้องระบบนิเวศ",
+          "explanation_th": "กริยาวลีขยาย (大力发展) + ประธาน (循环经济) + กริยา (促进了) + กรรม (生态保护)",
+          "encouragement": "เรียงประโยคเศรษฐกิจสีเขียวได้คล่องแคล่วมาก!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '植树造林' ตัว '林' (ป่าไม้) ประกอบด้วยอักษรใดซ้ำกัน?",
+          "options": [
+            "木 (ต้นไม้ สองต้นเรียงกัน)",
+            "口 (ปาก สองปาก)",
+            "日 (ดวงอาทิตย์ สองดวง)",
+            "人 (คน สองคน)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'林' เกิดจาก '木' (ต้นไม้) สองต้นยืนเคียงคู่กัน สื่อถึงแนวป่าไม้ที่หนาแน่นอุดมสมบูรณ์",
+          "encouragement": "เข้าใจโครงสร้างอักษรภาพจีนอย่างลึกซึ้ง!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในเวทีอภิปรายความร่วมมือด้านสิ่งแวดล้อมอาเซียน-จีน ผู้แทนถามว่า \"โมเดลการฟื้นฟูป่าและแก้ปัญหาทะเลทรายของจีนนำมาประยุกต์ใช้กับภูมิภาคอื่นได้อย่างไร?\" คุณควรตอบอย่างไร?",
+        "options": [
+          "我们将生态治理与循环产业紧密结合，既守住了生态红线，又改善了人民生活，这种人与自然和谐共生的经验具有普遍价值！ (Wǒmen jiāng shēngtài zhìlǐ yǔ xúnhuán chǎnyè jǐnmì jiéhé, jì shǒuzhù le shēngtàihóngxiàn, yòu gǎishàn le rénmín shēnghuó, zhè zhǒng rén yǔ zìrán héxiégòngshēng de jīngyàn jùyǒu pǔbiàn jiàzhí!)",
+          "每个国家环境都不一样，不用互相交流学习。 (Měi ge guójiā huánjìng dōu bù yíyàng, bú yòng hùxiāng jiāoliú xuéxí.)",
+          "植树造林太辛苦了，我们还是多建一些化工厂吧。 (Zhíshùzàolín tài xīnkǔ le, wǒmen háishi duō jiàn yìxiē huàgōngchǎng ba.)",
+          "请问今天晚上去哪家餐馆喝茶？ (Qǐngwèn jīntiān wǎnshang qù nǎ jiā cānguǎn hē chá?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '我们将生态治理与循环产业紧密结合...这种人与自然和谐共生的经验具有普遍价值！' สะท้อนแนวคิดการพัฒนาที่สมดุลระหว่างธรรมชาติกับชีวิตความเป็นอยู่ของประชาชนอย่างทรงพลัง",
+        "encouragement": "ตอบคำถามในเวทีเสวนาระดับสากลได้อย่างสง่างาม!"
+      }
+    },
+    {
+      "lesson_id": "t3_u35_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "绿色办公与可持续发展",
+        "th": "ออฟฟิศสีเขียวและการพัฒนาที่ยั่งยืน (Boss Challenge)",
+        "en": "Green Office & Sustainable Development"
+      },
+      "can_do": {
+        "th": "นำเสนอแผนงานออฟฟิศไร้กระดาษ (无纸化办公) ลดต้นทุนเพิ่มประสิทธิภาพ (降本增效) เพื่อขับเคลื่อนการพัฒนาที่ยั่งยืน (可持续发展) ในระดับองค์กร",
+        "en": "Pitch a paperless office and efficiency optimization plan to advance corporate sustainable development"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: พิชิต Boss Challenge นำเสนอโครงการสำนักงานคาร์บอนต่ำต่อบอร์ดบริหารอย่างมืออาชีพ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3516",
+          "hanzi": "无纸化",
+          "pinyin": "wúzhǐhuà",
+          "display_pinyin": "wúzhǐhuà",
+          "pinyin_tone": "wu2zhi3hua4",
+          "meaning_th": "ไร้กระดาษ (Paperless / ระบบดิจิทัลเต็มรูปแบบ)",
+          "meaning_en": "paperless",
+          "radical": "一",
+          "radical_name_th": "หมวดหนึ่ง (单一)",
+          "stroke_count": 18,
+          "mnemonic": "การทำงานที่ไร้ (无) การใช้กระดาษ (纸) โดยเปลี่ยนเป็นดิจิทัล (化) = ออฟฟิศไร้กระดาษ",
+          "kid_mnemonic": "แท็บเล็ตและหน้าจอคอมพิวเตอร์ที่เก็บเอกสารทั้งหมดไว้โดยไม่มีกระดาษสักแผ่น = 无纸化",
+          "body_gesture": "โบกมือปฏิเสธกระดาษแล้วแตะนิ้วลงบนหน้าจอแท็บเล็ต"
+        },
+        {
+          "id": "hsk3_3517",
+          "hanzi": "降本增效",
+          "pinyin": "jiàngběnzēngxiào",
+          "display_pinyin": "jiàngběnzēngxiào",
+          "pinyin_tone": "jiang4ben3zeng1xiao4",
+          "meaning_th": "ลดต้นทุนเพิ่มประสิทธิภาพ (หลักการบริหารธุรกิจยอดนิยม)",
+          "meaning_en": "cut costs and improve efficiency",
+          "radical": "阝",
+          "radical_name_th": "หมวดเนินเขาซ้าย (双耳旁)",
+          "stroke_count": 37,
+          "mnemonic": "ลดค่าใช้จ่ายต้นทุนลง (降本) และเพิ่มผลลัพธ์ประสิทธิภาพการทำงาน (增效) = ลดต้นทุนเพิ่มประสิทธิภาพ",
+          "kid_mnemonic": "กราฟต้นทุนปักหัวลง แต่กราฟกำไรและผลงานพุ่งทะลุเพดาน = 降本增效",
+          "body_gesture": "กดมือซ้ายลงเพื่อลดต้นทุน แล้วชูมือขวาพุ่งขึ้นฟ้าเพื่อเพิ่มผลผลิต"
+        },
+        {
+          "id": "hsk3_3518",
+          "hanzi": "可持续",
+          "pinyin": "kěchíxù",
+          "display_pinyin": "kěchíxù",
+          "pinyin_tone": "ke3chi2xu4",
+          "meaning_th": "ยั่งยืน / ดำเนินต่อไปได้ในระยะยาว",
+          "meaning_en": "sustainable / continuous",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字旁)",
+          "stroke_count": 25,
+          "mnemonic": "สามารถ (可) รักษาและยืนหยัดดำเนินต่อไปข้างหน้าได้อย่างต่อเนื่อง (持续) = ยั่งยืน",
+          "kid_mnemonic": "สะพานทอดยาวข้ามไปสู่อนาคตที่มั่นคงแข็งแรง = 可持续",
+          "body_gesture": "ยื่นมือไปข้างหน้าเป็นเส้นตรงต่อเนื่องไม่สิ้นสุด"
+        },
+        {
+          "id": "hsk3_3519",
+          "hanzi": "和谐共生",
+          "pinyin": "héxiégòngshēng",
+          "display_pinyin": "héxiégòngshēng",
+          "pinyin_tone": "he2xie2gong4sheng1",
+          "meaning_th": "การอยู่ร่วมกันอย่างกลมกลืน (ระหว่างมนุษย์กับธรรมชาติ หรือในสังคม)",
+          "meaning_en": "harmonious coexistence",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字旁)",
+          "stroke_count": 29,
+          "mnemonic": "ความปรองดองกลมเกลียว (和谐) และการเติบโตร่วมกันอย่างสันติสุข (共生) = การอยู่ร่วมกันอย่างกลมกลืน",
+          "kid_mnemonic": "มนุษย์ สัตว์ และต้นไม้จับมือล้อมวงยิ้มให้กัน = 和谐共生",
+          "body_gesture": "กุมสองมือแนบชิดอกด้วยรอยยิ้มอบอุ่น"
+        }
+      ],
+      "tone_focus": {
+        "rule_name": "Tone Dynamic: เสียง 4 ดิ่งลง (jiàng/xiào) สลับเสียง 3 (běn) และเสียง 1 พุ่งทะยาน (zēng)",
+        "target_tone": "Tone 4-3-1-4 Business Quad-Tone",
+        "description_th": "คำว่า 降本增效 (jiàngběnzēngxiào) เป็นวลีสี่พยางค์ที่มีพลังหนักแน่นมาก 降 (เสียง 4) -> 本 (เสียง 3) -> 增 (เสียง 1) -> 效 (เสียง 4)",
+        "example": "降本增效 (jiàngběnzēngxiào) / 可持续 (kěchíxù)",
+        "fun_metaphor": "ทิ้งดิ่ง ลดระดับ ยกทะยานฟ้า แล้วตอกหมุดความสำเร็จ!",
+        "reassurance": "ฝึกออกเสียงทีละคู่ 降本 (jiàngběn) แล้วตามด้วย 增效 (zēngxiào) จะทรงพลังและจำง่าย"
+      },
+      "grammar_bite": {
+        "title": "การนำเสนอเชิงประจักษ์: 不仅……，更切实落实了…… / 秉持……原则",
+        "explanation_th": "โครงสร้างระดับมืออาชีพสำหรับรายงานผลสัมฤทธิ์ต่อคณะกรรมการบริหาร",
+        "patterns": [
+          {
+            "formula": "不仅降低了 + [ต้นทุน], 更切实落实了 + [ความรับผิดชอบ]",
+            "zh": "无纸化办公不仅显著降低了运营成本，更切实落实了减排社会责任。",
+            "pinyin": "Wúzhǐhuà bàngōng bùjǐn xiǎnzhù jiàngdī le yùnyíng chéngběn, gèng qièshí luòshí le jiǎnpái shèhuì zérèn.",
+            "th": "ออฟฟิศไร้กระดาษไม่เพียงลดต้นทุนการดำเนินงานลงอย่างเห็นได้ชัด แต่ยังปฏิบัติตามความรับผิดชอบต่อสังคมในการลดมลพิษอย่างแท้จริง",
+            "en": "Paperless office not only significantly reduced operating costs, but solidly fulfilled social responsibility in emissions reduction."
+          },
+          {
+            "formula": "秉持 + [หลักการ/ปรัชญา] + 的长期方针",
+            "zh": "我们必须始终秉持人与自然和谐共生、追求可持续发展的长期方针。",
+            "pinyin": "Wǒmen bìxū shǐzhōng bǐngchí rén yǔ zìrán héxiégòngshēng, zhuīqiú kěchíxù fāzhǎn de chángqī fāngzhēn.",
+            "th": "พวกเราต้องยึดมั่นในแนวนโยบายระยะยาวที่มนุษย์กับธรรมชาติอยู่ร่วมกันอย่างกลมกลืนและแสวงหาการพัฒนาที่ยั่งยืนเสมอ",
+            "en": "We must always adhere to the long-term policy of harmonious coexistence and sustainable development."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "กรรมการบริหาร (Board Member) 👨‍💼",
+          "zh": "宋先生，请你向董事会汇报一下，推行绿色办公系统将如何帮助集团降本增效与实现可持续发展？",
+          "pinyin": "Sòng xiānsheng, qǐng nǐ xiàng dǒngshìhuì huìbào yíxià, tuīxíng lǜsè bàngōng xìtǒng jiāng rúhé bāngzhù jítuán jiàngběnzēngxiào yǔ shíxiàn kěchíxù fāzhǎn?",
+          "th": "คุณซ่งครับ กรุณารายงานต่อคณะกรรมการบริหารว่า การนำระบบออฟฟิศสีเขียวมาใช้จะช่วยให้กลุ่มบริษัทลดต้นทุนเพิ่มประสิทธิภาพและบรรลุการพัฒนาที่ยั่งยืนได้อย่างไรครับ?",
+          "en": "Mr. Song, please report to the board: how will rolling out green office systems help cut costs, boost efficiency, and achieve sustainable development?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "各位董事，我们推行无纸化办公与智能设备管理，不仅每年能为公司节省近百万元行政成本，更切实落实了减排社会责任。",
+          "pinyin": "Gèwèi dǒngshì, wǒmen tuīxíng wúzhǐhuà bàngōng yǔ zhìnéng shèbèi guǎnlǐ, bùjǐn měinián néng wèi gōngsī jiéshěng jìn bǎi wàn yuán xíngzhèng chéngběn, gèng qièshí luòshí le jiǎnpái shèhuì zérèn.",
+          "th": "เรียนคณะกรรมการทุกท่าน การผลักดันระบบออฟฟิศไร้กระดาษและการบริหารอุปกรณ์อัจฉริยะ ไม่เพียงช่วยประหยัดต้นทุนบริหารงานของบริษัทได้เกือบล้านหยวนต่อปี แต่ยังบรรลุความรับผิดชอบต่อสังคมในการลดมลพิษอย่างแท้จริงครับ",
+          "en": "Honorable directors, promoting paperless offices and smart equipment saves nearly 1M RMB in admin costs annually, and solidly delivers emission reduction duties."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "กรรมการบริหาร (Board Member) 👨‍💼",
+          "zh": "回答得非常有深度！绿色转型不仅提升了企业的品牌形象，还让组织在未来的低碳市场中站稳了脚跟。",
+          "pinyin": "Huídá de fēicháng yǒu shēndù! Lǜsè zhuǎnxíng bùjǐn tíshēng le qǐyè de pǐnpái xíngxiàng, hái ràng zǔzhī zài wèilái de dītàn shìchǎng zhōng zhànwěn le jiǎogēn.",
+          "th": "ตอบได้ลึกซึ้งมากครับ! การเปลี่ยนผ่านสีเขียวไม่เพียงยกระดับภาพลักษณ์แบรนด์ขององค์กร แต่ยังทำให้องค์กรยืนหยัดได้อย่างมั่นคงในตลาดคาร์บอนต่ำแห่งอนาคต",
+          "en": "Very profound answer! Green transition not only elevates corporate brand image, but also secures the firm’s foothold in future low-carbon markets."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "谢谢各位董事的认可！我们将秉持人与自然和谐共生的原则，带领全体员工共同努力，为社会创造长期价值！",
+          "pinyin": "Xièxie gèwèi dǒngshì de rènkě! Wǒmen jiāng bǐngchí rén yǔ zìrán héxiégòngshēng de yuánzé, dàilǐng quántǐ yuángōng gòngtóng nǔlì, wèi shèhuì chuàngzào chángqī jiàzhí!",
+          "th": "ขอบพระคุณคณะกรรมการทุกท่านสำหรับการยอมรับครับ! พวกเราจะยึดมั่นในหลักการการอยู่ร่วมกันอย่างกลมกลืนระหว่างมนุษย์กับธรรมชาติ นำพาทีมงานทุกคนร่วมแรงร่วมใจ สร้างสรรค์คุณค่าระยะยาวให้สังคมครับ!",
+          "en": "Thank you for your recognition! We will uphold harmonious coexistence between humans and nature, leading all staff in concerted effort to create long-term social value!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '降本增效' (jiàngběnzēngxiào) มีความหมายตรงกับข้อใดในภาษาธุรกิจ?",
+          "options": [
+            "การลดต้นทุนพร้อมเพิ่มประสิทธิภาพการทำงานและผลผลิต",
+            "การเพิ่มราคาสินค้าขึ้นเป็นเท่าตัว",
+            "การระงับโครงการและหยุดจ้างงาน",
+            "การกู้ยืมเงินจำนวนมากเพื่อขยายกิจการ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'降本增效' หมายถึง การลดต้นทุนค่าใช้จ่าย (降本) ควบคู่ไปกับการเพิ่มประสิทธิภาพและประสิทธิผลในการทำงาน (增效)",
+          "encouragement": "จำศัพท์กลยุทธ์การบริหารธุรกิจระดับสูงได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '无纸化' (wúzhǐhuà) ในสภาพแวดล้อมสำนักงานหมายถึงสิ่งใด?",
+          "options": [
+            "การเปลี่ยนการทำงาน เอกสาร และการอนุมัติสัญญาเป็นระบบดิจิทัลแบบไร้กระดาษ",
+            "การห้ามไม่ให้พนักงานจดบันทึกใดๆ",
+            "การนำกระดาษหนังสือพิมพ์เก่ามาปูโต๊ะทำงาน",
+            "การยกเลิกการใช้คอมพิวเตอร์และโทรศัพท์"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'无纸化' (Paperless) หมายถึง การใช้เอกสารดิจิทัลและระบบอนุมัติออนไลน์เพื่อลดการตัดไม้และลดการใช้กระดาษ",
+          "encouragement": "ยอดเยี่ยมมาก! เลือกคำตอบได้ตรงจุด!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"เราต้องยึดมั่นในหลักการการอยู่ร่วมกันอย่างกลมกลืนระหว่างมนุษย์กับธรรมชาติ\"",
+          "tokens": [
+            "人与自然",
+            "我们必须",
+            "秉持",
+            "和谐共生的原则"
+          ],
+          "correct_sequence": [
+            "我们必须",
+            "秉持",
+            "人与自然",
+            "和谐共生的原则"
+          ],
+          "pinyin": "Wǒmen bìxū bǐngchí rén yǔ zìrán héxiégòngshēng de yuánzé",
+          "meaning_th": "พวกเราต้องยึดมั่นในหลักการที่มนุษย์และธรรมชาติอยู่ร่วมกันอย่างกลมกลืน",
+          "explanation_th": "ประธานและกริยานุเคราะห์ (我们必须) + กริยา (秉持) + ส่วนขยายเจ้าของ (人与自然) + กรรม (和谐共生的原则)",
+          "encouragement": "เรียงประโยคปรัชญาสิ่งแวดล้อมได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '可持续' ตัว '持' (รักษา/ยืนหยัด) มีหมวดนำใด?",
+          "options": [
+            "扌 (หมวดมือ 提手旁)",
+            "足 (หมวดเท้า 足字旁)",
+            "目 (หมวดตา 目字旁)",
+            "口 (หมวดปาก 口字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'持' มีหมวดนำ '扌' (มือ) สื่อถึงการยื่นมือออกไปจับ ยึดถือ และประคับประคองสิ่งสำคัญไว้อย่างมั่นคง",
+          "encouragement": "แม่นยำหมวดนำอักษรจีนเป็นเลิศ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในรอบชิงชนะเลิศโครงการนวัตกรรมสีเขียว ผู้บริหารระดับสูงถามว่า \"เหตุใดการพัฒนาที่ยั่งยืนจึงเป็นกลยุทธ์ชี้ขาดอนาคตของธุรกิจในยุคปัจจุบัน?\" คุณควรนำเสนออย่างไร?",
+        "options": [
+          "推行无纸化与绿色低碳不仅切实实现降本增效，更让企业秉持人与自然和谐共生的原则，赢得社会长期的信任与可持续未来！ (Tuīxíng wúzhǐhuà yǔ lǜsè dītàn bùjǐn qièshí shíxiàn jiàngběnzēngxiào, gèng ràng qǐyè bǐngchí rén yǔ zìrán héxiégòngshēng de yuánzé, yíngdé shèhuì chángqī de xìnrèn yǔ kěchíxù wèilái!)",
+          "因为其他公司都在做，我们只是随便跟风一下。 (Yīnwèi qítā gōngsī dōu zài zuò, wǒmen zhǐshì suíbiàn gēnfēng yíxià.)",
+          "只要今年能省钱，以后环境变成怎么样都无所谓。 (Zhǐyào jīnnián néng shěngqián, yǐhòu huánjìng biànchéng zěnmeyàng dōu wúsuǒwèi.)",
+          "请问你们公司的外卖电话是多少？ (Qǐngwèn nǐmen gōngsī de wàimài diànhuà shì duōshao?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '推行无纸化与绿色低碳不仅切实实现降本增效...赢得社会长期的信任与可持续未来！' ผสานความคุ้มค่าทางเศรษฐกิจเข้ากับวิสัยทัศน์ความรับผิดชอบต่อโลกได้อย่างสมบูรณ์แบบที่สุด",
+        "encouragement": "ยินดีด้วย! คุณพิชิต Boss Challenge ได้รับความชื่นชมและผ่านการประเมินระดับสูงสุด!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t3_u35_master",
+        "badge_name": "ผู้นำนวัตกรรมสีเขียวและเศรษฐกิจคาร์บอนต่ำ 🌿🏆",
+        "message_th": "สุดยอดมาก! คุณได้พิชิตบทเรียนยูนิตที่ 35 สำเร็จอย่างงดงาม เชี่ยวชาญศัพท์เทคโนโลยีสีเขียว ไลฟ์สไตล์คาร์บอนต่ำ และการพัฒนาที่ยั่งยืนระดับ Master!",
+        "xp_reward": 300
+      }
+    }
+  ]
+}

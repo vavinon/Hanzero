@@ -1,0 +1,896 @@
+{
+  "unit_id": "tier3_u31",
+  "tier": 3,
+  "unit_number": 31,
+  "title": {
+    "zh": "中国科技与创新",
+    "th": "นวัตกรรมและเทคโนโลยีจีน",
+    "en": "China Tech & Innovation"
+  },
+  "description": "สำรวจคลื่นนวัตกรรมและอุตสาหกรรมแห่งอนาคตของจีน: ยานยนต์พลังงานใหม่และการขับขี่อัตโนมัติ (新能源与智驾), ปัญญาประดิษฐ์และโมเดลภาษาขนาดใหญ่ (人工智能与大模型), และการยกระดับอุตสาหกรรมชิปและเทคโนโลยีขั้นสูง (产业升级与挑战)",
+  "lessons": [
+    {
+      "lesson_id": "t3_u31_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "新能源与智驾",
+        "th": "ยานยนต์พลังงานใหม่และการขับขี่อัตโนมัติ",
+        "en": "New Energy Vehicles & Autonomous Driving"
+      },
+      "can_do": {
+        "th": "อธิบายรถยนต์ไฟฟ้า ระบบขับขี่อัตโนมัติ พลังการคำนวณ (Compute) และระยะทางวิ่ง โดยใช้โครงสร้าง 随着...的飞速发展，从而...",
+        "en": "Explain EV, smart driving, compute, and range using 随着...的飞速发展，从而..."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องเทคโนโลยีรถยนต์ไฟฟ้าและระบบช่วยขับขี่อัจฉริยะของจีนได้อย่างคล่องแคล่ว!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3101",
+          "hanzi": "新能源",
+          "pinyin": "xīnnéngyuán",
+          "display_pinyin": "xīnnéngyuán",
+          "pinyin_tone": "xin1neng2yuan2",
+          "meaning_th": "พลังงานใหม่ (เช่น พลังงานแสงอาทิตย์ ไฟฟ้า ไฮโดรเจน)",
+          "meaning_en": "new energy / renewable energy",
+          "radical": "斤",
+          "radical_name_th": "หมวดขวาน (斤字旁)",
+          "stroke_count": 26,
+          "mnemonic": "แหล่งต้นกำเนิด (源) ของความสามารถและพลังงานใหม่ (新能源) = พลังงานใหม่",
+          "kid_mnemonic": "ใบพัดกังหันลมสีเขียวหมุนปิ๊งสร้างพลังงานสะอาด = 新能源",
+          "body_gesture": "หมุนสองมือวนเป็นวงกลมเหมือนกังหันลมพลังงานสะอาด"
+        },
+        {
+          "id": "hsk3_3102",
+          "hanzi": "电动车",
+          "pinyin": "diàndòngchē",
+          "display_pinyin": "diàndòngchē",
+          "pinyin_tone": "dian4dong4che1",
+          "meaning_th": "รถยนต์ไฟฟ้า (EV)",
+          "meaning_en": "electric vehicle (EV)",
+          "radical": "日",
+          "radical_name_th": "หมวดดวงอาทิตย์ (日字旁)",
+          "stroke_count": 15,
+          "mnemonic": "ยานพาหนะรถ (车) ที่ขับเคลื่อนด้วยกระแสไฟฟ้า (电动) = รถยนต์ไฟฟ้า",
+          "kid_mnemonic": "รถยนต์คันเท่เสียบปลั๊กชาร์จไฟแทนเติมน้ำมัน = 电动车",
+          "body_gesture": "สองมือทำท่าจับพวงมาลัยรถยนต์แล้วเหยียบคันเร่งเงียบกริบ"
+        },
+        {
+          "id": "hsk3_3103",
+          "hanzi": "自动驾驶",
+          "pinyin": "zìdòng jiàshǐ",
+          "display_pinyin": "zìdòng jiàshǐ",
+          "pinyin_tone": "zi4dong4 jia4shi3",
+          "meaning_th": "การขับขี่อัตโนมัติ (Autonomous Driving)",
+          "meaning_en": "autonomous driving / autopilot",
+          "radical": "自",
+          "radical_name_th": "หมวดตัวเอง (自字旁)",
+          "stroke_count": 30,
+          "mnemonic": "ขับเคลื่อนบังคับยานพาหนะ (驾驶) ได้เองโดยอัตโนมัติ (自动) = ขับขี่อัตโนมัติ",
+          "kid_mnemonic": "พวงมาลัยหมุนเลี้ยวเองได้ดั่งเวทมนตร์ = 自动驾驶",
+          "body_gesture": "ยกสองมือขึ้นเหนือตักทำท่าปล่อยให้พวงมาลัยหมุนเอง"
+        },
+        {
+          "id": "hsk3_3104",
+          "hanzi": "算力",
+          "pinyin": "suànlì",
+          "display_pinyin": "suànlì",
+          "pinyin_tone": "suan4li4",
+          "meaning_th": "พลังการคำนวณของชิปหรือคอมพิวเตอร์ (Compute Power)",
+          "meaning_en": "computing power / computational capacity",
+          "radical": "竹",
+          "radical_name_th": "หมวดไม้ไผ่ (竹字头)",
+          "stroke_count": 16,
+          "mnemonic": "พละกำลัง (力) ในการคำนวณประมวลผล (算) = พลังการประมวลผล",
+          "kid_mnemonic": "ชิปจิ๋วตัวเล็กแต่คิดเลขได้เร็วกว่าจรวด = 算力",
+          "body_gesture": "เอานิ้วชี้แตะขมับแล้วชูกำปั้นแสดงพลังการประมวลผล"
+        },
+        {
+          "id": "hsk3_3105",
+          "hanzi": "续航",
+          "pinyin": "xùháng",
+          "display_pinyin": "xùháng",
+          "pinyin_tone": "xu4hang2",
+          "meaning_th": "ระยะทางวิ่งต่อเนื่อง (ต่อการชาร์จหนึ่งครั้ง)",
+          "meaning_en": "cruising range / battery endurance",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 21,
+          "mnemonic": "ล่องเรือเดินทางต่อไป (航) อย่างต่อเนื่องไม่ขาดสาย (续) = ระยะทางวิ่ง",
+          "kid_mnemonic": "แบตเตอรี่สีเขียววิ่งได้ไกลเป็นพันกิโลเมตร = 续航",
+          "body_gesture": "ยื่นฝ่ามือเหยียดตรงไปข้างหน้าราวกับถนนทอดยาวไกล"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำศัพท์เทคนิค 算力 (suànlì)",
+        "description_th": "ทั้ง 算 (suàn) และ 力 (lì) เป็นเสียง 4 หนักแน่นทั้งคู่ ออกเสียงสั้น ชัดเจน และทรงพลัง",
+        "example": "车载芯片算力 (พลังการคำนวณของชิปประจำรถยนต์)",
+        "fun_metaphor": "เหมือนเสียงเคาะแป้นพิมพ์สับลงสองจังหวะแน่นเปรี๊ยะ!",
+        "reassurance": "คำนี้เป็นคำศัพท์ยอดฮิตในวงการเทคโนโลยีและ AI ของจีนยุคปัจจุบัน"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างความก้าวหน้าทางเทคโนโลยี: 随着...的飞速发展，从而...",
+        "explanation_th": "ใช้ในการนำเสนอรายงานบทวิเคราะห์อุตสาหกรรม หรือถกเถียงแนวโน้มเทคโนโลยีในอนาคต",
+        "patterns": [
+          {
+            "formula": "随着 + [เทคโนโลยี] + 的飞速发展，从而 + [ผลกระทบ]",
+            "zh": "随着电池技术的飞速发展，电动车的续航里程从而大幅突破了一千公里。",
+            "pinyin": "Suízhe diànchí jìshù de fēisù fāzhǎn, diàndòngchē de xùháng lǐchéng cóng’ér dàfú tūpò le yìqiān gōnglǐ.",
+            "th": "ด้วยการพัฒนาอย่างก้าวกระโดดของเทคโนโลยีแบตเตอรี่ จึงส่งผลให้ระยะทางวิ่งของรถ EV ทะลุ 1,000 กิโลเมตร",
+            "en": "With the rapid development of battery tech, EV driving range thus surged past 1,000 kilometers."
+          },
+          {
+            "formula": "在高算力芯片的支持下，[ระบบ] + 可以实现 + [ความสามารถ]",
+            "zh": "在高算力芯片的支持下，城市自动驾驶导航可以实现全程无接管。",
+            "pinyin": "Zài gāo suànlì xīnpjiàn de zhīchí xià, chéngshì zìdòng jiàshǐ dǎoháng kěyǐ shíxiàn quánchéng wú jiēguǎn.",
+            "th": "ภายใต้การสนับสนุนของชิปประมวลผลสูง ระบบนำทางขับขี่อัตโนมัติในเมืองสามารถทำงานได้ตลอดเส้นทางโดยผู้ขับไม่ต้องเข้าควบคุม",
+            "en": "Backed by high-compute chips, urban autonomous navigation can achieve full route zero-takeover."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "李工程师，中国的新能源电动车近几年为什么能发展得这么迅猛？",
+          "pinyin": "Lǐ gōngchéngshī, Zhōngguó de xīnnéngyuán diàndòngchē jìn jǐ nián wèishénme néng fāzhǎn de zhème xùnměng?",
+          "th": "วิศวกรหลี่ครับ ทำไมรถยนต์ไฟฟ้าพลังงานใหม่ของจีนในช่วงไม่กี่ปีมานี้ถึงเติบโตได้รวดเร็วขนาดนี้ครับ?",
+          "en": "Engineer Li, why have Chinese new energy vehicles developed so rapidly in recent years?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "วิศวกรหลี่ 👨‍🔬",
+          "zh": "主要是因为完整的产业链优势。随着电池和电控技术的突破，电动车续航越来越长，成本也大幅下降。",
+          "pinyin": "Zhǔyào shì yīnwèi wánzhěng de chǎnyèliàn yōushì. Suízhe diànchí hé diànkòng jìshù de tūpò, diàndòngchē xùháng yuè lái yuè cháng, chéngběn yě dàfú xiàjiàng.",
+          "th": "หลักๆ เป็นเพราะความได้เปรียบของห่วงโซ่อุตสาหกรรมที่ครบวงจรครับ เมื่อเทคโนโลยีแบตเตอรี่และระบบควบคุมไฟฟ้าก้าวล้ำ รถ EV จึงวิ่งได้ไกลขึ้นเรื่อยๆ และต้นทุนลดลงอย่างมาก",
+          "en": "Mainly due to complete supply chain advantages. With battery tech breakthroughs, EV range gets longer and costs drop."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "而且智能座舱和高算力自动驾驶也成了新的核心卖点！",
+          "pinyin": "Érqiě zhìnéng zuòcāng hé gāo suànlì zìdòng jiàshǐ yě chéng le xīn de héxīn màidiǎn!",
+          "th": "แถมห้องโดยสารอัจฉริยะและระบบขับขี่อัตโนมัติชิปประมวลผลสูงก็กลายมาเป็นจุดขายหลักตัวใหม่ด้วยครับ!",
+          "en": "Moreover, smart cockpits and high-compute autonomous driving have become the new key selling points!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "วิศวกรหลี่ 👨‍🔬",
+          "zh": "没错！中国车企正把电动车打造成真正的“带轮子的智能手机”。",
+          "pinyin": "Méi cuò! Zhōngguó chēqǐ zhèng bǎ diàndòngchē dǎzào chéng zhēnzhèng de “dài lúnzi de zhìnéng shǒujī”.",
+          "th": "ถูกต้องเลยครับ! บรรดาค่ายรถจีนกำลังเปลี่ยนรถยนต์ไฟฟ้าให้กลายเป็น “สมาร์ตโฟนติดล้อ” อย่างแท้จริง",
+          "en": "Exactly! Chinese automakers are turning EVs into genuine \"smartphones on wheels\"."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '续航' (xùháng) ของรถยนต์ไฟฟ้าหมายถึงข้อใด?",
+          "options": [
+            "ระยะทางที่สามารถวิ่งได้ต่อเนื่องต่อการชาร์จหนึ่งครั้ง",
+            "ความเร็วสูงสุดของเครื่องยนต์",
+            "ความดังของลำโพงในรถ",
+            "ขนาดของล้อรถยนต์"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'续航' (续航里程) คือ Cruising Range หรือระยะทางวิ่งต่อเนื่องของแบตเตอรี่",
+          "encouragement": "จำคำศัพท์เทคโนโลยียานยนต์ไฟฟ้าได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '算力' (suànlì) ในอุตสาหกรรมชิปและ AI หมายถึงอะไร?",
+          "options": [
+            "พลังการประมวลผลคำนวณ (Computing Power)",
+            "กำลังแรงม้าของเครื่องยนต์",
+            "ความดันลมยาง",
+            "ราคาน้ำมันต่อลิตร"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'算力' คือ พลังการคำนวณหรือ Computing Power ซึ่งเป็นหัวใจของชิปอัจฉริยะ",
+          "encouragement": "ยอดเยี่ยมมาก! ศัพท์ฮาร์ดแวร์ไอทีเป๊ะมาก!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ด้วยการพัฒนาอย่างรวดเร็วของเทคโนโลยี ระยะทางวิ่งจึงเพิ่มขึ้นอย่างมาก\"",
+          "tokens": [
+            "续航里程大幅增加",
+            "从而",
+            "随着技术的飞速发展"
+          ],
+          "correct_sequence": [
+            "随着技术的飞速发展",
+            "从而",
+            "续航里程大幅增加"
+          ],
+          "pinyin": "Suízhe jìshù de fēisù fāzhǎn, cóng’ér xùháng lǐchéng dàfú zēngjiā",
+          "meaning_th": "ด้วยการพัฒนาอย่างรวดเร็วของเทคโนโลยี จึงส่งผลให้ระยะทางวิ่งเพิ่มขึ้นอย่างมาก",
+          "explanation_th": "เหตุปัจจัย (随着技术的飞速发展) + คำเชื่อม (从而) + ผลลัพธ์ (续航里程大幅增加)",
+          "encouragement": "ประโยคภาษาเทคโนโลยีลื่นไหลและคมคายมาก!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '新能源' ตัว '源' (ต้นน้ำ/แหล่งกำเนิด) มีหมวดนำใด?",
+          "options": [
+            "氵 (หมวดน้ำ 三点水)",
+            "火 (หมวดไฟ 火字旁)",
+            "木 (หมวดไม้ 木字旁)",
+            "日 (หมวดดวงอาทิตย์ 日字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'源' มีหมวดนำ '氵' (น้ำ) หมายถึง ต้นน้ำหรือแหล่งกำเนิด",
+          "encouragement": "เข้าใจรากศัพท์อักษรจีนอย่างถ่องแท้!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเข้าร่วมงานแสดงยานยนต์นานาชาติปักกิ่ง (Beijing Auto Show) นักข่าวถามว่าทำไมผู้บริโภคเอเชียตะวันออกเฉียงใต้จึงสนใจรถยนต์ไฟฟ้าจากจีน คุณควรตอบอย่างไร?",
+        "options": [
+          "随着电池技术与算力的飞速发展，中国电动车不仅续航优异，智能驾驶体验也极具竞争力！ (Suízhe diànchí jìshù yǔ suànlì de fēisù fāzhǎn, Zhōngguó diàndòngchē bùjǐn xùháng yōuyì, zhìnéng jiàshǐ tǐyàn yě jí jù jìngzhēnglì!)",
+          "因为便宜，质量怎么样我不知道。 (Yīnwèi piányi, zhìliàng zěnmeyàng wǒ bù zhīdào.)",
+          "我更喜欢骑自行车，不爱开车。 (Wǒ gèng xǐhuan qí zìxíngchē, bú ài kāichē.)",
+          "今天天气太热了，我想回酒店。 (Jīntiān tiānqì tài rè le, wǒ xiǎng huí jiǔdiàn.)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '随着电池技术与算力的飞速发展，中国电动车不仅续航优异，智能驾驶体验也极具竞争力！' ชี้ให้เห็นทั้งจุดเด่นด้านฮาร์ดแวร์แบตเตอรี่ และซอฟต์แวร์ช่วยขับขี่อัจฉริยะอย่างรอบด้าน",
+        "encouragement": "วิเคราะห์แนวโน้มอุตสาหกรรม EV ได้อย่างเฉียบขาดระดับผู้เชี่ยวชาญ!"
+      }
+    },
+    {
+      "lesson_id": "t3_u31_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "人工智能与大模型",
+        "th": "ปัญญาประดิษฐ์และโมเดลภาษาขนาดใหญ่",
+        "en": "AI & Large Language Models"
+      },
+      "can_do": {
+        "th": "สนทนาเรื่องอัลกอริทึม การเทรนโมเดล การประยุกต์ใช้ในอุตสาหกรรมจริง และใช้สำนวน 日新月异",
+        "en": "Discuss algorithms, model training, commercial applications, and use idiom 日新月异"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องเทคโนโลยี AI และ Generative Model ภาษาจีนได้อย่างเป็นธรรมชาติ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3106",
+          "hanzi": "人工智能",
+          "pinyin": "réngōng zhìnéng",
+          "display_pinyin": "réngōng zhìnéng",
+          "pinyin_tone": "ren2gong1 zhi4neng2",
+          "meaning_th": "ปัญญาประดิษฐ์ (AI)",
+          "meaning_en": "artificial intelligence (AI)",
+          "radical": "亻",
+          "radical_name_th": "หมวดคน (单人旁)",
+          "stroke_count": 24,
+          "mnemonic": "ฝีมือมนุษย์สร้างสรรค์ (人工) ให้เกิดสติปัญญาและความสามารถ (智能) = ปัญญาประดิษฐ์",
+          "kid_mnemonic": "หุ่นยนต์ตัวน้อยที่มีสมองกลคิดเลขและพูดคุยได้ = 人工智能",
+          "body_gesture": "ยกสองมือแตะขมับแล้วชูนิ้วขึ้นเหมือนสายสัญญาณสมองกล"
+        },
+        {
+          "id": "hsk3_3107",
+          "hanzi": "大模型",
+          "pinyin": "dàmóxíng",
+          "display_pinyin": "dàmóxíng",
+          "pinyin_tone": "da4mo2xing2",
+          "meaning_th": "โมเดลขนาดใหญ่ (Large Language Model / LLM)",
+          "meaning_en": "large language model (LLM)",
+          "radical": "大",
+          "radical_name_th": "หมวดใหญ่ (大字旁)",
+          "stroke_count": 24,
+          "mnemonic": "โมเดลแม่แบบขนาดยักษ์ (大模型) ที่บรรจุความรู้มหาศาล = โมเดลขนาดใหญ่",
+          "kid_mnemonic": "ลูกบาศก์เรขาคณิตยักษ์เรืองแสงที่มีความรู้รอบโลก = 大模型",
+          "body_gesture": "กางสองแขนโอบลูกบอลยักษ์ในอากาศ"
+        },
+        {
+          "id": "hsk3_3108",
+          "hanzi": "算法",
+          "pinyin": "suànfǎ",
+          "display_pinyin": "suànfǎ",
+          "pinyin_tone": "suan4fa3",
+          "meaning_th": "อัลกอริทึม (ขั้นตอนวิธี)",
+          "meaning_en": "algorithm",
+          "radical": "竹",
+          "radical_name_th": "หมวดไม้ไผ่ (竹字头)",
+          "stroke_count": 22,
+          "mnemonic": "วิธีการและกฎเกณฑ์ (法) ในการคำนวณแก้ปัญหา (算) = อัลกอริทึม",
+          "kid_mnemonic": "สูตรลับวิเศษที่บอกคอมพิวเตอร์ว่าต้องเดินไปทางไหน = 算法",
+          "body_gesture": "ทำนิ้วชี้สองข้างชี้สลับซ้ายขวาเหมือนผังงานอัลกอริทึม"
+        },
+        {
+          "id": "hsk3_3109",
+          "hanzi": "落地应用",
+          "pinyin": "luòdì yìngyòng",
+          "display_pinyin": "luòdì yìngyòng",
+          "pinyin_tone": "luo4di4 ying4yong4",
+          "meaning_th": "การนำไปประยุกต์ใช้งานได้จริง (Commercial Implementation)",
+          "meaning_en": "practical implementation / commercial landing",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 29,
+          "mnemonic": "ร่อนลงสู่พื้นดินจริง (落地) เพื่อนำไปใช้งานสร้างคุณค่า (应用) = ใช้งานได้จริง",
+          "kid_mnemonic": "ยานอวกาศร่อนลงจอดบนพื้นโลกแล้วเปิดประตูทำงานทันที = 落地应用",
+          "body_gesture": "สองมือคว่ำลงกดลงสู่พื้นแสดงการแตะพื้นดินจริง"
+        },
+        {
+          "id": "hsk3_3110",
+          "hanzi": "日新月异",
+          "pinyin": "rìxīnyuèyì",
+          "display_pinyin": "rìxīnyuèyì",
+          "pinyin_tone": "ri4xin1yue4yi4",
+          "meaning_th": "เปลี่ยนแปลงรุดหน้าเร็ววันต่อวัน (เปลี่ยนไปเร็วราวพลิกฝ่ามือ)",
+          "meaning_en": "change rapidly day by day / rapid progress",
+          "radical": "日",
+          "radical_name_th": "หมวดดวงอาทิตย์ (日字旁)",
+          "stroke_count": 31,
+          "mnemonic": "มีสิ่งใหม่ทุกๆ วัน (日新) มีความแตกต่างก้าวหน้าทุกๆ เดือน (月异) = รุดหน้าวันต่อวัน",
+          "kid_mnemonic": "พลิกปฏิทินทีไร โลกก็มีเทคโนโลยีใหม่ๆ โผล่มาทุกวัน = 日新月异",
+          "body_gesture": "พลิกฝ่ามือไปมาอย่างรวดเร็วแสดงความก้าวล้ำรวดเร็ว"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "สำนวน 日新月异 (rìxīnyuèyì) จังหวะเสียง 4-1-4-4",
+        "description_th": "พยางค์: rì (4), xīn (1), yuè (4), yì (4) — มีเสียง 4 ถึงสามพยางค์ ให้ลงน้ำหนักกระชับชัดเจน สลับกับ xīn ที่สูงยาว",
+        "example": "科技的发展日新月异 (เทคโนโลยีพัฒนาก้าวหน้าไปอย่างรวดเร็ววันต่อวัน)",
+        "fun_metaphor": "เหมือนจรวดพุ่งทะยานสู่ห้วงอวกาศด้วยความเร็วเหนือแสง!",
+        "reassurance": "สำนวนนี้เป็นสำนวนยอดนิยมที่สุดเมื่อกล่าวถึงวิทยาศาสตร์และเทคโนโลยี"
+      },
+      "grammar_bite": {
+        "title": "การประเมินเทคโนโลยี: 不仅在于...，更在于能否实现落地应用",
+        "explanation_th": "โครงสร้างที่ใช้แสดงมุมมองเชิงธุรกิจว่าเทคโนโลยีจะยอดเยี่ยมไม่ใช่แค่อยู่ในห้องทดลอง แต่ต้องนำมาใช้ได้จริง",
+        "patterns": [
+          {
+            "formula": "人工智能的价值，不仅在于技术本身，更在于能否实现 + 产业落地",
+            "zh": "人工智能大模型的价值，更在于能否在各行各业实现真正的落地应用。",
+            "pinyin": "Réngōng zhìnéng dàmóxíng de jiàzhí, gèng zàiyú néngfǒu zài gèháng-gèyè shíxiàn zhēnzhèng de luòdì yìngyòng.",
+            "th": "คุณค่าของโมเดล AI ขนาดใหญ่ อยู่ที่ว่ามันสามารถนำไปประยุกต์ใช้งานได้จริงในทุกสาขาวิชาชีพหรือไม่",
+            "en": "The value of AI large models lies more in whether they can achieve practical implementation in various industries."
+          },
+          {
+            "formula": "随着算法的迭代，[วงการใด] + 呈现出日新月异的变化",
+            "zh": "随着算法的快速迭代，整个科技产业呈现出日新月异的变化。",
+            "pinyin": "Suízhe suànfǎ de kuàisù diédài, zhěngtǐ kējì chǎnyè chéngxiàn chū rìxīnyuèyì de biànhuà.",
+            "th": "ด้วยการอัปเกรดอัลกอริทึมอย่างรวดเร็ว อุตสาหกรรมเทคโนโลยีทั้งหมดจึงปรากฏการเปลี่ยนแปลงที่รุดหน้าวันต่อวัน",
+            "en": "With rapid algorithm iterations, the entire tech industry displays rapid progress day by day."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "王总，最近国内各家大厂发布的大语言模型真是让人眼花缭乱！",
+          "pinyin": "Wáng zǒng, zuìjìn guónèi gè jiā dàchǎng fābù de dàyǔyán móxíng zhēn shì ràng rén yǎnhuāliáoluàn!",
+          "th": "บอสหวังครับ โมเดลภาษาขนาดใหญ่ที่บรรดาบิ๊กเทคในประเทศจีนทยอยเปิดตัวช่วงนี้นี่ละลานตาจริงๆ ครับ!",
+          "en": "President Wang, large language models released by domestic tech giants lately are truly dazzling!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสหวัง (ซีอีโอบริษัท AI) 👨‍💼",
+          "zh": "现在的技术更新确实是日新月异！但比拼核心算法的同时，我们更看重垂直领域的落地应用。",
+          "pinyin": "Xiànzài de jìshù gēngxīn quèshí shì rìxīnyuèyì! Dàn bǐpìn héxīn suànfǎ de tóngshí, wǒmen gèng kànzhòng chuízhí lǐngyù de luòdì yìngyòng.",
+          "th": "การอัปเดตเทคโนโลยีในปัจจุบันรวดเร็ววันต่อวันจริงๆ ครับ! แต่ขณะที่ประชันอัลกอริทึม เราให้ความสำคัญกับการนำไปใช้ได้จริงในอุตสาหกรรมเฉพาะทางมากกว่า",
+          "en": "Tech updates now are truly rapid day by day! But while competing on algorithms, we value practical implementation in vertical fields."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "比如智能客服、跨境电商文案生成和多语种翻译？",
+          "pinyin": "Bǐrú zhìnéng kèfù, kuàjìng diànshāng wén’àn shēngchéng hé duō yǔzhǒng fānyì?",
+          "th": "อย่างเช่น แชตบอตบริการลูกค้าอัจฉริยะ, การสร้างก๊อปปี้อีคอมเมิร์ซข้ามพรมแดน, และการแปลหลายภาษาใช่ไหมครับ?",
+          "en": "Such as smart customer service, cross-border e-commerce copywriting, and multilingual translation?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสหวัง (ซีอีโอบริษัท AI) 👨‍💼",
+          "zh": "完全正确！能帮企业降本增效的AI，才是好AI。",
+          "pinyin": "Wánquán zhèngquè! Néng bāng qǐyè jiàngběn zēngxiào de AI, cái shì hǎo AI.",
+          "th": "ถูกต้องอย่างที่สุดครับ! AI ที่ช่วยให้องค์กรลดต้นทุนและเพิ่มประสิทธิภาพได้จริง นั่นแหละคือ AI ที่ยอดเยี่ยม",
+          "en": "Exactly! AI that genuinely helps enterprises cut costs and boost efficiency is good AI."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "สำนวนจีน '日新月异' (rìxīnyuèyì) นิยมใช้อธิบายสิ่งใดมากที่สุด?",
+          "options": [
+            "การพัฒนาที่รุดหน้าอย่างรวดเร็วของเทคโนโลยีและวิทยาการ",
+            "สภาพอากาศที่หนาวเย็นจัด",
+            "รสชาติของอาหารโบราณ",
+            "การเดินทางที่ล่าช้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'日新月异' สื่อถึง การเปลี่ยนแปลงก้าวหน้าไปอย่างรวดเร็วมาก มีสิ่งใหม่ทุกวัน ก้าวหน้าทุกเดือน",
+          "encouragement": "จำสำนวนบรรยายความก้าวหน้าของโลกอนาคตได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '落地应用' (luòdì yìngyòng) ในวงการเทคโนโลยีจีนหมายถึงข้อใด?",
+          "options": [
+            "การนำเทคโนโลยีมาประยุกต์ใช้งานในชีวิตและธุรกิจจริง",
+            "การตกกระแทกพื้นของโทรศัพท์มือถือ",
+            "การซื้อที่ดินเพื่อสร้างบ้าน",
+            "การลงจอดของเครื่องบิน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'落地应用' คือ การนำเทคโนโลยีหรือโมเดลมาปรับใช้แก้ปัญหาในชีวิตจริงหรือเชิงพาณิชย์",
+          "encouragement": "ยอดเยี่ยมมาก! ศัพท์อินไซด์วงการเทคเป๊ะมาก!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การพัฒนาของเทคโนโลยีในปัจจุบันรวดเร็ววันต่อวันอย่างแท้จริง\"",
+          "tokens": [
+            "日新月异",
+            "现在的技术更新",
+            "确实是"
+          ],
+          "correct_sequence": [
+            "现在的技术更新",
+            "确实是",
+            "日新月异"
+          ],
+          "pinyin": "Xiànzài de jìshù gēngxīn quèshí shì rìxīnyuèyì",
+          "meaning_th": "การอัปเดตเทคโนโลยีในปัจจุบันรวดเร็ววันต่อวันอย่างแท้จริง",
+          "explanation_th": "ประธาน (现在的技术更新) + กริยาเน้นย้ำ (确实是) + คุณศัพท์สำนวน (日新月异)",
+          "encouragement": "ต่อประโยคได้อย่างกระชับและตรงจุด!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '算法' ตัว '算' (คำนวณ) มีหมวดนำใด?",
+          "options": [
+            "竹 (หมวดไม้ไผ่ 竹字头)",
+            "木 (หมวดไม้ 木字旁)",
+            "日 (หมวดดวงอาทิตย์ 日字旁)",
+            "口 (หมวดปาก 口字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'算' มีหมวดนำ '竹' (ไม้ไผ่) สื่อถึงลูกคิดหรือก้านไม้ไผ่ที่ใช้คำนวณในสมัยโบราณ",
+          "encouragement": "เกร็ดประวัติศาสตร์อักษรจีนยอดเยี่ยมมาก!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในเวทีเสวนา Global Tech Summit ผู้ดำเนินรายการถามว่าในมุมมองของคุณ ปัจจัยชี้ขาดความสำเร็จของ Generative AI ในอนาคตคืออะไร คุณควรตอบอย่างไร?",
+        "options": [
+          "科技日新月异，但大模型的真正价值不仅在于参数规模，更在于能否深入产业实现落地应用，为社会降本增效！ (Kējì rìxīnyuèyì, dàn dàmóxíng de zhēnzhèng jiàzhí bùjǐn zàiyú cānshù guīmó, gèng zàiyú néngfǒu shēnrù chǎnyè shíxiàn luòdì yìngyòng, wèi shèhuì jiàngběn zēngxiào!)",
+          "AI 就是玩具，没什么好讨论的。 (AI jiù shì wánjù, méi shénme hǎo tǎolùn de.)",
+          "我不想回答这个问题，下一位吧。 (Wǒ bù xiǎng huídá zhè ge wèntí, xià yí wèi ba.)",
+          "请问会场有免费咖啡吗？ (Qǐngwèn huìchǎng yǒu miǎnfèi kāfēi ma?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '科技日新月异，但大模型的真正价值不仅在于参数规模，更在于能否深入产业实现落地应用，为社会降本增效！' รวมทั้งสำนวน '日新月异' และวิสัยทัศน์ '落地应用' ตกผลึกทางปัญญาอย่างงดงาม",
+        "encouragement": "คว้าเสียงปรบมือกึกก้องบนเวทีสัมมนาเทคโนโลยีระดับโลก!"
+      }
+    },
+    {
+      "lesson_id": "t3_u31_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "产业升级与挑战",
+        "th": "การยกระดับอุตสาหกรรมและความท้าทาย",
+        "en": "Industrial Upgrading & Challenges"
+      },
+      "can_do": {
+        "th": "อธิบายการวิจัยและพัฒนาชิป การก้าวข้ามคอขวดเทคโนโลยี โดยใช้โครงสร้าง 不仅关乎...更直接影响到...",
+        "en": "Explain chip R&D, overcoming bottlenecks using 不仅关乎...更直接影响到..."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องการยกระดับห่วงโซ่อุตสาหกรรม การพัฒนาชิปเซมิคอนดักเตอร์ และการก้าวข้ามอุปสรรค!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3111",
+          "hanzi": "产业升级",
+          "pinyin": "chǎnyè shēngjí",
+          "display_pinyin": "chǎnyè shēngjí",
+          "pinyin_tone": "chan3ye4 sheng1ji2",
+          "meaning_th": "การยกระดับโครงสร้างอุตสาหกรรม (สู่เทคโนโลยีขั้นสูง)",
+          "meaning_en": "industrial upgrading",
+          "radical": "广",
+          "radical_name_th": "หมวดอาคาร (广字旁)",
+          "stroke_count": 22,
+          "mnemonic": "อุตสาหกรรมภาคการผลิต (产业) เลื่อนขั้นสู่ระดับที่สูงขึ้น (升级) = การยกระดับอุตสาหกรรม",
+          "kid_mnemonic": "โรงงานแปลงร่างเป็นห้องแล็บไฮเทคมีหุ่นยนต์ทำงาน = 产业升级",
+          "body_gesture": "ยกสองมือขึ้นเป็นขั้นบันไดทะยานสูงขึ้น"
+        },
+        {
+          "id": "hsk3_3112",
+          "hanzi": "芯片",
+          "pinyin": "xīnpiàn",
+          "display_pinyin": "xīnpiàn",
+          "pinyin_tone": "xin1pian4",
+          "meaning_th": "ชิปประมวลผล / เซมิคอนดักเตอร์",
+          "meaning_en": "microchip / semiconductor",
+          "radical": "片",
+          "radical_name_th": "หมวดชิ้น/แผ่น (片字旁)",
+          "stroke_count": 12,
+          "mnemonic": "หัวใจแก่นแท้ (芯) ในแผ่นซิลิคอนจิ๋วบาง (片) = ไมโครชิป",
+          "kid_mnemonic": "ชิ้นสี่เหลี่ยมสีดำเล็กจิ๋วมีขาทองคำร้อยขา = 芯片",
+          "body_gesture": "ใช้นิ้วชี้กับนิ้วโป้งคีบชิปจิ๋วเสมือนกำลังส่องดู"
+        },
+        {
+          "id": "hsk3_3113",
+          "hanzi": "自主研发",
+          "pinyin": "zìzhǔ yánfā",
+          "display_pinyin": "zìzhǔ yánfā",
+          "pinyin_tone": "zi4zhu3 yan2fa1",
+          "meaning_th": "วิจัยและพัฒนาด้วยตนเอง (ไม่พึ่งพาต่างชาติ)",
+          "meaning_en": "independent R&D / self-reliant innovation",
+          "radical": "自",
+          "radical_name_th": "หมวดตัวเอง (自字旁)",
+          "stroke_count": 24,
+          "mnemonic": "ตนเองเป็นนายของตน (自主) ค้นคว้าพัฒนาเทคโนโลยี (研发) = วิจัยพัฒนาด้วยตนเอง",
+          "kid_mnemonic": "นักวิทยาศาสตร์ออกแบบและประดิษฐ์หุ่นยนต์ขึ้นเองตั้งแต่ศูนย์ = 自主研发",
+          "body_gesture": "ชูกำปั้นขวาขึ้นข้างหน้าด้วยความภูมิใจในผลงานตนเอง"
+        },
+        {
+          "id": "hsk3_3114",
+          "hanzi": "瓶颈",
+          "pinyin": "píngjǐng",
+          "display_pinyin": "píngjǐng",
+          "pinyin_tone": "ping2jing3",
+          "meaning_th": "คอขวด / อุปสรรคที่เป็นจุดติดขัด",
+          "meaning_en": "bottleneck",
+          "radical": "瓦",
+          "radical_name_th": "หมวดกระเบื้อง (瓦字旁)",
+          "stroke_count": 22,
+          "mnemonic": "คอขวดแก้วที่แคบ (瓶颈) ทำให้สิ่งของไหลผ่านยาก = คอขวดอุปสรรค",
+          "kid_mnemonic": "ทางเดินแคบๆ ที่ทุกคนต้องค่อยๆ ต่อคิวเบียดกันผ่าน = 瓶颈",
+          "body_gesture": "ทำมือสองข้างบีบเข้าหากันแสดงคอขวดที่แคบ"
+        },
+        {
+          "id": "hsk3_3115",
+          "hanzi": "突破",
+          "pinyin": "tūpò",
+          "display_pinyin": "tūpò",
+          "pinyin_tone": "tu1po4",
+          "meaning_th": "การก้าวข้ามทะลุทะลวง / การค้นพบครั้งยิ่งใหญ่ (Breakthrough)",
+          "meaning_en": "breakthrough / to break through",
+          "radical": "穴",
+          "radical_name_th": "หมวดถ้ำ (穴宝盖)",
+          "stroke_count": 18,
+          "mnemonic": "พุ่งออกจากถ้ำ (突) ทะลวงกำแพงแตกออก (破) = ก้าวข้ามทะลุทะลวง",
+          "kid_mnemonic": "จรวดพุ่งทะลุเพดานทะยานขึ้นสู่ท้องฟ้าสีคราม = 突破",
+          "body_gesture": "พุ่งกำปั้นทะลุไปข้างหน้าแสดงการเบรกทรู"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 突破 (tūpò)",
+        "description_th": "คำว่า 突 (tū) เป็นเสียง 1 สูงยาว และ 破 (pò) เป็นเสียง 4 หนักแน่นระเบิดออกอย่างฉับพลัน",
+        "example": "取得重大技术突破 (บรรลุการก้าวข้ามเทคโนโลยีครั้งสำคัญ)",
+        "fun_metaphor": "เหมือนเสียงพุ่งตัวชู่ววว แล้วระเบิดตู้มผ่านกำแพงศิลา!",
+        "reassurance": "ออกเสียงคำว่า pò ให้มีพลัง จะถ่ายทอดความรู้สึกแห่งการพิชิตอุปสรรคได้อย่างลึกซึ้ง"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างความสำคัญเชิงยุทธศาสตร์: 不仅关乎...更直接影响到...",
+        "explanation_th": "ใช้ในการวิเคราะห์ประเด็นเศรษฐกิจมหภาคและความมั่นคงทางเทคโนโลยี",
+        "patterns": [
+          {
+            "formula": "芯片的自主研发，不仅关乎 + [ระดับธุรกิจ], 更直接影响到 + [ระดับชาติ]",
+            "zh": "核心芯片的自主研发，不仅关乎企业的生死存亡，更直接影响到国家的产业安全。",
+            "pinyin": "Héxīn xīnpjiàn de zìzhǔ yánfā, bùjǐn guānhū qǐyè de shēngsǐ-cúnwáng, gèng zhíjiē yǐngxiǎng dào guójiā de chǎnyè ānquán.",
+            "th": "การวิจัยและพัฒนาชิปหลักด้วยตนเอง ไม่เพียงเกี่ยวข้องกับความอยู่รอดขององค์กร แต่ยังส่งผลกระทบโดยตรงต่อความมั่นคงทางอุตสาหกรรมของชาติ",
+            "en": "Independent R&D of core chips concerns not only enterprise survival, but directly affects national industrial security."
+          },
+          {
+            "formula": "为了打破 [อุปสรรค], 我们必须实现 [เป้าหมาย]",
+            "zh": "为了打破技术瓶颈，科研团队夜以继日地攻关，终于实现了关键突破。",
+            "pinyin": "Wèile dǎpò jìshù píngjǐng, kēyán tuánduì yèyǐjìrì de gōngguān, zhōngyú shíxiàn le guānjiàn tūpò.",
+            "th": "เพื่อทลายคอขวดทางเทคโนโลยี ทีมวิจัยได้ทำงานทั้งวันทั้งคืนจนกระทั่งบรรลุการก้าวข้ามครั้งสำคัญในที่สุด",
+            "en": "To break technical bottlenecks, research teams worked round the clock, finally achieving a crucial breakthrough."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "刘教授，面对全球芯片供应链的不确定性，中国企业是如何应对技术瓶颈的？",
+          "pinyin": "Liú jiàoshòu, miànduì quánqiú xīnpjiàn gōngyìngliàn de bù quèdìngxìng, Zhōngguó qǐyè shì rúhé yìngduì jìshù píngjǐng de?",
+          "th": "ศาสตราจารย์หลิวครับ เมื่อเผชิญกับความไม่แน่นอนของห่วงโซ่ชิปทั่วโลก บริษัทจีนรับมือกับคอขวดทางเทคโนโลยีอย่างไรครับ?",
+          "en": "Professor Liu, facing global chip supply chain uncertainties, how do Chinese firms tackle tech bottlenecks?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ศาสตราจารย์หลิว (ผู้เชี่ยวชาญเซมิคอนดักเตอร์) 👨‍🏫",
+          "zh": "唯一的出路就是坚持自主研发，加快全产业链升级。这不是一日之功，但我们已经看到了曙光。",
+          "pinyin": "Wéiyī de chūlù jiù shì jiānchí zìzhǔ yánfā, jiākuài quán chǎnyèliàn shēngjí. Zhè bú shì yírì zhī gōng, dàn wǒmen yǐjīng kàndào le shǔguāng.",
+          "th": "ทางรอดเดียวคือการยืนหยัดวิจัยพัฒนาด้วยตนเอง และเร่งยกระดับห่วงโซ่อุตสาหกรรมทั้งหมด นี่ไม่ใช่งานวันเดียวเสร็จ แต่เราเริ่มเห็นแสงสว่างที่ปลายอุโมงค์แล้วครับ",
+          "en": "The only way out is persisting in self-reliant R&D and accelerating industrial upgrading. Not built in a day, but we see the dawn."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧑‍💼",
+          "zh": "高端制造不仅关乎产品竞争力，更直接影响到长远的经济韧性！",
+          "pinyin": "Gāoduān zhìzào bùjǐn guānhū chǎnpǐn jìngzhēnglì, gèng zhíjiē yǐngxiǎng dào chángyuǎn de jīngjì rènxìng!",
+          "th": "การผลิตขั้นสูงไม่เพียงเกี่ยวข้องกับความสามารถในการแข่งขันของผลิตภัณฑ์ แต่ยังส่งผลโดยตรงต่อความยืดหยุ่นทางเศรษฐกิจระยะยาวครับ!",
+          "en": "High-end manufacturing concerns not just product competitiveness, but directly affects long-term economic resilience!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ศาสตราจารย์หลิว 👨‍🏫",
+          "zh": "说得很透彻！只要方向正确，脚踏实地，任何瓶颈终将被突破！",
+          "pinyin": "Shuō de hěn tòuchè! Zhǐyào fāngxiàng zhèngquè, jiǎotàshídì, rènhé píngjǐng zhōng jiāng bèi tūpò!",
+          "th": "เข้าใจได้อย่างทะลุปรุโปร่งมากครับ! ขอเพียงทิศทางถูกต้อง ทำงานจริงจังรอบคอบ ไม่ว่าคอขวดใดก็จะต้องถูกก้าวข้ามได้อย่างแน่นอนในที่สุด!",
+          "en": "Very thoroughly spoken! As long as direction is right and grounded, any bottleneck will eventually be broken through!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '瓶颈' (píngjǐng) ในการพัฒนาธุรกิจและเทคโนโลยีหมายถึงอะไร?",
+          "options": [
+            "จุดติดขัดหรือคอขวดที่ขัดขวางการเติบโต",
+            "ขวดน้ำพลาสติก",
+            "คอเสื้อเชิ้ต",
+            "สะพานข้ามแม่น้ำ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'瓶颈' (คอขวด) หมายถึง อุปสรรค ปัญหา หรือจุดติดขัดที่ทำให้กระบวนการไม่สามารถก้าวต่อไปได้",
+          "encouragement": "จำคำอุปมาอุปไมยทางธุรกิจได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '自主研发' (zìzhǔ yánfā) หมายถึงข้อใด?",
+          "options": [
+            "การค้นคว้าวิจัยและพัฒนาเทคโนโลยีด้วยตนเอง",
+            "การซื้อลิขสิทธิ์จากต่างประเทศ",
+            "การลอกเลียนแบบผลงานผู้อื่น",
+            "การจ้างผลิตแบบ OEM"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'自主研发' คือ การวิจัยและพัฒนาด้วยตนเองโดยพึ่งพาความรู้และขีดความสามารถภายใน",
+          "encouragement": "ยอดเยี่ยมมาก! ศัพท์ยุทธศาสตร์เทคโนโลยีแม่นเป๊ะ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ไม่เพียงเกี่ยวข้องกับความอยู่รอดขององค์กร แต่ยังส่งผลกระทบต่อความมั่นคงของอุตสาหกรรม\"",
+          "tokens": [
+            "更影响产业安全",
+            "不仅关乎企业生死",
+            "核心技术"
+          ],
+          "correct_sequence": [
+            "核心技术",
+            "不仅关乎企业生死",
+            "更影响产业安全"
+          ],
+          "pinyin": "Héxīn jìshù bùjǐn guānhū qǐyè shēngsǐ, gèng yǐngxiǎng chǎnyè ānquán",
+          "meaning_th": "เทคโนโลยีหลักไม่เพียงเกี่ยวข้องกับความอยู่รอดขององค์กร แต่ยังส่งผลกระทบต่อความมั่นคงของอุตสาหกรรม",
+          "explanation_th": "ประธาน (核心技术) + โครงสร้างคู่เชื่อม (不仅关乎...更影响...)",
+          "encouragement": "ต่อประโยควิเคราะห์ยุทธศาสตร์ระดับชาติได้อย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '芯片' ตัว '片' (แผ่น/ชิ้น) เป็นหมวดนำในตัวเอง สื่อถึงอะไร?",
+          "options": [
+            "แผ่นไม้หรือวัตถุชิ้นบางๆ",
+            "หยดน้ำ",
+            "ก้อนหิน",
+            "สายฟ้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'片' คือ แผ่นไม้ผ่าซีกหรือของชิ้นบางๆ จึงนำมาใช้เรียกแผ่นไมโครชิปซิลิคอน",
+          "encouragement": "เข้าใจรากศัพท์อักษรจีนอย่างถ่องแท้!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณได้รับเชิญให้เขียนบทความสั้นลงนิตยสารธุรกิจเพื่อสรุปหัวใจสำคัญของการยกระดับอุตสาหกรรมเทคโนโลยีขั้นสูงของเอเชีย ควรเขียนประโยคสรุปอย่างไร?",
+        "options": [
+          "产业升级不仅关乎当下的市场份额，更直接影响到长远的经济韧性；唯有坚持自主研发与开放协作，才能彻底突破技术瓶颈！ (Chǎnyè shēngjí bùjǐn guānhū dāngxià de shìchǎng fèn’é, gèng zhíjiē yǐngxiǎng dào chángyuǎn de jīngjì rènxìng; wéiyǒu jiānchí zìzhǔ yánfā yǔ kāifàng xiézuò, cái néng chèdǐ tūpò jìshù píngjǐng!)",
+          "买别人的技术最省事，研发太浪费钱了。 (Mǎi biérén de jìshù zuì shěngshì, yánfā tài làngfèi qián le.)",
+          "科技发展太快了，我完全不想学。 (Kējì fāzhǎn tài kuài le, wǒ wánquán bù xiǎng xué.)",
+          "请问今天下午有去上海的高铁吗？ (Qǐngwèn jīntiān xiàwǔ yǒu qù Shànghǎi de gāotiě ma?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคสรุป '产业升级不仅关乎当下的市场份额，更直接影响到长远的经济韧性；唯有坚持自主研发与开放协作，才能彻底突破技术瓶颈！' ทรงพลัง ลึกซึ้ง และผสานหลักการพัฒนาตนเองร่วมกับการเปิดกว้างอย่างสมบูรณ์แบบ",
+        "encouragement": "วิสัยทัศน์ทางเทคโนโลยีและเศรษฐศาสตร์ยอดเยี่ยม สมศักดิ์ศรีระดับ Tier 3 Master!"
+      }
+    },
+    {
+      "lesson_id": "t3_u31_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "Boss Challenge: 中泰电动车与智驾出海蓝皮书",
+        "th": "ภารกิจบอส: สมุดปกขาว EV และระบบช่วยขับขี่สู่อาเซียน",
+        "en": "Boss Challenge: Sino-Thai EV & Smart Mobility Whitepaper"
+      },
+      "can_do": {
+        "th": "ร่างบทวิเคราะห์เปรียบเทียบตลาดรถยนต์ไฟฟ้าในจีนและอาเซียน ผสานศัพท์ 渗透率, 补能体系, 出海, และ 竞争力",
+        "en": "Draft comparative analysis of Chinese & ASEAN EV markets using 渗透率, 补能体系, 出海, and 竞争力"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: เขียนบทวิเคราะห์สมุดปกขาวเปรียบเทียบตลาดรถยนต์ไฟฟ้าจีน-อาเซียนความยาว 300 คำได้อย่างมืออาชีพ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3116",
+          "hanzi": "渗透率",
+          "pinyin": "shèntòulǜ",
+          "display_pinyin": "shèntòulǜ",
+          "pinyin_tone": "shen4tou4lu:4",
+          "meaning_th": "อัตราการเจาะตลาด / สัดส่วนผู้ใช้งานในตลาด (Penetration Rate)",
+          "meaning_en": "market penetration rate",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 34,
+          "mnemonic": "ซึมซับแทรกซึมลึก (渗透) คิดคำนวณเป็นอัตราร้อยละ (率) = อัตราการเจาะตลาด",
+          "kid_mnemonic": "น้ำหมึกหยดลงบนกระดาษแล้วค่อยๆ แผ่กว้างครอบคลุมพื้นที่ = 渗透率",
+          "body_gesture": "กางนิ้วมือสองข้างแผ่ออกกว้างจากศูนย์กลาง"
+        },
+        {
+          "id": "hsk3_3117",
+          "hanzi": "补能体系",
+          "pinyin": "bǔnéng tǐxì",
+          "display_pinyin": "bǔnéng tǐxì",
+          "pinyin_tone": "bu3neng2 ti3xi4",
+          "meaning_th": "ระบบโครงสร้างพื้นฐานการเติมพลังงาน (สถานีชาร์จ/สลับแบตเตอรี่)",
+          "meaning_en": "energy replenishment infrastructure / charging network",
+          "radical": "衤",
+          "radical_name_th": "หมวดเสื้อผ้า (衣字旁)",
+          "stroke_count": 36,
+          "mnemonic": "ระบบเครือข่ายเชื่อมโยง (体系) ในการชดเชยเติมพลังงาน (补能) = ระบบสถานีชาร์จพลังงาน",
+          "kid_mnemonic": "เสาชาร์จไฟและสถานีสลับแบตเตอรี่ตั้งอยู่ทั่วทุกมุมเมือง = 补能体系",
+          "body_gesture": "ทำท่าเสียบหัวชาร์จไฟใส่ตัวรถยนต์ไฟฟ้า"
+        },
+        {
+          "id": "hsk3_3118",
+          "hanzi": "出海",
+          "pinyin": "chūhǎi",
+          "display_pinyin": "chūhǎi",
+          "pinyin_tone": "chu1hai3",
+          "meaning_th": "การขยายตลาดสู่ต่างประเทศ (Go Global)",
+          "meaning_en": "expand overseas / go global",
+          "radical": "凵",
+          "radical_name_th": "หมวดปากหลุม (凵字框)",
+          "stroke_count": 15,
+          "mnemonic": "แล่นเรือออกจากฝั่ง (出) มุ่งหน้าสู่ทะเลกว้างระดับโลก (海) = ขยายตลาดสู่สากล",
+          "kid_mnemonic": "เรือสำเภาทองกางใบแล่นข้ามมหาสมุทรไปค้าขายต่างแดน = 出海",
+          "body_gesture": "กวาดฝ่ามือพุ่งไปข้างหน้าราวกับเรือตัดคลื่นสู่ทะเลลึก"
+        },
+        {
+          "id": "hsk3_3119",
+          "hanzi": "竞争力",
+          "pinyin": "jìngzhēnglì",
+          "display_pinyin": "jìngzhēnglì",
+          "pinyin_tone": "jing4zheng1li4",
+          "meaning_th": "ขีดความสามารถในการแข่งขัน",
+          "meaning_en": "competitiveness",
+          "radical": "立",
+          "radical_name_th": "หมวดตั้ง (立字旁)",
+          "stroke_count": 23,
+          "mnemonic": "พละกำลัง (力) ในการแข่งขันประชันฝีมือ (竞争) = ขีดความสามารถในการแข่งขัน",
+          "kid_mnemonic": "นักกีฬาชูเหรียญทองแห่งชัยชนะ = 竞争力",
+          "body_gesture": "เบ่งกล้ามแขนขวาแสดงขีดความสามารถอันแข็งแกร่ง"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 竞争力 (jìngzhēnglì)",
+        "description_th": "พยางค์: jìng (4), zhēng (1), lì (4) — มีจังหวะสับลง ทอดยาว แล้วสับลงอย่างเด็ดขาด",
+        "example": "提升核心竞争力 (ยกระดับขีดความสามารถในการแข่งขันหลัก)",
+        "fun_metaphor": "เหมือนก้าวเท้าย่างสามขุมอย่างมั่นคงในสนามประลอง!",
+        "reassurance": "คำนี้ใช้บ่อยมากในการเขียนรายงานวิเคราะห์ทางเศรษฐกิจและการตลาด"
+      },
+      "grammar_bite": {
+        "title": "การวิเคราะห์เชิงเปรียบเทียบในสมุดปกขาว: 相较于...，更凸显了...的必要性",
+        "explanation_th": "สำนวนภาษาเขียนวิชาการชั้นสูงสำหรับการเปรียบเทียบตลาดสองภูมิภาค",
+        "patterns": [
+          {
+            "formula": "相较于 [ตลาด ก] 的高渗透率，[ตลาด ข] 正处于爆发前夕",
+            "zh": "相较于中国新能源车超过百分之五十的高渗透率，东盟市场正处于快速增长的爆发前夕。",
+            "pinyin": "Xiāngjiàoyú Zhōngguó xīnnéngyuánchē chāoguò bǎifēnzhī wǔshí de gāo shèntòulǜ, Dōngméng shìchǎng zhèng chǔyú kuàisù zēngzhǎng de bàofā qiánxī.",
+            "th": "เมื่อเทียบกับอัตราเจาะตลาดสูงกว่า 50% ของรถ EV ในจีน ตลาดอาเซียนกำลังอยู่ในช่วงก่อนการเติบโตแบบก้าวกระโดด",
+            "en": "Compared to China’s over 50% EV penetration, the ASEAN market is on the verge of explosive growth."
+          },
+          {
+            "formula": "加快构建完备的 [สิ่งใด]，是提升国际竞争力的关键",
+            "zh": "加快构建完备的海外补能体系与本土化服务，是车企成功出海的核心竞争力。",
+            "pinyin": "Jiākuài gòujiàn wánbèi de hǎiwài bǔnéng tǐxì yǔ běntǔhuà fúwù, shì chēqǐ chénggōng chūhǎi de héxīn jìngzhēnglì.",
+            "th": "การเร่งสร้างเครือข่ายสถานีเติมพลังงานในต่างแดนและการบริการท้องถิ่นที่สมบูรณ์ คือขีดความสามารถในการแข่งขันหลักของค่ายรถในการโกอินเตอร์",
+            "en": "Accelerating overseas charging infrastructure and localized service is automakers’ core competitiveness in going global."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (นักวิเคราะห์กลยุทธ์) 🧑‍💼",
+          "zh": "张总，这份中泰新能源汽车出海战略分析报告，重点对比了两地市场的渗透率。",
+          "pinyin": "Zhāng zǒng, zhè fèn Zhōng-Tài xīnnéngyuán qìchē chūhǎi zhànluè fēnxī bàogào, zhòngdiǎn duìbǐ le liǎng dì shìchǎng de shèntòulǜ.",
+          "th": "ประธานจางครับ รายงานวิเคราะห์ยุทธศาสตร์รถยนต์ไฟฟ้าจีน-ไทยฉบับนี้ เน้นเปรียบเทียบอัตราการเจาะตลาดของสองประเทศครับ",
+          "en": "President Zhang, this Sino-Thai EV overseas strategy report focuses on comparing market penetration rates."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ประธานจาง 👨‍💼",
+          "zh": "很好！泰国作为东盟汽车制造枢纽，中国车企出海建厂的速度非常快。",
+          "pinyin": "Hěn hǎo! Tàiguó zuòwéi Dōngméng qìchē zhìzào shūniǔ, Zhōngguó chēqǐ chūhǎi jiànchǎng de sùdù fēicháng kuài.",
+          "th": "ดีมาก! ประเทศไทยในฐานะฮับการผลิตยานยนต์ของอาเซียน ค่ายรถจีนออกไปลงทุนตั้งโรงงานได้รวดเร็วมาก",
+          "en": "Great! As ASEAN automotive manufacturing hub, Chinese automakers are building overseas plants in Thailand very rapidly."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (นักวิเคราะห์กลยุทธ์) 🧑‍💼",
+          "zh": "报告中指出，目前最大的挑战在于东盟当地补能体系的建设，以及智驾系统的本土化适配。",
+          "pinyin": "Bàogào zhōng zhǐchū, mùqián zuì dà de tiǎozhàn zàiyú Dōngméng dāngdì bǔnéng tǐxì de jiànshè, yǐjí zhìjià xìtǒng de běntǔhuà shìpèi.",
+          "th": "ในรายงานระบุว่า ความท้าทายใหญ่สุดในขณะนี้อยู่ที่การสร้างโครงสร้างสถานีชาร์จพลังงานในท้องถิ่นอาเซียน และการปรับแต่งระบบช่วยขับขี่อัจฉริยะให้เข้ากับบริบทท้องถิ่นครับ",
+          "en": "Report points out the biggest challenge lies in ASEAN charging infrastructure and localizing smart driving systems."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ประธานจาง 👨‍💼",
+          "zh": "抓住了痛点！谁能率先在东南亚完善补能体系，谁就能掌握长远的国际竞争力！",
+          "pinyin": "Zhuā zhù le tòngdiǎn! Shéi néng shuàixiān zài Dōngnányà wánshàn bǔnéng tǐxì, shéi jiù néng zhǎngwò chángyuǎn de guójì jìngzhēnglì!",
+          "th": "ชี้ตรงจุดเจ็บปวดเป๊ะ! ใครสามารถทำให้ระบบสถานีเติมพลังงานในเอเชียตะวันออกเฉียงใต้สมบูรณ์ก่อนได้ คนนั้นก็จะได้ครองความได้เปรียบทางการแข่งขันระดับสากลในระยะยาว!",
+          "en": "Nailed the pain point! Whoever perfects charging networks in Southeast Asia first will secure long-term global competitiveness!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '渗透率' (shèntòulǜ) ในการวิเคราะห์ตลาดยานยนต์หมายถึงข้อใด?",
+          "options": [
+            "สัดส่วนยอดขายรถ EV เมื่อเทียบกับยอดขายรถยนต์ทั้งหมดในตลาด (Market Penetration)",
+            "ความสามารถในการกันน้ำของแบตเตอรี่",
+            "อัตราการรั่วซึมของน้ำมันเครื่อง",
+            "ระดับความโปร่งแสงของกระจกหน้ารถ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'渗透率' คือ สัดส่วนการเจาะตลาด เช่น อัตราส่วนรถยนต์ไฟฟ้าในยอดจำหน่ายรถใหม่ทั้งหมด",
+          "encouragement": "จำคำศัพท์ดัชนีชี้วัดตลาดระดับสูงได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '出海' (chūhǎi) ในแวดวงธุรกิจจีนสมัยใหม่มีความหมายว่าอย่างไร?",
+          "options": [
+            "การขยายธุรกิจและผลิตภัณฑ์สู่ตลาดต่างประเทศ (Going Global)",
+            "การนั่งเรือออกไปตกปลาในทะเล",
+            "การไปเที่ยวทะเลช่วงวันหยุด",
+            "การลอยกระทงในแม่น้ำ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'出海' คือ คำสแลงธุรกิจที่ทรงอิทธิพลที่สุดในปัจจุบัน หมายถึง การขยายตลาดสู่เวทีโลกของแบรนด์จีน",
+          "encouragement": "เข้าใจคำศัพท์เศรษฐกิจจีนร่วมสมัยได้อย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การสร้างสถานีเติมพลังงานที่สมบูรณ์คือหัวใจของการแข่งขันในต่างแดน\"",
+          "tokens": [
+            "构建完备的补能体系",
+            "是成功出海的关键",
+            "加快"
+          ],
+          "correct_sequence": [
+            "加快",
+            "构建完备的补能体系",
+            "是成功出海的关键"
+          ],
+          "pinyin": "Jiākuài gòujiàn wánbèi de bǔnéng tǐxì, shì chénggōng chūhǎi de guānjiàn",
+          "meaning_th": "การเร่งสร้างระบบสถานีเติมพลังงานที่สมบูรณ์ คือกุญแจสำคัญในการขยายตลาดสู่สากลสำเร็จ",
+          "explanation_th": "กริยาขยาย (加快) + ภาคประธาน (构建完备的补能体系) + ข้อสรุป (是成功出海的关键)",
+          "encouragement": "ต่อประโยคยุทธศาสตร์ข้ามพรมแดนได้อย่างไร้ที่ติ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '竞争力' ตัว '竞' (แข่งขัน) มีหมวดนำใด?",
+          "options": [
+            "立 (หมวดตั้ง 立字旁)",
+            "力 (หมวดพลัง 力字旁)",
+            "口 (หมวดปาก 口字旁)",
+            "日 (หมวดดวงอาทิตย์ 日字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'竞' มีหมวดนำ '立' (ยืนตั้ง) สื่อถึงนักวิ่งหรือผู้เข้าแข่งขันที่ยืนเตรียมพร้อมอยู่บนจุดสตาร์ต",
+          "encouragement": "แม่นยำในหมวดนำอักษรจีน!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณได้รับเชิญให้ขึ้นกล่าวบรรยายสรุปในงานสัมมนา Sino-ASEAN Automotive Forum คุณต้องการสรุปภาพรวมเปรียบเทียบตลาด EV จีน-ไทย และเน้นย้ำถึงการร่วมมือกันสร้างสถานีชาร์จพลังงาน ควรกล่าวอย่างไร?",
+        "options": [
+          "相较于中国的高渗透率，东盟正处于爆发前夕。中国车企出海不仅要输出智能驾驶技术，更要与本地伙伴携手完善补能体系，才能形成可持续的全球竞争力！ (Xiāngjiàoyú Zhōngguó de gāo shèntòulǜ, Dōngméng zhèng chǔyú bàofā qiánxī. Zhōngguó chēqǐ chūhǎi bùjǐn yào shūchū zhìnéng jiàshǐ jìshù, gèng yào yǔ běndì huǒbàn xiéshǒu wánshàn bǔnéng tǐxì, cái néng xíngchéng kěchíxù de quánqiú jìngzhēnglì!)",
+          "中国车好，你们快点买就对了。 (Zhōngguó chē hǎo, nǐmen kuài diǎn mǎi jiù duì le.)",
+          "充电桩太难修了，大家还是开燃油车吧。 (Chōngdiànzhuāng tài nán xiū le, dàjiā háishi kāi rányóuchē ba.)",
+          "请问今天晚上有什么演出节目？ (Qǐngwèn jīntiān wǎnshang yǒu shénme yǎnchū jiémù?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "สุนทรพจน์ '相较于中国的高渗透率...才能形成可持续的全球竞争力！' ครอบคลุมทั้งตัวเลขเปรียบเทียบ เทคโนโลยีขับขี่อัตโนมัติ การสร้างโครงสร้างสถานีชาร์จ และการจับมือกับพันธมิตรท้องถิ่นอย่างทรงวิสัยทัศน์",
+        "encouragement": "ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge วิเคราะห์ตลาด EV และ Smart Mobility ระดับ Tier 3 สำเร็จ 100%!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t3_u31_master",
+        "badge_name": "ผู้นำวิสัยทัศน์นวัตกรรมและเทคโนโลยีจีน ⚡🏆",
+        "message_th": "ขอแสดงความยินดี! คุณสำเร็จ Unit 31 เข้าใจอุตสาหกรรม EV, AI, ชิปเซมิคอนดักเตอร์ และการขยายตลาดสากลของจีนได้อย่างลึกซึ้ง!",
+        "xp_reward": 300
+      }
+    }
+  ]
+}
