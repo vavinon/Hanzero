@@ -58,6 +58,7 @@ export interface UseUserStateReturn {
     mnemonic?: string;
   }>) => Promise<void>;
   updatePreferences: (patch: Partial<PreferencesState>) => Promise<void>;
+  updateTier: (tier: 'tier0' | 'tier1' | 'tier2') => Promise<void>;
   completeOnboarding: (track: 'tier0' | 'tier1', silentMode: boolean) => Promise<void>;
   exportBackup: () => Promise<string>;
   importBackup: (jsonString: string) => Promise<boolean>;
@@ -405,6 +406,18 @@ export function useUserState(): UseUserStateReturn {
     setUserState(nextState);
   }, []);
 
+  // 9.1 Update current learning tier (SEC-RED-002)
+  const updateTier = useCallback(async (tier: 'tier0' | 'tier1' | 'tier2') => {
+    const currentState = getStoredUserStateSync();
+    const nextState: UserStateSchema = JSON.parse(JSON.stringify(currentState)) as UserStateSchema;
+    nextState.progress.current_tier = tier;
+    if (!nextState.progress.unlocked_tiers.includes(tier)) {
+      nextState.progress.unlocked_tiers.push(tier);
+    }
+    await saveUserState(nextState);
+    setUserState(nextState);
+  }, []);
+
   // 10. Complete onboarding & select learning track
   const completeOnboarding = useCallback(async (track: 'tier0' | 'tier1', silentMode: boolean) => {
     const currentState = getStoredUserStateSync();
@@ -472,6 +485,7 @@ export function useUserState(): UseUserStateReturn {
     recordCardReview,
     addVocabToSrs,
     updatePreferences,
+    updateTier,
     completeOnboarding,
     exportBackup,
     importBackup,

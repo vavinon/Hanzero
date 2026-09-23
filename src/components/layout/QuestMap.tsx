@@ -10,12 +10,17 @@ import { ProgressState } from '../../engines/storage/types';
 import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
 import { tier0Units } from '../../data/lessons/tier0';
 
+const HsrQuestMap = React.lazy(() =>
+  import('./HsrQuestMap').then((m) => ({ default: m.HsrQuestMap }))
+);
+
 export interface QuestMapProps {
   progress: ProgressState;
   onSelectLesson: (unitId: string, lessonId: string) => void;
   onOpenReviewDeck: () => void;
   dueCardsCount: number;
   onOpenPassport?: () => void;
+  onSelectTier?: (tier: 'tier0' | 'tier1' | 'tier2') => void;
 }
 
 interface MapNode {
@@ -87,16 +92,22 @@ export const QuestMap: React.FC<QuestMapProps> = ({
   onOpenReviewDeck,
   dueCardsCount,
   onOpenPassport,
+  onSelectTier,
 }) => {
-  const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1'>(
-    (progress.current_tier as 'tier0' | 'tier1') || 'tier0'
+  const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1' | 'tier2'>(
+    (progress.current_tier as 'tier0' | 'tier1' | 'tier2') || 'tier0'
   );
 
   React.useEffect(() => {
-    if (progress.current_tier === 'tier0' || progress.current_tier === 'tier1') {
+    if (progress.current_tier === 'tier0' || progress.current_tier === 'tier1' || progress.current_tier === 'tier2') {
       setSelectedTier(progress.current_tier);
     }
   }, [progress.current_tier]);
+
+  const handleSwitchTier = (tier: 'tier0' | 'tier1' | 'tier2') => {
+    setSelectedTier(tier);
+    onSelectTier?.(tier);
+  };
 
   // Completed lessons from progress state
   const completedSet = new Set(progress.completed_lessons);
@@ -122,48 +133,72 @@ export const QuestMap: React.FC<QuestMapProps> = ({
           borderRadius: 'var(--radius-full)',
           padding: '3px',
           width: '100%',
-          maxWidth: '360px',
+          maxWidth: '440px',
+          gap: '2px',
         }}
       >
         <button
           data-testid="tab-tier0"
-          onClick={() => setSelectedTier('tier0')}
+          onClick={() => handleSwitchTier('tier0')}
           style={{
             flex: 1,
-            padding: '8px 12px',
+            padding: '8px 4px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
-            fontSize: '13px',
+            fontSize: 'clamp(10px, 3.2vw, 12px)',
             fontWeight: 700,
             cursor: 'pointer',
             backgroundColor: selectedTier === 'tier0' ? '#FFFFFF' : 'transparent',
             color: selectedTier === 'tier0' ? 'var(--color-jade-dark)' : 'var(--text-ink-secondary)',
             boxShadow: selectedTier === 'tier0' ? '0 2px 5px rgba(0,0,0,0.06)' : 'none',
             transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap',
           }}
         >
-          🌱 Tier 0: ปูพื้นพินอิน
+          🌱 Tier 0: ปูพื้น
         </button>
         <button
           data-testid="tab-tier1"
-          onClick={() => setSelectedTier('tier1')}
+          onClick={() => handleSwitchTier('tier1')}
           style={{
             flex: 1,
-            padding: '8px 12px',
+            padding: '8px 4px',
             minHeight: '44px',
             borderRadius: 'var(--radius-full)',
             border: 'none',
-            fontSize: '13px',
+            fontSize: 'clamp(10px, 3.2vw, 12px)',
             fontWeight: 700,
             cursor: 'pointer',
             backgroundColor: selectedTier === 'tier1' ? '#FFFFFF' : 'transparent',
             color: selectedTier === 'tier1' ? 'var(--color-jade-dark)' : 'var(--text-ink-secondary)',
             boxShadow: selectedTier === 'tier1' ? '0 2px 5px rgba(0,0,0,0.06)' : 'none',
             transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap',
           }}
         >
           🌿 Tier 1: นักสำรวจ
+        </button>
+        <button
+          data-testid="tab-tier2"
+          onClick={() => handleSwitchTier('tier2')}
+          style={{
+            flex: 1,
+            padding: '8px 4px',
+            minHeight: '44px',
+            borderRadius: 'var(--radius-full)',
+            border: 'none',
+            fontSize: 'clamp(10px, 3.2vw, 12px)',
+            fontWeight: 700,
+            cursor: 'pointer',
+            backgroundColor: selectedTier === 'tier2' ? '#FFFFFF' : 'transparent',
+            color: selectedTier === 'tier2' ? '#0284C7' : 'var(--text-ink-secondary)',
+            boxShadow: selectedTier === 'tier2' ? '0 2px 5px rgba(0,0,0,0.06)' : 'none',
+            transition: 'all 0.2s ease',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          🎋 Tier 2: นักเดินทาง
         </button>
       </div>
 
@@ -720,6 +755,31 @@ export const QuestMap: React.FC<QuestMapProps> = ({
             })}
           </div>
         </div>
+      )}
+
+      {/* Tier 2 HSR Metro Quest Map */}
+      {selectedTier === 'tier2' && (
+        <React.Suspense
+          fallback={
+            <div
+              style={{
+                padding: '40px 16px',
+                textAlign: 'center',
+                color: 'var(--text-ink-secondary, #78716C)',
+                fontSize: '13px',
+              }}
+            >
+              กำลังจัดเตรียมเส้นทางรถไฟความเร็วสูง... 🚄🐰
+            </div>
+          }
+        >
+          <HsrQuestMap
+            progress={progress}
+            onSelectLesson={onSelectLesson}
+            onOpenReviewDeck={onOpenReviewDeck}
+            dueCardsCount={dueCardsCount}
+          />
+        </React.Suspense>
       )}
     </div>
   );

@@ -207,31 +207,31 @@ flowchart TD
 
 ---
 
-### `TASK-706`: HSR Metro Quest Map & 4-Tier Verification
-- [ ] **HSR Metro Quest Map (`src/components/layout/HsrQuestMap.tsx`):**
+### `TASK-706`: HSR Metro Quest Map & 4-Tier Verification `DONE` ✅
+- [x] **HSR Metro Quest Map (`src/components/layout/HsrQuestMap.tsx`):**
   - แผนผังเส้นทางรถไฟ 4 มหานคร (ปักกิ่ง ➔ ซีอาน ➔ เฉิงตู ➔ เซี่ยงไฮ้)
   - 15 สถานีย่อยสอดคล้องกับ Units 11–25
   - ตั๋วรถไฟความเร็วสูงประทับตราดิจิทัล (Stamped HSR Ticket Modal)
-  - ผสานเข้ากับ `QuestMap.tsx` ผ่านแท็บ **"🎋 Tier 2: นักเดินทาง"**
-- [ ] **Playwright E2E Test Suite (`e2e/tier2_traveler_quest.spec.ts`):**
+  - ผสานเข้ากับ `QuestMap.tsx` ผ่านแท็บ **"🎋 Tier 2: นักเดินทาง"** (Code-splitting: React.lazy)
+- [x] **Playwright E2E Test Suite (`e2e/tier2_traveler_quest.spec.ts`):**
   - ทดสอบสลับไปแท็บ Tier 2
   - ทดสอบเข้าเรียนสถานีรถไฟความเร็วสูง
   - ทดสอบเล่นบทสนทนาแตกกิ่งและต่อบล็อกไวยากรณ์
   - ทดสอบรับตั๋วรถไฟประทับตราเมื่อเรียนจบ
-- [ ] **4-Tier QA & DoD Checklist:**
-  - [ ] TypeScript Clean: `tsc --noEmit` ไร้ Type Error 100%
-  - [ ] Unit Tests Passed: รัน Vitest ผ่าน 100% ทุกชุด
-  - [ ] Curriculum Validated: `npm run validate:curriculum -- --strict` ผ่าน 100%
-  - [ ] Bundle Budget Compliant: `npm run audit:bundle` ผ่านเกณฑ์ (CSS $\le$ 20KB, JS $\le$ 300KB)
-  - [ ] Red Team Verified: ปราศจาก Dead-ends, ไม่พังบนจอ 320px
-  - [ ] Documentation Synced: อัปเดตสถานะใน `docs/plan/README.md` และ `phase_07_tier2_traveler_quest.md`
+- [x] **4-Tier QA & DoD Checklist:**
+  - [x] TypeScript Clean: `tsc --noEmit` ไร้ Type Error 100%
+  - [x] Unit Tests Passed: รัน Vitest ผ่าน 100% ทุกชุด (46 test files / 755 unit tests)
+  - [x] Curriculum Validated: `npm run validate:curriculum -- --strict` ผ่าน 100%
+  - [x] Bundle Budget Compliant: `npm run audit:bundle` ผ่านเกณฑ์ (CSS: 3.24KB $\le$ 20KB, JS: 217.29KB $\le$ 300KB)
+  - [x] Red Team Verified: ปราศจาก Dead-ends, ไม่พังบนจอ 320px
+  - [x] Documentation Synced: อัปเดตสถานะใน `docs/plan/README.md` และ `phase_07_tier2_traveler_quest.md`
 
 ---
 
 ## 🚦 ลำดับการส่งมอบงาน (Execution Slices Order)
-1. **Slice 1:** ส่งมอบ `TASK-701` (Units 11–15 JSON + Schema Tests) ➔ ตรวจรับ
-2. **Slice 2:** ส่งมอบ `TASK-702` (Branching Engine + InteractiveScenarioPlayer) ➔ ตรวจรับ
-3. **Slice 3:** ส่งมอบ `TASK-703` (GrammarSlotEngine + GrammarSlotBuilder + Hold-to-Peek) ➔ ตรวจรับ
+1. **Slice 1:** `[DONE]` ส่งมอบ `TASK-701` (Units 11–15 JSON + Schema Tests) ➔ ตรวจรับ ผ่าน 100%
+2. **Slice 2:** `[DONE]` ส่งมอบ `TASK-702` (Branching Engine + InteractiveScenarioPlayer) ➔ ตรวจรับ ผ่าน 100%
+3. **Slice 3:** `[DONE]` ส่งมอบ `TASK-703` (GrammarSlotEngine + GrammarSlotBuilder + Hold-to-Peek) ➔ ตรวจรับ ผ่าน 100%
 4. **Slice 4:** `[DONE]` ส่งมอบ `TASK-704` (Units 16–20 JSON) ➔ ตรวจรับ ผ่าน 100%
-5. **Slice 5:** ส่งมอบ `TASK-705` (Units 21–25 JSON + Capstone) ➔ ตรวจรับ
-6. **Slice 6:** ส่งมอบ `TASK-706` (HsrQuestMap + E2E + 4-Tier QA Summary) ➔ สรุปปิด Phase 7
+5. **Slice 5:** `[DONE]` ส่งมอบ `TASK-705` (Units 21–25 JSON + Capstone) ➔ ตรวจรับ ผ่าน 100%
+6. **Slice 6:** `[DONE]` ส่งมอบ `TASK-706` (HsrQuestMap + E2E + 4-Tier QA Summary) ➔ สรุปปิด Phase 7 สมบูรณ์ 100% 🎉

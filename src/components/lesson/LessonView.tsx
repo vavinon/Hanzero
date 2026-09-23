@@ -9,6 +9,7 @@ import { BookOpen, PenTool, MessageCircle, Sparkles, ArrowLeft } from 'lucide-re
 import { VocabCard, DialoguePlayer, GrammarBite, QuizContainer, QuizResult } from './index';
 import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
 import { tier0Units } from '../../data/lessons/tier0';
+import { tier2Units } from '../../data/lessons/tier2';
 import {
   VocabularyItem,
   DialogueLine,
@@ -70,6 +71,9 @@ export const LessonView: React.FC<LessonViewProps> = ({
   const t0Lesson = tier0Units.flatMap((u) => u.lessons).find((l) => l.lesson_id === lessonId);
   const isTier0 = Boolean(t0Lesson) || lessonId.startsWith('t0_');
 
+  // Check if this is a Tier 2 lesson
+  const t2Lesson = tier2Units.flatMap((u) => u.lessons).find((l) => l.lesson_id === lessonId);
+
   // Find lesson data by id or fallback to Tier 1 lesson 0
   const lessonData = t0Lesson
     ? {
@@ -86,6 +90,22 @@ export const LessonView: React.FC<LessonViewProps> = ({
         quizzes: (t0Lesson.quizzes || []) as QuizQuestion[],
         boss_challenge: undefined as BossChallenge | undefined,
         cheer_trophy: undefined as CheerTrophy | undefined,
+      }
+    : t2Lesson
+    ? {
+        lesson_id: t2Lesson.lesson_id,
+        title: t2Lesson.title,
+        vocabulary: (t2Lesson.vocabulary || []) as unknown as VocabularyItem[],
+        dialogue: (t2Lesson.dialogue || []) as DialogueLine[],
+        grammar_bite: t2Lesson.grammar_bite || {
+          title: t2Lesson.baby_step_goal || 'ไวยากรณ์ขั้นกลาง',
+          explanation_th: t2Lesson.can_do.th,
+          patterns: [],
+        },
+        tone_rule: (t2Lesson.tone_rule || null) as ToneRule | null,
+        quizzes: (t2Lesson.quizzes || []) as QuizQuestion[],
+        boss_challenge: t2Lesson.boss_challenge as BossChallenge | undefined,
+        cheer_trophy: t2Lesson.cheer_trophy as CheerTrophy | undefined,
       }
     : unit01Data.lessons.find((l) => l.lesson_id === lessonId) || unit01Data.lessons[0];
 

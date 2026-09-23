@@ -56,6 +56,7 @@ export const App: React.FC = () => {
     completeLesson,
     recordCardReview,
     updatePreferences,
+    updateTier,
     completeOnboarding,
     refreshQueue,
     deductHeart,
@@ -216,6 +217,7 @@ export const App: React.FC = () => {
             onOpenReviewDeck={() => setCurrentView('review')}
             dueCardsCount={srsQueueStatus.total_due_count}
             onOpenPassport={() => setShowPassportModal(true)}
+            onSelectTier={updateTier}
           />
         </main>
       )}
