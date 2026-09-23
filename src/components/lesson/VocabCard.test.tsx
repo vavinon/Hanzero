@@ -322,6 +322,68 @@ describe('VocabCard Component (Phase 2 Slice 2.2)', () => {
       pinyinSpan = container?.querySelector('.pinyin-display');
       expect(pinyinSpan?.className).not.toContain('pinyin-mode-peek');
     });
+
+    it('calls onPeek callback with hanzi and incremental peekCount in hidden mode', async () => {
+      const onPeekMock = vi.fn();
+      await act(async () => {
+        root!.render(<VocabCard vocab={mockVocabNi} initialPinyinMode="hidden" onPeek={onPeekMock} />);
+      });
+
+      const peekTarget = container?.querySelector('div[role="button"]') as HTMLElement;
+      await act(async () => {
+        peekTarget.click();
+      });
+
+      expect(onPeekMock).toHaveBeenCalledWith('你', 1);
+
+      // Toggle off and peek again -> count increments to 2
+      await act(async () => {
+        peekTarget.click();
+      });
+      await act(async () => {
+        peekTarget.click();
+      });
+
+      expect(onPeekMock).toHaveBeenCalledWith('你', 2);
+    });
+
+    it('supports Hold-to-Peek 2.0 with pointerdown and pointerup', async () => {
+      vi.useFakeTimers();
+      try {
+        const onPeekMock = vi.fn();
+        await act(async () => {
+          root!.render(<VocabCard vocab={mockVocabNi} initialPinyinMode="hidden" onPeek={onPeekMock} />);
+        });
+
+        const peekTarget = container?.querySelector('div[role="button"]') as HTMLElement;
+        
+        // Pointer down starts hold timer
+        await act(async () => {
+          peekTarget.dispatchEvent(new Event('pointerdown', { bubbles: true }));
+        });
+
+        // Before 150ms timeout, peek should not have triggered
+        expect(onPeekMock).not.toHaveBeenCalled();
+
+        // Advance past 150ms
+        await act(async () => {
+          vi.advanceTimersByTime(160);
+        });
+
+        expect(onPeekMock).toHaveBeenCalledWith('你', 1);
+        const pinyinSpan = container?.querySelector('.pinyin-display');
+        expect(pinyinSpan?.className).toContain('pinyin-mode-peek');
+
+        // Pointer up releases peek
+        await act(async () => {
+          peekTarget.dispatchEvent(new Event('pointerup', { bubbles: true }));
+        });
+
+        expect(container?.querySelector('.pinyin-display')?.className).not.toContain('pinyin-mode-peek');
+      } finally {
+        vi.useRealTimers();
+      }
+    });
   });
 
   // --------------------------------------------------------------------------

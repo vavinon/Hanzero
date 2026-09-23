@@ -127,23 +127,23 @@ flowchart TD
 
 ---
 
-### `TASK-703`: Complex Grammar Sandbox & Dynamic Pinyin Fading 2.0
-- [ ] **Pure Grammar Engine (`src/engines/grammar/grammarSlotEngine.ts`):**
+### `TASK-703`: Complex Grammar Sandbox & Dynamic Pinyin Fading 2.0 `DONE` ✅
+- [x] **Pure Grammar Engine (`src/engines/grammar/grammarSlotEngine.ts`):**
   - รองรับโครงสร้าง:
     - ประโยค 把: $[S] + 把 + [O] + [V] + [Result/Direction]$
     - ประโยค 被: $[O] + 被 + [Agent] + [V] + [Result/Direction]$
     - Complements: $[V] + 得/不 + [Result]$ (吃得下 vs 吃不下)
   - ตรวจสอบลำดับสล็อตและคืนคำแนะนำ (Pedagogical Guidance Hint)
-- [ ] **UI Component (`src/components/grammar/GrammarSlotBuilder.tsx`):**
+- [x] **UI Component (`src/components/grammar/GrammarSlotBuilder.tsx`):**
   - บล็อกไวยากรณ์ต่อสนุก แยกสีตามประเภทคำ (ประธาน, เครื่องหมาย, กรรม, กริยา, ผลลัพธ์)
   - รองรับทัชสกรีนลื่นไหล 60fps
   - เสียงอ่านเมื่อแตะบล็อกคำ
-- [ ] **Dynamic Pinyin Fading 2.0 (Hold-to-Peek):**
+- [x] **Dynamic Pinyin Fading 2.0 (Hold-to-Peek):**
   - ซ่อนพินอินเป็นค่าเริ่มต้นใน Tier 2
   - กดค้าง (Hold) ที่ตัวอักษรจีนเพื่อแอบดูพินอินชั่วคราว ปล่อยมือแล้วจางหาย
   - บันทึกความถี่การแอบดู (`peekCount`) สำหรับจัดคิวทบทวนใน SRS
   - ผสานเข้ากับ `VocabCard.tsx` และ `InteractiveScenarioPlayer.tsx`
-- [ ] **Unit Tests:** `grammarSlotEngine.test.ts` และ `GrammarSlotBuilder.test.tsx` ผ่าน 100%
+- [x] **Unit Tests:** `grammarSlotEngine.test.ts` (9 tests) และ `GrammarSlotBuilder.test.tsx` (7 tests) ผ่าน 100% พร้อม `VocabCard.test.tsx` (29 tests) ผ่าน 100%
 
 ---
 

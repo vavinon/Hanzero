@@ -57,6 +57,8 @@ export interface VocabCardProps {
   onFlip?: (isFlipped: boolean) => void;
   /** Callback when audio starts or finishes */
   onAudioPlay?: (hanzi: string, rate: number) => void;
+  /** Callback when user peeks at pinyin in hidden mode, passing hanzi and total peek count (SRS 2.0) */
+  onPeek?: (hanzi: string, peekCount: number) => void;
   /** Custom CSS class name */
   className?: string;
   /** Custom inline style */
@@ -229,6 +231,7 @@ export const VocabCard: React.FC<VocabCardProps> = ({
   defaultPlaybackRate = 1.0,
   onFlip,
   onAudioPlay,
+  onPeek,
   className = '',
   style = {},
 }) => {
@@ -245,6 +248,9 @@ export const VocabCard: React.FC<VocabCardProps> = ({
   const isMountedRef = useRef<boolean>(true);
   const activeRequestIdRef = useRef<number>(0);
   const modalCloseBtnRef = useRef<HTMLButtonElement | null>(null);
+  const peekCountRef = useRef<number>(0);
+  const holdTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const didHoldRef = useRef<boolean>(false);
 
   // Extract Hanzi characters for multi-character inspection (e.g. 谢谢 -> 谢; 不客气 -> 不, 客, 气)
   const uniqueHanziChars = useMemo(() => {
@@ -290,6 +296,9 @@ export const VocabCard: React.FC<VocabCardProps> = ({
       isMountedRef.current = false;
       activeRequestIdRef.current++;
       stopSpeaking();
+      if (holdTimeoutRef.current) {
+        clearTimeout(holdTimeoutRef.current);
+      }
     };
   }, []);
 
@@ -304,6 +313,12 @@ export const VocabCard: React.FC<VocabCardProps> = ({
     setIsPeeking(false);
     setIsInspectorOpen(false);
     setSelectedCharIndex(0);
+    peekCountRef.current = 0;
+    if (holdTimeoutRef.current) {
+      clearTimeout(holdTimeoutRef.current);
+      holdTimeoutRef.current = null;
+    }
+    didHoldRef.current = false;
   }, [vocab.id, initialFlipped, initialPinyinMode]);
 
   // Keyboard accessibility for modal (Escape key) & Auto-focus
@@ -440,11 +455,45 @@ export const VocabCard: React.FC<VocabCardProps> = ({
 
   // Handle Progressive Pinyin Peek Tap
   const handlePinyinPeek = useCallback(() => {
+    if (didHoldRef.current) {
+      didHoldRef.current = false;
+      return;
+    }
     if (pinyinMode === 'hidden') {
       playClick();
-      setIsPeeking((prev) => !prev);
+      setIsPeeking((prev) => {
+        const next = !prev;
+        if (next) {
+          peekCountRef.current++;
+          onPeek?.(vocab.hanzi, peekCountRef.current);
+        }
+        return next;
+      });
     }
-  }, [pinyinMode]);
+  }, [pinyinMode, vocab.hanzi, onPeek]);
+
+  // Handle Dynamic Hold-to-Peek 2.0
+  const handleHoldStart = useCallback(() => {
+    if (pinyinMode === 'hidden') {
+      holdTimeoutRef.current = setTimeout(() => {
+        didHoldRef.current = true;
+        playClick();
+        setIsPeeking(true);
+        peekCountRef.current++;
+        onPeek?.(vocab.hanzi, peekCountRef.current);
+      }, 150);
+    }
+  }, [pinyinMode, vocab.hanzi, onPeek]);
+
+  const handleHoldEnd = useCallback(() => {
+    if (holdTimeoutRef.current) {
+      clearTimeout(holdTimeoutRef.current);
+      holdTimeoutRef.current = null;
+    }
+    if (pinyinMode === 'hidden' && isPeeking) {
+      setIsPeeking(false);
+    }
+  }, [pinyinMode, isPeeking]);
 
   // Switch Pinyin Fading Mode
   const handleSetPinyinMode = useCallback((mode: PinyinFadingMode) => {
@@ -593,6 +642,13 @@ export const VocabCard: React.FC<VocabCardProps> = ({
           {/* Main Hanzi Character Display (>= 36px / 2.25rem, here 56px for Hero readability) */}
           <div
             onClick={handlePinyinPeek}
+            onPointerDown={handleHoldStart}
+            onPointerUp={handleHoldEnd}
+            onPointerLeave={handleHoldEnd}
+            onPointerCancel={handleHoldEnd}
+            onContextMenu={(e) => {
+              if (pinyinMode === 'hidden') e.preventDefault();
+            }}
             role={pinyinMode === 'hidden' ? 'button' : undefined}
             tabIndex={pinyinMode === 'hidden' ? 0 : undefined}
             aria-label={`ตัวอักษรจีน ${vocab.hanzi}`}
