@@ -126,7 +126,7 @@ gantt
 ---
 
 ### 🎋 Phase 7: Tier 2 Traveler Rollout & HSK 3-4 Quest Map
-> **สถานะ:** `IN PROGRESS` 🔄 | [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
+> **สถานะ:** `DONE` ✅ | [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
 
 **เป้าหมาย:** ยกระดับสู่การใช้ชีวิตจริงและการท่องเที่ยวในจีน (15 Units / 60 บทเรียน) พร้อมรองรับไวยากรณ์ขั้นกลางที่ซับซ้อนและการจำลองบทสนทนาแตกกิ่ง
 * [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
@@ -143,6 +143,7 @@ gantt
 ---
 
 ### 🐉 Phase 8: Tier 3-4 Advanced Immersion & Fluency Tools
+> **สถานะ:** `READY_FOR_EXECUTION` 🚀 | [phase_08_tier3_4_advanced_immersion.md](../plan/phase_08_tier3_4_advanced_immersion.md)
 **เป้าหมาย:** เสริมสร้างความคล่องตัวระดับมืออาชีพ วัฒนธรรม วรรณกรรม และการทำงาน (Units 26–57) พร้อมเครื่องมือช่วยเสพสื่อจีนจริง
 * [phase_08_tier3_4_advanced_immersion.md](../plan/phase_08_tier3_4_advanced_immersion.md)
 * **Smart Immersion Reader:** เครื่องมืออ่านบทความจีนพร้อมระบบตัดคำ Client-side ด้วย `Intl.Segmenter` และปุ่มกดเซฟคำศัพท์เข้า SRS

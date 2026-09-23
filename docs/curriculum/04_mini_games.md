@@ -149,4 +149,4 @@ function playToneCurve(audioCtx, toneType) {
 
 ---
 
-*เอกสารฉบับนี้อ้างอิงและทำงานร่วมกับ [01_pinyin_system.md](./01_pinyin_system.md) และ [game_design_prompt.md](../prompts/game_design_prompt.md)*
+*เอกสารฉบับนี้อ้างอิงและทำงานร่วมกับ [01_pinyin_system.md](./01_pinyin_system.md) และ [gamification_designer.md](../../agents/gamification_designer.md)*
