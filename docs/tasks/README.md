@@ -43,7 +43,7 @@
 | **2026-09-22** | `TASK-702` | Branching Dialogue & Scenario Decision Engine | P07 | `web_dev` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_branching-dialogue-engine.md) |
 | **2026-09-22** | `TASK-703` | Complex Grammar Sandbox & Dynamic Pinyin Fading 2.0 | P07 | `web_dev` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_grammar-slot-and-pinyin-fading.md) |
 | **2026-09-22** | `TASK-704` | Tier 2 Traveler Curriculum Batch 2 (Units 16–20) | P07 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-b-curriculum.md) |
-| **2026-09-22** | `TASK-705` | Tier 2 Traveler Curriculum Batch 3 & Grand Boss (Units 21–25) | P07 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-c-curriculum.md) |
+| **2026-09-22** | `TASK-705` | Tier 2 Traveler Curriculum Batch 3 & Grand Boss (Units 21–25) | P07 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-c-curriculum.md) |
 | **2026-09-22** | `TASK-706` | HSR Metro Quest Map, Stamped Tickets & 4-Tier Verification | P07 | `ux_ui_designer` | `TODO` ⏳ | [`2026-09-22_P07_...`](./2026-09-22_P07_hsr-quest-map-and-verification.md) |
 
 ---

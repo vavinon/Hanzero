@@ -15,7 +15,13 @@ import unit17Data from './unit17_advanced_clinic.json';
 import unit18Data from './unit18_bank_telecom.json';
 import unit19Data from './unit19_festivals_visits.json';
 import unit20Data from './unit20_emergencies.json';
+import unit21Data from './unit21_entertainment.json';
+import unit22Data from './unit22_fitness.json';
+import unit23Data from './unit23_workplace.json';
+import unit24Data from './unit24_opinions.json';
+import unit25Data from './unit25_grand_boss_odyssey.json';
 import { UnitLessonData, Lesson, VocabularyItem, QuizQuestion } from '../../../types/lesson';
+import { TRADITIONAL_BLACKLIST } from '../../../engines/studio/studioLinterEngine';
 
 const allTier2Units = [
   unit11Data,
@@ -28,21 +34,42 @@ const allTier2Units = [
   unit18Data,
   unit19Data,
   unit20Data,
+  unit21Data,
+  unit22Data,
+  unit23Data,
+  unit24Data,
+  unit25Data,
 ] as unknown as UnitLessonData[];
 
-const [unit11, unit12, unit13, unit14, unit15, unit16, unit17, unit18, unit19, unit20] = allTier2Units;
+const [
+  unit11,
+  unit12,
+  unit13,
+  unit14,
+  unit15,
+  unit16,
+  unit17,
+  unit18,
+  unit19,
+  unit20,
+  unit21,
+  unit22,
+  unit23,
+  unit24,
+  unit25,
+] = allTier2Units;
 
-describe('Tier 2 (Units 11-20) Curriculum Data & Pedagogical Schema Verification', () => {
+describe('Tier 2 (Units 11-25) Curriculum Data & Pedagogical Schema Verification', () => {
   // ==========================================================================
-  // Universal Invariants across all Units 11–20
+  // Universal Invariants across all Units 11–25
   // ==========================================================================
   describe.each(allTier2Units)('Universal Schema & Quality Invariants: $unit_id ($title.th)', (unit) => {
     describe('Unit Metadata & Structure', () => {
       it('has valid top-level unit metadata matching Tier 2 Manifest', () => {
-        expect(unit.unit_id).toMatch(/^tier2_u(1[1-9]|20)$/);
+        expect(unit.unit_id).toMatch(/^tier2_u(1[1-9]|2[0-5])$/);
         expect(unit.tier).toBe(2);
         expect(unit.unit_number).toBeGreaterThanOrEqual(11);
-        expect(unit.unit_number).toBeLessThanOrEqual(20);
+        expect(unit.unit_number).toBeLessThanOrEqual(25);
         expect(unit.title.zh).toBeTruthy();
         expect(unit.title.th).toBeTruthy();
         expect(unit.title.en).toBeTruthy();
@@ -74,24 +101,26 @@ describe('Tier 2 (Units 11-20) Curriculum Data & Pedagogical Schema Verification
         expect(allVocab.length).toBeGreaterThanOrEqual(18);
       });
 
-      it('adheres to Simplified Chinese characters without traditional variants', () => {
-        const traditionalDisallowed = [
-          '國', '謝', '歡', '見', '們', '門', '個', '樣', '東', '點',
-          '這', '買', '賣', '錢', '車', '飯', '時', '後', '條', '幾', '兩', '塊', '貴',
-          '壞', '預', '訂', '護', '碼', '員', '線', '換', '貨', '發', '質', '處', '藥',
-          '掛', '號', '賬', '帳', '櫃', '檯', '匯', '幣', '禮', '報', '證', '險'
-        ];
+      it('adheres to Simplified Chinese characters without traditional variants (75-character blacklist)', () => {
         allVocab.forEach((vocab) => {
           expect(vocab.hanzi).toBeTruthy();
-          for (const char of traditionalDisallowed) {
-            expect(vocab.hanzi).not.toContain(char);
+          for (const char of vocab.hanzi) {
+            expect(TRADITIONAL_BLACKLIST.has(char)).toBe(false);
           }
+        });
+
+        unit.lessons.forEach((lesson) => {
+          lesson.dialogue.forEach((line) => {
+            for (const char of line.zh) {
+              expect(TRADITIONAL_BLACKLIST.has(char)).toBe(false);
+            }
+          });
         });
       });
 
       it('includes complete mnemonics, gestures, and radical explanations for each word', () => {
         allVocab.forEach((vocab) => {
-          expect(vocab.id).toMatch(/^hsk2_(1[1-9]|20)\d{2}$/);
+          expect(vocab.id).toMatch(/^hsk2_(1[1-9]|2[0-5])\d{2}$/);
           expect(vocab.pinyin).toBeTruthy();
           expect(vocab.pinyin_tone).toBeTruthy();
           expect(vocab.meaning_th).toBeTruthy();
@@ -159,6 +188,7 @@ describe('Tier 2 (Units 11-20) Curriculum Data & Pedagogical Schema Verification
               expect(Array.isArray(quiz.correct_sequence)).toBe(true);
               expect(quiz.correct_sequence?.length).toBe(quiz.tokens?.length);
               expect(quiz.tokens!.join('')).not.toBe(quiz.correct_sequence!.join(''));
+              expect([...quiz.tokens!].sort()).toEqual([...quiz.correct_sequence!].sort());
             } else {
               expect(Array.isArray(quiz.options)).toBe(true);
               expect(quiz.options?.length).toBeGreaterThanOrEqual(2);
@@ -338,6 +368,104 @@ describe('Tier 2 (Units 11-20) Curriculum Data & Pedagogical Schema Verification
       const l1 = unit20.lessons.find((l: Lesson) => l.lesson_number === 1);
       expect(l1?.grammar_bite.title).toContain('连...都...');
     });
+
+    it('Unit 21 (Entertainment & Cinema): covers 电影院, 爆米花, A 没有 B 那么..., and 故宫预约', () => {
+      const vocab21 = unit21.lessons.flatMap((l: Lesson) => l.vocabulary.map((v: VocabularyItem) => v.hanzi));
+      expect(vocab21).toContain('电影院');
+      expect(vocab21).toContain('选座');
+      expect(vocab21).toContain('爆米花');
+      expect(vocab21).toContain('屏幕');
+      expect(vocab21).toContain('博物馆');
+      expect(vocab21).toContain('展览');
+      expect(vocab21).toContain('门票');
+      expect(vocab21).toContain('讲解器');
+      expect(vocab21).toContain('精彩');
+      expect(vocab21).toContain('故宫');
+      expect(vocab21).toContain('实名制');
+
+      const l1 = unit21.lessons.find((l: Lesson) => l.lesson_number === 1);
+      expect(l1?.grammar_bite.title).toContain('A + 没有 + B + 那么');
+    });
+
+    it('Unit 22 (Fitness & Outdoors): covers 健身房, 跑步机, 一边...一边..., 羽毛球, 徒步, and 着 aspect', () => {
+      const vocab22 = unit22.lessons.flatMap((l: Lesson) => l.vocabulary.map((v: VocabularyItem) => v.hanzi));
+      expect(vocab22).toContain('健身房');
+      expect(vocab22).toContain('锻炼');
+      expect(vocab22).toContain('跑步机');
+      expect(vocab22).toContain('哑铃');
+      expect(vocab22).toContain('羽毛球');
+      expect(vocab22).toContain('乒乓球');
+      expect(vocab22).toContain('场地');
+      expect(vocab22).toContain('徒步');
+      expect(vocab22).toContain('露营');
+      expect(vocab22).toContain('帐篷');
+      expect(vocab22).toContain('背包');
+      expect(vocab22).toContain('会员卡');
+
+      const l1 = unit22.lessons.find((l: Lesson) => l.lesson_number === 1);
+      expect(l1?.grammar_bite.title).toContain('一边');
+    });
+
+    it('Unit 23 (Workplace Orientation): covers 办公室, 打印机, 复印, 扫描, 首先...然后...最后..., and 请假', () => {
+      const vocab23 = unit23.lessons.flatMap((l: Lesson) => l.vocabulary.map((v: VocabularyItem) => v.hanzi));
+      expect(vocab23).toContain('办公室');
+      expect(vocab23).toContain('打印机');
+      expect(vocab23).toContain('复印');
+      expect(vocab23).toContain('扫描');
+      expect(vocab23).toContain('发送');
+      expect(vocab23).toContain('抄送');
+      expect(vocab23).toContain('附件');
+      expect(vocab23).toContain('请假');
+      expect(vocab23).toContain('病假');
+      expect(vocab23).toContain('按时');
+      expect(vocab23).toContain('交付');
+      expect(vocab23).toContain('交接');
+
+      const l1 = unit23.lessons.find((l: Lesson) => l.lesson_number === 1);
+      expect(l1?.grammar_bite.title).toContain('首先');
+    });
+
+    it('Unit 24 (Opinions & Discussion): covers 观点, 赞同, 反对, 尽管...但是..., 不妨, and 一方面...另一方面...', () => {
+      const vocab24 = unit24.lessons.flatMap((l: Lesson) => l.vocabulary.map((v: VocabularyItem) => v.hanzi));
+      expect(vocab24).toContain('观点');
+      expect(vocab24).toContain('赞同');
+      expect(vocab24).toContain('反对');
+      expect(vocab24).toContain('实际上');
+      expect(vocab24).toContain('建议');
+      expect(vocab24).toContain('不妨');
+      expect(vocab24).toContain('方案');
+      expect(vocab24).toContain('生活节奏');
+      expect(vocab24).toContain('平衡');
+      expect(vocab24).toContain('灵活性');
+      expect(vocab24).toContain('总结');
+      expect(vocab24).toContain('达成');
+      expect(vocab24).toContain('共识');
+
+      const l1 = unit24.lessons.find((l: Lesson) => l.lesson_number === 1);
+      expect(l1?.grammar_bite.title).toContain('尽管...但是...');
+    });
+
+    it('Unit 25 (Grand Boss: 7-Day China Odyssey): covers 启程, 行程, 卧铺, 攻略, 延误, 改签, 民宿, 穿越, and 克服', () => {
+      const vocab25 = unit25.lessons.flatMap((l: Lesson) => l.vocabulary.map((v: VocabularyItem) => v.hanzi));
+      expect(vocab25).toContain('启程');
+      expect(vocab25).toContain('行程');
+      expect(vocab25).toContain('卧铺');
+      expect(vocab25).toContain('攻略');
+      expect(vocab25).toContain('甚至');
+      expect(vocab25).toContain('延误');
+      expect(vocab25).toContain('暴雨');
+      expect(vocab25).toContain('改签');
+      expect(vocab25).toContain('民宿');
+      expect(vocab25).toContain('穿越');
+      expect(vocab25).toContain('挑战');
+      expect(vocab25).toContain('克服');
+      expect(vocab25).toContain('独立');
+      expect(vocab25).toContain('奇迹');
+
+      const l4 = unit25.lessons.find((l: Lesson) => l.lesson_number === 4);
+      expect(l4?.boss_challenge?.scenario_th).toContain('Grand Capstone');
+      expect(l4?.cheer_trophy?.badge_id).toBe('badge_t2_u25_master');
+    });
   });
 
   // ==========================================================================
@@ -349,9 +477,9 @@ describe('Tier 2 (Units 11-20) Curriculum Data & Pedagogical Schema Verification
       const engine = new CurriculumEngine();
       const summary = await engine.validate({ tier: '2', strict: true });
 
-      expect(summary.totalUnitsChecked).toBe(10);
-      expect(summary.totalLessonsChecked).toBe(40);
-      expect(summary.totalVocabChecked).toBeGreaterThanOrEqual(200);
+      expect(summary.totalUnitsChecked).toBe(15);
+      expect(summary.totalLessonsChecked).toBe(60);
+      expect(summary.totalVocabChecked).toBeGreaterThanOrEqual(300);
       expect(summary.errors.length).toBe(0);
       expect(summary.warnings.length).toBe(0);
       expect(summary.success).toBe(true);
