@@ -1,0 +1,901 @@
+/**
+ * scripts/tier2_batch_b/unit18.ts
+ * Tier 2 Unit 18: 银行与通信业务 (Banking & Telecom Services)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit18 = {
+  unit_id: 'tier2_u18',
+  tier: 2,
+  unit_number: 18,
+  title: {
+    zh: '银行与通信业务',
+    th: 'เปิดบัญชีธนาคาร & จัดการซิมการ์ด',
+    en: 'Banking & Telecom Services'
+  },
+  description: 'จัดการธุรกรรมการเงินและการสื่อสารในจีนอย่างมืออาชีพ เปิดบัญชีธนาคาร ICBC ด้วยพาสปอร์ต ซื้อแพ็กเกจเน็ตมือถือ 5G แลกเปลี่ยนเงินตรา และผูกบัญชีเข้ากระเป๋าดิจิทัล',
+  lessons: [
+    {
+      lesson_id: 't2_u18_l01',
+      lesson_number: 1,
+      title: {
+        zh: '开设银行账户',
+        th: 'เปิดบัญชีธนาคาร & พาสปอร์ต',
+        en: 'Opening Bank Accounts'
+      },
+      can_do: {
+        th: 'ติดต่อเปิดบัญชีธนาคาร แสดงพาสปอร์ตตัวจริง และทำธุรกรรมโดยใช้ไวยากรณ์เงื่อนไขจำเป็น 只有...才...',
+        en: 'Inquire about opening bank accounts, present passports, and use conditional 只有...才...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เดินเข้าเคาน์เตอร์ธนาคาร ICBC แจ้งเปิดบัญชีธนาคารและเซ็นชื่อรับบัตรเดบิตได้อย่างราบรื่น!',
+      vocabulary: [
+        {
+          id: 'hsk2_1801',
+          hanzi: '开户',
+          pinyin: 'kāihù',
+          display_pinyin: 'kāihù',
+          pinyin_tone: 'kai1hu4',
+          meaning_th: 'เปิดบัญชีธนาคาร',
+          meaning_en: 'to open a bank account',
+          radical: '门',
+          radical_name_th: 'หมวดประตู (门字框)',
+          stroke_count: 8,
+          mnemonic: 'เปิดประตู (开) เพื่อลงทะเบียนแฟ้มทะเบียนครอบครัวหรือบัญชีทางการ (户) = เปิดบัญชี',
+          kid_mnemonic: 'เปิดสมุดบัญชีเล่มใหม่ รับบัตรเอทีเอ็มสีทอง = 开户',
+          body_gesture: 'ทำท่าเปิดสมุดบัญชีแล้วจรดปากกาเซ็นชื่อ'
+        },
+        {
+          id: 'hsk2_1802',
+          hanzi: '银行卡',
+          pinyin: 'yínhángkǎ',
+          display_pinyin: 'yínhángkǎ',
+          pinyin_tone: 'yin2hang2ka3',
+          meaning_th: 'บัตรธนาคาร / บัตรเดบิต',
+          meaning_en: 'bank card / debit card',
+          radical: '钅',
+          radical_name_th: 'หมวดโลหะ/ทองคำ (金字旁)',
+          stroke_count: 27,
+          mnemonic: 'แผ่นการ์ดพลาสติกชิปการ์ด (卡) ที่ออกโดยสถาบันการเงินการธนาคาร (银行) = บัตรธนาคาร',
+          kid_mnemonic: 'บัตรสี่เหลี่ยมมีชิปทอง ใช้แตะจ่ายตู้หรือผูกแอป = 银行卡',
+          body_gesture: 'หยิบบัตรส่งให้เจ้าหน้าที่ด้วยสองมืออย่างสุภาพ'
+        },
+        {
+          id: 'hsk2_1803',
+          hanzi: '本人',
+          pinyin: 'běnrén',
+          display_pinyin: 'běnrén',
+          pinyin_tone: 'ben3ren2',
+          meaning_th: 'เจ้าตัว / ตนเอง',
+          meaning_en: 'oneself / in person',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 7,
+          mnemonic: 'รากเหง้ากำเนิดเดิม (本) ของบุคคลที่มีตัวตนอยู่จริง (人) = เจ้าตัว / ตัวจริง',
+          kid_mnemonic: 'ชี้ที่ตัวเอง ยืนยันว่าฉันมาทำธุรกรรมด้วยตัวเอง = 本人',
+          body_gesture: 'ใช้นิ้วชี้แตะที่หน้าอกตัวเองอย่างมั่นใจ'
+        },
+        {
+          id: 'hsk2_1804',
+          hanzi: '签字',
+          pinyin: 'qiānzì',
+          display_pinyin: 'qiānzì',
+          pinyin_tone: 'qian1zi4',
+          meaning_th: 'เซ็นชื่อ / ลงนาม',
+          meaning_en: 'to sign / signature',
+          radical: '竹',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 18,
+          mnemonic: 'ใช้พู่กันก้านไผ่ (竹) จรดเขียนตัวอักษรลายเซ็นของตนเอง (字) = เซ็นชื่อ',
+          kid_mnemonic: 'จับปากกาเขียนชื่อตัวเองลงในช่องสี่เหลี่ยม = 签字',
+          body_gesture: 'ทำมือจับปากกาตวัดเซ็นชื่อในอากาศ'
+        },
+        {
+          id: 'hsk2_1805',
+          hanzi: '柜台',
+          pinyin: 'guìtái',
+          display_pinyin: 'guìtái',
+          pinyin_tone: 'gui4tai2',
+          meaning_th: 'เคาน์เตอร์บริการ / ช่องบริการ',
+          meaning_en: 'counter / service desk',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 14,
+          mnemonic: 'โต๊ะเคาน์เตอร์ทำด้วยไม้ (柜) ที่ตั้งขึ้นเป็นแท่นให้บริการ (台) = เคาน์เตอร์บริการ',
+          kid_mnemonic: 'โต๊ะกั้นกระจกใส มีไมโครโฟนคุยกับพนักงานแบงก์ = 柜台',
+          body_gesture: 'วาดกรอบเคาน์เตอร์สี่เหลี่ยมตรงหน้า'
+        },
+        {
+          id: 'hsk2_1806',
+          hanzi: '取款',
+          pinyin: 'qǔkuǎn',
+          display_pinyin: 'qǔkuǎn',
+          pinyin_tone: 'qu3kuan3',
+          meaning_th: 'ถอนเงินสด / การเบิกเงิน',
+          meaning_en: 'to withdraw money / cash withdrawal',
+          radical: '又',
+          radical_name_th: 'หมวดมือขวา/อีกครั้ง (又字旁)',
+          stroke_count: 20,
+          sandhi_rule: '3+3',
+          mnemonic: 'ใช้มือหยิบดึงออกมา (取) ซึ่งเงินสดและทุนทรัพย์ (款) = ถอนเงิน',
+          kid_mnemonic: 'สอดบัตรเข้าตู้แล้วหยิบเงินสดออกมาใส่กระเป๋า = 取款',
+          body_gesture: 'ทำท่าดึงธนบัตรออกจากช่องจ่ายเงินของตู้เอทีเอ็ม'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'เงื่อนไขจำเป็นเด็ดขาด: 只有...才... (Only if...)',
+        description_th: '只有...才... ใช้เมื่อมีเงื่อนไขเพียงหนึ่งเดียวเท่านั้นที่จะทำให้เกิดผลลัพธ์ได้ (ตรงข้ามกับ 只要...就... ที่เป็นเงื่อนไขเพียงพอทั่วไป)',
+        example: '只有出示护照原件，才能办理开户 (Zhǐyǒu chūshì hùzhào yuánjiàn, cái néng bànlǐ kāihù)',
+        fun_metaphor: '只有...才... เหมือนกุญแจดอกเดียวที่ไขเข้าบ้านได้ ไม่มีกุญแจดอกนี้ก็เข้าไม่ได้เด็ดขาด!',
+        reassurance: 'คำว่า 只有 (zhǐyǒu) เข้ากฎเสียง 3 คู่กัน ผันเป็น zhíyǒu ได้ลื่นไหล!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เงื่อนไขเด็ดขาด: 只有...才... และ 必须...',
+        explanation_th: 'ระบุเงื่อนไขการทำธุรกรรมว่าต้องมีพาสปอร์ตตัวจริงและเจ้าตัวเซ็นชื่อเท่านั้น',
+        patterns: [
+          {
+            formula: '只有 + [เงื่อนไขเด็ดขาด] + 才 + 可以 + [กริยา]',
+            zh: '只有本人签字，才可以开户。',
+            pinyin: 'Zhǐyǒu běnrén qiānzì, cái kěyǐ kāihù.',
+            th: 'มีเพียงเจ้าตัวเซ็นชื่อด้วยตัวเองเท่านั้น จึงจะสามารถเปิดบัญชีได้',
+            en: 'Only with personal signature can an account be opened.'
+          },
+          {
+            formula: '必须 + 出示 + 护照原件',
+            zh: '办理业务必须出示护照原件。',
+            pinyin: 'Bànlǐ yèwù bìxū chūshì hùzhào yuánjiàn.',
+            th: 'การทำธุรกรรมจำเป็นต้องแสดงหนังสือเดินทางตัวจริง',
+            en: 'Processing transactions requires presenting the original passport.'
+          },
+          {
+            formula: '请在键盘上输入 + 六位 + 密码',
+            zh: '请在密码键盘上输入六位数字密码。',
+            pinyin: 'Qǐng zài mìmǎ jiànpán shang shūrù liù wèi shùzì mìmǎ.',
+            th: 'กรุณากรอกรหัสผ่านตัวเลข 6 หลักบนแป้นพิมพ์รหัสครับ',
+            en: 'Please enter a 6-digit numeric password on the PIN pad.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '工作人员您好！我是外国留学生，想在柜台办理银行卡开户。',
+          pinyin: 'Gōngzuò rényuán nín hǎo! Wǒ shì wàiguó liúxuéshēng, xiǎng zài guìtái bànlǐ yínhángkǎ kāihù.',
+          th: 'สวัสดีครับเจ้าหน้าที่! ผมเป็นนักเรียนต่างชาติ อยากมาทำเรื่องเปิดบัญชีบัตรธนาคารที่เคาน์เตอร์ครับ',
+          en: 'Hello staff! I am an international student, I would like to open a bank card account at the counter.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่ธนาคาร 👨‍💼',
+          zh: '您好！开户必须出示护照原件。请问您带护照了吗？',
+          pinyin: 'Nín hǎo! Kāihù bìxū chūshì hùzhào yuánjiàn. Qǐngwèn nín dài hùzhào le ma?',
+          th: 'สวัสดีครับ! การเปิดบัญชีจำเป็นต้องแสดงหนังสือเดินทางตัวจริงครับ ไม่ทราบว่าคุณนำพาสปอร์ตมาด้วยไหมครับ?',
+          en: 'Hello! Account opening requires the original passport. Did you bring your passport?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '带来了，这是我的护照。表格我也填好了。',
+          pinyin: 'Dài lái le, zhè shì wǒ de hùzhào. Biǎogé wǒ yě tián hǎo le.',
+          th: 'นำมาครับ นี่คือพาสปอร์ตของผม แบบฟอร์มผมก็กรอกเรียบร้อยแล้วครับ',
+          en: 'Brought it, here is my passport. I also filled in the form.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่ธนาคาร 👨‍💼',
+          zh: '好的。只有本人核对信息并签字，才可以激活。请在键盘上设置六位取款密码。',
+          pinyin: 'Hǎo de. Zhǐyǒu běnrén héduì xìnxī bìng qiānzì, cái kěyǐ jīhuó. Qǐng zài jiànpán shang shèzhì liù wèi qǔkuǎn mìmǎ.',
+          th: 'เรียบร้อยครับ มีเพียงเจ้าตัวตรวจสอบข้อมูลและลงลายมือชื่อเท่านั้นจึงจะเปิดใช้งานได้ กรุณาตั้งรหัสผ่านถอนเงิน 6 หลักบนแป้นพิมพ์นะครับ',
+          en: 'Great. Only when you verify info and sign in person can it be activated. Please set a 6-digit withdrawal PIN on the keypad.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อเจ้าหน้าที่แจ้งว่า '只有本人签字，才可以开户' หมายถึงข้อใด?",
+          options: [
+            'มีเพียงเจ้าตัวเซ็นชื่อด้วยตัวเองเท่านั้น จึงจะเปิดบัญชีได้',
+            'ใครมาเปิดแทนก็ได้ เพียงแค่มีพาสปอร์ต',
+            'ต้องจ่ายเงินค่าธรรมเนียมก่อน จึงจะเซ็นชื่อได้',
+            'เปิดบัญชีเสร็จแล้ว ไม่จำเป็นต้องตั้งรหัสผ่าน'
+          ],
+          correct_index: 0,
+          explanation_th: "'只有...才...' แสดงเงื่อนไขจำเป็นเด็ดขาด (เฉพาะเจ้าตัวเซ็นชื่อเท่านั้น จึงจะเปิดบัญชีได้)",
+          encouragement: 'เข้าใจไวยากรณ์เงื่อนไขเด็ดขาดของธุรกรรมการเงินได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '银' ในคำว่า '银行' (ธนาคาร) มีหมวดนำโลหะ '钅' สื่อถึงสิ่งใด?",
+          options: [
+            'โลหะเงินและทองคำมีค่า',
+            'กระดาษพิมพ์หนังสือ',
+            'ยานพาหนะทางน้ำ',
+            'ต้นไม้ใหญ่'
+          ],
+          correct_index: 0,
+          explanation_th: "'钅' (金字旁) สื่อถึงโลหะมีค่า เช่น เงิน ทองคำ ซึ่งเป็นรากฐานของธนาคาร",
+          encouragement: 'จำหมวดนำโลหะ 钅 ได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เปิดบัญชีจำเป็นต้องแสดงหนังสือเดินทางตัวจริง"',
+          tokens: ['护照原件', '开户', '必须出示'],
+          correct_sequence: ['开户', '必须出示', '护照原件'],
+          pinyin: 'Kāihù bìxū chūshì hùzhào yuánjiàn',
+          meaning_th: 'เปิดบัญชีจำเป็นต้องแสดงหนังสือเดินทางตัวจริง',
+          explanation_th: 'หัวข้อประโยค (开户) + กริยาช่วยและกริยา (必须出示) + กรรมนาม (护照原件)',
+          encouragement: 'ต่อบล็อกเลโก้ประโยคระเบียบการธนาคารได้เนียนกริบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '开户' (kāihù) มีความหมายตรงกับข้อใด?",
+          options: [
+            'เปิดบัญชีธนาคาร',
+            'ปิดบัญชี',
+            'โอนเงินข้ามประเทศ',
+            'กู้ยืมเงิน'
+          ],
+          correct_index: 0,
+          explanation_th: "'开户' แปลว่า เปิดบัญชี (开 = เปิด, 户 = บัญชี/ทะเบียน)",
+          encouragement: 'เก่งมาก! ศัพท์ธุรกรรมการเงินแม่นยำสุดๆ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u18_l02',
+      lesson_number: 2,
+      title: {
+        zh: '手机套餐与流量',
+        th: 'แพ็กเกจมือถือ & อินเทอร์เน็ต',
+        en: 'SIM Packages & 5G Data'
+      },
+      can_do: {
+        th: 'เลือกแพ็กเกจซิมการ์ดโทรศัพท์ สอบถามปริมาณอินเทอร์เน็ต (流量) และค่าบริการส่วนเกิน',
+        en: 'Select mobile SIM packages, inquire about data allowances, and extra data charges'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ซื้อซิมการ์ดที่ China Mobile ระบุความต้องการเน็ต 30GB ต่อเดือน และเปิดใช้งานสำเร็จ!',
+      vocabulary: [
+        {
+          id: 'hsk2_1807',
+          hanzi: '手机卡',
+          pinyin: 'shǒujīkǎ',
+          display_pinyin: 'shǒujīkǎ',
+          pinyin_tone: 'shou3ji1ka3',
+          meaning_th: 'ซิมการ์ดโทรศัพท์มือถือ',
+          meaning_en: 'mobile SIM card',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'แผ่นการ์ดชิปขนาดจิ๋ว (卡) สำหรับใส่ในเครื่องโทรศัพท์มือถือ (手机) = ซิมการ์ด',
+          kid_mnemonic: 'ชิปจิ๋วสีทอง เสียบใส่ข้างเครื่องแล้วโทรออกได้ทันที = 手机卡',
+          body_gesture: 'ทำท่าสอดไมโครซิมการ์ดเข้าช่องข้างโทรศัพท์'
+        },
+        {
+          id: 'hsk2_1808',
+          hanzi: '套餐',
+          pinyin: 'tàocān',
+          display_pinyin: 'tàocān',
+          pinyin_tone: 'tao4can1',
+          meaning_th: 'แพ็กเกจโปรโมชั่น / ชุดบริการ',
+          meaning_en: 'package plan / combo set',
+          radical: '大',
+          radical_name_th: 'หมวดใหญ่ (大字旁)',
+          stroke_count: 26,
+          mnemonic: 'จัดรวมบริการหลายอย่างเป็นชุดเดียว (套) เหมือนชุดอาหารรวมมิตร (餐) = แพ็กเกจโปรโมชั่น',
+          kid_mnemonic: 'ชุดคอมโบเซ็ต มีทั้งเน็ต ทั้งโทร ครบในราคาเดียว = 套餐',
+          body_gesture: 'โอบมือสองข้างรวมสิ่งของเข้าหากลางอก'
+        },
+        {
+          id: 'hsk2_1809',
+          hanzi: '流量',
+          pinyin: 'liúliàng',
+          display_pinyin: 'liúliàng',
+          pinyin_tone: 'liu2liang4',
+          meaning_th: 'อินเทอร์เน็ตมือถือ / ดาต้าเน็ต',
+          meaning_en: 'mobile data / internet traffic',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 21,
+          mnemonic: 'ปริมาณข้อมูล (量) ที่หลั่งไหลผ่านเครือข่ายดั่งสายน้ำ (流) = อินเทอร์เน็ตมือถือ',
+          kid_mnemonic: 'คลื่น 5G ไหลเข้ามือถือ ดูคลิป ดูแผนที่ ลื่นไหล = 流量',
+          body_gesture: 'ทำนิ้วมือพริ้วไหวเหมือนคลื่นอินเทอร์เน็ตความเร็วสูง'
+        },
+        {
+          id: 'hsk2_1810',
+          hanzi: '实名认证',
+          pinyin: 'shímíng rènzhèng',
+          display_pinyin: 'shímíng rènzhèng',
+          pinyin_tone: 'shi2ming2 ren4zheng4',
+          meaning_th: 'ลงทะเบียนยืนยันตัวตนด้วยชื่อจริง',
+          meaning_en: 'real-name authentication',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาเรือน (宝盖头)',
+          stroke_count: 29,
+          mnemonic: 'ยืนยันและรับรอง (认证) ด้วยชื่อจริงตามกฎหมาย (实名) = ลงทะเบียนชื่อจริง',
+          kid_mnemonic: 'ยื่นพาสปอร์ต สแกนหน้าเพื่อเปิดเบอร์ตามกฎหมายจีน = 实名认证',
+          body_gesture: 'ชูพาสปอร์ตเทียบกับใบหน้าแล้วมองกล้อง'
+        },
+        {
+          id: 'hsk2_1811',
+          hanzi: '包含',
+          pinyin: 'bāohán',
+          display_pinyin: 'bāohán',
+          pinyin_tone: 'bao1han2',
+          meaning_th: 'ครอบคลุม / รวมอยู่ในแพ็กเกจ',
+          meaning_en: 'to include / contain',
+          radical: '勹',
+          radical_name_th: 'หมวดห่อหุ้ม (包字头)',
+          stroke_count: 12,
+          mnemonic: 'ห่อหุ้มสิ่งต่างๆ รวมไว้ (包) ภายในขอบเขตเดียวกัน (含) = ครอบคลุม / รวมอยู่',
+          kid_mnemonic: 'ห่อของขวัญใบใหญ่ มีเน็ต 30G อยู่ข้างใน = 包含',
+          body_gesture: 'รวบนิ้วมือทั้งหมดเข้าหากลางฝ่ามือ'
+        },
+        {
+          id: 'hsk2_1812',
+          hanzi: '计费',
+          pinyin: 'jìfèi',
+          display_pinyin: 'jìfèi',
+          pinyin_tone: 'ji4fei4',
+          meaning_th: 'คิดค่าบริการ / คำนวณค่าธรรมเนียม',
+          meaning_en: 'to charge / billing',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 13,
+          mnemonic: 'คำนวณและนับตัวเลข (计) ตามค่าใช้จ่ายและค่าธรรมเนียม (费) = คิดค่าบริการ',
+          kid_mnemonic: 'เครื่องคิดเลขกดคำนวณค่าเน็ตส่วนเกิน = 计费',
+          body_gesture: 'ทำนิ้วมือกดปุ่มเครื่องคิดเลข'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: การผันเสียง 五块钱 (wǔ kuài qián)',
+        description_th: 'คำว่า 五 (เสียง 3) ตามด้วย 块 (เสียง 4) คำว่า 五 จะออกเสียงเป็น Half-3rd Tone (ออกเสียงต่ำ ไม่ตวัดหางขึ้น)',
+        example: '五块钱 (wǔ kuài qián), 五十块 (wǔshí kuài)',
+        fun_metaphor: 'เสียงสามเจอเสียงสี่ กดเสียงต่ำลงให้หนักแน่นเหมือนวางเงินลงบนโต๊ะ!',
+        reassurance: 'คำว่า 流量 (liúliàng) ในภาษาจีนยุคดิจิทัล แปลว่า ดาต้าเน็ตมือถือ เสมอ!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้แพ็กเกจเน็ต: 包含...流量 และ 超出部分...',
+        explanation_th: 'อธิบายว่าแพ็กเกจรวมอะไรบ้าง และส่วนเกินคิดค่าบริการอย่างไร',
+        patterns: [
+          {
+            formula: '这个套餐 + 每个月包含 + [ตัวเลข] + GB流量',
+            zh: '这个套餐每个月包含三十G高速流量。',
+            pinyin: 'Zhè ge tàocān měi ge yuè bāohán sānshí G gāosù liúliàng.',
+            th: 'แพ็กเกจนี้รวมเน็ตความเร็วสูง 30GB ทุกเดือนครับ',
+            en: 'This package includes 30GB high-speed data every month.'
+          },
+          {
+            formula: '超出部分 + 按照 + [อัตรา] + 计费',
+            zh: '超出部分按照每G五块钱计费。',
+            pinyin: 'Chāochū bùfen ànzhào měi G wǔ kuài qián jìfèi.',
+            th: 'ส่วนที่เกินจากแพ็กเกจคิดค่าบริการ GB ละ 5 หยวน',
+            en: 'The exceeded portion is charged at 5 yuan per GB.'
+          },
+          {
+            formula: '办理手机卡 + 需要 + 实名认证',
+            zh: '办理手机卡需要护照实名认证。',
+            pinyin: 'Bànlǐ shǒujīkǎ xūyào hùzhào shímíng rènzhèng.',
+            th: 'การเปิดซิมการ์ดต้องใช้พาสปอร์ตยืนยันตัวตนชื่อจริง',
+            en: 'Opening a SIM card requires real-name authentication with passport.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '营业员您好！我想办一张中国移动的手机卡，哪个套餐流量比较多？',
+          pinyin: 'Yíngyèyuán nín hǎo! Wǒ xiǎng bàn yì zhāng Zhōngguó Yídòng de shǒujīkǎ, nǎge tàocān liúliàng bǐjiào duō?',
+          th: 'สวัสดีครับพนักงาน! ผมอยากเปิดเบอร์ซิมการ์ดของ China Mobile แพ็กเกจไหนมีเน็ตเยอะหน่อยครับ?',
+          en: 'Hello staff! I want to get a China Mobile SIM card, which package has more data?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานศูนย์บริการ 👩‍💼',
+          zh: '推荐您办五十九元套餐，每个月包含三十G国内流量和两百分钟通话。',
+          pinyin: 'Tuījiàn nín bàn wǔshíjiǔ yuán tàocān, měi ge yuè bāohán sānshí G guónèi liúliàng hé liǎngbǎi fēnzhōng tōnghuà.',
+          th: 'แนะนำแพ็กเกจ 59 หยวนค่ะ รวมเน็ตในประเทศ 30GB และโทรฟรี 200 นาทีทุกเดือนค่ะ',
+          en: 'We recommend the 59 yuan package, which includes 30GB domestic data and 200 minutes of talk time per month.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '请问如果三十G用完了，超出部分怎么计费？',
+          pinyin: 'Qǐngwèn rúguǒ sānshí G yòng wán le, chāochū bùfen zěnme jìfèi?',
+          th: 'ขอถามหน่อยครับถ้าใช้ 30GB หมดแล้ว ส่วนเกินคิดค่าบริการอย่างไรครับ?',
+          en: 'Excuse me, if the 30GB is used up, how is the exceeded portion charged?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานศูนย์บริการ 👩‍💼',
+          zh: '超出部分按照每GB五块钱计费。请出示您的护照，我们需要拍照进行实名认证。',
+          pinyin: 'Chāochū bùfen ànzhào měi GB wǔ kuài qián jìfèi. Qǐng chūshì nín de hùzhào, wǒmen xūyào pāizhào jìnxíng shímíng rènzhèng.',
+          th: 'ส่วนที่เกินคิดค่าบริการ GB ละ 5 หยวนค่ะ กรุณาแสดงพาสปอร์ตนะคะ เราต้องถ่ายรูปเพื่อทำการยืนยันตัวตนชื่อจริงค่ะ',
+          en: 'Exceeded data is charged at 5 yuan per GB. Please present your passport, we need to take a photo for real-name authentication.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในบริบทซิมโทรศัพท์มือถือ คำว่า '流量' (liúliàng) หมายถึงข้อใด?",
+          options: [
+            'อินเทอร์เน็ตมือถือ / ดาต้าเน็ต',
+            'การจราจรบนท้องถนน',
+            'กระแสน้ำในแม่น้ำ',
+            'จำนวนเงินคงเหลือในซิม'
+          ],
+          correct_index: 0,
+          explanation_th: "ในประเทศจีน '流量' หมายถึง ปริมาณดาต้าอินเทอร์เน็ตมือถือ (Data traffic)",
+          encouragement: 'เข้าใจคำศัพท์ยุคดิจิทัลของจีนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '流' ในคำว่า '流量' (ดาต้าเน็ต) มีหมวดนำน้ำ '氵' สื่อถึงสิ่งใด?",
+          options: [
+            'การไหลเวียนถ่ายโอนข้อมูลดั่งสายน้ำ',
+            'ไฟลุกไหม้',
+            'การก่อสร้างอาคาร',
+            'การปรุงอาหาร'
+          ],
+          correct_index: 0,
+          explanation_th: "'氵' (三点水) สื่อถึงของเหลวหรือการไหลเวียน เปรียบเสมือนข้อมูลเน็ตที่ไหลเวียนในเครือข่าย",
+          encouragement: 'จำหมวดนำน้ำ 氵 ได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แพ็กเกจนี้รวมเน็ต 30GB"',
+          tokens: ['包含三十G流量', '这个套餐'],
+          correct_sequence: ['这个套餐', '包含三十G流量'],
+          pinyin: 'Zhè ge tàocān bāohán sānshí G liúliàng',
+          meaning_th: 'แพ็กเกจนี้รวมเน็ต 30GB',
+          explanation_th: 'ประธาน (这个套餐) + กริยาและกรรม (包含三十G流量)',
+          encouragement: 'ต่อบล็อกเลโก้แพ็กเกจมือถือได้ยอดเยี่ยม!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '实名认证' (shímíng rènzhèng) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ลงทะเบียนยืนยันตัวตนด้วยชื่อจริง',
+            'เปลี่ยนเบอร์โทรศัพท์ใหม่',
+            'เติมเงินโทรศัพท์',
+            'ยกเลิกแพ็กเกจรายเดือน'
+          ],
+          correct_index: 0,
+          explanation_th: "'实名认证' แปลว่า การยืนยันตัวตนด้วยชื่อจริงตามบัตรหรือพาสปอร์ต",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์กฎหมายดิจิทัลแม่นยำสุดๆ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u18_l03',
+      lesson_number: 3,
+      title: {
+        zh: '汇款与外币兑换',
+        th: 'โอนเงิน & แลกเปลี่ยนเงินตรา',
+        en: 'Remittance & Currency Exchange'
+      },
+      can_do: {
+        th: 'สอบถามอัตราแลกเปลี่ยน (汇率) แลกเงินบาท/ดอลลาร์เป็นเงินหยวน และสอบถามค่าธรรมเนียม',
+        en: 'Inquire about exchange rates, convert THB/USD to RMB, and ask about transaction fees'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: แลกเงินบาทไทยเป็นเงินหยวนที่เคาน์เตอร์ธนาคาร และตรวจนับเงินสดได้อย่างถูกต้อง!',
+      vocabulary: [
+        {
+          id: 'hsk2_1813',
+          hanzi: '汇款',
+          pinyin: 'huìkuǎn',
+          display_pinyin: 'huìkuǎn',
+          pinyin_tone: 'hui4kuan3',
+          meaning_th: 'โอนเงินข้ามธนาคาร / ส่งเงิน',
+          meaning_en: 'to remit money / remittance',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 17,
+          mnemonic: 'เงินทุน (款) ไหลรวมกันข้ามแดนดั่งสายน้ำ (汇) = โอนเงิน',
+          kid_mnemonic: 'โอนเงินส่งกลับบ้านให้คุณพ่อคุณแม่ = 汇款',
+          body_gesture: 'ผลักสองมือขนานส่งเงินไปข้างหน้าอย่างตั้งใจ'
+        },
+        {
+          id: 'hsk2_1814',
+          hanzi: '兑换',
+          pinyin: 'duìhuàn',
+          display_pinyin: 'duìhuàn',
+          pinyin_tone: 'dui4huan4',
+          meaning_th: 'แลกเปลี่ยนเงินตรา',
+          meaning_en: 'to exchange currency / convert',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 17,
+          mnemonic: 'เอ่ยปากเจรจา (讠) เพื่อสลับเปลี่ยนเงินคนละสกุล (换) = แลกเปลี่ยนเงินตรา',
+          kid_mnemonic: 'ส่งแบงก์บาทไทยไป ได้รับแบงก์เหมาเจ๋อตงสีแดงกลับมา = 兑换',
+          body_gesture: 'พลิกหงายฝ่ามือสองข้างสลับไปมาเหมือนแลกเงิน'
+        },
+        {
+          id: 'hsk2_1815',
+          hanzi: '汇率',
+          pinyin: 'huìlǜ',
+          display_pinyin: 'huìlǜ',
+          pinyin_tone: 'hui4lv4',
+          meaning_th: 'อัตราแลกเปลี่ยนเงินตรา',
+          meaning_en: 'exchange rate',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 16,
+          mnemonic: 'อัตราส่วนและประสิทธิภาพ (率) ของการไหลเวียนเงินตรา (汇) = อัตราแลกเปลี่ยน',
+          kid_mnemonic: 'หน้าจอดิจิทัลขึ้นตัวเลขอัตราแลกเปลี่ยนประจำวัน = 汇率',
+          body_gesture: 'ลากนิ้วชี้เฉียงขึ้นตามเส้นกราฟอัตราแลกเปลี่ยน'
+        },
+        {
+          id: 'hsk2_1816',
+          hanzi: '美元',
+          pinyin: 'měiyuán',
+          display_pinyin: 'měiyuán',
+          pinyin_tone: 'mei3yuan2',
+          meaning_th: 'ดอลลาร์สหรัฐ (USD)',
+          meaning_en: 'US Dollar',
+          radical: '羊',
+          radical_name_th: 'หมวดแพะ (羊字头)',
+          stroke_count: 13,
+          mnemonic: 'เงินตราสกุลหลัก (元) ของประเทศสหรัฐอเมริกา (美) = ดอลลาร์สหรัฐ',
+          kid_mnemonic: 'แบงก์ดอลลาร์สีเขียวมีสัญลักษณ์ $ = 美元',
+          body_gesture: 'วาดสัญลักษณ์ตัว $ ในอากาศด้วยความมั่นใจ'
+        },
+        {
+          id: 'hsk2_1817',
+          hanzi: '泰铢',
+          pinyin: 'tàizhū',
+          display_pinyin: 'tàizhū',
+          pinyin_tone: 'tai4zhu1',
+          meaning_th: 'เงินบาทไทย (THB)',
+          meaning_en: 'Thai Baht',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 20,
+          mnemonic: 'เงินตราที่มีค่ามั่นคง (铢) ของประเทศไทย (泰) = เงินบาทไทย',
+          kid_mnemonic: 'แบงก์ร้อย แบงก์พันบาทของประเทศไทย = 泰铢',
+          body_gesture: 'ทำท่าพนมมือไหว้ทักทายแบบไทย'
+        },
+        {
+          id: 'hsk2_1818',
+          hanzi: '现钞',
+          pinyin: 'xiànchāo',
+          display_pinyin: 'xiànchāo',
+          pinyin_tone: 'xian4chao1',
+          meaning_th: 'ธนบัตรเงินสด',
+          meaning_en: 'cash banknotes',
+          radical: '王',
+          radical_name_th: 'หมวดหยก/ราชา (王字旁)',
+          stroke_count: 19,
+          mnemonic: 'ธนบัตรกระดาษมีค่า (钞) ที่จับต้องแลกเปลี่ยนได้ในปัจจุบันทันที (现) = ธนบัตรเงินสด',
+          kid_mnemonic: 'หยิบเงินสดใบๆ ออกมาคลี่นับที่เคาน์เตอร์ = 现钞',
+          body_gesture: 'ทำมือนับธนบัตรใบต่อใบอย่างคล่องแคล่ว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: 美元 (měiyuán ➔ méiyuán)',
+        description_th: 'คำว่า 美 (เสียง 3) ตามด้วย 元 (เสียง 2) คำว่า 美 จะออกเสียงเป็น Half-3rd Tone (ต่ำ ไม่ตวัดขึ้น)',
+        example: '美元兑换 (měiyuán duìhuàn - แลกเงินดอลลาร์)',
+        fun_metaphor: 'คำว่า 泰铢 (tàizhū) วรรณยุกต์เสียง 4 คู่กับเสียง 1 ออกเสียงชัดถ้อยชัดคำ!',
+        reassurance: 'คำว่า 泰铢 แปลว่า เงินบาทไทย จำง่ายและใช้บ่อยมากเมื่ออยู่ต่างแดน!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้แลกเปลี่ยนเงินตรา: 把...兑换成... และ 按照...计算',
+        explanation_th: 'บอกการแลกเงินด้วยโครงสร้าง 把 และสอบถามอัตราแลกเปลี่ยน',
+        patterns: [
+          {
+            formula: '想把 + [สกุลเงินเดิม] + 兑换成 + [สกุลเงินใหม่]',
+            zh: '我想把泰铢兑换成人民币。',
+            pinyin: 'Wǒ xiǎng bǎ Tàizhū duìhuàn chéng Rénmínbì.',
+            th: 'ผมอยากแลกเงินบาทไทยเป็นเงินหยวนครับ',
+            en: 'I would like to exchange Thai Baht into RMB.'
+          },
+          {
+            formula: '请问今天的 + 汇率 + 是多少？',
+            zh: '请问今天泰铢的汇率是多少？',
+            pinyin: 'Qǐngwèn jīntiān Tàizhū de huìlǜ shì duōshao?',
+            th: 'ขอถามหน่อยครับอัตราแลกเปลี่ยนเงินบาทวันนี้เท่าไหร่ครับ?',
+            en: 'Excuse me, what is today’s exchange rate for Thai Baht?'
+          },
+          {
+            formula: '按照 + [เกณฑ์] + 计算',
+            zh: '按照今天的现钞汇率计算，没有手续费。',
+            pinyin: 'Ànzhào jīntiān de xiànchāo huìlǜ jìsuàn, méiyǒu shǒuxùfèi.',
+            th: 'คำนวณตามอัตราแลกเปลี่ยนเงินสดวันนี้ ไม่มีค่าธรรมเนียมครับ',
+            en: 'Calculated according to today’s cash rate, there is no handling fee.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '柜员您好！请问今天泰铢现钞兑换人民币的汇率是多少？',
+          pinyin: 'Guìyuán nín hǎo! Qǐngwèn jīntiān Tàizhū xiànchāo duìhuàn Rénmínbì de huìlǜ shì duōshao?',
+          th: 'สวัสดีครับพนักงานเคาน์เตอร์! ขอถามหน่อยครับอัตราแลกเปลี่ยนธนบัตรเงินบาทไทยเป็นเงินหยวนวันนี้เท่าไหร่ครับ?',
+          en: 'Hello teller! May I ask what is today’s exchange rate for exchanging THB cash to RMB?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานเคาน์เตอร์ธนาคาร 👩‍💼',
+          zh: '您好！今天一万泰铢现钞可以兑换两千零五十元人民币。请问您想兑换多少？',
+          pinyin: 'Nín hǎo! Jīntiān yí wàn Tàizhū xiànchāo kěyǐ duìhuàn liǎngqiān líng wǔshí yuán Rénmínbì. Qǐngwèn nín xiǎng duìhuàn duōshao?',
+          th: 'สวัสดีค่ะ! วันนี้เงินสด 10,000 บาทไทยสามารถแลกได้ 2,050 หยวนค่ะ ไม่ทราบว่าคุณต้องการแลกเท่าไหร่คะ?',
+          en: 'Hello! Today 10,000 THB cash can be exchanged for 2,050 RMB. How much would you like to exchange?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我想把两万泰铢兑换成人民币，请问有手续费吗？',
+          pinyin: 'Wǒ xiǎng bǎ liǎng wàn Tàizhū duìhuàn chéng Rénmínbì, qǐngwèn yǒu shǒuxùfèi ma?',
+          th: 'ผมอยากแลกเงิน 20,000 บาทเป็นเงินหยวนครับ ขอถามหน่อยมีค่าธรรมเนียมไหมครับ?',
+          en: 'I want to exchange 20,000 THB into RMB, is there a service fee?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานเคาน์เตอร์ธนาคาร 👩‍💼',
+          zh: '没有额外手续费。请把泰铢现金和护照原件从窗口递给我，核对后为您出钞。',
+          pinyin: 'Méiyǒu éwài shǒuxùfèi. Qǐng bǎ Tàizhū xiànjīn hé hùzhào yuánjiàn cóng chuāngkǒu dì gěi wǒ, héduì hòu wèi nín chū chāo.',
+          th: 'ไม่มีค่าธรรมเนียมเพิ่มเติมค่ะ กรุณาส่งเงินสดบาทไทยและพาสปอร์ตตัวจริงผ่านช่องบริการมาให้ฉันนะคะ หลังจากตรวจเช็กแล้วจะจ่ายเงินสดให้ค่ะ',
+          en: 'No extra fee. Please hand me your THB cash and original passport through the window, after verification I will dispense the cash for you.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'meaning_match',
+          question_th: "เมื่อต้องการถามอัตราแลกเปลี่ยนเงินบาทเป็นเงินหยวน ควรพูดประโยคใด?",
+          options: [
+            '请问泰铢兑换人民币的汇率是多少？',
+            '请问洗手间在二楼吗？',
+            '这件衣服在打八折吗？',
+            '明天有高铁票吗？'
+          ],
+          correct_index: 0,
+          explanation_th: "'汇率是多少' แปลว่า อัตราแลกเปลี่ยนเท่าไหร่ เป็นประโยคมาตรฐานในการแลกเงิน",
+          encouragement: 'ถามอัตราแลกเปลี่ยนเงินได้อย่างเป็นมืออาชีพ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '汇' ในคำว่า '汇率' (อัตราแลกเปลี่ยน) มีหมวดนำน้ำ '氵' สื่อถึงสิ่งใด?",
+          options: [
+            'กระแสน้ำไหลเวียนของเงินทุน',
+            'การเพาะปลูกพืชผล',
+            'เครื่องมือช่าง',
+            'เครื่องดนตรี'
+          ],
+          correct_index: 0,
+          explanation_th: "'氵' (三点水) สื่อถึงการไหลรวมกันของสายน้ำ เปรียบเหมือนเงินทุนที่หลั่งไหลข้ามแดน",
+          encouragement: 'จำรากศัพท์หมวดน้ำ 氵 ได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แลกเงินบาทไทยเป็นเงินหยวน"',
+          tokens: ['兑换成人民币', '我想把泰铢'],
+          correct_sequence: ['我想把泰铢', '兑换成人民币'],
+          pinyin: 'Wǒ xiǎng bǎ Tàizhū duìhuàn chéng Rénmínbì',
+          meaning_th: 'แลกเงินบาทไทยเป็นเงินหยวน',
+          explanation_th: 'โครงสร้าง 把 (我想把泰铢) + ผลลัพธ์การแลกเปลี่ยน (兑换成人民币)',
+          encouragement: 'ต่อบล็อกเลโก้โครงสร้าง 把 แลกเงินได้คล่องแคล่ว!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '泰铢' (tàizhū) หมายถึงสกุลเงินใด?",
+          options: [
+            'เงินบาทไทย',
+            'เงินดอลลาร์สหรัฐ',
+            'เงินยูโร',
+            'เงินเยนญี่ปุ่น'
+          ],
+          correct_index: 0,
+          explanation_th: "'泰铢' คือ เงินบาทไทย (泰 = ประเทศไทย, 铢 = หน่วยเงิน)",
+          encouragement: 'จำคำศัพท์สกุลเงินประจำชาติได้แม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u18_l04',
+      lesson_number: 4,
+      title: {
+        zh: '银行开户与绑卡挑战',
+        th: 'ภารกิจเปิดบัญชี & ผูกบัตรดิจิทัล',
+        en: 'ICBC Card & Alipay Quest'
+      },
+      can_do: {
+        th: 'เปิดบัญชีธนาคาร ICBC ซื้อซิมเน็ต China Mobile ยืนยันรหัส OTP และผูกบัญชีเข้า Alipay ได้สำเร็จ',
+        en: 'Open ICBC account, buy China Mobile SIM, verify OTP, and link UnionPay card to Alipay'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่การเงินและโทรคมนาคมปักกิ่ง เปิดบัญชีและผูกบัตร Alipay สำเร็จ 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_1819',
+          hanzi: '账户',
+          pinyin: 'zhànghù',
+          display_pinyin: 'zhànghù',
+          pinyin_tone: 'zhang4hu4',
+          meaning_th: 'บัญชีธนาคาร / บัญชีผู้ใช้',
+          meaning_en: 'account (bank / user)',
+          radical: '阝',
+          radical_name_th: 'หมวดเนินเขา/กำแพง (右耳刀)',
+          stroke_count: 15,
+          mnemonic: 'สมุดบันทึกบัญชีรายรับรายจ่าย (账) ที่ผูกกับทะเบียนบุคคล (户) = บัญชีธนาคาร',
+          kid_mnemonic: 'หน้าจอแอปแสดงเลขบัญชี 16 หลัก = 账户',
+          body_gesture: 'ทำสองมือประกบกันเป็นรูปสมุดบัญชีเงินฝาก'
+        },
+        {
+          id: 'hsk2_1820',
+          hanzi: '绑定',
+          pinyin: 'bǎngdìng',
+          display_pinyin: 'bǎngdìng',
+          pinyin_tone: 'bang3ding4',
+          meaning_th: 'ผูกมัด / ผูกบัญชีเข้ากับแอป',
+          meaning_en: 'to bind / link (account to app)',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 20,
+          mnemonic: 'ใช้เส้นไหม (纟) ผูกโยงสิ่งของให้มั่นคงแน่นอน (定) = ผูกบัญชี',
+          kid_mnemonic: 'เชื่อมบัตรธนาคารเข้ากับแอป Alipay แน่นหนา = 绑定',
+          body_gesture: 'เกี่ยวคล้องนิ้วชี้สองข้างเข้าหากันเหมือนผูกเชือก'
+        },
+        {
+          id: 'hsk2_1821',
+          hanzi: '验证码',
+          pinyin: 'yànzhèngmǎ',
+          display_pinyin: 'yànzhèngmǎ',
+          pinyin_tone: 'yan4zheng4ma3',
+          meaning_th: 'รหัส OTP ยืนยันตัวตน',
+          meaning_en: 'verification code / OTP',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 27,
+          mnemonic: 'ตัวเลขรหัส (码) ที่ส่งมาตรวจสอบยืนยันความถูกต้อง (验证) = รหัส OTP',
+          kid_mnemonic: 'SMS เด้งขึ้นมา มีตัวเลข 6 ตัว รีบพิมพ์ลงในช่อง = 验证码',
+          body_gesture: 'ทำท่ามองหน้าจอมือถือแล้วพิมพ์รหัส 6 หลัก'
+        },
+        {
+          id: 'hsk2_1822',
+          hanzi: '激活',
+          pinyin: 'jīhuó',
+          display_pinyin: 'jīhuó',
+          pinyin_tone: 'ji1huo2',
+          meaning_th: 'เปิดใช้งาน / กระตุ้นให้ทำงาน',
+          meaning_en: 'to activate',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 21,
+          mnemonic: 'กระตุ้นให้มีชีวิตชีวา (活) ด้วยพลังงานคลื่นน้ำที่ถาโถม (激) = เปิดใช้งาน',
+          kid_mnemonic: 'หน้าจอเปลี่ยนเป็นสีเขียว ขึ้นเครื่องหมายถูกใช้งานได้แล้ว = 激活',
+          body_gesture: 'กำสองหมัดดีใจกระโดดเบาๆ เหมือนเปิดเครื่องติด'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: การผันเสียง 绑定 (bǎngdìng ➔ bǎngdìng)',
+        description_th: 'คำว่า 绑 (เสียง 3) ตามด้วย 定 (เสียง 4) ออกเสียงเป็น Half-3rd Tone ชัดเจน',
+        example: '绑定支付宝 (bǎngdìng Zhīfùbǎo - ผูกเข้า Alipay)',
+        fun_metaphor: 'ผูกบัตรเสร็จสรรพ มีรหัส 验证码 คุ้มกัน ปลอดภัยไร้กังวล!',
+        reassurance: 'คำว่า 账户 ในจีนแผ่นดินใหญ่สะกดด้วย 账 (หมวด 贝) เท่านั้น!'
+      },
+      grammar_bite: {
+        title: 'สรุปการสื่อสารธุรกรรมการเงินและโทรคมนาคม (FinTech Master Playbook)',
+        explanation_th: 'ยืนยันการเปิดบัญชีด้วย 只有...才..., ซื้อซิมเน็ต, และผูกบัตรเข้า Alipay',
+        patterns: [
+          {
+            formula: '想把 + [บัตรธนาคาร] + 绑定到 + [แอป]',
+            zh: '我想把这张银行卡绑定到支付宝。',
+            pinyin: 'Wǒ xiǎng bǎ zhè zhāng yínhángkǎ bǎngdìng dào Zhīfùbǎo.',
+            th: 'ผมอยากผูกบัตรธนาคารใบนี้เข้ากับ Alipay ครับ',
+            en: 'I want to bind this bank card to Alipay.'
+          },
+          {
+            formula: '请输入 + 手机收到的 + 验证码',
+            zh: '请输入手机短信收到的六位数验证码。',
+            pinyin: 'Qǐng shūrù shǒujī duǎnxìn shōudào de liù wèi shù yànzhèngmǎ.',
+            th: 'กรุณากรอกรหัส OTP ตัวเลข 6 หลักที่ได้รับทาง SMS มือถือครับ',
+            en: 'Please enter the 6-digit verification code received via SMS.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '经理您好！我的工商银行卡已经激活了，手机卡也办好了，请问怎么把卡绑定到支付宝？',
+          pinyin: 'Jīnglǐ nín hǎo! Wǒ de Gōngshāng Yínháng kǎ yǐjīng jīhuó le, shǒujīkǎ yě bàn hǎo le, qǐngwèn zěnme bǎ kǎ bǎngdìng dào Zhīfùbǎo?',
+          th: 'สวัสดีครับผู้จัดการ! บัตร ICBC ของผมเปิดใช้งานแล้ว ซิมมือถือก็ทำเรียบร้อย ขอถามหน่อยครับจะผูกบัตรเข้า Alipay อย่างไรครับ?',
+          en: 'Hello manager! My ICBC card is activated and SIM card is set up, how do I link the card to Alipay?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการบริการลูกค้า 👨‍💼',
+          zh: '请打开支付宝，点击“我的-银行卡-添加银行卡”，输入卡号和护照上的英文姓名。',
+          pinyin: 'Qǐng dǎkāi Zhīfùbǎo, diǎnjī “wǒ de - yínhángkǎ - tiānjiā yínhángkǎ”, shūrù kǎhào hé hùzhào shang de yīngwén xìngmíng.',
+          th: 'กรุณาเปิด Alipay กดที่ "ของฉัน - บัตรธนาคาร - เพิ่มบัตรธนาคาร" กรอกเลขบัตรและชื่อภาษาอังกฤษตามพาสปอร์ตครับ',
+          en: 'Please open Alipay, tap "My - Bank Cards - Add Card", enter card number and English name from passport.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的，我已经输入了，现在手机收到了短信验证码。',
+          pinyin: 'Hǎo de, wǒ yǐjīng shūrù le, xiànzài shǒujī shōudào le duǎnxìn yànzhèngmǎ.',
+          th: 'ได้ครับ ผมกรอกเรียบร้อยแล้ว ตอนนี้มือถือได้รับรหัส SMS OTP แล้วครับ',
+          en: 'Okay, I entered it, now my phone received an SMS verification code.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการบริการลูกค้า 👨‍💼',
+          zh: '把六位验证码填进去，点击确认。显示“绑定成功”就可以扫码支付了！',
+          pinyin: 'Bǎ liù wèi yànzhèngmǎ tián jìnqu, diǎnjī quèrèn. Xiǎnshì “bǎngdìng chénggōng” jiù kěyǐ sǎomǎ zhīfù le!',
+          th: 'กรอกรหัส OTP 6 หลักลงไป กดตกลง หน้าจอขึ้นว่า "ผูกสำเร็จ" ก็สามารถสแกนจ่ายเงินได้เลยครับ!',
+          en: 'Enter the 6-digit verification code, tap confirm. Once "Linked Successfully" shows, you can scan and pay!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อทำธุรกรรมออนไลน์และได้รับ SMS คำว่า '验证码' (yànzhèngmǎ) หมายถึงข้อใด?",
+          options: [
+            'รหัส OTP ยืนยันตัวตน',
+            'รหัสผ่านถอนเงินของธนาคาร',
+            'หมายเลขโทรศัพท์มือถือ',
+            'จำนวนเงินคงเหลือในบัญชี'
+          ],
+          correct_index: 0,
+          explanation_th: "'验证码' คือ รหัสยืนยันตัวตนชั่วคราว (One-Time Password / OTP) ที่ส่งทาง SMS",
+          encouragement: 'จำศัพท์ความปลอดภัยธุรกรรมออนไลน์ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '绑' ในคำว่า '绑定' (ผูกบัญชี) มีหมวดนำไหม '纟' สื่อถึงสิ่งใด?",
+          options: [
+            'การผูกมัดหรือเชื่อมโยงสิ่งของเข้าด้วยกัน',
+            'การตัดทอนสิ่งของ',
+            'การขุดดิน',
+            'การร้องเพลง'
+          ],
+          correct_index: 0,
+          explanation_th: "'纟' (绞丝旁) สื่อถึงเส้นไหมหรือเชือก ใช้ในความหมายของการผูกมัดเชื่อมโยงบัญชี",
+          encouragement: 'เข้าใจรากศัพท์หมวดไหม 纟 ได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ผูกบัตรธนาคารเข้ากับ Alipay"',
+          tokens: ['绑定到支付宝', '把银行卡'],
+          correct_sequence: ['把银行卡', '绑定到支付宝'],
+          pinyin: 'Bǎ yínhángkǎ bǎngdìng dào Zhīfùbǎo',
+          meaning_th: 'ผูกบัตรธนาคารเข้ากับ Alipay',
+          explanation_th: 'โครงสร้าง 把 (把银行卡) + ผลลัพธ์การผูกมัด (绑定到支付宝)',
+          encouragement: 'ต่อบล็อกเลโก้ FinTech ได้คล่องแคล่วมาก!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '激活' (jīhuó) มีความหมายตรงกับข้อใด?",
+          options: [
+            'เปิดใช้งาน / แอ็กทิเวต',
+            'ระงับการใช้งาน',
+            'โอนเงิน',
+            'ลืมรหัสผ่าน'
+          ],
+          correct_index: 0,
+          explanation_th: "'激活' แปลว่า เปิดใช้งาน (激 = กระตุ้น, 活 = มีชีวิตชีวา)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์สำคัญจำได้แม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณเพิ่งเดินทางมาถึงกรุงปักกิ่งและจำเป็นต้องเปิดบัญชีธนาคาร ICBC ซื้อซิมเน็ต China Mobile และนำบัตรเดบิต UnionPay ไปผูกเข้ากับ Alipay สำหรับสแกนจ่ายค่าเดินทางและซื้อของ คุณควรบอกวัตถุประสงค์และขั้นตอนกับเจ้าหน้าที่อย่างไรให้ถูกต้องและครบถ้วนที่สุด?',
+        options: [
+          '经理您好！我带了护照原件，想在柜台办理开户和手机卡实名认证，并把银行卡绑定到支付宝。 (Jīnglǐ nín hǎo! Wǒ dài le hùzhào yuánjiàn, xiǎng zài guìtái bànlǐ kāihù hé shǒujīkǎ shímíng rènzhèng, bìng bǎ yínhángkǎ bǎngdìng dào Zhīfùbǎo.)',
+          '服务员，我要退货，衣服被洗掉色了！ (Fúwùyuán, wǒ yào tuìhuò, yīfu bèi xǐ diàosè le!)',
+          '医生，我肚子疼得受不了，想挂急诊！ (Yīshēng, wǒ dùzi téng de shòubuliǎo, xiǎng guà jízhěn!)',
+          '请问今天有回曼谷的飞机吗？ (Qǐngwèn jīntiān yǒu huí Màngǔ de fēijī ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ตัวเลือกแรกสื่อสารครบถ้วนที่สุด: เรียกผู้จัดการอย่างสุภาพ แจ้งว่ามีพาสปอร์ตตัวจริง (带了护照原件) ขอเปิดบัญชีที่เคาน์เตอร์ (办理开户) ทำการยืนยันตัวตนซิมมือถือ (实名认证) และผูกบัตรเข้า Alipay (绑定到支付宝)",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge การเงินและโทรคมนาคมปักกิ่ง เปิดบัญชีและผูกบัตรสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u18_master',
+        badge_name: 'เจ้าสัวการเงินดิจิทัลแดนมังกร 💳🇨🇳',
+        message_th: 'สุดยอดมาก! คุณสำเร็จ Unit 18 แล้ว พร้อมจัดการเปิดบัญชีธนาคาร ซื้อซิมการ์ด 5G แลกเปลี่ยนเงินตรา และใช้ชีวิตดิจิทัลในจีนได้อย่างไร้ขีดจำกัด!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

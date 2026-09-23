@@ -58,6 +58,7 @@ export const TRADITIONAL_BLACKLIST = new Set([
   '氣', '雙', '邊', '麵', '飲', '館', '號', '線', '誰', '兒', '麼', '為', '會', '說', '寫',
   '讀', '聽', '語', '漢', '兩', '幾', '師', '課', '問', '間', '現', '視', '動', '經', '過',
   '讓', '給', '還', '長', '貴', '發', '燒', '壞', '預', '訂', '護', '碼', '員', '條', '塊', '歲',
+  '單',
 ]);
 
 /**
@@ -67,6 +68,7 @@ export const KNOWN_TONE4_CHARACTERS = new Set([
   '是', '要', '对', '客', '去', '会', '见', '快', '块', '定', '共', '次', '件', '万', '谢',
   '饭', '后', '话', '到', '叫', '看', '亮', '忘', '问', '进', '再', '下', '上', '用', '大', '太', '慢',
   '个', '错', '贵', '累', '站', '送', '换', '住', '便', '带', '算', '动', '爱', '辣', '半',
+  '套', '退', '办', '试', '够', '断', '限',
 ]);
 
 /**
@@ -74,9 +76,9 @@ export const KNOWN_TONE4_CHARACTERS = new Set([
  */
 export const KNOWN_TONE123_CHARACTERS = new Set([
   // Tone 1
-  '吃', '高', '喝', '天', '杯', '些', '新', '生', '听', '说', '多', '知', '书', '张', '家', '只', '先', '车', '包', '边', '飞', '千',
+  '吃', '高', '喝', '天', '杯', '些', '新', '生', '听', '说', '多', '知', '书', '张', '家', '只', '先', '车', '包', '边', '飞', '千', '通',
   // Tone 2
-  '行', '来', '年', '直', '条', '学', '常', '明', '昨', '难', '没', '同', '白', '旁', '瓶', '忙', '人', '茶', '钱', '房', '门',
+  '行', '来', '年', '直', '条', '学', '常', '明', '昨', '难', '没', '同', '白', '旁', '瓶', '忙', '人', '茶', '钱', '房', '门', '提',
   // Tone 3
   '好', '买', '起', '点', '碗', '本', '想', '你', '我', '请', '早', '晚', '小', '手', '老', '给', '可', '几', '走', '打', '找', '百',
 ]);
@@ -104,6 +106,7 @@ export const KNOWN_33_SANDHI_WORDS: Record<string, { basePinyin: string; display
   '九点': { basePinyin: 'jiǔ diǎn', displayPinyin: 'jiú diǎn' },
   '两碗': { basePinyin: 'liǎng wǎn', displayPinyin: 'liáng wǎn' },
   '老板': { basePinyin: 'lǎobǎn', displayPinyin: 'láobǎn' },
+  '买礼物': { basePinyin: 'mǎi lǐwù', displayPinyin: 'mái lǐwù' },
 };
 
 // --- Pure Helper Functions ---
@@ -978,6 +981,24 @@ export class CurriculumEngine {
           vocabId,
           rule: 'SANDHI_BU_NEUTRAL',
           message: `A-不-A / A-不-AB pattern in '${hanzi}' should have neutral tone 'bu' in display_pinyin (got '${displayPinyin}')`,
+        });
+      }
+      return;
+    }
+
+    // Potential complement negative: V-不-Result (e.g. 吃不下, 受不了, 走不动, 买不起)
+    // where 不 has neutral tone 'bu'
+    const isPotentialComplement = /^[\u4e00-\u9fa5]不(?:下|了|动|起|到|见|完|懂|着|出|进|回|过|开)$/.test(cleanHanzi);
+    if (isPotentialComplement) {
+      if (!displayPinyin.includes('bu')) {
+        warnings.push({
+          stage: 4,
+          severity: 'warning',
+          unitId,
+          lessonId,
+          vocabId,
+          rule: 'SANDHI_BU_NEUTRAL',
+          message: `Potential complement in '${hanzi}' should have neutral tone 'bu' in display_pinyin (got '${displayPinyin}')`,
         });
       }
       return;

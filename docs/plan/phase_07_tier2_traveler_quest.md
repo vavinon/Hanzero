@@ -148,32 +148,32 @@ flowchart TD
 ---
 
 ### `TASK-704`: Core Traveler Curriculum Batch 2 (Units 16–20)
-- [ ] **Unit 16: 商场退换货 (Shopping Returns: ช็อปปิ้ง เปลี่ยน/คืนสินค้า)**
+- [x] **Unit 16: 商场退换货 (Shopping Returns: ช็อปปิ้ง เปลี่ยน/คืนสินค้า)**
   - 16.1: 尺码与试穿 (比...更... / 这件有点儿肥)
   - 16.2: 质量问题与退换 (ประโยค 被: 衣服被洗掉色了 / 只要发票在就能退)
   - 16.3: 折扣与保修服务 (Tone Sandhi: 打折 `dǎzhé`)
   - 16.4: Boss Challenge: นำเสื้อไปเปลี่ยนไซส์และขอคืนเงินส่วนต่างที่ห้างหังโจว
-- [ ] **Unit 17: 看病与买药进阶 (Advanced Clinic: พบแพทย์ & แจ้งอาการละเอียด)**
+- [x] **Unit 17: 看病与买药进阶 (Advanced Clinic: พบแพทย์ & แจ้งอาการละเอียด)**
   - 17.1: 挂号与科室 (先挂号，然后去二楼候诊)
   - 17.2: 描述详细病情 (Potential Complements: 吃得下 / 吃不下 / 好不了)
   - 17.3: 药房取药与医嘱 (一天三次，一次两粒，饭后服用)
   - 17.4: Boss Challenge: สื่อสารอาการอาหารเป็นพิษกับแพทย์ที่โรงพยาบาลและรับยา
-- [ ] **Unit 18: 银行与通信业务 (Banking & Telecom: เปิดบัญชี & จัดการซิมการ์ด)**
+- [x] **Unit 18: 银行与通信业务 (Banking & Telecom: เปิดบัญชี & จัดการซิมการ์ด)**
   - 18.1: 开设银行账户 (只有...才... / 必须要本人签字)
   - 18.2: 手机套餐与流量 (包含多少GB流量 / 超出部分怎么计费)
   - 18.3: 汇款与外币兑换 (Tone Sandhi: 美元兑换 `měiyuán duìhuàn`)
   - 18.4: Boss Challenge: เปิดบัญชีธนาคาร ICBC และผูกเข้า Alipay
-- [ ] **Unit 19: 中国节庆与拜访 (Festivals & Visits: เทศกาลจีน & มารยาทเยี่ยมเยือน)**
+- [x] **Unit 19: 中国节庆与拜访 (Festivals & Visits: เทศกาลจีน & มารยาทเยี่ยมเยือน)**
   - 19.1: 春节与拜年 (祝您新年快乐，万事如意，身体健康)
   - 19.2: 中秋与端午 (象征着阖家团圆 / 既有文化又有口福)
   - 19.3: 做客礼仪与送礼 (Tone Sandhi: 买礼物 `mái lǐwù`)
   - 19.4: Boss Challenge: นำผลไม้ไปสวัสดีปีใหม่บ้านเพื่อนคนจีน
-- [ ] **Unit 20: 求助与意外处理 (Emergencies: แจ้งเหตุฉุกเฉิน & ของสูญหาย)**
+- [x] **Unit 20: 求助与意外处理 (Emergencies: แจ้งเหตุฉุกเฉิน & ของสูญหาย)**
   - 20.1: 物品遗失与报警 (竟然 / 果然 / 连护照都丢了)
   - 20.2: 交通事故与理赔 (ประโยค 被: 车身被撞了一下 / 幸好人没事)
   - 20.3: 使领馆求助与证件 (请协助我办理紧急旅行证)
   - 20.4: Boss Challenge: แจ้งความพาสปอร์ตหายที่สถานีตำรวจและประสานงานสถานทูต
-- [ ] **เครื่องมือและสคริปต์:** สร้าง `scripts/build_tier2_batch_b.ts` ผลิตไฟล์ JSON Units 16–20
+- [x] **เครื่องมือและสคริปต์:** สร้าง `scripts/build_tier2_batch_b.ts` ผลิตไฟล์ JSON Units 16–20 (พร้อมกระจกสะท้อน `data/lessons/tier2/`)
 
 ---
 
@@ -232,6 +232,6 @@ flowchart TD
 1. **Slice 1:** ส่งมอบ `TASK-701` (Units 11–15 JSON + Schema Tests) ➔ ตรวจรับ
 2. **Slice 2:** ส่งมอบ `TASK-702` (Branching Engine + InteractiveScenarioPlayer) ➔ ตรวจรับ
 3. **Slice 3:** ส่งมอบ `TASK-703` (GrammarSlotEngine + GrammarSlotBuilder + Hold-to-Peek) ➔ ตรวจรับ
-4. **Slice 4:** ส่งมอบ `TASK-704` (Units 16–20 JSON) ➔ ตรวจรับ
+4. **Slice 4:** `[DONE]` ส่งมอบ `TASK-704` (Units 16–20 JSON) ➔ ตรวจรับ ผ่าน 100%
 5. **Slice 5:** ส่งมอบ `TASK-705` (Units 21–25 JSON + Capstone) ➔ ตรวจรับ
 6. **Slice 6:** ส่งมอบ `TASK-706` (HsrQuestMap + E2E + 4-Tier QA Summary) ➔ สรุปปิด Phase 7
