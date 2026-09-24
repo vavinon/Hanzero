@@ -1,0 +1,917 @@
+{
+  "unit_id": "tier4_u54",
+  "tier": 4,
+  "unit_number": 54,
+  "title": {
+    "zh": "地缘政治与“一带一路”倡议",
+    "th": "ภูมิรัฐศาสตร์และข้อริเริ่ม \"หนึ่งแถบหนึ่งเส้นทาง\" (一带一路)",
+    "en": "Geopolitics & Belt and Road Initiative"
+  },
+  "description": "ศึกษาศัพท์การเมืองระหว่างประเทศ โครงสร้างพื้นฐานระดับทวีป ยุทธศาสตร์หนึ่งแถบหนึ่งเส้นทาง และการสร้างประชาคมที่มีอนาคตร่วมกัน",
+  "lessons": [
+    {
+      "lesson_id": "t4_u54_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "丝路精神：互联互通与地缘格局",
+        "th": "จิตวิญญาณแห่งเส้นทางสายไหม: การเชื่อมโยงโครงข่ายและภูมิทัศน์ภูมิรัฐศาสตร์",
+        "en": "Silk Road Spirit: Connectivity & Geopolitical Landscape"
+      },
+      "can_do": {
+        "th": "อธิบายจิตวิญญาณเส้นทางสายไหม และใช้คำศัพท์ เช่น 丝路, 互联互通, 走廊, 枢纽, 亚欧大陆 ในการบรรยายความเชื่อมโยงระดับทวีปได้",
+        "en": "Master Silk Road connectivity terms: Silk Road, Connectivity, Corridor, Hub, and Eurasian Continent"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: นำคำว่า 互联互通 และ 枢纽 ไปใช้วิเคราะห์บทบาทศูนย์กลางโลจิสติกส์ระดับโลก!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5401",
+          "hanzi": "丝路",
+          "pinyin": "sīlù",
+          "display_pinyin": "sīlù",
+          "pinyin_tone": "si1lu4",
+          "meaning_th": "เส้นทางสายไหม (ย่อมาจาก 丝绸之路)",
+          "meaning_en": "Silk Road (short for 丝绸之路)",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 17,
+          "mnemonic": "เส้นไหมสีทองทอประกาย (丝) ทอดข้ามเส้นทางทะเลทรายพันลี้ (路) = เส้นทางสายไหม",
+          "kid_mnemonic": "ขบวนคาราวานอูฐบรรทุกผ้าไหมหลากสีสันเดินทางข้ามทะเลทราย = 丝路",
+          "body_gesture": "สองมือคลี่ม้วนผ้าไหมยาวออกไปข้างหน้าอย่างงดงาม"
+        },
+        {
+          "id": "hsk4_5402",
+          "hanzi": "互联互通",
+          "pinyin": "hùliánhùtōng",
+          "display_pinyin": "hùliánhùtōng",
+          "pinyin_tone": "hu4lian2hu4tong1",
+          "meaning_th": "การเชื่อมต่อและเชื่อมโยงถึงกันรอบด้าน (Connectivity - ทั้งถนน ท่าเรือ ดิจิทัล และผู้คน)",
+          "meaning_en": "connectivity / interconnected / interconnection",
+          "radical": "互",
+          "radical_name_th": "หมวดสลับประสาน (互字部)",
+          "stroke_count": 35,
+          "mnemonic": "สลับประสาน (互) เชื่อมโยงร้อยรัด (联) สู่เส้นทางเปิดกว้างทั่วถึง (通) = เชื่อมโยงถึงกันรอบด้าน",
+          "kid_mnemonic": "สะพานรถไฟและสายเคเบิลอินเทอร์เน็ตเชื่อมต่อเมืองใหญ่ทุกเมืองเข้าด้วยกัน = 互联互通",
+          "body_gesture": "กางสองมือประสานนิ้วมือทั้งสองข้างเข้าด้วยกันอย่างแนบแน่น"
+        },
+        {
+          "id": "hsk4_5403",
+          "hanzi": "走廊",
+          "pinyin": "zǒuláng",
+          "display_pinyin": "zǒuláng",
+          "pinyin_tone": "zou3lang2",
+          "meaning_th": "ระเบียงเศรษฐกิจ / ช่องทางคมนาคมยุทธศาสตร์ (Economic Corridor)",
+          "meaning_en": "corridor / economic corridor / strategic passage",
+          "radical": "走",
+          "radical_name_th": "หมวดเดิน (走字旁)",
+          "stroke_count": 18,
+          "mnemonic": "ย่างก้าวเดินสัญจร (走) ผ่านระเบียงทางเดินยาวเชื่อมอาคาร (廊) = ระเบียงเศรษฐกิจ",
+          "kid_mnemonic": "ระเบียงทางเดินยาวที่มีรถไฟความเร็วสูงแล่นผ่านเชื่อมสองประเทศ = 走廊",
+          "body_gesture": "ผายสองมือทอดยาวขนานกันไปข้างหน้าเป็นเส้นทางระเบียง"
+        },
+        {
+          "id": "hsk4_5404",
+          "hanzi": "枢纽",
+          "pinyin": "shūniǔ",
+          "display_pinyin": "shūniǔ",
+          "pinyin_tone": "shu1niu3",
+          "meaning_th": "ศูนย์กลางคมนาคมขนส่ง / จุดยุทธศาสตร์เชื่อมต่อหลัก (Hub / Junction)",
+          "meaning_en": "hub / junction / pivot / strategic transport center",
+          "radical": "木",
+          "radical_name_th": "หมวดต้นไม้ (木字旁)",
+          "stroke_count": 16,
+          "mnemonic": "สลักประตูไม้บานพับหมุน (枢) ผูกปมเชื่อมต่อทุกทิศทาง (纽) = ชุมทางคมนาคม",
+          "kid_mnemonic": "สถานีรถไฟกลางขนาดใหญ่ที่มีรางรถไฟจากทั่วประเทศมาบรรจบกัน = 枢纽",
+          "body_gesture": "กำสองมือประกบกันที่จุดกึ่งกลางแล้วผายออกสี่ทิศทาง"
+        },
+        {
+          "id": "hsk4_5405",
+          "hanzi": "亚欧大陆",
+          "pinyin": "Yà'ōu Dàlù",
+          "display_pinyin": "Yà'ōu Dàlù",
+          "pinyin_tone": "ya4ou1 da4lu4",
+          "meaning_th": "ทวีปยูเรเชีย (มหาทวีปเอเชียและยุโรป)",
+          "meaning_en": "Eurasian Continent / Eurasia",
+          "radical": "二",
+          "radical_name_th": "หมวดสอง (二字旁)",
+          "stroke_count": 32,
+          "mnemonic": "ทวีปเอเชีย (亚) ผนึกทวีปยุโรป (欧) บนผืนแผ่นดินใหญ่ไพศาล (大陆) = ทวีปยูเรเชีย",
+          "kid_mnemonic": "กางแผนที่โลกแผ่นใหญ่ชี้ผืนแผ่นดินเชื่อมจากปักกิ่งถึงปารีส = 亚欧大陆",
+          "body_gesture": "กางแขนสองข้างกว้างสุดตัวแสดงผืนแผ่นดินมหึมา"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 互联互通 (hùliánhùtōng)",
+        "description_th": "hù (เสียง 4) lián (เสียง 2) hù (เสียง 4) tōng (เสียง 1)",
+        "example": "推进全方位互联互通 (Tuījìn quán fāngwèi hùliánhùtōng)",
+        "fun_metaphor": "จังหวะ 4-2-4-1 สลับขึ้นลงดั่งคลื่นเสียงเชื่อมต่ออินเทอร์เน็ตทั่วโลก",
+        "reassurance": "คำศัพท์หลักอันดับ 1 ของการประชุมเวทีความร่วมมือระหว่างประเทศหนึ่งแถบหนึ่งเส้นทาง"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการเชื่อมโยงโครงสร้างพื้นฐาน: 依托……枢纽，构建跨国经济走廊",
+        "formula": "以互联互通为主线，依托综合交通物流枢纽，构建横跨亚欧大陆的繁荣走廊",
+        "explanation_th": "ใช้ในการนำเสนอแผนแม่บทโลจิสติกส์ระดับภูมิภาคและการประชุมสุดยอดผู้นำ",
+        "patterns": [
+          {
+            "formula": "弘扬丝路精神，深化互联互通。",
+            "zh": "我们要弘扬和平合作、开放包容的丝路精神，全力推进亚欧大陆的全方位互联互通。",
+            "pinyin": "Wǒmen yào hóngyáng hépíng hézuò, kāifàng bāoróng de sīlù jīngshén, quánlì tuījìn Yà'ōu Dàlù de quán fāngwèi hùliánhùtōng.",
+            "th": "พวกเราต้องเชิดชูจิตวิญญาณแห่งเส้นทางสายไหมที่เน้นสันติภาพ ความร่วมมือ การเปิดกว้าง และการหลอมรวม พร้อมทั้งผลักดันการเชื่อมต่อโครงข่ายรอบด้านบนมหาทวีปยูเรเชียอย่างเต็มกำลัง",
+            "en": "We should carry forward the Silk Road spirit of peace, cooperation, openness, and inclusiveness, going all out to advance all-dimensional connectivity across the Eurasian Continent."
+          },
+          {
+            "formula": "打造国际物流枢纽，共建经济走廊。",
+            "zh": "中欧班列将内陆城市由开放末梢转变为国际枢纽，有力支撑了中蒙俄等跨国经济走廊建设。",
+            "pinyin": "Zhōng'ōu bānliè jiāng nèilù chéngshì yóu kāifàng mòshāo zhuǎnbiàn wéi guójì shūniǔ, yǒulì zhīchēng le Zhōng-Méng-É děng kuàguó jīngjì zǒuláng jiànshè.",
+            "th": "ขบวนรถไฟขนส่งสินค้าจีน-ยุโรป ได้เปลี่ยนเมืองตอนในจากจุดสิ้นสุดการเปิดประเทศ ให้กลายเป็นศูนย์กลางคมนาคมระดับสากล สนับสนุนการสร้างระเบียงเศรษฐกิจข้ามชาติอย่างแข็งแกร่ง",
+            "en": "The China-Europe Railway Express transformed inland cities from the end of openness into international hubs, vigorously supporting the construction of transnational economic corridors."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "发改委规划司长 (Director of Planning) 🗺️",
+          "zh": "各位代表，共建“一带一路”倡议提出十余年来，已经由理念转化为生动实践，互联互通网络日益完备。",
+          "pinyin": "Gèwèi dàibiǎo, gòngjiàn \"Yīdài Yīlù\" chàngyì tíchū shí yú nián lái, yǐjīng yóu lǐniàn zhuǎnhuà wéi shēngdòng shíjiàn, hùliánhùtōng wǎngluò rìyì wánbèi.",
+          "th": "ท่านผู้แทนทุกท่านครับ กว่าทศวรรษนับแต่มีการเสนอข้อริเริ่ม \"หนึ่งแถบหนึ่งเส้นทาง\" ได้แปรเปลี่ยนจากวิสัยทัศน์สู่การปฏิบัติการจริง โครงข่ายการเชื่อมต่อถึงกันนับวันยิ่งสมบูรณ์แบบครับ",
+          "en": "Representatives, over the decade since the Belt and Road Initiative was proposed, it has transformed from concept into vivid practice, with increasingly complete connectivity networks.",
+          "audio_trigger": "t4_u54_l01_d01"
+        },
+        {
+          "speaker": "跨国物流集团总裁 (Logistics CEO) 🚢",
+          "zh": "司长说得对！我们开行の中欧班列贯穿亚欧大陆，沿线经济走廊与国际物流枢纽货物吞吐量连创新高。",
+          "pinyin": "Sīzhǎng shuō de duì! Wǒmen kāixíng de Zhōng'ōu bānliè guànchuān Yà'ōu Dàlù, yánxiàn jīngjì zǒuláng yǔ guójì wùliú shūniǔ huòwù tūntǔliàng lián chuàng xīngāo.",
+          "th": "ท่านผู้อำนวยการกล่าวได้ถูกต้องครับ! ขบวนรถไฟจีน-ยุโรปที่พวกเราเดินรถวิ่งทะลุผ่านมหาทวีปยูเรเชีย ปริมาณการขนถ่ายสินค้าตามแนวระเบียงเศรษฐกิจและชุมทางโลจิสติกส์ระหว่างประเทศทำสถิติสูงสุดใหม่อย่างต่อเนื่องครับ",
+          "en": "Director, you are right! Our China-Europe freight trains run across the Eurasian Continent; cargo throughput along economic corridors and international logistics hubs keeps hitting record highs.",
+          "audio_trigger": "t4_u54_l01_d02"
+        },
+        {
+          "speaker": "发改委规划司长 (Director of Planning) 🗺️",
+          "zh": "很好！我们要坚持共商共建共享原则，不仅要实现硬件设施联通，更要推进规则标准软联通。",
+          "pinyin": "Hěn hǎo! Wǒmen yào jiānchí gòngshāng gòngjiàn gòngxiǎng yuánzé, bùjǐn yào shíxiàn yìngjiàn shèshī liántōng, gèng yào tuījìn guīzé biāozhǔn ruǎnliántōng.",
+          "th": "ดีมาก! พวกเราต้องยึดมั่นในหลักการร่วมปรึกษาหารือ ร่วมสร้างสรรค์ และร่วมแบ่งปัน ไม่เพียงเชื่อมโยงโครงสร้างพื้นฐานทางกายภาพ แต่ยังต้องผลักดันการเชื่อมโยงกฎเกณฑ์และมาตรฐานอีกด้วย",
+          "en": "Very good! We must adhere to extensive consultation, joint contribution, and shared benefits, connecting not only physical infrastructure but also rules and standards.",
+          "audio_trigger": "t4_u54_l01_d03"
+        },
+        {
+          "speaker": "跨国物流集团总裁 (Logistics CEO) 🚢",
+          "zh": "长风破浪会有时，直挂云帆济沧海！乘着新时代的东风，古老的丝路正焕发出前所未有的蓬勃生机！",
+          "pinyin": "Chángfēng pòlàng huì yǒushí, zhíguà yúnfān jì cānghǎi! Chéng zhe xīn shídài de dōngfēng, gǔlǎo de sīlù zhèng huànfā chū qiánsuǒwèiyǒu de péngbó shēngjī!",
+          "th": "สายลมพัดแรงโต้คลื่นย่อมมีเวลา ชักใบเรือสู่เมฆาข้ามมหาสมุทร! อาศัยกระแสลมบูรพาแห่งยุคสมัยใหม่ เส้นทางสายไหมโบราณกำลังเปล่งประกายพลังชีวิตอันรุ่งโรจน์อย่างที่ไม่เคยมีมาก่อนครับ!",
+          "en": "A time will come to ride the wind and cleave the waves, hoisting cloud-white sails across the vast sea! Riding the east wind of the new era, the ancient Silk Road radiates unprecedented vitality!",
+          "audio_trigger": "t4_u54_l01_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "แกนกลางของคำว่า \"互联互通\" (Connectivity) ในข้อริเริ่มหนึ่งแถบหนึ่งเส้นทางครอบคลุมมิติใดบ้าง?",
+          "options": [
+            "การเชื่อมโยงโครงสร้างพื้นฐานทางกายภาพ (ถนน/ราง/ท่าเรือ), กฎระเบียบและมาตรฐานการค้า, และการแลกเปลี่ยนภาคประชาชน",
+            "การใช้สัญญาณโทรศัพท์ยี่ห้อเดียวกันเท่านั้น",
+            "การพูดภาษาเดียวกันทั่วโลก",
+            "การยกเลิกพรมแดนประเทศทั้งหมด"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"互联互通\" ครอบคลุมทั้ง Hardware (โครงสร้างพื้นฐาน), Software (กฎระเบียบและภาษี), และ Heartware (มิตรภาพภาคประชาชน)",
+          "encouragement": "ยอดเยี่ยมมาก! เข้าใจมิติยุทธศาสตร์ความเชื่อมโยงระดับโลกอย่างถ่องแท้!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"สร้างศูนย์กลางคมนาคม ผลักดันการเชื่อมต่อโครงข่ายรอบด้าน\"",
+          "tokens": [
+            "推进全方位互联互通",
+            "打造国际枢纽"
+          ],
+          "correct_sequence": [
+            "打造国际枢纽",
+            "推进全方位互联互通"
+          ],
+          "pinyin": "Dǎzào guójì shūniǔ, tuījìn quán fāngwèi hùliánhùtōng.",
+          "meaning_th": "สร้างศูนย์กลางคมนาคม ผลักดันการเชื่อมต่อโครงข่ายรอบด้าน",
+          "explanation_th": "การสร้างศูนย์กลาง (打造国际枢纽) + ผลักดันการเชื่อมโยง (推进全方位互联互通)",
+          "encouragement": "จัดประโยคยุทธศาสตร์โลจิสติกส์ได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"枢\" (shū - สลักศูนย์กลาง) ใน \"枢纽\" มีหมวดนำ \"木\" (ไม้) สื่อถึงกลไกใดในอดีต?",
+          "options": [
+            "แกนสลักไม้บานพับประตูโบราณ ซึ่งเป็นจุดหมุนรับน้ำหนักและกำหนดการเปิดปิดของประตูเมือง",
+            "ฟืนสำหรับก่อไฟ",
+            "กิ่งไม้รังนก",
+            "ไม้พายเรือแคนู"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"枢\" คือสลักไม้ของประตู เปรียบประดุจศูนย์กลางการเชื่อมต่อที่สำคัญที่สุด (枢纽/枢纽工程)",
+          "encouragement": "จำรากศัพท์กลไกศูนย์กลางได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "ระเบียงเศรษฐกิจที่เชื่อมต่อจากจีนไปยังทวีปยุโรป ข้ามมหาทวีปใด?",
+          "options": [
+            "亚欧大陆 (Yà'ōu Dàlù - ทวีปยูเรเชีย)",
+            "非洲大陆 (ทวีปแอฟริกา)",
+            "南极大陆 (ทวีปแอนตาร์กติกา)",
+            "美洲大陆 (ทวีปอเมริกา)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "เส้นทางรถไฟสายไหมเชื่อมต่อข้าม \"亚欧大陆\" (Eurasian Continent)",
+          "encouragement": "มีความรู้ภูมิศาสตร์และภูมิรัฐศาสตร์สากลที่แม่นยำ!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในปาฐกถาเปิดการประชุมสุดยอดความร่วมมือระหว่างประเทศ ประโยคใดแถลงวิสัยทัศน์เส้นทางสายไหมได้อย่างสมบูรณ์แบบที่สุด?",
+        "options": [
+          "弘扬丝路精神，深化全方位互联互通，依托欧亚物流枢纽共建繁荣经济走廊，携手共创互利共赢的美好未来！",
+          "国家加强宏观调控，坚持稳中求进，有效应对通胀与利率风险。",
+          "央行精准实施货币政策，强化逆周期调节，保持市场流动性合理充裕。",
+          "严格保护知识产权，打击恶意侵权，加快专利与商标确权。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"弘扬丝路精神\", \"互联互通\", \"物流枢纽\", \"经济走廊\" และ \"互利共赢\" ได้อย่างสง่างาม ทรงพลัง และครบถ้วนตามแบบแผนการทูตสากล"
+      },
+      "cheer_trophy": {
+        "badge_name": "สถาปนิกเส้นทางสายไหมแห่งศตวรรษ (Architect of the Modern Silk Road)",
+        "message_th": "ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 丝路, 互联互通, 走廊, 枢纽 พร้อมนำวิสัยทัศน์เชื่อมโยงโลกไปสู่การปฏิบัติจริง!",
+        "xp_reward": 120
+      }
+    },
+    {
+      "lesson_id": "t4_u54_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "基础设施：跨国投融资与绿色基建",
+        "th": "โครงสร้างพื้นฐาน: การระดมทุนข้ามชาติและสิ่งปลูกสร้างสีเขียว",
+        "en": "Infrastructure: Cross-Border Financing & Green Projects"
+      },
+      "can_do": {
+        "th": "อธิบายโครงการการลงทุนโครงสร้างพื้นฐานข้ามแดน เช่น 基础设施, 投融资, 亚投行, 债券, 绿色基建 ในการประชุมวิเคราะห์การลงทุนได้",
+        "en": "Master cross-border finance terms: Infrastructure, Investment & Financing, AIIB, Bonds, and Green Infrastructure"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: นำคำว่า 基础设施, 亚投行 และ 绿色基建 ไปใช้จัดทำข้อเสนอโครงการลงทุนระหว่างประเทศ!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5406",
+          "hanzi": "基础设施",
+          "pinyin": "jīchǔ shèshī",
+          "display_pinyin": "jīchǔ shèshī",
+          "pinyin_tone": "ji1chu3 she4shi1",
+          "meaning_th": "โครงสร้างพื้นฐาน (ถนน สะพาน ท่าเรือ สนามบิน เครือข่ายไฟฟ้า โทรคมนาคม)",
+          "meaning_en": "infrastructure",
+          "radical": "土",
+          "radical_name_th": "หมวดผืนดิน (提土旁)",
+          "stroke_count": 36,
+          "mnemonic": "เสาเข็มดินฐานรากมั่นคง (基础) ก่อสร้างสิ่งอำนวยความสะดวกเพื่อประชาชน (设施) = โครงสร้างพื้นฐาน",
+          "kid_mnemonic": "สะพานแขวนข้ามแม่น้ำและสนามบินขนาดใหญ่ที่รัฐบาลสร้างให้ทุกคนใช้ = 基础设施",
+          "body_gesture": "สองมือทำท่าตอกเสาเข็มลงบนพื้นอย่างหนักแน่น"
+        },
+        {
+          "id": "hsk4_5407",
+          "hanzi": "投融资",
+          "pinyin": "tóuróngzī",
+          "display_pinyin": "tóuróngzī",
+          "pinyin_tone": "tou2rong2zi1",
+          "meaning_th": "การลงทุนและการจัดหาเงินทุน (Investment and Financing)",
+          "meaning_en": "investment and financing / capital raising and deployment",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 27,
+          "mnemonic": "ทุ่มเม็ดเงินลงทุน (投) หล่อหลอมระดมทุน (融) บริหารทรัพย์สินเงินทอง (资) = การลงทุนและจัดหาทุน",
+          "kid_mnemonic": "ระดมเงินกองกลางจากผู้ถือหุ้นมาร่วมสร้างโรงงานพลังงานแสงอาทิตย์ = 投融资",
+          "body_gesture": "มือซ้ายรับเงินทุน มือขวาส่งมอบโครงการขยายงาน"
+        },
+        {
+          "id": "hsk4_5408",
+          "hanzi": "亚投行",
+          "pinyin": "Yàtóuháng",
+          "display_pinyin": "Yàtóuháng",
+          "pinyin_tone": "ya4tou2hang2",
+          "meaning_th": "ธนาคารเพื่อการลงทุนในโครงสร้างพื้นฐานแห่งเอเชีย (AIIB - Asian Infrastructure Investment Bank)",
+          "meaning_en": "AIIB (Asian Infrastructure Investment Bank)",
+          "radical": "二",
+          "radical_name_th": "หมวดสอง (二字旁)",
+          "stroke_count": 20,
+          "mnemonic": "ธนาคารการเงิน (行) เพื่อการลงทุน (投) ในภูมิภาคเอเชียและโลก (亚) = ธนาคาร AIIB",
+          "kid_mnemonic": "อาคารธนาคารนานาชาติทรงลูกบาศก์แก้วที่มีธงชาติหลายสิบประเทศปักหน้าตึก = 亚投行",
+          "body_gesture": "กำสองมือทำเป็นเสาค้ำอาคารธนาคารระดับโลก"
+        },
+        {
+          "id": "hsk4_5409",
+          "hanzi": "债券",
+          "pinyin": "zhàiquàn",
+          "display_pinyin": "zhàiquàn",
+          "pinyin_tone": "zhai4quan4",
+          "meaning_th": "พันธบัตร / หุ้นกู้ (Bond / เช่น 绿色债券 - พันธบัตรสีเขียว)",
+          "meaning_en": "bond / debenture",
+          "radical": "亻",
+          "radical_name_th": "หมวดคน (单人旁)",
+          "stroke_count": 20,
+          "mnemonic": "ภาระหนี้สินอันชอบธรรมของมนุษย์ (债) ตราไว้ในเอกสารตั๋วสัญญาใช้เงิน (券) = พันธบัตร",
+          "kid_mnemonic": "ใบตราสารหนี้สีเขียวที่รับรองว่าจะจ่ายผลตอบแทนตรงเวลา = 债券",
+          "body_gesture": "สองมือทำท่าคลี่ใบพันธบัตรแสดงมูลค่าการลงทุน"
+        },
+        {
+          "id": "hsk4_5410",
+          "hanzi": "绿色基建",
+          "pinyin": "lǜsè jījiàn",
+          "display_pinyin": "lǜsè jījiàn",
+          "pinyin_tone": "lü4se4 ji1jian4",
+          "meaning_th": "โครงสร้างพื้นฐานสีเขียว / สิ่งปลูกสร้างที่ปล่อยคาร์บอนต่ำและเป็นมิตรต่อสิ่งแวดล้อม",
+          "meaning_en": "green infrastructure / environmentally sustainable construction",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 28,
+          "mnemonic": "ร่มเงาสีเขียวแห่งธรรมชาติ (绿色) ก่อสร้างฐานรากอารยธรรม (基建) = โครงสร้างพื้นฐานสีเขียว",
+          "kid_mnemonic": "กังหันลมยักษ์และแผงโซลาร์เซลล์บนหลังคารถไฟความเร็วสูง = 绿色基建",
+          "body_gesture": "ทำสองมือเป็นรูปใบไม้สีเขียวประกบกันระดับอก"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 亚投行 (Yàtóuháng)",
+        "description_th": "yà (เสียง 4) tóu (เสียง 2) háng (เสียง 2 ออกเสียง háng ไม่ใช่ xíng)",
+        "example": "亚投行总部设于北京 (Yàtóuháng zǒngbù shè yú Běijīng)",
+        "fun_metaphor": "คำว่า 行 ออกเสียง háng เมื่อหมายถึง ธนาคาร หรือ อุตสาหกรรม",
+        "reassurance": "สถาบันการเงินพหุภาคีระดับโลกที่จีนเป็นผู้ริเริ่มก่อตั้ง"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการระดมทุนโครงการ: 拓宽……投融资渠道，大力发展绿色基建",
+        "formula": "依托亚投行与丝路基金等多边平台，创新投融资模式，高质量推进绿色基建",
+        "explanation_th": "ใช้ในรายงานความเป็นไปได้ของโครงการ (Feasibility Study) และข้อตกลงสินเชื่อสากล",
+        "patterns": [
+          {
+            "formula": "创新投融资机制，支持基建项目。",
+            "zh": "通过发行绿色主权债券，项目成功筹集了百亿美元资金，为跨国铁路基础设施建设注入强劲动力。",
+            "pinyin": "Tōngguò fāxíng lǜsè zhǔquán zhàiquàn, xiàngmù chénggōng chóují le bǎi yì měiyuán zījīn, wèi kuàguó tiělù jīchǔ shèshī jiànshè zhùrù qiángjìn dònglì.",
+            "th": "ด้วยการออกพันธบัตรรัฐบาลสีเขียว โครงการสามารถระดมทุนได้นับหมื่นล้านดอลลาร์สหรัฐ ฉีดพลังขับเคลื่อนอันแข็งแกร่งให้แก่การสร้างโครงสร้างพื้นฐานทางรถไฟข้ามชาติ",
+            "en": "By issuing green sovereign bonds, the project successfully raised tens of billions of dollars, injecting strong impetus into transnational railway infrastructure construction."
+          },
+          {
+            "formula": "践行绿色理念，打造标杆工程。",
+            "zh": "亚投行批准向沿线国家可再生能源项目提供贷款，树立了高标准、可持续的绿色基建典范。",
+            "pinyin": "Yàtóuháng pīzhǔn xiàng yánxiàn guójiā kězàishēng néngyuán xiàngmù tígōng dàikuǎn, shùlì le gāo biāozhǔn, kěchíxù de lǜsè jījiàn diǎnfàn.",
+            "th": "ธนาคาร AIIB อนุมัติสินเชื่อให้แก่โครงการพลังงานหมุนเวียนในประเทศตามแนวเส้นทาง สร้างแบบอย่างโครงสร้างพื้นฐานสีเขียวที่มีมาตรฐานสูงและยั่งยืน",
+            "en": "The AIIB approved loans for renewable energy projects in participating countries, establishing a benchmark of high-standard, sustainable green infrastructure."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "国际金融机构理事 (AIIB Director) 🏦",
+          "zh": "各位部长，亚投行已吸引超过100个成员国加入，累计批准数百个重大基础设施投融资项目。",
+          "pinyin": "Gèwèi bùzhǎng, Yàtóuháng yǐ xīyǐn chāoguò yībǎi gè chéngyuánguó jiārù, lěijì pīzhǔn shùbǎi gè zhòngdà jīchǔ shèshī tóuróngzī xiàngmù.",
+          "th": "ท่านรัฐมนตรีทุกท่าน ธนาคาร AIIB ได้ดึงดูดสมาชิกเข้าร่วมกว่า 100 ประเทศ และอนุมัติโครงการการลงทุนและระดมทุนโครงสร้างพื้นฐานที่สำคัญไปแล้วหลายร้อยโครงการครับ",
+          "en": "Ministers, the AIIB has attracted over 100 member countries, cumulatively approving hundreds of major infrastructure investment and financing projects.",
+          "audio_trigger": "t4_u54_l02_d01"
+        },
+        {
+          "speaker": "交通运输部代表 (Transport Minister) 🚆",
+          "zh": "中老铁路和雅万高铁作为旗舰工程顺利通车运营，极大地改善了当地基础设施面貌，带动了产业繁荣。",
+          "pinyin": "Zhōng-Lǎo tiělù yǔ Yǎwàn gāotiě zuòwéi qíjiàn gōngchéng shùnlì tōngchē yùnyíng, jídà de gǎishàn le dāngdì jīchǔ shèshī miànmào, dàidòng le chǎnyè fánróng.",
+          "th": "ทางรถไฟจีน-ลาว และรถไฟความเร็วสูงจาการ์ตา-บันดุง ในฐานะโครงการเรือธงได้เปิดให้บริการอย่างราบรื่น ช่วยพลิกโฉมโครงสร้างพื้นฐานในท้องถิ่น และขับเคลื่อนความรุ่งเรืองของภาคอุตสาหกรรมอย่างมหาศาลครับ",
+          "en": "The China-Laos Railway and Jakarta-Bandung High-Speed Railway, as flagship projects, have commenced smooth operations, vastly transforming local infrastructure and driving industrial prosperity.",
+          "audio_trigger": "t4_u54_l02_d02"
+        },
+        {
+          "speaker": "国际金融机构理事 (AIIB Director) 🏦",
+          "zh": "非常好！下一阶段我们要大力拓展绿色基建投融资渠道，支持发行绿色债券，助力各国实现碳中和目标。",
+          "pinyin": "Fēicháng hǎo! Xià yī jiēduàn wǒmen yào dàlì tuòzhǎn lǜsè jījiàn tóuróngzī qúdào, zhīchí fāxíng lǜsè zhàiquàn, zhùlì gèguó shíxiàn tànzhōnghé mùbiāo.",
+          "th": "ดีเยี่ยมอย่างยิ่ง! ในก้าวต่อไป เราต้องเร่งขยายช่องทางการลงทุนและระดมทุนเพื่อสิ่งปลูกสร้างสีเขียว สนับสนุนการออกพันธบัตรสีเขียว เพื่อช่วยให้ทุกประเทศบรรลุเป้าหมายความเป็นกลางทางคาร์บอนครับ",
+          "en": "Excellent! In the next stage, we must vigorously expand green infrastructure financing channels and support issuing green bonds to help nations achieve carbon neutrality goals.",
+          "audio_trigger": "t4_u54_l02_d03"
+        },
+        {
+          "speaker": "交通运输部代表 (Transport Minister) 🚆",
+          "zh": "求同存异、互利共赢！高标准、惠民生、可持续，正是新时代跨国基建合作最鲜明的时代底色！",
+          "pinyin": "Qiútóngcúnyì, hùlì gòngyíng! Gāo biāozhǔn, huìmínshēng, kěchíxù, zhèng shì xīn shídài kuàguó jījiàn hézuò zuì xiānmíng de shídài dǐsè!",
+          "th": "แสวงจุดร่วมสงวนจุดต่าง ชัยชนะร่วมกัน! มาตรฐานสูง ตอบสนองชีวิตประชาชน และยั่งยืน คือคุณลักษณะแห่งยุคสมัยที่เด่นชัดที่สุดของความร่วมมือด้านโครงสร้างพื้นฐานข้ามชาติยุคใหม่ครับ!",
+          "en": "Seeking common ground while reserving differences, mutual benefit! High standard, people-centric, and sustainable — this is the most distinctive hallmark of modern cross-border infrastructure cooperation!",
+          "audio_trigger": "t4_u54_l02_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "ธนาคาร \"亚投行\" (AIIB) มีสำนักงานใหญ่ (Headquarters) ตั้งอยู่ที่นครใด?",
+          "options": [
+            "北京 (ปักกิ่ง)",
+            "上海 (เซี่ยงไฮ้)",
+            "香港 (ฮ่องกง)",
+            "日内瓦 (เจนีวา)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "สำนักงานใหญ่ของธนาคารเพื่อการลงทุนในโครงสร้างพื้นฐานแห่งเอเชีย (AIIB) ตั้งอยู่ที่กรุงปักกิ่ง ประเทศจีน",
+          "encouragement": "ยอดเยี่ยมมาก! เข้าใจข้อมูลองค์กรการเงินระดับโลกได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ออกพันธบัตรสีเขียว ลงทุนสร้างสิ่งปลูกสร้างสีเขียว\"",
+          "tokens": [
+            "投资绿色基建",
+            "发行绿色债券"
+          ],
+          "correct_sequence": [
+            "发行绿色债券",
+            "投资绿色基建"
+          ],
+          "pinyin": "Fāxíng lǜsè zhàiquàn, tóuzī lǜsè jījiàn.",
+          "meaning_th": "ออกพันธบัตรสีเขียว ลงทุนสร้างสิ่งปลูกสร้างสีเขียว",
+          "explanation_th": "การระดมทุน (发行绿色债券) + วัตถุประสงค์การลงทุน (投资绿色基建)",
+          "encouragement": "จัดประโยคการเงินสีเขียวได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"券\" (quàn - ตราสาร/ตั๋ว) ใน \"债券\" มีหมวดนำ \"刀\" (มีด) ด้านล่าง สื่อถึงต้นกำเนิดประวัติศาสตร์ใด?",
+          "options": [
+            "การใช้มีดกรีดสลักรอยบากบนแผ่นไม้ไผ่โบราณ แล้วบิออกเป็นสองส่วนเพื่อใช้เป็นหลักฐานการกู้ยืมเงิน",
+            "อาวุธสำหรับฟันดาบ",
+            "มีดปอกผลไม้",
+            "การแกะสลักรูปปั้นหิน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"券\" มี \"刀\" (มีด) คือการบากแผ่นไม้สัญญาเงินกู้เป็นสองท่อน เมื่อชำระหนี้ก็นำมาประกบกัน (契约/证券)",
+          "encouragement": "เข้าใจประวัติศาสตร์ตราสารหนี้โบราณได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"绿色基建\" (Green Infrastructure) มุ่งเน้นการก่อสร้างประเภทใด?",
+          "options": [
+            "โครงการพลังงานแสงอาทิตย์ พลังงานลม รถไฟพลังงานไฟฟ้า และอาคารประหยัดพลังงานปล่อยคาร์บอนต่ำ",
+            "โรงไฟฟ้าถ่านหินก่อมลพิษสูง",
+            "โรงงานทิ้งน้ำเสียลงแม่น้ำ",
+            "การตัดไม้ทำลายป่าสร้างถนน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"绿色基建\" คือ สิ่งปลูกสร้างและโครงสร้างพื้นฐานที่เป็นมิตรต่อสิ่งแวดล้อม ขับเคลื่อนพลังงานสะอาดและความยั่งยืน",
+          "encouragement": "เข้าใจแนวคิดการพัฒนาที่ยั่งยืนระดับสากลอย่างถ่องแท้!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในรายงานการประชุมรัฐมนตรีว่าการกระทรวงการคลัง ประโยคใดสรุปยุทธศาสตร์การระดมทุนสร้างสิ่งปลูกสร้างสีเขียวได้อย่างสมบูรณ์แบบที่สุด?",
+        "options": [
+          "依托亚投行等多边金融机构，大力拓展绿色债券等投融资渠道，高质量推进绿色基建，筑牢可持续繁荣的基石。",
+          "国家加强宏观调控，坚持稳中求进，有效应对通胀与利率风险。",
+          "诉讼代理人在法庭上对证据严格质证，依据适用法律取得全面胜诉。",
+          "白皮书强调中国经济韧性强、潜力大，总体呈现稳中向好态势。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"亚投行\", \"绿色债券\", \"投融资渠道\", \"绿色基建\" และ \"可持续繁荣\" ได้อย่างสมบูรณ์แบบตามภาษาราชการระดับรัฐ"
+      },
+      "cheer_trophy": {
+        "badge_name": "ผู้เชี่ยวชาญการเงินโครงสร้างพื้นฐานโลก (Global Infrastructure Finance Specialist)",
+        "message_th": "ยินดีด้วย! คุณเข้าใจกลไก 基础设施, 投融资, 亚投行, 绿色基建 พร้อมบริหารโครงการระดับพันล้านดอลลาร์!",
+        "xp_reward": 120
+      }
+    },
+    {
+      "lesson_id": "t4_u54_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "贸易畅通：规则对接与经贸合作区",
+        "th": "การค้าคล่องตัว (贸易畅通): การสอดประสานกฎระเบียบและเขตความร่วมมือทางเศรษฐกิจ",
+        "en": "Unimpeded Trade: Regulatory Alignment & Economic Zones"
+      },
+      "can_do": {
+        "th": "อธิบายการอำนวยความสะดวกทางการค้า เช่น 畅通, 关税, 对接, 沿线, 经贸合作区 ในการประชุมเจรจาการค้าระหว่างประเทศได้",
+        "en": "Master unimpeded trade vocabulary: Unimpeded, Tariffs, Alignment/Docking, Along-the-Route, and Cooperation Zones"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: นำคำว่า 贸易畅通 และ 经贸合作区 ไปใช้ในการเจรจาสิทธิประโยชน์ทางภาษี!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5411",
+          "hanzi": "畅通",
+          "pinyin": "chàngtōng",
+          "display_pinyin": "chàngtōng",
+          "pinyin_tone": "chang4tong1",
+          "meaning_th": "คล่องตัวไหลลื่นไร้อุปสรรค (Unimpeded / Free-flowing / เช่น 贸易畅通 - การค้าคล่องตัว)",
+          "meaning_en": "unimpeded / smooth / unblocked / free-flowing",
+          "radical": "日",
+          "radical_name_th": "หมวดดวงอาทิตย์ (日字旁)",
+          "stroke_count": 18,
+          "mnemonic": "แสงตะวันเบิกบานใจ (畅) ทะลุผ่านเส้นทางเปิดโล่ง (通) = คล่องตัวไหลลื่น",
+          "kid_mnemonic": "รถยนต์แล่นฉิวบนทางด่วนโล่งไร้รถติด = 畅通",
+          "body_gesture": "สองมือผายออกด้านหน้าแล้วพุ่งไปข้างหน้าอย่างรวดเร็วไร้การติดขัด"
+        },
+        {
+          "id": "hsk4_5412",
+          "hanzi": "关税",
+          "pinyin": "guānshuì",
+          "display_pinyin": "guānshuì",
+          "pinyin_tone": "guan1shui4",
+          "meaning_th": "ภาษีศุลกากร / ภาษีนำเข้าส่งออก (Customs duty / Tariff)",
+          "meaning_en": "customs duty / tariff",
+          "radical": "门",
+          "radical_name_th": "หมวดประตู (门字框)",
+          "stroke_count": 18,
+          "mnemonic": "ด่านตรวจคนเข้าเมืองหน้าประตูเมือง (关) จัดเก็บภาษีผลผลิตข้าวของ (税) = ภาษีศุลกากร",
+          "kid_mnemonic": "เจ้าหน้าที่ศุลกากรตรวจเอกสารตู้คอนเทนเนอร์ที่ด่านชายแดน = 关税",
+          "body_gesture": "กำมือขวาประทับตราผ่านพิธีการศุลกากร"
+        },
+        {
+          "id": "hsk4_5413",
+          "hanzi": "对接",
+          "pinyin": "duìjiē",
+          "display_pinyin": "duìjiē",
+          "pinyin_tone": "dui4jie1",
+          "meaning_th": "การสอดประสานเชื่อมโยง / การจับคู่มาตรฐานและนโยบาย (Docking / Alignment)",
+          "meaning_en": "dock / link up / align (policies and standards)",
+          "radical": "寸",
+          "radical_name_th": "หมวดนิ้วนิ้วมือ (寸字旁)",
+          "stroke_count": 17,
+          "mnemonic": "จับคู่ตรงกันอย่างพอดี (对) ต่อขยายเชื่อมประสาน (接) = สอดประสานเชื่อมต่อ",
+          "kid_mnemonic": "ยานอวกาศสองลำประกบเชื่อมต่อกันกลางอวกาศอย่างแม่นยำ = 对接",
+          "body_gesture": "สองมือประสานปลายนิ้วชี้ชนกันแสดงการประกบเชื่อมต่อพอดี"
+        },
+        {
+          "id": "hsk4_5414",
+          "hanzi": "沿线",
+          "pinyin": "yánxiàn",
+          "display_pinyin": "yánxiàn",
+          "pinyin_tone": "yan2xian4",
+          "meaning_th": "ตามแนวเส้นทาง / กลุ่มประเทศตามแนวเส้นทางสายไหม (Along the route / Belt and Road countries)",
+          "meaning_en": "along the line / countries along the route",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำสามหยด (三点水)",
+          "stroke_count": 17,
+          "mnemonic": "เลียบเลาะไปตามชายน้ำ (沿) บนเส้นทางสายยาว (线) = ตามแนวเส้นทาง",
+          "kid_mnemonic": "เมืองท่าและสถานีรถไฟที่เรียงรายอยู่ตลอดสองฝั่งทางรถไฟ = 沿线",
+          "body_gesture": "วาดมือขวาเป็นเส้นตรงยาวจากซ้ายไปขวาแสดงแนวเส้นทาง"
+        },
+        {
+          "id": "hsk4_5415",
+          "hanzi": "经贸合作区",
+          "pinyin": "jīngmào hézuò qū",
+          "display_pinyin": "jīngmào hézuò qū",
+          "pinyin_tone": "jing1mao4 he2zuo4 qu1",
+          "meaning_th": "เขตความร่วมมือทางเศรษฐกิจและการค้าข้ามชาติ (Economic & Trade Cooperation Zone)",
+          "meaning_en": "economic and trade cooperation zone / industrial park",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 38,
+          "mnemonic": "เศรษฐกิจการค้า (经贸) ร่วมมือสมานฉันท์ (合作) ในอาณาเขตนิคมอุตสาหกรรม (区) = เขตความร่วมมือการค้า",
+          "kid_mnemonic": "นิคมอุตสาหกรรมขนาดใหญ่ที่มีโรงงานของหลายประเทศตั้งอยู่ร่วมกัน = 经贸合作区",
+          "body_gesture": "สองมือทำเป็นกรอบสี่เหลี่ยมอาณาเขตกว้างแสดงนิคมอุตสาหกรรม"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 经贸合作区 (jīngmào hézuò qū)",
+        "description_th": "jīng (เสียง 1) mào (เสียง 4) hé (เสียง 2) zuò (เสียง 4) qū (เสียง 1)",
+        "example": "境外经贸合作区 (Jìngwài jīngmào hézuò qū)",
+        "fun_metaphor": "กลุ่มคำเฉพาะทางสำหรับการตั้งนิคมอุตสาหกรรมในต่างแดน",
+        "reassurance": "คำว่า 区 (qū) ออกเสียง 1 สื่อถึง อาณาเขตหรือนิคม"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการอำนวยความสะดวกการค้า: 促进贸易畅通，加强规则标准对接",
+        "formula": "大幅削减关税与非关税壁垒，推进高标准经贸规则对接，促进区域贸易畅通",
+        "explanation_th": "ใช้ในการเจรจาข้อตกลงเขตการค้าเสรี (FTA) และความตกลงหุ้นส่วนทางเศรษฐกิจระดับภูมิภาค (RCEP)",
+        "patterns": [
+          {
+            "formula": "推进贸易自由化，大幅降低关税。",
+            "zh": "RCEP协定全面生效后，成员国之间超过90%的货物贸易将逐步实现零关税，极大提升了贸易畅通水平。",
+            "pinyin": "RCEP xiédìng quánmiàn shēngxiào hòu, chéngyuánguó zhījiān chāoguò bǎifēnzhī jiǔshí de huòwù màoyì jiāng zhúbù shíxiàn líng guānshuì, jídà tíshēng le màoyì chàngtōng shuǐpíng.",
+            "th": "หลังจากความตกลง RCEP มีผลบังคับใช้อย่างสมบูรณ์ สินค้ากว่า 90% ระหว่างประเทศสมาชิกจะทยอยลดภาษีศุลกากรลงเหลือศูนย์ ยกระดับความคล่องตัวทางการค้าอย่างก้าวกระโดด",
+            "en": "After RCEP took full effect, zero tariffs will be phased in for over 90% of goods trade among members, vastly elevating trade facilitation."
+          },
+          {
+            "formula": "深化规则对接，共建经贸合作区。",
+            "zh": "中泰罗勇工业园等境外经贸合作区的成功运营，实现了产业集群发展与政策法规的高效对接。",
+            "pinyin": "Zhōng-Tài Luóyǒng gōngyèyuán děng jìngwài jīngmào hézuò qū de chénggōng yùnyíng, shíxiàn le chǎnyè jíqún fāzhǎn yǔ zhèngcè fǎguī de gāoxiào duìjiē.",
+            "th": "การดำเนินงานที่ประสบความสำเร็จของเขตความร่วมมือทางเศรษฐกิจการค้าในต่างแดน เช่น นิคมอุตสาหกรรมไทย-จีน ระยอง ทำให้เกิดการพัฒนาคลัสเตอร์อุตสาหกรรมและการสอดประสานกฎระเบียบอย่างมีประสิทธิภาพสูง",
+            "en": "Successful operations of overseas cooperation zones like the Thai-Chinese Rayong Industrial Zone realized industrial cluster growth and efficient policy-regulatory docking."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "海关总署司长 (Customs Director) 🛃",
+          "zh": "各位参赞，为了促进沿线国家贸易畅通，中国海关已与数十个共建国家签署了AEO互认安排。",
+          "pinyin": "Gèwèi cānzàn, wèile cùjìn yánxiàn guójiā màoyì chàngtōng, Zhōngguó hǎiguān yǐ yǔ shùshí gè gòngjiàn guójiā qiānshǔ le AEO hùrèn ānpái.",
+          "th": "ท่านที่ปรึกษาทูตทุกท่านครับ เพื่อส่งเสริมความคล่องตัวทางการค้ากับประเทศตามแนวเส้นทาง ศุลกากรจีนได้ลงนามในข้อตกลงการยอมรับร่วมกันด้าน AEO กับหลายสิบประเทศแล้วครับ",
+          "en": "Counselors, to promote trade facilitation with participating countries, China Customs has signed AEO mutual recognition arrangements with dozens of partner nations.",
+          "audio_trigger": "t4_u54_l03_d01"
+        },
+        {
+          "speaker": "商务参赞 (Commercial Counselor) 👔",
+          "zh": "这一举措显著降低了通关时间与关税合规成本，为两国企业深化经贸合作注入了强大确定性。",
+          "pinyin": "Zhè yī jǔcuò xiǎnzhù jiàngdī le tōngguān shíjiān yǔ guānshuì héguī chéngběn, wèi liǎng guó qǐyè shēnhuà jīngmào hézuò zhùrù le qiángdà quèdìngxìng.",
+          "th": "มาตรการนี้ช่วยลดระยะเวลาพิธีการศุลกากรและต้นทุนการปฏิบัติตามกฎระเบียบภาษีอย่างมีนัยสำคัญ เติมเต็มความแน่นอนอันแข็งแกร่งให้แก่ภาคธุรกิจของทั้งสองประเทศในการกระชับความร่วมมือครับ",
+          "en": "This move significantly reduced customs clearance time and tariff compliance costs, injecting strong certainty into enterprises of both nations for deepening trade cooperation.",
+          "audio_trigger": "t4_u54_l03_d02"
+        },
+        {
+          "speaker": "海关总署司长 (Customs Director) 🛃",
+          "zh": "同时，我们在沿线国家共建的经贸合作区正在加速推进电子口岸与国际标准规则的高效对接。",
+          "pinyin": "Tóngshí, wǒmen zài yánxiàn guójiā gòngjiàn de jīngmào hézuò qū zhèngzài jiāsù tuījìn diànzǐ kǒu'àn yǔ guójì biāozhǔn guīzé de gāoxiào duìjiē.",
+          "th": "ในขณะเดียวกัน เขตความร่วมมือทางเศรษฐกิจการค้าที่เราร่วมสร้างในประเทศตามแนวเส้นทาง ก็กำลังเร่งการเชื่อมโยงระบบด่านอิเล็กทรอนิกส์กับกฎเกณฑ์มาตรฐานสากลอย่างมีประสิทธิภาพ",
+          "en": "Meanwhile, economic and trade cooperation zones we jointly build along the route are accelerating efficient docking between single windows and international standard rules.",
+          "audio_trigger": "t4_u54_l03_d03"
+        },
+        {
+          "speaker": "商务参赞 (Commercial Counselor) 👔",
+          "zh": "只要我们携手破除贸易壁垒，求同存异、互利共赢，跨国经贸合作的黄金大道必将越走越宽广！",
+          "pinyin": "Zhǐyào wǒmen xiéshǒu pòchú màoyì bìlěi, qiútóngcúnyì, hùlì gòngyíng, kuàguó jīngmào hézuò de huángjīn dàdào bìjiāng yuè zǒu yuè kuānguǎng!",
+          "th": "ขอเพียงพวกเราจับมือกันทลายกำแพงการค้า แสวงจุดร่วมสงวนจุดต่าง ชัยชนะร่วมกัน ถนนสายทองคำแห่งความร่วมมือทางการค้าข้ามชาติย่อมจะกว้างไกลยิ่งขึ้นอย่างแน่นอนครับ!",
+          "en": "As long as we join hands to dismantle trade barriers, seek common ground while reserving differences, and pursue mutual benefit, the golden avenue of cross-border trade will grow ever broader!",
+          "audio_trigger": "t4_u54_l03_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "ข้อตกลง \"AEO 互认\" (Authorized Economic Operator Mutual Recognition) มีประโยชน์หลักต่อภาคธุรกิจอย่างไร?",
+          "options": [
+            "การได้รับสิทธิพิเศษในการตรวจปล่อยสินค้าผ่านด่านศุลกากรอย่างรวดเร็วเป็นพิเศษ ลดอัตราการสุ่มตรวจ และลดต้นทุนโลจิสติกส์",
+            "การยกเลิกการตรวจสอบคุณภาพสินค้าทุกชนิด",
+            "การแจกตั๋วเครื่องบินฟรีแก่ผู้บริหาร",
+            "การอนุญาตให้ไม่ต้องยื่นเสียภาษีเงินได้"
+          ],
+          "correct_index": 0,
+          "explanation_th": "ข้อตกลง AEO 互认 ช่วยให้ผู้ประกอบการระดับมาตรฐานได้รับความสะดวกรวดเร็วในการผ่านพิธีการศุลกากรระหว่างประเทศ",
+          "encouragement": "ยอดเยี่ยมมาก! เข้าใจกลไกการอำนวยความสะดวกการค้าระหว่างประเทศอย่างแม่นยำ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"สอดประสานกฎเกณฑ์มาตรฐาน ผลักดันการค้าคล่องตัว\"",
+          "tokens": [
+            "促进贸易畅通",
+            "对接规则标准"
+          ],
+          "correct_sequence": [
+            "对接规则标准",
+            "促进贸易畅通"
+          ],
+          "pinyin": "Duìjiē guīzé biāozhǔn, cùjìn màoyì chàngtōng.",
+          "meaning_th": "สอดประสานกฎเกณฑ์มาตรฐาน ผลักดันการค้าคล่องตัว",
+          "explanation_th": "การเชื่อมมาตรฐาน (对接规则标准) + ผลลัพธ์ความคล่องตัว (促进贸易畅通)",
+          "encouragement": "จัดประโยคข้อตกลงการค้าได้อย่างสง่างาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"税\" (shuì - ภาษี) ใน \"关税\" มีหมวดนำ \"禾\" (รวงข้าว) สื่อถึงประวัติศาสตร์การจัดเก็บภาษีอย่างไร?",
+          "options": [
+            "ในยุคเกษตรกรรมโบราณ ภาษีถูกส่งมอบในรูปของผลผลิตรวงข้าวและธัญพืชจากผืนดิน",
+            "การนำข้าวมาต้มสุรา",
+            "การปลูกข้าวทดลองทางวิทยาศาสตร์",
+            "การขายเมล็ดพันธุ์พืช"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"禾\" คือต้นข้าว ในอดีตภาษีอากรถูกจัดเก็บด้วยผลผลิตเมล็ดข้าวที่ชาวนาเก็บเกี่ยวได้ (田税/关税)",
+          "encouragement": "เข้าใจรากศัพท์ประวัติศาสตร์ภาษีอากรได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"贸易壁垒\" (Trade Barriers) ครอบคลุมอุปสรรคทางการค้าประเภทใด?",
+          "options": [
+            "กำแพงภาษีศุลกากร (Tariff barriers) และอุปสรรคที่ไม่ใช่ภาษี เช่น โควตาและมาตรฐานทางเทคนิคที่ไม่เป็นธรรม",
+            "กำแพงอิฐรอบโกดังสินค้า",
+            "สภาพอากาศพายุฝน",
+            "การไม่มีเรือบรรทุกสินค้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"贸易壁垒\" ครอบคลุมทั้ง关税壁垒 (Tariff) และ 非关税壁垒 (Non-tariff) ที่กีดกันการค้าเสรี",
+          "encouragement": "เข้าใจศัพท์การค้าระหว่างประเทศได้อย่างแม่นยำ!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในแถลงการณ์ร่วมการประชุมรัฐมนตรีพาณิชย์ ประโยคใดสื่อถึงการเปิดเสรีทางการค้าและการอำนวยความสะดวกได้อย่างสมบูรณ์แบบที่สุด?",
+        "options": [
+          "各方重申坚定维护多边贸易体制，深化沿线经贸合作区建设与规则标准对接，大幅降低关税壁垒，切实促进全球贸易畅通。",
+          "白皮书强调中国经济韧性强、潜力大，总体呈现稳中向好态势。",
+          "诉讼代理人在法庭上对证据严格质证，依据适用法律取得全面胜诉。",
+          "严格保护知识产权，打击恶意侵权，加快专利与商标确权。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"多边贸易体制\", \"经贸合作区\", \"规则标准对接\", \"降低关税壁垒\" และ \"促进贸易畅通\" ได้อย่างสมบูรณ์แบบตามมาตรฐานแถลงการณ์ร่วมระดับชาติ"
+      },
+      "cheer_trophy": {
+        "badge_name": "ทูตพาณิชย์ไร้พรมแดน (Ambassador of Unimpeded Trade)",
+        "message_th": "ยินดีด้วย! คุณเข้าใจคำศัพท์ 畅通, 关税, 对接, 沿线, 经贸合作区 อย่างลึกซึ้ง พร้อมขับเคลื่อนการค้าเสรีสู่เวทีสากล!",
+        "xp_reward": 120
+      }
+    },
+    {
+      "lesson_id": "t4_u54_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "民心相通：文明互鉴与人类命运共同体",
+        "th": "มิตรภาพที่ร้อยใจ (民心相通): การแลกเปลี่ยนอารยธรรมและประชาคมที่มีอนาคตร่วมกัน",
+        "en": "People-to-People Bonds: Civilizational Mutual Learning"
+      },
+      "can_do": {
+        "th": "อธิบายวิสัยทัศน์มนุษยธรรมระดับโลก เช่น 民心相通, 互鉴, 减贫, 可持续, 共同繁荣 ในสุนทรพจน์การทูตวัฒนธรรมได้",
+        "en": "Articulate global humanitarian vision using terms: People-to-People Bonds, Mutual Learning, Poverty Reduction, and Common Prosperity"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: นำคำว่า 民心相通 และ 共同繁荣 ไปใช้ในการกล่าวสุนทรพจน์ปิดการประชุมผู้นำวัฒนธรรมโลก!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5416",
+          "hanzi": "民心相通",
+          "pinyin": "mínxīn xiāngtōng",
+          "display_pinyin": "mínxīn xiāngtōng",
+          "pinyin_tone": "min2xin1 xiang1tong1",
+          "meaning_th": "มิตรภาพระหว่างประชาชนที่ร้อยดวงใจถึงกัน (People-to-people bond - เสาหลักที่ 5 ของ BRI)",
+          "meaning_en": "people-to-people bonds / mutual understanding among peoples",
+          "radical": "氏",
+          "radical_name_th": "หมวดนามตระกูล (氏字旁)",
+          "stroke_count": 27,
+          "mnemonic": "ดวงใจของประชาชน (民心) เชื่อมโยงร้อยรัดถึงกันอย่างไร้พรมแดน (相通) = มิตรภาพเชื่อมใจราษฎร",
+          "kid_mnemonic": "เด็กๆ ต่างชาติต่างภาษาร้องเพลงและเต้นรำจับมือล้อมเป็นวงกลม = 民心相通",
+          "body_gesture": "สองมือกุมไว้ที่หน้าอกแล้วผายออกไปข้างหน้าดั่งการส่งมอบมิตรภาพ"
+        },
+        {
+          "id": "hsk4_5417",
+          "hanzi": "互鉴",
+          "pinyin": "hùjiàn",
+          "display_pinyin": "hùjiàn",
+          "pinyin_tone": "hu4jian4",
+          "meaning_th": "การเรียนรู้และถอดบทเรียนซึ่งกันและกัน (Mutual learning / เช่น 文明互鉴)",
+          "meaning_en": "mutual learning / learn from each other / mutual benchmarking",
+          "radical": "互",
+          "radical_name_th": "หมวดสลับประสาน (互字部)",
+          "stroke_count": 18,
+          "mnemonic": "สลับประสาน (互) ส่องกระจกเงาโบราณสะท้อนเรียนรู้ภูมิปัญญา (鉴) = ส่องกระจกเรียนรู้ร่วมกัน",
+          "kid_mnemonic": "แลกเปลี่ยนหนังสือภาพวัฒนธรรมกับเพื่อนต่างชาติแล้วเรียนรู้ด้วยกัน = 互鉴",
+          "body_gesture": "ยกสองฝ่ามือประกบเป็นกระจกเงาส่องสะท้อนเข้าหากัน"
+        },
+        {
+          "id": "hsk4_5418",
+          "hanzi": "减贫",
+          "pinyin": "jiǎnpín",
+          "display_pinyin": "jiǎnpín",
+          "pinyin_tone": "jian3pin2",
+          "meaning_th": "การลดและขจัดความยากจน (Poverty reduction / Poverty alleviation)",
+          "meaning_en": "poverty reduction / poverty alleviation",
+          "radical": "冫",
+          "radical_name_th": "หมวดน้ำแข็งสองหยด (两点水)",
+          "stroke_count": 20,
+          "mnemonic": "ลดทอนลดยอด (减) ความขัดสนยากจน (贫) = ขจัดความยากจน",
+          "kid_mnemonic": "ปลูกข้าวสาลีรวงทองเต็มทุ่งนาจนชาวบ้านทุกคนมีข้าวกินอิ่มท้อง = 减贫",
+          "body_gesture": "สองมือทำท่าประคองรวงข้าวรุ่งเรืองมอบให้ชุมชน"
+        },
+        {
+          "id": "hsk4_5419",
+          "hanzi": "可持续",
+          "pinyin": "kěchíxù",
+          "display_pinyin": "kěchíxù",
+          "pinyin_tone": "ke3chi2xu4",
+          "meaning_th": "ความยั่งยืน / สามารถดำเนินต่อไปได้ในระยะยาว (Sustainable)",
+          "meaning_en": "sustainable / sustainability",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字旁)",
+          "stroke_count": 25,
+          "mnemonic": "สามารถ (可) ยึดกุมประคองไว้ (持) สานต่อไม่ขาดสาย (续) = ยั่งยืนถาวร",
+          "kid_mnemonic": "ปลูกต้นไม้ทดแทนต้นที่ตัดไปเพื่อให้ป่าไม้อุดมสมบูรณ์ตลอดกาล = 可持续",
+          "body_gesture": "ทำสองมือหมุนวนเป็นวัฏจักรแห่งความยั่งยืนต่อเนื่อง"
+        },
+        {
+          "id": "hsk4_5420",
+          "hanzi": "共同繁荣",
+          "pinyin": "gòngtóng fánróng",
+          "display_pinyin": "gòngtóng fánróng",
+          "pinyin_tone": "gong4tong2 fan2rong2",
+          "meaning_th": "ความเจริญรุ่งเรืองร่วมกันของทุกประเทศและประชาชน (Common prosperity)",
+          "meaning_en": "common prosperity / shared prosperity",
+          "radical": "八",
+          "radical_name_th": "หมวดแปด (八字底)",
+          "stroke_count": 37,
+          "mnemonic": "ร่วมกันทั้งหมด (共同) เบ่งบานสะพรั่งดั่งบุปผาและต้นไม้ใหญ่ (繁荣) = เจริญรุ่งเรืองร่วมกัน",
+          "kid_mnemonic": "เมืองทั้งเมืองเปิดไฟสว่างไสว ผู้คนทุกชาติพันธุ์ยิ้มแย้มยินดี = 共同繁荣",
+          "body_gesture": "ชูสองแขนขึ้นสู่ท้องฟ้าแล้วผายออกอย่างสง่างามเฉลิมฉลองความรุ่งเรือง"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 共同繁荣 (gòngtóng fánróng)",
+        "description_th": "gòng (เสียง 4) tóng (เสียง 2) fán (เสียง 2) róng (เสียง 2)",
+        "example": "促进世界各国共同繁荣 (Cùjìn shìjiè gèguó gòngtóng fánróng)",
+        "fun_metaphor": "เสียงประสานแห่งความมั่งคั่งที่ทุกประเทศเติบโตร่วมกันโดยไม่ทิ้งใครไว้ข้างหลัง",
+        "reassurance": "เป้าหมายสูงสุดแห่งการทูตพหุภาคีและข้อริเริ่มหนึ่งแถบหนึ่งเส้นทาง"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างวิสัยทัศน์โลก: 促进民心相通，推动构建人类命运共同体",
+        "formula": "以文明交流超越文明隔阂，以文明互鉴超越文明冲突，共创共同繁荣的美好明天",
+        "explanation_th": "ใช้ในสุนทรพจน์ผู้นำระดับประธานาธิบดีและแถลงการณ์การประชุมสหประชาชาติ",
+        "patterns": [
+          {
+            "formula": "深化文明互鉴，促进民心相通。",
+            "zh": "“国之交在于民相亲，民相亲在于心相通”，我们要不断扩大人文交流与青年互访，筑牢民心相通之基。",
+            "pinyin": "\"Guó zhī jiāo zàiyú mín xiāngqīn, mín xiāngqīn zàiyú xīn xiāngtōng\", wǒmen yào bùduàn kuòdà rénwén jiāoliú yǔ qīngnián hùfǎng, zhùláo mínxīn xiāngtōng zhī jī.",
+            "th": "\"มิตรภาพระหว่างรัฐอยู่ที่ความสนิทสนมของราษฎร ความสนิทสนมของราษฎรอยู่ที่ดวงใจที่สื่อถึงกัน\" พวกเราต้องขยายการแลกเปลี่ยนทางวัฒนธรรมและการเยือนของเยาวชน เพื่อสร้างฐานรากแห่งมิตรภาพที่ร้อยดวงใจถึงกัน",
+            "en": "\"Amity between nations lies in the affinity between their peoples, which stems from mutual understanding\"; we must continuously expand cultural exchanges to solidify the foundation of people-to-people bonds."
+          },
+          {
+            "formula": "助力全球减贫，实现共同繁荣。",
+            "zh": "中国减贫经验与菌草等“小而美”民生项目在广大发展中国家生根发芽，有力助推了联合国可持续发展目标的落实。",
+            "pinyin": "Zhōngguó jiǎnpín jīngyàn yǔ jùncǎo děng \"xiǎo ér měi\" mínshēng xiàngmù zài guǎngdà fāzhǎnzhōng guójiā shēnggēn fāyá, yǒulì zhùtuī le Liánhéguó kěchíxù fāzhǎn mùbiāo de luòshí.",
+            "th": "ประสบการณ์การขจัดความยากจนของจีนและโครงการหญ้าจวิ้นเฉาอันงดงามเพื่อชีวิตประชาชน ได้หยั่งรากงอกงามในประเทศกำลังพัฒนา ช่วยขับเคลื่อนเป้าหมายการพัฒนาที่ยั่งยืนของสหประชาชาติอย่างมีพลัง",
+            "en": "China's poverty alleviation experience and small-yet-smart livelihood projects like Juncao have taken root across developing nations, vigorously advancing UN Sustainable Development Goals."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "联合国教科文组织特使 (UNESCO Envoy) 🕊️",
+          "zh": "各位嘉宾，“一带一路”不仅是经贸与基建之网，更是促进文明互鉴与民心相通的文化桥梁。",
+          "pinyin": "Gèwèi jiābīn, \"Yīdài Yīlù\" bùjǐn shì jīngmào yǔ jījiàn zhī wǎng, gèng shì cùjìn wénmíng hùjiàn yǔ mínxīn xiāngtōng de wénhuà qiáoliáng.",
+          "th": "ท่านผู้มีเกียรติทุกท่าน \"หนึ่งแถบหนึ่งเส้นทาง\" มิได้เป็นเพียงโครงข่ายการค้าและโครงสร้างพื้นฐานเท่านั้น แต่ยังเป็นสะพานวัฒนธรรมที่ส่งเสริมการเรียนรู้ร่วมกันทางอารยธรรมและมิตรภาพที่ร้อยดวงใจของประชาชนครับ",
+          "en": "Distinguished guests, the Belt and Road is not only a network of trade and infrastructure, but even more a cultural bridge fostering civilizational mutual learning and people-to-people bonds.",
+          "audio_trigger": "t4_u54_l04_d01"
+        },
+        {
+          "speaker": "文化交流青年代表 (Youth Delegate) 🎓",
+          "zh": "特使说得太好了！通过丝绸之路青年奖学金，来自中亚和东盟的朋友们在这里同堂研学、深入交流。",
+          "pinyin": "Tèshǐ shuō de tài hǎo le! Tōngguò Sīchóu zhī Lù qīngnián jiǎngxuéjīn, láizì Zhōngyà yǔ Dōngméng de péngyǒumen zài zhèlǐ tóngtáng yánxué, shēnrù jiāoliú.",
+          "th": "ท่านทูตพิเศษกล่าวได้ดีเหลือเกินครับ! ผ่านทุนการศึกษาเยาวชนเส้นทางสายไหม เพื่อนๆ จากเอเชียกลางและอาเซียนได้มาร่วมเรียนในห้องเดียวกันและแลกเปลี่ยนความรู้กันอย่างลึกซึ้งครับ",
+          "en": "Envoy, you said it wonderfully! Through Silk Road Youth Scholarships, friends from Central Asia and ASEAN study in the same classrooms and exchange deeply here.",
+          "audio_trigger": "t4_u54_l04_d02"
+        },
+        {
+          "speaker": "联合国教科文组织特使 (UNESCO Envoy) 🕊️",
+          "zh": "在全球化面临逆风的今天，这种人文关怀与减贫赋能尤为珍贵，它为实现联合国可持续发展目标注入了强大动力。",
+          "pinyin": "Zài quánqiúhuà miànlín nìfēng de jīntiān, zhè zhǒng rénwén guānhuái yǔ jiǎnpín fùnéng yóuwéi zhēnguì, tā wèi shíxiàn Liánhéguó kěchíxù fāzhǎn mùbiāo zhùrù le qiángdà dònglì.",
+          "th": "ในวันที่โลกาภิวัตน์เผชิญมรสุมต้านทาน ความเอื้ออาทรต่อมนุษยชาติและการส่งเสริมการขจัดความยากจนเช่นนี้ยิ่งมีค่ายิ่งยวด ซึ่งช่วยเติมพลังขับเคลื่อนอันแข็งแกร่งให้แก่เป้าหมายการพัฒนาที่ยั่งยืนของยูเอ็น",
+          "en": "Today when globalization faces headwinds, this humanitarian care and poverty-reduction empowerment are exceptionally precious, injecting strong momentum into UN Sustainable Development Goals.",
+          "audio_trigger": "t4_u54_l04_d03"
+        },
+        {
+          "speaker": "文化交流青年代表 (Youth Delegate) 🎓",
+          "zh": "不畏浮云遮望眼，自缘身在最高层！只要我们心心相印、求同存异，人类命运共同体与共同繁荣的壮美画卷必将绘就！",
+          "pinyin": "Bù wèi fúyún zhē wàng yǎn, zì yuán shēn zài zuì gāocéng! Zhǐyào wǒmen xīnxīnxiàngyìn, qiútóngcúnyì, rénlèi mìngyùn gòngtóngtǐ yǔ gòngtóng fánróng de zhuàngměi huàjuàn bìjiāng huìjiù!",
+          "th": "ไม่หวั่นเมฆหมอกบังสายตา เพราะยืนอยู่บนชั้นสูงสุด! ขอเพียงดวงใจเราร้อยถึงกัน แสวงจุดร่วมสงวนจุดต่าง ภาพวาดอันวิจิตรงดงามแห่งประชาคมที่มีอนาคตร่วมกันและความรุ่งเรืองร่วมกัน ย่อมจะถูกแต่งแต้มขึ้นมาได้อย่างแน่นอนครับ!",
+          "en": "Fear not floating clouds blocking our view, for we stand on the highest level! As long as our hearts resonate and we seek common ground, the magnificent tapestry of a shared future and common prosperity will surely be painted!",
+          "audio_trigger": "t4_u54_l04_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "คำกล่าวว่า \"国之交在于民相亲，民相亲在于心相通\" เน้นย้ำความสำคัญของเสาหลักใดในความสัมพันธ์ระหว่างประเทศ?",
+          "options": [
+            "民心相通 (People-to-people bonds / มิตรภาพระหว่างประชาชนที่ร้อยดวงใจถึงกัน)",
+            "军费开支 (งบประมาณทางทหาร)",
+            "关税壁垒 (กำแพงภาษีศุลกากร)",
+            "诉讼索赔 (การฟ้องร้องเรียกค่าเสียหาย)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"民心相通\" คือ เสาหลักทางจิตใจที่สำคัญที่สุด เพราะมิตรภาพที่แท้จริงระหว่างประเทศเริ่มต้นจากความเข้าใจและรักใคร่กันของประชาชน",
+          "encouragement": "ยอดเยี่ยมมาก! เข้าใจแก่นแท้แห่งการทูตภาคประชาชนอย่างลึกซึ้ง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ส่งเสริมมิตรภาพร้อยใจ ก้าวสู่ความรุ่งเรืองร่วมกัน\"",
+          "tokens": [
+            "迈向共同繁荣",
+            "促进民心相通"
+          ],
+          "correct_sequence": [
+            "促进民心相通",
+            "迈向共同繁荣"
+          ],
+          "pinyin": "Cùjìn mínxīn xiāngtōng, màixiàng gòngtóng fánróng.",
+          "meaning_th": "ส่งเสริมมิตรภาพร้อยใจ ก้าวสู่ความรุ่งเรืองร่วมกัน",
+          "explanation_th": "รากฐานมิตรภาพ (促进民心相通) + เป้าหมายความเจริญ (迈向共同繁荣)",
+          "encouragement": "จัดประโยควิสัยทัศน์โลกได้อย่างสง่างาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"鉴\" (jiàn - กระจกเงา/ถอดบทเรียน) ใน \"互鉴\" มีหมวดนำ \"金/钅\" (โลหะ) ด้านล่าง สื่อถึงอะไร?",
+          "options": [
+            "กระจกเงาสำริดโบราณที่ขัดเงาจนสะท้อนภาพชัดเจน ใช้เปรียบเทียบกับการส่องดูตนเองและเรียนรู้จากผู้อื่น",
+            "ทองคำแท่งสำหรับซื้อของ",
+            "มีดดาบสำหรับรบ",
+            "กุญแจเหล็กไขตู้"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"鉴\" เดิมทีคือกระจกสำริดโบราณ สื่อถึงการส่องกระจกเพื่อตรวจสอบตนเองและถอดบทเรียนเรียนรู้ซึ่งกันและกัน (借鉴/互鉴)",
+          "encouragement": "เข้าใจรากศัพท์กระจกเงาแห่งปัญญาได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "เป้าหมายสูงสุดของการสร้าง \"人类命运共同体\" คืออะไร?",
+          "options": [
+            "การสร้างโลกที่สันติภาพถาวร มั่นคงปลอดภัย ร่วมเจริญรุ่งเรือง เปิดกว้างหลอมรวม และสะอาดงดงาม",
+            "การให้ทุกประเทศใช้ระบบการเมืองแบบเดียวกันเป๊ะ",
+            "การยกเลิกวัฒนธรรมท้องถิ่นของแต่ละชนเผ่า",
+            "การรวมทุกประเทศให้กลายเป็นประเทศเดียว"
+          ],
+          "correct_index": 0,
+          "explanation_th": "ประชาคมที่มีอนาคตร่วมกันของมนุษยชาติมุ่งเน้นโลกที่มีสันติภาพ ความมั่นคง ความเจริญรุ่งเรืองร่วมกัน โดยเคารพความหลากหลายทางวัฒนธรรม",
+          "encouragement": "เข้าใจปรัชญาความสัมพันธ์ระหว่างประเทศยุคใหม่อย่างถ่องแท้!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในสุนทรพจน์ปิดการประชุมสมัชชาแห่งสหประชาชาติ ประโยคใดสื่อถึงอุดมการณ์ความร่วมมือระดับโลกได้อย่างสมบูรณ์แบบและทรงเกียรติยศสูงสุด?",
+        "options": [
+          "坚持文明互鉴，促进民心相通，深化减贫与可持续发展合作，携手迈向持久和平与共同繁荣，共同构建人类命运共同体！",
+          "国家加强宏观调控，坚持稳中求进，有效应对通胀与利率风险。",
+          "诉讼代理人在法庭上对证据严格质证，依据适用法律取得全面胜诉。",
+          "白皮书强调中国经济韧性强、潜力大，总体呈现稳中向好态势。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"文明互鉴\", \"民心相通\", \"减贫与可持续发展\", \"持久和平与共同繁荣\" และ \"人类命运共同体\" ได้อย่างสมบูรณ์แบบ ไพเราะ และสง่างามสูงสุดในระดับเวทีโลก"
+      },
+      "cheer_trophy": {
+        "badge_name": "ผู้นำอุดมการณ์ประชาคมโลก (Global Visionary of Shared Destiny)",
+        "message_th": "ขอแสดงความยินดีด้วยอย่างยิ่ง! คุณได้พิชิตหน่วยเรียนภูมิรัฐศาสตร์และหนึ่งแถบหนึ่งเส้นทางครบถ้วน ก้าวสู่การเป็นนักการทูตและผู้นำวิสัยทัศน์โลกตัวจริง!",
+        "xp_reward": 150
+      }
+    }
+  ]
+}

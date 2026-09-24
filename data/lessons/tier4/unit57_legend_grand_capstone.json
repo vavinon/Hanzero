@@ -1,0 +1,917 @@
+{
+  "unit_id": "tier4_u57",
+  "tier": 4,
+  "unit_number": 57,
+  "title": {
+    "zh": "登峰造极：Legend Grand Capstone",
+    "th": "บรรลุสู่จุดสูงสุด: มหาบททดสอบเกียรติยศระดับตำนาน",
+    "en": "Reach the Pinnacle: Legend Grand Capstone"
+  },
+  "description": "บทสรุปแห่งการเรียนรู้ภาษาและวัฒนธรรมจีนขั้นสูงสุด หลอมรวมวรรณศิลป์ ปรัชญา การทูต ธุรกิจ และวิชาการ สู่ความเป็นเลิศระดับปราชญ์ผู้เชี่ยวชาญ",
+  "lessons": [
+    {
+      "lesson_id": "t4_u57_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "登峰造极：学术与思想的最高境界",
+        "th": "บรรลุจุดสูงสุด: ขอบเขตขั้นสูงสุดแห่งวิชาการและภูมิปัญญา",
+        "en": "The Highest Realm of Thought & Mastery"
+      },
+      "can_do": {
+        "th": "ใช้สำนวนชั้นสูง เช่น 登峰造极, 炉火纯青, 出神入化, 泰斗, 独占鳌头 ในการยกย่องความเป็นเลิศระดับปรมาจารย์ได้",
+        "en": "Express peerless mastery and academic supremacy using elite idioms: Peak of Perfection, Pure Mastery, Titan, and Champion."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้คำว่า 登峰造极 และ 炉火纯青 บรรยายความเชี่ยวชาญระดับปรมาจารย์!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5701",
+          "hanzi": "登峰造极",
+          "pinyin": "dēngfēng zàojí",
+          "display_pinyin": "dēngfēng zàojí",
+          "pinyin_tone": "deng1feng1 zao4ji2",
+          "meaning_th": "บรรลุถึงจุดสูงสุด / ยอดเยี่ยมไร้เทียมทาน (Reach the peak of perfection)",
+          "meaning_en": "reach the peak of perfection / pinnacle",
+          "radical": "癶",
+          "radical_name_th": "หมวดก้าวขา (登字头)",
+          "stroke_count": 36,
+          "mnemonic": "ปีนขึ้นสู่ยอดเขาหิมาลัย (登峰) บรรลุขอบเขตสูงสุดในใต้หล้า (造极) = บรรลุจุดสูงสุด",
+          "kid_mnemonic": "เดินขึ้นบันไดสวรรค์ไปจนถึงยอดเขาสูงเสียดเมฆ ชูธงผู้ชนะ = 登峰造极",
+          "body_gesture": "ยกสองมือขึ้นชูเหนือหัวทำมุมยอดแหลมดั่งยอดเขาสูงเสียดฟ้า"
+        },
+        {
+          "id": "hsk4_5702",
+          "hanzi": "炉火纯青",
+          "pinyin": "lúhuǒ chúnqīng",
+          "display_pinyin": "lúhuǒ chúnqīng",
+          "pinyin_tone": "lu2huo3 chun2qing1",
+          "meaning_th": "เชี่ยวชาญช่ำชองถึงขีดสุด / สุกงอมไร้ที่ติ (Pure perfection / High mastery)",
+          "meaning_en": "reach high perfection / mature skill",
+          "radical": "火",
+          "radical_name_th": "หมวดไฟ (火字旁)",
+          "stroke_count": 31,
+          "mnemonic": "เตาหลอมโอสถ (炉火) ร้อนจนเปลวไฟเปลี่ยนเป็นสีฟ้าบริสุทธิ์ (纯青) = สุกงอมไร้ที่ติ",
+          "kid_mnemonic": "เปลวไฟในเตาวิเศษเปลี่ยนเป็นสีฟ้าใส หมายถึงวิชาฝึกสำเร็จขั้นสุดยอด = 炉火纯青",
+          "body_gesture": "สองมือทำท่าประคองลูกไฟสีฟ้าบริสุทธิ์หมุนวนอย่างสงบนิ่ง"
+        },
+        {
+          "id": "hsk4_5703",
+          "hanzi": "出神入化",
+          "pinyin": "chūshén rùhuà",
+          "display_pinyin": "chūshén rùhuà",
+          "pinyin_tone": "chu1shen2 ru4hua4",
+          "meaning_th": "ฝีมือยอดเยี่ยมจนน่าอัศจรรย์ / ก้าวล้ำดั่งเวทมนตร์ (Superb artistry / Magical skill)",
+          "meaning_en": "reach miraculous perfection / superb",
+          "radical": "凵",
+          "radical_name_th": "หมวดยื่นออก (出字头)",
+          "stroke_count": 23,
+          "mnemonic": "หลุดพ้นจากวิสัยธรรมดา (出神) เข้าสู่แดนแห่งการแปลงกายอัศจรรย์ (入化) = ฝีมืออัศจรรย์",
+          "kid_mnemonic": "พู่กันจีนตวัดรวดเร็วจนนกบนภาพวาดกระพือปีกบินออกมาได้จริง = 出神入化",
+          "body_gesture": "ตวัดมือไปมาราวกับสะบัดพู่กันวิเศษรังสรรค์ภาพอันน่าพิศวง"
+        },
+        {
+          "id": "hsk4_5704",
+          "hanzi": "泰斗",
+          "pinyin": "tàidǒu",
+          "display_pinyin": "tàidǒu",
+          "pinyin_tone": "tai4dou3",
+          "meaning_th": "เสาหลักผู้เป็นเลิศในวงการ / ปรมาจารย์ชั้นครู (Leading authority / Titan)",
+          "meaning_en": "leading authority / titan / doyen",
+          "radical": "水",
+          "radical_name_th": "หมวดน้ำ (泰字底)",
+          "stroke_count": 14,
+          "mnemonic": "ยิ่งใหญ่ดั่งเขาไท่ซาน (泰) สว่างไสวดั่งดาวกระบวยเหนือ (斗) = เสาหลักชั้นครู",
+          "kid_mnemonic": "ดวงดาวที่สว่างที่สุดบนท้องฟ้ายามค่ำคืนคอยนำทางทุกคน = 泰斗",
+          "body_gesture": "คำนับด้วยความเคารพต่อหน้าเสาหลักผู้ทรงภูมิปัญญา"
+        },
+        {
+          "id": "hsk4_5705",
+          "hanzi": "独占鳌头",
+          "pinyin": "dúzhàn áotóu",
+          "display_pinyin": "dúzhàn áotóu",
+          "pinyin_tone": "du2zhan4 ao2tou2",
+          "meaning_th": "ยืนหนึ่ง / ครองอันดับหนึ่งอย่างโดดเด่น (Take first place / Stand alone at the top)",
+          "meaning_en": "take first place / stand supreme",
+          "radical": "犭",
+          "radical_name_th": "หมวดสุนัข (反犬旁)",
+          "stroke_count": 36,
+          "mnemonic": "ยืนเหยียบแต่เพียงผู้เดียว (独占) บนศีรษะของเต่ายักษ์นำโชคหน้าวังหลวง (鳌头) = ผู้สอบได้จอหงวนอันดับหนึ่ง",
+          "kid_mnemonic": "ผู้ชนะเลิศอันดับหนึ่งยืนบนแท่นรับเหรียญทองคำเปล่งประกาย = 独占鳌头",
+          "body_gesture": "ยืนเหยียบย่างก้าวขึ้นแท่นอย่างสง่าผ่าเผยพร้อมยกมือแสดงชัยชนะ"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 登峰造极 (dēngfēng zàojí)",
+        "description_th": "dēng (เสียง 1) fēng (เสียง 1) zào (เสียง 4) jí (เสียง 2)",
+        "example": "学术造诣达到登峰造极之境 (Xuéshù zàoyì dádào dēngfēng zàojí zhī jìng)",
+        "fun_metaphor": "เสียงทะยานขึ้นสู่จุดสูงสุดดั่งก้าวสู่ยอดเขาสูงเสียดฟ้า",
+        "reassurance": "สำนวน 4 พยางค์ชั้นสูงสุดสำหรับยกย่องความสำเร็จที่เป็นตำนาน"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการยกย่องความเป็นเลิศ: 造诣纯青，堪称泰斗，登峰造极",
+        "formula": "学术与思想造诣已臻炉火纯青，在海内外堪称一代泰斗，成就登峰造极，独占鳌头",
+        "explanation_th": "ใช้ในการยกย่องบุคคลสำคัญ สดุดีเกียรติยศ และการสรุปความสำเร็จสูงสุด",
+        "patterns": [
+          {
+            "formula": "技艺炉火纯青，造诣出神入化。",
+            "zh": "大师的文学笔法已臻炉火纯青，对传统哲学经典的诠释出神入化，令人叹为观止。",
+            "pinyin": "Dàshī de wénxué bǐfǎ yǐ zhēn lúhuǒ chúnqīng, duì chuántǒng zhéxué jīngdiǎn de quánshì chūshén rùhuà, lìng rén tànwéiguānzhǐ.",
+            "th": "ชั้นเชิงทางวรรณกรรมของท่านปรมาจารย์บรรลุถึงขั้นสุกงอมไร้ที่ติ การตีความคัมภีร์ปรัชญาโบราณยอดเยี่ยมจนน่าอัศจรรย์ ชวนให้ทุกคนทึ่ง",
+            "en": "The master literary technique has reached pure perfection; his interpretation of philosophical classics is miraculous, commanding awe."
+          },
+          {
+            "formula": "堪称一代泰斗，学术登峰造极。",
+            "zh": "先生一生致力于理论创新与文献考证，在学术界堪称一代泰斗，其造诣已登峰造极。",
+            "pinyin": "Xiānsheng yīshēng zhìlì yú lǐlùn chuàngxīn yǔ wénxiàn kǎozhèng, zài xuéshùjiè kānchēng yī dài tàidǒu, qí zàoyì yǐ dēngfēng zàojí.",
+            "th": "ท่านอาจารย์อุทิศตนเพื่อการสร้างสรรค์ทฤษฎีใหม่และการตรวจทานเอกสารมาตลอดชีวิต นับเป็นเสาหลักแห่งยุค และความรู้บรรลุถึงจุดสูงสุด",
+            "en": "The professor dedicated his life to theoretical innovation; he is hailed as a titan of our era, with achievements reaching the pinnacle."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "世界汉学会主席 (Sinology Chair) 📜",
+          "zh": "各位院士、教授，今天我们隆重授予先生终身成就奖，表彰其在文史哲、宏观白皮书与跨国法务领域的卓越贡献。",
+          "pinyin": "Gèwèi yuànshì, jiàoshòu, jīntiān wǒmen lóngzhòng shòuyǔ xiānsheng zhōngshēn chéngjiùjiǎng, biǎozhāng qí zài wénshǐzhé, hóngguān báipíshū yǔ kuàguó fǎwù lǐngyù de zhuóyuè gòngxiàn.",
+          "th": "ราชบัณฑิตและศาสตราจารย์ทุกท่าน วันนี้เรามอบรางวัลเกียรติยศตลอดชีพเพื่อสดุดีคุณูปการอันโดดเด่นของท่านอาจารย์ในสาขาวรรณศิลป์ ประวัติศาสตร์ ปรัชญา สมุดปกขาวมหภาค และนิติศาสตร์ข้ามชาติครับ",
+          "en": "Academicians and professors, today we confer the Lifetime Achievement Award honoring the master contributions across humanities, macro white papers, and global law.",
+          "audio_trigger": "t4_u57_l01_d01"
+        },
+        {
+          "speaker": "颁奖宣读人 (Citation Reader) 🎙️",
+          "zh": "先生数十年严谨治学，从李白之豪迈到鲁迅之呐喊，开创性假说论证严密，立论出神入化，学术造诣已臻登峰造极之境！",
+          "pinyin": "Xiānsheng shù shí nián yánjǐn zhìxué, cóng Lǐ Bái zhī háomài dào Lǔ Xùn zhī nàhǎn, kāichuàngxìng jiǎshuō lùnzhèng yánmì, lìlùn chūshén rùhuà, xuéshù zàoyì yǐ zhēn dēngfēng zàojí zhī jìng!",
+          "th": "ท่านอาจารย์ค้นคว้าด้วยความรัดกุมหลายสิบปี จากความหาญกล้าของหลี่ไป๋สู่เสียงกู่ก้องของหลู่ซวิ่น สมมติฐานบุกเบิกพิสูจน์แน่นหนา ความสำเร็จทางวิชาการบรรลุถึงจุดสูงสุดแล้วครับ!",
+          "en": "For decades, the master researched with rigor; from Li Bai heroism to Lu Xun roar, his pioneering hypotheses are rigorously demonstrated, reaching the summit!",
+          "audio_trigger": "t4_u57_l01_d02"
+        },
+        {
+          "speaker": "泰斗大师 (Grand Master) 🏆",
+          "zh": "学海无涯。唯有保持炉火纯青的专注与求索，方能在全球文明交流中让后辈独占鳌头。",
+          "pinyin": "Xué hǎi wú yá. Wéiyǒu bǎochí lúhuǒ chúnqīng de zhuānzhù yǔ qiúsuǒ, fāng néng zài quánqiú wénmíng jiāoliú zhōng ràng hòubèi dúzhàn áotóu.",
+          "th": "ทะเลแห่งความรู้ไม่มีที่สิ้นสุด มีเพียงการรักษาสมาธิที่สุกงอมไร้ที่ติและการแสวงหา จึงจะช่วยให้คนรุ่นหลังยืนหนึ่งในการแลกเปลี่ยนอารยธรรมโลกได้ครับ",
+          "en": "The sea of learning is boundless. Only with pure mastery and inquiry can younger generations stand atop global cultural exchanges.",
+          "audio_trigger": "t4_u57_l01_d03"
+        },
+        {
+          "speaker": "世界汉学会主席 (Sinology Chair) 📜",
+          "zh": "先生真乃当世泰斗！您的道德文章如高山仰止，必将永远激励后来学人砥砺前行！",
+          "pinyin": "Xiānsheng zhēn nǎi dāngshì tàidǒu! Nín de dàodé wénzhāng rú gāoshān yǎngzhǐ, bìjiāng yǒngyuǎn jīlì hòulái xuérén dǐlì qiánxíng!",
+          "th": "ท่านอาจารย์สมเป็นเสาหลักแห่งยุคอย่างแท้จริง! คุณธรรมและผลงานของท่านดั่งขุนเขาสูงเสียดฟ้า ย่อมเป็นแรงบันดาลใจให้คนรุ่นหลังก้าวต่อไปเสมอครับ!",
+          "en": "The master is truly a titan of our era! Your moral character and writings inspire future scholars forever!",
+          "audio_trigger": "t4_u57_l01_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "สำนวน \"登峰造极\" (dēngfēng zàojí) สื่อถึงขอบเขตความสำเร็จในระดับใด?",
+          "options": [
+            "การบรรลุถึงจุดสูงสุดแห่งวิชาการ ทักษะ หรือศิลปวิทยาการที่ไม่มีผู้ใดเทียบเคียงได้",
+            "การเริ่มต้นหัดก้าวเดินในระดับชั้นต้น",
+            "การสอบตกในชั้นเรียน",
+            "การหยุดพักผ่อนระหว่างการทำงาน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"登峰造极\" หมายถึง การปีนขึ้นสู่ยอดเขาหิมาลัยแห่งปัญญา บรรลุสู่ความเป็นเลิศระดับจุดสูงสุด",
+          "encouragement": "เข้าใจสำนวนระดับตำนานได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ความเชี่ยวชาญสุกงอมไร้ที่ติ บรรลุจุดสูงสุด\"",
+          "tokens": [
+            "成就登峰造极",
+            "造诣炉火纯青"
+          ],
+          "correct_sequence": [
+            "造诣炉火纯青",
+            "成就登峰造极"
+          ],
+          "pinyin": "Zàoyì lúhuǒ chúnqīng, chéngjiù dēngfēng zàojí.",
+          "meaning_th": "ความเชี่ยวชาญสุกงอมไร้ที่ติ บรรลุจุดสูงสุด",
+          "explanation_th": "ความเชี่ยวชาญ (造诣炉火纯青) + ความสำเร็จสูงสุด (成就登峰造极)",
+          "encouragement": "จัดประโยคยกย่องเกียรติยศได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"炉\" (lú - เตา) ใน \"炉火纯青\" มีหมวดนำ \"火\" (ไฟ) สื่อถึงอะไร?",
+          "options": [
+            "เตาหลอมโอสถหรือเตาหลอมโลหะโบราณที่ต้องใช้ไฟเผาเคี่ยวกรำจนเปลวไฟเปลี่ยนเป็นสีฟ้าบริสุทธิ์",
+            "การก่อกองไฟในป่าเพื่อความอบอุ่น",
+            "การเผาเศษขยะ",
+            "การทำอาหารปิ้งย่าง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"火\" ใน \"炉\" สื่อถึงการเคี่ยวกรำฝีมืออย่างยาวนานจนเปลวไฟกลายเป็นสีฟ้าบริสุทธิ์ ไร้สิ่งเจือปน (Pure Mastery)",
+          "encouragement": "เข้าใจตำนานการหลอมโอสถโบราณอย่างลึกซึ้ง!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"泰斗\" (tàidǒu) เปรียบเทียบผู้เป็นเสาหลักทางวิชาการกับสิ่งใดในธรรมชาติและดาราศาสตร์?",
+          "options": [
+            "ภูเขาไท่ซาน (泰山) อันยิ่งใหญ่ และกลุ่มดาวกระบวยเหนือ (北斗星) ที่สว่างไสว",
+            "แม่น้ำแยงซีเกียงและดวงจันทร์",
+            "มหาสมุทรแปซิฟิกและดวงอาทิตย์",
+            "ป่าสนและนกอินทรี"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"泰斗\" มาจาก \"泰山北斗\" (เขาไท่ซานและดาวกระบวยเหนือ) สื่อถึงบุคคลที่เป็นเสาหลักสูงสุดในวงการ",
+          "encouragement": "ซึมซับภูมิปัญญาและวรรณศิลป์จีนขั้นสูงได้อย่างงดงาม!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในพิธีมอบรางวัลเกียรติยศสูงสุดทางวิชาการโลก ประโยคใดสดุดีความสำเร็จระดับปรมาจารย์ได้อย่างสมบูรณ์แบบที่สุด?",
+        "options": [
+          "先生一生恪守学术严谨，其理论假说不仅引领范式变革，更以炉火纯青之笔登峰造极，堪为万世景仰的学界泰斗！",
+          "在双边商务谈判博弈中，我们必须牢牢把握核心筹码与底线，防止对方通过舆论侵犯我们的知识产权。",
+          "为稳中求进并防范宏观系统性金融风险，中央银行出台了新一轮供给侧结构性货币政策工具。",
+          "通过扩大样本容量与置信区间检验，我们成功驳回了同行评审关于计量模型稳健性的所有质疑。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"严谨\", \"假说范式\", \"炉火纯青\", \"登峰造极\" และ \"学界泰斗\" ได้อย่างสง่างามไร้ที่ติตามมาตรฐานปรมาจารย์"
+      },
+      "cheer_trophy": {
+        "badge_name": "ผู้ครองมงกุฎแห่งปราชญ์ (Grand Titan of Wisdom)",
+        "message_th": "ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 登峰造极, 炉火纯青, 出神入化, 泰斗, 独占鳌头 ก้าวสู่ขอบเขตปรมาจารย์!",
+        "xp_reward": 150
+      }
+    },
+    {
+      "lesson_id": "t4_u57_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "博古通今：文史哲的融会贯通",
+        "th": "รอบรู้อดีตและปัจจุบัน: การหลอมรวมวรรณศิลป์ ประวัติศาสตร์ และปรัชญา",
+        "en": "Synthesizing Literature, History & Philosophy"
+      },
+      "can_do": {
+        "th": "ใช้สำนวนภูมิปัญญา เช่น 博古通今, 融会贯通, 经世致用, 触类旁通, 薪火相传 ในการเชื่อมโยงความรู้สู่การประยุกต์ใช้ในสังคมได้",
+        "en": "Synthesize interdisciplinary knowledge using elite idioms: Conversant with Past and Present, Thorough Integration, Practical Application, Analogy, and Torch Legacy."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้คำว่า 博古通今 และ 经世致用 เชื่อมโยงความรู้โบราณเข้ากับโลกสมัยใหม่!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5706",
+          "hanzi": "博古通今",
+          "pinyin": "bógǔ tōngjīn",
+          "display_pinyin": "bógǔ tōngjīn",
+          "pinyin_tone": "bo2gu3 tong1jin1",
+          "meaning_th": "รอบรู้แตกฉานทั้งอดีตและปัจจุบัน (Conversant with ancient and modern)",
+          "meaning_en": "conversant with past and present / erudite",
+          "radical": "十",
+          "radical_name_th": "หมวดสิบ (十字儿)",
+          "stroke_count": 29,
+          "mnemonic": "รอบรู้กว้างขวางในประวัติศาสตร์โบราณ (博古) ทะลุปรุโปร่งในสภาพการณ์ปัจจุบัน (通今) = ปราชญ์ผู้รอบรู้กาลเวลา",
+          "kid_mnemonic": "เปิดอ่านคัมภีร์ไม้ไผ่โบราณด้วยมือซ้าย มือขวาใช้แท็บเล็ตวิเคราะห์โลกปัจจุบัน = 博古通今",
+          "body_gesture": "มือซ้ายกางคัมภีร์โบราณ มือขวาชี้ไปข้างหน้าสู่โลกอนาคต"
+        },
+        {
+          "id": "hsk4_5707",
+          "hanzi": "融会贯通",
+          "pinyin": "rónghuì guàntōng",
+          "display_pinyin": "rónghuì guàntōng",
+          "pinyin_tone": "rong2hui4 guan4tong1",
+          "meaning_th": "หลอมรวมความรู้เชื่อมโยงอย่างทะลุปรุโปร่ง (Integrate and master thoroughly)",
+          "meaning_en": "integrate and master thoroughly / comprehensive grasp",
+          "radical": "虫",
+          "radical_name_th": "หมวดแมลง (虫字旁)",
+          "stroke_count": 47,
+          "mnemonic": "หลอมละลายรวมเข้าด้วยกัน (融会) ร้อยเรียงทะลุผ่านทุกศาสตร์ (贯通) = การเข้าใจอย่างถ่องแท้",
+          "kid_mnemonic": "หยดแม่สีต่างสายวิชาลงในแก้วน้ำแล้วหมุนรวมเป็นผลึกแก้วใสกระจ่าง = 融会贯通",
+          "body_gesture": "ประสานนิ้วมือทั้งสองข้างเข้าหากันแล้วคลี่ออกอย่างราบรื่น"
+        },
+        {
+          "id": "hsk4_5708",
+          "hanzi": "经世致用",
+          "pinyin": "jīngshì zhìyòng",
+          "display_pinyin": "jīngshì zhìyòng",
+          "pinyin_tone": "jing1shi4 zhi4yong4",
+          "meaning_th": "นำวิชาการมาใช้ประโยชน์จริงต่อสังคมบ้านเมือง (Practical application to society)",
+          "meaning_en": "practical application / apply knowledge to social reality",
+          "radical": "纟",
+          "radical_name_th": "หมวดไหม (绞丝旁)",
+          "stroke_count": 28,
+          "mnemonic": "บริหารจัดการดูแลสังคมมนุษย์ (经世) เพื่อให้เกิดประสิทธิผลในการใช้งานจริง (致用) = การใช้วิชาการเพื่อสังคม",
+          "kid_mnemonic": "เอางานวิจัยในห้องแล็บออกมาสร้างสะพานและโรงพยาบาลช่วยเหลือผู้คน = 经世致用",
+          "body_gesture": "วางมือลงบนแผ่นที่ผืนดิน สื่อถึงการอุทิศวิชาการให้เกิดผลประโยชน์แก่ปวงชน"
+        },
+        {
+          "id": "hsk4_5709",
+          "hanzi": "触类旁通",
+          "pinyin": "chùlèi pángtōng",
+          "display_pinyin": "chùlèi pángtōng",
+          "pinyin_tone": "chu4lei4 pang2tong1",
+          "meaning_th": "เข้าใจสิ่งหนึ่งแล้วเชื่อมโยงเข้าใจสิ่งอื่นได้หมด (Comprehend by analogy)",
+          "meaning_en": "comprehend by analogy / master related fields",
+          "radical": "角",
+          "radical_name_th": "หมวดเขา (角字旁)",
+          "stroke_count": 45,
+          "mnemonic": "เพียงแตะโดนหมวดหมู่หนึ่ง (触类) ก็สว่างวาบเชื่อมโยงไปสู่หมวดข้างเคียง (旁通) = เข้าใจทะลุปรุโปร่ง",
+          "kid_mnemonic": "เรียนรู้กุญแจดอกเดียวแต่สามารถไขประตูความรู้ได้นับร้อยบาน = 触类旁通",
+          "body_gesture": "ใช้นิ้วชี้แตะฝ่ามือหนึ่งข้างแล้วผายมือทั้งสองแผ่ออกกว้าง"
+        },
+        {
+          "id": "hsk4_5710",
+          "hanzi": "薪火相传",
+          "pinyin": "xīnhuǒ xiāngchuán",
+          "display_pinyin": "xīnhuǒ xiāngchuán",
+          "pinyin_tone": "xin1huo3 xiang1chuan2",
+          "meaning_th": "ส่งต่อคบเพลิงแห่งปัญญา / สืบทอดอุดมการณ์รุ่นสู่รุ่น (Pass on the torch / Legacy)",
+          "meaning_en": "pass on the torch / keep the fire burning",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 36,
+          "mnemonic": "แม้ฟืนจะไหม้หมด (薪) แต่เปลวเพลิงยังส่งต่อไม่รู้ดับ (火相传) = การสืบทอดภูมิปัญญา",
+          "kid_mnemonic": "ส่งต่อคบเพลิงไฟส่องสว่างให้น้องๆ นักเรียนรุ่นต่อไปวิ่งนำหน้า = 薪火相传",
+          "body_gesture": "ส่งมอบคบเพลิงด้วยสองมือไปข้างหน้าอย่างนอบน้อมและเปี่ยมพลัง"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 博古通今 (bógǔ tōngjīn)",
+        "description_th": "bó (เสียง 2) gǔ (เสียง 3) tōng (เสียง 1) jīn (เสียง 1)",
+        "example": "具备博古通今的宏大格局 (Jùbèi bógǔ tōngjīn de hóngdà géjú)",
+        "fun_metaphor": "จังหวะก้าวข้ามกาลเวลาจากอดีตสู่ปัจจุบันอย่างสง่างาม",
+        "reassurance": "คำชมเชยสูงสุดสำหรับผู้มีความรู้รอบตัวแตกฉานทั้งประวัติศาสตร์และอนาคต"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการหลอมรวมภูมิปัญญา: 博古通今，坚持经世致用，薪火相传",
+        "formula": "融会贯通文史哲多维智慧，在现实世界触类旁通，坚持经世致用之志，让文明薪火相传",
+        "explanation_th": "ใช้ในการเชื่อมโยงปรัชญาโบราณเข้ากับการบริหารจัดการโลกยุคใหม่",
+        "patterns": [
+          {
+            "formula": "博古通今求索，融会贯通诸学。",
+            "zh": "大学问家既能博古通今洞察历史沧桑，更能将东西方经典融会贯通，触类旁通。",
+            "pinyin": "Dà xuéwènjiā jì néng bógǔ tōngjīn dòngchá lìshǐ cāngsāng, gèng néng jiāng dōngxīfāng jīngdiǎn rónghuì guàntōng, chùlèi pángtōng.",
+            "th": "ปราชญ์ผู้ยิ่งใหญ่ไม่เพียงรอบรู้อดีตและปัจจุบันจนหยั่งเห็นความผันผวนของประวัติศาสตร์ แต่ยังสามารถหลอมรวมคัมภีร์บูรพาประจิมได้อย่างทะลุปรุโปร่ง",
+            "en": "Great scholars are conversant with past and present, thoroughly integrating Eastern and Western classics and drawing analogies."
+          },
+          {
+            "formula": "坚持经世致用，薪火代代相传。",
+            "zh": "治学应当坚守经世致用的崇高理想，将理论付诸实践，使中华文明的薪火代代相传。",
+            "pinyin": "Zhìxué yīngdāng jiānshǒu jīngshì zhìyòng de chónggāo lǐxiǎng, jiāng lǐlùn fùzhū shíjiàn, shǐ Zhōnghuá wénmíng de xīnhuǒ dàidài xiāngchuán.",
+            "th": "การศึกษาค้นคว้าควรยึดมั่นอุดมการณ์การใช้วิชาการเพื่อสังคม นำทฤษฎีสู่การปฏิบัติจริง เพื่อให้คบเพลิงแห่งอารยธรรมจีนสืบทอดต่อไป",
+            "en": "Scholarship should uphold practical utility, translating theory into action and ensuring civilization torch passes from generation to generation."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "国学院院长 (Dean of Classical Studies) 🏛️",
+          "zh": "各位同仁，在新时代研究传统文化，切忌闭门造车，必须博古通今、融会贯通，无论是孙子兵法之运筹帷幄还是儒家仁爱，皆当融贯。",
+          "pinyin": "Gèwèi tóngrén, zài xīn shídài yánjiū chuántǒng wénhuà, qièjì bìmén zàochē, bìxū bógǔ tōngjīn, rónghuì guàntōng, wúlùn shì Sūnzǐ bīngfǎ zhī yùnchóuwéiwò háishì Rújiā rén'ài, jiē dāng róngguàn.",
+          "th": "เพื่อนร่วมงานทุกท่าน การศึกษาสอบค้นวัฒนธรรมดั้งเดิมในยุคใหม่ ต้องไม่ขังตัวเองในห้อง ต้องรอบรู้อดีตปัจจุบันและหลอมรวมทะลุปรุโปร่ง ไม่ว่าจะเป็นการวางแผนในพิชัยสงครามซุนวูหรือความเมตตาของขงจื๊อ ล้วนต้องประสานกลมกลืนครับ",
+          "en": "Colleagues, researching traditional culture requires knowing past and present, integrating Sun Tzu strategic planning with Confucian benevolence.",
+          "audio_trigger": "t4_u57_l02_d01"
+        },
+        {
+          "speaker": "青年哲学博士 (Doctor of Philosophy) 📖",
+          "zh": "院长指引得极是。我们将古代哲学、一带一路互联互通与命运共同体理念结合，在跨界研究中触类旁通。",
+          "pinyin": "Yuànzhǎng zhǐyǐn de jí shì. Wǒmen jiāng gǔdài zhéxué, Yīdài Yīlù hùliánhùtōng yǔ mìngyùn gòngtóngtǐ lǐniàn jiéhé, zài kuàjiè yánjiū zhōng chùlèi pángtōng.",
+          "th": "ท่านคณบดีชี้แนะถูกต้องที่สุดครับ เราผสานปรัชญาโบราณเข้ากับการเชื่อมโยงเครือข่ายและประชาคมที่มีอนาคตร่วมกัน เพื่อสร้างความเข้าใจเชื่อมโยงข้ามศาสตร์ครับ",
+          "en": "The dean is spot on. We combined ancient thought with Belt and Road connectivity and shared future community, comprehending by analogy across boundaries.",
+          "audio_trigger": "t4_u57_l02_d02"
+        },
+        {
+          "speaker": "国学院院长 (Dean of Classical Studies) 🏛️",
+          "zh": "善哉！知行合一、经世致用，方能体现学术的真正价值。",
+          "pinyin": "Shànzāi! Zhī xíng hé yī, jīngshì zhìyòng, fāng néng tǐxiàn xuéshù de zhēnzhèng jiàzhí.",
+          "th": "ประเสริฐยิ่ง! รู้และปฏิบัติเป็นหนึ่งเดียว นำวิชาการมารับใช้สังคมบ้านเมือง จึงจะสะท้อนคุณค่าที่แท้จริงของการวิจัย",
+          "en": "Splendid! Unity of knowledge and action and practical utility embody the true value of scholarship.",
+          "audio_trigger": "t4_u57_l02_d03"
+        },
+        {
+          "speaker": "青年哲学博士 (Doctor of Philosophy) 📖",
+          "zh": "请先生放心！我们年轻一代定当薪火相传，守护好人类的精神家园！",
+          "pinyin": "Qǐng xiānsheng fàngxīn! Wǒmen niánqīng yī dài dìng dāng xīnhuǒ xiāngchuán, shǒuhù hǎo rénlèi de jīngshén jiāyuán!",
+          "th": "ขอให้อาจารย์สบายใจได้ครับ! คนรุ่นใหม่อย่างพวกเราจะร่วมส่งต่อคบเพลิงปัญญา ปกป้องบ้านทางจิตวิญญาณของมนุษยชาติอย่างดีที่สุดครับ!",
+          "en": "Rest assured, master! Our younger generation will pass on the torch, safeguarding the spiritual homeland of humanity!",
+          "audio_trigger": "t4_u57_l02_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "สำนวน \"经世致用\" (jīngshì zhìyòng) มีความหมายตรงกับข้อใดมากที่สุด?",
+          "options": [
+            "การนำความรู้ทางวิชาการมาประยุกต์ใช้เพื่อแก้ไขปัญหาจริงและยังประโยชน์แก่สังคมบ้านเมือง (Practical Utility)",
+            "การอ่านหนังสือเพื่อความเพลิดเพลินส่วนตัวเท่านั้น",
+            "การเก็งกำไรในตลาดหุ้นระยะสั้น",
+            "การจำศีลในถ้ำโดยไม่ติดต่อกับใคร"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"经世致用\" คือ อุดมการณ์สูงสุดของปราชญ์จีนที่มุ่งใช้วิชาการมาบริหารจัดการและยังประโยชน์สุขต่อมนุษยชาติ",
+          "encouragement": "เข้าใจจิตวิญญาณแห่งปราชญ์ตะวันออกอย่างลึกซึ้ง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"รอบรู้อดีตปัจจุบัน หลอมรวมทะลุปรุโปร่ง\"",
+          "tokens": [
+            "思想融会贯通",
+            "学贯博古通今"
+          ],
+          "correct_sequence": [
+            "学贯博古通今",
+            "思想融会贯通"
+          ],
+          "pinyin": "Xuégùan bógǔ tōngjīn, sīxiǎng rónghuì guàntōng.",
+          "meaning_th": "รอบรู้อดีตปัจจุบัน หลอมรวมทะลุปรุโปร่ง",
+          "explanation_th": "ความรอบรู้กาลเวลา (学贯博古通今) + ความคิดที่หลอมรวม (思想融会贯通)",
+          "encouragement": "จัดประโยคเชื่อมโยงภูมิปัญญาได้อย่างงดงาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"薪\" (xīn - ฟืน) ใน \"薪火相传\" มีหมวดนำ \"艹\" (หญ้า) สื่อถึงอะไร?",
+          "options": [
+            "ฟืนไม้ที่แม้จะมอดไหม้หมดไป แต่เปลวไฟแห่งปัญญายังคงถูกส่งต่ออย่างไม่มีวันดับสูญ",
+            "การปลูกต้นไม้ในสวนสาธารณะ",
+            "การเก็บเกี่ยวพืชผลทางการเกษตร",
+            "การปรุงยาสมุนไพร"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"薪\" คือฟืน เปรียบเสมือนชีวิตมนุษย์ที่ส่งมอบคบเพลิงแห่งปัญญา (火) ให้คนรุ่นต่อไป (薪火相传)",
+          "encouragement": "จำปรัชญาคบเพลิงแห่งชีวิตได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"触类旁通\" (chùlèi pángtōng) อธิบายกระบวนการเรียนรู้แบบใด?",
+          "options": [
+            "การเข้าใจหลักการหนึ่งอย่างถ่องแท้จนสามารถเชื่อมโยงเข้าใจศาสตร์อื่นๆ ที่เกี่ยวข้องได้อย่างรวดเร็ว (Comprehend by Analogy)",
+            "การสัมผัสสิ่งของด้วยความระมัดระวัง",
+            "การเดินหลงทางในป่า",
+            "การท่องจำคำศัพท์โดยไม่เข้าใจความหมาย"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"触类旁通\" หมายถึง การเข้าใจสิ่งหนึ่งแล้วเชื่อมโยงทะลุปรุโปร่งไปสู่หมวดหมู่อื่นๆ ได้โดยอนุมาน",
+          "encouragement": "เชี่ยวชาญการต่อยอดความคิดทางวิชาการอย่างยอดเยี่ยม!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในเวทีสัมมนาปัญญาชนข้ามศตวรรษ ประโยคใดสะท้อนบทบาทของมนุษยศาสตร์และวิทยาศาสตร์ในการพัฒนาสังคมได้อย่างทรงพลังที่สุด?",
+        "options": [
+          "唯有博古通今、融会贯通，在文史哲根基上触类旁通，坚持经世致用，方能让文明薪火相传并引领科技向善。",
+          "在双边商务谈判陷入僵局时，我们应当善用迂回斡旋策略，通过阶段性让步守住核心底线。",
+          "学术论文答辩的关键在于控制变量与扩大样本，只要置信区间稳定，便无需过度考量古典人文价值。",
+          "知识产权跨国诉讼应当严格依据国际仲裁公约，以防止对方通过专利侵权指控剥夺我们的合法权益。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"博古通今\", \"融会贯通\", \"触类旁通\", \"经世致用\" และ \"薪火相传\" ได้อย่างสมบูรณ์แบบตามมาตรฐานปราชญ์บัณฑิต"
+      },
+      "cheer_trophy": {
+        "badge_name": "ผู้สืบทอดคบเพลิงแห่งอารยธรรม (Torchbearer of Civilization)",
+        "message_th": "ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 博古通今, 融会贯通, 经世致用, 触类旁通, 薪火相传 พร้อมนำพาปัญญาพัฒนาโลก!",
+        "xp_reward": 150
+      }
+    },
+    {
+      "lesson_id": "t4_u57_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "大道至简：跨国治理与商战哲理",
+        "th": "สัจธรรมสูงสุดล้วนเรียบง่าย: ธรรมาภิบาลข้ามชาติและปรัชญาสงครามการค้า",
+        "en": "Great Truths are Simple: Global Governance"
+      },
+      "can_do": {
+        "th": "ใช้ปรัชญาการบริหารชั้นสูง เช่น 大道至简, 顺势而为, 润物无声, 举重若轻, 止于至善 ในการตัดสินใจเชิงยุทธศาสตร์ระดับโลกได้",
+        "en": "Apply strategic governance philosophies: Great Truths are Simple, Follow the Trend, Silent Nourishment, Ease in Complexity, and Rest in Highest Good."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้คำว่า 大道至简 และ 顺势而为 อธิบายการตัดสินใจระดับผู้นำองค์กร!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5711",
+          "hanzi": "大道至简",
+          "pinyin": "dàdào zhìjiǎn",
+          "display_pinyin": "dàdào zhìjiǎn",
+          "pinyin_tone": "da4dao4 zhi4jian3",
+          "meaning_th": "สัจธรรมสูงสุดล้วนเรียบง่ายที่สุด (Great truths are simple)",
+          "meaning_en": "the greatest truth is the simplest / profound simplicity",
+          "radical": "大",
+          "radical_name_th": "หมวดใหญ่ (大字旁)",
+          "stroke_count": 27,
+          "mnemonic": "วิถีแห่งเต๋าอันยิ่งใหญ่ (大道) แท้จริงแล้วกลับคืนสู่ความเรียบง่ายที่สุด (至简) = สัจธรรมที่เรียบง่าย",
+          "kid_mnemonic": "สูตรลับที่ทรงพลังที่สุดในจักรวาลเขียนด้วยตัวอักษรง่ายๆ เพียงบรรทัดเดียว = 大道至简",
+          "body_gesture": "วาดสองมือเป็นวงกลมใหญ่แล้วรวบเข้ามาเป็นจุดศูนย์กลางเพียงจุดเดียว"
+        },
+        {
+          "id": "hsk4_5712",
+          "hanzi": "顺势而为",
+          "pinyin": "shùnshì érwéi",
+          "display_pinyin": "shùnshì érwéi",
+          "pinyin_tone": "shun4shi4 er2wei2",
+          "meaning_th": "ดำเนินการคล้อยตามกระแสแนวโน้ม / ขี่คลื่นแห่งยุคสมัย (Act according to the trend)",
+          "meaning_en": "act according to the trend / ride the wave",
+          "radical": "页",
+          "radical_name_th": "หมวดหน้ากระดาษ (顺字旁)",
+          "stroke_count": 29,
+          "mnemonic": "ลู่ตามสายลม (顺) ทิศทางแนวโน้มใหญ่แห่งกาลเวลา (势) จึงค่อยลงมือกระทำ (而为) = ทำตามกระแสคลื่น",
+          "kid_mnemonic": "กางใบเรือรับลมมรสุมพัดพาเรือแล่นฉิวไปข้างหน้าอย่างสบายแรง = 顺势而为",
+          "body_gesture": "วาดมือขวาเป็นคลื่นราบเรียบพริ้วไหวไปข้างหน้าตามกระแสน้ำ"
+        },
+        {
+          "id": "hsk4_5713",
+          "hanzi": "润物无声",
+          "pinyin": "rùnwù wúshēng",
+          "display_pinyin": "rùnwù wúshēng",
+          "pinyin_tone": "run4wu4 wu2sheng1",
+          "meaning_th": "หล่อเลี้ยงบำรุงสรรพสิ่งอย่างอ่อนโยนเงียบสงบ (Nourish silently and subtly)",
+          "meaning_en": "nourish silently and subtly / gentle profound influence",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 31,
+          "mnemonic": "สายฝนฤดูใบไม้ผลิชโลมชุ่มฉ่ำ (润) บำรุงสรรพสิ่ง (物) โดยปราศจากเสียงอึกทึก (无声) = อิทธิพลที่อ่อนโยนลึกซึ้ง",
+          "kid_mnemonic": "ฝนพรำยามค่ำคืนที่ไม่มีเสียงฟ้าร้อง แต่รุ่งเช้าต้นไม้ดอกไม้เบ่งบานงดงาม = 润物无声",
+          "body_gesture": "ใช้นิ้วมือขยับพรำๆ ดั่งหยาดฝนโปรยปรายลงสู่พื้นดินอย่างแผ่วเบา"
+        },
+        {
+          "id": "hsk4_5714",
+          "hanzi": "举重若轻",
+          "pinyin": "jǔzhòng ruòqīng",
+          "display_pinyin": "jǔzhòng ruòqīng",
+          "pinyin_tone": "ju3zhong4 ruo4qing1",
+          "meaning_th": "จัดการเรื่องยากและหนักหน่วงให้ดูง่ายดายเบามือ (Handle complicated affairs with ease)",
+          "meaning_en": "handle heavy matters with ease / masterful composure",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 36,
+          "mnemonic": "ยกของที่มีน้ำหนักมหาศาลพันชั่ง (举重) ได้อย่างแผ่วเบาดั่งขนนก (若轻) = รับมือเรื่องยากได้อย่างสบาย",
+          "kid_mnemonic": "นักยกน้ำหนักยิ้มแย้มยกดัมเบลทองคำยักษ์ด้วยนิ้วก้อยนิ้วเดียว = 举重若轻",
+          "body_gesture": "ทำท่ายกของหนักขึ้นเหนืออกแล้วยิ้มแย้มผ่อนคลายอย่างสง่างาม"
+        },
+        {
+          "id": "hsk4_5715",
+          "hanzi": "止于至善",
+          "pinyin": "zhǐyú zhìshàn",
+          "display_pinyin": "zhǐyú zhìshàn",
+          "pinyin_tone": "zhi3yu2 zhi4shan4",
+          "meaning_th": "มุ่งมั่นพัฒนาไม่หยุดยั้งจนถึงความดีงามสูงสุด (Rest in the ultimate goodness / Strive for perfection)",
+          "meaning_en": "rest in the ultimate goodness / strive for perfection",
+          "radical": "止",
+          "radical_name_th": "หมวดหยุด (止字部)",
+          "stroke_count": 24,
+          "mnemonic": "หยุดพักปักหลักมั่นคง (止) ณ แดนแห่งความดีงามและความสมบูรณ์แบบสูงสุด (至善) = มุ่งสู่จุดสมบูรณ์พร้อม",
+          "kid_mnemonic": "เดินตามแสงสว่างสีทองไปจนถึงปราสาทแห่งความดีงามสูงสุดในนิทาน = 止于至善",
+          "body_gesture": "กุมมือทาบอกซ้ายพร้อมยืดอกมองตรงไปข้างหน้าด้วยแววตาเปี่ยมเมตตา"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 大道至简 (dàdào zhìjiǎn)",
+        "description_th": "dà (เสียง 4) dào (เสียง 4) zhì (เสียง 4) jiǎn (เสียง 3)",
+        "example": "领会大道至简的战略智慧 (Lǐnghuì dàdào zhìjiǎn de zhànlüè zhìhuì)",
+        "fun_metaphor": "เสียงทุ้มหนักแน่น 4-4-4 ก่อนผ่อนลงเสียง 3 สื่อถึงความสุขุมคัมภีรภาพ",
+        "reassurance": "ปรัชญาชั้นสูงสุดของลัทธิเต๋าที่ผู้นำระดับโลกนำมาใช้ในการบริหาร"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการบริหารระดับสูง: 深谙大道至简，顺势而为，举重若轻",
+        "formula": "在风云变幻的跨国博弈中，深谙大道至简的哲理，顺势而为，处事举重若轻，追求止于至善",
+        "explanation_th": "ใช้ในการวางยุทธศาสตร์องค์กรและการตัดสินใจของผู้นำระดับสูง",
+        "patterns": [
+          {
+            "formula": "顺应时代大势，润物细无声。",
+            "zh": "企业必须顺势而为拥抱绿色转型，以润物无声之策赋能产业链上下游合作伙伴。",
+            "pinyin": "Qǐyè bìxū shùnshì érwéi yōngbào lǜsè zhuǎnxíng, yǐ rùnwù wúshēng zhī cè fùnéng chǎnyèliàn shàngxiàyóu hézuò huǒbàn.",
+            "th": "องค์กรต้องดำเนินตามกระแสการเปลี่ยนผ่านสู่ความยั่งยืน และใช้นโยบายที่อ่อนโยนเงียบสงบสร้างพลังแก่พันธมิตรทั้งต้นน้ำและปลายน้ำ",
+            "en": "Enterprises must ride the wave of green transition, subtly empowering upstream and downstream supply chain partners."
+          },
+          {
+            "formula": "处事举重若轻，追求止于至善。",
+            "zh": "卓越领袖在化解千头万绪的危机时总能举重若轻，带领团队精益求精，止于至善。",
+            "pinyin": "Zhuóyuè lǐngxiù zài huàjiě qiāntóu wànxù de wēijī shí zǒng néng jǔzhòng ruòqīng, dàilǐng tuánduì jīngyìqiújīng, zhǐyú zhìshàn.",
+            "th": "ผู้นำที่โดดเด่นมักจัดการวิกฤตที่สลับซับซ้อนได้อย่างง่ายดายเสมอ นำพาทีมงานมุ่งสู่ความเป็นเลิศและความดีงามสูงสุด",
+            "en": "Outstanding leaders resolve complex crises with effortless composure, guiding teams toward relentless excellence and ultimate good."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "跨国集团董事局主席 (Global Board Chair) 🌐",
+          "zh": "各位董事，面对复杂的国际地缘博弈与行业变革，我们的战略必须回归常识与本质。",
+          "pinyin": "Gèwèi dǒngshì, miànduì fùzá de guójì dìyuán bóyì yǔ hángyè biàngé, wǒmen de zhànlüè bìxū huíguī chángshí yǔ běnzhì.",
+          "th": "กรรมการทุกท่าน เมื่อเผชิญกับเกมภูมิรัฐศาสตร์โลกและการเปลี่ยนแปลงของอุตสาหกรรม ยุทธศาสตร์ของเราต้องย้อนคืนสู่หลักพื้นฐานและแก่นแท้ครับ",
+          "en": "Directors, facing complex geopolitics and industry disruptions, our strategy must return to fundamentals and essence.",
+          "audio_trigger": "t4_u57_l03_d01"
+        },
+        {
+          "speaker": "战略投资总裁 (President of Strategic Investment) 💼",
+          "zh": "主席高见！商道至高境界正是大道至简。顺势而为把握技术浪潮，方能立于不败之地。",
+          "pinyin": "Zhǔxí gāojiàn! Shāngdào zhìgāo jìngjiè zhèng shì dàdào zhìjiǎn. Shùnshì érwéi bǎwò jìshù làngcháo, fāng néng lì yú bùbài zhī dì.",
+          "th": "วิสัยทัศน์ท่านประธานลึกซึ้งมากครับ! สัจธรรมสูงสุดของวิถีธุรกิจคือความเรียบง่าย การดำเนินตามกระแสคลื่นเทคโนโลยีจึงจะยืนหยัดไร้พ่ายครับ",
+          "en": "Superb insight, Chair! The highest business realm is profound simplicity; riding technology waves ensures an invincible standing.",
+          "audio_trigger": "t4_u57_l03_d02"
+        },
+        {
+          "speaker": "跨国集团董事局主席 (Global Board Chair) 🌐",
+          "zh": "很好！执行层面要举重若轻，以润物无声的文化凝聚跨国团队，坚决守牢合规底线。",
+          "pinyin": "Hěn hǎo! Zhíxíng céngmiàn yào jǔzhòng ruòqīng, yǐ rùnwù wúshēng de wénhuà níngjù kuàguó tuánduì, jiānjué shǒuláo hégūi dǐxiàn.",
+          "th": "ดีมาก! ในระดับการปฏิบัติต้องจัดการเรื่องยากให้ดูง่ายดาย ใช้จิตวิญญาณวัฒนธรรมที่อ่อนโยนหลอมรวมทีมงานข้ามชาติ และรักษาเส้นตายกฎหมายให้มั่น",
+          "en": "Very good! Execute with effortless composure, unify multinational teams via gentle culture, and strictly guard compliance baselines.",
+          "audio_trigger": "t4_u57_l03_d03"
+        },
+        {
+          "speaker": "战略投资总裁 (President of Strategic Investment) 💼",
+          "zh": "不忘初心，止于至善！我们将以这份战略定力，开创基业长青的崭新篇章！",
+          "pinyin": "Bù wàng chūxīn, zhǐyú zhìshàn! Wǒmen jiāng yǐ zhè fèn zhànlüè dìnglì, kāichuàng jīyè chángqīng de zhǎnxīn piānzhāng!",
+          "th": "ไม่ลืมอุดมการณ์ดั้งเดิม มุ่งมั่นสู่ความดีงามสูงสุด! เราจะใช้ความแน่วแน่ทางยุทธศาสตร์นี้เปิดบทใหม่แห่งความรุ่งเรืองที่ยั่งยืนครับ!",
+          "en": "Staying true to original aspirations and striving for the highest good! We will forge a new chapter of enduring success!",
+          "audio_trigger": "t4_u57_l03_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "สำนวน \"大道至简\" (dàdào zhìjiǎn) ให้คติเตือนใจในเชิงยุทธศาสตร์อย่างไร?",
+          "options": [
+            "สัจธรรม กฎธรรมชาติ หรือกลยุทธ์ที่ลึกซึ้งและทรงพลังที่สุด แท้จริงแล้วย้อนคืนสู่หลักการพื้นฐานที่เรียบง่ายและตรงไปตรงมา",
+            "การเขียนสัญญาธุรกิจให้ยาวหลายพันหน้าเพื่อความปลอดภัย",
+            "การหลีกเลี่ยงการใช้เทคโนโลยีสมัยใหม่",
+            "การปฏิเสธการทำข้อตกลงกับต่างชาติ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"大道至简\" หมายถึง กฎเกณฑ์ที่ยิ่งใหญ่ที่สุดมักเรียบง่ายและเป็นธรรมชาติที่สุด (Great Truths are Simple)",
+          "encouragement": "เข้าใจแก่นแท้แห่งปรัชญาเต๋าในการบริหารได้อย่างเฉียบคม!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"คล้อยตามกระแสโลก รับมือสถานการณ์ยากอย่างง่ายดาย\"",
+          "tokens": [
+            "处事举重若轻",
+            "顺应大势顺势而为"
+          ],
+          "correct_sequence": [
+            "顺应大势顺势而为",
+            "处事举重若轻"
+          ],
+          "pinyin": "Shùnyìng dàshì shùnshì érwéi, chǔshì jǔzhòng ruòqīng.",
+          "meaning_th": "คล้อยตามกระแสโลก รับมือสถานการณ์ยากอย่างง่ายดาย",
+          "explanation_th": "การตามกระแส (顺应大势顺势而为) + การรับมืออย่างสงบ (处事举重若轻)",
+          "encouragement": "จัดประโยควิถีผู้นำระดับโลกได้อย่างสง่างาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"顺\" (shùn - ราบรื่น/ตาม) ใน \"顺势而为\" มีหมวดนำ \"页\" (หน้า) สื่อถึงอะไร?",
+          "options": [
+            "การหันหน้าไปในทิศทางเดียวกับสายลมหรือกระแสน้ำ ไม่ทวนกระแสธรรมชาติ",
+            "การพลิกหน้ากระดาษหนังสือ",
+            "การอ่านหนังสือพิมพ์",
+            "การวาดภาพใบหน้าคน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"页\" ใน \"顺\" สื่อถึงการหันหน้าตามทิศทางลม เพื่อความราบรื่นและคล้อยตามกระแสยุคสมัย",
+          "encouragement": "จำรากศัพท์การคล้อยตามกระแสธรรมชาติได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"举重若轻\" (jǔzhòng ruòqīng) บรรยายคุณลักษณะของผู้นำแบบใด?",
+          "options": [
+            "ผู้นำที่มีวุฒิภาวะสูง สามารถจัดการปัญหาที่หนักหน่วงและซับซ้อนได้อย่างสงบเยือกเย็นประหนึ่งถือของเบา",
+            "ผู้นำที่ชอบออกกำลังกายยกน้ำหนัก",
+            "ผู้นำที่โยนภาระงานหนักให้ลูกน้องทำฝ่ายเดียว",
+            "ผู้นำที่ตื่นตระหนกตกใจง่าย"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"举重若轻\" คือ ความสามารถในการจัดการเรื่องคอขาดบาดตายหรือภารกิจที่ใหญ่หลวงด้วยความสุขุม ผ่อนคลาย และเฉียบคม",
+          "encouragement": "ซึมซับคุณสมบัติผู้นำระดับตำนานอย่างแท้จริง!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "ในฐานะประธานเจ้าหน้าที่บริหารระดับโลก ประโยคใดสรุปวิสัยทัศน์การบริหารธรรมาภิบาลและความรับผิดชอบต่อสังคมได้อย่างลึกซึ้งที่สุด?",
+        "options": [
+          "跨国治理当深谙大道至简，顺势而为把握时代大潮，以润物无声之策凝聚共识，举重若轻化解风险，带领组织止于至善。",
+          "在双边危机公关谈判中，只要我们牢牢把控底线筹码，不管对方如何通过舆论进行商业博弈，我们都绝不作出实质让步。",
+          "关于宏观经济政策白皮书中的变量与样本，我们已经通过定量检验获得了百分之九十五的置信区间，足以杜绝同行评审剽窃指控。",
+          "为推动一带一路互联互通与基础设施建设，沿线各国应当摒弃零和博弈思维，全力维护彼此的知识产权与涉外仲裁管辖权。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"大道至简\", \"顺势而为\", \"润物无声\", \"举重若轻\" และ \"止于至善\" ได้อย่างทรงคุณค่าและเป็นอมตะ"
+      },
+      "cheer_trophy": {
+        "badge_name": "จอมทัพยุทธศาสตร์ระดับโลก (Global Strategic Mastermind)",
+        "message_th": "ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 大道至简, 顺势而为, 润物无声, 举重若轻, 止于至善 พร้อมก้าวสู่การเป็นผู้นำโลก!",
+        "xp_reward": 150
+      }
+    },
+    {
+      "lesson_id": "t4_u57_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "破茧成蝶：Legend Mastery Capstone Final",
+        "th": "ลอกคราบผีเสื้อทะยานสู่ฟ้า: มหาบททดสอบไฟนอลระดับตำนาน",
+        "en": "Breaking the Cocoon: Legend Capstone Final"
+      },
+      "can_do": {
+        "th": "บูรณาการทักษะภาษาจีนระดับ C2 ครอบคลุมการสื่อสารขั้นสูง ปรัชญา วรรณกรรม และการวิเคราะห์สถานการณ์โลกได้อย่างสมบูรณ์แบบ",
+        "en": "Achieve total integration of C2-level Chinese mastery across classical thought, advanced diplomacy, literature, and scholarly discourse."
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: บรรลุการทดสอบไฟนอล 终极考核 สู่สถานะ Hanzero Legend Master!",
+      "vocabulary": [
+        {
+          "id": "hsk4_5716",
+          "hanzi": "终极考核",
+          "pinyin": "zhōngjí kǎohé",
+          "display_pinyin": "zhōngjí kǎohé",
+          "pinyin_tone": "zhong1ji2 kao3he2",
+          "meaning_th": "การประเมินผลขั้นสุดยอด / มหาบททดสอบสุดท้าย (Ultimate capstone assessment)",
+          "meaning_en": "ultimate capstone assessment / final evaluation",
+          "radical": "纟",
+          "radical_name_th": "หมวดไหม (绞丝旁)",
+          "stroke_count": 31,
+          "mnemonic": "จุดสิ้นสุดอันเป็นที่สุด (终极) ของการตรวจสอบและประเมินผล (考核) = มหาบททดสอบสุดท้าย",
+          "kid_mnemonic": "ด่านบอสด่านสุดท้ายบนยอดหอคอยทองคำที่ต้องผ่านเพื่อรับมงกุฎ = 终极考核",
+          "body_gesture": "ยืนเหยียดตรงอย่างสง่างาม พร้อมเผชิญหน้ากับการทดสอบขั้นสุดท้าย"
+        },
+        {
+          "id": "hsk4_5717",
+          "hanzi": "登堂入室",
+          "pinyin": "dēngtáng rùshì",
+          "display_pinyin": "dēngtáng rùshì",
+          "pinyin_tone": "deng1tang2 ru4shi4",
+          "meaning_th": "บรรลุความเชี่ยวชาญระดับลึกซึ้ง / ก้าวเข้าสู่โถงชั้นในแห่งปัญญา (Reach advanced profundity)",
+          "meaning_en": "reach advanced profundity / attain high accomplishment",
+          "radical": "癶",
+          "radical_name_th": "หมวดก้าวขา (登字头)",
+          "stroke_count": 36,
+          "mnemonic": "ก้าวขึ้นบันไดสู่ห้องโถงใหญ่ (登堂) แล้วเดินทะลุเข้าสู่ห้องส่วนตัวชั้นใน (入室) = ผู้รู้จริงในศาสตร์",
+          "kid_mnemonic": "เปิดประตูบานใหญ่ก้าวเข้าไปในห้องสมุดต้องห้ามแห่งปราชญ์ = 登堂入室",
+          "body_gesture": "ก้าวเท้าขวาไปข้างหน้าอย่างมั่นคงและผลักประตูสองบานเปิดออก"
+        },
+        {
+          "id": "hsk4_5718",
+          "hanzi": "豁然开朗",
+          "pinyin": "huòrán kāilǎng",
+          "display_pinyin": "huòrán kāilǎng",
+          "pinyin_tone": "huo4ran2 kai1lang3",
+          "meaning_th": "สว่างวาบทางปัญญา / กระจ่างแจ้งทันที (Suddenly enlightened / Clear perspective)",
+          "meaning_en": "suddenly enlightened / opened to wide perspective",
+          "radical": "谷",
+          "radical_name_th": "หมวดหุบเขา (谷字旁)",
+          "stroke_count": 43,
+          "mnemonic": "เดินลอดถ้ำแคบๆ ออกมาสู่ที่โล่งกว้าง (豁然) แสงสว่างสาดส่องโปร่งโล่งตา (开朗) = สว่างวาบในความคิด",
+          "kid_mnemonic": "หลอดไฟสีเหลืองทองบนหัวสว่างวาบ ปัญหาทุกอย่างเข้าใจทะลุปรุโปร่ง = 豁然开朗",
+          "body_gesture": "สองมือกางออกกว้างจากกลางอก พร้อมใบหน้ายิ้มแย้มแจ่มใสเบิกบาน"
+        },
+        {
+          "id": "hsk4_5719",
+          "hanzi": "贯通中西",
+          "pinyin": "guàntōng zhōngxī",
+          "display_pinyin": "guàntōng zhōngxī",
+          "pinyin_tone": "guan4tong1 zhong1xi1",
+          "meaning_th": "เชื่อมโยงรอบรู้ทั้งศาสตร์ตะวันออกและตะวันตก (Bridge East and West)",
+          "meaning_en": "bridge East and West / integrate Chinese and Western knowledge",
+          "radical": "贝",
+          "radical_name_th": "หมวดเปลือกหอย (贝字底)",
+          "stroke_count": 27,
+          "mnemonic": "ร้อยเรียงเชื่อมโยง (贯通) อารยธรรมจีนตะวันออกและโลกตะวันตก (中西) = ผู้รอบรู้ทั้งสองซีกโลก",
+          "kid_mnemonic": "จับมือระหว่างมังกรจีนกับนกอินทรี สร้างสะพานข้ามมหาสมุทร = 贯通中西",
+          "body_gesture": "สองมือวาดสะพานเชื่อมจากซ้ายไปขวา แสดงการเชื่อมโยงสองโลก"
+        },
+        {
+          "id": "hsk4_5720",
+          "hanzi": "荣光破晓",
+          "pinyin": "róngguāng pòxiǎo",
+          "display_pinyin": "róngguāng pòxiǎo",
+          "pinyin_tone": "rong2guang1 po4xiao3",
+          "meaning_th": "รุ่งอรุณแห่งเกียรติยศ / แสงทองส่องประกายแห่งความสำเร็จ (Dawn of glorious triumph)",
+          "meaning_en": "dawn of glorious triumph / radiant breakthrough",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (荣字头)",
+          "stroke_count": 35,
+          "mnemonic": "แสงแห่งเกียรติยศรุ่งเรือง (荣光) ทะลวงความมืดมิดในยามรุ่งอรุณ (破晓) = แสงทองแห่งความสำเร็จ",
+          "kid_mnemonic": "แสงอาทิตย์สีทองดวงใหญ่โผล่พ้นขอบฟ้า ทอแสงส่องลงบนถ้วยรางวัลของผู้กล้า = 荣光破晓",
+          "body_gesture": "สองมือชูขึ้นสู่ท้องฟ้ารับแสงตะวันยามเช้าอันเจิดจ้า"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 豁然开朗 (huòrán kāilǎng)",
+        "description_th": "huò (เสียง 4) rán (เสียง 2) kāi (เสียง 1) lǎng (เสียง 3)",
+        "example": "思维境界豁然开朗 (Sīwéi jìngjiè huòrán kāilǎng)",
+        "fun_metaphor": "จังหวะเปิดกว้างดั่งก้าวข้ามหุบเขาแคบสู่ทุ่งกว้างสุดสายตา",
+        "reassurance": "คำอธิบายสภาวะแห่งการตื่นรู้ทางปัญญาที่ไพเราะที่สุดในภาษาจีน"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการบรรลุหลักสูตรขั้นสูงสุด: 历经终极考核，登堂入室，贯通中西，荣光破晓",
+        "formula": "历经八十八堂课的系统磨砺与终极考核，学问造诣登堂入室，思绪豁然开朗，终能贯通中西，迎来荣光破晓",
+        "explanation_th": "ใช้ในการเฉลิมฉลองการสำเร็จการศึกษาและประกาศความเป็นเลิศระดับตำนาน",
+        "patterns": [
+          {
+            "formula": "功底登堂入室，眼界豁然开朗。",
+            "zh": "经过长期的沉淀与探索，他的汉语造诣已登堂入室，面对复杂的文化现象豁然开朗。",
+            "pinyin": "Jīngguò chángqī de chéndiàn yǔ tànsuǒ, tā de Hànyǔ zàoyì yǐ dēngtáng rùshì, miànduì fùzá de wénhuà xiànxiàng huòrán kāilǎng.",
+            "th": "หลังผ่านการสะสมและค้นคว้ามายาวนาน ความรู้ภาษาจีนของเขาได้บรรลุสู่ระดับลึกซึ้ง เผชิญหน้ากับปรากฏการณ์ทางวัฒนธรรมที่ซับซ้อนได้อย่างกระจ่างแจ้ง",
+            "en": "Through long accumulation and inquiry, his Chinese attainments reached profound depths, viewing complex cultural phenomena with enlightened clarity."
+          },
+          {
+            "formula": "融汇贯通中西，迎接荣光破晓。",
+            "zh": "学习者成功贯通中西文明精粹，在历史的新起点上，迎来了属于奋斗者的荣光破晓！",
+            "pinyin": "Xuéxízhě chénggōng guàntōng zhōngxī wénmíng jīngcuì, zài lìshǐ de xīn qǐdiǎn shang, yínglái le shǔyú fèndòuzhě de róngguāng pòxiǎo!",
+            "th": "ผู้เรียนประสบความสำเร็จในการเชื่อมโยงแก่นแท้แห่งอารยธรรมตะวันออกและตะวันตก ณ จุดเริ่มต้นใหม่แห่งประวัติศาสตร์ ได้ต้อนรับรุ่งอรุณแห่งเกียรติยศของผู้มุ่งมั่น!",
+            "en": "Learners successfully bridged Eastern and Western civilizations; at this historical starting point, they greeted the dawn of glorious triumph!"
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "Hanzero学术总导师 (Chief Academic Mentor) 👑",
+          "zh": "各位学员，今天我们齐聚一堂，见证大家从文言虚词、宏观白皮书到顶刊答辩，圆满完成全套课程的终极考核！",
+          "pinyin": "Gèwèi xuéyuán, jīntiān wǒmen qíjù yī táng, jiànzhèng dàjiā cóng wényán xūcí, hóngguān báipíshū dào dǐngkān dábiàn, yuánmǎn wánchéng quántào kèchéng de zhōngjí kǎohé!",
+          "th": "ผู้เรียนทุกท่าน วันนี้เรามารวมตัวกันเพื่อเป็นสักขีพยานที่ทุกคน ตั้งแต่คำช่วยโบราณ สมุดปกขาวมหภาค จนถึงการสอบวิทยานิพนธ์วารสารชั้นนำ ได้สำเร็จมหาบททดสอบสุดท้ายของหลักสูตรทั้งหมดอย่างสมบูรณ์แบบครับ!",
+          "en": "Learners, today we gather to witness everyone completing the ultimate assessment of the entire curriculum, from classical particles to macro white papers and top journal defenses!",
+          "audio_trigger": "t4_u57_l04_d01"
+        },
+        {
+          "speaker": "Legend毕业生代表 (Legend Valedictorian) 🎓",
+          "zh": "感谢导师团！从拼音零基础起步，如今对文言哲思、知识产权诉讼与高层商务博弈的理解已登堂入室，内心豁然开朗。",
+          "pinyin": "Gǎnxiè dǎoshītuán! Cóng pīnyīn líng jīchǔ qǐbù, rújīn duì wényán zhésī, zhīshi chǎnquán sùsòng yǔ gāocéng shāngwù bóyì de lǐjiě yǐ dēngtáng rùshì, nèixīn huòrán kāilǎng.",
+          "th": "ขอบพระคุณคณะอาจารย์ครับ! เริ่มต้นจากศูนย์พินอิน วันนี้ความเข้าใจในปรัชญาโบราณ การฟ้องร้องทรัพย์สินทางปัญญา และเกมธุรกิจระดับสูงได้บรรลุสู่ระดับลึกซึ้ง จิตใจกระจ่างแจ้งสว่างวาบครับ",
+          "en": "Thank you, mentor team! Starting from pinyin zero, our comprehension of classical thought, IP litigation, and high-level business gaming has attained profound depths and clarity.",
+          "audio_trigger": "t4_u57_l04_d02"
+        },
+        {
+          "speaker": "Hanzero学术总导师 (Chief Academic Mentor) 👑",
+          "zh": "很好！你们不仅掌握了语言工具，更做到了贯通中西，具备了经世致用的全球格局！",
+          "pinyin": "Hěn hǎo! Nǐmen bùjǐn zhǎngwò le yǔyán gōngjù, gèng zuòdào le guàntōng zhōngxī, jùbèi le jīngshì zhìyòng de quánqiú géjú!",
+          "th": "ดีมาก! พวกคุณไม่เพียงเชี่ยวชาญเครื่องมือทางภาษา แต่ยังสามารถเชื่อมโยงบูรพาประจิม มีวิสัยทัศน์ระดับโลกที่ใช้วิชาการเพื่อสังคมได้!",
+          "en": "Very good! You not only mastered linguistic tools but also bridged East and West, possessing a global vision of practical social utility!",
+          "audio_trigger": "t4_u57_l04_d03"
+        },
+        {
+          "speaker": "Legend毕业生代表 (Legend Valedictorian) 🎓",
+          "zh": "荣光破晓，征程再启！我们将带着这份登峰造极的智慧，在世界舞台上绽放万丈光芒！",
+          "pinyin": "Róngguāng pòxiǎo, zhēngchéng zài qǐ! Wǒmen jiāng dài zhe zhè fèn dēngfēng zàojí de zhìhuì, zài shìjiè wǔtái shang zhànfàng wànzhàng guāngmáng!",
+          "th": "รุ่งอรุณแห่งเกียรติยศมาถึง การเดินทางครั้งใหม่เริ่มต้น! เราจะนำพาภูมิปัญญาอันถึงจุดสูงสุดนี้ ไปเปล่งประกายเจิดจ้าบนเวทีระดับโลกครับ!",
+          "en": "Glory dawns, and the new journey begins! Carrying this pinnacle wisdom, we will shine brilliantly on the world stage!",
+          "audio_trigger": "t4_u57_l04_d04"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "multiple_choice",
+          "question_th": "สำนวน \"登堂入室\" (dēngtáng rùshì) มีความหมายอธิบายระดับความเชี่ยวชาญอย่างไร?",
+          "options": [
+            "การก้าวหน้าทางวิชาการหรือทักษะจนเข้าสู่ระดับลึกซึ้ง เป็นผู้รู้จริงและเชี่ยวชาญอย่างแท้จริง",
+            "การเพิ่งเดินเข้าประตูบ้านเป็นครั้งแรก",
+            "การก่อสร้างห้องนอนใหม่",
+            "การทำความสะอาดห้องโถง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"登堂入室\" มาจากคำสอนของขงจื๊อ หมายถึง การขึ้นสู่ห้องโถงแล้วก้าวเข้าสู่ห้องชั้นใน สื่อถึงการบรรลุความรู้ระดับลึกซึ้ง",
+          "encouragement": "เข้าใจสำนวนระดับปรมาจารย์ได้อย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"เชื่อมโยงบูรพาประจิม ต้อนรับรุ่งอรุณแห่งเกียรติยศ\"",
+          "tokens": [
+            "迎来荣光破晓",
+            "学问贯通中西"
+          ],
+          "correct_sequence": [
+            "学问贯通中西",
+            "迎来荣光破晓"
+          ],
+          "pinyin": "Xuéwèn guàntōng zhōngxī, yínglái róngguāng pòxiǎo.",
+          "meaning_th": "เชื่อมโยงบูรพาประจิม ต้อนรับรุ่งอรุณแห่งเกียรติยศ",
+          "explanation_th": "ภูมิปัญญาเชื่อมสองโลก (学问贯通中西) + ชัยชนะอันยิ่งใหญ่ (迎来荣光破晓)",
+          "encouragement": "จัดประโยคฉลองชัยชนะได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า \"豁\" (huò - โปร่งโล่ง/เปิดกว้าง) ใน \"豁然开朗\" มีหมวดนำ \"谷\" (หุบเขา) สื่อถึงอะไร?",
+          "options": [
+            "การเดินหลุดพ้นจากช่องแคบของหุบเขาออกมาสู่ที่ราบโล่งกว้าง สว่างไสวสบายตา",
+            "การปลูกข้าวโพดในหุบเขา",
+            "การขุดสระน้ำกลางป่า",
+            "การตัดฟืนบนเขา"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"谷\" ใน \"豁\" สื่อถึงการเปิดกว้างของหุบเขา เปรียบเสมือนสติปัญญาที่สว่างวาบกระจ่างแจ้งในทันใด",
+          "encouragement": "จำรากศัพท์แห่งการตื่นรู้ได้อย่างงดงาม!"
+        },
+        {
+          "type": "multiple_choice",
+          "question_th": "คำว่า \"贯通中西\" (guàntōng zhōngxī) สะท้อนเป้าหมายสูงสุดประการใดของ Hanzero Legend?",
+          "options": [
+            "การเป็นผู้มีความรู้เชื่อมโยงทั้งรากเหง้าภูมิปัญญาตะวันออกและวิทยาการสมัยใหม่ของตะวันตกได้อย่างกลมกลืน",
+            "การเดินทางท่องเที่ยวรอบโลก",
+            "การพูดภาษาอังกฤษเพียงอย่างเดียว",
+            "การค้าขายสินค้านำเข้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "\"贯通中西\" คือ การเชื่อมโยงโลกทัศน์ทั้งตะวันออกและตะวันตกเข้าด้วยกันอย่างลึกซึ้งและกลมกลืน",
+          "encouragement": "คุณคือสุดยอดผู้เรียนรู้ระดับสากลอย่างแท้จริง!"
+        }
+      ],
+      "boss_challenge": {
+        "question": "นี่คือ Final Boss Challenge สุดท้ายของ Hanzero! สภาผู้ทรงคุณวุฒิระดับนานาชาติขอให้คุณกล่าวสัจจะวาจาของ \"Hanzero Legend Master\" คุณจะกล่าวอย่างไร?",
+        "options": [
+          "今历经终极考核，吾辈中文造诣已登堂入室、贯通中西，既明大道至简，复能经世致用，今日荣光破晓，定当登峰造极、止于至善！",
+          "在双边商务谈判陷入僵局时，我们应当善用迂回斡旋策略，通过适度妥协维护企业的核心筹码与市场公信力。",
+          "关于宏观经济政策白皮书中的变量与样本，我们已经通过定量检验获得了百分之九十五的置信区间，足以杜绝同行评审剽窃指控。",
+          "为推动一带一路互联互通与基础设施建设，沿线各国应当摒弃零和博弈思维，全力维护彼此的知识产权与涉外仲裁管辖权。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยคแรกผสาน \"终极考核\", \"登堂入室\", \"贯通中西\", \"大道至简\", \"经世致用\", \"荣光破晓\", \"登峰造极\" และ \"止于至善\" ได้อย่างสมบูรณ์แบบไร้ที่ติ คุณคือ Hanzero Legend Master!"
+      },
+      "cheer_trophy": {
+        "badge_name": "มหาปราชญ์ระดับตำนานแห่งฮั่นซีโร่ (Grand Master of Hanzero Legend)",
+        "message_th": "ขอแสดงความยินดีด้วยอย่างยิ่งใหญ่ที่สุด! คุณพิชิตหลักสูตร Hanzero ตั้งแต่เริ่มจากศูนย์จนถึงระดับตำนานอย่างสมบูรณ์แบบ!",
+        "xp_reward": 200
+      }
+    }
+  ]
+}

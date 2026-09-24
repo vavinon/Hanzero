@@ -13,6 +13,10 @@ import unit50Data from './unit50_macroeconomics.json';
 import unit51Data from './unit51_intellectual_property.json';
 import unit52Data from './unit52_tang_song_poetry.json';
 import unit53Data from './unit53_modern_literature.json';
+import unit54Data from './unit54_geopolitics_belt_road.json';
+import unit55Data from './unit55_business_crisis_mediation.json';
+import unit56Data from './unit56_academic_thesis_peer_review.json';
+import unit57Data from './unit57_legend_grand_capstone.json';
 import { TRADITIONAL_BLACKLIST } from '../../../engines/studio/studioLinterEngine';
 
 interface LessonVocab {
@@ -107,11 +111,15 @@ const allTier4Units = [
   unit51Data,
   unit52Data,
   unit53Data,
+  unit54Data,
+  unit55Data,
+  unit56Data,
+  unit57Data,
 ] as unknown as UnitData[];
 
-const [unit46, unit47, unit48, unit49, unit50, unit51, unit52, unit53] = allTier4Units;
+const [unit46, unit47, unit48, unit49, unit50, unit51, unit52, unit53, unit54, unit55, unit56, unit57] = allTier4Units;
 
-describe('Tier 4 Legend (Units 46-53) Curriculum Data & Pedagogical Schema Verification', () => {
+describe('Tier 4 Legend (Units 46-57) Curriculum Data & Pedagogical Schema Verification', () => {
   // ==========================================================================
   // Universal Invariants across all Units 46–53
   // ==========================================================================
@@ -398,6 +406,84 @@ describe('Tier 4 Legend (Units 46-53) Curriculum Data & Pedagogical Schema Verif
       expect(vocab53).toContain('时代缩影');
       expect(vocab53).toContain('脊梁');
       expect(vocab53).toContain('历久弥新');
+    });
+
+    it('Unit 54 (Geopolitics & Belt and Road): covers 丝路, 互联互通, 走廊, 枢纽, 基础设施, 经贸合作区, 共同繁荣', () => {
+      const vocab54 = unit54.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab54).toContain('丝路');
+      expect(vocab54).toContain('互联互通');
+      expect(vocab54).toContain('走廊');
+      expect(vocab54).toContain('枢纽');
+      expect(vocab54).toContain('基础设施');
+      expect(vocab54).toContain('经贸合作区');
+      expect(vocab54).toContain('共同繁荣');
+    });
+
+    it('Unit 55 (Business Negotiation & Crisis Mediation): covers 筹码, 博弈, 底线, 试探, 权衡, 破局, 破冰, 声明, 澄清, 舆论, 赋能, 基业长青', () => {
+      const vocab55 = unit55.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab55).toContain('筹码');
+      expect(vocab55).toContain('博弈');
+      expect(vocab55).toContain('底线');
+      expect(vocab55).toContain('试探');
+      expect(vocab55).toContain('权衡');
+      expect(vocab55).toContain('僵局');
+      expect(vocab55).toContain('破局');
+      expect(vocab55).toContain('破冰');
+      expect(vocab55).toContain('妥协');
+      expect(vocab55).toContain('让步');
+      expect(vocab55).toContain('声明');
+      expect(vocab55).toContain('澄清');
+      expect(vocab55).toContain('舆论');
+      expect(vocab55).toContain('赋能');
+      expect(vocab55).toContain('基业长青');
+    });
+
+    it('Unit 56 (Academic Thesis & Peer Review): covers 假说, 论证, 综述, 范式, 开创性, 定量, 变量, 样本, 稳健性, 置信区间, 答辩, 顶刊, 严谨', () => {
+      const vocab56 = unit56.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab56).toContain('假说');
+      expect(vocab56).toContain('论证');
+      expect(vocab56).toContain('综述');
+      expect(vocab56).toContain('范式');
+      expect(vocab56).toContain('开创性');
+      expect(vocab56).toContain('定量');
+      expect(vocab56).toContain('变量');
+      expect(vocab56).toContain('样本');
+      expect(vocab56).toContain('稳健性');
+      expect(vocab56).toContain('置信区间');
+      expect(vocab56).toContain('同行评审');
+      expect(vocab56).toContain('盲审');
+      expect(vocab56).toContain('答辩');
+      expect(vocab56).toContain('商榷');
+      expect(vocab56).toContain('驳论');
+      expect(vocab56).toContain('撤稿');
+      expect(vocab56).toContain('剽窃');
+      expect(vocab56).toContain('引用');
+      expect(vocab56).toContain('顶刊');
+      expect(vocab56).toContain('严谨');
+    });
+
+    it('Unit 57 (Legend Grand Capstone): covers 登峰造极, 炉火纯青, 出神入化, 泰斗, 博古通今, 融会贯通, 经世致用, 大道至简, 顺势而为, 终极考核, 登堂入室, 豁然开朗, 贯通中西, 荣光破晓', () => {
+      const vocab57 = unit57.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab57).toContain('登峰造极');
+      expect(vocab57).toContain('炉火纯青');
+      expect(vocab57).toContain('出神入化');
+      expect(vocab57).toContain('泰斗');
+      expect(vocab57).toContain('独占鳌头');
+      expect(vocab57).toContain('博古通今');
+      expect(vocab57).toContain('融会贯通');
+      expect(vocab57).toContain('经世致用');
+      expect(vocab57).toContain('触类旁通');
+      expect(vocab57).toContain('薪火相传');
+      expect(vocab57).toContain('大道至简');
+      expect(vocab57).toContain('顺势而为');
+      expect(vocab57).toContain('润物无声');
+      expect(vocab57).toContain('举重若轻');
+      expect(vocab57).toContain('止于至善');
+      expect(vocab57).toContain('终极考核');
+      expect(vocab57).toContain('登堂入室');
+      expect(vocab57).toContain('豁然开朗');
+      expect(vocab57).toContain('贯通中西');
+      expect(vocab57).toContain('荣光破晓');
     });
   });
 });

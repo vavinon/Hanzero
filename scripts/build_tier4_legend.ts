@@ -15,6 +15,10 @@ import { unit50Data } from './tier4_legend/unit50.js';
 import { unit51Data } from './tier4_legend/unit51.js';
 import { unit52Data } from './tier4_legend/unit52.js';
 import { unit53Data } from './tier4_legend/unit53.js';
+import { unit54Data } from './tier4_legend/unit54.js';
+import { unit55Data } from './tier4_legend/unit55.js';
+import { unit56Data } from './tier4_legend/unit56.js';
+import { unit57Data } from './tier4_legend/unit57.js';
 
 const srcTier4Dir = path.resolve('src/data/lessons/tier4');
 const dataTier4Dir = path.resolve('data/lessons/tier4');
@@ -29,12 +33,16 @@ export function writeLegendFiles() {
     { filename: 'unit51_intellectual_property.json', data: unit51Data },
     { filename: 'unit52_tang_song_poetry.json', data: unit52Data },
     { filename: 'unit53_modern_literature.json', data: unit53Data },
+    { filename: 'unit54_geopolitics_belt_road.json', data: unit54Data },
+    { filename: 'unit55_business_crisis_mediation.json', data: unit55Data },
+    { filename: 'unit56_academic_thesis_peer_review.json', data: unit56Data },
+    { filename: 'unit57_legend_grand_capstone.json', data: unit57Data },
   ];
 
   if (!fs.existsSync(srcTier4Dir)) fs.mkdirSync(srcTier4Dir, { recursive: true });
   if (!fs.existsSync(dataTier4Dir)) fs.mkdirSync(dataTier4Dir, { recursive: true });
 
-  console.log('🚀 Building Tier 4 Legend Curriculum Files (Units 46 - 53)...');
+  console.log('🚀 Building Tier 4 Legend Curriculum Files (Units 46 - 57)...');
 
   for (const { filename, data } of units) {
     const jsonStr = JSON.stringify(data, null, 2);
@@ -48,7 +56,7 @@ export function writeLegendFiles() {
     console.log(`✅ Written ${filename}: ${stat.size} bytes (${(stat.size / 1024).toFixed(1)} KB)`);
   }
 
-  console.log('🎉 Successfully generated Units 46 to 53 for Tier 4 Legend!');
+  console.log('🎉 Successfully generated all 12 Units (46 to 57) for Tier 4 Legend!');
 }
 
 writeLegendFiles();
