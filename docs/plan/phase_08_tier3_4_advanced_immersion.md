@@ -278,7 +278,7 @@ flowchart TD
 | :---: | :---: | :--- | :--- |
 | **Slice 1** | `TASK-801` | Tier 3 Batch 1 (Units 26–35 JSON) | ✅ COMPLETED: สคริปต์ผลิต JSON สำเร็จ, Linter ผ่าน 100%, มี成语 10 สำนวนแรกครบถ้วน |
 | **Slice 2** | `TASK-802` | Smart Immersion Reader Engine & UI | ✅ COMPLETED: `Intl.Segmenter` ตัดคำแม่นยำบน Client, ไฮไลต์สี HSK Heatmap, แตะคำแปล และ "+ SRS" ทำงานได้จริง |
-| **Slice 3** | `TASK-803` | 成语 Lore & Dilemma Engine | นิทานที่มาสำนวนเปิดอ่านได้, แบบทดสอบจำลองวิกฤตคำนวณคะแนนถูกต้อง, Vitest ผ่าน 100% |
+| **Slice 3** | `TASK-803` | 成语 Lore & Dilemma Engine | ✅ COMPLETED: ม้วนคัมภีร์ Parchment โบราณเปิดอ่านได้, แบบทดสอบจำลองวิกฤตคำนวณคะแนนถูกต้อง, Vitest 35/35 ผ่าน 100% |
 | **Slice 4** | `TASK-804` | Native Speed Audio Ladder & Podcast | ปรับความเร็ว 0.75x–1.5x เสียงไม่เพี้ยน, เสียง Ambient ผสมกลมกลืน, เล่นเสียงแบ็กกราวด์ได้ |
 | **Slice 5** | `TASK-805` | Tier 3 Batch 2 (Units 36–45) & Tier 4 (Units 46–57) | ครบ 22 Units ที่เหลือ, รองรับคำช่วยโบราณและวรรณกรรม, Schema ผ่าน 100% |
 | **Slice 6** | `TASK-806` | Voice Pitching 2.0, ImmersionHub & E2E | คลื่นเสียงอัดได้ 30 วินาที, Hub รวมศูนย์เชื่อมต่อครบ, Playwright E2E ผ่านหมดจด 100% |

@@ -45,6 +45,10 @@ const ImmersionArticleReader = React.lazy(() =>
   import('./components/reader/ImmersionArticleReader').then((m) => ({ default: m.ImmersionArticleReader }))
 );
 
+const IdiomExplorer = React.lazy(() =>
+  import('./components/idiom/IdiomExplorer').then((m) => ({ default: m.IdiomExplorer }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -68,8 +72,8 @@ export const App: React.FC = () => {
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader'>(() => {
+  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma)
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('view') === 'studio' || params.get('studio') === '1') {
@@ -80,6 +84,9 @@ export const App: React.FC = () => {
       }
       if (params.get('view') === 'reader' || params.get('reader') === '1') {
         return 'reader';
+      }
+      if (params.get('view') === 'idiom' || params.get('idiom') === '1') {
+        return 'idiom';
       }
     }
     return 'map';
@@ -305,6 +312,27 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* View 6: 成语 Lore & Dilemma Engine (Phase 8 TASK-803) */}
+      {currentView === 'idiom' && (
+        <main style={{ flex: 1 }}>
+          <React.Suspense
+            fallback={
+              <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                กำลังเปิดม้วนคัมภีร์สำนวนจีน... 📜🐰
+              </div>
+            }
+          >
+            <IdiomExplorer
+              onBack={() => setCurrentView('map')}
+              onAddSRS={async (item) => {
+                await addVocabToSrs([item]);
+              }}
+              existingSrsCardIds={srsCards.map((c) => c.card_id)}
+            />
+          </React.Suspense>
+        </main>
+      )}
+
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
         <React.Suspense fallback={null}>
@@ -350,6 +378,22 @@ export const App: React.FC = () => {
               }}
             >
               📖 เปิด Smart Immersion Reader (Phase 8)
+            </button>
+            <button
+              onClick={() => {
+                setCurrentView('idiom');
+                setShowDevDrawer(false);
+              }}
+              className="btn-tactile-primary"
+              style={{
+                width: '100%',
+                marginTop: '8px',
+                minHeight: '44px',
+                backgroundColor: 'var(--color-amber-ochre, #D97706)',
+                color: '#FFFFFF',
+              }}
+            >
+              📜 เปิด 成语 Lore & Dilemma Engine (TASK-803)
             </button>
             <button
               onClick={() => setShowTestPanel(true)}

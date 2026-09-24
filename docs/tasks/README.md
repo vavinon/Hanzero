@@ -47,8 +47,8 @@
 | **2026-09-22** | `TASK-705` | Tier 2 Traveler Curriculum Batch 3 & Grand Boss (Units 21–25) | P07 | `curriculum_tutor` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_tier2-batch-c-curriculum.md) |
 | **2026-09-22** | `TASK-706` | HSR Metro Quest Map, Stamped Tickets & 4-Tier Verification | P07 | `ux_ui_designer` | `DONE` ✅ | [`2026-09-22_P07_...`](./2026-09-22_P07_hsr-quest-map-and-verification.md) |
 | **2026-09-23** | `TASK-801` | Tier 3 Master Curriculum Batch 1: Units 26–35 (Workplace, Business, Tech) | P08 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_tier3-batch-a-curriculum.md) |
-| **2026-09-23** | `TASK-802` | Smart Immersion Reader Engine & Tap-to-Inspect UI (Intl.Segmenter + SRS) | P08 | `web_dev` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_immersion-reader-engine.md) |
-| **2026-09-23** | `TASK-803` | 成语 Lore & Dilemma Engine (Interactive Visual Novel & Dilemma Simulator) | P08 | `web_dev` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_idiom-lore-dilemma-engine.md) |
+| **2026-09-23** | `TASK-802` | Smart Immersion Reader Engine & Tap-to-Inspect UI (Intl.Segmenter + SRS) | P08 | `web_dev` | `DONE` ✅ | [`2026-09-23_P08_...`](./2026-09-23_P08_immersion-reader-engine.md) |
+| **2026-09-23** | `TASK-803` | 成语 Lore & Dilemma Engine (Interactive Visual Novel & Dilemma Simulator) | P08 | `web_dev` | `DONE` ✅ | [`2026-09-23_P08_...`](./2026-09-23_P08_idiom-lore-dilemma-engine.md) |
 | **2026-09-23** | `TASK-804` | Native Speed Audio Ladder & Commute Podcast Mode (0.75x–1.5x + Ambient) | P08 | `web_dev` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_native-speed-audio-ladder.md) |
 | **2026-09-23** | `TASK-805` | Tier 3 Batch 2 (Units 36–45) & Tier 4 Legend Curriculum (Units 46–57) | P08 | `curriculum_tutor` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_tier3-batch-b-and-tier4-curriculum.md) |
 | **2026-09-23** | `TASK-806` | Voice Pitching & Shadowing 2.0, Immersion Hub & 4-Tier Playwright E2E | P08 | `web_dev` | `TODO` ⏳ | [`2026-09-23_P08_...`](./2026-09-23_P08_voice-pitching-and-immersion-hub.md) |
