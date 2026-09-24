@@ -9,6 +9,10 @@ import unit46Data from './unit46_classical_particles.json';
 import unit47Data from './unit47_sun_tzu_business.json';
 import unit48Data from './unit48_ancient_philosophy.json';
 import unit49Data from './unit49_diplomatic_rhetoric.json';
+import unit50Data from './unit50_macroeconomics.json';
+import unit51Data from './unit51_intellectual_property.json';
+import unit52Data from './unit52_tang_song_poetry.json';
+import unit53Data from './unit53_modern_literature.json';
 import { TRADITIONAL_BLACKLIST } from '../../../engines/studio/studioLinterEngine';
 
 interface LessonVocab {
@@ -99,13 +103,17 @@ const allTier4Units = [
   unit47Data,
   unit48Data,
   unit49Data,
+  unit50Data,
+  unit51Data,
+  unit52Data,
+  unit53Data,
 ] as unknown as UnitData[];
 
-const [unit46, unit47, unit48, unit49] = allTier4Units;
+const [unit46, unit47, unit48, unit49, unit50, unit51, unit52, unit53] = allTier4Units;
 
-describe('Tier 4 Legend (Units 46-49) Curriculum Data & Pedagogical Schema Verification', () => {
+describe('Tier 4 Legend (Units 46-53) Curriculum Data & Pedagogical Schema Verification', () => {
   // ==========================================================================
-  // Universal Invariants across all Units 46–49
+  // Universal Invariants across all Units 46–53
   // ==========================================================================
   describe.each(allTier4Units)('Universal Schema & Quality Invariants: $unit_id ($title.th)', (unit) => {
     describe('Unit Metadata & Structure', () => {
@@ -322,6 +330,74 @@ describe('Tier 4 Legend (Units 46-49) Curriculum Data & Pedagogical Schema Verif
       expect(vocab49).toContain('底线');
       expect(vocab49).toContain('求同存异');
       expect(vocab49).toContain('共同体');
+    });
+
+    it('Unit 50 (Macroeconomics): covers 宏观, 调控, 通胀, 稳中求进, 货币, 流动性, 升级, 白皮书', () => {
+      const vocab50 = unit50.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab50).toContain('宏观');
+      expect(vocab50).toContain('调控');
+      expect(vocab50).toContain('通胀');
+      expect(vocab50).toContain('稳中求进');
+      expect(vocab50).toContain('货币');
+      expect(vocab50).toContain('财政');
+      expect(vocab50).toContain('流动性');
+      expect(vocab50).toContain('逆周期');
+      expect(vocab50).toContain('升级');
+      expect(vocab50).toContain('供给侧');
+      expect(vocab50).toContain('实体经济');
+      expect(vocab50).toContain('白皮书');
+      expect(vocab50).toContain('稳中向好');
+    });
+
+    it('Unit 51 (Intellectual Property & Litigation): covers 知识产权, 专利, 商标, 侵权, 诉讼, 管辖权, 仲裁, 合规', () => {
+      const vocab51 = unit51.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab51).toContain('知识产权');
+      expect(vocab51).toContain('专利');
+      expect(vocab51).toContain('商标');
+      expect(vocab51).toContain('侵权');
+      expect(vocab51).toContain('确权');
+      expect(vocab51).toContain('诉讼');
+      expect(vocab51).toContain('管辖权');
+      expect(vocab51).toContain('质证');
+      expect(vocab51).toContain('仲裁');
+      expect(vocab51).toContain('裁决');
+      expect(vocab51).toContain('和解');
+      expect(vocab51).toContain('合规');
+      expect(vocab51).toContain('防患未然');
+    });
+
+    it('Unit 52 (Tang & Song Poetry): covers 诗仙, 豪迈, 乘风破浪, 诗圣, 沉郁, 豁达, 千里共婵娟, 登高', () => {
+      const vocab52 = unit52.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab52).toContain('诗仙');
+      expect(vocab52).toContain('豪迈');
+      expect(vocab52).toContain('乘风破浪');
+      expect(vocab52).toContain('诗圣');
+      expect(vocab52).toContain('沉郁');
+      expect(vocab52).toContain('会当凌绝顶');
+      expect(vocab52).toContain('润物细无声');
+      expect(vocab52).toContain('忧国忧民');
+      expect(vocab52).toContain('豁达');
+      expect(vocab52).toContain('婵娟');
+      expect(vocab52).toContain('千里共婵娟');
+      expect(vocab52).toContain('登高');
+      expect(vocab52).toContain('不畏浮云');
+    });
+
+    it('Unit 53 (Modern Chinese Literature): covers 觉醒, 呐喊, 批判, 针砭时弊, 骨气, 京味, 巨澜, 历久弥新', () => {
+      const vocab53 = unit53.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab53).toContain('觉醒');
+      expect(vocab53).toContain('呐喊');
+      expect(vocab53).toContain('批判');
+      expect(vocab53).toContain('针砭时弊');
+      expect(vocab53).toContain('骨气');
+      expect(vocab53).toContain('京味');
+      expect(vocab53).toContain('市井');
+      expect(vocab53).toContain('幽默');
+      expect(vocab53).toContain('巨澜');
+      expect(vocab53).toContain('激流');
+      expect(vocab53).toContain('时代缩影');
+      expect(vocab53).toContain('脊梁');
+      expect(vocab53).toContain('历久弥新');
     });
   });
 });
