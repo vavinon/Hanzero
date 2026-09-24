@@ -53,6 +53,10 @@ const PodcastPlayerSheet = React.lazy(() =>
   import('./components/audio/PodcastPlayerSheet').then((m) => ({ default: m.PodcastPlayerSheet }))
 );
 
+const ImmersionHub = React.lazy(() =>
+  import('./components/layout/ImmersionHub').then((m) => ({ default: m.ImmersionHub }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -76,8 +80,8 @@ export const App: React.FC = () => {
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma) | 'podcast' (Commute Podcast)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast'>(() => {
+  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma) | 'podcast' (Commute Podcast) | 'immersion' (Imperial Scholar Hub)
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('view') === 'studio' || params.get('studio') === '1') {
@@ -94,6 +98,9 @@ export const App: React.FC = () => {
       }
       if (params.get('view') === 'podcast' || params.get('podcast') === '1') {
         return 'podcast';
+      }
+      if (params.get('view') === 'immersion' || params.get('immersion') === '1') {
+        return 'immersion';
       }
     }
     return 'map';
@@ -117,7 +124,8 @@ export const App: React.FC = () => {
     if (
       !userState.progress.onboarding_completed &&
       userState.progress.completed_lessons.length === 0 &&
-      currentView !== 'studio'
+      currentView !== 'studio' &&
+      currentView !== 'immersion'
     ) {
       setShowWelcomeModal(true);
     }
@@ -241,6 +249,7 @@ export const App: React.FC = () => {
             dueCardsCount={srsQueueStatus.total_due_count}
             onOpenPassport={() => setShowPassportModal(true)}
             onSelectTier={updateTier}
+            onOpenImmersionHub={() => setCurrentView('immersion')}
           />
         </main>
       )}
@@ -362,6 +371,28 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* View 8: Immersion Quest Hub (Phase 8 Grand Portal TASK-806) */}
+      {currentView === 'immersion' && (
+        <main style={{ flex: 1 }}>
+          <React.Suspense
+            fallback={
+              <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                กำลังเปิดประตูสู่หอวิชาการฮั่นหลิน... 🐉🐰
+              </div>
+            }
+          >
+            <ImmersionHub
+              onBackToMap={() => setCurrentView('map')}
+              onAddSRS={async (item) => {
+                await addVocabToSrs([item]);
+              }}
+              existingSrsCardIds={srsCards.map((c) => c.card_id)}
+              existingSrsHanzis={srsCards.map((c) => c.hanzi)}
+            />
+          </React.Suspense>
+        </main>
+      )}
+
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
         <React.Suspense fallback={null}>
@@ -382,6 +413,24 @@ export const App: React.FC = () => {
                 setShowDevDrawer(false);
               }}
             />
+            <button
+              onClick={() => {
+                setCurrentView('immersion');
+                setShowDevDrawer(false);
+              }}
+              className="btn-tactile-primary"
+              style={{
+                width: '100%',
+                marginTop: '8px',
+                minHeight: '44px',
+                backgroundColor: '#0F172A',
+                color: '#F8FAFC',
+                border: '1px solid #334155',
+              }}
+              data-testid="btn-open-immersion-hub"
+            >
+              🐉 เปิด Immersion Hub (หอวิชาการฮั่นหลิน 翰林院)
+            </button>
             <button
               onClick={() => {
                 setCurrentView('studio');

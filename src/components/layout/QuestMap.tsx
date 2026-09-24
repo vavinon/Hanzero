@@ -21,6 +21,7 @@ export interface QuestMapProps {
   dueCardsCount: number;
   onOpenPassport?: () => void;
   onSelectTier?: (tier: 'tier0' | 'tier1' | 'tier2') => void;
+  onOpenImmersionHub?: () => void;
 }
 
 interface MapNode {
@@ -93,6 +94,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
   dueCardsCount,
   onOpenPassport,
   onSelectTier,
+  onOpenImmersionHub,
 }) => {
   const [selectedTier, setSelectedTier] = useState<'tier0' | 'tier1' | 'tier2'>(
     (progress.current_tier as 'tier0' | 'tier1' | 'tier2') || 'tier0'
@@ -256,6 +258,65 @@ export const QuestMap: React.FC<QuestMapProps> = ({
           เข้าทบทวน
         </div>
       </div>
+
+      {/* Immersion Quest Hub Quick Entry Banner (Phase 8 TASK-806) */}
+      {onOpenImmersionHub && (
+        <div
+          data-testid="btn-open-immersion-banner"
+          onClick={onOpenImmersionHub}
+          style={{
+            width: '100%',
+            backgroundColor: '#0F172A',
+            borderRadius: 'var(--radius-md)',
+            border: '1.5px solid #334155',
+            padding: '12px 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            cursor: 'pointer',
+            boxShadow: 'var(--shadow-card)',
+            color: '#FFFFFF',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div
+              style={{
+                width: '42px',
+                height: '42px',
+                borderRadius: 'var(--radius-sm)',
+                backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '20px',
+              }}
+            >
+              🐉
+            </div>
+            <div>
+              <div style={{ fontWeight: 700, fontSize: '14px', color: '#F8FAFC' }}>
+                หอวิชาการฮั่นหลิน 翰林院 (Tier 3-4 Hub)
+              </div>
+              <div style={{ fontSize: '12px', color: '#94A3B8' }}>
+                คลังบทความ HSK 5-9 · สำนวน成语 · พอดแคสต์ · สตูดิโอฝึกพูด
+              </div>
+            </div>
+          </div>
+          <div
+            className="btn-tactile-primary"
+            style={{
+              padding: '6px 14px',
+              fontSize: '12px',
+              borderRadius: 'var(--radius-full)',
+              backgroundColor: '#047857',
+              color: '#FFFFFF',
+              border: 'none',
+            }}
+          >
+            เข้าสู่หอวิชา
+          </div>
+        </div>
+      )}
 
       {/* Tier 0 Quest Nodes */}
       {selectedTier === 'tier0' && (
