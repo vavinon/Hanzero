@@ -14,10 +14,9 @@ test.describe('Journey 3: SRS Review Deck & SM-2 IndexedDB Persistence', () => {
 
     // 2. Complete onboarding quickly
     const welcomeModal = page.getByTestId('welcome-modal');
-    if (await welcomeModal.isVisible()) {
-      await page.getByTestId('btn-start-journey').click();
-      await expect(welcomeModal).not.toBeVisible();
-    }
+    await expect(welcomeModal).toBeVisible();
+    await page.getByTestId('btn-start-journey').click();
+    await expect(welcomeModal).not.toBeVisible();
 
     // 3. Open SRS Review Deck via Header Bar or Map Banner
     const btnHeaderReview = page.getByTestId('btn-srs-review');

@@ -44,10 +44,9 @@ test.describe('Journey 2: Tier 1 Lessons & Zero-Punishment Heart Refill', () => 
     const optionCards = page.locator('.quiz-option-card');
     await expect(optionCards.first()).toBeVisible();
 
-    // Question 1 in unit 1.1: "คำว่า '你好' (nǐ hǎo) มีความหมายตรงกับข้อใด?"
-    // Option 0: "สวัสดี", Option 1: "ขอบคุณ", Option 2: "ลาก่อน", Option 3: "ขอโทษ"
-    // Pick Option 1 ("ขอบคุณ" - wrong)
-    const wrongOption = page.getByTestId('quiz-option-card-1');
+    // Question 1 in unit 1.1: "ฟังเสียง 'hǎo' แล้วสังเกตว่าเสียงเคลื่อนที่แบบไหน?"
+    // Option containing 'เสียง 3' is correct. Pick an option that does NOT contain 'เสียง 3'
+    const wrongOption = page.locator('.quiz-option-card').filter({ hasNotText: 'เสียง 3' }).first();
     await wrongOption.click();
 
     const btnCheck = page.getByTestId('btn-check-answer');
