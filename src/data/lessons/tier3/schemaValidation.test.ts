@@ -20,6 +20,11 @@ import unit37Data from './unit37_traditional_arts.json';
 import unit38Data from './unit38_modern_medicine_wellness.json';
 import unit39Data from './unit39_investment_finance.json';
 import unit40Data from './unit40_tea_culture_zen.json';
+import unit41Data from './unit41_internet_pop_culture.json';
+import unit42Data from './unit42_urban_history.json';
+import unit43Data from './unit43_crisis_pr.json';
+import unit44Data from './unit44_cross_cultural.json';
+import unit45Data from './unit45_thesis_defense.json';
 import { UnitLessonData, Lesson, VocabularyItem, QuizQuestion } from '../../../types/lesson';
 import { TRADITIONAL_BLACKLIST } from '../../../engines/studio/studioLinterEngine';
 
@@ -39,6 +44,11 @@ const allTier3Units = [
   unit38Data,
   unit39Data,
   unit40Data,
+  unit41Data,
+  unit42Data,
+  unit43Data,
+  unit44Data,
+  unit45Data,
 ] as unknown as UnitLessonData[];
 
 const [
@@ -57,19 +67,24 @@ const [
   unit38,
   unit39,
   unit40,
+  unit41,
+  unit42,
+  unit43,
+  unit44,
+  unit45,
 ] = allTier3Units;
 
-describe('Tier 3 (Units 26-40) Curriculum Data & Pedagogical Schema Verification', () => {
+describe('Tier 3 (Units 26-45) Curriculum Data & Pedagogical Schema Verification', () => {
   // ==========================================================================
-  // Universal Invariants across all Units 26–40
+  // Universal Invariants across all Units 26–45
   // ==========================================================================
   describe.each(allTier3Units)('Universal Schema & Quality Invariants: $unit_id ($title.th)', (unit) => {
     describe('Unit Metadata & Structure', () => {
       it('has valid top-level unit metadata matching Tier 3 Manifest', () => {
-        expect(unit.unit_id).toMatch(/^tier3_u(2[6-9]|3[0-9]|40)$/);
+        expect(unit.unit_id).toMatch(/^tier3_u(2[6-9]|3[0-9]|4[0-5])$/);
         expect(unit.tier).toBe(3);
         expect(unit.unit_number).toBeGreaterThanOrEqual(26);
-        expect(unit.unit_number).toBeLessThanOrEqual(40);
+        expect(unit.unit_number).toBeLessThanOrEqual(45);
         expect(unit.title.zh).toBeTruthy();
         expect(unit.title.th).toBeTruthy();
         expect(unit.title.en).toBeTruthy();
@@ -120,7 +135,7 @@ describe('Tier 3 (Units 26-40) Curriculum Data & Pedagogical Schema Verification
 
       it('includes complete mnemonics, gestures, and radical explanations for each word', () => {
         allVocab.forEach((vocab) => {
-          expect(vocab.id).toMatch(/^hsk3_(2[6-9]|3[0-9]|40)\d{2}$/);
+          expect(vocab.id).toMatch(/^hsk3_(2[6-9]|3[0-9]|4[0-5])\d{2}$/);
           expect(vocab.pinyin).toBeTruthy();
           expect(vocab.pinyin_tone).toBeTruthy();
           expect(vocab.meaning_th).toBeTruthy();
@@ -407,6 +422,69 @@ describe('Tier 3 (Units 26-40) Curriculum Data & Pedagogical Schema Verification
 
       const l3 = unit40.lessons.find((l) => l.lesson_number === 3);
       expect(l3?.grammar_bite.title).toContain('人生如茶');
+    });
+
+    it('Unit 41 (Internet Pop Culture): covers 破防, 躺平, 拔草, and 半途而废', () => {
+      const vocab41 = unit41.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab41).toContain('破防');
+      expect(vocab41).toContain('躺平');
+      expect(vocab41).toContain('拔草');
+      expect(vocab41).toContain('半途而废');
+      expect(vocab41).toContain('内卷');
+
+      const l4 = unit41.lessons.find((l) => l.lesson_number === 4);
+      expect(l4?.grammar_bite.title).toContain('半途而废');
+    });
+
+    it('Unit 42 (Urban Transformation & History): covers 摩天大楼, 改造, 四合院, and 翻天覆地', () => {
+      const vocab42 = unit42.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab42).toContain('摩天大楼');
+      expect(vocab42).toContain('改造');
+      expect(vocab42).toContain('四合院');
+      expect(vocab42).toContain('翻天覆地');
+      expect(vocab42).toContain('变迁');
+
+      const l4 = unit42.lessons.find((l) => l.lesson_number === 4);
+      expect(l4?.grammar_bite.title).toContain('翻天覆地');
+    });
+
+    it('Unit 43 (Crisis PR Management): covers 舆论, 发酵, 澄清, 召回, and 亡羊补牢', () => {
+      const vocab43 = unit43.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab43).toContain('舆论');
+      expect(vocab43).toContain('发酵');
+      expect(vocab43).toContain('公关');
+      expect(vocab43).toContain('澄清');
+      expect(vocab43).toContain('召回');
+      expect(vocab43).toContain('亡羊补牢');
+
+      const l3 = unit43.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('亡羊补牢');
+    });
+
+    it('Unit 44 (Cross-Cultural Communication): covers 刻板印象, 偏见, 肢体语言, and 胸怀大度', () => {
+      const vocab44 = unit44.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab44).toContain('刻板印象');
+      expect(vocab44).toContain('偏见');
+      expect(vocab44).toContain('肢体语言');
+      expect(vocab44).toContain('胸怀大度');
+      expect(vocab44).toContain('包容');
+
+      const l3 = unit44.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('求同存异');
+    });
+
+    it('Unit 45 (Master Thesis Defense): covers 选题, 文献综述, 论证, 答辩, and 全力以赴', () => {
+      const vocab45 = unit45.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab45).toContain('选题');
+      expect(vocab45).toContain('文献综述');
+      expect(vocab45).toContain('论证');
+      expect(vocab45).toContain('答辩');
+      expect(vocab45).toContain('全力以赴');
+      expect(vocab45).toContain('毕业');
+      expect(vocab45).toContain('前程似锦');
+
+      const l3 = unit45.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('全力以赴');
     });
   });
 });

@@ -1,0 +1,937 @@
+{
+  "unit_id": "tier3_u42",
+  "tier": 3,
+  "unit_number": 42,
+  "title": {
+    "zh": "城市变迁与历史",
+    "th": "การเปลี่ยนแปลงของเมืองและประวัติศาสตร์",
+    "en": "Urban Transformation & Historical Heritage"
+  },
+  "description": "ศึกษาการพัฒนาของเมืองจีนจากตรอกโบราณสู่มหานครสมัยใหม่ สถาปัตยกรรม และสำนวน 翻天覆地",
+  "lessons": [
+    {
+      "lesson_id": "t3_u42_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "老城记忆与胡同改造",
+        "th": "ความทรงจำเมืองเก่าและการปรับปรุงหูท่ง",
+        "en": "Old City Memories & Hutong Renovation"
+      },
+      "can_do": {
+        "th": "อธิบายวิถีชีวิตดั้งเดิมในตรอกหูท่ง (胡同), บ้านโบราณสี่ประสาน (四合院) และการปรับปรุงผังเมือง (改造)",
+        "en": "Describe traditional Hutong alley life, Courtyard houses (Siheyuan), and urban renewal"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องเสน่ห์ของตรอกหูท่งและการอนุรักษ์อาคารโบราณในปักกิ่ง!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4201",
+          "hanzi": "胡同",
+          "pinyin": "hútòng",
+          "display_pinyin": "hútòng",
+          "pinyin_tone": "hu2tong4",
+          "meaning_th": "หูท่ง / ตรอกซอยแคบโบราณอันเป็นเอกลักษณ์ของปักกิ่ง",
+          "meaning_en": "Hutong / traditional Beijing alleyway",
+          "radical": "月",
+          "radical_name_th": "หมวดเนื้อ/พระจันทร์ (月字旁)",
+          "stroke_count": 15,
+          "mnemonic": "ตรอกซอยโบราณ (胡同) ที่เชื่อมโยงผู้คนเข้าด้วยกันมาแต่ราชวงศ์หยวน",
+          "kid_mnemonic": "ปั่นจักรยานลัดเลาะในตรอกกำแพงอิฐสีเทาใต้ร่มเงาต้นไม้ = 胡同",
+          "body_gesture": "กางสองแขนทำท่าปั่นจักรยานเลี้ยวซ้ายเลี้ยวขวาในตรอก"
+        },
+        {
+          "id": "hsk3_4202",
+          "hanzi": "四合院",
+          "pinyin": "sìhéyuàn",
+          "display_pinyin": "sìhéyuàn",
+          "pinyin_tone": "si4he2yuan4",
+          "meaning_th": "ซื่อเหอย่วน / บ้านเรือนสี่ประสานล้อมลานกลางบ้าน",
+          "meaning_en": "Siheyuan / traditional Chinese quadrangle courtyard",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字框)",
+          "stroke_count": 20,
+          "mnemonic": "บ้านสี่ทิศ (四) หันหน้าประสานล้อมลานดิน (合院) = เรือนสี่ประสาน",
+          "kid_mnemonic": "บ้านทรงสี่เหลี่ยมสี่หลังล้อมรอบลานต้นทับทิมตรงกลาง = 四合院",
+          "body_gesture": "สองมือวาดเป็นกรอบสี่เหลี่ยมกลางอากาศสื่อถึงลานบ้านสี่ทิศ"
+        },
+        {
+          "id": "hsk3_4203",
+          "hanzi": "改造",
+          "pinyin": "gǎizào",
+          "display_pinyin": "gǎizào",
+          "pinyin_tone": "gai3zao4",
+          "meaning_th": "ปรับปรุงเปลี่ยนแปลง / บูรณะฟื้นฟูอาคารสถานที่",
+          "meaning_en": "renovate / reconstruct / transform",
+          "radical": "攵",
+          "radical_name_th": "หมวดเคาะเบาๆ (反文旁)",
+          "stroke_count": 17,
+          "mnemonic": "เปลี่ยนแปลงแก้ไข (改) สร้างสรรค์ขึ้นใหม่ (造) = ปรับปรุงบูรณะ",
+          "kid_mnemonic": "ช่างทาสีใหม่และซ่อมหลังคาบ้านโบราณให้แข็งแรงน่าอยู่ = 改造",
+          "body_gesture": "สองมือทำท่าทาสีกำแพงขึ้นลงอย่างกระตือรือร้น"
+        },
+        {
+          "id": "hsk3_4204",
+          "hanzi": "修缮",
+          "pinyin": "xiūshàn",
+          "display_pinyin": "xiūshàn",
+          "pinyin_tone": "xiu1shan4",
+          "meaning_th": "ซ่อมแซมบูรณะอาคารโบราณให้อยู่ในสภาพสมบูรณ์",
+          "meaning_en": "repair and restore ancient architecture",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 22,
+          "mnemonic": "ซ่อมแซมตกแต่ง (修) ให้งดงามสมบูรณ์ (缮) = บูรณะซ่อมแซม",
+          "kid_mnemonic": "ช่างไม้โบราณค่อยๆ ขัดเปลี่ยนเสาไม้เก่าอย่างประณีต = 修缮",
+          "body_gesture": "สองมือทำท่าขัดถูและประกอบชิ้นไม้โบราณเข้าด้วยกัน"
+        },
+        {
+          "id": "hsk3_4205",
+          "hanzi": "风貌",
+          "pinyin": "fēngmào",
+          "display_pinyin": "fēngmào",
+          "pinyin_tone": "feng1mao4",
+          "meaning_th": "ทัศนียภาพและเอกลักษณ์ดั้งเดิม / บรรยากาศรูปลักษณ์",
+          "meaning_en": "style and features / historical atmosphere and appearance",
+          "radical": "风",
+          "radical_name_th": "หมวดลม (风字旁)",
+          "stroke_count": 18,
+          "mnemonic": "สายลมกลิ่นอาย (风) ผสมผสานรูปลักษณ์ใบหน้า (貌) = ทัศนียภาพเอกลักษณ์",
+          "kid_mnemonic": "เดินชมย่านเมืองเก่าที่ยังคงมีโคมไฟแดงและหลังคากระเบื้องโบราณ = 风貌",
+          "body_gesture": "ผายมือชี้ชมบรรยากาศทัศนียภาพรอบตัวด้วยความชื่นชม"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 四合院 (sìhéyuàn) จังหวะ 4-2-4",
+        "description_th": "sì (เสียง 4 เด็ดขาด) ตามด้วย hé (เสียง 2 ทอดเสียงขึ้น) และ yuàn (เสียง 4 ทิ้งน้ำหนัก)",
+        "example": "传统的北京四合院 (chuántǒng de Běijīng sìhéyuàn)",
+        "fun_metaphor": "เหมือนก้าวลงบันได ก้าวขึ้นหนึ่งขั้น แล้วก้าวเหยียบพื้นมั่นคง",
+        "reassurance": "คำว่า 四合院 เป็นคำศัพท์วัฒนธรรมระดับสูงที่ผู้สอบ HSK ชั้นสูงทุกคนต้องคุ้นเคย"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการอนุรักษ์: “修旧如旧”，最大限度保留历史风貌",
+        "explanation_th": "สุภาษิตและปรัชญาการบูรณะโบราณสถานของจีน คือ ซ่อมของเก่าให้คงสภาพเดิม",
+        "patterns": [
+          {
+            "formula": "坚持“修旧如旧”的原则，保留...",
+            "zh": "古城改造坚持“修旧如旧”的原则，完好保留了明清时期的历史风貌。",
+            "pinyin": "Gǔchéng gǎizào jiānchí “xiūjiùrùjiù” de yuánzé, wánhǎo bǎoliú le Míng-Qīng shíqī de lìshǐ fēngmào.",
+            "th": "การปรับปรุงเมืองเก่าจะยึดหลัก \"ซ่อมของเก่าให้คงสภาพเดิม\" เพื่ออนุรักษ์ทัศนียภาพดั้งเดิมสมัยหมิงและชิงไว้อย่างสมบูรณ์",
+            "en": "Ancient city renovation upholds the principle of \"restoring the old as old,\" perfectly preserving the historical style of the Ming and Qing eras."
+          },
+          {
+            "formula": "漫步在悠长的胡同里，感受...",
+            "zh": "漫步在悠长的胡同里，感受老北京独特的人间烟火气。",
+            "pinyin": "Mànbù zài yōucháng de hútòng lǐ, gǎnshòu lǎo Běijīng dútè de rénjiān yānhuǒqì.",
+            "th": "ทอดน่องในตรอกหูท่งอันยาวไกล สัมผัสไออุ่นแห่งชีวิตประจำวันอันเป็นเอกลักษณ์ของปักกิ่งโบราณ",
+            "en": "Strolling through long hutongs, one feels the unique, heartwarming daily life of old Beijing."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "王老师，走在这条重新修缮的胡同里，青砖灰瓦，老北京的风貌保存得真好！",
+          "pinyin": "Wáng lǎoshī, zǒu zài zhè tiáo chóngxīn xiūshàn de hútòng lǐ, qīngzhuān huīwǎ, lǎo Běijīng de fēngmào bǎocún de zhēn hǎo!",
+          "th": "อาจารย์หวังคะ เดินอยู่ในหูท่งที่ได้รับการบูรณะใหม่สายนี้ อิฐเขียวและกระเบื้องเทา ทัศนียภาพดั้งเดิมของปักกิ่งเก่าได้รับการอนุรักษ์ไว้ดีจริงๆ ค่ะ!",
+          "en": "Teacher Wang, walking in this newly restored hutong with grey bricks and tiles, old Beijing's historical style is so well preserved!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "是的，这次城市改造特别强调“修旧如旧”，既改善了四合院居民的居住条件，又留住了城市记忆。",
+          "pinyin": "Shì de, zhè cì chéngshì gǎizào tèbié qiángdiào “xiūjiùrùjiù”, jì gǎishàn le sìhéyuàn jūmín de jūzhù tiáojiàn, yòu liúzhù le chéngshì jìyì.",
+          "th": "ใช่ครับ การปรับปรุงเมืองครั้งนี้เน้นย้ำ \"ซ่อมของเก่าให้คงสภาพเดิม\" เป็นพิเศษ ทั้งปรับปรุงคุณภาพชีวิตของชาวเรือนสี่ประสาน และรักษาความทรงจำของเมืองไว้ได้",
+          "en": "Yes, this urban renovation emphasized \"restoring old as old,\" improving courtyard residents' living conditions while retaining urban memories."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "现代文明与历史传统并不是对立的，精心的规划完全能让老街区焕发新的生机。",
+          "pinyin": "Xiàndài wénmíng yǔ lìshǐ chuántǒng bìng bú shì duìlì de, jīngxīn de guīhuà wánquán néng ràng lǎo jiēqū huànfā xīn de shēngjī.",
+          "th": "อารยธรรมสมัยใหม่กับประเพณีประวัติศาสตร์ไม่ได้ขัดแย้งกันเลยค่ะ การวางแผนที่ประณีตสามารถทำให้ย่านเก่ากลับมามีชีวิตชีวาใหม่อีกครั้ง",
+          "en": "Modern civilization and history are not opposites; meticulous planning can fully rejuvenate old districts with new vigor."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "你说得很深刻！让城市留下记忆，让人们记住乡愁，这就是城市更新的最大价值。",
+          "pinyin": "Nǐ shuō de hěn shēnkè! Ràng chéngshì liúxià jìyì, ràng rénmen jìzhù xiāngchóu, zhè jiù shì chéngshì gēngxīn de zuì dà jiàzhí.",
+          "th": "คุณพูดได้ลึกซึ้งมากครับ! ทำให้เมืองรักษาความทรงจำ ทำให้ผู้คนจดจำความผูกพันต่อบ้านเกิด นั่นคือคุณค่าที่ยิ่งใหญ่ที่สุดของการฟื้นฟูเมืองครับ",
+          "en": "You said it profoundly! Letting the city keep its memories and letting people remember nostalgia is the greatest value of urban renewal."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "今天和老师认真交流，我心里非常高兴，太谢谢您的精彩讲解，明天见！",
+          "pinyin": "Jīntiān hé lǎoshī rènzhēn jiāoliú, wǒ xīnlǐ fēicháng gāoxìng, tài xièxie nín de jīngcǎi jiǎngjiě, míngtiān jiàn!",
+          "th": "วันนี้ได้แลกเปลี่ยนกับอาจารย์อย่างจริงจัง ในใจดิฉันดีใจมาก ขอบพระคุณสำหรับการบรรยายที่ยอดเยี่ยม พรุ่งนี้พบกันนะคะ!",
+          "en": "Earnestly discussing with you today makes me very happy; thank you so much for the brilliant explanation, see you tomorrow!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "不客气，明天早上我们去故宫附近考察，再见！",
+          "pinyin": "Bú kèqi, míngtiān zǎoshang wǒmen qù Gùgōng fùjìn kǎochá, zàijiàn!",
+          "th": "ยินดีครับ พรุ่งนี้เช้าพวกเราไปสำรวจแถวพระราชวังโบราณ ลาก่อนครับ!",
+          "en": "You are welcome, tomorrow morning we will inspect near the Forbidden City, goodbye!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "ในสถาปัตยกรรมจีนโบราณ คำว่า '四合院' (sìhéyuàn) หมายถึงที่อยู่อาศัยแบบใด?",
+          "options": [
+            "บ้านเรือนสี่ประสานที่สร้างอาคารสี่ทิศล้อมรอบลานกลางบ้าน (Quadrangle Courtyard)",
+            "คอนโดมิเนียมสูง 40 ชั้น",
+            "บ้านทรงกลมของชาวแคะ",
+            "กระโจมเคลื่อนที่บนทุ่งหญ้า"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'四合院' คือบ้านโบราณจีนที่สร้างห้องเรือน 4 ทิศ (เหนือ ใต้ ตะวันออก ตะวันตก) ล้อมลานบ้านไว้ตรงกลางเพื่อความเป็นส่วนตัวและอบอุ่น",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจสถาปัตยกรรมเอกลักษณ์ของปักกิ่งอย่างถ่องแท้!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "หลักการบูรณะโบราณสถานของจีน '修旧如旧' (xiū jiù rú jiù) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "การซ่อมแซมบูรณะโดยคงรักษาสภาพและรูปแบบดั้งเดิมทางประวัติศาสตร์ไว้ให้มากที่สุด",
+            "การทุบทำลายทิ้งแล้วสร้างตึกกระจกสมัยใหม่แทน",
+            "การทาสีบ้านด้วยสีสันฉูดฉาดสะดุดตา",
+            "การปล่อยให้บ้านพังทลายตามธรรมชาติโดยไม่เข้าไปดูแล"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'修旧如旧' คือปรัชญาการบูรณะโบราณสถานที่ไม่เปลี่ยนแปลงรูปทรงวัสดุเดิม แต่ทำให้คงสภาพดั้งเดิมไว้มากที่สุด",
+          "encouragement": "แม่นยำมาก! เข้าใจหลักการอนุรักษ์มรดกทางวัฒนธรรมชั้นสูง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การปรับปรุงเมืองเก่าจะยึดหลักซ่อมของเก่าให้คงสภาพเดิม\"",
+          "tokens": [
+            "坚持修旧如旧的原则",
+            "古城改造"
+          ],
+          "correct_sequence": [
+            "古城改造",
+            "坚持修旧如旧的原则"
+          ],
+          "pinyin": "Gǔchéng gǎizào jiānchí xiūjiùrùjiù de yuánzé.",
+          "meaning_th": "การปรับปรุงเมืองเก่ายึดมั่นในหลักการบูรณะของเก่าให้คงเดิม",
+          "explanation_th": "ประธาน (古城改造) + ภาคแสดง (坚持修旧如旧的原则)",
+          "encouragement": "เรียงประโยคการอนุรักษ์เมืองโบราณได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '胡同' ตัว '胡' (hú) มีหมวดนำใดอยู่ด้านขวา?",
+          "options": [
+            "月 (หมวดเนื้อ/พระจันทร์ 月字旁)",
+            "日 (หมวดพระอาทิตย์ 日字旁)",
+            "口 (หมวดปาก 口字旁)",
+            "木 (หมวดไม้ 木字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'胡' มีหมวด '月' (เนื้อ/อวัยวะ) ด้านขวา รวมกับ '古' ด้านซ้าย สื่อถึงคำเรียกชนเผ่าโบราณทางเหนือ",
+          "encouragement": "แยกแยะส่วนประกอบอักษรได้อย่างเฉียบคม!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u42_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "现代都市与天际线",
+        "th": "มหานครสมัยใหม่และเส้นขอบฟ้าตระการตา",
+        "en": "Modern Metropolis & City Skylines"
+      },
+      "can_do": {
+        "th": "อธิบายทัศนียภาพตึกระฟ้า (摩天大楼), แลนด์มาร์ก (地标) และเส้นขอบฟ้าเมือง (天际线)",
+        "en": "Describe skyscrapers, urban landmarks, and city skylines"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องแลนด์มาร์กสมัยใหม่และวิวัฒนาการสู่มหานครระดับโลก!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4206",
+          "hanzi": "摩天大楼",
+          "pinyin": "mótiāndàlóu",
+          "display_pinyin": "mótiāndàlóu",
+          "pinyin_tone": "mo2tian1da4lou2",
+          "meaning_th": "ตึกระฟ้า / อาคารสูงเสียดฟ้า",
+          "meaning_en": "skyscraper / supertall building",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 36,
+          "mnemonic": "อาคารสูงเสียดแทงสัมผัส (摩) ท้องฟ้า (天) = ตึกระฟ้า",
+          "kid_mnemonic": "แหงนหน้ามองตึกสูงจนหมวกหล่น ยอดตึกทะลุก้อนเมฆ = 摩天大楼",
+          "body_gesture": "แหงนหน้ามองฟ้าพร้อมยกสองมือเหยียดตรงขึ้นเหนือศีรษะ"
+        },
+        {
+          "id": "hsk3_4207",
+          "hanzi": "地标",
+          "pinyin": "dìbiāo",
+          "display_pinyin": "dìbiāo",
+          "pinyin_tone": "di4biao1",
+          "meaning_th": "แลนด์มาร์ก / จุดสังเกตสำคัญอันเป็นสัญลักษณ์ของเมือง",
+          "meaning_en": "landmark / iconic architectural symbol",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน (提土旁)",
+          "stroke_count": 15,
+          "mnemonic": "สัญลักษณ์เด่น (标) บนผืนแผ่นดิน (地) = แลนด์มาร์ก",
+          "kid_mnemonic": "หอไข่มุกตะวันออกที่เซี่ยงไฮ้ที่ทุกคนต้องถ่ายรูปคู่ = 地标",
+          "body_gesture": "ชี้นิ้วชี้ขวาลงที่พื้นอย่างมั่นคงสื่อถึงจุดศูนย์กลาง"
+        },
+        {
+          "id": "hsk3_4208",
+          "hanzi": "天际线",
+          "pinyin": "tiānjìxiàn",
+          "display_pinyin": "tiānjìxiàn",
+          "pinyin_tone": "tian1ji4xian4",
+          "meaning_th": "เส้นขอบฟ้าเมือง / เงาโครงร่างตึกสูงตัดกับเส้นขอบฟ้า",
+          "meaning_en": "city skyline",
+          "radical": "阝",
+          "radical_name_th": "หมวดเนินเขา (双耳旁)",
+          "stroke_count": 23,
+          "mnemonic": "เส้นสาย (线) รอยต่อระหว่างผืนดินกับขอบฟ้า (天际) = เส้นขอบฟ้า",
+          "kid_mnemonic": "วาดเส้นหยักตามยอดตึกสูงริมแม่น้ำยามพระอาทิตย์ตกดิน = 天际线",
+          "body_gesture": "วาดมือขวาเป็นเส้นคลื่นในแนวนอนระดับสายตา"
+        },
+        {
+          "id": "hsk3_4209",
+          "hanzi": "步行街",
+          "pinyin": "bùxíngjiē",
+          "display_pinyin": "bùxíngjiē",
+          "pinyin_tone": "bu4xing2jie1",
+          "meaning_th": "ถนนคนเดิน / ย่านการค้าที่ห้ามยานพาหนะผ่าน",
+          "meaning_en": "pedestrian street / walking street shopping area",
+          "radical": "止",
+          "radical_name_th": "หมวดหยุด/ก้าวเดิน (止字旁)",
+          "stroke_count": 22,
+          "mnemonic": "ถนน (街) สำหรับก้าวเดินด้วยเท้า (步行) = ถนนคนเดิน",
+          "kid_mnemonic": "เดินจูงมือเที่ยวซื้อขนมและของเล่นในถนนที่ไม่มีรถวิ่ง = 步行街",
+          "body_gesture": "ทำนิ้วชี้และนิ้วกลางขวาเดินสลับก้าวบนฝ่ามือซ้าย"
+        },
+        {
+          "id": "hsk3_4210",
+          "hanzi": "纵横交错",
+          "pinyin": "zònghéngjiāocuò",
+          "display_pinyin": "zònghéngjiāocuò",
+          "pinyin_tone": "zong4heng2jiao1cuo4",
+          "meaning_th": "โยงใยสลับซับซ้อน / ตัดกันไขว้ไปมาดั่งตารางหมากรุก",
+          "meaning_en": "crisscross / intertwined network of roads or rails",
+          "radical": "纟",
+          "radical_name_th": "หมวดไหม (绞丝旁)",
+          "stroke_count": 36,
+          "mnemonic": "แนวตั้ง (纵) แนวนอน (横) ตัดสลับประสาน (交错) = โยงใยตัดขวาง",
+          "kid_mnemonic": "ทางด่วนยกระดับและรางรถไฟฟ้าวาดตัดกันเหมือนตาข่าย = 纵横交错",
+          "body_gesture": "เอาแขนสองข้างมาวางขวางตัดกันเป็นรูปกากบาท"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 摩天大楼 (mótiāndàlóu) 2-1-4-2 จังหวะสง่างาม",
+        "description_th": "mó (เสียง 2 ทอดขึ้น) -> tiān (เสียง 1 สูงลอย) -> dà (เสียง 4 ลงหนัก) -> lóu (เสียง 2 ผันขึ้นปิดท้าย)",
+        "example": "上海陆家嘴的摩天大楼 (Shànghǎi Lùjiāzuǐ de mótiāndàlóu)",
+        "fun_metaphor": "เหมือนเสียงฮัมเพลงไล่โน้ตขึ้นสูงแล้วแตะเสียงลึก",
+        "reassurance": "คำนี้ใช้บรรยายความอลังการของเมืองเซี่ยงไฮ้ ปักกิ่ง เซินเจิ้น ได้อย่างลงตัว"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการบรรยายทัศนียภาพเมือง: 耸立在...，构成独特的...",
+        "explanation_th": "ใช้บรรยายกลุ่มอาคารสูงระฟ้าหรือแลนด์มาร์กที่ตั้งตระหง่านสร้างเส้นขอบฟ้าอันงดงาม",
+        "patterns": [
+          {
+            "formula": "摩天大楼林立，构成了迷人的天际线",
+            "zh": "黄浦江畔摩天大楼林立，构成了全球瞩目的迷人天际线。",
+            "pinyin": "Huángpǔ Jiāng pàn mótiāndàlóu línlì, gòuchéng le quánqiú zhǔmù de mírén tiānjìxiàn.",
+            "th": "ริมฝั่งแม่น้ำหวงผู่เต็มไปด้วยตึกระฟ้าเรียงราย ก่อร่างเป็นเส้นขอบฟ้าอันน่าหลงใหลที่ทั่วโลกจับตามอง",
+            "en": "Skyscrapers line the banks of the Huangpu River, forming an enchanting skyline that attracts worldwide attention."
+          },
+          {
+            "formula": "交通网络纵横交错，连接着...",
+            "zh": "现代化的地铁与高铁网络纵横交错，紧密连接着各大经济圈。",
+            "pinyin": "Xiàndàihuà de dìtiě yǔ gāotiě wǎngluò zònghéngjiāocuò, jǐnmì liánjiē zhe gè dà jīngjìquān.",
+            "th": "เครือข่ายรถไฟใต้ดินและรถไฟความเร็วสูงสมัยใหม่ตัดไขว้โยงใย เชื่อมต่อเขตเศรษฐกิจใหญ่ๆ เข้าด้วยกันอย่างแนบแน่น",
+            "en": "Modern subway and high-speed rail networks crisscross, closely connecting major economic zones."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "站在外滩远眺陆家嘴，那些摩天大楼构成的新天际线真是太壮观了！",
+          "pinyin": "Zhàn zài Wàitān yuǎntiào Lùjiāzuǐ, nàxiē mótiāndàlóu gòuchéng de xīn tiānjìxiàn zhēn shì tài zhuàngguān le!",
+          "th": "ยืนอยู่บนหาดไว่ทานมองไกลไปยังลู่เจียจุ่ย ตึกระฟ้าเหล่านั้นก่อเกิดเป็นเส้นขอบฟ้าใหม่ที่อลังการตระการตาจริงๆ ค่ะ!",
+          "en": "Standing at the Bund looking towards Lujiazui, the new skyline formed by those skyscrapers is truly breathtaking!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "上海中心大厦不仅是城市地标，更见证了中国改革开放四十多年来的发展奇迹。",
+          "pinyin": "Shànghǎi Zhōngxīn Dàshà bùjǐn shì chéngshì dìbiāo, gèng jiànzhèng le Zhōngguó gǎigékāifàng sìshí duō nián lái de fāzhǎn qíjì.",
+          "th": "เซี่ยงไฮ้ทาวเวอร์ไม่เพียงเป็นแลนด์มาร์กของเมือง หากแต่ยังเป็นประจักษ์พยานแห่งปาฏิหาริย์การพัฒนาตลอดสี่สิบกว่าปีที่ผ่านมา",
+          "en": "Shanghai Tower is not only an urban landmark but also witnesses the developmental miracle of China's reform and opening up."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "桥梁与高铁网络纵横交错，南京路步行街游人如织，到处充满蓬勃生机。",
+          "pinyin": "Qiáoliáng yǔ gāotiě wǎngluò zònghéngjiāocuò, Nánjīng Lù bùxíngjiē yóurénrúzhī, dàochù chōngmǎn péngbó shēngjī.",
+          "th": "เครือข่ายสะพานและรถไฟความเร็วสูงโยงใยตัดกัน ถนนคนเดินหนานจิงผู้คนพลุกพล่าน ทุกหนแห่งเต็มเปี่ยมด้วยชีวิตชีวา",
+          "en": "Bridges and high-speed rail networks crisscross, pedestrian streets are bustling with tourists, everywhere bursting with vitality."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "高耸的现代建筑展现着科技与速度，而老街的烟火气则承载着温度，两者相得益彰。",
+          "pinyin": "Gāosǒng de xiàndài jiànzhù zhǎnxiàn zhe kējì yǔ sùdù, ér lǎojiē de yānhuǒqì zé chéngzài zhe wēndù, liǎngzhě xiāngdéyìzhāng.",
+          "th": "อาคารสมัยใหม่ที่สูงตระหง่านสะท้อนเทคโนโลยีและความเร็ว ขณะที่กลิ่นอายชีวิตบนถนนเก่าค้ำจุนความอบอุ่น ทั้งสองส่วนส่งเสริมกันอย่างลงตัวครับ",
+          "en": "Soaring modern architecture reflects technology and speed, while old street charm carries warmth; the two complement each other."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "今天和老师认真交流，我心里非常高兴，太谢谢您的精彩讲解，明天见！",
+          "pinyin": "Jīntiān hé lǎoshī rènzhēn jiāoliú, wǒ xīnlǐ fēicháng gāoxìng, tài xièxie nín de jīngcǎi jiǎngjiě, míngtiān jiàn!",
+          "th": "วันนี้ได้แลกเปลี่ยนกับอาจารย์อย่างจริงจัง ในใจดิฉันดีใจมาก ขอบพระคุณสำหรับการบรรยายที่ยอดเยี่ยม พรุ่งนี้พบกันนะคะ!",
+          "en": "Earnestly discussing with you today makes me very happy; thank you so much for the brilliant explanation, see you tomorrow!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "不客气，明天早上我们去浦东考察，再见！",
+          "pinyin": "Bú kèqi, míngtiān zǎoshang wǒmen qù Pǔdōng kǎochá, zàijiàn!",
+          "th": "ยินดีครับ พรุ่งนี้เช้าพวกเราไปสำรวจผู่ตง ลาก่อนครับ!",
+          "en": "You are welcome, tomorrow morning we will inspect Pudong, goodbye!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '地标' (dìbiāo) ในการพัฒนาผังเมืองหมายถึงสิ่งใด?",
+          "options": [
+            "อาคารหรือสิ่งก่อสร้างอันเป็นเอกลักษณ์โดดเด่นประจำเมือง (Urban Landmark)",
+            "แผนที่เดินดินแบบโบราณ",
+            "เสาไฟจราจรตามสี่แยก",
+            "ป้ายบอกทางรถเมล์"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'地标' (Landmark) คือแลนด์มาร์กสำคัญหรืออาคารสัญลักษณ์ที่คนจดจำได้ทันทีเมื่อนึกถึงเมืองนั้น เช่น เซี่ยงไฮ้ทาวเวอร์",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจคำศัพท์สถาปัตยกรรมระดับสากล!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '天际线' (tiānjìxiàn) ในการชมทิวทัศน์เมืองหมายถึงข้อใด?",
+          "options": [
+            "เส้นขอบฟ้าเมืองที่เกิดจากโครงร่างยอดตึกสูงตัดกับท้องฟ้า (City Skyline)",
+            "สายไฟแรงสูงที่พาดผ่านเสาไฟ",
+            "รอยเมฆที่เครื่องบินพ่นออกมา",
+            "เส้นทางรถไฟรางเดี่ยว"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'天际线' (Skyline) คือเส้นขอบฟ้าเมืองที่สะท้อนถึงการรวมตัวกันของตึกระฟ้าอันงดงาม",
+          "encouragement": "แม่นยำมาก! นำศัพท์ทัศนียภาพเมืองไปใช้ได้อย่างคล่องแคล่ว!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ริมฝั่งแม่น้ำตึกระฟ้าเรียงราย ก่อเกิดเส้นขอบฟ้าอันน่าหลงใหล\"",
+          "tokens": [
+            "构成了迷人的天际线",
+            "江畔摩天大楼林立"
+          ],
+          "correct_sequence": [
+            "江畔摩天大楼林立",
+            "构成了迷人的天际线"
+          ],
+          "pinyin": "Jiāng pàn mótiāndàlóu línlì, gòuchéng le mírén de tiānjìxiàn.",
+          "meaning_th": "ริมฝั่งแม่น้ำตึกระฟ้าเรียงราย ก่อเกิดเส้นขอบฟ้าอันมีเสน่ห์",
+          "explanation_th": "ประธานและสภาพแวดล้อม (江畔摩天大楼林立) + ภาคแสดงและผลลัพธ์ (构成了迷人的天际线)",
+          "encouragement": "ประกอบประโยคเส้นขอบฟ้าเมืองได้อย่างสวยงาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '步行街' ตัว '步' (bù - ก้าวเดิน) มีหมวดนำใดอยู่ด้านบน?",
+          "options": [
+            "止 (หมวดหยุด/ก้าวเท้า 止字旁)",
+            "足 (หมวดเท้า 足字旁)",
+            "走 (หมวดเดิน 走字旁)",
+            "行 (หมวดสองก้าว 双人旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'步' มีรากมาจากรอยเท้าก้าวเดิน โดยมี '止' อยู่ด้านบน สื่อถึงเท้ามนุษย์ขณะก้าว",
+          "encouragement": "วิเคราะห์โครงสร้างอักษรเกี่ยวกับการก้าวเดินได้อย่างเฉียบคม!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u42_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "城市记忆与乡愁寻根",
+        "th": "ความทรงจำของเมืองและการหวนคืนสู่รากเหง้า",
+        "en": "Urban Memory & Nostalgic Roots"
+      },
+      "can_do": {
+        "th": "อธิบายความผูกพันต่อบ้านเกิด (乡愁), การค้นหารากเหง้า (寻根) และโบราณสถาน (遗址)",
+        "en": "Explain nostalgic homesickness (Xiangchou), root-seeking, and historic ruins (Yizhi)"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องคุณค่าทางจิตใจของแหล่งประวัติศาสตร์และการรักษาอัตลักษณ์เมือง!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4211",
+          "hanzi": "乡愁",
+          "pinyin": "xiāngchóu",
+          "display_pinyin": "xiāngchóu",
+          "pinyin_tone": "xiang1chou2",
+          "meaning_th": "ความผูกพันอาลัยต่อบ้านเกิด / ความคิดถึงถิ่นฐานเดิม",
+          "meaning_en": "nostalgia for hometown / homesickness",
+          "radical": "心",
+          "radical_name_th": "หมวดหัวใจ (心字底)",
+          "stroke_count": 16,
+          "mnemonic": "ความเศร้าโศกอาลัยในใจ (愁) ที่มีต่อบ้านเกิดเมืองนอน (乡) = ความคิดถึงบ้านเกิด",
+          "kid_mnemonic": "มองดูภาพถ่ายแม่น้ำและต้นไม้บ้านเกิดยามอยู่ไกลบ้าน = 乡愁",
+          "body_gesture": "สองมือกุมหัวใจมองทอดสายตาไปไกลด้วยความคิดถึง"
+        },
+        {
+          "id": "hsk3_4212",
+          "hanzi": "寻根",
+          "pinyin": "xúngēn",
+          "display_pinyin": "xúngēn",
+          "pinyin_tone": "xun2gen1",
+          "meaning_th": "ค้นหารากเหง้า / ตามหาต้นกำเนิดบรรพบุรุษ",
+          "meaning_en": "seek roots / search for ancestral origin",
+          "radical": "木",
+          "radical_name_th": "หมวดไม้ (木字旁)",
+          "stroke_count": 16,
+          "mnemonic": "ออกเดินทางค้นหา (寻) รากแก้วแห่งวงศ์ตระกูล (根) = ตามหารากเหง้า",
+          "kid_mnemonic": "เด็กน้อยเปิดอ่านหนังสือบันทึกประวัติตระกูลโบราณ = 寻根",
+          "body_gesture": "ก้มมองที่พื้นดินพร้อมกางสองมือออกช้าๆ สื่อถึงรากแก้ว"
+        },
+        {
+          "id": "hsk3_4213",
+          "hanzi": "遗址",
+          "pinyin": "yízhǐ",
+          "display_pinyin": "yízhǐ",
+          "pinyin_tone": "yi2zhi3",
+          "meaning_th": "โบราณสถาน / ซากปรักหักพังทางประวัติศาสตร์ที่หลงเหลือ",
+          "meaning_en": "historical ruins / archaeological site",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน (提土旁)",
+          "stroke_count": 20,
+          "mnemonic": "สถานที่ตั้ง (址) ที่หลงเหลือตกทอดมาจากโบราณ (遗) = โบราณสถาน",
+          "kid_mnemonic": "กำแพงดินและซากเสาหินของพระราชวังโบราณพันปี = 遗址",
+          "body_gesture": "สองมือทำท่าสัมผัสกำแพงหินโบราณอย่างเคารพ"
+        },
+        {
+          "id": "hsk3_4214",
+          "hanzi": "载体",
+          "pinyin": "zàitǐ",
+          "display_pinyin": "zàitǐ",
+          "pinyin_tone": "zai4ti3",
+          "meaning_th": "สื่อกลางรองรับ / ภาชนะหรือสิ่งที่บรรจุคุณค่าทางวัฒนธรรม",
+          "meaning_en": "carrier / vehicle / medium of culture",
+          "radical": "车",
+          "radical_name_th": "หมวดรถ (车字旁)",
+          "stroke_count": 20,
+          "mnemonic": "พาหนะบรรทุก (载) วัตถุสิ่งของ (体) = สิ่งรองรับคุณค่า",
+          "kid_mnemonic": "พิพิธภัณฑ์ที่เก็บรวบรวมของโบราณให้ชนรุ่นหลังได้ชม = 载体",
+          "body_gesture": "สองมือทำท่าประคองภาชนะล้ำค่าไว้ตรงหน้า"
+        },
+        {
+          "id": "hsk3_4215",
+          "hanzi": "传承",
+          "pinyin": "chuánchéng",
+          "display_pinyin": "chuánchéng",
+          "pinyin_tone": "chuan2cheng2",
+          "meaning_th": "สืบทอด / ถ่ายทอดมรดกจากรุ่นสู่รุ่น",
+          "meaning_en": "inherit and pass down / carry forward",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 14,
+          "mnemonic": "ส่งต่อ (传) และรับช่วงต่อ (承) = สืบทอดมรดก",
+          "kid_mnemonic": "คุณปู่ส่งมอบพู่กันจีนอันเก่าแก่ให้หลานชาย = 传承",
+          "body_gesture": "ยื่นสองมือออกไปข้างหน้ารับของแล้วดึงกลับมาแนบอก"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 遗址 (yízhǐ) เสียง 2 ต่อด้วยเสียง 3",
+        "description_th": "yí (เสียง 2 ทอดเสียงขึ้นสูง) ตามด้วย zhǐ (เสียง 3 ทอดต่ำแล้วสะบัดเสียง)",
+        "example": "良渚古城遗址 (Liángzhǔ gǔchéng yízhǐ)",
+        "fun_metaphor": "เหมือนเสียงระฆังดังไกลแล้วค่อยๆ แผ่วสงบลงสู่ผืนดิน",
+        "reassurance": "คำว่า 遗址 ใช้คู่กับคำว่า 保护 (อนุรักษ์โบราณสถาน) เสมอ"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการอนุรักษ์ความทรงจำ: 不仅是...的载体，更是连接...的纽带",
+        "explanation_th": "ใช้เน้นย้ำความสำคัญของแหล่งประวัติศาสตร์ที่เป็นทั้งที่รองรับวัฒนธรรมและสะพานเชื่อมใจ",
+        "patterns": [
+          {
+            "formula": "老建筑不仅是历史的载体，更是留住乡愁的纽带",
+            "zh": "古老民居不仅是传统文化的载体，更是游子留住乡愁的重要纽带。",
+            "pinyin": "Gǔlǎo mínjū bùjǐn shì chuántǒng wénhuà de zàitǐ, gèng shì yóuzǐ liúzhù xiāngchóu de zhòngyào niǔdài.",
+            "th": "บ้านเรือนโบราณไม่เพียงเป็นสิ่งรองรับวัฒนธรรม หากแต่ยังเป็นสายสัมพันธ์สำคัญที่รักษาความคิดถึงบ้านเกิดของคนไกลบ้าน",
+            "en": "Ancient dwellings are not only carriers of traditional culture but also vital ties retaining nostalgia for travelers."
+          },
+          {
+            "formula": "不远万里前来寻根问祖",
+            "zh": "许多海外华人不远万里回到故乡寻根问祖，感受血脉相连的深情。",
+            "pinyin": "Xǔduō hǎiwài huárén bùyuǎnwànlǐ huídào gùxiāng xúngēnwènzǔ, gǎnshòu xuèmàixiānglián de shēnqíng.",
+            "th": "ชาวจีนโพ้นทะเลจำนวนมากเดินทางข้ามน้ำข้ามทะเลกลับบ้านเกิดเพื่อค้นหารากเหง้า สัมผัสความผูกพันทางสายเลือดอันลึกซึ้ง",
+            "en": "Many overseas Chinese travel thousands of miles back home to seek their roots, feeling the deep bond of shared blood."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "王老师，看着这些历经千年的古城遗址，总让人油然而生一种对历史的敬畏。",
+          "pinyin": "Wáng lǎoshī, kàn zhe zhèxiē lìjīng qiān nián de gǔchéng yízhǐ, zǒng ràng rén yóurán’érshēng yì zhǒng duì lìshǐ de jìngwèi.",
+          "th": "อาจารย์หวังคะ เมื่อมองดูโบราณสถานเมืองเก่าที่ผ่านกาลเวลานับพันปีเหล่านี้ มักทำให้เกิดความเคารพยำเกรงต่อประวัติศาสตร์ขึ้นมาเองอย่างอดไม่ได้",
+          "en": "Teacher Wang, looking at these ancient city ruins that survived thousands of years always inspires spontaneous awe for history."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "历史建筑是活着的史书，是城市记忆最珍贵的载体，我们有责任把它完整传承下去。",
+          "pinyin": "Lìshǐ jiànzhù shì huó zhe de shǐshū, shì chéngshì jìyì zuì zhēnguì de zàitǐ, wǒmen yǒu zérèn bǎ tā wánzhěng chuánchéng xiàqu.",
+          "th": "สถาปัตยกรรมทางประวัติศาสตร์คือตำราประวัติศาสตร์ที่มีชีวิต เป็นสิ่งรองรับความทรงจำอันล้ำค่าที่สุดของเมือง พวกเรามีหน้าที่ถ่ายทอดมันต่อไปอย่างสมบูรณ์ครับ",
+          "en": "Historical buildings are living history books, the most precious carriers of urban memory; we have a duty to pass them down intact."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "很多侨胞回国寻根，在这些老遗址前激动落泪，这就是乡愁的巨大凝聚力吧。",
+          "pinyin": "Hěn duō qiáobāo huíguó xúngēn, zài zhèxiē lǎo yízhǐ qián jīdòng luòlèi, zhè jiù shì xiāngchóu de jùdà níngjùlì ba.",
+          "th": "ชาวจีนโพ้นทะเลจำนวนมากกลับประเทศเพื่อค้นหารากเหง้า ร้องไห้ด้วยความตื้นตันใจหน้าโบราณสถานเหล่านี้ นี่คงเป็นพลังยึดเหนี่ยวอันยิ่งใหญ่ของความผูกพันต่อบ้านเกิดสินะคะ",
+          "en": "Many overseas compatriots return to seek roots and shed tears before these ancient ruins; this must be the powerful cohesion of nostalgia."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "无论城市如何飞速发展，心中的文化根脉绝不能断，这是我们前行的力量源泉。",
+          "pinyin": "Wúlùn chéngshì rúhé fēisù fāzhǎn, xīnzhōng de wénhuà gēnmài jué bù néng duàn, zhè shì wǒmen qiánxíng de lìliang yuánquán.",
+          "th": "ไม่ว่าเมืองจะพัฒนาไปอย่างรวดเร็วเพียงใด รากแก้วทางวัฒนธรรมในใจต้องไม่ขาดสะบั้น นี่คือบ่อเกิดแห่งพลังในการก้าวไปข้างหน้าของพวกเราครับ",
+          "en": "No matter how rapidly a city develops, cultural roots in the heart must never be severed; this is the source of strength for moving forward."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "今天和老师认真交流，我心里非常高兴，太谢谢您的精彩讲解，明天见！",
+          "pinyin": "Jīntiān hé lǎoshī rènzhēn jiāoliú, wǒ xīnlǐ fēicháng gāoxìng, tài xièxie nín de jīngcǎi jiǎngjiě, míngtiān jiàn!",
+          "th": "วันนี้ได้แลกเปลี่ยนกับอาจารย์อย่างจริงจัง ในใจดิฉันดีใจมาก ขอบพระคุณสำหรับการบรรยายที่ยอดเยี่ยม พรุ่งนี้พบกันนะคะ!",
+          "en": "Earnestly discussing with you today makes me very happy; thank you so much for the brilliant explanation, see you tomorrow!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "不客气，明天早上我们去历史博物馆见，再见！",
+          "pinyin": "Bú kèqi, míngtiān zǎoshang wǒmen qù lìshǐ bówùguǎn jiàn, zàijiàn!",
+          "th": "ยินดีครับ พรุ่งนี้เช้าพวกเราพบกันที่พิพิธภัณฑ์ประวัติศาสตร์ ลาก่อนครับ!",
+          "en": "You are welcome, see you tomorrow morning at the history museum, goodbye!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '乡愁' (xiāngchóu) สื่อถึงความรู้สึกข้อใด?",
+          "options": [
+            "ความคิดถึงและความผูกพันอันลึกซึ้งต่อแผ่นดินเกิด (Nostalgia for one's homeland)",
+            "ความเบื่อหน่ายในการเดินทางไกล",
+            "ความกังวลเรื่องการสอบเลื่อนขั้น",
+            "ความหิวโหยในเวลากลางคืน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'乡愁' คือความรู้สึกคิดถึงถวิลหาและผูกพันต่อบ้านเกิดเมืองนอนของผู้ที่เดินทางจากมาไกล",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจอารมณ์ความผูกพันถิ่นฐานเดิมของชาวจีน!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '寻根' (xúngēn) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "การค้นหาต้นกำเนิด รากเหง้าบรรพบุรุษ และประวัติวงศ์ตระกูล (Root-seeking)",
+            "การขุดรากต้นไม้เพื่อนำไปทำสมุนไพร",
+            "การทำสวนเกษตรกรรมบนภูเขา",
+            "การเรียนวิชาคณิตศาสตร์เรื่องสแควรูท"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'寻根' หมายถึง การสืบค้นหารากเหง้าและต้นกำเนิดทางวัฒนธรรมและสายเลือดของบรรพบุรุษ",
+          "encouragement": "แม่นยำมาก! เข้าใจมิติทางประวัติศาสตร์และมานุษยวิทยา!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"อาคารโบราณเป็นสิ่งรองรับอันล้ำค่าที่สุดของความทรงจำเมือง\"",
+          "tokens": [
+            "城市记忆最珍贵的载体",
+            "历史建筑是"
+          ],
+          "correct_sequence": [
+            "历史建筑是",
+            "城市记忆最珍贵的载体"
+          ],
+          "pinyin": "Lìshǐ jiànzhù shì chéngshì jìyì zuì zhēnguì de zàitǐ.",
+          "meaning_th": "อาคารประวัติศาสตร์คือสิ่งรองรับอันล้ำค่าที่สุดของความทรงจำเมือง",
+          "explanation_th": "ประธาน (历史建筑) + กริยาเชื่อม (是) + กรรมและส่วนขยาย (城市记忆最珍贵的载体)",
+          "encouragement": "ประกอบประโยคคุณค่าทางประวัติศาสตร์ได้อย่างลงตัว!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '寻根' ตัว '根' (gēn - ราก) มีหมวดนำใดอยู่ด้านซ้าย?",
+          "options": [
+            "木 (หมวดไม้ 木字旁)",
+            "艹 (หมวดหญ้า 草字头)",
+            "禾 (หมวดต้นกล้า 禾木旁)",
+            "土 (หมวดดิน 提土旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'根' มีหมวด '木' (ต้นไม้) ด้านซ้าย สื่อถึงรากแก้วของต้นไม้ที่หยั่งลึกในผืนดิน",
+          "encouragement": "แม่นยำเรื่องหมวดพืชไม้ธรรมชาติ!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u42_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "翻天覆地的城市奇迹",
+        "th": "การเปลี่ยนแปลงพลิกแผ่นดิน (翻天覆地) สู่เมืองน่าอยู่",
+        "en": "Earth-shaking Miracle & Livable Cities"
+      },
+      "can_do": {
+        "th": "อธิบายการเปลี่ยนแปลงอย่างพลิกฟ้าคว่ำแผ่นดิน (翻天覆地), เมืองน่าอยู่อาศัย (宜居) และความยั่งยืน",
+        "en": "Explain earth-shaking transformation (Fāntiānfùdì), livable cities (Yiju), and sustainable development"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องการพัฒนาเมืองยุคใหม่ และพิชิต Boss Challenge นักวางผังเมืองระดับโลก!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4216",
+          "hanzi": "翻天覆地",
+          "pinyin": "fāntiānfùdì",
+          "display_pinyin": "fāntiānfùdì",
+          "pinyin_tone": "fan1tian1fu4di4",
+          "meaning_th": "พลิกฟ้าคว่ำแผ่นดิน / เปลี่ยนแปลงไปอย่างสิ้นเชิงมหาศาล",
+          "meaning_en": "earth-shaking / complete transformation / turning the world upside down",
+          "radical": "羽",
+          "radical_name_th": "หมวดขนนก (羽字旁)",
+          "stroke_count": 24,
+          "mnemonic": "พลิกสลับท้องฟ้า (翻天) คว่ำผืนแผ่นดิน (覆地) = เปลี่ยนแปลงมโหฬาร",
+          "kid_mnemonic": "หมู่บ้านชาวประมงเล็กๆ กลายเป็นมหานครตึกสูงตระหง่าน = 翻天覆地",
+          "body_gesture": "สองมือทำท่าหงายฝ่ามือขึ้นฟ้าแล้วคว่ำลงสู่พื้นอย่างรวดเร็ว"
+        },
+        {
+          "id": "hsk3_4217",
+          "hanzi": "宜居",
+          "pinyin": "yíjū",
+          "display_pinyin": "yíjū",
+          "pinyin_tone": "yi2ju1",
+          "meaning_th": "น่าอยู่อาศัย / เหมาะแก่การดำรงชีวิตอย่างมีคุณภาพ",
+          "meaning_en": "livable / suitable for living",
+          "radical": "宀",
+          "radical_name_th": "หมวดหลังคาเรือน (宝盖头)",
+          "stroke_count": 16,
+          "mnemonic": "เหมาะสมลงตัว (宜) สำหรับการอยู่อาศัย (居) = น่าอยู่อาศัย",
+          "kid_mnemonic": "เมืองที่มีสวนสาธารณะร่มรื่น อากาศบริสุทธิ์ เดินทางสะดวก = 宜居",
+          "body_gesture": "สองมือทำรูปหลังคาบ้านเหนือศีรษะพร้อมรอยยิ้มอบอุ่น"
+        },
+        {
+          "id": "hsk3_4218",
+          "hanzi": "变迁",
+          "pinyin": "biànqiān",
+          "display_pinyin": "biànqiān",
+          "pinyin_tone": "bian4qian1",
+          "meaning_th": "ความผันแปรเปลี่ยนแปลงตามยุคสมัย / วิวัฒนาการประวัติศาสตร์",
+          "meaning_en": "historical vicissitudes / transformation over time",
+          "radical": "又",
+          "radical_name_th": "หมวดมือขวา (又字旁)",
+          "stroke_count": 18,
+          "mnemonic": "เปลี่ยนแปลง (变) เคลื่อนย้ายตามกาลเวลา (迁) = ผันแปรตามยุคสมัย",
+          "kid_mnemonic": "ดูภาพถ่ายเมืองเก่าขาวดำเทียบกับภาพถ่ายสีเมืองปัจจุบัน = 变迁",
+          "body_gesture": "หมุนมือขวาเป็นเกลียวคลื่นไปข้างหน้าสื่อถึงกาลเวลาเคลื่อนผ่าน"
+        },
+        {
+          "id": "hsk3_4219",
+          "hanzi": "生态",
+          "pinyin": "shēngtài",
+          "display_pinyin": "shēngtài",
+          "pinyin_tone": "sheng1tai4",
+          "meaning_th": "ระบบนิเวศน์ / ความสมดุลของสิ่งแวดล้อมทางธรรมชาติ",
+          "meaning_en": "ecology / ecosystem",
+          "radical": "生",
+          "radical_name_th": "หมวดกำเนิด/ชีวิต (生字旁)",
+          "stroke_count": 13,
+          "mnemonic": "ชีวิตกำเนิด (生) ในสภาวะแวดล้อมสมดุล (态) = ระบบนิเวศน์",
+          "kid_mnemonic": "ปลาแหวกว่ายในลำธารใสและนกเกาะบนกิ่งไม้สีเขียว = 生态",
+          "body_gesture": "กางสองมือออกช้าๆ ดั่งปีกนกโผบินกลางธรรมชาติ"
+        },
+        {
+          "id": "hsk3_4220",
+          "hanzi": "韧性",
+          "pinyin": "rènxìng",
+          "display_pinyin": "rènxìng",
+          "pinyin_tone": "ren4xing4",
+          "meaning_th": "ความยืดหยุ่นทนทาน / ขีดความสามารถในการฟื้นตัวอย่างรวดเร็ว",
+          "meaning_en": "resilience / urban elasticity to disasters",
+          "radical": "韦",
+          "radical_name_th": "หมวดหนังฟอก (韦字旁)",
+          "stroke_count": 17,
+          "mnemonic": "เหนียวแน่นทนทาน (韧) ในคุณลักษณะเดิม (性) = ความยืดหยุ่นฟื้นตัว",
+          "kid_mnemonic": "ต้นไผ่ที่ลู่ตามลมพายุแต่ไม่เคยหักโค่น = 韧性",
+          "body_gesture": "กำสองหมัดงอแขนเกร็งกล้ามเนื้อแสดงความแข็งแกร่งยืดหยุ่น"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 翻天覆地 (fāntiānfùdì) 1-1-4-4 สมมาตรทรงพลัง",
+        "description_th": "fān (เสียง 1 สูงยาว) -> tiān (เสียง 1 สูงยาว) -> fù (เสียง 4 ลงหนัก) -> dì (เสียง 4 แน่นลงดิน)",
+        "example": "发生了翻天覆地的变化 (fāshēng le fāntiānfùdì de biànhuà)",
+        "fun_metaphor": "เหมือนบินเหินบนฟ้าสูงสองจังหวะแล้วปักลงพื้นดินอย่างหนักแน่น",
+        "reassurance": "สำนวน 翻天覆地 เป็นสำนวน HSK ระดับสูงยอดนิยมสำหรับพรรณนาความเจริญ"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการเปลี่ยนแปลงระดับประวัติศาสตร์: 发生了翻天覆地的巨大变化",
+        "explanation_th": "ใช้บรรยายการพัฒนาที่มีการเปลี่ยนแปลงอย่างมหาศาลจากอดีตสู่ปัจจุบัน",
+        "patterns": [
+          {
+            "formula": "短短几十年间，...发生了翻天覆地的变化",
+            "zh": "短短四十年间，深圳从小渔村发展成了翻天覆地的国际创新之都。",
+            "pinyin": "Duǎnduǎn sìshí nián jiān, Shēnzhèn cóng xiǎoyúcūn fāzhǎn chéng le fāntiānfùdì de guójì chuàngxīn zhī dū.",
+            "th": "ในชั่วเวลาเพียงสี่สิบปี เซินเจิ้นพัฒนาจากหมู่บ้านชาวประมงเล็กๆ สู่มหานครนวัตกรรมระดับโลกอย่างพลิกฟ้าคว่ำแผ่นดิน",
+            "en": "In just forty years, Shenzhen developed from a small fishing village into an international innovation capital with earth-shaking changes."
+          },
+          {
+            "formula": "建设绿色低碳、宜居韧性的现代化城市",
+            "zh": "未来的城市规划致力于打造更加绿色低碳、宜居且富有韧性的现代化家园。",
+            "pinyin": "Wèilái de chéngshì guīhuà zhìlì yú dǎzào gèngjiā lǜsè dītàn, yíjū qiě fùyǒu rènxìng de xiàndàihuà jiāyuán.",
+            "th": "การวางผังเมืองในอนาคตมุ่งมั่นสร้างบ้านเมืองสมัยใหม่ที่คาร์บอนต่ำสีเขียว น่าอยู่อาศัย และเปี่ยมด้วยขีดความสามารถในการฟื้นตัว",
+            "en": "Future urban planning is dedicated to creating modern homes that are greener, low-carbon, livable, and resilient."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "王老师，对比三十年前的老照片，中国的城市面貌真是发生了翻天覆地的变化！",
+          "pinyin": "Wáng lǎoshī, duìbǐ sānshí nián qián de lǎo zhàopiàn, Zhōngguó de chéngshì miànmào zhēn shì fāshēng le fāntiānfùdì de biànhuà!",
+          "th": "อาจารย์หวังคะ เมื่อเปรียบเทียบกับภาพถ่ายเก่าเมื่อสามสิบปีก่อน โฉมหน้าของเมืองในประเทศจีนได้เกิดการเปลี่ยนแปลงอย่างพลิกฟ้าคว่ำแผ่นดินจริงๆ ค่ะ!",
+          "en": "Teacher Wang, comparing with old photos from thirty years ago, the appearance of Chinese cities has truly undergone earth-shaking changes!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "是的，从过去单纯追求建筑高度，到现在注重生态环保与宜居韧性，发展理念更加科学成熟。",
+          "pinyin": "Shì de, cóng guòqù dānchún zhuīqiú jiànzhù gāodù, dào xiànzài zhùzhòng shēngtài huánbǎo yǔ yíjū rènxìng, fāzhǎn lǐniàn gèngjiā kēxué chéngshú.",
+          "th": "ใช่ครับ จากในอดีตที่มุ่งแสวงหาแต่ความสูงของอาคาร จนถึงปัจจุบันที่ให้ความสำคัญกับการรักษาสิ่งแวดล้อมและเมืองน่าอยู่ที่มีความยืดหยุ่น แนวคิดการพัฒนาจึงเป็นวิทยาศาสตร์และเติบโตเต็มที่ยิ่งขึ้นครับ",
+          "en": "Yes, from merely pursuing building height in the past to emphasizing eco-friendliness, livability, and resilience today, development concepts are more scientific."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "让居民既能享受现代生活的便利快捷，又能推开窗户见到绿水青山，这才是理想的城市。",
+          "pinyin": "Ràng jūmín jì néng xiǎngshòu xiàndài shēnghuó de biànlì kuàijié, yòu néng tuīkāi chuānghu jiàndào lǜshuǐqīngshān, zhè cái shì lǐxiǎng de chéngshì.",
+          "th": "ทำให้ผู้อยู่อาศัยทั้งสามารถเพลิดเพลินกับความสะดวกสบายรวดเร็วของชีวิตยุคใหม่ และเปิดหน้าต่างออกไปพบกับขุนเขาเขียวสายน้ำใส นี่แหละค่ะคือเมืองในอุดมคติ",
+          "en": "Letting residents enjoy the convenience of modern life while opening windows to green waters and mountains is the truly ideal city."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "人民城市人民建，人民城市为人民。未来的城市必将更加繁荣温暖。",
+          "pinyin": "Rénmín chéngshì rénmín jiàn, rénmín chéngshì wèi rénmín. Wèilái de chéngshì bìjiāng gèngjiā fánróng wēnnuǎn.",
+          "th": "เมืองของประชาชนสร้างโดยประชาชน เมืองของประชาชนเพื่อความผาสุกของประชาชน เมืองในอนาคตจะต้องรุ่งเรืองและอบอุ่นยิ่งขึ้นอย่างแน่นอนครับ",
+          "en": "Cities of the people built by the people, cities of the people for the people. Future cities will surely be more prosperous and warm."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (สถาปนิก) 👩‍💼",
+          "zh": "今天和老师认真交流，我心里非常高兴，太谢谢您的精彩讲解，明天见！",
+          "pinyin": "Jīntiān hé lǎoshī rènzhēn jiāoliú, wǒ xīnlǐ fēicháng gāoxìng, tài xièxie nín de jīngcǎi jiǎngjiě, míngtiān jiàn!",
+          "th": "วันนี้ได้แลกเปลี่ยนกับอาจารย์อย่างจริงจัง ในใจดิฉันดีใจมาก ขอบพระคุณสำหรับการบรรยายที่ยอดเยี่ยม พรุ่งนี้พบกันนะคะ!",
+          "en": "Earnestly discussing with you today makes me very happy; thank you so much for the brilliant explanation, see you tomorrow!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์หวัง (นักประวัติศาสตร์) 👨‍🏫",
+          "zh": "不客气，明天早上我们去城市规划馆考察，再见！",
+          "pinyin": "Bú kèqi, míngtiān zǎoshang wǒmen qù chéngshì guīhuàguǎn kǎochá, zàijiàn!",
+          "th": "ยินดีครับ พรุ่งนี้เช้าพวกเราไปชมนิทรรศการผังเมือง ลาก่อนครับ!",
+          "en": "You are welcome, see you tomorrow morning at the urban planning hall, goodbye!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "สำนวน '翻天覆地' (fāntiānfùdì) มักใช้พรรณนาถึงสถานการณ์ใด?",
+          "options": [
+            "การเปลี่ยนแปลงทางสังคมหรือเศรษฐกิจอย่างมหาศาล พลิกโฉมหน้าไปจากเดิมอย่างสิ้นเชิง (Earth-shaking change)",
+            "การเกิดแผ่นดินไหวรุนแรงใต้ทะเล",
+            "การเดินทางด้วยเครื่องบินข้ามทวีป",
+            "การจัดห้องนอนใหม่ในวันหยุด"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'翻天覆地' หมายถึง การเปลี่ยนแปลงอย่างยิ่งใหญ่ไพศาล ประดุจพลิกฟ้าคว่ำแผ่นดิน นิยมใช้บรรยายการพัฒนาเมืองและเศรษฐกิจของจีน",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจสำนวนระดับสูงที่พบบ่อยในข่าวสารจีน!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '宜居城市' (yíjū chéngshì) หมายถึงเมืองที่มีลักษณะอย่างไร?",
+          "options": [
+            "เมืองที่น่าอยู่อาศัย มีสิ่งแวดล้อมดี คุณภาพชีวิตสูง และปลอดภัย (Livable City)",
+            "เมืองที่มีสภาพอากาศหนาวเย็นตลอดทั้งปี",
+            "เมืองที่มีตึกระฟ้ามากที่สุดในโลก",
+            "เมืองที่ห้ามประชาชนขับรถยนต์ส่วนตัว"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'宜居城市' (Livable City) คือเมืองที่ออกแบบโดยคำนึงถึงความสุข สุขภาพ และคุณภาพชีวิตที่ดีของประชากรเป็นศูนย์กลาง",
+          "encouragement": "แม่นยำมาก! นำศัพท์ผังเมืองและสิ่งแวดล้อมไปใช้ได้อย่างคล่องแคล่ว!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ในชั่วเวลาสี่สิบปี เมืองได้เกิดการเปลี่ยนแปลงอย่างพลิกฟ้าคว่ำแผ่นดิน\"",
+          "tokens": [
+            "城市发生了翻天覆地的变化",
+            "短短四十年间"
+          ],
+          "correct_sequence": [
+            "短短四十年间",
+            "城市发生了翻天覆地的变化"
+          ],
+          "pinyin": "Duǎnduǎn sìshí nián jiān, chéngshì fāshēng le fāntiānfùdì de biànhuà.",
+          "meaning_th": "ในชั่วเวลาสี่สิบปี เมืองได้เกิดการเปลี่ยนแปลงอย่างพลิกฟ้าคว่ำแผ่นดิน",
+          "explanation_th": "คำบอกช่วงเวลา (短短四十年间) + ประโยคบอกการเปลี่ยนแปลง (城市发生了翻天覆地的变化)",
+          "encouragement": "ประกอบประโยคปาฏิหาริย์การพัฒนาเมืองได้อย่างงดงาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '宜居' ตัว '宜' (yí - เหมาะสม) มีหมวดนำใดอยู่ด้านบน?",
+          "options": [
+            "宀 (หมวดหลังคาเรือน 宝盖头)",
+            "穴 (หมวดถ้ำ 穴宝盖)",
+            "广 (หมวดเพิงพัก 广字旁)",
+            "户 (หมวดประตู 户字头)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'宜' มีหมวด '宀' (หลังคาเรือน) ด้านบน สื่อถึงความสงบผาสุกและเหมาะสมลงตัวภายในเคหสถาน",
+          "encouragement": "เข้าใจลึกซึ้งถึงโครงสร้างอักษรหมวดที่อยู่อาศัย!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณได้รับเชิญนำเสนอวิสัยทัศน์ในงานประชุมสัมมนานานาชาติว่าด้วย \"ผังเมืองอนาคตและการอนุรักษ์มรดกประวัติศาสตร์\" จงเลือกประโยคบรรยายสรุปที่สะท้อนการพัฒนาที่สมดุลระหว่างความทันสมัยและรากเหง้าวัฒนธรรมได้สมบูรณ์ที่สุด",
+        "dialogue_context": [
+          {
+            "speaker": "大会主席",
+            "zh": "请问中国城市如何在经历翻天覆地的现代化进程中，依然保护好历史记忆与文化根脉？"
+          }
+        ],
+        "options": [
+          "坚持修旧如旧保留历史风貌，同时建设绿色低碳宜居都市，让现代文明与传统根脉相得益彰！",
+          "全面拆除所有老建筑和胡同，全部改建成摩天大楼。",
+          "禁止一切现代科技与地铁建设，完全退回古代生活。",
+          "只注重商业街的经济利益，不需要考虑居民的生活环境。"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ตัวเลือกที่ 1 ครบถ้วนทั้งมิติการอนุรักษ์ (修旧如旧保留历史风貌) การพัฒนาเมืองยุคใหม่สีเขียว (绿色低碳宜居都市) และความกลมกลืน (现代文明与传统根脉相得益彰)",
+        "cheer_message": "ยอดเยี่ยมระดับปรมาจารย์! คุณพิชิตการเป็นทูตสถาปัตยกรรมและผังเมืองระดับโลกได้อย่างสมบูรณ์แบบ!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t3_u42_master",
+        "badge_name": "สถาปนิกผังเมืองประวัติศาสตร์ (Urban Heritage Master)",
+        "message_th": "ยินดีด้วย! คุณเข้าใจพัฒนาการของเมืองจีนจากตรอกหูท่งสู่มหานครระฟ้า และเชี่ยวชาญการใช้สำนวน 翻天覆地 ได้อย่างเฉียบคม!",
+        "xp_reward": 200
+      }
+    }
+  ]
+}
