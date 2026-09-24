@@ -41,6 +41,10 @@ const StudioLayout = React.lazy(() =>
   import('./components/studio/StudioLayout').then((m) => ({ default: m.StudioLayout }))
 );
 
+const ImmersionArticleReader = React.lazy(() =>
+  import('./components/reader/ImmersionArticleReader').then((m) => ({ default: m.ImmersionArticleReader }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -52,6 +56,8 @@ export const App: React.FC = () => {
   const {
     userState,
     srsQueueStatus,
+    srsCards,
+    addVocabToSrs,
     practiceCorrectCount,
     completeLesson,
     recordCardReview,
@@ -62,8 +68,8 @@ export const App: React.FC = () => {
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio'>(() => {
+  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader)
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('view') === 'studio' || params.get('studio') === '1') {
@@ -71,6 +77,9 @@ export const App: React.FC = () => {
       }
       if (params.get('view') === 'review') {
         return 'review';
+      }
+      if (params.get('view') === 'reader' || params.get('reader') === '1') {
+        return 'reader';
       }
     }
     return 'map';
@@ -274,6 +283,28 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* View 5: Smart Immersion Reader (Phase 8 TASK-802) */}
+      {currentView === 'reader' && (
+        <main style={{ flex: 1 }}>
+          <React.Suspense
+            fallback={
+              <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                กำลังจัดเตรียมบทความ Immersion Reader... 📖🐰
+              </div>
+            }
+          >
+            <ImmersionArticleReader
+              onBack={() => setCurrentView('map')}
+              onAddSRS={async (item) => {
+                await addVocabToSrs([item]);
+              }}
+              existingSrsCardIds={srsCards.map((c) => c.card_id)}
+              existingSrsHanzis={srsCards.map((c) => c.hanzi)}
+            />
+          </React.Suspense>
+        </main>
+      )}
+
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
         <React.Suspense fallback={null}>
@@ -303,6 +334,22 @@ export const App: React.FC = () => {
               style={{ width: '100%', marginTop: '8px', minHeight: '44px' }}
             >
               🎨 เปิด Content Authoring Studio (Phase 6)
+            </button>
+            <button
+              onClick={() => {
+                setCurrentView('reader');
+                setShowDevDrawer(false);
+              }}
+              className="btn-tactile-primary"
+              style={{
+                width: '100%',
+                marginTop: '8px',
+                minHeight: '44px',
+                backgroundColor: 'var(--color-jade-deep, #047857)',
+                color: '#FFFFFF',
+              }}
+            >
+              📖 เปิด Smart Immersion Reader (Phase 8)
             </button>
             <button
               onClick={() => setShowTestPanel(true)}

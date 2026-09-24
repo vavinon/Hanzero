@@ -81,6 +81,7 @@ export default defineConfig({
     })
   ],
   build: {
+    emptyOutDir: true,
     target: 'es2020',
     chunkSizeWarningLimit: 300,
     rollupOptions: {

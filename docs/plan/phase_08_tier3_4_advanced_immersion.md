@@ -134,20 +134,21 @@ flowchart TD
 ### `TASK-802`: Smart Immersion Reader & Tap-to-Inspect Engine
 เครื่องมืออ่านบทความจีนพร้อมระบบตัดคำและสืบค้นคำศัพท์แบบเรียลไทม์บนเบราว์เซอร์:
 
-- [ ] **Pure TypeScript Engine (`src/engines/reader/immersionReaderEngine.ts`):**
-  - **Zero-Dependency Word Segmentation:** ใช้เบราว์เซอร์ `Intl.Segmenter` API (`locale: 'zh-CN', granularity: 'word'`) ตัดคำภาษาจีนได้อย่างรวดเร็วในหน่วยมิลลิวินาที ไม่ต้องโหลดไฟล์โมเดล Dict ขนาด 10–20MB
-  - **HSK Vocabulary Level Analyzer:** ฟังก์ชัน `analyzeArticleHSKDistribution(text: string)` วิเคราะห์สัดส่วนคำศัพท์ แยกเป็นระดับ HSK 1–6 และ HSK 7–9 (Legend) เพื่อคำนวณ Readability Score
-  - **Tap-to-Inspect Generator:** เมทอด `inspectWord(word: string): WordDefinition` ค้นคืนคำอ่านพินอิน คำแปลไทย/อังกฤษ ตัวอย่างประโยค และรากศัพท์ที่เกี่ยวข้อง
-  - **SRS Fast Bridge:** ฟังก์ชันแปลงคำที่เลือกจากบทความ เข้าสู่โมเดล SRS Flashcard ของ Hanzero (`createSRSItemFromToken`)
-- [ ] **UI Component (`src/components/reader/ImmersionArticleReader.tsx`):**
-  - **HSK Level Color Heatmap:** สวิตช์เปิด/ปิดโหมดไฮไลต์สีตามระดับ HSK (เช่น HSK 1-2 สีเขียวอ่อน, HSK 3-4 สีฟ้า, HSK 5-6 สีส้ม, HSK 7+ สีม่วงจักรพรรดิ) ให้ผู้เรียนประเมินความยากได้ในพริบตา
-  - **Tap-to-Inspect Modal / Bottom Sheet:** แตะที่คำใดๆ ในบทความเพื่อเปิดหน้าต่างดูความหมาย พร้อมปุ่มกดฟังเสียงอ่าน TTS
-  - **ปุ่ม "+ SRS":** ปุ่มบันทึกคำศัพท์ที่น่าสนใจเข้าสำรับทบทวนส่วนบุคคลได้ทันทีในคลิกเดียว พร้อมแจ้งเตือน Toast นุ่มนวล
-  - **Dynamic Pinyin Modes:** สลับโหมดการแสดงพินอินได้ 3 รูปแบบ: (1) ซ่อนหมด (Pure Immersion), (2) แสดงแบบ Ruby text เหนืออักษร, (3) โหมดแตะเพื่อดูพินอินเฉพาะคำ
-  - **Reading Progress & Comprehension Mini-Quiz:** มีแถบเปอร์เซ็นต์การอ่าน พร้อมคำถามทดสอบความเข้าใจ 2–3 ข้อท้ายบทความ
-- [ ] **Unit Tests & Adversarial Verification:**
-  - `immersionReaderEngine.test.ts`: ทดสอบการตัดคำเครื่องหมายวรรคตอนจีน (`，。！？“”《》`), ตัวเลขผสมอักษรจีน, สำนวน 4 ตัวอักษร, และการคำนวณสัดส่วน HSK
-  - `ImmersionArticleReader.test.tsx`: ทดสอบการแตะเลือกคำ, การเปิด/ปิด Heatmap, และการกดปุ่ม "+ SRS"
+- [x] **Pure TypeScript Engine (`src/engines/reader/immersionReaderEngine.ts`):**
+  - **Zero-Dependency Word Segmentation:** ใช้เบราว์เซอร์ `Intl.Segmenter` API (`locale: 'zh-CN', granularity: 'word'`) ร่วมกับ Curated Idiom Matcher และ Regex Fallback ตัดคำภาษาจีนได้อย่างรวดเร็วในหน่วยมิลลิวินาที ไม่ต้องโหลดไฟล์โมเดล Dict ขนาด 10–20MB
+  - **HSK Vocabulary Level Analyzer:** ฟังก์ชัน `analyzeArticleHSKDistribution(text: string)` วิเคราะห์สัดส่วนคำศัพท์ แยกเป็นระดับ HSK 1–6 และ HSK 7–9 (Legend) เพื่อคำนวณ Readability Score (0–100)
+  - **Tap-to-Inspect Generator:** เมทอด `inspectWord(word: string): WordDefinition` ค้นคืนคำอ่านพินอิน คำแปลไทย/อังกฤษ ตัวอย่างประโยค และรากศัพท์ที่เกี่ยวข้องจาก `readerDictionary.ts`
+  - **SRS Fast Bridge:** ฟังก์ชันแปลงคำที่เลือกจากบทความ เข้าสู่โมเดล SRS Flashcard ของ Hanzero (`createSRSItemFromToken`) ด้วย ID `srs_reader_${hanzi}`
+- [x] **UI Component (`src/components/reader/ImmersionArticleReader.tsx`):**
+  - **HSK Level Color Heatmap:** สวิตช์เปิด/ปิดโหมดไฮไลต์สีตามระดับ HSK (Muted Oriental Tint: HSK 1-2 เขียวมรกต, HSK 3-4 คราม, HSK 5-6 แดงชาด, HSK 7+ ทอง/ม่วงจักรพรรดิ) ให้ผู้เรียนประเมินความยากได้ในพริบตา
+  - **Tap-to-Inspect Modal / Bottom Sheet:** แตะที่คำใดๆ ในบทความเพื่อเปิดหน้าต่างดูความหมาย พร้อมปุ่มกดฟังเสียงอ่าน TTS และ Safe-area insets
+  - **ปุ่ม "+ SRS":** ปุ่มบันทึกคำศัพท์ที่น่าสนใจเข้าสำรับทบทวนส่วนบุคคลได้ทันทีในคลิกเดียว พร้อมปุ่มแปลงสภาพ (Morphing Button State) และแจ้งเตือน Toast นุ่มนวล
+  - **Dynamic Pinyin Modes:** สลับโหมดการแสดงพินอินได้ 3 รูปแบบ: (1) ซ่อนหมด (Pure Immersion), (2) แสดงแบบ Ruby text เหนืออักษร (Line-height 2.55em), (3) โหมดแตะเพื่อดูพินอินเฉพาะคำ
+  - **Reading Progress & Comprehension Mini-Quiz:** มีแถบเปอร์เซ็นต์การอ่าน พร้อมคำถามทดสอบความเข้าใจ 3 ข้อท้ายบทความ (คะแนน + XP)
+- [x] **Unit Tests & Adversarial Verification:**
+  - `immersionReaderEngine.test.ts`: ทดสอบการตัดคำเครื่องหมายวรรคตอนจีน (`，。！？“”《》`), ตัวเลขผสมอักษรจีน, สำนวน 4 ตัวอักษร, และการคำนวณสัดส่วน HSK (12/12 ผ่าน 100%)
+  - `immersionReaderChaos.test.ts`: Red Team Chaos ทดสอบ Fuzzing, Special Punctuation, และ Benchmark บทความ 20,000 ตัวอักษรใช้เวลาตัดคำเพียง ~70ms (เกณฑ์ < 150ms)
+  - `ImmersionArticleReader.test.tsx`: ทดสอบการแตะเลือกคำ, การเปิด/ปิด Heatmap, การสลับโหมดพินอิน, และการกดปุ่ม "+ SRS" (6/6 ผ่าน 100%)
 
 ---
 
@@ -275,8 +276,8 @@ flowchart TD
 
 | Slice | รหัส Task | ขอบเขตงานส่งมอบ | เกณฑ์การตรวจรับ (Acceptance Criteria) |
 | :---: | :---: | :--- | :--- |
-| **Slice 1** | `TASK-801` | Tier 3 Batch 1 (Units 26–35 JSON) | สคริปต์ผลิต JSON สำเร็จ, Linter ผ่าน 100%, มี成语 10 สำนวนแรกครบถ้วน |
-| **Slice 2** | `TASK-802` | Smart Immersion Reader Engine & UI | `Intl.Segmenter` ตัดคำแม่นยำบน Client, ไฮไลต์สี HSK Heatmap, แตะคำแปล และ "+ SRS" ทำงานได้จริง |
+| **Slice 1** | `TASK-801` | Tier 3 Batch 1 (Units 26–35 JSON) | ✅ COMPLETED: สคริปต์ผลิต JSON สำเร็จ, Linter ผ่าน 100%, มี成语 10 สำนวนแรกครบถ้วน |
+| **Slice 2** | `TASK-802` | Smart Immersion Reader Engine & UI | ✅ COMPLETED: `Intl.Segmenter` ตัดคำแม่นยำบน Client, ไฮไลต์สี HSK Heatmap, แตะคำแปล และ "+ SRS" ทำงานได้จริง |
 | **Slice 3** | `TASK-803` | 成语 Lore & Dilemma Engine | นิทานที่มาสำนวนเปิดอ่านได้, แบบทดสอบจำลองวิกฤตคำนวณคะแนนถูกต้อง, Vitest ผ่าน 100% |
 | **Slice 4** | `TASK-804` | Native Speed Audio Ladder & Podcast | ปรับความเร็ว 0.75x–1.5x เสียงไม่เพี้ยน, เสียง Ambient ผสมกลมกลืน, เล่นเสียงแบ็กกราวด์ได้ |
 | **Slice 5** | `TASK-805` | Tier 3 Batch 2 (Units 36–45) & Tier 4 (Units 46–57) | ครบ 22 Units ที่เหลือ, รองรับคำช่วยโบราณและวรรณกรรม, Schema ผ่าน 100% |
