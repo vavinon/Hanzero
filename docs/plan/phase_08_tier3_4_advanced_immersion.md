@@ -189,7 +189,7 @@ flowchart TD
 ### `TASK-804`: Native Speed Audio Ladder & Commute Podcast Mode
 ยกระดับประสบการณ์การฟังภาษาจีนความเร็วสมจริง พร้อมโหมดพอดแคสต์สำหรับการฟังระหว่างเดินทาง:
 
-- [ ] **Pure Audio Ladder Engine (`src/engines/audio/nativeSpeedEngine.ts` & ยกระดับ `audioEngine.ts`):**
+- [x] **Pure Audio Ladder Engine (`src/engines/audio/nativeSpeedEngine.ts` & ยกระดับ `audioEngine.ts`):**
   - **Multi-Step Speed Ladder:** ตัวปรับความเร็วเสียง 4 ระดับ:
     - `0.75x`: ช้าและชัดเป็นพิเศษ เพื่อแกะไวยากรณ์และคำเชื่อม
     - `1.0x`: ความเร็วมาตรฐานบทเรียน
@@ -201,13 +201,13 @@ flowchart TD
   - **Background Audio & MediaSession API:**
     - ผสานเข้ากับ `navigator.mediaSession` สำหรับแสดงชื่อบทเรียน คำศัพท์ และปกภาพบทความบนหน้าจอ Lock Screen ของมือถือ
     - รองรับการกดปุ่ม Play/Pause และ Next/Previous Track จากหูฟังบลูทูธหรือจอล็อก
-- [ ] **UI Component (`src/components/audio/NativeSpeedAudioLadder.tsx` & `PodcastPlayerSheet.tsx`):**
+- [x] **UI Component (`src/components/audio/NativeSpeedAudioLadder.tsx` & `PodcastPlayerSheet.tsx`):**
   - สวิตช์สลับระดับความเร็วสปริงตัวสวยงาม พร้อมเสียง Feedback SFX นุ่มนวล
   - ตัวควบคุม Ambient Soundscape (เลือกเสียงบรรยากาศ ออฟฟิศ/รถไฟใต้ดิน/ร้านกาแฟ)
   - แผงเครื่องเล่นพอดแคสต์ขนาดเต็มหน้าจอ พร้อมตัวเลื่อนแสดงเนื้อความแบบคาราโอเกะ (Synchronized Transcript Highlighting)
-- [ ] **Unit & Chaos Tests:**
+- [x] **Unit & Chaos Tests:**
   - `nativeSpeedEngine.test.ts`: ทดสอบการคำนวณอัตราความเร็วและการจัดการเสียง Ambient
-  - Red Team Chaos: ทดสอบกดเปลี่ยนความเร็วรัวๆ 30 ครั้งใน 3 วินาที และทดสอบการสลับแท็บ/พักหน้าจอมือถือ (AudioContext Resume Test)
+  - Red Team Chaos: ทดสอบกดเปลี่ยนความเร็วรัวๆ 100 ครั้งใน 3 วินาที และทดสอบการสลับแท็บ/พักหน้าจอมือถือ (AudioContext Resume Test)
 
 ---
 
@@ -279,7 +279,7 @@ flowchart TD
 | **Slice 1** | `TASK-801` | Tier 3 Batch 1 (Units 26–35 JSON) | ✅ COMPLETED: สคริปต์ผลิต JSON สำเร็จ, Linter ผ่าน 100%, มี成语 10 สำนวนแรกครบถ้วน |
 | **Slice 2** | `TASK-802` | Smart Immersion Reader Engine & UI | ✅ COMPLETED: `Intl.Segmenter` ตัดคำแม่นยำบน Client, ไฮไลต์สี HSK Heatmap, แตะคำแปล และ "+ SRS" ทำงานได้จริง |
 | **Slice 3** | `TASK-803` | 成语 Lore & Dilemma Engine | ✅ COMPLETED: ม้วนคัมภีร์ Parchment โบราณเปิดอ่านได้, แบบทดสอบจำลองวิกฤตคำนวณคะแนนถูกต้อง, Vitest 35/35 ผ่าน 100% |
-| **Slice 4** | `TASK-804` | Native Speed Audio Ladder & Podcast | ปรับความเร็ว 0.75x–1.5x เสียงไม่เพี้ยน, เสียง Ambient ผสมกลมกลืน, เล่นเสียงแบ็กกราวด์ได้ |
+| **Slice 4** | `TASK-804` | Native Speed Audio Ladder & Podcast | ✅ COMPLETED: ปรับความเร็ว 0.75x–1.5x เสียงไม่เพี้ยน, เสียง Ambient สังเคราะห์บริสุทธิ์ 0 KB, Lock Screen MediaSession และ Synchronized Transcript พร้อม Vitest 947/947 ผ่าน 100% |
 | **Slice 5** | `TASK-805` | Tier 3 Batch 2 (Units 36–45) & Tier 4 (Units 46–57) | ครบ 22 Units ที่เหลือ, รองรับคำช่วยโบราณและวรรณกรรม, Schema ผ่าน 100% |
 | **Slice 6** | `TASK-806` | Voice Pitching 2.0, ImmersionHub & E2E | คลื่นเสียงอัดได้ 30 วินาที, Hub รวมศูนย์เชื่อมต่อครบ, Playwright E2E ผ่านหมดจด 100% |
 

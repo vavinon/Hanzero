@@ -1084,6 +1084,22 @@ export function getAudioEngineStatus(): AudioEngineStatus {
 }
 
 /**
+ * High-level helper to speak Chinese text using the Native Speed ladder rate.
+ * Clamps rates between 0.75x and 1.5x with pitch-preserved cadence.
+ */
+export function speakWithNativeSpeed(
+  text: string,
+  speed: number = 1.0,
+  options: SpeakOptions = {}
+): Promise<void> {
+  const clampedSpeed = Math.max(0.75, Math.min(1.5, speed));
+  return speak(text, {
+    ...options,
+    rate: clampedSpeed,
+  });
+}
+
+/**
  * Teardown utility for test suites and memory cleanup.
  */
 export function _resetAudioEngineForTesting(): void {

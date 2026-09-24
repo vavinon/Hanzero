@@ -19,6 +19,7 @@ import {
   isInAppBrowser,
   getAudioSourceUrl,
   STATIC_AUDIO_MAP,
+  speakWithNativeSpeed,
   _resetAudioEngineForTesting,
 } from './audioEngine';
 
@@ -480,5 +481,16 @@ describe('audioEngine', () => {
     it('Zero-MP3: confirms STATIC_AUDIO_MAP is empty (zero disk MP3 dependency)', () => {
       expect(Object.keys(STATIC_AUDIO_MAP).length).toBe(0);
     });
+
+    it('speakWithNativeSpeed clamps speed between 0.75 and 1.5', async () => {
+      const promise = speakWithNativeSpeed('测试', 1.8);
+      expect(mockSpeak).toHaveBeenCalled();
+      const lastCall = mockSpeak.mock.calls[mockSpeak.mock.calls.length - 1];
+      const utterance = lastCall[0];
+      expect(utterance.rate).toBe(1.5);
+      utterance.onend();
+      await promise;
+    });
   });
 });
+

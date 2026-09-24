@@ -49,6 +49,10 @@ const IdiomExplorer = React.lazy(() =>
   import('./components/idiom/IdiomExplorer').then((m) => ({ default: m.IdiomExplorer }))
 );
 
+const PodcastPlayerSheet = React.lazy(() =>
+  import('./components/audio/PodcastPlayerSheet').then((m) => ({ default: m.PodcastPlayerSheet }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -72,8 +76,8 @@ export const App: React.FC = () => {
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom'>(() => {
+  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma) | 'podcast' (Commute Podcast)
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('view') === 'studio' || params.get('studio') === '1') {
@@ -87,6 +91,9 @@ export const App: React.FC = () => {
       }
       if (params.get('view') === 'idiom' || params.get('idiom') === '1') {
         return 'idiom';
+      }
+      if (params.get('view') === 'podcast' || params.get('podcast') === '1') {
+        return 'podcast';
       }
     }
     return 'map';
@@ -333,6 +340,28 @@ export const App: React.FC = () => {
         </main>
       )}
 
+      {/* View 7: Commute Podcast Mode & Native Speed Ladder (Phase 8 TASK-804) */}
+      {currentView === 'podcast' && (
+        <main style={{ flex: 1, padding: '16px 12px 32px 12px', maxWidth: '520px', margin: '0 auto', width: '100%' }}>
+          <button
+            onClick={() => setCurrentView('map')}
+            className="btn-tactile-secondary"
+            style={{ marginBottom: '14px', minHeight: '40px', padding: '6px 14px' }}
+          >
+            ← กลับสู่แผนที่ผจญภัย
+          </button>
+          <React.Suspense
+            fallback={
+              <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                กำลังจัดเตรียมสถานีพอดแคสต์... 🎧🐰
+              </div>
+            }
+          >
+            <PodcastPlayerSheet onClose={() => setCurrentView('map')} />
+          </React.Suspense>
+        </main>
+      )}
+
       {/* Collapsible Storage & Dev Diagnostics Drawer */}
       {showDevDrawer && (
         <React.Suspense fallback={null}>
@@ -394,6 +423,22 @@ export const App: React.FC = () => {
               }}
             >
               📜 เปิด 成语 Lore & Dilemma Engine (TASK-803)
+            </button>
+            <button
+              onClick={() => {
+                setCurrentView('podcast');
+                setShowDevDrawer(false);
+              }}
+              className="btn-tactile-primary"
+              style={{
+                width: '100%',
+                marginTop: '8px',
+                minHeight: '44px',
+                backgroundColor: '#0D9488',
+                color: '#FFFFFF',
+              }}
+            >
+              🎧 เปิด Native Speed Ladder & Commute Podcast (TASK-804)
             </button>
             <button
               onClick={() => setShowTestPanel(true)}
