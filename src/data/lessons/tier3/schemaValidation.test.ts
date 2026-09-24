@@ -15,6 +15,11 @@ import unit32Data from './unit32_job_interview.json';
 import unit33Data from './unit33_geography_dialects.json';
 import unit34Data from './unit34_education_involution.json';
 import unit35Data from './unit35_green_low_carbon.json';
+import unit36Data from './unit36_mental_health.json';
+import unit37Data from './unit37_traditional_arts.json';
+import unit38Data from './unit38_modern_medicine_wellness.json';
+import unit39Data from './unit39_investment_finance.json';
+import unit40Data from './unit40_tea_culture_zen.json';
 import { UnitLessonData, Lesson, VocabularyItem, QuizQuestion } from '../../../types/lesson';
 import { TRADITIONAL_BLACKLIST } from '../../../engines/studio/studioLinterEngine';
 
@@ -29,6 +34,11 @@ const allTier3Units = [
   unit33Data,
   unit34Data,
   unit35Data,
+  unit36Data,
+  unit37Data,
+  unit38Data,
+  unit39Data,
+  unit40Data,
 ] as unknown as UnitLessonData[];
 
 const [
@@ -42,19 +52,24 @@ const [
   unit33,
   unit34,
   unit35,
+  unit36,
+  unit37,
+  unit38,
+  unit39,
+  unit40,
 ] = allTier3Units;
 
-describe('Tier 3 (Units 26-35) Curriculum Data & Pedagogical Schema Verification', () => {
+describe('Tier 3 (Units 26-40) Curriculum Data & Pedagogical Schema Verification', () => {
   // ==========================================================================
-  // Universal Invariants across all Units 26–35
+  // Universal Invariants across all Units 26–40
   // ==========================================================================
   describe.each(allTier3Units)('Universal Schema & Quality Invariants: $unit_id ($title.th)', (unit) => {
     describe('Unit Metadata & Structure', () => {
       it('has valid top-level unit metadata matching Tier 3 Manifest', () => {
-        expect(unit.unit_id).toMatch(/^tier3_u(2[6-9]|3[0-5])$/);
+        expect(unit.unit_id).toMatch(/^tier3_u(2[6-9]|3[0-9]|40)$/);
         expect(unit.tier).toBe(3);
         expect(unit.unit_number).toBeGreaterThanOrEqual(26);
-        expect(unit.unit_number).toBeLessThanOrEqual(35);
+        expect(unit.unit_number).toBeLessThanOrEqual(40);
         expect(unit.title.zh).toBeTruthy();
         expect(unit.title.th).toBeTruthy();
         expect(unit.title.en).toBeTruthy();
@@ -105,7 +120,7 @@ describe('Tier 3 (Units 26-35) Curriculum Data & Pedagogical Schema Verification
 
       it('includes complete mnemonics, gestures, and radical explanations for each word', () => {
         allVocab.forEach((vocab) => {
-          expect(vocab.id).toMatch(/^hsk3_(2[6-9]|3[0-5])\d{2}$/);
+          expect(vocab.id).toMatch(/^hsk3_(2[6-9]|3[0-9]|40)\d{2}$/);
           expect(vocab.pinyin).toBeTruthy();
           expect(vocab.pinyin_tone).toBeTruthy();
           expect(vocab.meaning_th).toBeTruthy();
@@ -330,6 +345,68 @@ describe('Tier 3 (Units 26-35) Curriculum Data & Pedagogical Schema Verification
 
       const l1 = unit35.lessons.find((l) => l.lesson_number === 1);
       expect(l1?.grammar_bite.title).toContain('以期');
+    });
+
+    it('Unit 36 (Mental Health): covers 抑郁, 焦虑, 疏导, 调节, 倾听, and 得不偿失', () => {
+      const vocab36 = unit36.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab36).toContain('抑郁');
+      expect(vocab36).toContain('焦虑');
+      expect(vocab36).toContain('疏导');
+      expect(vocab36).toContain('调节');
+      expect(vocab36).toContain('倾听');
+      expect(vocab36).toContain('得不偿失');
+
+      const l3 = unit36.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('得不偿失');
+    });
+
+    it('Unit 37 (Traditional Arts): covers 脸谱, 生旦净丑, 水墨, 剪纸, and 妙不可言', () => {
+      const vocab37 = unit37.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab37).toContain('脸谱');
+      expect(vocab37).toContain('生旦净丑');
+      expect(vocab37).toContain('水墨');
+      expect(vocab37).toContain('剪纸');
+      expect(vocab37).toContain('妙不可言');
+
+      const l3 = unit37.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('传承');
+    });
+
+    it('Unit 38 (Modern Medicine & Wellness): covers 指标, 针灸, 调理, 气血, and 对症下药', () => {
+      const vocab38 = unit38.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab38).toContain('指标');
+      expect(vocab38).toContain('针灸');
+      expect(vocab38).toContain('调理');
+      expect(vocab38).toContain('气血');
+      expect(vocab38).toContain('对症下药');
+
+      const l3 = unit38.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('对症下药');
+    });
+
+    it('Unit 39 (Investment & Personal Finance): covers 资产, 本金, 收益, 止损, and 未雨绸缪', () => {
+      const vocab39 = unit39.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab39).toContain('资产');
+      expect(vocab39).toContain('本金');
+      expect(vocab39).toContain('收益');
+      expect(vocab39).toContain('止损');
+      expect(vocab39).toContain('未雨绸缪');
+
+      const l3 = unit39.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('未雨绸缪');
+    });
+
+    it('Unit 40 (Tea Culture & Zen): covers 采摘, 龙井, 普洱, 回甘, 以茶会友, and 苦尽甘来', () => {
+      const vocab40 = unit40.lessons.flatMap((l) => l.vocabulary.map((v) => v.hanzi));
+      expect(vocab40).toContain('采摘');
+      expect(vocab40).toContain('龙井');
+      expect(vocab40).toContain('普洱');
+      expect(vocab40).toContain('回甘');
+      expect(vocab40).toContain('以茶会友');
+      expect(vocab40).toContain('苦尽甘来');
+
+      const l3 = unit40.lessons.find((l) => l.lesson_number === 3);
+      expect(l3?.grammar_bite.title).toContain('人生如茶');
     });
   });
 });

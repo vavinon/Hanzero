@@ -1,0 +1,877 @@
+{
+  "unit_id": "tier3_u38",
+  "tier": 3,
+  "unit_number": 38,
+  "title": {
+    "zh": "现代医疗与养生",
+    "th": "การแพทย์สมัยใหม่และการดูแลสุขภาพ",
+    "en": "Modern Medicine & Wellness"
+  },
+  "description": "เรียนรู้คำศัพท์และการสื่อสารด้านสุขภาพและการแพทย์จีนยุคใหม่: การตรวจวิเคราะห์ผลเลือดและภาวะกึ่งสุขภาพดี (体检与亚健康), นวัตกรรมยารักษาตรงเป้าหมาย (现代医药与靶向治疗), การแพทย์ผสมผสานตะวันตกและสมดุลหยินหยาง (中西医结合与对症下药), และเวชศาสตร์ป้องกันเพื่ออายุวัฒนะ (预防医学与延年益寿)",
+  "lessons": [
+    {
+      "lesson_id": "t3_u38_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "体检与指标分析",
+        "th": "การตรวจสุขภาพและวิเคราะห์ค่าผลเลือด",
+        "en": "Health Checkup & Lab Metrics"
+      },
+      "can_do": {
+        "th": "อ่านและปรึกษาผลตรวจสุขภาพ ค่าดัชนีเลือด และเข้าใจภาวะกึ่งสุขภาพดี (亚健康)",
+        "en": "Understand medical checkup reports, lab indicators, and sub-health conditions"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาผลตรวจสุขภาพประจำปีและเข้าใจตัวชี้วัดสำคัญของร่างกาย!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3801",
+          "hanzi": "指标",
+          "pinyin": "zhǐbiāo",
+          "display_pinyin": "zhǐbiāo",
+          "pinyin_tone": "zhi3biao1",
+          "meaning_th": "ดัชนีชี้วัด / ค่าผลตรวจทางการแพทย์",
+          "meaning_en": "indicator / lab metric",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 17,
+          "mnemonic": "นิ้วชี้บอก (指) เครื่องหมายระดับมาตรฐาน (标) = ดัชนีชี้วัด",
+          "kid_mnemonic": "เข็มบนหน้าปัดวัดความดันชี้ไปที่ตัวเลขแถบสีเขียวปกติ = 指标",
+          "body_gesture": "ชี้นิ้วชี้ไปยังฝ่ามืออีกข้างเหมือนตรวจสอบตัวเลข"
+        },
+        {
+          "id": "hsk3_3802",
+          "hanzi": "确诊",
+          "pinyin": "quèzhěn",
+          "display_pinyin": "quèzhěn",
+          "pinyin_tone": "que4zhen3",
+          "meaning_th": "ตรวจวินิจฉัยยืนยันผลโรคอย่างแน่ชัด",
+          "meaning_en": "to make a definite diagnosis",
+          "radical": "石",
+          "radical_name_th": "หมวดหิน (石字旁)",
+          "stroke_count": 19,
+          "mnemonic": "หนักแน่นดั่งศิลา (确) ในการตรวจพิสูจน์โรค (诊) = วินิจฉัยยืนยัน",
+          "kid_mnemonic": "คุณหมอประทับตรารับรองสีแดงลงบนใบผลการตรวจ = 确诊",
+          "body_gesture": "ทำท่าประทับตราปั๊บลงบนฝ่ามืออย่างมั่นใจ"
+        },
+        {
+          "id": "hsk3_3803",
+          "hanzi": "慢性病",
+          "pinyin": "mànxìngbìng",
+          "display_pinyin": "mànxìngbìng",
+          "pinyin_tone": "man4xing4bing4",
+          "meaning_th": "โรคเรื้อรัง (เช่น ความดัน, เบาหวาน)",
+          "meaning_en": "chronic disease",
+          "radical": "忄",
+          "radical_name_th": "หมวดหัวใจแนวตั้ง (竖心旁)",
+          "stroke_count": 27,
+          "mnemonic": "อาการช้าๆ ต่อเนื่อง (慢) เป็นคุณลักษณะประจำ (性) ของพยาธิสภาพ (病) = โรคเรื้อรัง",
+          "kid_mnemonic": "นาฬิกาทรายที่ค่อยๆ ไหลเตือนให้คอยตรวจวัดระดับน้ำตาลสม่ำเสมอ = 慢性病",
+          "body_gesture": "ลูบแขนช้าๆ สื่อถึงความต่อเนื่องระยะยาว"
+        },
+        {
+          "id": "hsk3_3804",
+          "hanzi": "免疫力",
+          "pinyin": "miǎnyìlì",
+          "display_pinyin": "miǎnyìlì",
+          "pinyin_tone": "mian3yi4li4",
+          "meaning_th": "ภูมิคุ้มกันของร่างกาย",
+          "meaning_en": "immunity / immune power",
+          "radical": "刀",
+          "radical_name_th": "หมวดมีด (刀字底)",
+          "stroke_count": 20,
+          "mnemonic": "ยกเว้นปลอดพ้น (免) จากโรคระบาด (疫) ด้วยพลังความแข็งแกร่ง (力) = ภูมิคุ้มกัน",
+          "kid_mnemonic": "อัศวินเกราะเงินถือโล่สกัดกั้นไวรัสตัวจิ๋วไม่ให้เข้าสู่ร่างกาย = 免疫力",
+          "body_gesture": "เบ่งกล้ามแขนขวาแสดงพลังภูมิคุ้มกันที่แข็งแรง"
+        },
+        {
+          "id": "hsk3_3805",
+          "hanzi": "亚健康",
+          "pinyin": "yàjiànkāng",
+          "display_pinyin": "yàjiànkāng",
+          "pinyin_tone": "ya4jian4kang1",
+          "meaning_th": "ภาวะกึ่งสุขภาพดี / สุขภาพถดถอยแต่ยังไม่เป็นโรค (Sub-health)",
+          "meaning_en": "sub-health / semi-healthy state",
+          "radical": "二",
+          "radical_name_th": "หมวดสอง (二字头)",
+          "stroke_count": 27,
+          "mnemonic": "เป็นรองอันดับสอง (亚) จากความสมบูรณ์แข็งแรงเต็มร้อย (健康) = ภาวะกึ่งสุขภาพดี",
+          "kid_mnemonic": "ไฟสัญญาณเตือนสีเหลืองกะพริบบอกว่าถึงเวลาพักผ่อนได้แล้ว = 亚健康",
+          "body_gesture": "เอามือกุมขมับเบาๆ แล้วผ่อนลมหายใจเตือนสติ"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 亚健康 (yàjiànkāng) เสียง 4 ต่อด้วย 4 และ 1",
+        "description_th": "yà และ jiàn ล้วนเป็นเสียง 4 หนักแน่น ตามด้วย kāng เสียง 1 สูงยาว ให้เน้นสองพยางค์แรกสั้นกระชับแล้วลากเสียงพยางค์ท้าย",
+        "example": "处于亚健康状态 (chǔyú yàjiànkāng zhuàngtài: อยู่ในภาวะกึ่งสุขภาพดี)",
+        "fun_metaphor": "เหมือนก้าวลงบันได 2 ขั้นหนักๆ ตึ้ก! ตึ้ก! แล้วเหยียบพื้นเรียบ... ยิ้มสบาย",
+        "reassurance": "คำนี้เป็นคำยอดนิยมในรายงานสุขภาพของคนทำงานในจีนยุคปัจจุบัน ออกเสียงชัดเจนจะดูเชี่ยวชาญทันที!"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการวิเคราะห์สภาวะร่างกาย: 处于...状态 / 各项指标均...",
+        "explanation_th": "ใช้ในการรายงานและอภิปรายผลตรวจสุขภาพอย่างเป็นทางการและเป็นวิทยาศาสตร์",
+        "patterns": [
+          {
+            "formula": "体检报告显示，各项指标均 + [สภาวะ]",
+            "zh": "体检报告显示，我的各项生化指标均处于正常范围。",
+            "pinyin": "Tǐjiǎn bàogào xiǎnshì, wǒ de gè xiàng shēnghuà zhǐbiāo jūn chǔyú zhèngcháng fànwéi.",
+            "th": "รายงานผลตรวจสุขภาพระบุว่า ค่าดัชนีทางชีวเคมีทุกรายการของฉันล้วนอยู่ในเกณฑ์ปกติ",
+            "en": "The health checkup report shows that all my biochemical indicators are within the normal range."
+          },
+          {
+            "formula": "长期熬夜容易导致免疫力下降，从而处于亚健康状态",
+            "zh": "长期熬夜容易导致免疫力下降，使身体处于亚健康状态。",
+            "pinyin": "Chángqī áoyè róngyì dǎozhì miǎnyìlì xiàjiàng, shǐ shēntǐ chǔyú yàjiànkāng zhuàngtài.",
+            "th": "การอดนอนเป็นประจำมักทำให้ภูมิคุ้มกันลดลง ส่งผลให้ร่างกายตกอยู่ในภาวะกึ่งสุขภาพดี",
+            "en": "Prolonged late nights easily lead to decreased immunity, leaving the body in a sub-health state."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลี่ (พนักงาน) 🧑‍💼",
+          "zh": "张医生，我昨天的体检报告出来了，您能帮我看一下各项指标吗？",
+          "pinyin": "Zhāng yīshēng, wǒ zuótiān de tǐjiǎn bàogào chūlai le, nín néng bāng wǒ kàn yíxià gè xiàng zhǐbiāo ma?",
+          "th": "คุณหมอจางครับ รายงานผลตรวจสุขภาพของผมเมื่อวานออกแล้ว คุณหมอช่วยดูค่าดัชนีต่างๆ ให้หน่อยได้ไหมครับ?",
+          "en": "Doctor Zhang, my physical examination report came out yesterday, could you help me review the indicators?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์อายุรกรรม) 👨‍⚕️",
+          "zh": "好的。虽然没有确诊慢性病，但你的血压和血脂指标偏高，免疫力也有些下降。",
+          "pinyin": "Hǎo de. Suīrán méiyǒu quèzhěn mànxìngbìng, dàn nǐ de xuèyā hé xuèzhǐ zhǐbiāo piāngāo, miǎnyìlì yě yǒuxiē xiàjiàng.",
+          "th": "ได้ครับ แม้ว่าจะไม่ได้ตรวจพบโรคเรื้อรังใดๆ แต่ค่าความดันและไขมันในเลือดค่อนข้างสูง ภูมิคุ้มกันก็ลดลงเล็กน้อยครับ",
+          "en": "Sure. Although no chronic diseases are diagnosed, your blood pressure and lipid indicators are on the higher side, and your immunity is slightly reduced."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลี่ (พนักงาน) 🧑‍💼",
+          "zh": "哎，经常加班熬夜，整个人总觉得浑身乏力，看来真处于亚健康状态了。",
+          "pinyin": "Āi, jīngcháng jiābān áoyè, zhěng ge rén zǒng juéde húnshēn fálì, kànlai zhēn chǔyú yàjiànkāng zhuàngtài le.",
+          "th": "เฮ้อ ทำงานล่วงเวลาอดนอนเป็นประจำ ทั้งตัวมักรู้สึกอ่อนเพลีย ดูท่าจะอยู่ในภาวะกึ่งสุขภาพดีจริงๆ แล้วล่ะครับ",
+          "en": "Sigh, often working overtime and staying up late, I always feel fatigued all over; it seems I am truly in a sub-health state."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์อายุรกรรม) 👨‍⚕️",
+          "zh": "必须重视起来。调整作息，适度锻炼，亚健康是完全可以逆转的。",
+          "pinyin": "Bìxū zhòngshì qǐlai. Tiáozhěng zuòxī, shìdù duànliàn, yàjiànkāng shì wánquán kěyǐ nìzhuǎn de.",
+          "th": "ต้องเริ่มให้ความสำคัญแล้วครับ ปรับเวลาการใช้ชีวิต ออกกำลังกายพอเหมาะ ภาวะกึ่งสุขภาพดีสามารถฟื้นฟูกลับคืนได้แน่นอนครับ",
+          "en": "You must take it seriously. Adjust your routine, exercise moderately; sub-health can definitely be reversed."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '亚健康' (yàjiànkāng) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "ภาวะกึ่งสุขภาพดี / สุขภาพเริ่มถดถอยและอ่อนเพลียแต่ยังไม่ถึงขั้นเป็นโรค (Sub-health)",
+            "สุขภาพแข็งแรงสมบูรณ์ระดับนักกีฬาโอลิมปิก",
+            "การป่วยหนักจนต้องเข้าห้องฉุกเฉิน",
+            "การแพ้อาหารทะเลเฉียบพลัน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'亚健康' (Sub-health) หมายถึง สภาวะที่อยู่ระหว่างความแข็งแรงกับความเจ็บป่วย ร่างกายส่งสัญญาณเตือนว่าเหนื่อยล้าสะสม",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจคำศัพท์เวชศาสตร์ป้องกันยุคใหม่อย่างถ่องแท้!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '免疫力' (miǎnyìlì) หมายถึงสิ่งใด?",
+          "options": [
+            "ภูมิคุ้มกันของร่างกายในการต่อต้านเชื้อโรค",
+            "ความสามารถในการขับรถยนต์",
+            "ความเร็วในการพิมพ์คีย์บอร์ด",
+            "น้ำหนักตัวที่เพิ่มขึ้น"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'免疫力' คือภูมิต้านทานโรคของร่างกาย (Immune system / Immunity)",
+          "encouragement": "แม่นยำมาก! จำคำศัพท์ชีววิทยาทางการแพทย์ได้เป๊ะ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ค่าดัชนีตรวจสุขภาพทั้งหมดของฉันล้วนอยู่ในเกณฑ์ปกติ\"",
+          "tokens": [
+            "各项指标",
+            "均处于",
+            "我的体检",
+            "正常范围"
+          ],
+          "correct_sequence": [
+            "我的体检",
+            "各项指标",
+            "均处于",
+            "正常范围"
+          ],
+          "pinyin": "Wǒ de tǐjiǎn gè xiàng zhǐbiāo jūn chǔyú zhèngcháng fànwéi.",
+          "meaning_th": "ค่าดัชนีตรวจสุขภาพของฉันทุกรายการล้วนอยู่ในเกณฑ์ปกติ",
+          "explanation_th": "ประธาน (我的体检各项指标) + กริยาบอกสภาวะ (均处于) + ขอบเขต (正常范围)",
+          "encouragement": "เก่งมาก! วางประโยครายงานผลตรวจสุขภาพได้อย่างคล่องแคล่ว!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '慢性病' ตัว '病' (bìng - โรค) มีหมวดนำใด?",
+          "options": [
+            "疒 (หมวดโรคภัยไข้เจ็บ 病字旁)",
+            "广 (หมวดอาคาร 广字旁)",
+            "尸 (หมวดร่างกาย 尸字头)",
+            "户 (หมวดบ้าน 户字头)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'病' มีหมวด '疒' (病字旁) ซึ่งสื่อถึงคนป่วยนอนบนเตียงมีเหงื่อซึม บ่งบอกถึงโรคภัยไข้เจ็บ",
+          "encouragement": "เข้าใจลึกซึ้งถึงรากศัพท์ทางการแพทย์ของจีน!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u38_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "现代医药与精准治疗",
+        "th": "การแพทย์สมัยใหม่และการรักษาตรงจุด",
+        "en": "Modern Pharmacology & Targeted Therapy"
+      },
+      "can_do": {
+        "th": "อธิบายใบสั่งยา ผลข้างเคียงของยา และแนวคิดการรักษาแบบมุ่งเป้า (靶向治疗)",
+        "en": "Discuss prescriptions, side effects, and targeted therapy concepts"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องการใช้ยาตามแพทย์สั่งและทำความเข้าใจเรื่องผลข้างเคียง!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3806",
+          "hanzi": "处方",
+          "pinyin": "chǔfāng",
+          "display_pinyin": "chǔfāng",
+          "pinyin_tone": "chu3fang1",
+          "meaning_th": "ใบสั่งยา / สูตรยาตามแพทย์กำหนด",
+          "meaning_en": "prescription / recipe",
+          "radical": "虍",
+          "radical_name_th": "หมวดเสือ (虎字头)",
+          "stroke_count": 9,
+          "mnemonic": "วินิจฉัยตัดสินอย่างรอบคอบ (处) กำหนดสูตรทิศทางยา (方) = ใบสั่งยา",
+          "kid_mnemonic": "ใบสั่งยาสีขาวของคุณหมอที่มีสัญลักษณ์ตัวยาและวิธีรับประทานชัดเจน = 处方",
+          "body_gesture": "ทำท่าเขียนปากกาลงบนกระดาษแล้วยื่นใบสั่งยาให้"
+        },
+        {
+          "id": "hsk3_3807",
+          "hanzi": "副作用",
+          "pinyin": "fùzuòyòng",
+          "display_pinyin": "fùzuòyòng",
+          "pinyin_tone": "fu4zuo4yong4",
+          "meaning_th": "ผลข้างเคียง (Side effect)",
+          "meaning_en": "side effect",
+          "radical": "刂",
+          "radical_name_th": "หมวดมีดแนวตั้ง (立刀旁)",
+          "stroke_count": 20,
+          "mnemonic": "ผลกระทบส่วนประกอบรอง (副) ที่เกิดขึ้นร่วมจากการออกฤทธิ์ (作用) = ผลข้างเคียง",
+          "kid_mnemonic": "ฉลากยาที่มีคำเตือนรูปคนง่วงนอนหลังจากรับประทานยา = 副作用",
+          "body_gesture": "ยกสองมือผายออกด้านข้างสื่อถึงผลลัพธ์ที่ตามมาเสริม"
+        },
+        {
+          "id": "hsk3_3808",
+          "hanzi": "靶向",
+          "pinyin": "bǎxiàng",
+          "display_pinyin": "bǎxiàng",
+          "pinyin_tone": "ba3xiang4",
+          "meaning_th": "มุ่งเป้า / ตรงจุดเป้าหมาย (เช่น ยารักษาแบบมุ่งเป้า Targeted therapy)",
+          "meaning_en": "targeted / targeting",
+          "radical": "韦",
+          "radical_name_th": "หมวดหนัง (韦字旁)",
+          "stroke_count": 14,
+          "mnemonic": "เป้าธนู (靶) เล็งทิศทางตรงแน่ว (向) = มุ่งเป้า",
+          "kid_mnemonic": "ลูกศรสีแดงพุ่งเข้าเสียบตรงกลางเป้าตาวัวสีทองพอดี = 靶向",
+          "body_gesture": "ทำท่ายกคันธนูเล็งยิงตรงไปยังเป้าหมายข้างหน้า"
+        },
+        {
+          "id": "hsk3_3809",
+          "hanzi": "缓解",
+          "pinyin": "huǎnjiě",
+          "display_pinyin": "huǎnjiě",
+          "pinyin_tone": "huan3jie3",
+          "meaning_th": "บรรเทา / คลายความเจ็บปวดลง",
+          "meaning_en": "to relieve / to alleviate",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 20,
+          "mnemonic": "ผ่อนคลายความตึงช้าลง (缓) คลายปมความเจ็บปวด (解) = บรรเทาลง",
+          "kid_mnemonic": "ไอศกรีมเย็นๆ ชโลมลงบนแผลร้อนผ่าวทำให้รู้สึกโล่งสบาย = 缓解",
+          "body_gesture": "ลูบหน้าอกลงช้าๆ แสดงอาการทุเลาบรรเทา"
+        },
+        {
+          "id": "hsk3_3810",
+          "hanzi": "康复",
+          "pinyin": "kāngfù",
+          "display_pinyin": "kāngfù",
+          "pinyin_tone": "kang1fu4",
+          "meaning_th": "ฟื้นฟูสุขภาพ / หายดีเป็นปกติ",
+          "meaning_en": "to recover / rehabilitation",
+          "radical": "广",
+          "radical_name_th": "หมวดอาคาร (广字旁)",
+          "stroke_count": 20,
+          "mnemonic": "สุขพลานามัยสมบูรณ์ (康) หวนกลับคืนมาใหม่อีกครั้ง (复) = ฟื้นฟูหายดี",
+          "kid_mnemonic": "คนไข้ลุกขึ้นจากเตียงยิ้มแย้มเดินออกจากโรงพยาบาลพร้อมกระเช้าดอกไม้ = 康复",
+          "body_gesture": "ชูกำปั้นสองข้างขึ้นระดับอกยิ้มแย้มแสดงความฟื้นฟูเต็มร้อย"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 副作用 (fùzuòyòng) เสียง 4 ทั้ง 3 พยางค์",
+        "description_th": "ทั้ง 3 พยางค์เป็นเสียง 4 ทั้งหมด ให้ตัดเสียงลงน้ำหนักชัดเจนโดยไม่ลากเสียงยาน",
+        "example": "药物副作用 (yàowù fùzuòyòng: ผลข้างเคียงของยา)",
+        "fun_metaphor": "เหมือนเคาะไม้สามจังหวะ ป๊อก! ป๊อก! ป๊อก! สั้นกระชับ",
+        "reassurance": "ออกเสียง 4 ติดกันได้เป็นธรรมชาติ เพียงคุมจังหวะให้มั่นคง"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการอธิบายประสิทธิภาพยา: 能够有效缓解...，且副作用极小",
+        "explanation_th": "ใช้ในการปรึกษาและอธิบายสรรพคุณยาและการรักษาทางการแพทย์",
+        "patterns": [
+          {
+            "formula": "这种药物能够有效缓解 + [อาการ], 并且副作用极小",
+            "zh": "遵医嘱服用此药能够有效缓解疼痛，并且副作用极小。",
+            "pinyin": "Zūn yīzhǔ fúyòng cǐ yào nénggòu yǒuxiào huǎnjiě téngtòng, bìngqiě fùzuòyòng jí xiǎo.",
+            "th": "การรับประทานยานี้ตามแพทย์สั่งสามารถบรรเทาอาการปวดได้อย่างมีประสิทธิภาพ และมีผลข้างเคียงน้อยมาก",
+            "en": "Taking this medicine as prescribed can effectively relieve pain with minimal side effects."
+          },
+          {
+            "formula": "采用靶向治疗方案，有助于...",
+            "zh": "采用精准靶向治疗方案，有助于患者更快地实现康复。",
+            "pinyin": "Cǎiyòng jīngzhǔn bǎxiàng zhìliáo fāng’àn, yǒuzhùyú huànzhě gèng kuài de shíxiàn kāngfù.",
+            "th": "การใช้แนวทางการรักษาแบบมุ่งเป้าอย่างแม่นยำ ช่วยให้ผู้ป่วยฟื้นฟูร่างกายได้รวดเร็วยิ่งขึ้น",
+            "en": "Adopting a targeted therapy plan helps patients achieve recovery more quickly."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หวัง (คนไข้) 🧑‍💼",
+          "zh": "医生，这是您开的处方药，请问按时吃会有明显的副作用吗？",
+          "pinyin": "Yīshēng, zhè shì nín kāi de chǔfāng yào, qǐngwèn ànshí chī huì yǒu míngxiǎn de fùzuòyòng ma?",
+          "th": "คุณหมอครับ นี่คือยาตามใบสั่งที่คุณหมอสั่งจ่าย รบกวนถามว่าถ้าทานตรงเวลาจะมีผลข้างเคียงที่ชัดเจนไหมครับ?",
+          "en": "Doctor, this is the prescription medicine you prescribed, will taking it on time cause significant side effects?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์ผู้เชี่ยวชาญ) 👨‍⚕️",
+          "zh": "这种新型药物具备靶向机制，能精准缓解炎症，对肠胃的副作用非常微弱。",
+          "pinyin": "Zhè zhǒng xīnxíng yàowù jùbèi bǎxiàng jīzhì, néng jīngzhǔn huǎnjiě yánzhèng, duì chángwèi de fùzuòyòng fēicháng wēiruò.",
+          "th": "ยานวัตกรรมใหม่ตัวนี้มีกลไกมุ่งเป้า สามารถบรรเทาอาการอักเสบได้อย่างตรงจุด ผลข้างเคียงต่อกระเพาะลำไส้อ่อนมากครับ",
+          "en": "This new medication has a targeted mechanism that precisely relieves inflammation with very minimal gastrointestinal side effects."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หวัง (คนไข้) 🧑‍💼",
+          "zh": "那我就放心了。大概吃多久能够彻底康复呢？",
+          "pinyin": "Nà wǒ jiù fàngxīn le. Dàgài chī duō jiǔ nénggòu chèdǐ kāngfù ne?",
+          "th": "แบบนั้นผมก็เบาใจครับ ทานไปประมาณนานเท่าใดจึงจะฟื้นตัวหายดีเป็นปกติครับ?",
+          "en": "Then I am relieved. Approximately how long should I take it to achieve full recovery?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์ผู้เชี่ยวชาญ) 👨‍⚕️",
+          "zh": "坚持服药一周并注意休息，指标稳定后很快就能康复出院。",
+          "pinyin": "Jiānchí fúyào yì zhōu bìng zhùyì xiūxi, zhǐbiāo wěndìng hòu hěn kuài jiù néng kāngfù chūyuàn.",
+          "th": "ทานยาต่อเนื่องหนึ่งสัปดาห์ร่วมกับพักผ่อนให้เพียงพอ เมื่อค่าดัชนีนิ่งแล้ว ไม่นานก็ฟื้นฟูหายดีและออกจากโรงพยาบาลได้ครับ",
+          "en": "Persist with the medicine for a week and rest well; once metrics stabilize, you will soon recover and be discharged."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '处方药' (chǔfāng yào) หมายถึงยาประเภทใด?",
+          "options": [
+            "ยาที่ต้องมีใบสั่งแพทย์เท่านั้นจึงจะซื้อหรือรับประทานได้",
+            "ขนมขบเคี้ยวในร้านสะดวกซื้อ",
+            "ยาสมุนไพรที่เก็บได้ทั่วไปตามข้างทาง",
+            "วิตามินบำรุงที่ไม่มีข้อจำกัดใดๆ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'处方药' (Prescription drug) คือยาควบคุมที่ต้องได้รับการวินิจฉัยและสั่งจ่ายโดยแพทย์เท่านั้น",
+          "encouragement": "ยอดเยี่ยมมาก! เข้าใจกฎระเบียบและความปลอดภัยทางการแพทย์!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '靶向治疗' (bǎxiàng zhìliáo) สอดคล้องกับคำศัพท์ภาษาอังกฤษข้อใด?",
+          "options": [
+            "Targeted Therapy",
+            "Emergency Surgery",
+            "Blood Donation",
+            "Physical Therapy"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'靶向治疗' คือการรักษาแบบมุ่งเป้า (Targeted Therapy) ที่มุ่งเน้นทำลายเซลล์ก่อโรคอย่างตรงจุด",
+          "encouragement": "จำศัพท์การแพทย์สมัยใหม่ได้แม่นยำมาก!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ยานี้สามารถบรรเทาอาการปวดได้อย่างมีประสิทธิภาพ\"",
+          "tokens": [
+            "能够有效",
+            "这种药物",
+            "缓解疼痛"
+          ],
+          "correct_sequence": [
+            "这种药物",
+            "能够有效",
+            "缓解疼痛"
+          ],
+          "pinyin": "Zhè zhǒng yàowù nénggòu yǒuxiào huǎnjiě téngtòng.",
+          "meaning_th": "ยานี้สามารถบรรเทาอาการปวดได้อย่างมีประสิทธิภาพ",
+          "explanation_th": "ประธาน (这种药物) + กริยานุเคราะห์และคำวิเศษณ์ (能够有效) + กริยากรรม (缓解疼痛)",
+          "encouragement": "เรียงประโยคสรรพคุณยาได้อย่างถูกต้องแม่นยำ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '处方' ตัว '处' (chǔ - จัดการ/กำหนด) มีหมวดนำใด?",
+          "options": [
+            "虍 (หมวดเสือ 虎字头)",
+            "口 (หมวดปาก 口字旁)",
+            "目 (หมวดตา 目字旁)",
+            "足 (หมวดเท้า 足字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'处' มีหมวด '虍' (เสือ) อยู่ด้านบน สื่อถึงการตัดสินใจอย่างเด็ดขาดและรอบคอบ",
+          "encouragement": "วิเคราะห์หมวดนำอักษรจีนได้อย่างลึกซึ้ง!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u38_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "中西医结合与养生之道",
+        "th": "การแพทย์แผนจีนผสมผสานและศาสตร์แห่งการบำรุง",
+        "en": "Integrative Medicine & TCM Balance"
+      },
+      "can_do": {
+        "th": "อธิบายแนวคิดหยินหยาง พลังลมปราณ การปรับสมดุลธาตุ และใช้สำนวน 对症下药",
+        "en": "Explain Yin-Yang balance, Qi and blood, TCM conditioning, and the idiom 对症下药"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้สำนวน 对症下药 ในบริบทการแพทย์และการแก้ปัญหาชีวิตจริง!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3811",
+          "hanzi": "阴阳",
+          "pinyin": "yīnyáng",
+          "display_pinyin": "yīnyáng",
+          "pinyin_tone": "yin1yang2",
+          "meaning_th": "หยินหยาง / ความสมดุลของพลังเย็นและร้อนในร่างกาย",
+          "meaning_en": "Yin and Yang / complementary forces",
+          "radical": "阝",
+          "radical_name_th": "หมวดเนินดินซ้าย (左耳旁)",
+          "stroke_count": 12,
+          "mnemonic": "ฝั่งเงาในร่ม (阴) และฝั่งรับแสงตะวันอบอุ่น (阳) = สองขั้วหยินหยางที่สมดุล",
+          "kid_mnemonic": "วงกลมไทเก๊กสีขาวดำหมุนเวียนสร้างความสมดุลให้ร่างกายแข็งแรง = 阴阳",
+          "body_gesture": "สองมือหมุนวนเป็นวงกลมประกบกันตรงกลางอก"
+        },
+        {
+          "id": "hsk3_3812",
+          "hanzi": "气血",
+          "pinyin": "qìxuè",
+          "display_pinyin": "qìxuè",
+          "pinyin_tone": "qi4xue4",
+          "meaning_th": "พลังลมปราณและโลหิต (ชี่และเลือด)",
+          "meaning_en": "vital energy and blood in TCM",
+          "radical": "气",
+          "radical_name_th": "หมวดลมปราณ (气字头)",
+          "stroke_count": 10,
+          "mnemonic": "ลมปราณที่หล่อเลี้ยงอวัยวะ (气) และกระแสเลือดสีแดงที่ไหลเวียน (血) = ชี่และเลือด",
+          "kid_mnemonic": "สายธารน้ำสีทองและหยดเลือดสีแดงไหลเวียนหล่อเลี้ยงต้นไม้ใหญ่ = 气血",
+          "body_gesture": "เอามือกุมท้องน้อยแล้วลูบขึ้นมายังหน้าอกแสดงการไหลเวียนของลมปราณ"
+        },
+        {
+          "id": "hsk3_3813",
+          "hanzi": "调理",
+          "pinyin": "tiáolǐ",
+          "display_pinyin": "tiáolǐ",
+          "pinyin_tone": "tiao2li3",
+          "meaning_th": "ปรับสมดุลธาตุ / ดูแลฟื้นฟูร่างกายด้วยวิธีธรรมชาติ",
+          "meaning_en": "to nurse / condition one's health",
+          "radical": "讠",
+          "radical_name_th": "หมวดคำพูด (言字旁)",
+          "stroke_count": 21,
+          "mnemonic": "ปรับแต่งให้กลมกลืน (调) ตามหลักการธรรมชาติของเนื้อหยก (理) = บำรุงปรับสมดุล",
+          "kid_mnemonic": "กาน้ำชาสมุนไพรจีนที่ส่งกลิ่นหอมอบอวลช่วยฟื้นฟูเรี่ยวแรง = 调理",
+          "body_gesture": "ทำท่าประคองถ้วยยาอุ่นๆ ขึ้นดื่มแล้วลูบท้องสบาย"
+        },
+        {
+          "id": "hsk3_3814",
+          "hanzi": "对症下药",
+          "pinyin": "duì zhèng xià yào",
+          "display_pinyin": "duì zhèng xià yào",
+          "pinyin_tone": "dui4 zheng4 xia4 yao4",
+          "meaning_th": "จ่ายยาตรงตามโรค / วิเคราะห์และแก้ปัญหาได้ตรงจุดเป๊ะ",
+          "meaning_en": "suit the medicine to the illness / take targeted measures",
+          "radical": "又",
+          "radical_name_th": "หมวดโย่ว (又字旁)",
+          "stroke_count": 37,
+          "mnemonic": "ตรวจตรงตาม (对) อาการของโรค (症) แล้วสั่งจ่าย (下) ตัวยาที่ถูกต้อง (药) = จ่ายยาตรงโรค",
+          "kid_mnemonic": "หมอตรวจพบว่าตัวร้อนปุ๊บก็หยิบขวดยาลดไข้สีเขียวให้ทันที ไข้ลดฮวบ = 对症下药",
+          "body_gesture": "ชี้นิ้วตรงไปข้างหน้าแล้วทำท่าหยิบยาป้อนอย่างมั่นใจ"
+        },
+        {
+          "id": "hsk3_3815",
+          "hanzi": "针灸",
+          "pinyin": "zhēnjiǔ",
+          "display_pinyin": "zhēnjiǔ",
+          "pinyin_tone": "zhen1jiu3",
+          "meaning_th": "การฝังเข็มและการรมยา (ศาสตร์แพทย์แผนจีน)",
+          "meaning_en": "acupuncture and moxibustion",
+          "radical": "钅",
+          "radical_name_th": "หมวดโลหะ (金字旁)",
+          "stroke_count": 17,
+          "mnemonic": "เข็มเงินบริสุทธิ์ (针) ร่วมกับการรมควันสมุนไพรโกฐจุฬาลัมพา (灸) = การฝังเข็มรมยา",
+          "kid_mnemonic": "เข็มเงินบางเฉียบฝังลงบนจุดชีพจรช่วยให้เส้นลมปราณโล่งสบาย = 针灸",
+          "body_gesture": "ใช้นิ้วชี้แตะเบาๆ ตามจุดชีพจรที่แขน"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงสำนวน 对症下药 (duì zhèng xià yào)",
+        "description_th": "ทั้ง 4 พยางค์ล้วนเป็นเสียง 4 ทั้งหมด (duì, zhèng, xià, yào) ให้ลงน้ำหนักชัดเจนทีละพยางค์อย่างกระชับและหนักแน่น",
+        "example": "解决问题必须对症下药！",
+        "fun_metaphor": "เหมือนประทับตรายางรับรองความถูกต้อง 4 ครั้งรวด: ปึ้ก! ปึ้ก! ปึ้ก! ปึ้ก!",
+        "reassurance": "สำนวนนี้ใช้ได้ทั้งการรักษาโรคและการแก้ปัญหาในการทำงานอย่างมืออาชีพ"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการแก้ไขปัญหาตรงจุด: 只有对症下药，才能从根本上...",
+        "explanation_th": "ใช้เน้นย้ำว่าการแก้ปัญหาไม่ว่าจะเป็นสุขภาพหรือการทำงาน ต้องหาสาเหตุที่แท้จริงก่อนลงมือ",
+        "patterns": [
+          {
+            "formula": "只有对症下药，才能从根本上 + [แก้ไขปัญหา/รักษา]",
+            "zh": "治病如治企，只有对症下药，才能从根本上解决健康隐患。",
+            "pinyin": "Zhìbìng rú zhìqǐ, zhǐyǒu duì zhèng xià yào, cái néng cóng gēnběn shàng jiějué jiànkāng yǐnhuàn.",
+            "th": "การรักษาโรคดั่งการบริหารองค์กร มีแต่ต้องจ่ายยาตรงตามโรคเท่านั้น จึงจะขจัดภัยเงียบด้านสุขภาพได้จากต้นตอ",
+            "en": "Curing illness is like running a company; only by suiting the remedy to the case can health risks be fundamentally resolved."
+          },
+          {
+            "formula": "通过中医调理，以达到阴阳平衡",
+            "zh": "通过针灸和食疗调理，能够有效调和气血，达到阴阳平衡。",
+            "pinyin": "Tōngguò zhēnjiǔ hé shíliáo tiáolǐ, nénggòu yǒuxiào tiáohé qìxuè, dádào yīnyáng pínghéng.",
+            "th": "การปรับสมดุลด้วยการฝังเข็มและอาหารบำบัด สามารถประสานลมปราณและโลหิตจนบรรลุสมดุลหยินหยาง",
+            "en": "Through acupuncture and dietary therapy, one can harmonize Qi and blood to achieve Yin-Yang balance."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (คนไข้) 🧑‍💼",
+          "zh": "张大夫，西医检查说我没大毛病，但我总觉得气血不足、畏寒怕冷。",
+          "pinyin": "Zhāng dàifu, xīyī jiǎnchá shuō wǒ méi dà máobìng, dàn wǒ zǒng juéde qìxuè bùzú, wèihán pàlěng.",
+          "th": "คุณหมอจางครับ การตรวจแพทย์แผนปัจจุบันบอกว่าผมไม่ได้เป็นโรคร้ายแรงอะไร แต่ผมมักรู้สึกว่าลมปราณและเลือดพร่อง ขี้หนาวมากครับ",
+          "en": "Doctor Zhang, western medicine tests said I have no major illness, but I always feel lacking in Qi and blood, feeling very sensitive to cold."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์แผนจีนอาวุโส) 👨‍⚕️",
+          "zh": "从中医角度看，这是长期过度劳累导致的体内阴阳失调。我们需要对症下药。",
+          "pinyin": "Cóng zhōngyī jiǎodù kàn, zhè shì chángqī guòdù láolèi dǎozhì de tǐnèi yīnyáng shītiáo. Wǒmen xūyào duì zhèng xià yào.",
+          "th": "เมื่อมองจากมุมมองแพทย์แผนจีน นี่คือความไม่สมดุลของหยินหยางภายในร่างกายที่เกิดจากการตรากตรำทำงานหนักสะสมครับ พวกเราจำเป็นต้องแก้ปัญหาให้ตรงจุด",
+          "en": "From a TCM perspective, this is a Yin-Yang imbalance caused by prolonged exhaustion. We need to suit the medicine to the case."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (คนไข้) 🧑‍💼",
+          "zh": "那您建议怎么治疗呢？需要吃苦药汤吗？",
+          "pinyin": "Nà nín jiànyì zěnme zhìliáo ne? Xūyào chī kǔ yàotāng ma?",
+          "th": "แล้วคุณหมอแนะนำให้รักษาอย่างไรครับ? ต้องดื่มยาต้มขมๆ ไหมครับ?",
+          "en": "Then how do you suggest treating it? Do I need to drink bitter medicinal decoctions?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (แพทย์แผนจีนอาวุโส) 👨‍⚕️",
+          "zh": "我们可以结合针灸疏通经络，再配合温和的中药调理气血，标本兼治。",
+          "pinyin": "Wǒmen kěyǐ jiéhé zhēnjiǔ shūtōng jīngluò, zài pèihé wēnhé de zhōngyào tiáolǐ qìxuè, biāoběn jiānzhì.",
+          "th": "พวกเราสามารถผสานการฝังเข็มเพื่อเปิดทางเส้นลมปราณ ร่วมกับยาสมุนไพรจีนฤทธิ์อุ่นเพื่อปรับสมดุลเลือดลม รักษาทั้งอาการและต้นเหตุไปพร้อมกันครับ",
+          "en": "We can combine acupuncture to unblock meridians with gentle Chinese herbal medicine to regulate Qi and blood, treating both symptoms and root causes."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "สำนวน '对症下药' (duì zhèng xià yào) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "การจ่ายยาตรงตามโรค หรือการแก้ไขปัญหาได้ตรงจุดจากต้นตอ",
+            "การแจกยาฟรีให้ทุกคนเหมือนกันหมด",
+            "การปฏิเสธไม่ยอมรักษาคนไข้",
+            "การสั่งยาเกินขนาดจนเกิดอันตราย"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'对症下药' หมายถึง การสั่งจ่ายยาที่ตรงกับอาการของโรค หรือเปรียบเปรยถึงการแก้ปัญหาได้ตรงจุดแม่นยำ",
+          "encouragement": "ถูกต้องยอดเยี่ยม! จับใจความสำนวนจีนระดับ Master ได้แม่นยำมาก!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "ในศาสตร์แพทย์แผนจีน คำว่า '针灸' (zhēnjiǔ) ประกอบด้วยวิธีรักษา 2 สิ่งใด?",
+          "options": [
+            "การฝังเข็ม (针) และการรมยาด้วยสมุนไพร (灸)",
+            "การผ่าตัดและการดมยาสลบ",
+            "การออกกำลังกายและการวิ่งมาราธอน",
+            "การนวดแผนโบราณและการประคบน้ำแข็ง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'针灸' รวมศาสตร์ '针' (ฝังเข็มเงินตามจุดชีพจร) และ '灸' (รมควันความร้อนด้วยใบโกฐจุฬาลัมพา)",
+          "encouragement": "แม่นยำมาก! รู้ลึกถึงศาสตร์มรดกการแพทย์จีน!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"มีแต่แก้ปัญหาให้ตรงจุดเท่านั้น จึงจะขจัดอันตรายต่อสุขภาพได้จากต้นตอ\"",
+          "tokens": [
+            "解决健康隐患",
+            "只有对症下药",
+            "才能从根本上"
+          ],
+          "correct_sequence": [
+            "只有对症下药",
+            "才能从根本上",
+            "解决健康隐患"
+          ],
+          "pinyin": "Zhǐyǒu duì zhèng xià yào, cái néng cóng gēnběn shàng jiějué jiànkāng yǐnhuàn.",
+          "meaning_th": "มีแต่แก้ปัญหาให้ตรงจุดเท่านั้น จึงจะขจัดภัยเงียบต่อสุขภาพได้จากต้นตอ",
+          "explanation_th": "เงื่อนไขเด็ดขาด (只有对症下药) + กริยานุเคราะห์และที่มา (才能从根本上) + กริยากรรม (解决健康隐患)",
+          "encouragement": "ประกอบประโยคปรัชญาสุขภาพได้อย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '针灸' ตัว '针' (zhēn - เข็ม) มีหมวดนำใด?",
+          "options": [
+            "钅 (หมวดโลหะ 金字旁)",
+            "木 (หมวดไม้ 木字旁)",
+            "火 (หมวดไฟ 火字旁)",
+            "水 (หมวดน้ำ 水字旁)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'针' มีหมวด '钅' (โลหะ) สื่อถึงเข็มที่หลอมทำจากโลหะเงินหรือเหล็กกล้าสำหรับใช้ฝังจุดชีพจร",
+          "encouragement": "เข้าใจรากศัพท์อุปกรณ์การแพทย์ได้อย่างแม่นยำ!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u38_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "预防医学与健康生活",
+        "th": "เวชศาสตร์ป้องกันและวิถีชีวิตสุขภาพดี",
+        "en": "Preventive Medicine & Longevity Lifestyle"
+      },
+      "can_do": {
+        "th": "อธิบายหลักเวชศาสตร์ป้องกัน การจัดโภชนาการ และการชะลอวัยให้สุขภาพยืนยาว (延年益寿)",
+        "en": "Discuss preventive medicine, balanced diet, and longevity lifestyle habits"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องสุขนิสัยที่ดีต่อสุขภาพ และพิชิต Boss Challenge ผู้เชี่ยวชาญการแพทย์ผสมผสาน!",
+      "vocabulary": [
+        {
+          "id": "hsk3_3816",
+          "hanzi": "预防",
+          "pinyin": "yùfáng",
+          "display_pinyin": "yùfáng",
+          "pinyin_tone": "yu4fang2",
+          "meaning_th": "ป้องกันล่วงหน้า (ก่อนเกิดเหตุหรือโรค)",
+          "meaning_en": "to prevent / prevention",
+          "radical": "予",
+          "radical_name_th": "หมวดให้/เตรียมล่วงหน้า (予字旁)",
+          "stroke_count": 15,
+          "mnemonic": "เตรียมพร้อมล่วงหน้า (预) สร้างแนวป้องกันโรค (防) = ป้องกันล่วงหน้า",
+          "kid_mnemonic": "กางร่มคันใหญ่ก่อนที่ฝนจะตกลงมาเม็ดแรก = 预防",
+          "body_gesture": "ยกสองมือขึ้นกั้นข้างหน้าแสดงการป้องกันล่วงหน้า"
+        },
+        {
+          "id": "hsk3_3817",
+          "hanzi": "膳食",
+          "pinyin": "shànshí",
+          "display_pinyin": "shànshí",
+          "pinyin_tone": "shan4shi2",
+          "meaning_th": "อาหารการกินและโภชนาการ (ภาษาทางการ)",
+          "meaning_en": "diet / meals and nutrition",
+          "radical": "月",
+          "radical_name_th": "หมวดเนื้อ (月字旁)",
+          "stroke_count": 24,
+          "mnemonic": "อาหารรสเลิศปรุงอย่างดี (膳) สำหรับรับประทานอย่างมีคุณค่า (食) = โภชนาการ",
+          "kid_mnemonic": "จานอาหารโภชนาการที่มีผักหลากสี ข้าวกล้อง และปลาแซลมอนสด = 膳食",
+          "body_gesture": "ทำท่าหยิบตะเกียบเตรียมคีบอาหารเพื่อสุขภาพ"
+        },
+        {
+          "id": "hsk3_3818",
+          "hanzi": "规律",
+          "pinyin": "guīlǜ",
+          "display_pinyin": "guīlǜ",
+          "pinyin_tone": "gui1lu:4",
+          "meaning_th": "มีแบบแผนเป็นเวลา / สม่ำเสมอตามกฎเกณฑ์",
+          "meaning_en": "regular pattern / law of nature",
+          "radical": "见",
+          "radical_name_th": "หมวดพบเห็น (见字旁)",
+          "stroke_count": 17,
+          "mnemonic": "วงเวียนสร้างขอบเขต (规) กฎเกณฑ์ที่แน่นอน (律) = แบบแผนสม่ำเสมอ",
+          "kid_mnemonic": "นาฬิกาปลุกดังตรงเวลา 6 โมงเช้าทุกวันพระอาทิตย์ขึ้น = 规律",
+          "body_gesture": "ทำท่าชี้นาฬิกาข้อมือแสดงความตรงต่อเวลาสม่ำเสมอ"
+        },
+        {
+          "id": "hsk3_3819",
+          "hanzi": "保健",
+          "pinyin": "bǎojiàn",
+          "display_pinyin": "bǎojiàn",
+          "pinyin_tone": "bao3jian4",
+          "meaning_th": "การรักษาสุขภาพ / เวชภัณฑ์ดูแลบำรุงสุขภาพ",
+          "meaning_en": "health care / health preservation",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 18,
+          "mnemonic": "คุ้มครองรักษา (保) สุขภาพร่างกายให้แข็งแรงเสมอ (健) = การรักษาสุขภาพ",
+          "kid_mnemonic": "กล่องยาวิตามินสมุนไพรที่มีหัวใจสีแดงและต้นไม้สีเขียว = 保健",
+          "body_gesture": "สองมือทำท่าโอบกอดร่างกายด้วยความอบอุ่น"
+        },
+        {
+          "id": "hsk3_3820",
+          "hanzi": "延年益寿",
+          "pinyin": "yán nián yì shòu",
+          "display_pinyin": "yán nián yì shòu",
+          "pinyin_tone": "yan2 nian2 yi4 shou4",
+          "meaning_th": "ยืดอายุขัย ชะลอวัย สุขภาพยืนยาวและแข็งแรง",
+          "meaning_en": "prolong life / enhance longevity",
+          "radical": "廴",
+          "radical_name_th": "หมวดลากยาว (建字底)",
+          "stroke_count": 27,
+          "mnemonic": "ยืดระยะเวลา (延) แห่งปีเดือน (年) เพื่อเพิ่มพูน (益) อายุขัยยืนยาว (寿) = อายุยืนยาว",
+          "kid_mnemonic": "ลูกท้อสวรรค์แห่งความมีอายุวัฒนะเปล่งแสงสีชมพูทอง = 延年益寿",
+          "body_gesture": "สองมือประสานคารวะอวยพรให้อายุยืนหมื่นๆ ปี"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงสำนวน 延年益寿 (yán nián yì shòu)",
+        "description_th": "yán และ nián เป็นเสียง 2 คู่ ตามด้วย yì (เสียง 4) และ shòu (เสียง 4) ให้ไต่เสียงขึ้นนุ่มนวลแล้วลงน้ำหนักหนักแน่นมั่นคง",
+        "example": "科学养生，延年益寿！",
+        "fun_metaphor": "เหมือนแล่นเรือขึ้นสู่ยอดเขา ฮึบ... ฮึบ... แล้วปักธงชัยมั่นคง ตึ้ก! ตึ้ก!",
+        "reassurance": "สำนวน 4 พยางค์นี้ไพเราะและเปี่ยมความหมายมงคล ใช้พูดอวยพรหรือสนทนาวิชาการได้งดงาม"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างปรัชญาเวชศาสตร์ป้องกัน: 上医治未病 / 预防胜于治疗",
+        "explanation_th": "ใช้ในการสนับสนุนการดูแลสุขภาพเชิงป้องกันก่อนที่โรคจะลุกลาม",
+        "patterns": [
+          {
+            "formula": "俗话说“预防胜于治疗”，我们要保持...",
+            "zh": "俗话说“预防胜于治疗”，保持规律的作息和均衡的膳食才是养生关键。",
+            "pinyin": "Súhuà shuō “yùfáng shèng yú zhìliáo”, bǎochí guīlǜ de zuòxī hé jūnhéng de shànshí cái shì yǎngshēng guānjiàn.",
+            "th": "สุภาษิตกล่าวว่า \"การป้องกันย่อมดีกว่าการรักษา\" การรักษาเวลาชีวิตให้สม่ำเสมอและทานอาหารที่สมดุลจึงเป็นหัวใจของการดูแลสุขภาพ",
+            "en": "As the saying goes, \"prevention is better than cure\"; maintaining a regular routine and balanced diet is the key to wellness."
+          },
+          {
+            "formula": "坚持科学保健，方能延年益寿",
+            "zh": "坚持科学保健与适度运动，方能强身健体、延年益寿。",
+            "pinyin": "Jiānchí kēxué bǎojiàn yǔ shìdù yùndòng, fāng néng qiángshēn jiàntǐ, yán nián yì shòu.",
+            "th": "ยึดมั่นในการดูแลสุขภาพตามหลักวิทยาศาสตร์และออกกำลังกายพอเหมาะ จึงจะทำให้ร่างกายแข็งแกร่งและอายุยืนยาว",
+            "en": "Persisting in scientific healthcare and moderate exercise is the only way to strengthen the body and prolong life."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้รักสุขภาพ) 👩‍💼",
+          "zh": "张医生，古人常说“上医治未病”，在现代生活中我们该如何落实呢？",
+          "pinyin": "Zhāng yīshēng, gǔrén cháng shuō “shàng yī zhì wèi bìng”, zài xiàndài shēnghuó zhōng wǒmen gāi rúhé luòshí ne?",
+          "th": "คุณหมอจางคะ คนโบราณมักกล่าวว่า \"แพทย์ชั้นยอดรักษาโรคก่อนเกิด\" ในชีวิตยุคปัจจุบันพวกเราควรนำมาปฏิบัติอย่างไรดีคะ?",
+          "en": "Doctor Zhang, ancients often said \"the superior physician treats illness before it arises,\" how should we implement this in modern life?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (ผู้เชี่ยวชาญเวชศาสตร์ป้องกัน) 👨‍⚕️",
+          "zh": "核心就在于预防医学。注重均衡膳食，保持规律作息，及时排解压力。",
+          "pinyin": "Héxīn jiù zàiyú yùfáng yīxué. Zhùzhòng jūnhéng shànshí, bǎochí guīlǜ zuòxī, jíshí páijiě yālì.",
+          "th": "แก่นแท้อยู่ที่เวชศาสตร์ป้องกันครับ ให้ความสำคัญกับอาหารการกินที่สมดุล รักษาเวลาชีวิตให้สม่ำเสมอ และระบายความเครียดอย่างทันท่วงที",
+          "en": "The core lies in preventive medicine: focus on a balanced diet, maintain regular routines, and relieve stress timely."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้รักสุขภาพ) 👩‍💼",
+          "zh": "明白了，盲目购买昂贵的保健品，真不如养成健康的生活习惯。",
+          "pinyin": "Míngbai le, mángmù gòumǎi ángguì de bǎojiànpǐn, zhēn bùrú yǎngchéng jiànkāng de shēnghuó xíguàn.",
+          "th": "เข้าใจแล้วค่ะ การหลับหูหลับตาซื้อผลิตภัณฑ์บำรุงราคาแพง สู้สร้างอุปนิสัยการใช้ชีวิตที่ดีต่อสุขภาพไม่ได้เลยจริงๆ",
+          "en": "Understood, blindly buying expensive health supplements is truly inferior to cultivating healthy living habits."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "หมอจาง (ผู้เชี่ยวชาญเวชศาสตร์ป้องกัน) 👨‍⚕️",
+          "zh": "正是如此！未雨绸缪，科学养生，身心自能生机勃勃、延年益寿！",
+          "pinyin": "Zhèng shì rúcǐ! Wèiyǔchóumóu, kēxué yǎngshēng, shēnxīn zì néng shēngjībóbó, yán nián yì shòu!",
+          "th": "ถูกต้องอย่างยิ่งครับ! เตรียมพร้อมรับมือก่อนเกิดเหตุ ดูแลสุขภาพอย่างมีหลักการ ทั้งกายและใจย่อมเปี่ยมด้วยพลังชีวิตและอายุยืนยาวครับ!",
+          "en": "Precisely! Preparing in advance and living scientifically will naturally make mind and body thrive with vitality and longevity!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "สำนวน '延年益寿' (yán nián yì shòu) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "การมีสุขภาพสมบูรณ์แข็งแรง ชะลอวัย และมีอายุยืนยาว",
+            "การประหยัดเงินในบัญชีธนาคาร",
+            "การเดินทางท่องเที่ยวรอบโลก",
+            "การชนะการแข่งขันตอบปัญหา"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'延年益寿' แปลตรงตัวว่า ยืดอายุขัยและเพิ่มพูนความมีอายุวัฒนะ หรือสุขภาพดีมีอายุยืนยาว",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจสำนวนมงคลสุขภาพของจีนได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "ประโยค '预防胜于治疗' แปลเป็นสำนวนไทยตรงกับข้อใด?",
+          "options": [
+            "การป้องกันย่อมดีกว่าการรักษา",
+            "น้ำขึ้นให้รีบตัก",
+            "ช้าๆ ได้พร้าเล่มงาม",
+            "เข้าเมืองตาหลิ่วต้องหลิ่วตาตาม"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'预防胜于治疗' คือหลักสากลที่ว่า 'การป้องกันย่อมดีกว่าการตามรักษาเมื่อเกิดโรค'",
+          "encouragement": "แม่นยำมาก! เข้าใจสุภาษิตทางการแพทย์ได้อย่างยอดเยี่ยม!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"การป้องกันย่อมดีกว่าการรักษา การมีชีวิตที่มีแบบแผนคือสิ่งสำคัญ\"",
+          "tokens": [
+            "才是养生关键",
+            "预防胜于治疗",
+            "保持规律作息"
+          ],
+          "correct_sequence": [
+            "预防胜于治疗",
+            "保持规律作息",
+            "才是养生关键"
+          ],
+          "pinyin": "Yùfáng shèng yú zhìliáo, bǎochí guīlǜ zuòxī cái shì yǎngshēng guānjiàn.",
+          "meaning_th": "การป้องกันย่อมดีกว่าการรักษา การรักษาเวลาชีวิตสม่ำเสมอคือหัวใจสำคัญ",
+          "explanation_th": "สุภาษิตเกริ่นนำ (预防胜于治疗) + เงื่อนไขการปฏิบัติ (保持规律作息) + ข้อสรุปสำคัญ (才是养生关键)",
+          "encouragement": "ประกอบประโยคคติพจน์สุขภาพได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '膳食' ตัว '食' (shí - อาหาร/รับประทาน) มีความหมายดั้งเดิมถึงสิ่งใด?",
+          "options": [
+            "ภาชนะใส่อาหารและเมล็ดข้าวสำหรับบริโภค",
+            "เปลวไฟที่ใช้ต้มน้ำ",
+            "กระเป๋าเดินทาง",
+            "เครื่องดนตรีโบราณ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'食' มาจากรูปวาดภาชนะปิดฝาใส่อาหาร บ่งบอกถึงการบริโภคอาหารที่มอบพลังงานแก่ชีวิต",
+          "encouragement": "เข้าใจลึกซึ้งถึงวิวัฒนาการอักษรจีนโบราณ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในเวทีสัมมนานานาชาติเรื่อง \"อนาคตแห่งการแพทย์ผสมผสานและสุขภาวะสังคมสูงวัย\" ผู้ดำเนินรายการถามว่า \"เราจะบูรณาการการแพทย์สมัยใหม่เข้ากับภูมิปัญญาแพทย์แผนจีนเพื่อยกระดับคุณภาพชีวิตอย่างยั่งยืนได้อย่างไร?\" คุณควรตอบอย่างไรให้ครอบคลุมและทรงคุณค่า?",
+        "options": [
+          "现代医学精准诊疗与中医调理阴阳相辅相成，唯有坚持对症下药与预防医学，注重合理膳食与规律生活，才能从根本上改善亚健康，实现全民的延年益寿！ (Xiàndài yīxué jīngzhǔn zhěnliáo yǔ zhōngyī tiáolǐ yīnyáng xiāngfǔ-xiāngchéng, wéiyǒu jiānchí duì zhèng xià yào yǔ yùfáng yīxué, zhùzhòng hélǐ shànshí yǔ guīlǜ shēnghuó, cái néng cóng gēnběn shàng gǎishàn yàjiànkāng, shíxiàn quánmín de yán nián yì shòu!)",
+          "吃药没用，只要每天喝热水就可以包治百病。 (Chī yào méi yòng, zhǐyào měitiān hē rèshuǐ jiù kěyǐ bāo zhì bǎi bìng.)",
+          "大家生病了就自己去网上查查，不要去医院浪费时间。 (Dàjiā shēngbìng le jiù zìjǐ qù wǎngshang chácha, bú yào qù yīyuàn làngfèi shíjiān.)",
+          "请问会场外面的救护车多少钱一辆？ (Qǐngwèn huìchǎng wàimiàn de jiùhùchē duōshao qián yí liàng?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '现代医学精准诊疗与中医调理阴阳相辅相成...实现全民的延年益寿！' บูรณาการทั้งการวินิจฉัยแม่นยำ, การปรับสมดุลหยินหยาง, สำนวน 对症下药, และเวชศาสตร์ป้องกันเพื่ออายุวัฒนะ (延年益寿) ไว้อย่างสมบูรณ์แบบที่สุด",
+        "encouragement": "ยินดีด้วย! คุณพิชิต Boss Challenge ได้รับการยกย่องในฐานะผู้เชี่ยวชาญการแพทย์ระดับสากล!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t3_u38_master",
+        "badge_name": "ปรมาจารย์เวชศาสตร์ป้องกันและสมดุลอายุวัฒนะ 🏥☯️",
+        "message_th": "สุดยอดมาก! คุณได้พิชิตบทเรียนยูนิตที่ 38 สำเร็จอย่างงดงาม เชี่ยวชาญศัพท์การแพทย์สมัยใหม่ ปรัชญาหยินหยาง และศาสตร์การชะลอวัยระดับ Master!",
+        "xp_reward": 300
+      }
+    }
+  ]
+}
