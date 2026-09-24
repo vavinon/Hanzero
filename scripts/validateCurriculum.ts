@@ -34,7 +34,7 @@ function parseArgs(args: string[]): ValidationOptions & { json?: boolean } {
     const arg = args[i];
     if (arg === '--tier' && i + 1 < args.length) {
       const val = args[++i];
-      if (val === '0' || val === '1' || val === '2' || val === '3' || val === 'all') {
+      if (val === '0' || val === '1' || val === '2' || val === '3' || val === '4' || val === 'all') {
         options.tier = val;
       }
     } else if (arg === '--unit' && i + 1 < args.length) {
