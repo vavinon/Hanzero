@@ -7,9 +7,9 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6_Strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Vitest](https://img.shields.io/badge/Tests-552_Passed-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
-[![Playwright](https://img.shields.io/badge/Playwright_E2E-18_Passed-45BA4B?logo=playwright&logoColor=white)](https://playwright.dev/)
-[![Bundle Budget](https://img.shields.io/badge/Student_JS-97.3_KB-success)](https://github.com/)
+[![Vitest](https://img.shields.io/badge/Tests-1176_Passed-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
+[![Playwright](https://img.shields.io/badge/Playwright_E2E-42_Passed-45BA4B?logo=playwright&logoColor=white)](https://playwright.dev/)
+[![Bundle Budget](https://img.shields.io/badge/Student_JS-99.8_KB-success)](https://github.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [🌐 ทดลองใช้งาน (Live Demo)](#) • [📖 เอกสารสถาปัตยกรรม (Docs)](./docs/README.md) • [🗺️ แผนแม่บท 8 เฟส](./docs/plan/README.md) • [🛠️ Content Studio](#-สตูดิโอสร้างบทเรียน-in-browser-content-authoring-studio)
@@ -113,8 +113,8 @@ flowchart LR
 | **Phase 4** | Tier 0 Pinyin Mastery | ปูพื้นฐานเสียงพินอินครบ 6 Units, ตรวจสุขภาพเสียง OS, Tone Coaster, Echo Mic | `DONE` ✅ |
 | **Phase 5** | Tier 1 Production Rollout | ปล่อยเนื้อหา Tier 1 ครบ 10 Units (40 บทย่อย), Grand Boss Quests, และ CI/CD | `DONE` ✅ |
 | **Phase 6** | Content Authoring Studio | เครื่องมือสร้างบทเรียนบนเบราว์เซอร์, In-Browser Linter, และ Zero-Token Git Hand-off | `DONE` ✅ |
-| **Phase 7** | Tier 2 Traveler Quest | เนื้อหาเอาตัวรอดในยุคดิจิทัล (สแกนจ่าย, รถไฟความเร็วสูง, เดลิเวอรี่, โรงพยาบาล) | `UPCOMING` 🚀 |
-| **Phase 8** | Tier 3-4 Advanced Immersion | เจรจาธุรกิจ, 成语 Story Explorer, เครื่องมือตัดคำอัตโนมัติ, และโหมดพอดแคสต์ | `PLANNED` 📋 |
+| **Phase 7** | Tier 2 Traveler Quest | เนื้อหาเอาตัวรอดในยุคดิจิทัล (สแกนจ่าย, รถไฟความเร็วสูง, เดลิเวอรี่, โรงพยาบาล) | `DONE` ✅ |
+| **Phase 8** | Tier 3-4 Advanced Immersion | เจรจาธุรกิจ, 成语 Story Explorer, เครื่องมือตัดคำอัตโนมัติ, โหมดพอดแคสต์ และ Voice Pitching 2.0 | `DONE` ✅ |
 
 ---
 
@@ -128,14 +128,20 @@ src/
 │   ├── pinyin/          # แปลงพินอินและวิเคราะห์ Tone Sandhi
 │   ├── srs/             # คำนวณช่วงเวลาการทบทวน SuperMemo SM-2
 │   ├── storage/         # ระบบบันทึกข้อมูลสองชั้น (Hot/Cold Persistence)
+│   ├── reader/          # ระบบตัดคำอัจฉริยะ Intl.Segmenter
+│   ├── idiom/           # เอนจินสำนวน成语 Lore & Dilemma
 │   └── studio/          # เครื่องมือตรวจแก้บทเรียน (Linter & Git Hand-off)
 ├── components/          # Presentation Layer (ส่วนแสดงผล UI)
 │   ├── common/          # ปุ่มกดสปริง, HeartMeter, Modal, ProgressBar
-│   ├── layout/          # HeaderBar, BottomNav, DevStorageDrawer
+│   ├── layout/          # HeaderBar, BottomNav, DevStorageDrawer, ImmersionHub
 │   ├── lesson/          # VocabCard, DialoguePlayer, QuizContainer, GrammarBite
 │   ├── games/           # ToneCoaster, EchoMicRecorder, MinimalPairBoard
+│   ├── reader/          # ImmersionArticleReader
+│   ├── idiom/           # IdiomExplorer, IdiomDilemmaCard
+│   ├── audio/           # NativeSpeedAudioLadder, PodcastPlayerSheet
+│   ├── voice/           # VoicePitchingRecorder
 │   └── studio/          # StudioLayout, Composers, MobilePreviewFrame, GitExportModal
-├── data/lessons/        # ฐานข้อมูลบทเรียน JSON (Tier 0 & Tier 1 รวม 16 Units)
+├── data/lessons/        # ฐานข้อมูลบทเรียน JSON (ครบทุก Tier 0 ถึง Tier 4 รวม 63 Units / 234 Lessons)
 ├── hooks/               # สะพานเชื่อม React State กับ Core Engines
 └── styles/              # Design System (Modern Oriental Minimalism)
 ```
