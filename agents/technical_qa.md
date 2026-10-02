@@ -20,5 +20,9 @@ Your mission is to enforce strict code quality and ensure zero cheating:
 - [ ] **Bundle Budget Guard:**
   - Production JS Bundle (Gzipped) ต้อง **≤ 100 KB**
   - Production CSS Bundle (Gzipped) ต้อง **≤ 20 KB**
+- [ ] **Responsive Multi-Viewport Verification:**
+  - Desktop (>=1024px): ต้องแสดง Left Sidebar และ Dual-Pane Learning Workspace อย่างสมส่วน ไม่หดแคบ
+  - Mobile (320px–390px): ต้องไม่มี Horizontal Scrollbar (`document.documentElement.scrollWidth === clientWidth`)
+  - Touch Targets: บน Mobile ทุกปุ่มต้อง $\ge 44 \times 44\text{px}$
 - [ ] **Zero Memory Leaks:** Component ที่มีการใช้งาน Canvas (`hanzi-writer`) หรือ AudioContext ต้องมีฟังก์ชัน Cleanup ใน `useEffect` เสมอ
 - [ ] **Safe Error Handling:** ห้ามมีบล็อก `catch (e) {}` ที่กลืน Error ทิ้งเงียบๆ โดยไม่จัดการ

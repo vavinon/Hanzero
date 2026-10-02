@@ -8,10 +8,12 @@ Your mission is to make learning Chinese feel lightweight, breathtakingly beauti
    - Blend clean Scandinavian/Japanese minimalism with subtle Chinese heritage (Rice Paper tones, Jade accents, Vermilion stamps, warm bamboo textures).
    - Eliminate visual noise, heavy borders, and overwhelming technical clutter.
    - High Breathing Room: Generous white space (padding), graceful typography, and soft elevations.
-2. Mobile-First Ergonomics:
-   - Design strictly within the 480px mobile-first frame (centered on desktop with clean backdrop).
-   - Thumb-friendly navigation: Bottom navigation bar, floating primary action buttons, 48x48px accessible tap targets.
-   - One primary action per screen — keep cognitive load near zero for beginners.
+2. Adaptive Responsive Architecture:
+   - Full Responsive Web Platform:
+     * Desktop (>=1024px): Persistent Left Navigation Sidebar (256px), Top Utility HUD, and Zen Dual-Pane Master-Detail Learning Studio (left pane for input/listening, right pane for handwriting canvas & quiz).
+     * Tablet (768px - 1023px): Flexible Icon-Rail Navigation and adaptive 2-column cards.
+     * Mobile (<=767px): Thumb-friendly single-column layout, bottom action dock, and accessible tap targets (>=44x44px).
+   - High Breathing Room: Generous whitespace, elegant Chinese typography, no claustrophobic center frames.
 3. Typography & Aesthetic Perfection:
    - Seamless harmonization of 3 scripts: Thai (Prompt / Noto Sans Thai), Chinese (LXGW WenKai / Noto Sans SC), Latin (Inter / Outfit).
    - Generous line-height for Pinyin (>1.6) so tone diacritics (ǎ, ǚ) never feel cramped or clipped.
@@ -35,10 +37,15 @@ Your mission is to make learning Chinese feel lightweight, breathtakingly beauti
 * **Vermilion Red:** `#DC2626` (แดงชาดตราประทับ สำหรับหัวใจและจุดดึงดูดสายตา)
 * **Card Surface:** สีขาวผ่องบริสุทธิ์พร้อมเงาลอยบางเบา (`box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04)`)
 
-### 2. Layout Structure & Navigation (โครงสร้างหน้าจอมาตรฐาน)
-* **Header Bar (ความสูง 56px):** สะอาด มินิมอล แสดงเฉพาะ Streak, หัวใจ, และ XP แบบตัวเลขตัวบางสบายตา
-* **Hero Learning Area:** เน้นจุดสนใจเดียว (Single Focus Area) การ์ดตัวอักษรจีนขนาดใหญ่ สง่างาม ชัดเจน
-* **Bottom Action Dock (Bottom Bar):** ปุ่มดำเนินการหลักขนาดใหญ่ (CTA) วางลอยตัวอยู่ด้านล่างสุด อยู่ในรัศมีนิ้วโป้งแตะได้ทันที
+### 2. Layout Structure & Responsive Navigation (โครงสร้างหน้าจอและระบบนำทาง)
+* **Desktop Structure (>=1024px):**
+  - **Left Persistent Sidebar (256px):** เมนูนำทางเข้าถึงทันทีในคลิกเดียว (แผนที่ผจญภัย, ทบทวน SRS พร้อมตัวเลขเตือน, หอวิชาการ, Smart Reader, คลังสำนวน, Voice Lab, และ Studio)
+  - **Top Utility HUD (ความสูง 64px):** แสดง Breadcrumbs บอกเส้นทางฝั่งซ้าย และกลุ่มสถานะ Streak, หัวใจ, XP เลเวล, สวิตช์ปิดเสียงฝั่งขวา
+  - **Zen Dual-Pane Studio:** ห้องเรียนแบ่ง 2 ส่วน (ฝั่งซ้าย: คำศัพท์/บทสนทนา / ฝั่งขวา: กระดานคัดอักษรจีน 280px + ควิซทดสอบ)
+* **Mobile / Tablet Structure (<1024px):**
+  - **Header Bar (ความสูง 56px):** สะอาด มินิมอล ย่อกลุ่มสถานะแบบกะทัดรัด (เช่น ❤️ x 5 บนจอเล็ก)
+  - **Hero Learning Area:** เน้นจุดสนใจเดียว จัดวางแนวตั้ง Single Focus
+  - **Bottom Action Dock:** เมนูและปุ่มดำเนินการหลักขนาดใหญ่วางลอยตัวด้านล่างสุดในรัศมีนิ้วโป้งแตะถึงทันที
 
 ---
 

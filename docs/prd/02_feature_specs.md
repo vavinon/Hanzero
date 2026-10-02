@@ -14,9 +14,12 @@
   2. **"มีพื้นฐานพินอินแล้ว ข้ามไปบทสนทนา":** ปลดล็อกข้ามไปสู่ **Tier 1: Explorer (Unit 1: ทักทาย & ขอบคุณ)** โดยแสดงข้อความแจ้งเตือนว่าสามารถกลับมาทบทวน Tier 0 ได้ตลอดเวลา
 - **Silent Mode Initial Prompt:** ตัวเลือกถามเบื้องต้น "ตอนนี้สะดวกเปิดเสียงหรือไม่?" เพื่อตั้งค่าเสียงล่วงหน้า
 
-### 1.2 แผนผังเส้นทางการเรียนรู้ (Dual-Tier Quest Map)
-- ผู้เรียนสามารถกดสลับมุมมองระหว่าง **Tier 0 (Foundation)** และ **Tier 1-4 (Communication)** ได้ผ่านแถบ Tier Switcher ด้านบน
-- ป้องกันผู้เรียนสับสนระหว่าง *Engineering Vertical Slice* (Unit 1 ที่พัฒนาขึ้นก่อนเป็นแม่แบบ) กับ *Real Learner Path* (เริ่มจาก Tier 0 สู่ Tier 1)
+### 1.2 แผนผังเส้นทางการเรียนรู้และระบบนำทาง (Responsive Navigation & Dual-Tier Quest Map)
+- **ระบบนำทางตามขนาดหน้าจอ (Adaptive Navigation Model):**
+  - **Desktop (>=1024px):** เมนูแถบข้างด้านซ้ายถาวร (Left Persistent Sidebar 256px) พร้อมทางลัดเข้าสู่ทุกฟังก์ชันในคลิกเดียว (แผนที่, ทบทวน SRS, หอวิชาการ, Smart Reader, คลังสำนวน, Voice Lab, และ Studio) และมี Utility HUD ด้านบนแสดง Breadcrumbs คู่กับสถิติ Streak/Hearts/XP
+  - **Mobile (<1024px):** แถบนำทางด้านล่าง (Bottom Action Dock) และ Header Bar ด้านบน
+- ผู้เรียนสามารถกดสลับมุมมองระหว่าง **Tier 0 (Foundation)**, **Tier 1 (Explorer)**, และ **Tier 2-4** ได้ผ่านแถบ Tier Switcher
+- **Zen Dual-Pane Studio (Desktop Lesson Experience):** ในหน้าบทเรียนบน Desktop จะจัดวางแบบ Split-Screen ฝั่งซ้ายนำเสนอคำศัพท์และบทสนทนา ฝั่งขวานำเสนอแคนวาสคัดลายมือและแบบฝึกหัดพร้อมกัน ลดการสลับแท็บไป-มา
 
 ---
 

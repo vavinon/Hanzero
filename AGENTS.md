@@ -151,7 +151,9 @@ graph TD
 ### 5.3 Tier 3: Browser & Dual Verification (Technical QA + Pedagogical QA)
 1. **Technical QA ([agents/technical_qa.md](./agents/technical_qa.md)):**
    - 0 Browser Console Errors (ไม่มีข้อผิดพลาดสีแดงหรือ Warning ที่อันตราย)
-   - Mobile-First Touch Ready (ขนาดปุ่มและ Hitbox ไม่ต่ำกว่า 44x44px สัมผัสง่ายบนมือถือ)
+   - **Full Responsive Web Platform:**
+     * Desktop (>=1024px): Left Navigation Sidebar (256px) และ Zen Dual-Pane Master-Detail Workspace (ซ้ายดูบทเรียน ขวาคัดอักษร/ทำควิซ)
+     * Mobile (320px–390px): ขนาดปุ่มและ Hitbox $\ge 44\times 44\text{px}$ สัมผัสง่ายบนมือถือ และไม่มี Horizontal Scrollbar (`scrollWidth === clientWidth`)
    - First Contentful Paint โหลดเร็วต่ำกว่า 0.8 วินาที
    - Production Bundle Size: JS gzipped ≤ 100 KB, CSS ≤ 20 KB
 2. **Pedagogical QA ([agents/pedagogical_qa.md](./agents/pedagogical_qa.md)):**
@@ -165,6 +167,7 @@ graph TD
 - **Memory Leak Hunt:** สลับการ์ดคัดอักษรจีน 100 รอบ ตรวจดูว่า Heap Memory ไม่บวมเกิน 40 MB
 - **Offline Resilience:** ปิดเน็ตแล้วเปิดแอป Service Worker ต้องเสิร์ฟเนื้อหาได้ 100%
 - **Small Viewport 320px Squeeze:** บีบจอแคบสุด 320px ตรวจดูว่าหัววรรณยุกต์พินอินไม่โดนตัด และปุ่มไม่ล้นจอ
+- **Window Resize Storm:** ปรับขนาดหน้าจอระหว่าง 360px <-> 1440px สลับกันอย่างรวดเร็ว แคนวาส HanziWriter ไม่พังและเรนเดอร์ขนาดใหม่ได้อย่างราบรื่น
 
 ---
 
@@ -174,6 +177,7 @@ graph TD
 
 - [ ] **TypeScript Clean:** โค้ดผ่านการคอมไพล์ (`tsc --noEmit` หรือ build สำเร็จ ไร้ Type Error)
 - [ ] **Unit Tests Passed:** Unit Tests ที่เกี่ยวข้องรันผ่านครบ 100%
+- [ ] **Dual-Viewport Responsive Verified:** ตรวจสอบการแสดงผลทั้งบน Desktop (1440px/1080p กว้างเต็มตา) และ Mobile (360px/320px ไร้การล้นแนวนอน)
 - [ ] **No Console Errors:** เปิดทดสอบบนเบราว์เซอร์จริงแล้วไม่มี Error สีแดงบน Console
 - [ ] **Resource Cleanup:** มีการ Cleanup EventListener, AudioContext และ Canvas เรียบร้อย ไม่เกิด Memory Leak
 - [ ] **Pedagogical Checked:** ตรวจทานอักษรจีน พินอิน วรรณยุกต์ และคำแปลไทยเรียบร้อย

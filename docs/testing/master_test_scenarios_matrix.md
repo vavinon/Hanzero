@@ -130,8 +130,11 @@ quadrantChart
 | Case ID | ชนิดการทดสอบ | ประเภทเส้นทาง | เหตุการณ์และสิ่งกระตุ้น (Trigger Condition) | ผลลัพธ์ที่ถูกต้องตามสเปก (Expected Outcome) | เครื่องมือทดสอบ | สถานะ |
 | :--- | :---: | :---: | :--- | :--- | :---: | :---: |
 | `TC-UI-W01-HPY` | White-box | Happy | ตรวจสอบอัตราส่วนสีคู่ตรงข้าม (Contrast Ratio) ตามโทเค็นสีระบบ | สีตัวหนังสือหลักและพื้นหลังผ่านเกณฑ์ WCAG 2.1 AA (คอนทราสต์ ≥ 4.5:1) ทุกคู่สี | Vitest | ✅ Automated |
-| `TC-UI-B01-BAD` | Black-box | Bad | **Small Viewport Squeeze:** บีบหน้าจอเบราว์เซอร์แคบสุด 320px | ตัวอักษรจีน (≥28px), หัววรรณยุกต์พินอินไม่โดนตัด และปุ่มกดไม่ล้นตกขอบจอ | Playwright | 📋 Planned Phase 5 |
+| `TC-UI-B01-BAD` | Black-box | Bad | **Small Viewport Squeeze:** บีบหน้าจอเบราว์เซอร์แคบสุด 320px | ตัวอักษรจีน (≥28px), หัววรรณยุกต์พินอินไม่โดนตัด และปุ่มกดไม่ล้นตกขอบจอ (`scrollWidth === clientWidth`) | Playwright | ✅ Automated |
 | `TC-UI-B02-HPY` | Black-box | Happy | หมุนหน้าจอมือถือสลับระหว่างแนวตั้ง (Portrait) และแนวนอน (Landscape) | เลย์เอาต์ปรับตัวอัตโนมัติ การ์ดคำศัพท์และแผงแบบฝึกหัดไม่ซ้อนทับกัน | Manual QA | ✅ Verified |
+| `TC-UI-B03-HPY` | Black-box | Happy | **Desktop Full Responsive:** เปิดหน้าเว็บด้วย Desktop Viewport (1440x900 / 1280x720) | แสดง Left Navigation Sidebar (256px) ถาวร และ Zen Dual-Pane Master-Detail ห้องเรียนกว้างขวางเต็มตา ไร้กรอบแคบ 440px | Playwright | 📋 In Progress (Dev) |
+| `TC-UI-B04-HPY` | Black-box | Happy | **Tablet Adaptive Grid:** เปิดหน้าเว็บด้วย Tablet Viewport (768x1024) | ปรับระบบนำทางเป็น Icon-Rail ด้านข้าง การ์ดคำศัพท์ปรับสัดส่วนพอดีจอสัมผัส | Playwright | 📋 In Progress (Dev) |
+| `TC-UI-B05-BAD` | Black-box | Bad | **Window Resize Storm:** ลากย่อ-ขยายขนาดหน้าจอระหว่าง 360px <-> 1440px ติดต่อกันอย่างรวดเร็ว | แคนวาส HanziWriter ไม่พัง ไม่หลุดเฟรม และไม่มี Memory Leak สะสม | Playwright / Chaos | 📋 In Progress (Dev) |
 
 ---
 
