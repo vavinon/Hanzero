@@ -95,7 +95,7 @@ export const HsrQuestMap: React.FC<HsrQuestMapProps> = ({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        maxWidth: '520px',
+        maxWidth: '800px',
         margin: '0 auto',
         padding: '8px 12px 100px 12px',
         gap: '16px',

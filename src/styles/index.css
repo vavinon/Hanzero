@@ -137,6 +137,45 @@ body {
     flex-direction: column;
     gap: 20px;
   }
+
+  /* Desktop Zen Split-Pane Studio Workspace */
+  .lesson-split-studio {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 24px;
+    width: 100%;
+    align-items: start;
+  }
+  .lesson-split-left-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+  .lesson-split-right-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 88px;
+    min-width: 0;
+  }
+}
+
+/* Quiz Options 2-column Desktop Grid */
+.quiz-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .quiz-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
 }
 
 @media (max-width: 1023px) {

@@ -179,7 +179,7 @@ export const QuestMap: React.FC<QuestMapProps> = ({
           borderRadius: 'var(--radius-full)',
           padding: '3px',
           width: '100%',
-          maxWidth: '440px',
+          maxWidth: '640px',
           gap: '2px',
         }}
       >

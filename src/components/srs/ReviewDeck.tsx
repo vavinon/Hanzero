@@ -68,6 +68,11 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
       await onReviewCard(currentCard.card_id, grade);
       setIsFlipped(false);
       setCurrentIndex((prev) => prev + 1);
+    } catch (err) {
+      console.error('[Hanzero SRS] Failed to submit card review:', err);
+      // Gracefully advance to prevent UI lockup even on async error
+      setIsFlipped(false);
+      setCurrentIndex((prev) => prev + 1);
     } finally {
       setIsProcessing(false);
     }
@@ -75,27 +80,30 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
 
   // 1. All Caught Up / Empty Queue State
   if (isFinished) {
+    const isInitialEmpty = queueStatus.queue.length === 0;
+
     return (
       <div
+        data-testid="review-deck-empty"
         style={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '24px 16px',
+          padding: '32px 20px',
           width: '100%',
-          maxWidth: '440px',
+          maxWidth: '680px',
           margin: '0 auto',
           minHeight: '70vh',
           textAlign: 'center',
-          gap: '16px',
+          gap: '20px',
         }}
       >
         <div
           style={{
             position: 'relative',
-            width: '90px',
-            height: '90px',
+            width: '104px',
+            height: '104px',
             margin: '0 auto',
           }}
         >
@@ -118,23 +126,26 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
               backgroundColor: 'var(--color-jade-primary)',
               color: '#FFFFFF',
               borderRadius: '50%',
-              width: '28px',
-              height: '28px',
+              width: '32px',
+              height: '32px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
+              boxShadow: '0 2px 6px rgba(0,0,0,0.15)',
             }}
           >
-            <CheckCircle2 size={18} />
+            <CheckCircle2 size={20} />
           </div>
         </div>
 
         <div>
-          <h2 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--color-jade-dark)' }}>
-            ทบทวนครบหมดแล้ว! 🐰🎉
+          <h2 style={{ fontSize: '24px', fontWeight: 800, color: 'var(--color-jade-dark)' }}>
+            {isInitialEmpty ? 'ไม่มีคำศัพท์ค้างทบทวนในระบบ! 🐰✨' : 'ทบทวนครบหมดแล้ว! 🐰🎉'}
           </h2>
-          <p style={{ fontSize: '14px', color: 'var(--text-ink-secondary)', marginTop: '6px', lineHeight: 1.6 }}>
-            สุดยอดมากคนเก่ง! บัตรคำที่ถึงกำหนดทบทวนวันนี้ถูกจัดเก็บเข้าความจำระยะยาวเรียบร้อยแล้ว
+          <p style={{ fontSize: '15px', color: 'var(--text-ink-secondary)', marginTop: '8px', lineHeight: 1.6, maxWidth: '480px' }}>
+            {isInitialEmpty
+              ? 'คลังคำศัพท์ SRS ของคุณอยู่ในสถานะสมบูรณ์แบบ แวะไปเรียนบทเรียนใหม่บนแผนที่เพื่อเพิ่มคำศัพท์เข้าคลังนะ'
+              : 'สุดยอดมากคนเก่ง! บัตรคำที่ถึงกำหนดทบทวนวันนี้ถูกจัดเก็บเข้าความจำระยะยาวตามสมการ SM-2 เรียบร้อยแล้ว'}
           </p>
         </div>
 
@@ -143,8 +154,9 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
             backgroundColor: '#FFFFFF',
             border: '1.5px solid var(--border-card)',
             borderRadius: 'var(--radius-md)',
-            padding: '14px 20px',
+            padding: '16px 28px',
             width: '100%',
+            maxWidth: '440px',
             display: 'flex',
             justifyContent: 'space-around',
             boxShadow: 'var(--shadow-card)',
@@ -152,28 +164,35 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
         >
           <div>
             <div style={{ fontSize: '12px', color: 'var(--text-ink-muted)' }}>ทบทวนเสร็จสิ้น</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-jade-dark)' }}>
-              {queueStatus.queue.length} คำ
+            <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-jade-dark)' }}>
+              {currentIndex} / {queueStatus.queue.length} คำ
             </div>
           </div>
           <div style={{ width: '1px', backgroundColor: 'var(--border-subtle)' }} />
           <div>
             <div style={{ fontSize: '12px', color: 'var(--text-ink-muted)' }}>หัวใจคงเหลือ</div>
-            <div style={{ fontSize: '18px', fontWeight: 800, color: 'var(--color-vermilion)' }}>
+            <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-vermilion)' }}>
               🛡️ ปลอดภัย
             </div>
           </div>
         </div>
 
         <button
-          onClick={onClose}
+          onClick={() => {
+            playClick();
+            onClose();
+          }}
+          data-testid="btn-review-back-to-map"
           className="btn-tactile-primary"
           style={{
             width: '100%',
-            padding: '14px',
+            maxWidth: '380px',
+            padding: '14px 24px',
             fontSize: '16px',
             fontWeight: 700,
-            marginTop: '12px',
+            marginTop: '8px',
+            minHeight: '48px',
+            cursor: 'pointer',
           }}
         >
           กลับสู่แผนที่การเรียนรู้ 🗺️
@@ -191,10 +210,10 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-        maxWidth: '440px',
+        maxWidth: '720px',
         margin: '0 auto',
-        padding: '12px 12px 120px 12px',
-        gap: '14px',
+        padding: '16px 16px 140px 16px',
+        gap: '16px',
       }}
     >
       {/* Top Header & Progress */}
@@ -207,7 +226,11 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
         }}
       >
         <button
-          onClick={onClose}
+          onClick={() => {
+            playClick();
+            onClose();
+          }}
+          data-testid="btn-review-header-back"
           style={{
             minHeight: '44px',
             minWidth: '44px',
@@ -452,14 +475,15 @@ export const ReviewDeck: React.FC<ReviewDeckProps> = ({
           left: '50%',
           transform: 'translateX(-50%)',
           width: '100%',
-          maxWidth: '520px',
+          maxWidth: '720px',
           backgroundColor: 'rgba(253, 251, 247, 0.96)',
           backdropFilter: 'blur(8px)',
           borderTop: '1px solid var(--border-subtle)',
-          padding: '10px 12px 20px 12px',
+          padding: '12px 16px 24px 16px',
           display: 'flex',
-          gap: '8px',
+          gap: '10px',
           zIndex: 50,
+          boxSizing: 'border-box',
         }}
       >
         {!isFlipped ? (

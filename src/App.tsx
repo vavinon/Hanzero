@@ -373,7 +373,7 @@ export const App: React.FC = () => {
 
       {/* View 7: Commute Podcast Mode & Native Speed Ladder (Phase 8 TASK-804) */}
       {currentView === 'podcast' && (
-        <main style={{ flex: 1, padding: '16px 12px 32px 12px', maxWidth: '520px', margin: '0 auto', width: '100%' }}>
+        <main style={{ flex: 1, padding: '16px 12px 32px 12px', maxWidth: '800px', margin: '0 auto', width: '100%' }}>
           <button
             onClick={() => setCurrentView('map')}
             className="btn-tactile-secondary"
