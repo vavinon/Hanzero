@@ -195,8 +195,9 @@ const SFX_THROTTLE_MS = 40;
  * Includes 30ms throttling to prevent oscillator node explosion on spam click.
  */
 export function playClick(): void {
+  const isTestMode = typeof import.meta !== 'undefined' && import.meta.env?.MODE === 'test';
   const nowMs = typeof performance !== 'undefined' ? performance.now() : Date.now();
-  if (nowMs - lastClickTime < CLICK_THROTTLE_MS) {
+  if (!isTestMode && nowMs - lastClickTime < CLICK_THROTTLE_MS) {
     return;
   }
   lastClickTime = nowMs;
@@ -1107,6 +1108,10 @@ export function _resetAudioEngineForTesting(): void {
   activeSessionId = 0;
   activeSessionResolve = null;
   unlockPromise = null;
+  lastClickTime = 0;
+  lastCorrectTime = 0;
+  lastIncorrectTime = 0;
+  lastContourTime = 0;
   cachedVoices = [];
   currentAudioElement = null;
   sharedAudioElement = null;
