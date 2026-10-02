@@ -1,0 +1,909 @@
+/**
+ * scripts/tier2_batch_c/unit25.ts
+ * Tier 2 Unit 25: 穿越中国 (Grand Boss: 7-Day China Odyssey)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit25 = {
+  unit_id: 'tier2_u25',
+  tier: 2,
+  unit_number: 25,
+  title: {
+    zh: '穿越中国',
+    th: 'Grand Boss: ทริปท่องแดนมังกร 7 วัน',
+    en: 'Grand Boss: 7-Day China Odyssey'
+  },
+  description: 'สุดยอดบททดสอบปิดท้าย Tier 2: นักเดินทาง! แบ็กแพ็กข้าม 4 มหานคร (ปักกิ่ง ➔ ซีอาน ➔ เฉิงตู ➔ เซี่ยงไฮ้) เผชิญ 5 วิกฤตการณ์เฉพาะหน้าด้วยภาษาจีน 100% บูรณาการทุกความรู้ สแกนจ่าย รถไฟความเร็วสูง สั่งอาหาร เจรจาเปลี่ยนตั๋ว และการสื่อสารอย่างลึกซึ้ง',
+  lessons: [
+    {
+      lesson_id: 't2_u25_l01',
+      lesson_number: 1,
+      title: {
+        zh: '路线规划与启程',
+        th: 'วางแผนเส้นทาง & ออกเดินทาง (ปักกิ่ง ➔ ซีอาน)',
+        en: 'Route Planning & Departure (Beijing to Xi\'an)'
+      },
+      can_do: {
+        th: 'วางแผนการเดินทางข้ามมณฑล จองตั๋วรถไฟความเร็วสูงและตู้นอน และใช้โครงสร้าง 从...出发到... และ 甚至',
+        en: 'Plan cross-provincial trips, book HSR sleeper tickets, and use 从...出发到... and 甚至'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ตรวจสอบตารางการเดินทาง จัดกระเป๋าเป้ และขึ้นรถไฟความเร็วสูงจากปักกิ่งมุ่งหน้าสู่ซีอานได้อย่างตื่นเต้นและราบรื่น!',
+      vocabulary: [
+        {
+          id: 'hsk2_2501',
+          hanzi: '启程',
+          pinyin: 'qǐchéng',
+          display_pinyin: 'qǐchéng',
+          pinyin_tone: 'qi3cheng2',
+          meaning_th: 'ออกเดินทาง / เริ่มต้นการเดินทาง',
+          meaning_en: 'to set out on a journey / departure',
+          radical: '户',
+          radical_name_th: 'หมวดประตูเดี่ยว (户字头)',
+          stroke_count: 18,
+          mnemonic: 'เปิดประตูเรือน (启) ก้าวเท้าออกสู่เส้นทางข้างหน้า (程) = ออกเดินทาง',
+          kid_mnemonic: 'สะพายเป้ ก้าวเท้าขึ้นรถไฟ ออกเดินทางสู่โลกกว้าง = 启程',
+          body_gesture: 'ก้าวเท้าไปข้างหน้าหนึ่งก้าวพร้อมโบกมือล่ำลา'
+        },
+        {
+          id: 'hsk2_2502',
+          hanzi: '行程',
+          pinyin: 'xíngchéng',
+          display_pinyin: 'xíngchéng',
+          pinyin_tone: 'xing2cheng2',
+          meaning_th: 'กำหนดการเดินทาง / เส้นทางท่องเที่ยว',
+          meaning_en: 'itinerary / route / travel schedule',
+          radical: '行',
+          radical_name_th: 'หมวดก้าวเดิน (行字旁)',
+          stroke_count: 18,
+          mnemonic: 'เส้นทางระยะทาง (程) ที่ต้องก้าวเดินผ่านในแต่ละวัน (行) = กำหนดการเดินทาง',
+          kid_mnemonic: 'สมุดบันทึกทริป 7 วัน ปักกิ่ง-ซีอาน-เฉิงตู-เซี่ยงไฮ้ = 行程',
+          body_gesture: 'สองมือคลี่สมุดแผนที่การเดินทางออกดู'
+        },
+        {
+          id: 'hsk2_2503',
+          hanzi: '卧铺',
+          pinyin: 'wòpù',
+          display_pinyin: 'wòpù',
+          pinyin_tone: 'wo4pu4',
+          meaning_th: 'เตียงนอนในรถไฟ / ตู้นอน',
+          meaning_en: 'sleeper berth (on train)',
+          radical: '卜',
+          radical_name_th: 'หมวดทำนาย (卜字旁)',
+          stroke_count: 20,
+          mnemonic: 'ที่นอนปูลาดอย่างสบาย (铺) ให้ผู้โดยสารเอนกายนอนหลับพักผ่อน (卧) = เตียงนอนรถไฟ',
+          kid_mnemonic: 'ปีนขึ้นเตียงชั้นสองบนรถไฟไฟฟ้านอนฟังเสียงรางรถไฟ = 卧铺',
+          body_gesture: 'สองมือประกบแก้มเอียงศีรษะทำท่านอนหลับสบาย'
+        },
+        {
+          id: 'hsk2_2504',
+          hanzi: '攻略',
+          pinyin: 'gōnglüè',
+          display_pinyin: 'gōnglüè',
+          pinyin_tone: 'gong1lve4',
+          meaning_th: 'คู่มือท่องเที่ยว / แผนกลยุทธ์',
+          meaning_en: 'travel guide / strategy / walkthrough',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะตี (反文旁)',
+          stroke_count: 18,
+          mnemonic: 'กลยุทธ์วางแผนพิชิต (攻) รวบรวมสรุปเคล็ดลับสำคัญ (略) = คู่มือท่องเที่ยว',
+          kid_mnemonic: 'เปิดแอปเสี่ยวหงซู (Xiaohongshu) เซฟพิกัดร้านอร่อย = 攻略',
+          body_gesture: 'ใช้นิ้วเลื่อนหน้าจอมือถืออ่านคู่มืออย่างตื่นเต้น'
+        },
+        {
+          id: 'hsk2_2505',
+          hanzi: '甚至',
+          pinyin: 'shènzhì',
+          display_pinyin: 'shènzhì',
+          pinyin_tone: 'shen4zhi4',
+          meaning_th: 'แม้กระทั่ง / ถึงขนาดที่',
+          meaning_en: 'even / so much that',
+          radical: '甘',
+          radical_name_th: 'หมวดรสหวาน (甘字旁)',
+          stroke_count: 15,
+          mnemonic: 'ทวีความเข้มข้นยิ่งยวด (甚) จนก้าวมาถึงระดับสูงสุด (至) = แม้กระทั่ง',
+          kid_mnemonic: 'คนจีนใจดีมาก เลี้ยงข้าว และพาไปส่งถึงโรงแรม = 甚至',
+          body_gesture: 'เบิกตากว้างพร้อมยกสองมือแสดงความทึ่ง'
+        },
+        {
+          id: 'hsk2_2506',
+          hanzi: '激动',
+          pinyin: 'jīdòng',
+          display_pinyin: 'jīdòng',
+          pinyin_tone: 'ji1dong4',
+          meaning_th: 'ตื่นเต้น / ตื้นตันใจ / ดีใจสุดขีด',
+          meaning_en: 'excited / emotional / thrilled',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 22,
+          mnemonic: 'กระแสน้ำเชี่ยวกรากกระทบหัวใจ (激) จนอารมณ์สั่นไหวเคลื่อนที่ (动) = ตื่นเต้นตื้นตัน',
+          kid_mnemonic: 'หัวใจเต้นตึกตัก กำลังจะได้เห็นสุสานกองทัพดินเผา = 激动',
+          body_gesture: 'เอามือทาบอกตรงหัวใจแล้วกระโดดเบาๆ ด้วยความดีใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์ขั้นสูง: 甚至 (shènzhì) แสดงการเน้นย้ำถึงขีดสุด',
+        description_th: 'คำว่า 甚至 (4+4) วางหน้าประโยคหรือคำเพื่อเน้นย้ำกรณีตัวอย่างที่เหนือความคาดหมาย',
+        example: '我们不仅做好了攻略，甚至把突发应对也计划好了 (Wǒmen bùjǐn zuòhǎo le gōnglüè, shènzhì bǎ tūfā yìngduì yě jìhuà hǎo le)',
+        fun_metaphor: 'เหมือนกดปุ่มเร่งเสียงดนตรีขึ้นไปจนถึงจุดพีคสุด!',
+        reassurance: 'คำว่า 甚至 ใช้ได้ทั้งในภาษาพูดและการเขียนเพื่อแสดงความประทับใจ'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ออกเดินทาง: 从...出发到... / 把行程安排得...',
+        explanation_th: 'ใช้ระบุต้นทางและปลายทาง พร้อมบอกความรู้สึกในการเตรียมตัว',
+        patterns: [
+          {
+            formula: '今天我们正式启程 + 从北京出发到 + [จุดหมาย]',
+            zh: '今天我们正式启程，从北京西站出发到古都西安。',
+            pinyin: 'Jīntiān wǒmen zhèngshì qǐchéng, cóng Běijīng Xīzhàn chūfā dào gǔdū Xī\'ān.',
+            th: 'วันนี้พวกเราออกเดินทางอย่างเป็นทางการ จากสถานีปักกิ่งตะวันตกสู่เมืองหลวงโบราณซีอานครับ',
+            en: 'Today we officially set off, departing from Beijing West Station to the ancient capital Xi\'an.'
+          },
+          {
+            formula: '我们把七天的行程 + 安排得非常 + [คุณศัพท์]',
+            zh: '我们把这七天的穿越中国行程安排得非常充实。',
+            pinyin: 'Wǒmen bǎ zhè qī tiān de chuānyuè Zhōngguó xíngchéng ānpái de fēicháng chōngshí.',
+            th: 'พวกเราจัดกำหนดการท่องทั่วแดนมังกร 7 วันนี้ไว้อย่างแน่นหนาและคุ้มค่ามากครับ',
+            en: 'We arranged this 7-day China odyssey itinerary to be very fulfilling.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '小柴，背包准备好了吗？这趟七天的穿越中国大冒险，今天就要正式启程了！',
+          pinyin: 'Xiǎo Chái, bèibāo zhǔnbèi hǎo le ma? Zhè tàng qī tiān de chuānyuè Zhōngguó dà màoxiǎn, jīntiān jiù yào zhèngshì qǐchéng le!',
+          th: 'เสี่ยวชาย กระเป๋าเป้พร้อมหรือยัง? ทริปผจญภัยท่องเมืองจีน 7 วันนี้ วันนี้จะออกเดินทางอย่างเป็นทางการแล้วนะ!',
+          en: 'Xiao Chai, is your backpack ready? This 7-day grand China adventure is officially setting off today!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '早就准备好了！我查了各种旅游攻略，甚至把高铁票和特色民宿都预订好了，心里特别激动！',
+          pinyin: 'Zǎo jiù zhǔnbèi hǎo le! Wǒ chá le gèzhǒng lǚyóu gōnglüè, shènzhì bǎ gāotiěpiào hé tèsè mínsù dōu yùdìng hǎo le, xīnlǐ tèbié jīdòng!',
+          th: 'เตรียมพร้อมตั้งนานแล้วครับ! ผมเช็กคู่มือท่องเที่ยวทุกรูปแบบ แม้กระทั่งตั๋วรถไฟความเร็วสูงและโฮมสเตย์ก็จองเสร็จสรรพ ตื่นเต้นมากเลยครับ!',
+          en: 'Ready long ago! I checked all travel guides, and even booked HSR tickets and boutique guesthouses, feeling so excited!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '第一站是西安，我们买的是夜间卧铺动车，既能省一晚住宿费，明天早晨一睁眼就能吃肉夹馍！',
+          pinyin: 'Dì-yī zhàn shì Xī\'ān, wǒmen mǎi de shì yèjiān wòpù dòngchē, jì néng shěng yì wǎn zhùsùfèi, míngtiān zǎochen yì zhēngyǎn jiù néng chī ròujiāmó!',
+          th: 'สถานีแรกคือซีอาน พวกเราซื้อตั๋วรถไฟตู้นอนข้ามคืน ทั้งประหยัดค่าโรงแรมได้ 1 คืน พรุ่งนี้เช้าลืมตาปุ๊บก็ได้กินโรตีเนื้อเบอร์เกอร์จีน (肉夹馍) ปั๊บ!',
+          en: 'The first stop is Xi\'an! We bought overnight sleeper train tickets, saving hotel costs, and waking up to Roujiamo tomorrow!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太棒了！身份证和护照都在我手边，走，我们现在就去检票进站！',
+          pinyin: 'Tài bàng le! Shēnfènzhèng hé hùzhào dōu zài wǒ shǒubiān, zǒu, wǒmen xiànzài jiù qù jiǎnpiào jìnzhàn!',
+          th: 'ยอดเยี่ยมที่สุด! บัตรประจำตัวและพาสปอร์ตอยู่ในมือพร้อม ไปกันเลย พวกเราไปตรวจตั๋วเข้าชานชาลากันเดี๋ยวนี้เลยครับ!',
+          en: 'Awesome! ID and passport are right at hand. Let\'s go, we will check tickets and enter the station right now!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '启程' (qǐchéng) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ออกเดินทาง / เริ่มต้นการเดินทาง',
+            'จบทริปเดินทาง',
+            'ยกเลิกโรงแรม',
+            'ขอเงินคืน'
+          ],
+          correct_index: 0,
+          explanation_th: "'启程' แปลว่า ออกเดินทาง หรือเริ่มต้นการเดินทางครั้งยิ่งใหญ่",
+          encouragement: 'จำคำศัพท์การเดินทางอันทรงพลังได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '卧' ในคำว่า '卧铺' (เตียงนอนรถไฟ) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'การเอนกายนอนหลับ',
+            'การวิ่งแข่งขัน',
+            'การว่ายน้ำ',
+            'การขี่ม้า'
+          ],
+          correct_index: 0,
+          explanation_th: "'卧' สื่อถึงการเอนกายนอนลงพักผ่อน (卧铺 = ตู้นอน/เตียงนอน)",
+          encouragement: 'จำรากศัพท์หมวดนอน 卧 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "วันนี้พวกเราออกเดินทางจากปักกิ่งมุ่งหน้าสู่ซีอาน"',
+          tokens: ['从北京出发到西安', '今天我们正式启程'],
+          correct_sequence: ['今天我们正式启程', '从北京出发到西安'],
+          pinyin: 'Jīntiān wǒmen zhèngshì qǐchéng, cóng Běijīng chūfā dào Xī\'ān',
+          meaning_th: 'วันนี้พวกเราออกเดินทางจากปักกิ่งมุ่งหน้าสู่ซีอาน',
+          explanation_th: 'การประกาศออกเดินทาง (今天我们正式启程) + ทิศทางเส้นทาง (从北京出发到西安)',
+          encouragement: 'ต่อบล็อกประโยคการออกเดินทางได้อย่างคล่องแคล่ว!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '攻略' (gōnglüè) ในการท่องเที่ยวหมายถึงอะไร?",
+          options: [
+            'คู่มือท่องเที่ยวและแผนการเดินทาง',
+            'ใบสั่งปรับจราจร',
+            'เอกสารสัญญาเช่า',
+            'ใบตรวจสุขภาพ'
+          ],
+          correct_index: 0,
+          explanation_th: "'攻略' คือ คู่มือแนะนำการท่องเที่ยว แผนการเดินทาง และรีวิวเคล็ดลับ",
+          encouragement: 'เข้าใจศัพท์ท่องเที่ยวสไตล์จีนได้อย่างถ่องแท้!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u25_l02',
+      lesson_number: 2,
+      title: {
+        zh: '突发危机与应对',
+        th: 'รับมือวิกฤตเฉพาะหน้า (ซีอาน ➔ เฉิงตู)',
+        en: 'Weather Crisis & Rescheduling (Xi\'an to Chengdu)'
+      },
+      can_do: {
+        th: 'รับมือเหตุการณ์รถไฟดีเลย์จากสภาพอากาศ เจรจาเปลี่ยนตั๋วที่เคาน์เตอร์ และบูรณาการประโยค 把 และ 被 ในสถานการณ์ฉุกเฉิน',
+        en: 'Handle weather-induced train delays, reschedule tickets at counters, and integrate 把 and 被 in emergencies'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เจรจาเปลี่ยนตั๋วรถไฟความเร็วสูงที่สถานีซีอานเหนือเมื่อเจอน้ำท่วม และติดต่อโฮมสเตย์เฉิงตูขอเลื่อนเวลาได้อย่างไร้กังวล!',
+      vocabulary: [
+        {
+          id: 'hsk2_2507',
+          hanzi: '延误',
+          pinyin: 'yánwù',
+          display_pinyin: 'yánwù',
+          pinyin_tone: 'yan2wu4',
+          meaning_th: 'ล่าช้า / ดีเลย์ (เที่ยวบิน/รถไฟ)',
+          meaning_en: 'to delay / delayed',
+          radical: '廴',
+          radical_name_th: 'หมวดก้าวเดินยาว (建字底)',
+          stroke_count: 14,
+          mnemonic: 'ยืดระยะเวลายาวออกไป (延) จนเกิดความคลาดเคลื่อนผิดกำหนด (误) = ล่าช้า / ดีเลย์',
+          kid_mnemonic: 'หน้าจอสเตชั่นขึ้นตัวหนังสือสีแดง "晚点 / 延误" ต้องรออีก 2 ชั่วโมง = 延误',
+          body_gesture: 'ยกนาฬิกาข้อมือดูแล้วส่ายหน้าอย่างอดทน'
+        },
+        {
+          id: 'hsk2_2508',
+          hanzi: '暴雨',
+          pinyin: 'bàoyǔ',
+          display_pinyin: 'bàoyǔ',
+          pinyin_tone: 'bao4yu3',
+          meaning_th: 'พายุฝนกระหน่ำ / ฝนตกหนักรุนแรง',
+          meaning_en: 'rainstorm / torrential rain',
+          radical: '雨',
+          radical_name_th: 'หมวดฝน (雨字头)',
+          stroke_count: 23,
+          mnemonic: 'สายฝนที่เทกระหน่ำลงมา (雨) ด้วยความรุนแรงดุร้ายดั่งพายุคลั่ง (暴) = พายุฝนกระหน่ำ',
+          kid_mnemonic: 'ฟ้าร้องเปรี้ยงปร้าง เม็ดฝนใหญ่เท่าเม็ดถั่วตกลงมาไม่หยุด = 暴雨',
+          body_gesture: 'สองมือกางนิ้วสะบัดลงเร็วๆ เหมือนสายฝนเทกระหน่ำ'
+        },
+        {
+          id: 'hsk2_2509',
+          hanzi: '改签',
+          pinyin: 'gǎiqiān',
+          display_pinyin: 'gǎiqiān',
+          pinyin_tone: 'gai3qian1',
+          meaning_th: 'เปลี่ยนตั๋ว / เลื่อนรอบเดินทาง',
+          meaning_en: 'to change ticket / reschedule flight or train',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะตี (反文旁)',
+          stroke_count: 16,
+          mnemonic: 'แก้ไขปรับปรุงรอบเดินทาง (改) แล้วจรดปากกาเซ็นกำกับ (签) = เปลี่ยนตั๋ว',
+          kid_mnemonic: 'ยื่นพาสปอร์ตให้เจ้าหน้าที่ เลื่อนรอบรถไฟเป็นบ่ายสาม = 改签',
+          body_gesture: 'ยื่นบัตรในมือไปข้างหน้าขอเปลี่ยนเที่ยวเดินทาง'
+        },
+        {
+          id: 'hsk2_2510',
+          hanzi: '柜台',
+          pinyin: 'guìtái',
+          display_pinyin: 'guìtái',
+          pinyin_tone: 'gui4tai2',
+          meaning_th: 'เคาน์เตอร์บริการ / ช่องจำหน่ายตั๋ว',
+          meaning_en: 'counter / service desk',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 14,
+          mnemonic: 'แท่นเคาน์เตอร์ไม้ (柜) ยกพื้นสูงสำหรับให้บริการผู้โดยสาร (台) = เคาน์เตอร์บริการ',
+          kid_mnemonic: 'เคาน์เตอร์เบอร์ 5 มีพนักงานคอยช่วยเปลี่ยนตั๋ว = 柜台',
+          body_gesture: 'ทาบสองมือขนานลงบนโต๊ะเคาน์เตอร์บริการ'
+        },
+        {
+          id: 'hsk2_2511',
+          hanzi: '顺畅',
+          pinyin: 'shùnchàng',
+          display_pinyin: 'shùnchàng',
+          pinyin_tone: 'shun4chang4',
+          meaning_th: 'ราบรื่น / ไม่ติดขัด / คล่องตัว',
+          meaning_en: 'smooth / unhindered',
+          radical: '页',
+          radical_name_th: 'หมวดใบหน้า (页字旁)',
+          stroke_count: 20,
+          mnemonic: 'คล้อยตามไปในทิศทางที่ถูกต้อง (顺) อย่างปลอดโปร่งโล่งสบาย (畅) = ราบรื่นไร้อุปสรรค',
+          kid_mnemonic: 'รถไฟแล่นฉิว ไม่มีสิ่งกีดขวาง ถึงที่หมายปลอดภัย = 顺畅',
+          body_gesture: 'วาดมือขนานไปข้างหน้าอย่างราบรื่นไม่มีสะดุด'
+        },
+        {
+          id: 'hsk2_2512',
+          hanzi: '幸好',
+          pinyin: 'xìnghǎo',
+          display_pinyin: 'xìnghǎo',
+          pinyin_tone: 'xing4hao3',
+          meaning_th: 'โชคดีที่... / ยังดีที่...',
+          meaning_en: 'fortunately / luckily',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (土字旁)',
+          stroke_count: 14,
+          mnemonic: 'ความโชคดีเปี่ยมสุข (幸) กอบกู้สถานการณ์ให้ลงเอยด้วยดี (好) = โชคดีที่...',
+          kid_mnemonic: 'ฝนตกหนัก แต่โชคดีที่เราพกร่มมาด้วย = 幸好',
+          body_gesture: 'เอามือทาบอกแล้วเป่าปากโล่งใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์ผสาน 把 และ 被: แก้ไขวิกฤตการณ์เฉพาะหน้า',
+        description_th: 'ใช้ 被 บอกสิ่งที่ถูกผลกระทบ (车次被暴雨延误了) และใช้ 把 บอกการกระทำเชิงรุกเพื่อแก้ไขปัญหา (请帮我们把车票改签到下一班)',
+        example: '行程被大雨耽误了，幸好把车票改签成功了 (Xíngchéng bèi dàyǔ dānwu le, xìnghǎo bǎ chēpiào gǎiqiān chénggōng le)',
+        fun_metaphor: 'เมื่อถูกผลกระทบใช้ 被 เมื่อลงมือแก้ปัญหาใช้ 把 แก้ได้ทุกวิกฤตในจีน!',
+        reassurance: 'นี่คือการรวมสุดยอดไวยากรณ์แกนหลักของ Tier 2'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้รับมือวิกฤต: [กรรม] + 被 + [สาเหตุ] + 延误了，请帮我把 + [ตั๋ว] + 改签到...',
+        explanation_th: 'ใช้สื่อสารกับเจ้าหน้าที่สถานีรถไฟหรือสายการบินเมื่อเกิดเหตุฉุกเฉิน',
+        patterns: [
+          {
+            formula: '原定高铁被暴雨延误了 + 请帮我改签',
+            zh: '我们原定去成都的高铁被暴雨延误了，请帮我们改签到最近的班次。',
+            pinyin: 'Wǒmen yuándìng qù Chéngdū de gāotiě bèi bàoyǔ yánwù le, qǐng bāng wǒmen gǎiqiān dào zuì jìn de bāncì.',
+            th: 'รถไฟความเร็วสูงไปเฉิงตูขบวนเดิมของพวกเราล่าช้าเพราะพายุฝน รบกวนช่วยเปลี่ยนตั๋วเป็นเที่ยวที่เร็วที่สุดให้หน่อยครับ',
+            en: 'Our original HSR to Chengdu was delayed by a rainstorm, please help reschedule us to the nearest train.'
+          },
+          {
+            formula: '幸好柜台还有余票 + 一切进展顺畅',
+            zh: '幸好人工柜台还有余票，改签过程非常顺畅。',
+            pinyin: 'Xìnghǎo réngōng guìtái hái yǒu yúpiào, gǎiqiān guòchéng fēicháng shùnchàng.',
+            th: 'โชคดีที่เคาน์เตอร์บริการยังมีตั๋วเหลือ ขั้นตอนการเปลี่ยนตั๋วจึงราบรื่นมากครับ',
+            en: 'Fortunately there were spare tickets at the manual counter, rescheduling was very smooth.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '工作员您好！我们前往成都的G2205次列车被暴雨延误了两个小时，请问可以在柜台把车票免费改签到下一班吗？',
+          pinyin: 'Gōngzuòyuán nín hǎo! Wǒmen qiánwǎng Chéngdū de G2205 cì lièchē bèi bàoyǔ yánwù le liǎng ge xiǎoshí, qǐngwèn kěyǐ zài guìtái bǎ chēpiào miǎnfèi gǎiqiān dào xià yì bān ma?',
+          th: 'เจ้าหน้าที่สวัสดีครับ! รถไฟขบวน G2205 ของพวกเราที่จะไปเฉิงตูล่าช้าไป 2 ชั่วโมงเนื่องจากพายุฝน ขอถามหน่อยสามารถเปลี่ยนตั๋วเป็นขบวนถัดไปฟรีที่เคาน์เตอร์ได้ไหมครับ?',
+          en: 'Hello officer! Our G2205 train to Chengdu was delayed 2 hours by rainstorms, can we reschedule to the next train for free at the counter?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่สถานีรถไฟ 👩‍💼',
+          zh: '先生您好！因天气原因晚点属于非自愿改签，免收任何手续费。请出示您的护照原件。',
+          pinyin: 'Xiānsheng nín hǎo! Yīn tiānqì yuányīn wǎndiǎn shǔyú fēizìyuàn gǎiqiān, miǎnshōu rènhé shǒuxùfèi. Qǐng chūshì nín de hùzhào yuánjiàn.',
+          th: 'สวัสดีค่ะคุณผู้ชาย! ความล่าช้าจากสภาพอากาศถือเป็นการเปลี่ยนตั๋วโดยไม่มีค่าธรรมเนียมค่ะ กรุณาแสดงพาสปอร์ตตัวจริงด้วยค่ะ',
+          en: 'Hello sir! Weather-related delays are involuntary changes with no service fee. Please present your original passport.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '给您护照！另外我想确认一下，改签后的车次在几号检票口进站？',
+          pinyin: 'Gěi nín hùzhào! Lìngwài wǒ xiǎng quèrèn yíxià, gǎiqiān hòu de chēcì zài jǐ hào jiǎnpiàokǒu jìnzhàn?',
+          th: 'ยื่นพาสปอร์ตให้ครับ! นอกจากนี้ผมอยากยืนยันหน่อยว่า รถไฟขบวนใหม่ที่เปลี่ยนแล้วตรวจตั๋วเข้าชานชาลาที่ช่องหมายเลขอะไรครับ?',
+          en: 'Here is my passport! Also I want to confirm, which ticket gate does the rescheduled train depart from?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่สถานีรถไฟ 👩‍💼',
+          zh: '给您改签好了！G1831次，下午三点二十开，在第十二检票口。幸好还有连座，祝您一路顺畅！',
+          pinyin: 'Gěi nín gǎiqiān hǎo le! G1831 cì, xiàwǔ sān diǎn èrshí kāi, zài dì-shí-èr jiǎnpiàokǒu. Xìnghǎo hái yǒu liánzuò, zhù nín yílù shùnchàng!',
+          th: 'เปลี่ยนตั๋วให้เรียบร้อยแล้วค่ะ! ขบวน G1831 ออกเดินทาง 15:20 น. ที่ช่องตรวจตั๋วหมายเลข 12 โชคดีที่ยังมีที่นั่งติดกัน ขอให้เดินทางราบรื่นตลอดเส้นทางนะคะ!',
+          en: 'Rescheduled for you! Train G1831 leaves at 3:20 PM from gate 12. Luckily there were adjacent seats, have a smooth journey!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อรถไฟล่าช้าเพราะฝนตกหนัก คำว่า '延误' (yánwù) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ล่าช้า / ดีเลย์',
+            'ออกตรงเวลา',
+            'จอดแวะรับประทานอาหาร',
+            'เพิ่มตู้โดยสาร'
+          ],
+          correct_index: 0,
+          explanation_th: "'延误' (yánwù) แปลว่า ล่าช้า หรือ ดีเลย์",
+          encouragement: 'จำคำศัพท์สถานการณ์ฉุกเฉินในการเดินทางได้แม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '暴' ในคำว่า '暴雨' (พายุฝนกระหน่ำ) มีหมวดนำใดที่ด้านบน?",
+          options: [
+            '日 (หมวดดวงอาทิตย์ 日字头)',
+            '月 (หมวดดวงจันทร์ 月字旁)',
+            '水 (หมวดน้ำ 水字旁)',
+            '风 (หมวดสายลม 风字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'暴' มีหมวดนำ '日' (ดวงอาทิตย์) อยู่ด้านบน สื่อถึงสภาพอากาศแปรปรวนรุนแรง",
+          encouragement: 'สังเกตรากศัพท์หมวด日ได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "รถไฟความเร็วสูงล่าช้าเพราะพายุฝน โชคดีที่เปลี่ยนตั๋วสำเร็จ"',
+          tokens: ['幸好改签成功了', '高铁被暴雨延误了'],
+          correct_sequence: ['高铁被暴雨延误了', '幸好改签成功了'],
+          pinyin: 'Gāotiě bèi bàoyǔ yánwù le, xìnghǎo gǎiqiān chénggōng le',
+          meaning_th: 'รถไฟความเร็วสูงล่าช้าเพราะพายุฝน โชคดีที่เปลี่ยนตั๋วสำเร็จ',
+          explanation_th: 'เหตุการณ์ที่กระทบด้วยประโยค 被 (高铁被暴雨延误了) + ทางออกสำเร็จ (幸好改签成功了)',
+          encouragement: 'ต่อบล็อกบูรณาการ 把 และ 被 ได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '改签' (gǎiqiān) มีความหมายตรงกับข้อใด?",
+          options: [
+            'เปลี่ยนตั๋ว / เลื่อนรอบเดินทาง',
+            'ซื้อตั๋วใหม่ราคาเต็ม',
+            'ขอเงินทอน',
+            'ยกเลิกการเดินทางถาวร'
+          ],
+          correct_index: 0,
+          explanation_th: "'改签' (gǎiqiān) แปลว่า การเปลี่ยนรอบหรือวันเดินทางของตั๋ว",
+          encouragement: 'จำศัพท์ฟังก์ชันรถไฟความเร็วสูงได้อย่างแม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u25_l03',
+      lesson_number: 3,
+      title: {
+        zh: '深度体验与交流',
+        th: 'สัมผัสวัฒนธรรม & มิตรภาพท้องถิ่น (เฉิงตู ➔ เซี่ยงไฮ้)',
+        en: 'Cultural Immersion & Local Ties (Chengdu to Shanghai)'
+      },
+      can_do: {
+        th: 'สนทนาแลกเปลี่ยนวัฒนธรรมกับเจ้าของโฮมสเตย์ อธิบายอาหารและขนบธรรมเนียมท้องถิ่น และใช้สำนวน 一生难忘',
+        en: 'Converse with homestay hosts, describe local traditions and cuisine, and express lasting impressions'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนากับคุณป้าเจ้าของเกสต์เฮาส์ที่เฉิงตู เล่าความประทับใจอาหารเสฉวน และถ่ายรูปเป็นที่ระลึกได้อย่างอบอุ่น!',
+      vocabulary: [
+        {
+          id: 'hsk2_2513',
+          hanzi: '民宿',
+          pinyin: 'mínsù',
+          display_pinyin: 'mínsù',
+          pinyin_tone: 'min2su4',
+          meaning_th: 'โฮมสเตย์ / เกสต์เฮาส์พื้นเมือง',
+          meaning_en: 'homestay / B&B / guesthouse',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาเรือน (宝盖头)',
+          stroke_count: 16,
+          mnemonic: 'บ้านพักแรมใต้ชายคา (宀-宿) ของชาวบ้านผู้มีอัธยาศัยไมตรี (民) = โฮมสเตย์ / เกสต์เฮาส์',
+          kid_mnemonic: 'บ้านโบราณตกแต่งสวยงาม เจ้าของบ้านต้อนรับเหมือนคนในครอบครัว = 民宿',
+          body_gesture: 'กางสองมือต้อนรับเข้าสู่ประตูบ้านอย่างอบอุ่น'
+        },
+        {
+          id: 'hsk2_2514',
+          hanzi: '热情',
+          pinyin: 'rèqíng',
+          display_pinyin: 'rèqíng',
+          pinyin_tone: 're4qing2',
+          meaning_th: 'อบอุ่น / กระตือรือร้น / มีน้ำใจไมตรี',
+          meaning_en: 'warm / enthusiastic / hospitable',
+          radical: '灬',
+          radical_name_th: 'หมวดจุดไฟสี่จุด (四点底)',
+          stroke_count: 21,
+          mnemonic: 'เปลวไฟอันอบอุ่น (热) หลอมรวมกับน้ำใจอารมณ์ความรู้สึกอันจริงใจ (情) = อบอุ่นมีน้ำใจ',
+          kid_mnemonic: 'ป้ารินชาร้อนให้ ยิ้มแย้มต้อนรับอย่างเป็นกันเอง = 热情',
+          body_gesture: 'สองมือทำท่ารินถ้วยชาและยิ้มต้อนรับอย่างจริงใจ'
+        },
+        {
+          id: 'hsk2_2515',
+          hanzi: '体验',
+          pinyin: 'tǐyàn',
+          display_pinyin: 'tǐyàn',
+          pinyin_tone: 'ti3yan4',
+          meaning_th: 'ประสบการณ์ / สัมผัสทดลองด้วยตนเอง',
+          meaning_en: 'to experience / experience (firsthand)',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 17,
+          mnemonic: 'ใช้เรือนร่างร่างกายของตน (体) เข้าไปทดสอบพิสูจน์ความจริง (验) = สัมผัสประสบการณ์จริง',
+          kid_mnemonic: 'ลองหัดทำเกี๊ยวและชิมชาในตรอกโบราณเฉิงตู = 体验',
+          body_gesture: 'เอามือแตะหน้าอกแล้วสูดอากาศบริสุทธิ์เต็มปอด'
+        },
+        {
+          id: 'hsk2_2516',
+          hanzi: '风土人情',
+          pinyin: 'fēngtǔ rénqíng',
+          display_pinyin: 'fēngtǔ rénqíng',
+          pinyin_tone: 'feng1tu3 ren2qing2',
+          meaning_th: 'ขนบธรรมเนียมและวิถีผู้คนท้องถิ่น',
+          meaning_en: 'local customs and traditions / local lifestyle',
+          radical: '风',
+          radical_name_th: 'หมวดลม (风字旁)',
+          stroke_count: 20,
+          mnemonic: 'สายลมและผืนดินในแต่ละแคว้น (风土) ผสมผสานน้ำใจและวิถีของมวลมนุษย์ (人情) = ขนบธรรมเนียมท้องถิ่น',
+          kid_mnemonic: 'เดินเล่นในตรอกโบราณ ดูคนท้องถิ่นนั่งจิบชาและเล่นไพ่นกกระจอก = 风土人情',
+          body_gesture: 'วาดสองมือโอบล้อมทิวทัศน์รอบตัวอย่างชื่นชม'
+        },
+        {
+          id: 'hsk2_2517',
+          hanzi: '留念',
+          pinyin: 'liúniàn',
+          display_pinyin: 'liúniàn',
+          pinyin_tone: 'liu2nian4',
+          meaning_th: 'เก็บไว้เป็นที่ระลึก / ถ่ายรูปเป็นที่ระลึก',
+          meaning_en: 'as a souvenir / to keep as a memento',
+          radical: '田',
+          radical_name_th: 'หมวดไร่นา (田字旁)',
+          stroke_count: 18,
+          mnemonic: 'รักษาไว้ไม่ให้เลือนหาย (留) สลักอยู่ในความทรงจำและความคิดถึง (念) = เก็บไว้เป็นที่ระลึก',
+          kid_mnemonic: 'ยืนถ่ายรูปคู่กับเจ้าของบ้าน ยิ้มชี้นิ้วโป้ง "แชะ!" = 留念',
+          body_gesture: 'ทำสองนิ้วชูรูปตัว V ข้างใบหน้าถ่ายรูปเป็นที่ระลึก'
+        },
+        {
+          id: 'hsk2_2518',
+          hanzi: '告别',
+          pinyin: 'gàobié',
+          display_pinyin: 'gàobié',
+          pinyin_tone: 'gao4bie2',
+          meaning_th: 'อำลา / กล่าวคำล่ำลา',
+          meaning_en: 'to say goodbye / to bid farewell',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 14,
+          mnemonic: 'เอ่ยปากกล่าวข้อความ (告) ก่อนที่จะต้องพลัดพรากจากกัน (别) = อำลา',
+          kid_mnemonic: 'โบกมือล่ำลาที่หน้าประตูสถานี "แล้วพบกันใหม่นะ!" = 告别',
+          body_gesture: 'ยกมือขวาขึ้นโบกไปมาช้าๆ ล่ำลาด้วยรอยยิ้ม'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวนวัฒนธรรม: 风土人情 (fēngtǔ rénqíng)',
+        description_th: 'คำว่า 土 (tǔ เสียง 3) เมื่อตามด้วย 人 (rén เสียง 2) จะคงรูปครึ่งเสียงสาม (Half-3rd tone) ทำให้สำนวน 4 พยางค์ 风土人情 (fēngtǔ rénqíng) ออกเสียงไหลลื่น เป็นคำศัพท์ชั้นสูงที่แสดงถึงความซาบซึ้งในวัฒนธรรมและวิถีชีวิตท้องถิ่นอย่างลึกซึ้ง',
+        example: '深刻体验了当地的风土人情 (Shēnkè tǐyàn le dāngdì de fēngtǔ rénqíng)',
+        fun_metaphor: 'การท่องเที่ยวไม่ได้มีแค่ถ่ายรูป แต่คือการสัมผัส "风土人情" ในหัวใจ!',
+        reassurance: 'เมื่อกล่าวคำนี้กับคนจีน เจ้าภาพจะประทับใจในระดับความเข้าใจภาษาของคุณอย่างมาก'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้บอกความประทับใจ: 一边...一边... / 对我来说是一生难忘的经历',
+        explanation_th: 'ใช้แสดงความขอบคุณต่อเจ้าบ้านและประมวลผลความทรงจำดีๆ ตลอดการเดินทาง',
+        patterns: [
+          {
+            formula: '一边品尝地道美食 + 一边深入了解 + 风土人情',
+            zh: '我们一边品尝地道的成都火锅，一边深入了解四川的风土人情。',
+            pinyin: 'Wǒmen yìbiān pǐncháng dìdao de Chéngdū huǒguō, yìbiān shēnrù liǎojiě Sìchuān de fēngtǔ rénqíng.',
+            th: 'พวกเราลิ้มรสหม้อไฟเฉิงตูแท้ๆ ไปพลาง ทำความเข้าใจวิถีชีวิตผู้คนเสฉวนอย่างลึกซึ้งไปพลางครับ',
+            en: 'We tasted authentic Chengdu hotpot while gaining deep insight into Sichuan local customs.'
+          },
+          {
+            formula: '对我来说 + 这是一段一生难忘的宝贵经历',
+            zh: '对我来说，这次旅行是一段一生难忘的宝贵经历。',
+            pinyin: 'Duì wǒ láishuō, zhè cì lǚxíng shì yí duàn yìshēng nánwàng de bǎoguì jīnglì.',
+            th: 'สำหรับผมแล้ว การเดินทางครั้งนี้เป็นประสบการณ์ล้ำค่าที่ไม่อาจลืมเลือนได้ตลอดชีวิตครับ',
+            en: 'For me, this journey is a precious, unforgettable once-in-a-lifetime experience.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'คุณป้าเจ้าของโฮมสเตย์เฉิงตู 👵',
+          zh: '小伙子，这几天在成都住得习惯吗？麻辣火锅吃得惯吗？',
+          pinyin: 'Xiǎohuǒzi, zhè jǐ tiān zài Chéngdū zhù de xíguàn ma? Málà huǒguō chī de guàn ma?',
+          th: 'พ่อหนุ่ม สองสามวันนี้พักในเฉิงตูชินหรือยังจ๊ะ? ทานหม้อไฟรสเผ็ดชาไหวไหม?',
+          en: 'Young man, did you feel comfortable staying in Chengdu these days? Can you stomach the spicy hotpot?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '阿姨，您太热情了！房间特别干净温馨。成都的微辣火锅太好吃了，我还去人民公园喝了盖碗茶，深度体验了当地的风土人情！',
+          pinyin: 'Āyí, nín tài rèqíng le! Fángjiān tèbié gānjìng wēnxīn. Chéngdū de wēilà huǒguō tài hǎochī le, wǒ hái qù Rénmín Gōngyuán hē le gàiwǎnchá, shēndù tǐyàn le dāngdì de fēngtǔ rénqíng!',
+          th: 'คุณป้าอบอุ่นและมีน้ำใจมากเลยครับ! ห้องพักสะอาดและอบอุ่นมาก หม้อไฟเผ็ดน้อยของเฉิงตูอร่อยสุดๆ และผมยังได้ไปจิบชาถ้วยมีฝาปิดที่สวนสาธารณะประชาชน ได้สัมผัสวิถีชีวิตผู้คนท้องถิ่นอย่างลึกซึ้งเลยครับ!',
+          en: 'Auntie, you are so hospitable! The room was spotless and cozy. Chengdu mild hotpot was delicious, and I had covered-bowl tea in People\'s Park, deeply experiencing local culture!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'คุณป้าเจ้าของโฮมสเตย์เฉิงตู 👵',
+          zh: '喜欢就好！今天就要启程去最后一站上海了，临走前送你一盒四川茉莉花茶！',
+          pinyin: 'Xǐhuan jiù hǎo! Jīntiān jiù yào qǐchéng qù zuìhòu yí zhàn Shànghǎi le, lín zǒu qián sòng nǐ yì hé Sìchuān mòlìhuāchá!',
+          th: 'ชอบก็ดีใจแล้วจ้ะ! วันนี้ต้องออกเดินทางไปสถานีสุดท้ายที่เซี่ยงไฮ้แล้ว ก่อนจากกันป้ามอบชาดอกมะลิดีเด่นของเสฉวนให้ 1 กล่องนะ!',
+          en: 'Glad you liked it! Heading to the last stop Shanghai today, here is a box of Sichuan jasmine tea as a parting gift!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太感谢您了！阿姨，在我们正式告别前，能跟您在民宿门前拍张合照留念吗？',
+          pinyin: 'Tài gǎnxiè nín le! Āyí, zài wǒmen zhèngshì gàobié qián, néng gēn nín zài mínsù ménqián pāi zhāng hézhào liúniàn ma?',
+          th: 'ขอบพระคุณคุณป้ามากๆ เลยครับ! ก่อนพวกเราจะกล่าวคำอำลากันอย่างเป็นทางการ ขอถ่ายรูปคู่กับคุณป้าหน้าประตูโฮมสเตย์เก็บไว้เป็นที่ระลึกได้ไหมครับ?',
+          en: 'Thank you so much! Auntie, before we officially say goodbye, could we take a photo together in front of the guesthouse as a keepsake?'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '风土人情' (fēngtǔ rénqíng) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ขนบธรรมเนียมและวิถีผู้คนท้องถิ่น',
+            'พายุฝนและลมพัดแรง',
+            'ราคาตั๋วเครื่องบินไปกลับ',
+            'การตรวจสุขภาพประจำปี'
+          ],
+          correct_index: 0,
+          explanation_th: "'风土人情' แปลว่า ขนบธรรมเนียม ประเพณี และวิถีชีวิตของคนในท้องถิ่น",
+          encouragement: 'เข้าใจสำนวนวัฒนธรรมลึกซึ้งได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '热' ในคำว่า '热情' (อบอุ่นมีน้ำใจ) มีหมวดนำใดที่ด้านล่าง?",
+          options: [
+            '灬 (หมวดจุดไฟสี่จุด 四点底)',
+            '氵 (หมวดน้ำ 三点水)',
+            '木 (หมวดไม้ 木字旁)',
+            '土 (หมวดดิน 提土旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'热' มีหมวดนำ '灬' (ไฟสี่จุด) อยู่ด้านล่าง สื่อถึงความร้อนหรือความอบอุ่นเร่าร้อนของหัวใจ",
+          encouragement: 'จำรากศัพท์หมวดไฟสี่จุด 灬 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราถ่ายรูปร่วมกันหน้าประตูโฮมสเตย์เป็นที่ระลึก"',
+          tokens: ['拍合照留念', '在民宿门前', '我们'],
+          correct_sequence: ['我们', '在民宿门前', '拍合照留念'],
+          pinyin: 'Wǒmen zài mínsù ménqián pāi hézhào liúniàn',
+          meaning_th: 'พวกเราถ่ายรูปร่วมกันหน้าประตูโฮมสเตย์เป็นที่ระลึก',
+          explanation_th: 'ประธาน (我们) + สถานที่ (在民宿门前) + การกระทำที่ระลึก (拍合照留念)',
+          encouragement: 'ต่อบล็อกประโยคความทรงจำอันอบอุ่นได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '民宿' (mínsù) หมายถึงสถานที่ประเภทใด?",
+          options: [
+            'โฮมสเตย์ / เกสต์เฮาส์พื้นเมือง',
+            'โรงพยาบาลรัฐบาล',
+            'สถานีตำรวจเขต',
+            'ห้องสมุดประชาชน'
+          ],
+          correct_index: 0,
+          explanation_th: "'民宿' แปลว่า โฮมสเตย์ หรือบ้านพักของชาวบ้านที่เปิดให้นักท่องเที่ยวพักแรม",
+          encouragement: 'จำคำศัพท์ที่พักยอดนิยมในจีนได้อย่างยอดเยี่ยม!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u25_l04',
+      lesson_number: 4,
+      title: {
+        zh: '终极考验：穿越中国大冒险',
+        th: 'มหาศึกปิดท้าย: ท่องทั่วแดนมังกร 7 วัน (Grand Capstone)',
+        en: 'The Grand Capstone: 7-Day China Odyssey'
+      },
+      can_do: {
+        th: 'พิชิต Grand Boss Quest วิกฤตการณ์ 5 ด่านใน 4 มหานครด้วยภาษาจีน 100% บูรณาการคำศัพท์และไวยากรณ์ทุกบทของ Tier 2',
+        en: 'Conquer the Grand Boss Quest navigating 5 crisis gauntlets across 4 metropolises using 100% Chinese'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตสุดยอด Grand Boss Quest ทริปแบ็กแพ็ก 7 วัน ข้าม 4 มณฑล แก้ไข 5 วิกฤตการณ์เฉพาะหน้า คว้าเข็มกลัดนักเดินทาง Tier 2 สำเร็จ 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_2519',
+          hanzi: '穿越',
+          pinyin: 'chuānyuè',
+          display_pinyin: 'chuānyuè',
+          pinyin_tone: 'chuan1yue4',
+          meaning_th: 'ข้ามผ่าน / ท่องทั่วดินแดน / ทะลุผ่าน',
+          meaning_en: 'to pass through / to traverse / to cross',
+          radical: '穴',
+          radical_name_th: 'หมวดถ้ำโพรง (穴字头)',
+          stroke_count: 21,
+          mnemonic: 'สวมเสื้อผ้าลอดผ่านถ้ำ (穿) ข้ามผ่านเขตแดนอันกว้างใหญ่ (越) = ท่องทั่วดินแดน',
+          kid_mnemonic: 'นั่งรถไฟความเร็วสูงข้ามภูเขา ทะลุอุโมงค์ ท่องทั่ว 4 มณฑล = 穿越',
+          body_gesture: 'สองมือทำท่าสับมุ่งไปข้างหน้าดั่งรถไฟพุ่งทะลุอุโมงค์'
+        },
+        {
+          id: 'hsk2_2520',
+          hanzi: '挑战',
+          pinyin: 'tiǎozhàn',
+          display_pinyin: 'tiǎozhàn',
+          pinyin_tone: 'tiao3zhan4',
+          meaning_th: 'ความท้าทาย / ท้าทาย / บททดสอบ',
+          meaning_en: 'challenge / to challenge',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 18,
+          mnemonic: 'ยื่นมือออกไปสะกิดปลุกเร้า (挑) เพื่อเข้าสู่สนามประลองยุทธ์ (战) = บททดสอบความท้าทาย',
+          kid_mnemonic: 'เจอโจทย์ยาก แต่ลุยเต็มที่ไม่มีถอย = 挑战',
+          body_gesture: 'กำสองหมัดยกขึ้นระดับอกทำท่าพร้อมรับคำท้าทาย'
+        },
+        {
+          id: 'hsk2_2521',
+          hanzi: '克服',
+          pinyin: 'kèfú',
+          display_pinyin: 'kèfú',
+          pinyin_tone: 'ke4fu2',
+          meaning_th: 'เอาชนะ (อุปสรรค) / ก้าวข้ามผ่าน',
+          meaning_en: 'to overcome / to conquer (difficulties)',
+          radical: '十',
+          radical_name_th: 'หมวดเลขสิบ (十字旁)',
+          stroke_count: 15,
+          mnemonic: 'มีความสามารถอดทนข่มกลั้น (克) จนเอาชนะและสยบปัญหาลงได้ (服) = เอาชนะอุปสรรค',
+          kid_mnemonic: 'ปีนขึ้นถึงยอดเขา เอาชนะความเหนื่อยล้าได้สำเร็จ = 克服',
+          body_gesture: 'ชูกำปั้นขึ้นฟ้าอย่างมีชัยชนะ'
+        },
+        {
+          id: 'hsk2_2522',
+          hanzi: '顺利',
+          pinyin: 'shùnlì',
+          display_pinyin: 'shùnlì',
+          pinyin_tone: 'shun4li4',
+          meaning_th: 'ราบรื่น / สำเร็จลุล่วงด้วยดี',
+          meaning_en: 'smoothly / successfully',
+          radical: '页',
+          radical_name_th: 'หมวดใบหน้า (页字旁)',
+          stroke_count: 14,
+          mnemonic: 'คล้อยตามสายลม (顺) ก่อเกิดความคมกริบและผลประโยชน์งดงาม (利) = ราบรื่นสำเร็จ',
+          kid_mnemonic: 'ทุกด่านผ่านฉลุย ยิ้มกว้างโบกมือรับชัยชนะ = 顺利',
+          body_gesture: 'ยกนิ้วโป้งสองข้างพร้อมพยักหน้าฉลองความราบรื่น'
+        },
+        {
+          id: 'hsk2_2523',
+          hanzi: '独立',
+          pinyin: 'dúlì',
+          display_pinyin: 'dúlì',
+          pinyin_tone: 'du2li4',
+          meaning_th: 'พึ่งพาตนเอง / อิสระเป็นตัวของตัวเอง',
+          meaning_en: 'independent / on one\'s own',
+          radical: '犭',
+          radical_name_th: 'หมวดสัตว์ป่า (反犬旁)',
+          stroke_count: 14,
+          mnemonic: 'ยืนหยัดบนลำแข้งตนเอง (立) เพียงลำพังอย่างภาคภูมิ (独) = พึ่งพาตนเอง',
+          kid_mnemonic: 'เดินทางท่องเที่ยวคนเดียว สั่งอาหาร ซื้อตั๋ว พูดจีนได้สบาย = 独立',
+          body_gesture: 'ยืนตัวตรงอกผายไหล่ผึ่งอย่างสง่าผ่าเผย'
+        },
+        {
+          id: 'hsk2_2524',
+          hanzi: '奇迹',
+          pinyin: 'qíjì',
+          display_pinyin: 'qíjì',
+          pinyin_tone: 'qi2ji4',
+          meaning_th: 'ปาฏิหาริย์ / ความสำเร็จอันน่าอัศจรรย์',
+          meaning_en: 'miracle / wonder',
+          radical: '大',
+          radical_name_th: 'หมวดใหญ่ (大字头)',
+          stroke_count: 19,
+          mnemonic: 'สิ่งแปลกประหลาดอัศจรรย์ใจ (奇) ที่ทิ้งรอยตราประทับไว้ในประวัติศาสตร์ (迹) = ปาฏิหาริย์',
+          kid_mnemonic: 'จากคนพูดจีนไม่ได้เลย สู่การเที่ยวจีน 7 วันคนเดียวสำเร็จ = 奇迹',
+          body_gesture: 'กางสองมือออกรับแสงสว่างด้วยดวงตาเป็นประกาย'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สโลแกนแห่งชัยชนะ: 从零开始，创造奇迹 (Cóng líng kāishǐ, chuàngzào qíjì)',
+        description_th: 'คำว่า 奇迹 (2+4) สื่อถึงปาฏิหาริย์แห่งความพยายาม จากผู้เรียนที่เริ่มต้นจากศูนย์ (Zero-knowledge) จนสามารถใช้ภาษาจีนเอาชีวิตรอดและท่องเที่ยวได้อย่างสมบูรณ์',
+        example: '只要勇敢迈出第一步，就能克服困难创造奇迹 (Zhǐyào yǒnggǎn màichū dì-yī bù, jiù néng kèfú kùnnan chuàngzào qíjì)',
+        fun_metaphor: 'น้องกระต่ายทู่ทู่ 🐰 และทีมงานฮั่นซีโร่ร่วมยินดีในความสำเร็จอันยิ่งใหญ่ของคุณ!',
+        reassurance: 'คุณคือหนึ่งในผู้เรียนที่ก้าวข้ามขีดจำกัดทางภาษาได้อย่างงดงาม'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้แห่งความสำเร็จ: 克服了...顺利完成了穿越中国的挑战',
+        explanation_th: 'ใช้สรุปชัยชนะของการเดินทางและทักษะภาษาจีนที่ก้าวกระโดด',
+        patterns: [
+          {
+            formula: '我们克服了重重困难 + 顺利完成了七天旅程',
+            zh: '我们克服了语言和突发天气的困难，顺利完成了穿越中国的七天挑战！',
+            pinyin: 'Wǒmen kèfú le yǔyán hé tūfā tiānqì de kùnnan, shùnlì wánchéng le chuānyuè Zhōngguó de qī tiān tiǎozhàn!',
+            th: 'พวกเราเอาชนะอุปสรรคทางภาษาและสภาพอากาศฉุกเฉิน พิชิตคำท้าทายท่องทั่วแดนมังกร 7 วันได้อย่างราบรื่นครับ!',
+            en: 'We overcame language and weather difficulties, successfully completing the 7-day China odyssey!'
+          },
+          {
+            formula: '从今以后 + 我能够完全独立用中文在全中国旅行',
+            zh: '从今以后，我能够完全独立用中文在全中国生活和旅行。',
+            pinyin: 'Cóngjīn-yǐhòu, wǒ nénggòu wánquán dúlì yòng zhōngwén zài quán Zhōngguó shēnghuó hé lǚxíng.',
+            th: 'นับแต่นี้เป็นต้นไป ผมสามารถใช้ภาษาจีนพึ่งพาตนเองในการใช้ชีวิตและท่องเที่ยวทั่วประเทศจีนได้อย่างแท้จริงครับ',
+            en: 'From now on, I can completely independently live and travel across all of China using Chinese.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '小柴！站在上海外滩，看着黄浦江对面的东方明珠，这七天的穿越中国大冒险，我们真的做到了！',
+          pinyin: 'Xiǎo Chái! Zhàn zài Shànghǎi Wàitān, kàn zhe Huángpǔjiāng duìmiàn de Dōngfāng Míngzhū, zhè qī tiān de chuānyuè Zhōngguó dà màoxiǎn, wǒmen zhēn de zuòdào le!',
+          th: 'เสี่ยวชาย! ยืนอยู่ริมหาดไว่ทานเซี่ยงไฮ้ มองดูหอไข่มุกบูรพาฝั่งตรงข้ามแม่น้ำหวงผู่ ทริปผจญภัยท่องเมืองจีน 7 วันนี้ พวกเราทำได้จริงแล้ว!',
+          en: 'Xiao Chai! Standing on the Shanghai Bund, looking at the Oriental Pearl across Huangpu River, we truly made this 7-day China odyssey happen!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '是的！从北京扫码进站，到西安改签暴雨延误的高铁，在成都用中文点地道火锅，再到上海找回遗失的背包，我们克服了所有突发危机！',
+          pinyin: 'Shì de! Cóng Běijīng sǎomǎ jìnzhàn, dào Xī\'ān gǎiqiān bàoyǔ yánwù de gāotiě, zài Chéngdū yòng zhōngwén diǎn dìdao huǒguō, zài dào Shànghǎi zhǎohuí yíshī de bèibāo, wǒmen kèfú le suǒyǒu tūfā wēijī!',
+          th: 'ใช่แล้วครับ! จากสแกนจ่ายขึ้นรถไฟที่ปักกิ่ง เปลี่ยนตั๋วรถไฟดีเลย์จากพายุที่ซีอาน สั่งหม้อไฟเฉิงตูแท้ๆ ด้วยภาษาจีน จนถึงตามกระเป๋าเป้ที่ลืมไว้ในแท็กซี่เซี่ยงไฮ้คืนสำเร็จ พวกเราก้าวข้ามทุกวิกฤตการณ์ได้หมดเลย!',
+          en: 'Yes! From QR transit in Beijing, rescheduling delayed trains in Xi\'an, ordering hotpot in Chengdu, to recovering lost bags in Shanghai, we overcame all crises!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '你的中文水平进步太神速了！现在不管在中国的哪座城市，你都能完全独立生活交流了。',
+          pinyin: 'Nǐ de zhōngwén shuǐpíng jìnbù tài shénsù le! Xiànzài bùguǎn zài Zhōngguó de nǎ zuò chéngshì, nǐ dōu néng wánquán dúlì shēnghuó jiāoliú le.',
+          th: 'ระดับภาษาจีนของนายก้าวกระโดดเร็วราวกับปาฏิหาริย์เลย! ตอนนี้ไม่ว่าจะอยู่เมืองไหนในจีน นายก็สามารถใช้ชีวิตและสื่อสารพึ่งพาตนเองได้ 100% แล้ว',
+          en: 'Your Chinese level progressed miraculously! Now no matter which Chinese city, you can live and communicate completely independently.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '这真是属于我们每个人的奇迹！感谢一路上的好心人和朋友们，我爱中国，我也更爱学中文了！',
+          pinyin: 'Zhè zhēn shì shǔyú wǒmen měi ge rén de qíjì! Gǎnxiè yílù shàng de hǎoxīnrén hé péngyoumen, wǒ ài Zhōngguó, wǒ yě gèng ài xué zhōngwén le!',
+          th: 'นี่คือปาฏิหาริย์ของพวกเราทุกคนจริงๆ ครับ! ขอบคุณผู้คนใจดีและเพื่อนๆ ตลอดเส้นทาง ผมรักเมืองจีน และผมรักการเรียนภาษาจีนยิ่งกว่าเดิมอีกครับ!',
+          en: 'This truly is a miracle belonging to all of us! Thanks to kind people and friends along the way, I love China, and love learning Chinese even more!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '克服困难' (kèfú kùnnan) มีความหมายตรงกับข้อใด?",
+          options: [
+            'เอาชนะอุปสรรคความยากลำบาก',
+            'ยอมแพ้และเดินทางกลับบ้าน',
+            'ขอความช่วยเหลือจากแพทย์',
+            'ซื้อของฝากในตลาด'
+          ],
+          correct_index: 0,
+          explanation_th: "'克服' (เอาชนะ) + '困难' (อุปสรรค) แปลว่า เอาชนะอุปสรรคความยากลำบาก",
+          encouragement: 'จำคำศัพท์แห่งความมุ่งมั่นได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '立' ในคำว่า '独立' (พึ่งพาตนเอง/อิสระ) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'การยืนหยัดอย่างมั่นคงบนผืนแผ่นดิน',
+            'การนั่งพักผ่อน',
+            'การลอยอยู่บนน้ำ',
+            'การนอนหลับ'
+          ],
+          correct_index: 0,
+          explanation_th: "'立' หมวดขีดตั้ง สื่อถึงการยืนหยัดตั้งตรงอย่างมั่นคงด้วยตนเอง",
+          encouragement: 'จำความหมายรากศัพท์ 立 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราเอาชนะอุปสรรค พิชิตภารกิจท่องทั่วแดนมังกรสำเร็จ"',
+          tokens: ['顺利完成了穿越中国的挑战', '我们克服了困难'],
+          correct_sequence: ['我们克服了困难', '顺利完成了穿越中国的挑战'],
+          pinyin: 'Wǒmen kèfú le kùnnan, shùnlì wánchéng le chuānyuè Zhōngguó de tiǎozhàn',
+          meaning_th: 'พวกเราเอาชนะอุปสรรค พิชิตภารกิจท่องทั่วแดนมังกรสำเร็จ',
+          explanation_th: 'การเอาชนะ (我们克服了困难) + ผลลัพธ์แห่งชัยชนะ (顺利完成了穿越中国的挑战)',
+          encouragement: 'ต่อบล็อกประโยคปิดท้ายได้อย่างสมเกียรติ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '奇迹' (qíjì) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ปาฏิหาริย์ / ความสำเร็จอันอัศจรรย์',
+            'ข้อผิดพลาดทางเทคนิค',
+            'การเปลี่ยนใจกะทันหัน',
+            'กำหนดการเดินทางล่าช้า'
+          ],
+          correct_index: 0,
+          explanation_th: "'奇迹' แปลว่า ปาฏิหาริย์ หรือความสำเร็จอันน่าอัศจรรย์ใจ",
+          encouragement: 'จำคำศัพท์แห่งชัยชนะได้อย่างยอดเยี่ยม!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: '【Grand Capstone Quest: ภารกิจ 5 วิกฤตการณ์ข้าม 4 มหานคร】\nคุณเดินทางแบ็กแพ็ก 7 วัน (ปักกิ่ง ➔ ซีอาน ➔ เฉิงตู ➔ เซี่ยงไฮ้) และเผชิญหน้ากับบททดสอบวิกฤตการณ์เฉพาะหน้า 5 ด่านรวด:\n1. ปักกิ่ง: เน็ตมือถือหลุดที่สถานีรถไฟใต้ดิน คุณสลับเปิด 付款码 ออฟไลน์เพื่อสแกนผ่านประตูฉลุย\n2. ซีอาน: รถไฟความเร็วสูงไปเฉิงตูดีเลย์เพราะพายุฝน (被暴雨延误) คุณเดินเข้าเคาน์เตอร์เจรจาเปลี่ยนตั๋วฟรี (改签) และโทรเลื่อนเวลาเช็กอินโรงแรม\n3. เฉิงตู: สั่งหม้อไฟเสฉวน กำชับรสชาติอย่างแม่นยำ "微辣、免花椒、我对花生过敏"\n4. เซี่ยงไฮ้: ลืมกระเป๋าเป้และพาสปอร์ตไว้บนรถแท็กซี่ คุณโทรหาคนขับด้วยประโยค 把/被 แจ้งสถานีตำรวจและประสานรับคืนครบ 100%\n5. หอไข่มุกไว่ทาน: กล่าวสุนทรพจน์สรุปความประทับใจของการเดินทาง 7 วัน ขอบคุณมิตรภาพ และเฉลิมฉลองการเป็น "นักเดินทางอิสระในแดนมังกร" คุณควรกล่าวปิดท้ายทริปอย่างไรให้ทรงพลังที่สุด?',
+        options: [
+          '这七天穿越中国的旅程，我们从北京出发，经西安、成都到达上海。尽管途中经历了高铁暴雨延误、饮食忌口沟通和物品遗失的挑战，但我们用中文克服了所有困难，甚至得到了无数好心人的热情帮助！对我来说，这不仅是一段一生难忘的经历，更是我完全独立用中文探索世界的奇迹！ (Zhè qī tiān chuānyuè Zhōngguó de lǚchéng, wǒmen cóng Běijīng chūfā, jīng Xī\'ān, Chéngdū dàodá Shànghǎi. Jǐnguǎn túzhōng jīnglì le gāotiě bàoyǔ yánwù, yǐnshí jìkǒu gōutōng hé wùpǐn yíshī de tiǎozhàn, dàn wǒmen yòng zhōngwén kèfú le suǒyǒu kùnnan, shènzhì dédào le wúshù hǎoxīnrén de rèqíng bāngzhù! Duì wǒ láishuō, zhè bùjǐn shì yí duàn yìshēng nánwàng de jīnglì, gèng shì wǒ wánquán dúlì yòng zhōngwén tànsuǒ shìjiè de qíjì!)',
+          '服务员，再来两瓶啤酒，这顿饭我请客，大家随便吃！ (Fúwùyuán, zài lái liǎng píng píjiǔ, zhè dùn fàn wǒ qǐngkè, dàjiā suíbiàn chī!)',
+          '我不想回国了，我要在火车站睡觉，你们谁也别管我！ (Wǒ bù xiǎng huíguó le, wǒ yào zài huǒchēzhàn shuìjiào, nǐmen shéi yě bié guǎn wǒ!)',
+          '师傅，快点开车，我要赶不上飞机了，闯红灯也没关系！ (Shīfu, kuài diǎn kāichē, wǒ yào gǎnbushàng fēijī le, chuǎng hóngdēng yě méi guānxi!)'
+        ],
+        correct_index: 0,
+        explanation_th: "ตัวเลือกแรกคือบทสรุปที่สมบูรณ์แบบที่สุดของ Tier 2 Grand Boss: บูรณาการเส้นทาง 4 มหานคร (北京➔西安➔成都➔上海) สรุปวิกฤตทั้ง 5 ด่าน (高铁暴雨延误, 饮食忌口, 物品遗失) ใช้โครงสร้างไวยากรณ์ขั้นสูง (尽管...但是..., 甚至, 对我来说, 不仅...更是...) และยืนยันความสามารถในการใช้ภาษาจีนพึ่งพาตนเอง 100% (完全独立用中文探索世界的奇迹)",
+        encouragement: '🎉 สดุดีเกียรติยศสูงสุด! คุณพิชิต Grand Boss Capstone Quest ของ Tier 2: Traveler (นักเดินทาง) สำเร็จ 100%! จากจุดเริ่มต้นศูนย์ (Zero) คุณได้ก้าวสู่การเป็นนักเดินทางท่องแดนมังกรได้อย่างแท้จริงแล้ว!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u25_master',
+        badge_name: 'ราชันนักเดินทางท่องแดนมังกร 7 วัน (Grand Odyssey Champion) 🎋🚄🏔️🏆',
+        message_th: 'มหาเกียรติยศแห่งฮั่นซีโร่! คุณสำเร็จ Tier 2 ครบทั้ง 15 Units 60 บทเรียน พร้อมพิชิต Grand Boss แบ็กแพ็ก 4 มหานคร 7 วัน แก้ไข 5 วิกฤตการณ์เฉพาะหน้าด้วยภาษาจีน 100% สู่การเป็นนักเดินทางอิสระอย่างแท้จริง!',
+        xp_reward: 500
+      }
+    }
+  ]
+};

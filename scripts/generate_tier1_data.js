@@ -44,9 +44,9 @@ const tier1Units = [
           ]
         },
         dialogue: [
-          { speaker_name: "แพนด้าเป่าเปา 🐼", zh: "你要几个？", pinyin: "Nǐ yào jǐ ge?", th: "เธอเอาผลไม้กี่ลูกจ๊ะ?" },
+          { speaker_name: "น้องกระต่ายทู่ทู่ 🐰", zh: "你要几个？", pinyin: "Nǐ yào jǐ ge?", th: "เธอเอาผลไม้กี่ลูกจ๊ะ?" },
           { speaker_name: "สมชาย 🧒", zh: "我要八个，谢谢！", pinyin: "Wǒ yào bā ge, xièxie!", th: "ผมเอา 8 ลูกครับ ขอบคุณครับ!" },
-          { speaker_name: "แพนด้าเป่าเปา 🐼", zh: "给你八个，再见！", pinyin: "Gěi nǐ bā ge, zàijiàn!", th: "ให้หนู 8 ลูกจ้า บ๊ายบาย!" }
+          { speaker_name: "น้องกระต่ายทู่ทู่ 🐰", zh: "给你八个，再见！", pinyin: "Gěi nǐ bā ge, zàijiàn!", th: "ให้หนู 8 ลูกจ้า บ๊ายบาย!" }
         ],
         quizzes: [
           {
@@ -196,11 +196,11 @@ const tier1Units = [
           }
         ],
         boss_challenge: {
-          scenario_th: "คุณเห็นพวงกุญแจแพนด้าน่ารักในร้านของฝาก อยากถามราคาคนขาย ควรพูดอย่างไร?",
+          scenario_th: "คุณเห็นพวงกุญแจกระต่ายน่ารักในร้านของฝาก อยากถามราคาคนขาย ควรพูดอย่างไร?",
           options: ["再见！", "你是谁？", "这个多少钱？ (Zhè ge duōshao qián?)", "很好吃！"],
           correct_index: 2,
           explanation_th: "พูดว่า '这个多少钱？' คนขายจะหยิบเครื่องคิดเลขหรือกดราคาให้ดูทันที!",
-          encouragement: "ยอดเยี่ยม! คุณได้พวงกุญแจแพนด้าในราคามิตรภาพ!"
+          encouragement: "ยอดเยี่ยม! คุณได้พวงกุญแจกระต่ายในราคามิตรภาพ!"
         },
         cheer_trophy: { badge_name: "นักช็อปผู้ปราดเปรื่อง 🛍️🏷️", xp_reward: 60 }
       }
@@ -303,7 +303,7 @@ const tier1Units = [
         dialogue: [
           { speaker_name: "สมชาย 🧒", zh: "你好！这是我的朋友，王力。", pinyin: "Nǐ hǎo! Zhè shì wǒ de péngyou, Wáng Lì.", th: "สวัสดีครับ นี่คือเพื่อนของผม ชื่อหวังลี่ครับ" },
           { speaker_name: "หวังลี่ 👦", zh: "你好！认识你很高兴！", pinyin: "Nǐ hǎo! Rènshi nǐ hěn gāoxìng!", th: "สวัสดีครับ ยินดีที่ได้รู้จักนะครับ!" },
-          { speaker_name: "แพนด้าเป่าเปา 🐼", zh: "我也很高兴！", pinyin: "Wǒ yě hěn gāoxìng!", th: "ฉันก็ดีใจมากๆ เช่นกันจ้า!" }
+          { speaker_name: "น้องกระต่ายทู่ทู่ 🐰", zh: "我也很高兴！", pinyin: "Wǒ yě hěn gāoxìng!", th: "ฉันก็ดีใจมากๆ เช่นกันจ้า!" }
         ],
         quizzes: [
           {
@@ -420,7 +420,7 @@ const tier1Units = [
         },
         dialogue: [
           { speaker_name: "สมชาย 🧒", zh: "今天北京天气怎么样？", pinyin: "Jīntiān Běijīng tiānqì zěnmeyàng?", th: "วันนี้อากาศที่ปักกิ่งเป็นอย่างไรบ้างครับ?" },
-          { speaker_name: "แพนด้าเป่าเปา 🐼", zh: "今天很冷，下雪了！", pinyin: "Jīntiān hěn lěng, xiàxuě le!", th: "วันนี้หนาวมาก หิมะตกแล้วจ้า!" },
+          { speaker_name: "น้องกระต่ายทู่ทู่ 🐰", zh: "今天很冷，下雪了！", pinyin: "Jīntiān hěn lěng, xiàxuě le!", th: "วันนี้หนาวมาก หิมะตกแล้วจ้า!" },
           { speaker_name: "สมชาย 🧒", zh: "太好了！我要看雪！", pinyin: "Tài hǎo le! Wǒ yào kàn xuě!", th: "สุดยอดเลย! ผมอยากเห็นหิมะ!" }
         ],
         quizzes: [

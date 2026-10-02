@@ -1,0 +1,900 @@
+/**
+ * scripts/tier4_legend/unit56.ts
+ * Unit 56: 学术论文写作与同行评审 (Academic Thesis Writing & Peer Review)
+ * Tier 4 Legend - Unit 11 (L-11)
+ * Adheres strictly to AGENTS.md: Strict Typing, Zero 'any', Simplified Chinese 100%, Interleaving >= 20%.
+ */
+
+export const unit56Data = {
+  unit_id: 'tier4_u56',
+  tier: 4,
+  unit_number: 56,
+  title: {
+    zh: '学术论文写作与同行评审',
+    th: 'การเขียนบทความวิจัยเชิงวิชาการและการประเมินโดยผู้ทรงคุณวุฒิ',
+    en: 'Academic Thesis Writing & Peer Review'
+  },
+  description: 'เชี่ยวชาญการสร้างข้อสมมติฐานทางวิชาการ การวิจัยเชิงประจักษ์ การตอบข้อซักถามในการสอบวิทยานิพนธ์ และจริยธรรมการตีพิมพ์ในวารสารชั้นนำ',
+  lessons: [
+    {
+      lesson_id: 't4_u56_l01',
+      lesson_number: 1,
+      title: {
+        zh: '选题开题与学术假说',
+        th: 'การเลือกหัวข้อโครงร่างวิจัยและสมมติฐานทางวิชาการ',
+        en: 'Research Proposal & Academic Hypotheses'
+      },
+      can_do: {
+        th: 'อธิบายกระบวนทัศน์ สมมติฐาน และการทบทวนวรรณกรรมเพื่อเริ่มโครงร่างวิทยานิพนธ์ได้',
+        en: 'Explain research paradigms, formulate academic hypotheses, and synthesize literature reviews.'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้คำว่า 假说 และ 范式 อธิบายความแปลกใหม่ของงานวิจัย!',
+      vocabulary: [
+        {
+          id: 'hsk4_5601',
+          hanzi: '假说',
+          pinyin: 'jiǎshuō',
+          display_pinyin: 'jiǎshuō',
+          pinyin_tone: 'jia3shuo1',
+          meaning_th: 'สมมติฐานทางวิชาการ (Academic hypothesis)',
+          meaning_en: 'hypothesis / postulate',
+          radical: '亻',
+          radical_name_th: 'หมวดมนุษย์ (单人旁)',
+          stroke_count: 20,
+          mnemonic: 'คนตั้งข้อสันนิษฐานชั่วคราว (假) พูดอธิบายความเป็นไปได้ (说) = สมมติฐาน',
+          kid_mnemonic: 'สมมุตินักวิทยาศาสตร์คาดเดาความลับจักรวาลก่อนเริ่มทดลอง = 假说',
+          body_gesture: 'ยกมือจับคางทำท่าคิดค้นสมมติฐานอย่างลึกซึ้ง'
+        },
+        {
+          id: 'hsk4_5602',
+          hanzi: '论证',
+          pinyin: 'lùnzhèng',
+          display_pinyin: 'lùnzhèng',
+          pinyin_tone: 'lun4zheng4',
+          meaning_th: 'การอภิปรายพิสูจน์ / ให้เหตุผลเชิงวิชาการ (Argumentation / Demonstrate)',
+          meaning_en: 'demonstrate / verify / argumentation',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 16,
+          mnemonic: 'ใช้ถ้อยคำอภิปราย (论) หาพยานหลักฐานประจักษ์ (证) = การพิสูจน์ข้อเท็จจริง',
+          kid_mnemonic: 'หยิบแฟ้มหลักฐานขึ้นมากางพิสูจน์ความจริงกลางที่ประชุม = 论证',
+          body_gesture: 'ผายสองมือออกกว้างกางแผ่นชาร์ตข้อมูลพิสูจน์ความถูกต้อง'
+        },
+        {
+          id: 'hsk4_5603',
+          hanzi: '综述',
+          pinyin: 'zōngshù',
+          display_pinyin: 'zōngshù',
+          pinyin_tone: 'zong1shu4',
+          meaning_th: 'การทบทวนวรรณกรรม / บทความปริทัศน์ (Literature review / Overview)',
+          meaning_en: 'literature review / comprehensive survey',
+          radical: '纟',
+          radical_name_th: 'หมวดไหม (绞丝旁)',
+          stroke_count: 19,
+          mnemonic: 'ร้อยเรียงเส้นไหมหลายสาย (综) ถ่ายทอดความรู้รอบด้าน (述) = การทบทวนวรรณกรรม',
+          kid_mnemonic: 'หยิบหนังสือหลายเล่มมารวมประเด็นแล้วสรุปเป็นแผนผังเดียว = 综述',
+          body_gesture: 'วาดมือเป็นวงกลมรวบเอกสารทั้งหมดย่อลงในสมุดบันทึก'
+        },
+        {
+          id: 'hsk4_5604',
+          hanzi: '范式',
+          pinyin: 'fànshì',
+          display_pinyin: 'fànshì',
+          pinyin_tone: 'fan4shi4',
+          meaning_th: 'กรอบกระบวนทัศน์ / แบบแผนแนวคิด (Paradigm)',
+          meaning_en: 'paradigm / standard model',
+          radical: '艹',
+          radical_name_th: 'หมวดหญ้า (草字头)',
+          stroke_count: 14,
+          mnemonic: 'แม่พิมพ์กำกับขอบเขต (范) แบบอย่างที่เป็นมาตรฐาน (式) = กระบวนทัศน์',
+          kid_mnemonic: 'กรอบกระจกวิเศษที่เป็นต้นแบบให้ทุกคนมองโลกทัศน์ใหม่ = 范式',
+          body_gesture: 'ทำมือเป็นกรอบสี่เหลี่ยมด้านหน้าแสดงกระบวนทัศน์'
+        },
+        {
+          id: 'hsk4_5605',
+          hanzi: '开创性',
+          pinyin: 'kāichuàngxìng',
+          display_pinyin: 'kāichuàngxìng',
+          pinyin_tone: 'kai1chuang4xing4',
+          meaning_th: 'คุณลักษณะบุกเบิก / การริเริ่มสร้างสรรค์ (Pioneering / Groundbreaking)',
+          meaning_en: 'groundbreaking / pioneering nature',
+          radical: '门',
+          radical_name_th: 'หมวดประตู (门字框)',
+          stroke_count: 18,
+          mnemonic: 'เปิดประตูสู่พรมแดนใหม่ (开) ริเริ่มสิ่งที่ไม่เคยมี (创) มีคุณลักษณะพิเศษ (性) = การบุกเบิก',
+          kid_mnemonic: 'เดินถือคบเพลิงก้าวเข้าสู่ดินแดนทางปัญญาที่ไม่เคยมีใครค้นพบ = 开创性',
+          body_gesture: 'สองมือผลักประตูบานใหญ่เปิดออกสู่แสงสว่างกว้างไกล'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 假说 (jiǎshuō)',
+        description_th: 'jiǎ (เสียง 3) shuō (เสียง 1)',
+        example: '提出开创性学术假说 (Tíchū kāichuàngxìng xuéshù jiǎshuō)',
+        fun_metaphor: 'เสียง 3 แล้วกระโดดขึ้นเสียง 1 เหมือนจุดประกายไอเดียใหม่กลางห้องวิจัย',
+        reassurance: 'คำศัพท์สำคัญสำหรับการเสนอโครงร่างวิทยานิพนธ์ระดับสากล'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการตั้งสมมติฐาน: 基于……综述，提出开创性假说',
+        formula: '在梳理海量文献综述的基础上，突破传统分析范式，提出具开创性的假说并予以严密论证',
+        explanation_th: 'ใช้ในการนำเสนอโครงร่างวิทยานิพนธ์และการอภิปรายความแปลกใหม่ของงานวิจัย',
+        patterns: [
+          {
+            formula: '梳理文献综述，确立研究起点。',
+            zh: '研究团队系统梳理了过去十年的文献综述，找准了既有研究的理论盲区与创新起点。',
+            pinyin: 'Yánjiū tuánduì xìtǒng shūlǐ le guòqù shí nián de wénxiàn zōngshù, zhǎozhǔn le jìyǒu yánjiū de lǐlùn mángqū yǔ chuàngxīn qǐdiǎn.',
+            th: 'ทีมวิจัยได้ประมวลบทความปริทัศน์วรรณกรรมในรอบ 10 ปีที่ผ่านมาอย่างเป็นระบบ เพื่อระบุจุดบอดทางทฤษฎีและจุดเริ่มต้นแห่งนวัตกรรม',
+            en: 'The research team systematically reviewed the literature of the past decade, pinpointing theoretical blind spots and innovation starting points.'
+          },
+          {
+            formula: '打破分析范式，论证核心假说。',
+            zh: '本研究试图突破传统宏观调控的分析范式，基于博弈论深入论证这一开创性学术假说。',
+            pinyin: 'Běn yánjiū shìtú tūpò chuántǒng hóngguān tiáokòng de fēnxī fànshì, jīyú bóyìlùn shēnrù lùnzhèng zhè yī kāichuàngxìng xuéshù jiǎshuō.',
+            th: 'งานวิจัยนี้พยายามทลายกระบวนทัศน์การวิเคราะห์การกำกับดูแลมหภาคแบบดั้งเดิม โดยอาศัยทฤษฎีเกมพิสูจน์สมมติฐานทางวิชาการที่บุกเบิกนี้อย่างลึกซึ้ง',
+            en: 'This study attempts to break traditional macro-regulation paradigms, deeply demonstrating this pioneering hypothesis based on game theory.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '博导教授 (Doctoral Advisor) 🎓',
+          zh: '各位同仁，今天我们举行开题报告会。请申请人汇报文献综述与核心假说。',
+          pinyin: 'Gèwèi tóngrén, jīntiān wǒmen jǔxíng kāití bàogàohuì. Qǐng shēnqǐngrén huìbào wénxiàn zōngshù yǔ héxīn jiǎshuō.',
+          th: 'เพื่อนร่วมงานทุกท่าน วันนี้เราจัดสัมมนาเปิดโครงร่างวิทยานิพนธ์ ขอให้ผู้สมัครรายงานการทบทวนวรรณกรรมและสมมติฐานหลักครับ',
+          en: 'Colleagues, today we hold the thesis proposal seminar. Candidate, please report on the literature review and core hypotheses.',
+          audio_trigger: 't4_u56_l01_d01'
+        },
+        {
+          speaker: '博士候选人 (PhD Candidate) 📝',
+          zh: '感谢教授。在全面检索国内外文献综述后，本论文试图突破单一学科范式，提出了一项开创性假说。',
+          pinyin: 'Gǎnxiè jiàoshòu. Zài quánmiàn jiǎnsuǒ guónèiwài wénxiàn zōngshù hòu, běn lùnwén shìtú tūpò dānyī xuékē fànshì, tíchū le yī xiàng kāichuàngxìng jiǎshuō.',
+          th: 'ขอบพระคุณท่านอาจารย์ครับ หลังสืบค้นวรรณกรรมทั้งในและต่างประเทศอย่างครอบคลุม วิทยานิพนธ์นี้พยายามทลายกระบวนทัศน์สาขาเดี่ยว และนำเสนอสมมติฐานที่บุกเบิกครับ',
+          en: 'Thank you, professor. After a comprehensive literature review, this thesis attempts to break single-discipline paradigms, proposing a pioneering hypothesis.',
+          audio_trigger: 't4_u56_l01_d02'
+        },
+        {
+          speaker: '评审委员 (Review Committee) 👓',
+          zh: '这个假说立意新颖，但如何通过实证模型进行严密论证，是你需要重点阐述的问题。',
+          pinyin: 'Zhège jiǎshuō lìyì xīnyǐng, dàn rúhé tōngguò shízhèng móxíng jìnxíng yánmì lùnzhèng, shì nǐ xūyào zhòngdiǎn chǎnshù de wèntí.',
+          th: 'สมมติฐานนี้มีแนวคิดแปลกใหม่ แต่การจะนำแบบจำลองเชิงประจักษ์มาพิสูจน์ให้เหตุผลอย่างรัดกุมอย่างไร คือประเด็นที่คุณต้องอธิบายเป็นหลักครับ',
+          en: 'This hypothesis is novel, but how to conduct rigorous argumentation via empirical models is what you need to elaborate on.',
+          audio_trigger: 't4_u56_l01_d03'
+        },
+        {
+          speaker: '博士候选人 (PhD Candidate) 📝',
+          zh: '委员所言极是！我们将在下一章详细展示样本数据与论证逻辑，确保研究扎实可靠！',
+          pinyin: 'Wěiyuán suǒ yán jí shì! Wǒmen jiāng zài xià yī zhāng xiángxì zhǎnshì yàngběn shùjù yǔ lùnzhèng luóji, quèbǎo yánjiū zhāshi kěkào!',
+          th: 'ท่านกรรมการกล่าวถูกต้องเป็นที่สุดครับ! เราจะแสดงข้อมูลกลุ่มตัวอย่างและตรรกะการพิสูจน์อย่างละเอียดในบทถัดไป เพื่อให้มั่นใจว่างานวิจัยแน่นหนาน่าเชื่อถือครับ!',
+          en: 'The committee member is spot on! In the next chapter, we will showcase sample data and argumentation logic to ensure robust reliability!',
+          audio_trigger: 't4_u56_l01_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "假说" (jiǎshuō) ในระเบียบวิธีวิจัยทางวิชาการหมายถึงอะไร?',
+          options: [
+            'สมมติฐานทางวิทยาศาสตร์หรือวิชาการที่ตั้งขึ้นโดยมีหลักการรองรับ เพื่อรอการพิสูจน์ด้วยข้อมูลเชิงประจักษ์',
+            'เรื่องเล่าโกหกหลอกลวง',
+            'นิยายวิทยาศาสตร์แฟนตาซี',
+            'สถิติผลตอบแทนทางการเงิน'
+          ],
+          correct_index: 0,
+          explanation_th: '"假说" (Hypothesis) คือ ข้อสันนิษฐานหรือสมมติฐานทางวิชาการที่กำหนดขึ้นเพื่อนำไปสู่การทดสอบและพิสูจน์',
+          encouragement: 'เข้าใจรากฐานการวิจัยระดับบัณฑิตศึกษาได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ทลายกระบวนทัศน์ นำเสนอสมมติฐานบุกเบิก"',
+          tokens: ['提出开创假说', '突破既有范式'],
+          correct_sequence: ['突破既有范式', '提出开创假说'],
+          pinyin: 'Tūpò jìyǒu fànshì, tíchū kāichuàng jiǎshuō.',
+          meaning_th: 'ทลายกระบวนทัศน์ นำเสนอสมมติฐานบุกเบิก',
+          explanation_th: 'การก้าวข้ามกรอบเดิม (突破既有范式) + การริเริ่มสิ่งใหม่ (提出开创假说)',
+          encouragement: 'จัดประโยควิชาการระดับสูงได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "论" (lùn - อภิปราย/ทฤษฎี) ใน "论证" มีหมวดนำ "讠" (คำพูด) สื่อถึงอะไร?',
+          options: [
+            'การใช้ถ้อยคำ ตรรกะ และเหตุผลในการอภิปรายพิสูจน์ข้อเท็จจริง',
+            'การร้องเพลงประสานเสียง',
+            'การทำอาหารในห้องครัว',
+            'การเดินทางไกล'
+          ],
+          correct_index: 0,
+          explanation_th: '"讠" คือหมวดคำพูด สื่อถึงการใช้ภาษาและตรรกะในการวิเคราะห์ อภิปราย และพิสูจน์ความจริงทางวิชาการ',
+          encouragement: 'จำความหมายรากศัพท์แห่งปัญญาได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "综述" (zōngshù) มีบทบาทสำคัญที่สุดในขั้นตอนใดของวิทยานิพนธ์?',
+          options: [
+            'การประมวล รวบรวม และสังเคราะห์งานวิจัยในอดีตเพื่อสร้างฐานความรู้ (Literature Review)',
+            'การจัดเลี้ยงฉลองหลังสอบเสร็จ',
+            'การคำนวณภาษีประจำปี',
+            'การทำสัญญาซื้อขายสินค้า'
+          ],
+          correct_index: 0,
+          explanation_th: '"综述" คือ การทบทวนวรรณกรรม ซึ่งเป็นรากฐานสำคัญในการวิเคราะห์ช่องว่างทางวิชาการก่อนตั้งโจทย์วิจัย',
+          encouragement: 'เข้าใจขั้นตอนการทำวิจัยระดับสากลอย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในที่ประชุมเปิดโครงร่างวิทยานิพนธ์ดุษฎีบัณฑิต ประโยคใดนำเสนอคุณค่าทางวิชาการและระเบียบวิธีวิจัยได้อย่างสมบูรณ์แบบที่สุด?',
+        options: [
+          '本研究在系统梳理海量文献综述的基础上，突破传统分析范式，提出具开创性的理论假说，并通过实证模型予以严密论证。',
+          '在双边经贸谈判博弈中，我们手握核心技术与市场筹码，全面权衡利弊并坚决守牢底线。',
+          '为缓解宏观经济下行压力，国家统筹逆周期调控，以稳中求进为总基调支持实体经济。',
+          '严格依据知识产权涉外诉讼管辖权与国际仲裁协议，我们坚决维护了中国企业的合法权益。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "文献综述", "分析范式", "开创性假说" และ "严密论证" ได้อย่างทรงคุณค่าตามระเบียบวิจัยระดับโลก'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้บุกเบิกสมมติฐานทางปัญญา (Frontier Paradigm Pioneer)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 假说, 论证, 综述, 范式, 开创性 พร้อมเริ่มต้นการค้นคว้าอันยิ่งใหญ่!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u56_l02',
+      lesson_number: 2,
+      title: {
+        zh: '研究方法与定量实证',
+        th: 'ระเบียบวิธีวิจัยและการวิจัยเชิงประจักษ์แบบปริมาณ',
+        en: 'Methodology & Quantitative Empirical Testing'
+      },
+      can_do: {
+        th: 'อธิบายตัวแปร กลุ่มตัวอย่าง การทดสอบความทนทาน และช่วงความเชื่อมั่นในเชิงสถิติได้',
+        en: 'Discuss quantitative methods, control variables, sample sizes, robustness checks, and confidence intervals.'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้คำว่า 变量, 样本 และ 稳健性 อธิบายความน่าเชื่อถือของผลวิจัย!',
+      vocabulary: [
+        {
+          id: 'hsk4_5606',
+          hanzi: '定量',
+          pinyin: 'dìngliàng',
+          display_pinyin: 'dìngliàng',
+          pinyin_tone: 'ding4liang4',
+          meaning_th: 'เชิงปริมาณ / กำหนดปริมาณ (Quantitative / Fixed quantity)',
+          meaning_en: 'quantitative / fixed quantity',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคา (宝盖头)',
+          stroke_count: 20,
+          mnemonic: 'กำหนดหลักการมั่นคง (定) ตรวจวัดปริมาณด้วยมาตรวัด (量) = เชิงปริมาณ',
+          kid_mnemonic: 'ใช้เครื่องชั่งดิจิทัลและตลับเมตรวัดตัวเลขแน่นอน = 定量',
+          body_gesture: 'ทำท่าเทของเหลวลงในหลอดแก้วตวงวัดอย่างแม่นยำ'
+        },
+        {
+          id: 'hsk4_5607',
+          hanzi: '变量',
+          pinyin: 'biànliàng',
+          display_pinyin: 'biànliàng',
+          pinyin_tone: 'bian4liang4',
+          meaning_th: 'ตัวแปร (Variable)',
+          meaning_en: 'variable',
+          radical: '又',
+          radical_name_th: 'หมวดขวา (又字旁)',
+          stroke_count: 20,
+          mnemonic: 'ค่าที่เปลี่ยนแปลงผันแปร (变) ผ่านการวัดปริมาณ (量) = ตัวแปร',
+          kid_mnemonic: 'ตัวเลขในสมการที่สามารถปรับเปลี่ยนได้ตามการทดลอง = 变量',
+          body_gesture: 'โบกมือขึ้นลงสลับไปมาแสดงการแปรผันของค่าตัวแปร'
+        },
+        {
+          id: 'hsk4_5608',
+          hanzi: '样本',
+          pinyin: 'yàngběn',
+          display_pinyin: 'yàngběn',
+          pinyin_tone: 'yang4ben3',
+          meaning_th: 'กลุ่มตัวอย่าง / ตัวอย่างทดสอบ (Sample / Specimen)',
+          meaning_en: 'sample / specimen',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 15,
+          mnemonic: 'รูปแบบตัวอย่าง (样) ที่เป็นรากฐานอ้างอิง (本) = กลุ่มตัวอย่าง',
+          kid_mnemonic: 'สุ่มหยิบกล่องทดลอง 100 กล่องจากโกดังใหญ่มาส่องกล้อง = 样本',
+          body_gesture: 'ทำมือสุ่มหยิบวัตถุชิ้นตัวอย่างขึ้นมาพิจารณา'
+        },
+        {
+          id: 'hsk4_5609',
+          hanzi: '稳健性',
+          pinyin: 'wěnjiànxìng',
+          display_pinyin: 'wěnjiànxìng',
+          pinyin_tone: 'wen3jian4xing4',
+          meaning_th: 'ความทนทาน / ความสม่ำเสมอของผลทดสอบ (Robustness)',
+          meaning_en: 'robustness / stability',
+          radical: '禾',
+          radical_name_th: 'หมวดต้นข้าว (禾木旁)',
+          stroke_count: 26,
+          mnemonic: 'มั่นคงหนักแน่นดั่งรวงข้าว (稳) ก้าวหน้าแข็งแกร่ง (健) มีคุณสมบัติคงที่ (性) = ความทนทาน',
+          kid_mnemonic: 'ผลการทดลองที่ไม่ว่าจะเปลี่ยนเครื่องมือกี่รอบ ตัวเลขก็ยังแม่นยำไม่สั่นคลอน = 稳健性',
+          body_gesture: 'ยืนกางขาลงหลักมั่นคง สองมือประสานที่อกแสดงความเสถียร'
+        },
+        {
+          id: 'hsk4_5610',
+          hanzi: '置信区间',
+          pinyin: 'zhìxìn qūjiān',
+          display_pinyin: 'zhìxìn qūjiān',
+          pinyin_tone: 'zhi4xin4 qu1jian1',
+          meaning_th: 'ช่วงความเชื่อมั่นทางสถิติ (Confidence interval)',
+          meaning_en: 'confidence interval',
+          radical: '罒',
+          radical_name_th: 'หมวดตาข่าย (四字头)',
+          stroke_count: 38,
+          mnemonic: 'วางขอบเขต (置) แห่งความน่าเชื่อถือ (信) ในช่วงระยะห่างทางสถิติ (区间) = ช่วงความเชื่อมั่น',
+          kid_mnemonic: 'วาดรั้วขอบเขต 95% รอบระฆังคว่ำเพื่อการันตีความแม่นยำ = 置信区间',
+          body_gesture: 'กางมือสองข้างออกสร้างช่วงกรอบระยะห่างบนอากาศ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 稳健性 (wěnjiànxìng)',
+        description_th: 'wěn (เสียง 3) jiàn (เสียง 4) xìng (เสียง 4)',
+        example: '进行模型稳健性检验 (Jìnxíng móxíng wěnjiànxìng jiǎnyàn)',
+        fun_metaphor: 'เสียงหนักแน่นลงลึก สื่อถึงความมั่นคงที่ไม่สั่นคลอนของงานวิจัย',
+        reassurance: 'คำศัพท์ทางสถิติที่สำคัญมากในการเขียนผลการวิเคราะห์ระดับสากล'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการวิเคราะห์เชิงประจักษ์: 控制关键变量，检验稳健性',
+        formula: '通过严密控制各类宏观变量，依托海量样本数据，检验核心结论的置信区间与稳健性',
+        explanation_th: 'ใช้ในการอธิบายระเบียบวิธีวิจัยและผลการทดสอบสมมติฐานเชิงปริมาณ',
+        patterns: [
+          {
+            formula: '控制关键变量，扩大样本规模。',
+            zh: '我们在计量模型中引入多维控制变量，扩大样本覆盖范围，有效避免了内生性偏差。',
+            pinyin: 'Wǒmen zài jìliàng móxíng zhōng yǐnrù duōwéi kòngzhì biànliàng, kuòdà yàngběn fùgài fànwéi, yǒuxiào bìmiǎn le nèishēngxìng piānchā.',
+            th: 'เรานำตัวแปรควบคุมหลายมิติเข้ามาใส่ในแบบจำลองการวัด และขยายขอบเขตกลุ่มตัวอย่างเพื่อหลีกเลี่ยงความลำเอียง',
+            en: 'We introduced multidimensional control variables into the econometric model and expanded sample coverage, effectively avoiding endogeneity bias.'
+          },
+          {
+            formula: '置信区间稳定，验证模型稳健。',
+            zh: '实证检验表明，回归系数全部落在百分之九十五的置信区间内，充分证明了结论的稳健性。',
+            pinyin: 'Shízhèng jiǎnyàn biǎomíng, huíguī xìshù quánbù luò zài bǎifēn zhī jiǔshíwǔ de zhìxìn qūjiān nèi, chōngfèn zhèngmíng le jiélùn de wěnjiànxìng.',
+            th: 'การทดสอบเชิงประจักษ์แสดงว่า ค่าสัมประสิทธิ์การถดถอยตกอยู่ในช่วงความเชื่อมั่นร้อยละ 95 ทั้งหมด พิสูจน์ความทนทานของข้อสรุปได้อย่างเต็มที่',
+            en: 'Empirical tests show that regression coefficients all fall within the 95% confidence interval, fully proving the robustness of the conclusions.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '计量经济学家 (Econometrician) 📈',
+          zh: '各位研究员，我们刚刚完成了新一轮定量分析，请汇报主要变量的回归结果。',
+          pinyin: 'Gèwèi yánjiūyuán, wǒmen gānggāng wánchéng le xīn yī lún dìngliàng fēnxī, qǐng huìbào zhǔyào biànliàng de huíguī jiéguǒ.',
+          th: 'นักวิจัยทุกท่าน เราเพิ่งเสร็จสิ้นการวิเคราะห์เชิงปริมาณรอบใหม่ ขอให้รายงานผลการถดถอยของตัวแปรหลักครับ',
+          en: 'Researchers, we have just completed a new round of quantitative analysis; please report regression results of key variables.',
+          audio_trigger: 't4_u56_l02_d01'
+        },
+        {
+          speaker: '数据分析师 (Data Analyst) 💻',
+          zh: '本次研究采集了跨越二十年的微观样本，有效样本量突破五十万份，数据代表性极高。',
+          pinyin: 'Běn cì yánjiū cǎijí le kuàyuè èrshí nián de wēiguān yàngběn, yǒuxiào yàngběnliàng tūpò wǔshí wàn fèn, shùjù dàibiǎoxìng jí gāo.',
+          th: 'การวิจัยรอบนี้เก็บข้อมูลกลุ่มตัวอย่างระดับจุลภาคครอบคลุมกว่า 20 ปี จำนวนกลุ่มตัวอย่างที่มีผลทะลุ 5 แสนชุด ความเป็นตัวแทนของข้อมูลสูงมากครับ',
+          en: 'This study collected micro samples spanning 20 years, with effective sample size exceeding 500,000, ensuring high data representativeness.',
+          audio_trigger: 't4_u56_l02_d02'
+        },
+        {
+          speaker: '计量经济学家 (Econometrician) 📈',
+          zh: '很好！替换被解释变量后，核心参数是否依然落在预设的置信区间内？',
+          pinyin: 'Hěn hǎo! Tìhuàn bèi jiěshì biànliàng hòu, héxīn cānshù shìfǒu yīrán luò zài yùshè de zhìxìn qūjiān nèi?',
+          th: 'ดีมาก! หลังจากเปลี่ยนตัวแปรตามแล้ว พารามิเตอร์หลักยังคงตกอยู่ในช่วงความเชื่อมั่นที่กำหนดไว้หรือไม่?',
+          en: 'Very good! After replacing the dependent variable, do core parameters still fall within the preset confidence interval?',
+          audio_trigger: 't4_u56_l02_d03'
+        },
+        {
+          speaker: '数据分析师 (Data Analyst) 💻',
+          zh: '完全符合！多项稳健性检验均在百分之一的水平下显著，模型表现非常优异！',
+          pinyin: 'Wánquán fúhé! Duō xiàng wěnjiànxìng jiǎnyàn jūn zài bǎifēn zhī yī de shuǐpíng xià xiǎnzhù, móxíng biǎoxiàn fēicháng yōuyì!',
+          th: 'สอดคล้องอย่างสมบูรณ์ครับ! การทดสอบความทนทานหลายประการมีนัยสำคัญที่ระดับ 1% แบบจำลองแสดงประสิทธิภาพยอดเยี่ยมมากครับ!',
+          en: 'Completely consistent! Multiple robustness tests are significant at the 1% level; model performance is exceptionally superior!',
+          audio_trigger: 't4_u56_l02_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ในระเบียบวิธีวิจัยเชิงปริมาณ คำว่า "稳健性" (wěnjiànxìng) มีความสำคัญอย่างไร?',
+          options: [
+            'ยืนยันว่าผลการศึกษาและแบบจำลองยังคงมีความสม่ำเสมอและเชื่อถือได้ แม้จะปรับเปลี่ยนตัวแปรหรือวิธีการทดสอบ (Robustness)',
+            'ความเร็วในการพิมพ์ข้อความลงในคอมพิวเตอร์',
+            'การประหยัดงบประมาณในการวิจัย',
+            'การแปลผลเป็นภาษาต่างประเทศ'
+          ],
+          correct_index: 0,
+          explanation_th: '"稳健性" (Robustness) หมายถึง คุณสมบัติที่ผลการศึกษาไม่เปลี่ยนแปลงไปตามความบังเอิญของกลุ่มตัวอย่างหรือการตั้งค่าตัวแปร',
+          encouragement: 'เข้าใจหัวใจสำคัญของสถิติศาสตร์วิจัยได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ควบคุมตัวแปรสำคัญ ขยายขนาดกลุ่มตัวอย่าง"',
+          tokens: ['扩大样本规模', '控制关键变量'],
+          correct_sequence: ['控制关键变量', '扩大样本规模'],
+          pinyin: 'Kòngzhì guānjiàn biànliàng, kuòdà yàngběn guīmó.',
+          meaning_th: 'ควบคุมตัวแปรสำคัญ ขยายขนาดกลุ่มตัวอย่าง',
+          explanation_th: 'การควบคุม (控制关键变量) + การขยายกลุ่มตัวอย่าง (扩大样本规模)',
+          encouragement: 'จัดประโยคการวิจัยเชิงประจักษ์ได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "量" (liàng - ปริมาณ/วัด) ใน "定量" มีความหมายเชื่อมโยงกับการวิจัยอย่างไร?',
+          options: [
+            'การวัดผล ประเมินค่า และกำหนดตัวเลขเชิงสถิติอย่างแม่นยำ',
+            'การมองเห็นทิวทัศน์',
+            'การเดินขึ้นภูเขา',
+            'การฟังเพลงดนตรี'
+          ],
+          correct_index: 0,
+          explanation_th: '"量" คือการวัด ตวง หรือคำนวณปริมาณ สื่อถึงการวิจัยเชิงปริมาณ (Quantitative Research)',
+          encouragement: 'จำรากศัพท์การวัดปริมาณได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "置信区间" (zhìxìn qūjiān) ตรงกับคำศัพท์ทางสถิติในภาษาอังกฤษข้อใด?',
+          options: [
+            'Confidence Interval',
+            'Standard Deviation',
+            'Random Variable',
+            'Correlation Matrix'
+          ],
+          correct_index: 0,
+          explanation_th: '"置信区间" คือ ช่วงความเชื่อมั่น (Confidence Interval) เช่น 95% CI',
+          encouragement: 'แม่นยำทั้งศัพท์สถิติจีนและสากลอย่างแท้จริง!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในรายงานการวิจัยเชิงประจักษ์ฉบับสมบูรณ์ ประโยคใดนำเสนอความน่าเชื่อถือของผลการทดสอบทางสถิติได้อย่างหนักแน่นที่สุด?',
+        options: [
+          '本项定量实证依托海量微观样本，严密控制关键变量，核心回归系数均落在百分之九十五的置信区间内，稳健性无可置疑。',
+          '为稳中求进并防范宏观系统性金融风险，中央银行近期出台了针对实体经济的新一轮逆周期货币政策。',
+          '在双边经贸谈判陷入僵局之际，双方代表通过阶段性妥协与利益置换，最终实现了互利共赢。',
+          '依托欧亚物流枢纽共建繁荣经济走廊，沿线各国大幅降低关税壁垒，切实促进了多边贸易畅通。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "定量实证", "海量样本", "控制变量", "置信区间" และ "稳健性" ได้อย่างรัดกุมตามเกณฑ์วิชาการชั้นยอด'
+      },
+      cheer_trophy: {
+        badge_name: 'ปรมาจารย์สถิติเชิงประจักษ์ (Empirical Methodology Virtuoso)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 定量, 变量, 样本, 稳健性, 置信区间 พร้อมสร้างงานวิจัยระดับโลก!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u56_l03',
+      lesson_number: 3,
+      title: {
+        zh: '同行评审与盲审答辩',
+        th: 'การประเมินโดยผู้ทรงคุณวุฒิและการสอบป้องกันวิทยานิพนธ์',
+        en: 'Peer Review & Dissertation Defense'
+      },
+      can_do: {
+        th: 'ใช้ภาษาทางวิชาการในการตอบข้อซักถามในการสอบป้องกัน การถกเถียงเชิงวิชาการ และการโต้แย้งอย่างมีวุฒิภาวะได้',
+        en: 'Master academic discourse for thesis defenses, peer review replies, respectful debates, and rigorous rebuttals.'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้คำว่า 答辩, 商榷 และ 驳论 ตอบคำถามคณะกรรมการได้อย่างสุภาพ!',
+      vocabulary: [
+        {
+          id: 'hsk4_5611',
+          hanzi: '同行评审',
+          pinyin: 'tóngháng píngshěn',
+          display_pinyin: 'tóngháng píngshěn',
+          pinyin_tone: 'tong2hang2 ping2shen3',
+          meaning_th: 'การประเมินโดยผู้ทรงคุณวุฒิในสาขาเดียวกัน (Peer review)',
+          meaning_en: 'peer review',
+          radical: '行',
+          radical_name_th: 'หมวดทางเดิน (行字旁)',
+          stroke_count: 36,
+          mnemonic: 'ผู้ร่วมวิชาชีพเดียวกัน (同行) ทำการวิพากษ์และพิจารณาตัดสิน (评审) = การประเมินโดยผู้ทรงคุณวุฒิ',
+          kid_mnemonic: 'ส่งรายงานให้เพื่อนนักวิทยาศาสตร์ระดับดอกเตอร์ช่วยตรวจความแม่นยำ = 同行评审',
+          body_gesture: 'ยื่นแฟ้มวิจัยด้วยสองมืออย่างนอบน้อมส่งให้ผู้ทรงคุณวุฒิตรวจ'
+        },
+        {
+          id: 'hsk4_5612',
+          hanzi: '盲审',
+          pinyin: 'mángshěn',
+          display_pinyin: 'mángshěn',
+          pinyin_tone: 'mang2shen3',
+          meaning_th: 'การตรวจประเมินแบบไม่เปิดเผยตัวตน (Blind review)',
+          meaning_en: 'blind review / double-blind evaluation',
+          radical: '目',
+          radical_name_th: 'หมวดตา (目字旁)',
+          stroke_count: 23,
+          mnemonic: 'ปิดบังสายตาไม่ให้เห็นชื่อผู้เขียน (盲) เพื่อความยุติธรรมในการตรวจ (审) = การประเมินแบบปิดข้อมูล',
+          kid_mnemonic: 'ปิดชื่อนักเรียนบนหัวกระดาษข้อสอบเพื่อให้อาจารย์ให้คะแนนอย่างยุติธรรม = 盲审',
+          body_gesture: 'ยกมือปิดบริเวณตาข้างหนึ่ง สื่อถึงการตรวจแบบไม่ระบุตัวตน'
+        },
+        {
+          id: 'hsk4_5613',
+          hanzi: '答辩',
+          pinyin: 'dábiàn',
+          display_pinyin: 'dábiàn',
+          pinyin_tone: 'da2bian4',
+          meaning_th: 'การสอบป้องกันวิทยานิพนธ์ / ชี้แจงตอบข้อซักถาม (Thesis defense / Reply)',
+          meaning_en: 'thesis defense / reply to inquiries',
+          radical: '⺮',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 28,
+          mnemonic: 'ตอบคำถามที่เขียนบนติ้วไม้ไผ่ (答) ชี้แจงอภิปรายอย่างเฉียบคม (辩) = การสอบป้องกัน',
+          kid_mnemonic: 'ยืนบนเวทีบรรยายอย่างสง่าผ่าเผยตอบคำถามอาจารย์ทุกคน = 答辩',
+          body_gesture: 'ยืนตัวตรง ยิ้มอย่างมั่นใจ และผายมือตอบคำถาม'
+        },
+        {
+          id: 'hsk4_5614',
+          hanzi: '商榷',
+          pinyin: 'shāngquè',
+          display_pinyin: 'shāngquè',
+          pinyin_tone: 'shang1que4',
+          meaning_th: 'การแลกเปลี่ยนหารือเชิงวิชาการ / การขอปรึกษาเห็นต่าง (Deliberate / Discussion)',
+          meaning_en: 'deliberate / discuss / open to debate',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 26,
+          mnemonic: 'เปิดปากเจรจาปรึกษา (商) เคาะสะพานไม้ประเมินความปลอดภัย (榷) = การหารือแลกเปลี่ยน',
+          kid_mnemonic: 'ยกมือขอแสดงความคิดเห็นที่อาจจะเห็นต่างอย่างสุภาพ = 商榷',
+          body_gesture: 'ยกมือขวาขึ้นในระดับอกพร้อมพยักหน้าขอแลกเปลี่ยน'
+        },
+        {
+          id: 'hsk4_5615',
+          hanzi: '驳论',
+          pinyin: 'bólùn',
+          display_pinyin: 'bólùn',
+          pinyin_tone: 'bo2lun4',
+          meaning_th: 'การโต้แย้งทางวิชาการ / ข้อหักล้าง (Rebuttal / Refutation)',
+          meaning_en: 'rebuttal / refutation / counter-argument',
+          radical: '马',
+          radical_name_th: 'หมวดม้า (马字旁)',
+          stroke_count: 16,
+          mnemonic: 'ม้าต่างสีหันหน้าชนกัน (驳) ด้วยถ้อยคำอภิปรายโต้กลับ (论) = ข้อหักล้างโต้แย้ง',
+          kid_mnemonic: 'ยกหลักฐานใหม่ออกมาหักล้างข้อความที่ไม่ถูกต้องอย่างสุภาพ = 驳论',
+          body_gesture: 'ยกมือขวาหงายขึ้นด้านหน้าแสดงการโต้แย้งอย่างมีหลักการ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 答辩 (dábiàn)',
+        description_th: 'dá (เสียง 2) biàn (เสียง 4)',
+        example: '顺利通过博士学位答辩 (Shùnlì tōngguò bóshì xuéwèi dábiàn)',
+        fun_metaphor: 'จังหวะฉะฉาน 2 แล้ว 4 แสดงถึงความสง่างามและความมั่นใจในข้อมูล',
+        reassurance: 'คำศัพท์สำคัญที่สุดของพิธีการสำเร็จการศึกษาระดับปริญญาเอก'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการตอบข้อซักถามวิชาการ: 针对盲审意见，提出学术商榷与有力驳论',
+        formula: '在严格的同行评审与学位答辩中，针对专家商榷意见，展开有理有据的学术驳论',
+        explanation_th: 'ใช้ในการตอบข้อคิดเห็นของผู้ทรงคุณวุฒิในการสอบป้องกันดุษฎีนิพนธ์',
+        patterns: [
+          {
+            formula: '虚心接纳意见，展开学术商榷。',
+            zh: '候选人虚心接纳了同行评审专家的宝贵意见，并就部分边际条件展开了富有成效的学术商榷。',
+            pinyin: 'Hòuxuǎnrén xūxīn jiēnà le tóngháng píngshěn zhuānjiā de bǎoguì yìjiàn, bìng jiù bùfen biānjì tiáojiàn zhǎnkāi le fùyǒu chéngxiào de xuéshù shāngquè.',
+            th: 'ผู้สมัครน้อมรับความคิดเห็นอันทรงคุณค่าของผู้ประเมิน และได้เปิดการหารือเชิงวิชาการที่เป็นประโยชน์ในประเด็นเงื่อนไขขอบเขต',
+            en: 'The candidate humbly accepted the peer reviewers valuable comments and engaged in fruitful academic discussion on boundary conditions.'
+          },
+          {
+            formula: '依据严密证据，提出有力驳论。',
+            zh: '面对评审专家关于模型局限性的质疑，他出具补充样本数据，进行了条理清晰的学术驳论。',
+            pinyin: 'Miànduì píngshěn zhuānjiā guānyú móxíng júxiànxìng de zhìyí, tā chūjù bǔchōng yàngběn shùjù, jìnxíng le tiáolǐ qīngxī de xuéshù bólùn.',
+            th: 'เมื่อต้องเผชิญกับข้อซักถามเรื่องข้อจำกัดของแบบจำลอง เขาได้นำเสนอข้อมูลกลุ่มตัวอย่างเพิ่มเติมและทำการโต้แย้งอย่างเป็นระบบ',
+            en: 'Facing reviewer queries on model limitations, he produced supplementary sample data and conducted structured academic rebuttals.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '答辩委员会主席 (Defense Chair) 👨‍⚖️',
+          zh: '各位委员、候选人，现在开始博士学位论文最终答辩。本论文此前已通过双盲审。',
+          pinyin: 'Gèwèi wěiyuán, hòuxuǎnrén, xiànzài kāishǐ bóshì xuéwèi lùnwén zuìzhōng dábiàn. Běn lùnwén cǐqián yǐ tōngguò shuāng mángshěn.',
+          th: 'คณะกรรมการและผู้สมัครทุกท่าน บัดนี้เริ่มการสอบป้องกันวิทยานิพนธ์ระดับดุษฎีบัณฑิตรอบสุดท้าย วิทยานิพนธ์นี้ผ่านการตรวจแบบปิดชื่อคู่มาก่อนแล้วครับ',
+          en: 'Committee members and candidate, the final doctoral thesis defense now begins. This thesis has previously passed double-blind review.',
+          audio_trigger: 't4_u56_l03_d01'
+        },
+        {
+          speaker: '博士候选人 (PhD Candidate) 🎓',
+          zh: '主席好！感谢匿名同行评审专家提出的深刻见解，请允许我就第三章的推论提出简要答辩。',
+          pinyin: 'Zhǔxí hǎo! Gǎnxiè nìmíng tóngháng píngshěn zhuānjiā tíchū de shēnkè jiànjiě, qǐng yǔnxǔ wǒ jiù dì sān zhāng de tuīlùn tíchū jiǎnyào dábiàn.',
+          th: 'สวัสดีครับท่านประธาน! ขอบพระคุณสำหรับข้อคิดเห็นอันลึกซึ้งของผู้ประเมินแบบไม่เปิดเผยตัวตน ขออนุญาตชี้แจงตอบข้อซักถามในบทที่ 3 ครับ',
+          en: 'Hello, Chair! Thank you for the profound insights from anonymous peer reviewers; allow me to offer a brief defense regarding chapter three.',
+          audio_trigger: 't4_u56_l03_d02'
+        },
+        {
+          speaker: '答辩特邀专家 (External Examiner) 🧐',
+          zh: '你关于稳健性的解释很有说服力。但在因果推断方面，学界仍存商榷空间，你有何驳论？',
+          pinyin: 'Nǐ guānyú wěnjiànxìng de jiěshì hěn yǒu shuōfúlì. Dàn zài yīnguǒ tuīduàn fāngmiàn, xuéjiè réng cún shāngquè kōngjiān, nǐ yǒu hé bólùn?',
+          th: 'คำอธิบายเรื่องความทนทานของคุณน่าเชื่อถือมาก แต่ในแง่การอนุมานเชิงเหตุและผล วงการวิชาการยังมีพื้นที่ให้แลกเปลี่ยน คุณมีข้อโต้แย้งอย่างไรครับ?',
+          en: 'Your explanation on robustness is persuasive. But regarding causal inference, academia still has room for debate; what is your rebuttal?',
+          audio_trigger: 't4_u56_l03_d03'
+        },
+        {
+          speaker: '博士候选人 (PhD Candidate) 🎓',
+          zh: '专家明鉴！我们运用工具变量法进行了反事实检验，该驳论已有效化解了因果倒置难题。',
+          pinyin: 'Zhuānjiā míngjiàn! Wǒmen yùnyòng gōngjù biànliàngfǎ jìnxíng le fǎnshìshí jiǎnyàn, gāi bólùn yǐ yǒuxiào huàjiě le yīnguǒ dàozhì nántí.',
+          th: 'ท่านผู้เชี่ยวชาญมองเห็นอย่างทะลุปรุโปร่งครับ! เราได้ใช้ตัวแปรเครื่องมือทดสอบสมมติการณ์ตรงข้าม ซึ่งข้อโต้แย้งนี้คลี่คลายปัญหาเหตุผลสลับทางได้อย่างมีประสิทธิผลครับ',
+          en: 'Expert insight! We used instrumental variables for counterfactual tests; this rebuttal effectively resolved reverse causality challenges.',
+          audio_trigger: 't4_u56_l03_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ระบบ "盲审" (mángshěn) มีจุดประสงค์หลักเพื่ออะไรในระบบการศึกษาขั้นสูง?',
+          options: [
+            'การประเมินวิทยานิพนธ์โดยซ่อนชื่อผู้เขียนและสถาบัน เพื่อให้การประเมินเป็นกลางและปราศจากอคติ',
+            'การตรวจสายตาของนักศึกษา',
+            'การสอบข้อเขียนในห้องมืด',
+            'การทดสอบสมรรถภาพทางกายภาพ'
+          ],
+          correct_index: 0,
+          explanation_th: '"盲审" คือ การประเมินแบบปิดข้อมูลระบุตัวตน (Blind review) เพื่อประกันความยุติธรรมและมาตรฐานทางวิชาการ',
+          encouragement: 'เข้าใจระบบประกันคุณภาพวิชาการระดับโลกได้อย่างถูกต้อง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เปิดการหารือวิชาการ เสนอข้อโต้แย้งหักล้าง"',
+          tokens: ['提出有力驳论', '展开学术商榷'],
+          correct_sequence: ['展开学术商榷', '提出有力驳论'],
+          pinyin: 'Zhǎnkāi xuéshù shāngquè, tíchū yǒulì bólùn.',
+          meaning_th: 'เปิดการหารือวิชาการ เสนอข้อโต้แย้งหักล้าง',
+          explanation_th: 'การหารือแลกเปลี่ยน (展开学术商榷) + การเสนอข้อโต้แย้ง (提出有力驳论)',
+          encouragement: 'จัดประโยคการตอบข้อซักถามได้อย่างสง่างาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "驳" (bó - โต้แย้ง/ม้าด่าง) ใน "驳论" มีหมวดนำ "马" (ม้า) สื่อถึงอะไร?',
+          options: [
+            'ม้าศึกที่ประจันหน้ากัน สื่อถึงการยกพยานหลักฐานเข้าหักล้างข้อเสนอที่ไม่ถูกต้อง',
+            'การขี่ม้าท่องเที่ยวในทุ่งหญ้า',
+            'การขนส่งสัมภาระข้ามภูเขา',
+            'การดูแลม้าในคอก'
+          ],
+          correct_index: 0,
+          explanation_th: '"马" ใน "驳" สื่อถึงการเผชิญหน้ากันด้วยเหตุและผลเพื่อหักล้าง (Rebuttal)',
+          encouragement: 'เข้าใจที่มาทางอักษรศาสตร์อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "商榷" (shāngquè) มักใช้ในบริบทใดจึงจะเหมาะสมที่สุด?',
+          options: [
+            'การแสดงความคิดเห็นที่แตกต่างหรือขอปรึกษาหารือทางวิชาการอย่างสุภาพและมีสัมมาคารวะ',
+            'การตะโกนด่าทอในที่สาธารณะ',
+            'การลดราคาสินค้าในห้างสรรพสินค้า',
+            'การสั่งการผู้ใต้บังคับบัญชาอย่างเผด็จการ'
+          ],
+          correct_index: 0,
+          explanation_th: '"商榷" คือ ถ้อยคำสุภาพที่ปัญญาชนใช้ในการขอแลกเปลี่ยนและชวนคิดต่อในประเด็นที่เห็นต่างกัน',
+          encouragement: 'ซึมซับมารยาทและวุฒิภาวะของนักวิชาการอย่างแท้จริง!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในพิธีสอบป้องกันดุษฎีนิพนธ์ ประโยคใดตอบข้อซักถามของคณะกรรมการประเมินได้อย่างสง่างามและมีพลังทางวิชาการสูงสุด?',
+        options: [
+          '针对盲审专家提出的宝贵意见，我们秉持严谨态度展开学术商榷，并依托补充样本进行了有理有据的学术答辩与有力驳论。',
+          '面对突如其来的舆论公关危机，企业高管应当第一时间发布澄清声明，全力挽回公众信赖与品牌公信力。',
+          '在双边经贸谈判中，为了打破僵局并达成妥协，我们必须牢牢守住底线筹码，绝不作出单方面实质让步。',
+          '鲁迅先生以深刻批判针砭时弊，老舍先生以京味幽默展现市井百态，皆为现代文学史上历久弥新的脊梁。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "盲审意见", "严谨态度", "学术商榷", "学术答辩" และ "有力驳论" ได้อย่างสมบูรณ์แบบตามจรรยาบรรณปราชญ์'
+      },
+      cheer_trophy: {
+        badge_name: 'ยอดขุนพลสอบป้องกันดุษฎีนิพนธ์ (Doctoral Defense Laureate)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 同行评审, 盲审, 答辩, 商榷, 驳论 พร้อมก้าวสู่ทำเนียบดุษฎีบัณฑิต!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u56_l04',
+      lesson_number: 4,
+      title: {
+        zh: '学术伦理与顶刊发表',
+        th: 'จริยธรรมทางวิชาการและการตีพิมพ์ในวารสารชั้นนำ',
+        en: 'Academic Ethics & Top Journal Publishing'
+      },
+      can_do: {
+        th: 'อภิปรายถึงจริยธรรมทางวิชาการ การอ้างอิงเอกสาร การป้องกันการคัดลอกผลงาน และมาตรฐานวารสารระดับโลกได้',
+        en: 'Discuss academic ethics, citations, plagiarism prevention, retraction risks, and rigorous standards of top journals.'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้คำว่า 顶刊, 严谨 และ 引用 บรรยายมาตรฐานวิชาการระดับสากล!',
+      vocabulary: [
+        {
+          id: 'hsk4_5616',
+          hanzi: '撤稿',
+          pinyin: 'chègǎo',
+          display_pinyin: 'chègǎo',
+          pinyin_tone: 'che4gao3',
+          meaning_th: 'การถอนบทความวิจัย / เรียกคืนบทความ (Paper retraction)',
+          meaning_en: 'retraction / retract a manuscript',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 24,
+          mnemonic: 'ยื่นมือไปดึงกลับ (撤) ต้นฉบับเอกสารร่าง (稿) = การถอนบทความ',
+          kid_mnemonic: 'ดึงเอกสารออกจากวารสารเพราะตรวจพบข้อผิดพลาด = 撤稿',
+          body_gesture: 'ทำท่าดึงกระดาษกลับเข้ามาหาตัวอย่างระมัดระวัง'
+        },
+        {
+          id: 'hsk4_5617',
+          hanzi: '剽窃',
+          pinyin: 'piáoqiè',
+          display_pinyin: 'piáoqiè',
+          pinyin_tone: 'piao2qie4',
+          meaning_th: 'การคัดลอกผลงานวรรณกรรม / การโจรกรรมทางวิชาการ (Plagiarism)',
+          meaning_en: 'plagiarize / plagiarism',
+          radical: '刂',
+          radical_name_th: 'หมวดมีด (立刀旁)',
+          stroke_count: 25,
+          mnemonic: 'ใช้มีดแอบเฉือนตัดเอาของคนอื่น (剽) ขโมยความคิดในเงามืด (窃) = การคัดลอกผลงาน',
+          kid_mnemonic: 'แอบก๊อปปี้การบ้านเพื่อนมาใส่ชื่อตัวเอง = 剽窃 (ห้ามทำเด็ดขาด!)',
+          body_gesture: 'ส่ายหน้าโบกมือไขว้กัน ปฏิเสธการลอกเลียนแบบผลงาน'
+        },
+        {
+          id: 'hsk4_5618',
+          hanzi: '引用',
+          pinyin: 'yǐnyòng',
+          display_pinyin: 'yǐnyòng',
+          pinyin_tone: 'yin3yong4',
+          meaning_th: 'การอ้างอิงเอกสาร / อ้างถึง (Citation / Cite)',
+          meaning_en: 'cite / quote / reference',
+          radical: '弓',
+          radical_name_th: 'หมวดคันธนู (弓字旁)',
+          stroke_count: 9,
+          mnemonic: 'น้าวสายธนูชักนำมา (引) นำมาใช้งานอย่างถูกต้องตามธรรมเนียม (用) = การอ้างอิง',
+          kid_mnemonic: 'ใส่เครื่องหมายคำพูดและระบุชื่อเจ้าของไอเดียที่หน้าล่าง = 引用',
+          body_gesture: 'ใช้นิ้วชี้สองข้างทำท่าเครื่องหมายคำพูดในอากาศ'
+        },
+        {
+          id: 'hsk4_5619',
+          hanzi: '顶刊',
+          pinyin: 'dǐngkān',
+          display_pinyin: 'dǐngkān',
+          pinyin_tone: 'ding3kan1',
+          meaning_th: 'วารสารวิชาการชั้นนำระดับแนวหน้า (Top-tier journal)',
+          meaning_en: 'top academic journal',
+          radical: '页',
+          radical_name_th: 'หมวดหน้ากระดาษ (页字旁)',
+          stroke_count: 16,
+          mnemonic: 'อยู่บนจุดสูงสุดของวงวิชาการ (顶) วารสารตีพิมพ์ทรงเกียรติ (刊) = วารสารชั้นนำ',
+          kid_mnemonic: 'วารสารวิทยาศาสตร์ที่มีมงกุฎทองคำประดับอยู่บนหน้าปก = 顶刊',
+          body_gesture: 'สองมือชูเล่มวารสารขึ้นเหนือศีรษะแสดงเกียรติยศสูงสุด'
+        },
+        {
+          id: 'hsk4_5620',
+          hanzi: '严谨',
+          pinyin: 'yánjǐn',
+          display_pinyin: 'yánjǐn',
+          pinyin_tone: 'yan2jin3',
+          meaning_th: 'รัดกุม เคร่งครัด แม่นยำ (Rigorous / Meticulous)',
+          meaning_en: 'rigorous / meticulous / precise',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 22,
+          mnemonic: 'เคร่งครัดตามกฎเกณฑ์ (严) ระมัดระวังรอบคอบในถ้อยคำ (谨) = ความรัดกุมแม่นยำ',
+          kid_mnemonic: 'ตรวจทานทุกจุดทศนิยมและทุกตัวอักษรซ้ำสามรอบไม่ให้มีผิดพลาด = 严谨',
+          body_gesture: 'ชี้นิ้วตรวจทานทีละบรรทัดด้วยสายตาจดจ่อ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 严谨 (yánjǐn)',
+        description_th: 'yán (เสียง 2) jǐn (เสียง 3)',
+        example: '坚持严谨求实学风 (Jiānchí yánjǐn qiúshí xuéfēng)',
+        fun_metaphor: 'เสียงเรียบสงบนุ่มลึก สื่อถึงความสุขุมรอบคอบและการยึดมั่นความถูกต้อง',
+        reassurance: 'คุณลักษณะทางศีลธรรมสูงสุดของปัญญาชนและนักวิทยาศาสตร์'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างจริยธรรมวิชาการ: 恪守学术规范，杜绝剽窃撤稿，冲击顶刊',
+        formula: '始终保持严谨治学的崇高态度，规范文献引用，坚决杜绝抄袭剽窃与撤稿风险，在国际顶刊发表卓越成果',
+        explanation_th: 'ใช้ในการเน้นย้ำจรรยาบรรณวิจัยและการสร้างสรรค์ผลงานวิชาการระดับโลก',
+        patterns: [
+          {
+            formula: '规范文献引用，杜绝抄袭剽窃。',
+            zh: '科研人员必须规范标注文献引用，恪守学术道德底线，坚决杜绝任何形式的抄袭剽窃。',
+            pinyin: 'Kēyán rényuán bìxū guīfàn biāozhù wénxiàn yǐnyòng, kèshǒu xuéshù dàodé dǐxiàn, jiānjué dùjué rènhé xíngshì de chāoxí piáoqiè.',
+            th: 'นักวิจัยต้องระบุการอ้างอิงเอกสารตามมาตรฐาน ยึดมั่นเส้นตายแห่งจริยธรรมวิชาการ และขจัดปัญหาการคัดลอกผลงานทุกรูปแบบ',
+            en: 'Researchers must standardize citations, uphold ethical baselines, and resolutely eliminate any form of plagiarism.'
+          },
+          {
+            formula: '秉持严谨态度，冲击国际顶刊。',
+            zh: '团队以严谨求实的治学精神深耕前沿领域，最终在国际权威顶刊成功发表了突破性论文。',
+            pinyin: 'Tuánduì yǐ yánjǐn qiúshí de zhìxué jīngshén shēngēng qiányán lǐngyù, zuìzhōng zài guójì quánwēi dǐngkān chénggōng fābiǎo le tūpòxìng lùnwén.',
+            th: 'ทีมงานค้นคว้าในพรมแดนความรู้ใหม่ด้วยจิตวิญญาณที่รัดกุมและแสวงหาความจริง จนประสบความสำเร็จในการตีพิมพ์บทความวิจัยในวารสารชั้นนำระดับโลก',
+            en: 'The team cultivated frontier fields with rigorous truth-seeking spirit, ultimately publishing groundbreaking papers in authoritative top journals.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '学术委员会主席 (Academic Ethics Chair) 🏛️',
+          zh: '各位学者，学术声誉是科学界的生命线。任何学术不端行为都将付出惨痛代价。',
+          pinyin: 'Gèwèi xuézhě, xuéshù shēngyù shì kēxuéjiè de shēngmìngxiàn. Rènhé xuéshù bùduān xíngwéi dōu jiāng fùchū cǎntòng dàijià.',
+          th: 'นักวิชาการทุกท่าน ชื่อเสียงทางวิชาการคือเส้นเลือดใหญ่ของวงการวิทยาศาสตร์ พฤติกรรมละเมิดจริยธรรมใดๆ ล้วนต้องจ่ายบทเรียนราคาแพง',
+          en: 'Scholars, academic reputation is the lifeblood of science. Any misconduct will incur a painful price.',
+          audio_trigger: 't4_u56_l04_d01'
+        },
+        {
+          speaker: '青年科学家 (Young Scientist) 🔬',
+          zh: '主席强调得对。近年来国际上因数据造假或剽窃导致的撤稿事件频发，令人深思。',
+          pinyin: 'Zhǔxí qiángdiào de duì. Jìnnián lái guójì shang yīn shùjù zàojiǎ huò piáoqiè dǎozhì de chègǎo shìjiàn pínfā, lìng rén shēnsī.',
+          th: 'ท่านประธานเน้นย้ำถูกต้องแล้วครับ ช่วงไม่กี่ปีมานี้ เหตุการณ์ถอนบทความในระดับสากลอันเกิดจากการสร้างข้อมูลเท็จหรือการคัดลอกผลงานเกิดขึ้นบ่อยครั้ง ชวนให้ครุ่นคิดอย่างลึกซึ้ง',
+          en: 'The chair is right. In recent years, international retraction incidents caused by fabricated data or plagiarism have occurred frequently, prompting deep reflection.',
+          audio_trigger: 't4_u56_l04_d02'
+        },
+        {
+          speaker: '学术委员会主席 (Academic Ethics Chair) 🏛️',
+          zh: '我们必须从源头规范数据采集与引用规范，以极端严谨的治学作风对待每一个参数。',
+          pinyin: 'Wǒmen bìxū cóng yuántóu guīfàn shùjù cǎijí yǔ yǐnyòng guīfàn, yǐ jíduān yánjǐn de zhìxué zuòfēng duìdài měi yī gè cānshù.',
+          th: 'เราต้องกำหนดมาตรฐานการเก็บข้อมูลและการอ้างอิงตั้งแต่ต้นทาง ปฏิบัติต่อทุกพารามิเตอร์ด้วยความรัดกุมแม่นยำอย่างที่สุด',
+          en: 'We must standardize data collection and citation from the source, treating every parameter with extreme rigor.',
+          audio_trigger: 't4_u56_l04_d03'
+        },
+        {
+          speaker: '青年科学家 (Young Scientist) 🔬',
+          zh: '谨记教诲！我们将坚守学术道德底线，唯有如此，发表在顶刊上的成果才能经受住历史的检验！',
+          pinyin: 'Jǐnjì jiàohuì! Wǒmen jiāng jiānshǒu xuéshù dàodé dǐxiàn, wéiyǒu rúcǐ, fābiǎo zài dǐngkān shang de chéngguǒ cáinéng jīngshòuzhù lìshǐ de jiǎnyàn!',
+          th: 'จดจำคำสอนใส่ใจครับ! เราจะรักษาเส้นตายแห่งจริยธรรมวิชาการ มีเพียงเช่นนี้ ผลงานที่ตีพิมพ์ในวารสารชั้นนำจึงจะผ่านการพิสูจน์ของประวัติศาสตร์ได้ครับ!',
+          en: 'We will heed your teachings! We will guard academic baselines; only then can achievements published in top journals withstand the test of history!',
+          audio_trigger: 't4_u56_l04_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ข้อใดถือเป็นพฤติกรรม "剽窃" (piáoqiè) ที่ละเมิดจริยธรรมทางวิชาการอย่างร้ายแรง?',
+          options: [
+            'การนำข้อความ แนวคิด หรือผลการวิจัยของผู้อื่นมาใส่ในงานของตนโดยไม่อ้างอิงแหล่งที่มา (Plagiarism)',
+            'การขยายขนาดกลุ่มตัวอย่างเพื่อทดสอบความทนทาน',
+            'การส่งบทความเข้าสู่ระบบประเมินแบบปิดชื่อ',
+            'การกล่าวขอบคุณอาจารย์ที่ปรึกษา'
+          ],
+          correct_index: 0,
+          explanation_th: '"剽窃" (Plagiarism) คือ การโจรกรรมความคิดหรือคัดลอกผลงานผู้อื่นมาแอบอ้างโดยปราศจากการอ้างอิง',
+          encouragement: 'เข้าใจเส้นตายแห่งจริยธรรมทางวิชาการได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ยึดมั่นความรัดกุม ตีพิมพ์วารสารชั้นนำ"',
+          tokens: ['冲击国际顶刊', '保持严谨治学'],
+          correct_sequence: ['保持严谨治学', '冲击国际顶刊'],
+          pinyin: 'Bǎochí yánjǐn zhìxué, chōngjī guójì dǐngkān.',
+          meaning_th: 'ยึดมั่นความรัดกุม ตีพิมพ์วารสารชั้นนำ',
+          explanation_th: 'ทัศนคติรัดกุม (保持严谨治学) + เป้าหมายระดับโลก (冲击国际顶刊)',
+          encouragement: 'จัดประโยคเป้าหมายวิชาการระดับโลกได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "撤" (chè - ถอน/ยกเลิก) ใน "撤稿" มีหมวดนำ "扌" (มือ) สื่อถึงอะไร?',
+          options: [
+            'การยื่นมือไปดึงเอกสารหรือบทความวิจัยกลับคืนมาเนื่องจากตรวจพบข้อผิดพลาดร้ายแรง',
+            'การโบกมือทักทายเพื่อนร่วมงาน',
+            'การยกมือขอคะแนนสอบ',
+            'การจับมือลงนามสัญญาทางธุรกิจ'
+          ],
+          correct_index: 0,
+          explanation_th: '"扌" สื่อถึงการดึงหรือถอนบทความวิจัย (Retraction) ออกจากการเผยแพร่',
+          encouragement: 'จำรากศัพท์การถอนบทความได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "顶刊" (dǐngkān) มาจากคำย่อของคำศัพท์ภาษาจีนข้อใด?',
+          options: [
+            '顶级期刊 (Top-tier Academic Journals)',
+            '顶部刊物 (Roof Publications)',
+            '顶峰书刊 (Summit Booklets)',
+            '特别报刊 (Special Periodicals)'
+          ],
+          correct_index: 0,
+          explanation_th: '"顶刊" คือคำย่อของ "顶级期刊" หมายถึง วารสารวิชาการชั้นนำระดับโลก เช่น Nature, Science, Cell',
+          encouragement: 'รู้ลึกศัพท์วงการวิชาการระดับแนวหน้าของโลก!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในพิธีมอบรางวัลนักวิจัยดีเด่นระดับนานาชาติ ประโยคใดสะท้อนแก่นแท้แห่งจริยธรรมทางวิทยาศาสตร์และการตีพิมพ์ได้อย่างสมบูรณ์แบบที่สุด?',
+        options: [
+          '科学探索当以严谨为立身之本，规范文献引用并恪守学术伦理底线，坚决杜绝剽窃与撤稿风险，方能在国际顶刊攀登知识高峰。',
+          '在商业博弈与公关危机斡旋中，我们必须善用迂回沟通策略，通过适度妥协维护企业的市场公信力。',
+          '在双边高层会谈中，双方重申深化一带一路互联互通，依托物流枢纽降低关税壁垒并促进贸易畅通。',
+          '李白之豪放如大江东去，杜甫之沉郁如泰山磐石，皆为博大精深的中华诗词瑰宝。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "严谨", "规范引用", "伦理底线", "杜绝剽窃撤稿" และ "国际顶刊" ได้อย่างทรงเกียรติและงดงามไร้ที่ติ'
+      },
+      cheer_trophy: {
+        badge_name: 'ปราชญ์ผู้ผดุงธรรมแห่งวงวิชาการ (Academic Integrity Laureate)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 撤稿, 剽窃, 引用, 顶刊, 严谨 พร้อมเป็นนักวิจัยผู้ทรงคุณธรรม!',
+        xp_reward: 120
+      }
+    }
+  ]
+};

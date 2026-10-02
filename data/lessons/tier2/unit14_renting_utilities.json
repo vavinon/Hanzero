@@ -1,0 +1,965 @@
+{
+  "unit_id": "tier2_u14",
+  "tier": 2,
+  "unit_number": 14,
+  "title": {
+    "zh": "租房与生活设施",
+    "th": "เช่าห้อง & สิ่งอำนวยความสะดวก",
+    "en": "Renting & Living Utilities"
+  },
+  "description": "ดูห้องพัก เจรจาสัญญาเช่า 押一付三 ชำระค่าน้ำค่าไฟและอินเทอร์เน็ต และติดต่อช่างซ่อมเครื่องใช้ไฟฟ้าในบ้าน",
+  "lessons": [
+    {
+      "lesson_id": "t2_u14_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "看房与中介",
+        "th": "ดูห้องพัก เจรจากับนายหน้า & กฎ 押一付三",
+        "en": "Apartment Viewing & Rental Deposit"
+      },
+      "can_do": {
+        "th": "นัดหมายดูห้องพัก สอบถามค่าเช่า และเข้าใจวัฒนธรรมการจ่ายค่าเช่าจีนแบบ 押一付三",
+        "en": "Schedule apartment viewings, inquire rent, and understand Chinese rental terms like 押一付三"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: นัดนายหน้าดูห้องและถามว่า \"ค่าเช่าเดือนละเท่าไหร่ จ่ายแบบไหน\" ได้!",
+      "vocabulary": [
+        {
+          "id": "hsk2_1401",
+          "hanzi": "房东",
+          "pinyin": "fángdōng",
+          "display_pinyin": "fángdōng",
+          "pinyin_tone": "fang2dong1",
+          "meaning_th": "เจ้าของห้อง / ผู้ให้เช่า",
+          "meaning_en": "landlord / landlady",
+          "radical": "户",
+          "radical_name_th": "หมวดประตูบานเดียว (户字旁)",
+          "stroke_count": 13,
+          "mnemonic": "เจ้าบ้านฝั่งทิศตะวันออก (东) ที่เป็นเจ้าของบ้านพัก (房) = เจ้าของห้อง",
+          "kid_mnemonic": "คุณลุงใจดีเจ้าของตึก ยิ้มถือพวงกุญแจห้อง = 房东",
+          "body_gesture": "สองมือทำท่าหมุนกุญแจเปิดประตูห้องพัก"
+        },
+        {
+          "id": "hsk2_1402",
+          "hanzi": "中介",
+          "pinyin": "zhōngjiè",
+          "display_pinyin": "zhōngjiè",
+          "pinyin_tone": "zhong1jie4",
+          "meaning_th": "นายหน้าอสังหาริมทรัพย์ / เอเจนต์จัดหาห้อง",
+          "meaning_en": "real estate agent / broker",
+          "radical": "丨",
+          "radical_name_th": "หมวดเส้นดิ่ง (竖部)",
+          "stroke_count": 8,
+          "mnemonic": "คนกลาง (中) ที่คอยแนะนำแนะนำประสานงาน (介) = นายหน้า",
+          "kid_mnemonic": "พี่ใส่สูทถือสมุดรูปภาพพาเดินดูห้องสวยๆ = 中介",
+          "body_gesture": "ผายสองมือแนะนำห้องพักรอบตัว"
+        },
+        {
+          "id": "hsk2_1403",
+          "hanzi": "房租",
+          "pinyin": "fángzū",
+          "display_pinyin": "fángzū",
+          "pinyin_tone": "fang2zu1",
+          "meaning_th": "ค่าเช่าห้อง / ค่าเช่าบ้าน",
+          "meaning_en": "rent / house rent",
+          "radical": "禾",
+          "radical_name_th": "หมวดรวงข้าว (禾木旁)",
+          "stroke_count": 18,
+          "mnemonic": "ค่าตอบแทนผลผลิต (租) สำหรับการอยู่อาศัยในห้อง (房) = ค่าเช่าห้อง",
+          "kid_mnemonic": "หยอดเหรียญค่าเช่าห้องลงกระปุกทุกสิ้นเดือน = 房租",
+          "body_gesture": "ทำมือนับเงินแล้วยื่นจ่ายให้เจ้าของห้อง"
+        },
+        {
+          "id": "hsk2_1404",
+          "hanzi": "合同",
+          "pinyin": "hétong",
+          "display_pinyin": "hétong",
+          "pinyin_tone": "he2tong",
+          "meaning_th": "สัญญา / ข้อตกลงเช่า",
+          "meaning_en": "contract / agreement",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字旁)",
+          "stroke_count": 12,
+          "mnemonic": "รวมความคิดสองฝ่าย (合) ให้เห็นพ้องต้องกัน (同) บนแผ่นกระดาษ = สัญญา",
+          "kid_mnemonic": "กระดาษสัญญาประทับตรายางสีแดง = 合同",
+          "body_gesture": "ทำท่าเซ็นชื่อบนกระดาษอย่างจริงจัง"
+        },
+        {
+          "id": "hsk2_1405",
+          "hanzi": "押金",
+          "pinyin": "yājīn",
+          "display_pinyin": "yājīn",
+          "pinyin_tone": "ya1jin1",
+          "meaning_th": "เงินมัดจำ / ค่าประกันความเสียหาย",
+          "meaning_en": "deposit / security deposit",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 16,
+          "mnemonic": "วางเงินทอง (金) ค้ำประกันไว้ในมือ (押) = เงินมัดจำ",
+          "kid_mnemonic": "เงินฝากก้อนหนึ่งที่ลุงเจ้าของบ้านเก็บไว้ คืนตอนย้ายออก = 押金",
+          "body_gesture": "กดฝ่ามือลงบนโต๊ะเหมือนวางเงินประกัน"
+        },
+        {
+          "id": "hsk2_1406",
+          "hanzi": "户型",
+          "pinyin": "hùxíng",
+          "display_pinyin": "hùxíng",
+          "pinyin_tone": "hu4xing2",
+          "meaning_th": "แบบแปลนห้อง / ขนาดและโครงสร้างห้อง",
+          "meaning_en": "apartment layout / floor plan",
+          "radical": "户",
+          "radical_name_th": "หมวดประตูบานเดียว (户字旁)",
+          "stroke_count": 11,
+          "mnemonic": "รูปแบบโมเดล (型) ของแต่ละครัวเรือน (户) = แบบแปลนห้อง",
+          "kid_mnemonic": "แปลนวาด 1 ห้องนอน 1 ห้องนั่งเล่น 1 ห้องน้ำ = 户型",
+          "body_gesture": "ใช้นิ้ววาดผังห้องสี่เหลี่ยมในอากาศ"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 合同 (hétong) เป็นเสียงเบา",
+        "description_th": "คำว่า 合 (hé) เป็นเสียงที่ 2 ส่วน 同 (tong) เมื่ออยู่ในคำว่า 合同 มักออกเสียงสั้นเป็นเสียงเบา (Neutral Tone) เพื่อความนุ่มนวล",
+        "example": "签合同 (qiān hétong)",
+        "fun_metaphor": "เซ็นสัญญาแกร๊กเดียวจบ สบายใจหายห่วง ไม่ต้องลากเสียงยาว!",
+        "reassurance": "ออกเสียง hé-tong สบายๆ ได้ยินคำนี้บ่อยมากเวลาตกลงเรื่องที่พัก!"
+      },
+      "grammar_bite": {
+        "title": "วัฒนธรรมการจ่ายค่าเช่าจีน: 押一付三 (มัดจำ 1 เดือน จ่ายล่วงหน้า 3 เดือน)",
+        "explanation_th": "ในประเทศจีน รูปแบบการจ่ายค่าเช่าที่เป็นมาตรฐานสากลคือ 押一付三 (มัดจำ 1 เดือน + จ่ายค่าเช่าครั้งละ 3 เดือน)",
+        "patterns": [
+          {
+            "formula": "房租 + 是 + 押一付三",
+            "zh": "这里的房租是押一付三。",
+            "pinyin": "Zhèlǐ de fángzū shì yā yī fù sān.",
+            "th": "ค่าเช่าที่นี่คือมัดจำ 1 เดือนและจ่ายล่วงหน้า 3 เดือนครับ",
+            "en": "The rent here is one month deposit and three months prepaid."
+          },
+          {
+            "formula": "除了 + [เงื่อนไข A] + 以外，还要...",
+            "zh": "除了房租以外，还要交物业费。",
+            "pinyin": "Chúle fángzū yǐwài, hái yào jiāo wùyèfèi.",
+            "th": "นอกจากค่าเช่าห้องแล้ว ยังต้องจ่ายค่าส่วนกลางด้วยครับ",
+            "en": "Besides rent, you also need to pay property management fee."
+          },
+          {
+            "formula": "这个户型是 + [จำนวนห้อง]",
+            "zh": "这个户型是一室一厅。",
+            "pinyin": "Zhè ge hùxíng shì yí shì yì tīng.",
+            "th": "แปลนห้องนี้คือ 1 ห้องนอน 1 ห้องนั่งเล่นครับ",
+            "en": "This layout is one bedroom and one living room."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "นายหน้าจัดหาห้อง 🤵",
+          "zh": "สมชาย您好！这套公寓离地铁站很近，户型是一室一厅，采光非常好。",
+          "pinyin": "Somchai nín hǎo! Zhè tào gōngyù lí dìtiězhàn hěn jìn, hùxíng shì yí shì yì tīng, cǎiguāng fēicháng hǎo.",
+          "th": "สวัสดีครับคุณสมชาย! อพาร์ตเมนต์ห้องนี้อยู่ใกล้รถไฟใต้ดินมาก แบบห้องคือ 1 ห้องนอน 1 ห้องนั่งเล่น แสงแดดโปร่งสบายมากครับ",
+          "en": "Hello Somchai! This apartment is close to subway, 1 bed 1 living room, great lighting."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "房间真漂亮！请问每个月的房租是多少？怎么付款？",
+          "pinyin": "Fángjiān zhēn piàoliang! Qǐngwèn měi ge yuè de fángzū shì duōshao? Zěnme fùkuǎn?",
+          "th": "ห้องสวยจริงๆ ครับ! ขอถามหน่อยค่าเช่าเดือนละเท่าไหร่ และต้องจ่ายอย่างไรครับ?",
+          "en": "Room is really pretty! How much is monthly rent? How to pay?"
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "นายหน้าจัดหาห้อง 🤵",
+          "zh": "房租是三千五百块，付款方式是押一付三，签一年的合同。",
+          "pinyin": "Fángzū shì sānqiān wǔbǎi kuài, fùkuǎn fāngshì shì yā yī fù sān, qiān yì nián de hétong.",
+          "th": "ค่าเช่าเดือนละ 3,500 หยวนครับ รูปแบบการจ่ายคือมัดจำ 1 จ่าย 3 เซ็นสัญญาเช่า 1 ปีครับ",
+          "en": "Rent is 3,500 yuan, payment is 1 deposit 3 months upfront, 1-year contract."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "好的，押金退房时能退吧？如果没有问题，我们今天就签合同。",
+          "pinyin": "Hǎo de, yājīn tuì fáng shí néng tuì ba? Rúguǒ méiyǒu wèntí, wǒmen jīntiān jiù qiān hétong.",
+          "th": "ตกลงครับ เงินมัดจำตอนคืนห้องจะได้คืนใช่ไหมครับ? ถ้าไม่มีปัญหาอะไร วันนี้พวกเราเซ็นสัญญาได้เลยครับ",
+          "en": "Okay, deposit is refundable upon checkout right? If no problem, let us sign contract today."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '押一付三' (yā yī fù sān) ในการเช่าห้องพักที่จีน หมายถึงเงื่อนไขใด?",
+          "options": [
+            "วางเงินมัดจำประกัน 1 เดือน และจ่ายค่าเช่าล่วงหน้าครั้งละ 3 เดือน",
+            "จ่ายเงินมัดจำ 3 เดือน และเช่าฟรี 1 เดือน",
+            "อยู่ได้ 1 คน ห้ามพาเพื่อนมาเกิน 3 คน",
+            "มัดจำ 100 หยวน จ่ายวันละ 3 หยวน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'押一' คือ วางเงินมัดจำ 1 เดือน (ได้คืนตอนย้ายออก) ส่วน '付三' คือ จ่ายค่าเช่าครั้งละ 3 เดือน",
+          "encouragement": "เข้าใจวัฒนธรรมเช่าห้องพักจีนอย่างลึกซึ้งยอดเยี่ยมมาก!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ค่าเช่าที่นี่คือมัดจำ 1 จ่าย 3\"",
+          "tokens": [
+            "押一付三",
+            "这里的房租",
+            "是"
+          ],
+          "correct_sequence": [
+            "这里的房租",
+            "是",
+            "押一付三"
+          ],
+          "pinyin": "Zhèlǐ de fángzū shì yā yī fù sān",
+          "meaning_th": "ค่าเช่าที่นี่คือมัดจำ 1 จ่าย 3",
+          "explanation_th": "โครงสร้าง: 这里的房租 (ค่าเช่าที่นี่) + 是 (คือ) + 押一付三 (มัดจำ 1 จ่าย 3)",
+          "encouragement": "ต่อบล็อกประโยคเช่าบ้านได้เป๊ะเวอร์!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "แบบแปลนห้อง '一室一厅' (yí shì yì tīng) มีลักษณะอย่างไร?",
+          "options": [
+            "1 ห้องนอน 1 ห้องนั่งเล่น",
+            "2 ห้องนอน 1 ห้องน้ำ",
+            "ห้องสตูดิโอโล่งๆ ไม่มีห้องนั่งเล่น",
+            "3 ห้องนอน 2 ห้องน้ำ"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'室' หมายถึง ห้องนอน และ '厅' หมายถึง ห้องโถงนั่งเล่น ดังนั้น '一室一厅' คือ 1 ห้องนอน 1 ห้องนั่งเล่น",
+          "encouragement": "แม่นยำมาก! อ่านสเปกห้องพักในแอปได้คล่องปร๋อ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "ตัวอักษร '房' ในคำว่า '房租' มีหมวดนำประตูบานเดียว '户' สื่อถึงสิ่งใด?",
+          "options": [
+            "บ้านพักและที่อยู่อาศัยที่มีประตูเข้าออก",
+            "ยานพาหนะติดล้อ",
+            "เสื้อผ้าเครื่องนุ่งห่ม",
+            "เครื่องมือทำสวน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "หมวด '户' คือ บานประตู สื่อถึงครัวเรือนหรือสิ่งปลูกสร้างที่อยู่อาศัย",
+          "encouragement": "เข้าใจรากศัพท์อักษรจีนได้ลึกซึ้ง!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณนัดดูห้องพักกับนายหน้าในเซี่ยงไฮ้ ห้องถูกใจมาก คุณต้องการถามยืนยันเงื่อนไขสัญญาว่า \"ค่าเช่าเดือนละ 3,500 หยวน เป็นแบบมัดจำ 1 จ่าย 3 ใช่ไหมครับ\" ควรพูดว่าอย่างไร?",
+        "options": [
+          "请问每个月房租是三千五百块，是押一付三吗？ (Qǐngwèn měi ge yuè fángzū shì sānqiān wǔbǎi kuài, shì yā yī fù sān ma?)",
+          "我想买两张高铁票去北京。 (Wǒ xiǎng mǎi liǎng zhāng gāotiě piào qù Běijīng.)",
+          "这个菜太辣了，我不要。 (Zhè ge cài tài là le, wǒ bú yào.)",
+          "对不起，我没带手机。 (Duìbuqǐ, wǒ méi dài shǒujī.)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยค '请问每个月房租是三千五百块，是押一付三吗？' ถามได้ชัดเจน ครอบคลุมทั้งตัวเลขค่าเช่าและเงื่อนไขการวางเงินมัดจำ",
+        "encouragement": "ยอดเยี่ยมมาก! เจรจาเงื่อนไขเช่าห้องพักได้อย่างมืออาชีพ!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t2_u14_l01",
+        "badge_name": "ผู้เชี่ยวชาญสัญญานักเช่า 🔑🏠",
+        "message_th": "ยินดีด้วยนะคนเก่ง! คุณเข้าใจเงื่อนไข 押一付三 และสามารถเจรจาเช่าห้องพักในจีนได้อย่างมั่นใจ!",
+        "xp_reward": 50
+      }
+    },
+    {
+      "lesson_id": "t2_u14_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "水电暖气与网络",
+        "th": "ค่าน้ำค่าไฟ ฮีตเตอร์ & อินเทอร์เน็ตบ้าน",
+        "en": "Utilities, Heating & Home Broadband"
+      },
+      "can_do": {
+        "th": "จ่ายค่าน้ำค่าไฟและแก๊สผ่านแอปมือถือ ตรวจสอบมิเตอร์ และเปิดใช้งานอินเทอร์เน็ตบรอดแบนด์",
+        "en": "Pay utility bills via mobile apps, check meters, and activate home broadband Wi-Fi"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: พูดบอกเจ้าของห้องว่า \"จ่ายค่าน้ำค่าไฟและต่อเน็ตเรียบร้อยแล้ว\" ได้!",
+      "vocabulary": [
+        {
+          "id": "hsk2_1407",
+          "hanzi": "水电费",
+          "pinyin": "shuǐdiànfèi",
+          "display_pinyin": "shuǐdiànfèi",
+          "pinyin_tone": "shui3dian4fei4",
+          "meaning_th": "ค่าน้ำค่าไฟ",
+          "meaning_en": "water and electricity bills",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 18,
+          "mnemonic": "ค่าใช้จ่าย (费) ของน้ำประปา (水) และกระแสไฟฟ้า (电) = ค่าน้ำค่าไฟ",
+          "kid_mnemonic": "ใบแจ้งหนี้มีรูปหยดน้ำกับสายฟ้าสีเหลือง = 水电费",
+          "body_gesture": "สองมือทำท่าสแกนจ่ายบิลค่าน้ำค่าไฟ"
+        },
+        {
+          "id": "hsk2_1408",
+          "hanzi": "暖气",
+          "pinyin": "nuǎnqì",
+          "display_pinyin": "nuǎnqì",
+          "pinyin_tone": "nuan3qi4",
+          "meaning_th": "ระบบทำความร้อนส่วนกลาง (ฮีตเตอร์ในเมืองหนาวจีน)",
+          "meaning_en": "central heating / radiator",
+          "radical": "日",
+          "radical_name_th": "หมวดดวงอาทิตย์ (日字旁)",
+          "stroke_count": 17,
+          "mnemonic": "ไอร้อนอุ่นสบาย (气) เหมือนดวงอาทิตย์ (日) ที่อบอุ่น (暖) = ฮีตเตอร์",
+          "kid_mnemonic": "ท่อเหล็กสีขาวข้างฝา แตะแล้วอุ่นสบายตอนหิมะตก = 暖气",
+          "body_gesture": "เอามือสองข้างกอดตัวเองแล้วถูแขนแสดงความอบอุ่น"
+        },
+        {
+          "id": "hsk2_1409",
+          "hanzi": "宽带",
+          "pinyin": "kuāndài",
+          "display_pinyin": "kuāndài",
+          "pinyin_tone": "kuan1dai4",
+          "meaning_th": "อินเทอร์เน็ตบรอดแบนด์ / เน็ตบ้าน",
+          "meaning_en": "broadband internet",
+          "radical": "宀",
+          "radical_name_th": "หมวดหลังคาบ้าน (宝盖头)",
+          "stroke_count": 19,
+          "mnemonic": "สายส่งสัญญาณแถบกว้างขวาง (宽) ดุจสายรัด (带) = บรอดแบนด์",
+          "kid_mnemonic": "กล่องเราเตอร์มีเสาสี่เสาปล่อยคลื่น Wi-Fi = 宽带",
+          "body_gesture": "กางสองมือผายออกกว้างๆ แสดงถึงสัญญาณความเร็วสูง"
+        },
+        {
+          "id": "hsk2_1410",
+          "hanzi": "燃气",
+          "pinyin": "ránqì",
+          "display_pinyin": "ránqì",
+          "pinyin_tone": "ran2qi4",
+          "meaning_th": "แก๊สหุงต้ม / แก๊สธรรมชาติในบ้าน",
+          "meaning_en": "gas / natural gas",
+          "radical": "灬",
+          "radical_name_th": "หมวดไฟ (四点底)",
+          "stroke_count": 20,
+          "mnemonic": "เปลวไฟลุกไหม้ (燃) จากก๊าซพลังงาน (气) = แก๊สธรรมชาติ",
+          "kid_mnemonic": "บิดเตาแก๊สแล้วมีเปลวไฟสีฟ้าพุ่งฟู่ = 燃气",
+          "body_gesture": "ทำมือบิดสวิตช์เตาแก๊สแล้วดีดนิ้วไฟติด"
+        },
+        {
+          "id": "hsk2_1411",
+          "hanzi": "抄表",
+          "pinyin": "chāobiǎo",
+          "display_pinyin": "chāobiǎo",
+          "pinyin_tone": "chao1biao3",
+          "meaning_th": "จดมิเตอร์ / บันทึกตัวเลขมิเตอร์",
+          "meaning_en": "meter reading",
+          "radical": "扌",
+          "radical_name_th": "หมวดมือ (提手旁)",
+          "stroke_count": 16,
+          "mnemonic": "ใช้มือจดคัดลอก (抄) ตัวเลขจากหน้าปัดมิเตอร์ (表) = จดมิเตอร์",
+          "kid_mnemonic": "ถือไฟฉายส่องดูตัวเลขหมุนๆ ที่กล่องมิเตอร์ = 抄表",
+          "body_gesture": "ทำมือถือไฟฉายส่องแล้วจดบันทึกตัวเลข"
+        },
+        {
+          "id": "hsk2_1412",
+          "hanzi": "缴纳",
+          "pinyin": "jiǎonà",
+          "display_pinyin": "jiǎonà",
+          "pinyin_tone": "jiao3na4",
+          "meaning_th": "ชำระเงิน / จ่ายค่าบริการ",
+          "meaning_en": "to pay / settle (bills/taxes)",
+          "radical": "纟",
+          "radical_name_th": "หมวดเส้นไหม (绞丝旁)",
+          "stroke_count": 21,
+          "mnemonic": "ส่งมอบเงินทอง (缴) รวบรวมเข้าคลัง (纳) = ชำระเงินค่าธรรมเนียม",
+          "kid_mnemonic": "กดปุ่มสีเขียวในมือถือ จ่ายบิลเสร็จเรียบร้อย = 缴纳",
+          "body_gesture": "กดนิ้วลงบนมือถือยืนยันการชำระเงิน"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 暖气 (nuǎnqì)",
+        "description_th": "คำว่า 暖 (nuǎn เสียง 3) เมื่ออยู่หน้า 气 (qì เสียง 4) จะออกเป็นเสียงครึ่งเสียงสาม (Half-Third Tone) โดยกดเสียงลงต่ำที่ระดับ 21 แล้วตามด้วยเสียง 4 หนักแน่น",
+        "example": "开暖气 (kāi nuǎnqì)",
+        "fun_metaphor": "เสียงต่ำทุ้มลึกแล้วปล่อยลมร้อนออกมาฟู่ nuǎn-qì!",
+        "reassurance": "หน้าหนาวในภาคเหนือของจีนคำว่า nuǎnqì จะเป็นเพื่อนแท้ที่อบอุ่นที่สุดของคุณ!"
+      },
+      "grammar_bite": {
+        "title": "คำเสริมบอกผลลัพธ์: 交清了 (จ่ายครบหมดแล้ว) & 连上了 (ต่อติดแล้ว)",
+        "explanation_th": "ใช้คำกริยา + 清 (หมดจด/เคลียร์) หรือ 上 (ติด/สำเร็จ) เพื่อบอกว่าจัดการค่าน้ำไฟหรือเชื่อมต่อเน็ตสำเร็จแล้ว",
+        "patterns": [
+          {
+            "formula": "水电费 + 已经 + 交清了",
+            "zh": "上个月的水电费我已经交清了。",
+            "pinyin": "Shàng ge yuè de shuǐdiànfèi wǒ yǐjīng jiāo qīng le.",
+            "th": "ค่าน้ำค่าไฟของเดือนที่แล้วผมชำระหมดเรียบร้อยแล้วครับ",
+            "en": "I have settled last month's utility bills completely."
+          },
+          {
+            "formula": "宽带 + 已经 + 开通 / 连上了",
+            "zh": "家里的宽带Wi-Fi已经连上了。",
+            "pinyin": "Jiā lǐ de kuāndài Wi-Fi yǐjīng lián shàng le.",
+            "th": "เน็ตบรอดแบนด์ Wi-Fi ในห้องเชื่อมต่อติดเรียบร้อยแล้ว",
+            "en": "Home broadband Wi-Fi is connected successfully."
+          },
+          {
+            "formula": "在手机上 + 就能 + 缴纳",
+            "zh": "在微信或者支付宝上就能缴纳燃气费。",
+            "pinyin": "Zài Wēixìn huòzhě Zhīfùbǎo shang jiù néng jiǎonà ránqìfèi.",
+            "th": "สามารถชำระค่าแก๊สบน WeChat หรือ Alipay ได้เลยครับ",
+            "en": "You can pay gas bills directly on WeChat or Alipay."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "小สมชาย，住得还习惯吗？水电费和宽带都办好了没有？",
+          "pinyin": "Xiǎo Somchai, zhù de hái xíguàn ma? Shuǐdiànfèi hé kuāndài dōu bàn hǎo le méiyǒu?",
+          "th": "เสี่ยวสมชาย อยู่แล้วชินหรือยังจ๊ะ? ค่าน้ำค่าไฟกับเน็ตบ้านจัดการเรียบร้อยหรือยัง?",
+          "en": "Little Somchai, getting used to living here? Are utilities and internet all sorted out?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "李阿姨好！住得很舒服！水电费我在支付宝上交清了，宽带师傅今天也帮我开通了。",
+          "pinyin": "Lǐ āyí hǎo! Zhù de hěn shūfu! Shuǐdiànfèi wǒ zài Zhīfùbǎo shang jiāo qīng le, kuāndài shīfu jīntiān yě bāng wǒ kāitōng le.",
+          "th": "สวัสดีครับป้าหลี่! อยู่สบายมากครับ! ค่าน้ำค่าไฟผมจ่ายเคลียร์ใน Alipay เรียบร้อยแล้ว ช่างเน็ตก็มาเปิดสัญญาณให้วันนี้แล้วครับ",
+          "en": "Hello Auntie Li! Very comfortable! Paid utilities on Alipay, broadband technician activated it today."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "太能干了！十一月十五号开始供暖气，到时候屋里就很温暖了。",
+          "pinyin": "Tài nénggàn le! Shíyī yuè shíwǔ hào kāishǐ gōng nuǎnqì, dào shíhou wū lǐ jiù hěn wēnnuǎn le.",
+          "th": "เก่งจังเลยหลาน! วันที่ 15 พฤศจิกายนจะเริ่มเปิดฮีตเตอร์ ถึงตอนนั้นในห้องจะอุ่นสบายมากจ้ะ",
+          "en": "So capable! Heating starts November 15th, the room will be very warm by then."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "太好了，谢谢李阿姨关心！",
+          "pinyin": "Tài hǎo le, xièxie Lǐ āyí guānxīn!",
+          "th": "ดีจังเลยครับ ขอบคุณป้าหลี่ที่เป็นห่วงนะครับ!",
+          "en": "Awesome, thank you Auntie Li for caring!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "ในประเทศจีน ผู้เช่าสามารถชำระ 'ค่าน้ำค่าไฟและแก๊ส' ได้อย่างไรสะดวกที่สุด?",
+          "options": [
+            "สแกนจ่ายผ่านฟังก์ชัน 生活缴费 ในแอป WeChat หรือ Alipay",
+            "ต้องเดินทางไปจ่ายที่ว่าการอำเภอเท่านั้น",
+            "ส่งเงินสดทางไปรษณีย์",
+            "ให้เจ้าของห้องมารับเงินสดทุกวัน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "ในจีน ค่าน้ำ ไฟ แก๊ส สามารถจ่ายผ่านเมนู '生活缴费' บน WeChat หรือ Alipay ได้ในไม่กี่วินาที",
+          "encouragement": "เข้าใจระบบชีวิตดิจิทัลในจีนอย่างแท้จริง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ค่าน้ำค่าไฟผมชำระหมดเรียบร้อยแล้ว\"",
+          "tokens": [
+            "交清了",
+            "水电费",
+            "我已经"
+          ],
+          "correct_sequence": [
+            "水电费",
+            "我已经",
+            "交清了"
+          ],
+          "pinyin": "Shuǐdiànfèi wǒ yǐjīng jiāo qīng le",
+          "meaning_th": "ค่าน้ำค่าไฟผมชำระหมดเรียบร้อยแล้ว",
+          "explanation_th": "โครงสร้าง: 水电费 (ค่าน้ำค่าไฟ) + 我已经 (ผมได้...) + 交清了 (ชำระหมดแล้ว)",
+          "encouragement": "เรียงประโยคผลลัพธ์ได้อย่างแม่นยำมาก!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "ระบบทำความร้อนส่วนกลางที่เปิดให้อบอุ่นในฤดูหนาวของจีน เรียกว่าอะไร?",
+          "options": [
+            "暖气 (nuǎnqì)",
+            "冷气 (lěngqì)",
+            "天气 (tiānqì)",
+            "空气 (kōngqì)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'暖气' คือ ระบบทำความร้อนส่วนกลางที่ปล่อยน้ำร้อนหรือไอน้ำผ่านท่อเรดิเอเตอร์ในอาคาร",
+          "encouragement": "จำคำศัพท์สภาพแวดล้อมจีนได้ยอดเยี่ยม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "ตัวอักษร '燃' ในคำว่า '燃气' (แก๊ส) มีหมวดนำไฟ '灬' สื่อถึงสิ่งใด?",
+          "options": [
+            "การติดไฟลุกไหม้ให้พลังงานความร้อน",
+            "หยดน้ำค้าง",
+            "ต้นไม้ใหญ่",
+            "ก้อนหินริมทาง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "หมวด '灬' คือ รูปแบบหนึ่งของหมวดไฟ (火) สื่อถึงการเผาไหม้",
+          "encouragement": "ตาไวมาก! สังเกตหมวดนำไฟได้อย่างแม่นยำ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ป้าเจ้าของห้องทักแชตมาถามเรื่องการเข้าอยู่อาศัย คุณต้องการตอบป้าอย่างสุภาพว่า \"ค่าน้ำค่าไฟจ่ายหมดแล้ว และเน็ตบรอดแบนด์ก็เชื่อมต่อได้แล้ว ขอบคุณป้ามากครับ\" ควรพิมพ์ว่าอย่างไร?",
+        "options": [
+          "李阿姨您好！水电费我已经交清了，家里的宽带也连上了，非常感谢您！ (Lǐ āyí nín hǎo! Shuǐdiànfèi wǒ yǐjīng jiāo qīng le, jiā lǐ de kuāndài yě lián shàng le, fēicháng gǎnxiè nín!)",
+          "请问这瓶可乐多少钱？ (Qǐngwèn zhè píng kělè duōshao qián?)",
+          "对不起，我误车了。 (Duìbuqǐ, wǒ wùchē le.)",
+          "我要退票，不坐高铁了。 (Wǒ yào tuìpiào, bú zuò gāotiě le.)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยค '李阿姨您好！水电费我已经交清了，家里的宽带也连上了，非常感谢您！' ตอบคำถามได้ครบถ้วน ชัดเจน และแสดงความเคารพอย่างอบอุ่น",
+        "encouragement": "สุดยอดทักษะการสื่อสาร! ป้าเจ้าของห้องประทับใจแน่นอน!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t2_u14_l02",
+        "badge_name": "ผู้จัดการสาธารณูปโภคอัจฉริยะ 💡🚰",
+        "message_th": "ยินดีด้วยนะคนเก่ง! คุณสามารถจ่ายบิลน้ำไฟ แก๊ส และเปิดสัญญาณ Wi-Fi บ้านในจีนได้อย่างเชี่ยวชาญ!",
+        "xp_reward": 50
+      }
+    },
+    {
+      "lesson_id": "t2_u14_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "家电报修",
+        "th": "แจ้งซ่อมเครื่องใช้ไฟฟ้า & ประโยค 把 และ 被",
+        "en": "Appliance Repair & 把 / 被 Sentences"
+      },
+      "can_do": {
+        "th": "แจ้งซ่อมเครื่องใช้ไฟฟ้า (แอร์, ตู้เย็น, เครื่องซักผ้า) และใช้ประโยค 把 (จัดการสิ่งของ) กับ 被 (สิ่งของถูกกระทำ)",
+        "en": "Report malfunctioning appliances and master 把 (active disposal) and 被 (passive experience) structures"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: แจ้งช่างว่า \"แอร์เสีย ช่วยส่งช่างมาซ่อมหน่อย\" เป็นภาษาจีนได้!",
+      "vocabulary": [
+        {
+          "id": "hsk2_1413",
+          "hanzi": "修理",
+          "pinyin": "xiūlǐ",
+          "display_pinyin": "xiūlǐ",
+          "pinyin_tone": "xiu1li3",
+          "meaning_th": "ซ่อมแซม / แก้ไขให้ใช้งานได้",
+          "meaning_en": "to repair / fix",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 20,
+          "mnemonic": "คน (亻) ปรับแต่งตัดแต่ง (修) จัดการสะสาง (理) สิ่งของ = ซ่อมแซม",
+          "kid_mnemonic": "ถือไขควงกับประแจซ่อมเครื่องยนต์ให้กลับมาหมุนติ้ว = 修理",
+          "body_gesture": "ทำมือหมุนไขควงซ่อมเครื่องใช้ไฟฟ้า"
+        },
+        {
+          "id": "hsk2_1414",
+          "hanzi": "师傅",
+          "pinyin": "shīfu",
+          "display_pinyin": "shīfu",
+          "pinyin_tone": "shi1fu",
+          "meaning_th": "ช่าง / ช่างฝีมือ / พี่ช่าง",
+          "meaning_en": "master worker / technician",
+          "radical": "巾",
+          "radical_name_th": "หมวดผ้าเช็ดหน้า (巾字旁)",
+          "stroke_count": 16,
+          "mnemonic": "ผู้เป็นครูบาอาจารย์ชำนาญการ (师) ผู้เปรียบเสมือนบิดา (傅) = นายช่าง",
+          "kid_mnemonic": "พี่ช่างใจดีใส่ชุดหมีสะพายกล่องเครื่องมือ = 师傅",
+          "body_gesture": "พยักหน้าค้อมตัวทักทายพี่ช่างอย่างเคารพ"
+        },
+        {
+          "id": "hsk2_1415",
+          "hanzi": "冰箱",
+          "pinyin": "bīngxiāng",
+          "display_pinyin": "bīngxiāng",
+          "pinyin_tone": "bing1xiang1",
+          "meaning_th": "ตู้เย็น",
+          "meaning_en": "refrigerator / fridge",
+          "radical": "冫",
+          "radical_name_th": "หมวดสองจุดน้ำแข็ง (两点水)",
+          "stroke_count": 21,
+          "mnemonic": "กล่องหีบ (箱) ที่กักเก็บความเย็นเยือกแข็ง (冰) = ตู้เย็น",
+          "kid_mnemonic": "ตู้เปิดมามีไอเย็นสีขาวลอยออกมาแช่ไอติม = 冰箱",
+          "body_gesture": "สองมือทำท่าดึงเปิดประตูตู้เย็นแล้วเอามือป้องไอเย็น"
+        },
+        {
+          "id": "hsk2_1416",
+          "hanzi": "洗衣机",
+          "pinyin": "xǐyījī",
+          "display_pinyin": "xǐyījī",
+          "pinyin_tone": "xi3yi1ji1",
+          "meaning_th": "เครื่องซักผ้า",
+          "meaning_en": "washing machine",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 21,
+          "mnemonic": "เครื่องจักรกล (机) ที่ใช้น้ำซักทำความสะอาด (洗) เสื้อผ้า (衣) = เครื่องซักผ้า",
+          "kid_mnemonic": "ถังกลมๆ หมุนวนซักผ้าเสียงดัง ฟิ้วๆๆ = 洗衣机",
+          "body_gesture": "หมุนสองมือวนเป็นวงกลมเหมือนถังซักผ้าหมุน"
+        },
+        {
+          "id": "hsk2_1417",
+          "hanzi": "空调",
+          "pinyin": "kōngtiáo",
+          "display_pinyin": "kōngtiáo",
+          "pinyin_tone": "kong1tiao2",
+          "meaning_th": "เครื่องปรับอากาศ (แอร์)",
+          "meaning_en": "air conditioner / AC",
+          "radical": "穴",
+          "radical_name_th": "หมวดถ้ำ (穴宝盖)",
+          "stroke_count": 18,
+          "mnemonic": "อุปกรณ์ปรับแต่งอุณหภูมิ (调) ของอากาศในที่ว่าง (空) = แอร์",
+          "kid_mnemonic": "กล่องสีขาวติดบนกำแพง พ่นลมเย็นฉ่ำ = 空调",
+          "body_gesture": "สองมือกดรีโมตเล็งขึ้นไปที่ผนังห้อง"
+        },
+        {
+          "id": "hsk2_1418",
+          "hanzi": "坏了",
+          "pinyin": "huài le",
+          "display_pinyin": "huài le",
+          "pinyin_tone": "huai4le",
+          "meaning_th": "พังแล้ว / เสียแล้ว / ใช้งานไม่ได้",
+          "meaning_en": "broken / out of order",
+          "radical": "土",
+          "radical_name_th": "หมวดดิน (土字旁)",
+          "stroke_count": 9,
+          "mnemonic": "วัตถุพังทลายตกลงสู่พื้นดิน (土) กลายเป็นสิ่งชำรุด (坏) = พังแล้ว",
+          "kid_mnemonic": "ของเล่นตกพื้น ป๊อก เสียแล้วใช้งานไม่ได้ = 坏了",
+          "body_gesture": "กางสองมือเอียงคอทำหน้าเสียดาย"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 洗衣机 (xǐyījī)",
+        "description_th": "คำว่า 洗 (xǐ เสียง 3) อยู่หน้า 衣 (yī เสียง 1) คำว่า xǐ จะออกเป็นเสียงครึ่งเสียงสาม (Half-Third Tone) ต่ำๆ แล้วต่อด้วย yī ที่สูงยาว และ jī ที่สูงยาวเท่ากัน",
+        "example": "全自动洗衣机 (quán zìdòng xǐyījī)",
+        "fun_metaphor": "กดเสียงต่ำหนึ่งทีแล้วเหินฟ้าเสียงสูงสองตอนติดกัน xǐ-yī-jī!",
+        "reassurance": "ออกเสียงคำนี้อย่างมั่นใจ ช่างซ่อมจะเข้าใจทันทีว่าเครื่องซักผ้ามีปัญหา!"
+      },
+      "grammar_bite": {
+        "title": "เปรียบเทียบ 把 (จัดการสิ่งของ) vs 被 (สิ่งของถูกกระทำ)",
+        "explanation_th": "โครงสร้าง 把 บอกว่าประธานนำสิ่งของไปทำอะไร ส่วน 被 ใช้บอกว่าสิ่งของตกอยู่ในสภาพถูกกระทำให้เสียหาย",
+        "patterns": [
+          {
+            "formula": "请师傅 + 把 + [เครื่องใช้] + 修好",
+            "zh": "请师傅把空调修好。",
+            "pinyin": "Qǐng shīfu bǎ kōngtiáo xiū hǎo.",
+            "th": "รบกวนให้ช่างช่วยซ่อมแอร์ให้เสร็จเรียบร้อย",
+            "en": "Please ask the technician to repair the AC."
+          },
+          {
+            "formula": "[สิ่งของ] + 被 + [ใคร/อะไร] + 弄坏了",
+            "zh": "空调遥控器被弄坏了。",
+            "pinyin": "Kōngtiáo yáokòngqì bèi nòng huài le.",
+            "th": "รีโมตแอร์ถูกทำพังเสียหายไปแล้ว",
+            "en": "The AC remote control was broken."
+          },
+          {
+            "formula": "[เครื่องใช้] + 坏了，不工作了",
+            "zh": "房间里的冰箱坏了，不制冷了。",
+            "pinyin": "Fángjiān lǐ de bīngxiāng huài le, bú zhìlěng le.",
+            "th": "ตู้เย็นในห้องเสียแล้ว ไม่ทำความเย็นแล้วครับ",
+            "en": "The fridge in the room is broken, not cooling anymore."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "房东阿姨您好！客厅的空调好像坏了，一直不制冷，还能听到奇怪的声音。",
+          "pinyin": "Fángdōng āyí nín hǎo! Kètīng de kōngtiáo hǎoxiàng huài le, yìzhí bú zhìlěng, hái néng tīngdào qíguài de shēngyīn.",
+          "th": "สวัสดีครับป้าเจ้าของห้อง! แอร์ที่ห้องนั่งเล่นเหมือนจะเสียครับ ไม่เย็นเลยตลอดเวลา แถมมีเสียงแปลกๆ ด้วยครับ",
+          "en": "Hello landlady! Living room AC seems broken, not cooling at all, making weird noise."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "哎呀，天气这么热，没有空调可不行！我马上联系维修师傅。",
+          "pinyin": "Āiyā, tiānqì zhème rè, méiyǒu kōngtiáo kě bù xíng! Wǒ mǎshàng liánxì wéixiū shīfu.",
+          "th": "ตายจริง อากาศร้อนขนาดนี้ ไม่มีแอร์ไม่ได้เด็ดขาด! เดี๋ยวป้ารีบติดต่อช่างซ่อมเดี๋ยวนี้จ้ะ",
+          "en": "Oh dear, weather is so hot, cannot live without AC! I will contact the repairman right away."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "太好了！师傅今天下午有空过来修吗？我都在家。",
+          "pinyin": "Tài hǎo le! Shīfu jīntiān xiàwǔ yǒu kòng guòlai xiū ma? Wǒ dōu zài jiā.",
+          "th": "ดีจังเลยครับ! พี่ช่างสะดวกแวะเข้ามาซ่อมบ่ายวันนี้ไหมครับ? ผมอยู่ห้องตลอดครับ",
+          "en": "Great! Is the technician free to come repair this afternoon? I am at home."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "师傅说下午两点过来，一定把空调修好！维修费用我来出，你放心吧！",
+          "pinyin": "Shīfu shuō xiàwǔ liǎng diǎn guòlai, yídìng bǎ kōngtiáo xiū hǎo! Wéixiū fèiyong wǒ lái chū, nǐ fàngxīn ba!",
+          "th": "ช่างบอกว่าจะเข้ามาบ่ายสองโมง จะซ่อมแอร์ให้หายดีแน่นอน! ค่าซ่อมป้าออกเอง หลานไม่ต้องกังวลนะ!",
+          "en": "Technician says coming at 2 PM, will fix the AC for sure! I will pay the cost, don't worry!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "เมื่อแอร์ในห้องไม่เย็นและมีเสียงดัง คุณควรแจ้งเจ้าของห้องด้วยประโยคใด?",
+          "options": [
+            "空调坏了，一直不制冷，请找师傅修一下。",
+            "我想买一杯奶茶。",
+            "请给我发票。",
+            "明天星期几？"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'空调坏了，一直不制冷，请找师傅修一下。' แจ้งปัญหาได้ตรงจุด (แอร์เสีย ไม่เย็น) และขอให้ตามช่างมาซ่อม",
+          "encouragement": "แม่นยำมาก! แก้ปัญหาเครื่องใช้ไฟฟ้าในห้องเช่าได้อย่างมั่นใจ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"รบกวนให้ช่างช่วยซ่อมแอร์ให้เสร็จเรียบร้อย\"",
+          "tokens": [
+            "修好",
+            "把空调",
+            "请师傅"
+          ],
+          "correct_sequence": [
+            "请师傅",
+            "把空调",
+            "修好"
+          ],
+          "pinyin": "Qǐng shīfu bǎ kōngtiáo xiū hǎo",
+          "meaning_th": "รบกวนให้ช่างช่วยซ่อมแอร์ให้เสร็จเรียบร้อย",
+          "explanation_th": "โครงสร้าง 把: 请师傅 (เชิญช่าง) + 把空调 (นำแอร์) + 修好 (ซ่อมเสร็จ)",
+          "encouragement": "ต่อประโยคโครงสร้าง 把 ได้อย่างคล่องแคล่ว!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '坏了' (huài le) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "พังแล้ว / เสียแล้ว",
+            "เสร็จเรียบร้อยแล้ว",
+            "แพงมาก",
+            "สะอาดมาก"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'坏了' หมายถึง ชำรุด พัง หรือเสีย ไม่สามารถใช้งานได้ตามปกติ",
+          "encouragement": "จำคำสำคัญบอกสภาพเครื่องใช้ได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "ตัวอักษร '冰' ในคำว่า '冰箱' (ตู้เย็น) มีหมวดนำสองจุดน้ำแข็ง '冫' สื่อถึงสิ่งใด?",
+          "options": [
+            "ความเย็นยะเยือกและน้ำแข็ง",
+            "เปลวไฟร้อน",
+            "ดินเหนียว",
+            "เมฆฝน"
+          ],
+          "correct_index": 0,
+          "explanation_th": "หมวด '冫' (两点水) สื่อถึงความเย็นจัดจนกลายเป็นน้ำแข็ง",
+          "encouragement": "เข้าใจลึกซึ้งถึงรากศัพท์อักษรจีน!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเพิ่งกลับมาถึงห้องพักช่วงค่ำ พบว่าตู้เย็นมีน้ำไหลนองพื้นและไม่เย็น อาหารเริ่มมีกลิ่น คุณต้องการถ่ายรูปส่งแชตหาเจ้าของห้องเพื่อแจ้งให้ส่งช่างมาซ่อมด่วน ควรพิมพ์ว่าอย่างไร?",
+        "options": [
+          "房东阿姨，冰箱坏了漏水，不制冷了，能不能麻烦明天叫师傅来修好？ (Fángdōng āyí, bīngxiāng huài le lòushuǐ, bú zhìlěng le, néng bu néng máfan míngtiān jiào shīfu lái xiū hǎo?)",
+          "对不起，我要退两张高铁票。 (Duìbuqǐ, wǒ yào tuì liǎng zhāng gāotiě piào.)",
+          "请问地铁站几点关门？ (Qǐngwèn dìtiězhàn jǐ diǎn guānmén?)",
+          "这个外卖是你的吗？ (Zhè ge wàimài shì nǐ de ma?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยค '房东阿姨，冰箱坏了漏水，不制冷了，能不能麻烦明天叫师傅来修好？' บอกอาการเสียอย่างละเอียด (坏了漏水，不制冷了) และขอให้ส่งช่างมาซ่อมให้เสร็จเรียบร้อย",
+        "encouragement": "ยอดเยี่ยมมาก! สื่อสารรายงานเหตุฉุกเฉินในห้องพักได้อย่างสมบูรณ์แบบ!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t2_u14_l03",
+        "badge_name": "ผู้พิทักษ์บ้านพักอัจฉริยะ 🛠️❄️",
+        "message_th": "ยินดีด้วยนะคนเก่ง! คุณสามารถแจ้งซ่อมเครื่องใช้ไฟฟ้าและใช้ประโยค 把 / 被 ได้อย่างคล่องแคล่ว!",
+        "xp_reward": 50
+      }
+    },
+    {
+      "lesson_id": "t2_u14_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "租房谈判与报修",
+        "th": "บอสชาเลนจ์: เจรจาสัญญาเช่า & แจ้งแอร์น้ำหยด",
+        "en": "Boss Challenge: Lease Negotiation & AC Leak"
+      },
+      "can_do": {
+        "th": "บูรณาการการเจรจาสัญญาเช่ากับเจ้าของห้อง ตรวจสอบความพร้อมเครื่องใช้ไฟฟ้า และแจ้งช่างมาแก้ปัญหาแอร์น้ำหยดได้ 100%",
+        "en": "Integrate lease terms negotiation, inspecting appliances, and reporting AC water leak to technician seamlessly"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: พิชิตบอสใหญ่ เจรจาสัญญาเช่าและจัดการให้ช่างเข้ามาซ่อมแอร์น้ำหยดสำเร็จ!",
+      "vocabulary": [
+        {
+          "id": "hsk2_1419",
+          "hanzi": "房管",
+          "pinyin": "fángguǎn",
+          "display_pinyin": "fángguǎn",
+          "pinyin_tone": "fang2guan3",
+          "meaning_th": "นิติบุคคลอาคารชุด / ผู้จัดการดูแลอสังหาฯ",
+          "meaning_en": "property manager / building management",
+          "radical": "竹",
+          "radical_name_th": "หมวดไผ่ (竹字头)",
+          "stroke_count": 22,
+          "mnemonic": "ดูแลควบคุม (管) ตึกอาคารห้องพัก (房) = นิติบุคคลอาคาร",
+          "kid_mnemonic": "โต๊ะบริการนิติบุคคลชั้น 1 คอยรับเรื่องซ่อมแซม = 房管",
+          "body_gesture": "กุมสองมือยืนตรงทำหน้าที่ผู้จัดการอาคาร"
+        },
+        {
+          "id": "hsk2_1420",
+          "hanzi": "保修",
+          "pinyin": "bǎoxiū",
+          "display_pinyin": "bǎoxiū",
+          "pinyin_tone": "bao3xiu1",
+          "meaning_th": "การรับประกันซ่อมแซมฟรีตามสัญญา",
+          "meaning_en": "warranty repair / maintenance guarantee",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 19,
+          "mnemonic": "รับประกันปกป้อง (保) คอยซ่อมบำรุงให้ฟรี (修) = ประกันซ่อมแซม",
+          "kid_mnemonic": "ใบรับประกันสีทอง ซ่อมฟรีตลอด 1 ปี = 保修",
+          "body_gesture": "ชูนิ้วโป้งยืนยันว่าซ่อมฟรีแน่นอน"
+        },
+        {
+          "id": "hsk2_1421",
+          "hanzi": "漏水",
+          "pinyin": "lòushuǐ",
+          "display_pinyin": "lòushuǐ",
+          "pinyin_tone": "lou4shui3",
+          "meaning_th": "น้ำรั่ว / น้ำหยด",
+          "meaning_en": "water leaking",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 18,
+          "mnemonic": "หยดน้ำ (水) รั่วซึมผ่านรูรั่ว (漏) = น้ำรั่ว",
+          "kid_mnemonic": "น้ำหยดติ๋งๆ ลงถังน้ำที่วางรองไว้ = 漏水",
+          "body_gesture": "ทำนิ้วชี้หยดน้ำติ๋งๆ ลงบนฝ่ามือ"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงคำว่า 漏水 (lòushuǐ) ให้ชัดเจน",
+        "description_th": "คำว่า 漏 (lòu) เป็นเสียงที่ 4 ทิ้งดิ่งหนักแน่น ส่วน 水 (shuǐ) เป็นเสียงที่ 3 ต่ำลึก ออกเสียงหนักแน่นเพื่อเน้นความเร่งด่วนของปัญหาน้ำรั่ว",
+        "example": "空调漏水了 (Kōngtiáo lòushuǐ le)",
+        "fun_metaphor": "เสียงทิ้งน้ำหนักเหมือนหยดน้ำหยดแปะลงพื้น lòu-shuǐ!",
+        "reassurance": "แจ้งคำนี้ปุ๊บ ช่างจะรีบมาดูทันทีเพราะน้ำรั่วเป็นเรื่องด่วน!"
+      },
+      "grammar_bite": {
+        "title": "สูตรแจ้งอาการเสียด่วน: [เครื่องใช้] + 出现问题了，正在 + [อาการ]",
+        "explanation_th": "โครงสร้างทางการและสุภาพในการแจ้งนิติบุคคลหรือเจ้าของห้องเมื่อเกิดปัญหาน้ำรั่วหรืออุปกรณ์ชำรุด",
+        "patterns": [
+          {
+            "formula": "空调 + 漏水了，麻烦 + 派师傅来看看",
+            "zh": "卧室空调漏水了，麻烦派师傅来看看。",
+            "pinyin": "Wòshì kōngtiáo lòushuǐ le, máfan pài shīfu lái kànkan.",
+            "th": "แอร์ห้องนอนน้ำหยดครับ รบกวนช่วยส่งช่างมาดูหน่อยครับ",
+            "en": "Bedroom AC is leaking water, please send a technician to check."
+          },
+          {
+            "formula": "合同期内 + 免费保修",
+            "zh": "合同期内家电出现问题由房东免费保修。",
+            "pinyin": "Hétong qī nèi jiādiàn chūxiàn wèntí yóu fángdōng miǎnfèi bǎoxiū.",
+            "th": "ภายในระยะสัญญา หากเครื่องใช้ไฟฟ้ามีปัญหา เจ้าของห้องจะรับผิดชอบซ่อมฟรี",
+            "en": "Within lease period, appliance issues are covered by landlord warranty."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "李阿姨您好！卧室的空调突然漏水了，地上放了水桶接水。",
+          "pinyin": "Lǐ āyí nín hǎo! Wòshì de kōngtiáo tūrán lòushuǐ le, dì shang fàng le shuǐtǒng jiē shuǐ.",
+          "th": "สวัสดีครับป้าหลี่! แอร์ในห้องนอนจู่ๆ ก็มีน้ำรั่วหยดลงมาครับ ตอนนี้เอาถังน้ำวางรองน้ำไว้บนพื้นครับ",
+          "en": "Hello Auntie Li! Bedroom AC suddenly leaked water, placed a bucket on floor."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "哎呀！别担心，合同里写了家电都是保修的！我给小区房管打电话，马上派维修师傅过去！",
+          "pinyin": "Āiyā! Bié dānxīn, hétong lǐ xiě le jiādiàn dōu shì bǎoxiū de! Wǒ gěi xiǎoqū fángguǎn dǎ diànhuà, mǎshàng pài wéixiū shīfu guòqù!",
+          "th": "ตายแล้ว! ไม่ต้องกังวลจ้ะ ในสัญญาระบุไว้ว่าเครื่องใช้ไฟฟ้ามีประกันซ่อมฟรี! เดี๋ยวป้าโทรหานิติคอนโด ส่งช่างไปเดี๋ยวนี้เลย!",
+          "en": "Oh dear! Don't worry, contract states appliances are under warranty! I will call property management."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย 🧒",
+          "zh": "太感谢您了！师傅大概几点能到？我把空调先关掉了。",
+          "pinyin": "Tài gǎnxiè nín le! Shīfu dàgài jǐ diǎn néng dào? Wǒ bǎ kōngtiáo xiān guāndiào le.",
+          "th": "ขอบพระคุณมากครับ! ช่างน่าจะมาถึงประมาณกี่โมงครับ? ผมปิดแอร์ไว้ก่อนแล้วครับ",
+          "en": "Thank you so much! What time will the technician arrive? I turned off the AC first."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เจ้าของห้อง คุณป้าหลี่ 👵",
+          "zh": "做得对！师傅半小时内就到，把管道疏通好就没事了！",
+          "pinyin": "Zuò de duì! Shīfu bàn xiǎoshí nèi jiù dào, bǎ guǎndào shūtōng hǎo jiù méi shì le!",
+          "th": "ทำถูกแล้วจ้ะ! ช่างจะถึงภายในครึ่งชั่วโมง ทะลวงท่อน้ำทิ้งเสร็จก็เรียบร้อยแล้วจ้ะ!",
+          "en": "Well done! Technician will arrive within half an hour, unblocking the pipe will fix it!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "เมื่อแอร์ในห้องนอนมีน้ำหยดลงมา ควรพูดแจ้งเจ้าของห้องว่าอย่างไร?",
+          "options": [
+            "卧室空调漏水了，麻烦派师傅来看看。",
+            "我想吃一碗牛肉面。",
+            "今天星期日。",
+            "这个多少钱一斤？"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'卧室空调漏水了，麻烦派师傅来看看。' ระบุสถานที่ (卧室) ปัญหา (漏水) และคำขอร้องอย่างสุภาพ",
+          "encouragement": "ยอดเยี่ยมมาก! สื่อสารตรงประเด็นและเป็นธรรมชาติ!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"แอร์ห้องนอนน้ำหยด รบกวนส่งช่างมาดูหน่อย\"",
+          "tokens": [
+            "来看看",
+            "卧室空调漏水了",
+            "麻烦派师傅"
+          ],
+          "correct_sequence": [
+            "卧室空调漏水了",
+            "麻烦派师傅",
+            "来看看"
+          ],
+          "pinyin": "Wòshì kōngtiáo lòushuǐ le, máfan pài shīfu lái kànkan",
+          "meaning_th": "แอร์ห้องนอนน้ำหยด รบกวนส่งช่างมาดูหน่อย",
+          "explanation_th": "โครงสร้าง: ปัญหา (卧室空调漏水了) + ขอร้อง (麻烦派师傅) + กริยา (来看看)",
+          "encouragement": "ต่อบล็อกประโยคแจ้งซ่อมได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "คำว่า '漏水' (lòushuǐ) มีความหมายตรงกับภาษาไทยว่าอย่างไร?",
+          "options": [
+            "น้ำรั่ว / น้ำหยด",
+            "น้ำท่วมถนน",
+            "ไม่มีน้ำประปา",
+            "น้ำดื่มหมด"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'漏水' หมายถึง น้ำรั่วซึม หรือ น้ำหยดจากท่อหรือแอร์",
+          "encouragement": "จำคำศัพท์อาการเสียได้อย่างแม่นยำ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "ตัวอักษร '漏' ในคำว่า '漏水' มีหมวดนำน้ำ '氵' สื่อถึงสิ่งใด?",
+          "options": [
+            "ของเหลวและสายน้ำที่รั่วไหล",
+            "เปลวไฟที่เผาไหม้",
+            "แผ่นหินที่แข็งแรง",
+            "ต้นไม้ที่เหี่ยวเฉา"
+          ],
+          "correct_index": 0,
+          "explanation_th": "หมวด '氵' คือ หมวดน้ำ สื่อถึงการรั่วไหลของของเหลว",
+          "encouragement": "ตาไวเฉียบคมมาก!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "คุณเพิ่งเซ็นสัญญาเช่าห้องพักวันแรก เปิดแอร์ในห้องนอนแล้วพบว่ามีน้ำรั่วหยดลงมา คุณรีบโทรหาเจ้าของห้องเพื่อแจ้งปัญหาและขอใช้สิทธิ์ซ่อมฟรีตามสัญญาเช่า ควรพูดว่าอย่างไร?",
+        "options": [
+          "李阿姨您好！我是租客สมชาย，卧室的空调漏水了，合同里写了家电保修，麻烦派师傅来修好可以吗？ (Lǐ āyí nín hǎo! Wǒ shì zūkè Somchai, wòshì de kōngtiáo lòushuǐ le, hétong lǐ xiě le jiādiàn bǎoxiū, máfan pài shīfu lái xiū hǎo kěyǐ ma?)",
+          "再见，我不租了，立刻退钱！ (Zàijiàn, wǒ bù zū le, lìkè tuì qián!)",
+          "请问今天几月几号？ (Qǐngwèn jīntiān jǐ yuè jǐ hào?)",
+          "这个菜里不要放辣。 (Zhè ge cài lǐ bú yào fàng là.)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "ประโยค '李阿姨您好！我是租客สมชาย，卧室的空调漏水了，合同里写了家电保修，麻烦派师傅来修好可以吗？' สุภาพ เป็นเหตุเป็นผล อ้างอิงสิทธิประโยชน์ตามสัญญาเช่า (合同保修) ชัดเจนและน่าเชื่อถือที่สุด",
+        "encouragement": "ยินดีด้วย! คุณพิชิตบอสใหญ่ เจรจาสัญญาเช่าและจัดการแจ้งซ่อมเครื่องใช้ไฟฟ้าสำเร็จ 100%!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t2_u14_master",
+        "badge_name": "เซียนการใช้ชีวิตและเช่าห้องในจีน 🏆🔑",
+        "message_th": "ยินดีด้วยอย่างยิ่ง! คุณผ่าน Unit 14 สมบูรณ์แบบ พร้อมจัดการเรื่องเช่าห้อง ค่าน้ำไฟ และการดูแลรักษาอุปกรณ์ในจีนได้อย่างมืออาชีพ!",
+        "xp_reward": 200
+      }
+    }
+  ]
+}

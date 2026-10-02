@@ -1,0 +1,870 @@
+/**
+ * scripts/tier3_batch_a/unit32.ts
+ * Tier 3 Unit 32: 求职与面试技巧 (Job Hunting & Interview: สัมภาษณ์งานบริษัทข้ามชาติจีน)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit32 = {
+  unit_id: 'tier3_u32',
+  tier: 3,
+  unit_number: 32,
+  title: {
+    zh: '求职与面试技巧',
+    th: 'สัมภาษณ์งานบริษัทข้ามชาติจีน',
+    en: 'Job Hunting & Interview Skills'
+  },
+  description: 'เตรียมความพร้อมสู่อาชีพในองค์กรชั้นนำของจีน: การนำเสนอจุดเด่นในเรซูเม่ (简历亮点呈现), กลยุทธ์ตอบคำถามสัมภาษณ์เชิงรุกและรับ (面试问答攻防), ตลอดจนการเจรจาโครงสร้างผลตอบแทนและสวัสดิการ (薪酬期望与反问)',
+  lessons: [
+    {
+      lesson_id: 't3_u32_l01',
+      lesson_number: 1,
+      title: {
+        zh: '简历亮点呈现',
+        th: 'การนำเสนอจุดเด่นในเรซูเม่',
+        en: 'Resume Highlights Presentation'
+      },
+      can_do: {
+        th: 'นำเสนอทักษะการทำงาน ตัวเลขชี้วัดผลงาน และจุดแข็งหลัก โดยใช้โครงสร้าง 具备...能力 / 积累了丰富的实战经验',
+        en: 'Present work skills, quantitative metrics, and core strengths using 具备...能力 / 积累了丰富的实战经验'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เขียนและแนะนำประวัติการทำงานด้วยตัวเลขชี้วัดผลลัพธ์ที่โดดเด่นและน่าเชื่อถือ!',
+      vocabulary: [
+        {
+          id: 'hsk3_3201',
+          hanzi: '简历',
+          pinyin: 'jiǎnlì',
+          display_pinyin: 'jiǎnlì',
+          pinyin_tone: 'jian3li4',
+          meaning_th: 'เรซูเม่ / ประวัติย่อการทำงาน',
+          meaning_en: 'resume / CV',
+          radical: '竹',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 23,
+          mnemonic: 'สรุปอย่างกระชับ (简) เกี่ยวกับประวัติการเดินทางชีวิต (历) = เรซูเม่',
+          kid_mnemonic: 'กระดาษแผ่นสวยที่พิมพ์ประวัติความเก่งกาจของเราไว้ = 简历',
+          body_gesture: 'ยื่นสองมือส่งแผ่นกระดาษเรซูเม่ให้ผู้สัมภาษณ์'
+        },
+        {
+          id: 'hsk3_3202',
+          hanzi: '亮点',
+          pinyin: 'liàngdiǎn',
+          display_pinyin: 'liàngdiǎn',
+          pinyin_tone: 'liang4dian3',
+          meaning_th: 'จุดเด่น / ผลงานที่โดดเด่นเป็นประกาย',
+          meaning_en: 'highlight / shining point',
+          radical: '日',
+          radical_name_th: 'หมวดดวงอาทิตย์ (日字旁)',
+          stroke_count: 18,
+          mnemonic: 'จุดที่ส่องสว่างเจิดจ้า (亮) เป็นประกายโดดเด่น (点) = จุดเด่น',
+          kid_mnemonic: 'ดาวดวงเล็กๆ ที่เปล่งประกายวิบวับอยู่บนยอดเขา = 亮点',
+          body_gesture: 'ชี้สองนิ้วขึ้นไปบนฟ้าแล้วกะพริบตาแสดงประกายความโดดเด่น'
+        },
+        {
+          id: 'hsk3_3203',
+          hanzi: '量化',
+          pinyin: 'liànghuà',
+          display_pinyin: 'liànghuà',
+          pinyin_tone: 'liang4hua4',
+          meaning_th: 'การแสดงผลงานเป็นตัวเลขเชิงปริมาณ (Quantify)',
+          meaning_en: 'quantify / numerical representation',
+          radical: '里',
+          radical_name_th: 'หมวดหมู่บ้าน/หน่วยวัด (里字旁)',
+          stroke_count: 16,
+          mnemonic: 'เปลี่ยนผลงาน (化) ให้เห็นเป็นตัวเลขปริมาณชัดเจน (量) = แสดงเป็นตัวเลข',
+          kid_mnemonic: 'เปลี่ยนคะแนนสอบให้กลายเป็นกราฟแท่งตัวเลขสูงลิ่ว = 量化',
+          body_gesture: 'วาดกราฟแท่งแนวตั้งในอากาศด้วยมือขวา'
+        },
+        {
+          id: 'hsk3_3204',
+          hanzi: '核心优势',
+          pinyin: 'héxīn yōushì',
+          display_pinyin: 'héxīn yōushì',
+          pinyin_tone: 'he2xin1 you1shi4',
+          meaning_th: 'จุดแข็งแกนหลัก (Core Competence)',
+          meaning_en: 'core advantage / key strength',
+          radical: '木',
+          radical_name_th: 'หมวดต้นไม้ (木字旁)',
+          stroke_count: 25,
+          mnemonic: 'หัวใจแก่นแท้ (核心) ของความได้เปรียบอันเป็นเลิศ (优势) = จุดแข็งหลัก',
+          kid_mnemonic: 'โล่ป้องกันและดาบทองคำประจำตัวของอัศวิน = 核心优势',
+          body_gesture: 'เอากำปั้นขวาทาบหน้าอกด้านซ้ายเพื่อแสดงพลังแกนหลัก'
+        },
+        {
+          id: 'hsk3_3205',
+          hanzi: '履历',
+          pinyin: 'lǚlì',
+          display_pinyin: 'lǚlì',
+          pinyin_tone: 'lu:3li4',
+          meaning_th: 'ประวัติการศึกษาและการทำงาน (Career Background)',
+          meaning_en: 'career history / curriculum vitae',
+          radical: '尸',
+          radical_name_th: 'หมวดร่าง (尸字头)',
+          stroke_count: 27,
+          mnemonic: 'รอยเท้าที่ย่ำก้าวเดินมา (履) ผ่านประวัติการณ์ชีวิต (历) = ประวัติการทำงาน',
+          kid_mnemonic: 'รอยเท้าทองคำก้าวขึ้นบันไดสู่ความสำเร็จทีละขั้น = 履历',
+          body_gesture: 'ก้าวเท้าไปข้างหน้าหนึ่งก้าวอย่างมั่นคง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 履历 (lǚlì)',
+        description_th: 'คำว่า 履 (lǚ) เป็นเสียง 3 ต่ำลึก (ปากกลม ü) ส่วน 历 (lì) เป็นเสียง 4 สั้นหนักแน่น',
+        example: '丰富的职业履历 (ประวัติการทำงานอันโชกโชน)',
+        fun_metaphor: 'เหมือนก้าวเท้าย่อตัวลงแล้วกระโดดแตะแผ่นป้ายเกียรติยศ!',
+        reassurance: 'ออกเสียง lǚ ให้ปากจู๋กลมชัดเจน จะทำให้ฟังดูสง่างามสมฐานะผู้สมัครมืออาชีพ'
+      },
+      grammar_bite: {
+        title: 'สูตรแนะนำตัวในเรซูเม่: 具备...能力，积累了丰富的实战经验',
+        explanation_th: 'ประโยคทองคำที่ HR และผู้บริหารจีนประทับใจเมื่ออ่านโปรไฟล์ผู้สมัครงาน',
+        patterns: [
+          {
+            formula: '具备 + [ทักษะ/ความสามารถ] + 能力，能够独立负责 + [ขอบเขตงาน]',
+            zh: '具备中英泰三语商务谈判能力，能够独立负责跨境业务拓展。',
+            pinyin: 'Jùbèi Zhōng-Yīng-Tài sān yǔ shāngwù tánpàn nénglì, nénggòu dúlì fùzé kuàjìng yèwù tuòzhǎn.',
+            th: 'มีทักษะการเจรจาธุรกิจสามภาษาจีน-อังกฤษ-ไทย และสามารถรับผิดชอบการขยายธุรกิจข้ามพรมแดนได้โดยอิสระ',
+            en: 'Possess trilingual (CN/EN/TH) negotiation skills, capable of independently leading cross-border business development.'
+          },
+          {
+            formula: '在过去的 [จำนวนปี] 年中，积累了丰富的 [ด้านใด] 实战经验',
+            zh: '在过去的五年中，我积累了丰富的东南亚电商运营实战经验，带领团队实现了业绩翻倍。',
+            pinyin: 'Zài guòqu de wǔ nián zhōng, wǒ jīlěi le fēngfù de Dōngnányà diànshāng yùnyíng shízhàn jīngyàn, dàilǐng tuánduì shíxiàn le yèjì fānbèi.',
+            th: 'ในช่วง 5 ปีที่ผ่านมา ผมได้สั่งสมประสบการณ์จริงในการบริหารอีคอมเมิร์ซในเอเชียตะวันออกเฉียงใต้อย่างโชกโชน พาทีมทำยอดขายเพิ่มขึ้นเท่าตัว',
+            en: 'Over the past 5 years, I accumulated rich operational experience in Southeast Asian e-commerce, leading team to double revenue.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '宋先生您好，我看过您的简历，履历非常亮眼。请简要介绍一下您的核心优势。',
+          pinyin: 'Sòng xiānsheng nín hǎo, wǒ kànguò nín de jiǎnlì, lǚlì fēicháng liàngyǎn. Qǐng jiǎnyào jièshào yíxià nín de héxīn yōushì.',
+          th: 'สวัสดีค่ะคุณซ่ง ดิฉันได้อ่านเรซูเม่ของคุณแล้ว ประวัติการทำงานโดดเด่นสะดุดตามาก ช่วยแนะนำจุดแข็งหลักของคุณสั้นๆ หน่อยค่ะ',
+          en: 'Hello Mr. Song, I reviewed your resume, your career background is very eye-catching. Please briefly introduce your core strengths.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '李总好！我的核心优势主要体现在两方面：第一是跨文化商务沟通，第二是能够用数据量化业务成果。',
+          pinyin: 'Lǐ zǒng hǎo! Wǒ de héxīn yōushì zhǔyào tǐxiàn zài liǎng fāngmiàn: Dì-yī shì kuà wénhuà shāngwù gōutōng, dì-èr shì nénggòu yòng shùjù liànghuà yèwù chéngguǒ.',
+          th: 'สวัสดีครับคุณหลี่! จุดแข็งหลักของผมแสดงออกใน 2 ด้านครับ: ข้อแรกคือการสื่อสารธุรกิจข้ามวัฒนธรรม ข้อสองคือความสามารถในการแปลงผลงานธุรกิจเป็นตัวเลขที่จับต้องได้ครับ',
+          en: 'Hello Director Li! My core strengths are twofold: first, cross-cultural business communication; second, quantifying business results with data.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '非常清晰！简历中这句“推动新品牌入驻并达成月销千万”，这个亮点很有说服力。',
+          pinyin: 'Fēicháng qīngxī! Jiǎnlì zhōng zhè jù “tuīdòng xīn pǐnpái rùzhù bìng dáchéng yuè xiāo qiānwàn”, zhè ge liàngdiǎn hěn yǒu shuōfúlì.',
+          th: 'ชัดเจนมากค่ะ! ในเรซูเม่ตรงประโยคที่ว่า “ผลักดันแบรนด์ใหม่เข้าแพลตฟอร์มและทำยอดขายแตะเดือนละ 10 ล้าน” จุดเด่นตรงนี้น่าเชื่อถือมากค่ะ',
+          en: 'Very clear! The line in your CV "drove new brand onboarding hitting 10M monthly sales" is very persuasive.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '谢谢李总！这得益于我过去积累的本土渠道资源与精细化运营经验。我也希望能有机会与贵公司朋友们一起努力工作，虚心向各位前辈学习，全力解决实际业务问题！',
+          pinyin: 'Xièxie Lǐ zǒng! Zhè déyì yú wǒ guòqu jīlěi de běntǔ qúdào zīyuán yǔ jīngxìhuà yùnyíng jīngyàn. Wǒ yě xīwàng néng yǒu jīhuì yǔ guì gōngsī péngyoumen yìqǐ nǔlì gōngzuò, xūxīn xiàng gèwèi qiánbèi xuéxí, quánlì jiějué shíjì yèwù wèntí!',
+          th: 'ขอบคุณครับคุณหลี่! นั่นเป็นผลจากคอนเนกชันช่องทางในท้องถิ่นและประสบการณ์บริหารงานอย่างละเอียดประณีตที่ผมสั่งสมมาครับ ผมก็หวังเป็นอย่างยิ่งว่าจะมีโอกาสได้ร่วมงานกับเพื่อนร่วมงานในบริษัทของท่าน ได้เรียนรู้จากรุ่นพี่ทุกท่าน และทุ่มเทแก้ปัญหาทางธุรกิจจริงครับ!',
+          en: 'Thank you Director Li! That benefited from local channels and refined operations experience. I also hope to have the opportunity to work hard with colleagues in your company, learn humbly, and solve practical business challenges!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในการเขียนเรซูเม่ภาษาจีน คำว่า '量化' (liànghuà) หมายถึงสิ่งใด?",
+          options: [
+            'การแสดงผลงานและความสำเร็จด้วยตัวเลขและสถิติที่ชัดเจน',
+            'การระบุน้ำหนักและส่วนสูงของผู้สมัคร',
+            'การซื้อสินค้าจำนวนมาก',
+            'การเขียนเรซูเม่ให้ยาวหลายสิบหน้า'
+          ],
+          correct_index: 0,
+          explanation_th: "'量化' คือ การแปลงผลงานให้เป็นตัวเลขเชิงปริมาณ เช่น ยอดขายเพิ่มขึ้น 30% หรือประหยัดต้นทุน 1 ล้านหยวน",
+          encouragement: 'จำหลักการเขียนเรซูเม่ระดับสากลได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '核心优势' (héxīn yōushì) หมายถึงข้อใด?",
+          options: [
+            'จุดแข็งหลักหรือความสามารถอันเป็นเลิศที่โดดเด่นกว่าคู่แข่ง',
+            'เวลาเริ่มทำงานในแต่ละวัน',
+            'ระยะทางจากบ้านไปที่ทำงาน',
+            'เงินเดือนงวดแรก'
+          ],
+          correct_index: 0,
+          explanation_th: "'核心优势' คือ Core Competency หรือจุดแข็งแกนหลักที่ทำให้ผู้สมัครโดดเด่น",
+          encouragement: 'ยอดเยี่ยมมาก! เลือกคำศัพท์ได้ตรงจุด!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ผมได้สั่งสมประสบการณ์จริงในการทำงานข้ามพรมแดนอย่างโชกโชน"',
+          tokens: ['丰富的实战经验', '积累了', '我'],
+          correct_sequence: ['我', '积累了', '丰富的实战经验'],
+          pinyin: 'Wǒ jīlěi le fēngfù de shízhàn jīngyàn',
+          meaning_th: 'ผมได้สั่งสมประสบการณ์จริงในการทำงานอย่างโชกโชน',
+          explanation_th: 'ประธาน (我) + กริยา (积累了) + กรรมขยาย (丰富的实战经验)',
+          encouragement: 'ต่อประโยคแนะนำตัวได้อย่างมั่นใจและทรงพลัง!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '简历' ตัว '简' (ย่อ/เรียบง่าย) มีหมวดนำใด?",
+          options: [
+            '竹 (หมวดไม้ไผ่ 竹字头)',
+            '木 (หมวดไม้ 木字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'简' มีหมวดนำ '竹' (ไม้ไผ่) มาจากแผ่นไผ่จดบันทึกในสมัยโบราณ (竹简)",
+          encouragement: 'เกร็ดประวัติศาสตร์อักษรจีนยอดเยี่ยมมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ผู้สัมภาษณ์ถามว่า "ทำไมเราถึงต้องจ้างคุณแทนที่จะจ้างคนท้องถิ่นชาวจีน?" คุณต้องการเน้นจุดแข็งเรื่องภาษา ความเข้าใจตลาดอาเซียน และประสบการณ์จริง ควรตอบอย่างไร?',
+        options: [
+          '因为我具备三语商务沟通能力，积累了深厚的本地化实战经验，能成为贵公司拓展东盟市场不可替代的桥梁！ (Yīnwèi wǒ jùbèi sān yǔ shāngwù gōutōng nénglì, jīlěi le shēnhòu de běndìhuà shízhàn jīngyàn, néng chéngwéi guì gōngsī tuòzhǎn Dōngméng shìchǎng bùkě tìdài de qiáoliáng!)',
+          '因为我要求的工资比他们都低。 (Yīnwèi wǒ yāoqiú de gōngzī bǐ tāmen dōu dī.)',
+          '我随便问问的，其实我也不想来。 (Wǒ suíbiàn wènwen de, qíshí wǒ yě bù xiǎng lái.)',
+          '请问公司几点提供免费午餐？ (Qǐngwèn gōngsī jǐ diǎn tígōng miǎnfèi wǔcān?)'
+        ],
+        correct_index: 0,
+        explanation_th: "การตอบว่า '因为我具备三语商务沟通能力，积累了深厚的本地化实战经验，能成为贵公司拓展东盟市场不可替代的桥梁！' ชี้ให้เห็นถึงคุณค่าที่ไม่มีใครทดแทนได้ (不可替代的桥梁) สร้างความประทับใจระดับ 100 คะแนนเต็ม",
+        encouragement: 'พิชิตคำถามสัมภาษณ์สุดหินได้อย่างสง่างาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u32_l02',
+      lesson_number: 2,
+      title: {
+        zh: '面试问答攻防',
+        th: 'กลยุทธ์ตอบคำถามสัมภาษณ์',
+        en: 'Interview Q&A Strategy'
+      },
+      can_do: {
+        th: 'ตอบคำถามเรื่องจุดอ่อน วิกฤตการณ์เฉพาะหน้า แผนการในอนาคต และใช้สำนวน 自告奋勇',
+        en: 'Address weaknesses, crisis handling, future career plans, and use idiom 自告奋勇'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พลิกวิกฤตเป็นโอกาส เปลี่ยนคำถามจุดอ่อนให้กลายเป็นพลังแห่งความมุ่งมั่น!',
+      vocabulary: [
+        {
+          id: 'hsk3_3206',
+          hanzi: '劣势',
+          pinyin: 'lièshì',
+          display_pinyin: 'lièshì',
+          pinyin_tone: 'lie4shi4',
+          meaning_th: 'จุดด้อย / ข้อเสียเปรียบ',
+          meaning_en: 'weakness / disadvantage',
+          radical: '力',
+          radical_name_th: 'หมวดพลัง (力字底)',
+          stroke_count: 17,
+          mnemonic: 'พละกำลังด้อยน้อยกว่า (劣) ตกอยู่ในสภาวะเป็นรอง (势) = จุดด้อย',
+          kid_mnemonic: 'ลูกข่างที่เริ่มหมุนเอียงๆ หมุนช้ากว่าเพื่อน = 劣势',
+          body_gesture: 'คว่ำฝ่ามือลงแล้วเอียงเล็กน้อยแสดงความเสียเปรียบ'
+        },
+        {
+          id: 'hsk3_3207',
+          hanzi: '职业规划',
+          pinyin: 'zhíyè guīhuà',
+          display_pinyin: 'zhíyè guīhuà',
+          pinyin_tone: 'zhi2ye4 gui1hua4',
+          meaning_th: 'การวางแผนเส้นทางอาชีพ (Career Path Planning)',
+          meaning_en: 'career planning',
+          radical: '耳',
+          radical_name_th: 'หมวดหู (耳字旁)',
+          stroke_count: 36,
+          mnemonic: 'หน้าที่การงานอาชีพ (职业) มีแผนที่และกฎเกณฑ์กำหนดก้าวเดิน (规划) = แผนอาชีพ',
+          kid_mnemonic: 'แผนที่ลายแทงที่ชี้บอกว่าอีกห้าปีเราจะเติบโตเป็นผู้บริหาร = 职业规划',
+          body_gesture: 'กางสองแขนวาดเส้นทางโค้งมุ่งสู่อนาคต'
+        },
+        {
+          id: 'hsk3_3208',
+          hanzi: '突发状况',
+          pinyin: 'tūfā zhuàngkuàng',
+          display_pinyin: 'tūfā zhuàngkuàng',
+          pinyin_tone: 'tu1fa1 zhuang4kuang4',
+          meaning_th: 'สถานการณ์ฉุกเฉินกะทันหัน / เหตุการณ์ไม่คาดฝัน',
+          meaning_en: 'unexpected emergency / sudden crisis',
+          radical: '穴',
+          radical_name_th: 'หมวดถ้ำ (穴字头)',
+          stroke_count: 28,
+          mnemonic: 'เรื่องที่พุ่งทะลุเกิดขึ้นฉับพลัน (突发) ในสภาพสถานการณ์หน้างาน (状况) = สถานการณ์ฉุกเฉินกะทันหัน',
+          kid_mnemonic: 'สัญญาณเตือนภัยสีแดงดังขึ้นเมื่อเกิดเรื่องไม่คาดคิด = 突发状况',
+          body_gesture: 'กางสองแขนออกทำท่าตื่นตัวระวังภัย'
+        },
+        {
+          id: 'hsk3_3209',
+          hanzi: '离职原因',
+          pinyin: 'lízhí yuányīn',
+          display_pinyin: 'lízhí yuányīn',
+          pinyin_tone: 'li2zhi2 yuan2yin1',
+          meaning_th: 'เหตุผลในการลาออกจากงานเดิม',
+          meaning_en: 'reason for leaving previous job',
+          radical: '隹',
+          radical_name_th: 'หมวดนกหางสั้น (隹字旁)',
+          stroke_count: 31,
+          mnemonic: 'จากลาโบยบิน (离) จากตำแหน่งหน้าที่เดิม (职) มีสาเหตุที่มา (原因) = เหตุผลลาออก',
+          kid_mnemonic: 'เก็บของใส่กล่องแล้วโบกมือลาเพื่อนร่วมงานเก่าเพื่อเติบโต = 离职原因',
+          body_gesture: 'สองมือทำท่าเก็บของใส่กล่องแล้วยิ้มมุ่งไปข้างหน้า'
+        },
+        {
+          id: 'hsk3_3210',
+          hanzi: '自告奋勇',
+          pinyin: 'zìgàofènyǒng',
+          display_pinyin: 'zìgàofènyǒng',
+          pinyin_tone: 'zi4gao4fen4yong3',
+          meaning_th: 'อาสาด้วยความกระตือรือร้นและมั่นใจ (ขันอาสา)',
+          meaning_en: 'volunteer boldly / offer oneself proactively',
+          radical: '自',
+          radical_name_th: 'หมวดตัวเอง (自字旁)',
+          stroke_count: 32,
+          mnemonic: 'ตนเองเอ่ยปากแจ้ง (自告) ด้วยความฮึกเหิมและกล้าหาญ (奋勇) = ขันอาสา',
+          kid_mnemonic: 'ยกมือขวาชูสูงแล้วบอกว่า "ผมขออาสาทำภารกิจนี้เองครับ!" = 自告奋勇',
+          body_gesture: 'ยกแขนขวาชูขึ้นสูงด้วยแววตามุ่งมั่น'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 自告奋勇 (zìgàofènyǒng) จังหวะเสียง 4-4-4-3',
+        description_th: 'พยางค์: zì (4), gào (4), fèn (4), yǒng (3) — เริ่มต้นด้วยเสียง 4 หนักแน่นสามตัวติดกันอย่างเด็ดเดี่ยว แล้วตบท้ายด้วยเสียง 3 ต่ำลึกทรงพลัง',
+        example: '自告奋勇承担重任 (ขันอาสารับภาระหน้าที่สำคัญด้วยตนเอง)',
+        fun_metaphor: 'เหมือนก้าวเท้าย่ำสามก้าวอย่างมั่นคงแล้วชูกำปั้นขึ้นประกาศความพร้อม!',
+        reassurance: 'คำนี้สะท้อนถึงทัศนคติเชิงรุก (Proactive) ที่บริษัทชั้นนำต้องการตัว'
+      },
+      grammar_bite: {
+        title: 'ศิลปะการตอบเรื่องจุดอ่อน: 虽存在...，但我正通过...积极改进',
+        explanation_th: 'เทคนิคการตอบคำถามเรื่องข้อบกพร่องโดยไม่ทำลายความมั่นใจ แต่แสดงถึงจิตวิทยาแห่งการเติบโต (Growth Mindset)',
+        patterns: [
+          {
+            formula: '谈到所谓的劣势，我正通过 + [วิธีการ] + 积极提升',
+            zh: '虽然在技术细节上起初有些劣势，但我通过自告奋勇参与项目攻关，已经弥补了这一短板。',
+            pinyin: 'Suīrán zài jìshù xìjié shang qǐchū yǒuxiē lièshì, dàn wǒ tōngguò zìgàofènyǒng cānyù xiàngmù gōngguān, yǐjīng míbǔ le zhè yí duǎnbǎn.',
+            th: 'แม้ว่าในตอนแรกจะมีจุดอ่อนเรื่องรายละเอียดทางเทคนิคอยู่บ้าง แต่ผมได้ขันอาสาเข้าร่วมแก้โจทย์ยากของโครงการ จนอุดรอยรั่วนี้ได้เรียบร้อยแล้วครับ',
+            en: 'Although having technical detail weaknesses initially, through volunteering for key tasks, I already bridged this gap.'
+          },
+          {
+            formula: '关于离职原因，主要是为了寻求更大的平台与挑战',
+            zh: '关于上一份工作的离职原因，主要是为了寻求更大的国际化平台，实现更长远的职业规划。',
+            pinyin: 'Guānyú shàng yí fèn gōngzuò de lízhí yuányīn, zhǔyào shì wèile xúnqiú gèng dà de guójìhuà píngtái, shíxiàn gèng chángyuǎn de zhíyè guīhuà.',
+            th: 'สำหรับสาเหตุการลาออกจากที่เดิม หลักๆ คือเพื่อแสวงหาแพลตฟอร์มระดับสากลที่ใหญ่ขึ้น และบรรลุแผนเส้นทางอาชีพในระยะยาวครับ',
+            en: 'Regarding reasons for leaving, mainly to seek a broader global platform and fulfill long-term career planning.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '宋先生，如果团队遇到突发状况与紧急危机，而责任人一时联系不上，你会怎么处理？',
+          pinyin: 'Sòng xiānsheng, rúguǒ tuánduì yù dào tūfā zhuàngkuàng yǔ jǐnjí wēijī, ér zérènrén yìshí liánxì bú shàng, nǐ huì zěnme chǔlǐ?',
+          th: 'คุณซ่งคะ หากทีมเผชิญสถานการณ์ฉุกเฉินกะทันหันและวิกฤตเร่งด่วน โดยที่ผู้รับผิดชอบหลักติดต่อไม่ได้ชั่วคราว คุณจะมีวิธีรับมืออย่างไรคะ?',
+          en: 'Mr. Song, if team faces unexpected emergency and crisis while owner is temporarily unreachable, how would you handle it?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '首先我会迅速启动应急预案控制事态。在这种关键时刻，我一定会自告奋勇站出来顶住压力。',
+          pinyin: 'Shǒuxiān wǒ huì xùnsù qǐdòng yìngjí yù’àn kòngzhì shìtài. Zài zhè zhǒng guānjiàn shíkè, wǒ yídìng huì zìgàofènyǒng zhàn chūlai dǐng zhù yālì.',
+          th: 'อันดับแรกผมจะเปิดใช้แผนฉุกเฉินทันทีเพื่อควบคุมสถานการณ์ครับ ในช่วงเวลาวิกฤตเช่นนี้ ผมจะขันอาสาก้าวออกมารับแรงกดดันและประสานงานแทนครับ',
+          en: 'First I would rapidly initiate contingency plan to contain the situation. At such key moments, I boldly volunteer to take the pressure.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '很有担当！那关于你未来的职业规划，你希望三年内在公司达到什么目标？',
+          pinyin: 'Hěn yǒu dāndāng! Nà guānyú nǐ wèilái de zhíyè guīhuà, nǐ xīwàng sān nián nèi zài gōngsī dádào shénme mùbiāo?',
+          th: 'มีความรับผิดชอบดีมากค่ะ! แล้วเกี่ยวกับแผนอาชีพในอนาคตของคุณ คุณหวังว่าจะบรรลุเป้าหมายอะไรในบริษัทภายใน 3 ปีคะ?',
+          en: 'Great sense of responsibility! Regarding future career planning, what goals do you aim for within 3 years here?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '我希望在前两年深耕东南亚本土业务，第三年能够带领一支国际化团队，成为公司出海的独当一面大将！',
+          pinyin: 'Wǒ xīwàng zài qián liǎng nián shēngēng Dōngnányà běntǔ yèwù, dì-sān nián nénggòu dàilǐng yì zhī guójìhuà tuánduì, chéngwéi gōngsī chūhǎi de dúdāngyímiàn dàjiàng!',
+          th: 'ผมหวังว่าในสองปีแรกจะปักหลักตลาดอาเซียนให้แน่นแฟ้น และในปีที่สามจะสามารถนำทัพทีมสากล เป็นแม่ทัพที่รับผิดชอบงานใหญ่ได้อย่างอิสระครับ!',
+          en: 'I hope to cultivate Southeast Asian operations in the first two years, and lead an international team as a core pillar in the third year!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '自告奋勇' (zìgàofènyǒng) หมายถึงอะไร?",
+          options: [
+            'อาสาทำงานยากด้วยความมั่นใจและกระตือรือร้น',
+            'หลีกเลี่ยงความรับผิดชอบเมื่อเกิดปัญหา',
+            'การลาพักร้อนประจำปี',
+            'การเปลี่ยนหัวข้องานกะทันหัน'
+          ],
+          correct_index: 0,
+          explanation_th: "'自告奋勇' คือ การขันอาสา หรือเสนอตัวรับหน้าที่ด้วยความกล้าหาญและกระตือรือร้น",
+          encouragement: 'จำสำนวนแสดงความกระตือรือร้นในการทำงานได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อถูกถามถึง '离职原因' (lízhí yuányīn) ควรเน้นตอบในทิศทางใดจึงจะดีที่สุด?",
+          options: [
+            'เน้นเรื่องการแสวงหาโอกาสเติบโตและความท้าทายใหม่เชิงบวก',
+            'บ่นว่าเจ้านายเก่าใจร้ายและงานหนัก',
+            'บอกว่าเพื่อนร่วมงานเก่าไม่ดี',
+            'บอกว่าไม่อยากทำงานแล้ว'
+          ],
+          correct_index: 0,
+          explanation_th: "การตอบเรื่องเหตุผลลาออก ควรเน้นการแสวงหาความท้าทายใหม่และการพัฒนาตนเองในเชิงบวกเสมอ",
+          encouragement: 'ยอดเยี่ยมมาก! มี EQ ในการสัมภาษณ์งานสูงมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ในยามวิกฤต ผมจะขันอาสาก้าวออกมารับผิดชอบ"',
+          tokens: ['站出来承担责任', '在关键时刻', '我会自告奋勇'],
+          correct_sequence: ['在关键时刻', '我会自告奋勇', '站出来承担责任'],
+          pinyin: 'Zài guānjiàn shíkè, wǒ huì zìgàofènyǒng zhàn chūlai chéngdān zérèn',
+          meaning_th: 'ในช่วงเวลาสำคัญ ผมจะขันอาสาก้าวออกมารับผิดชอบ',
+          explanation_th: 'บริบทเวลา (在关键时刻) + ประธานและกริยาขยาย (我会自告奋勇) + การกระทำ (站出来承担责任)',
+          encouragement: 'ต่อประโยคแสดงภาวะผู้นำได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '劣势' ตัว '劣' (ด้อย/เป็นรอง) ประกอบด้วยตัวอักษรใดด้านบนและด้านล่าง?",
+          options: [
+            '少 (น้อย) อยู่บน 力 (พลัง) อยู่ล่าง',
+            '力 อยู่บน 少 อยู่ล่าง',
+            '大 อยู่บน 力 อยู่ล่าง',
+            '口 อยู่บน 力 อยู่ล่าง'
+          ],
+          correct_index: 0,
+          explanation_th: "'劣' ประกอบด้วย '少' (น้อย) ด้านบน และ '力' (พลัง) ด้านล่าง รวมกันคือ พละกำลังมีน้อยกว่า จึงแปลว่า ด้อยกว่าหรือเป็นรอง",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรจีนได้อย่างลึกซึ้ง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ผู้สัมภาษณ์ถามว่า "คุณเคยทำผิดพลาดครั้งใหญ่ที่สุดในการทำงานคืออะไร และคุณได้เรียนรู้อะไรจากมัน?" คุณควรตอบอย่างไรให้ได้คะแนนเต็ม?',
+        options: [
+          '我曾因低估本地物流复杂性导致交期延误。事后我深入一线复盘，自告奋勇重构了仓储流程，这段经历让我学会了未雨绸缪！ (Wǒ céng yīn dīgū běndì wùliú fùzáxìng dǎozhì jiāoqī yánwù. Shìhòu wǒ shēnrù yīxiàn fùpán, zìgàofènyǒng chónggòu le cāngchǔ liúchéng, zhè duàn jīnglì ràng wǒ xuéhuì le wèiyǔchóumóu!)',
+          '我从来没犯过错，我一直很完美。 (Wǒ cónglái méi fànguò cuò, wǒ yìzhí hěn wánměi.)',
+          '都是实习生弄错的，跟我没关系。 (Dōu shì shíxíshēng nòng cuò de, gēn wǒ méi guānxi.)',
+          '请问今天面试有车费补贴吗？ (Qǐngwèn jīntiān miànshì yǒu chēfèi bǔtiē ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "การยอมรับความจริง อธิบายการถอดบทเรียน (复盘) ขันอาสาแก้ไข (自告奋勇) และสรุปบทเรียนด้วยสำนวน '未雨绸缪' (เตรียมการป้องกันล่วงหน้า) เป็นคำตอบระดับ Masterclass ของการสัมภาษณ์งาน",
+        encouragement: 'ตอบคำถามสัมภาษณ์เชิงจิตวิทยาได้อย่างไร้ที่ติ!'
+      }
+    },
+    {
+      lesson_id: 't3_u32_l03',
+      lesson_number: 3,
+      title: {
+        zh: '薪酬期望与反问',
+        th: 'การต่อรองเงินเดือนและการถามกลับ',
+        en: 'Compensation & Reverse Questions'
+      },
+      can_do: {
+        th: 'เจรจาโครงสร้างเงินเดือน โบนัสประจำปี ออปชันหุ้น และถามกลับเกี่ยวกับวัฒนธรรมองค์กรและการเลื่อนตำแหน่ง',
+        en: 'Negotiate salary structure, annual bonus, stock options, and ask about culture & promotion'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เจรจาผลตอบแทนอย่างมั่นใจและสง่างาม พร้อมถามคำถามกลับระดับมืออาชีพ!',
+      vocabulary: [
+        {
+          id: 'hsk3_3211',
+          hanzi: '薪酬结构',
+          pinyin: 'xīnchóu jiégòu',
+          display_pinyin: 'xīnchóu jiégòu',
+          pinyin_tone: 'xin1chou2 jie2gou4',
+          meaning_th: 'โครงสร้างผลตอบแทน (เงินเดือนฐาน + เบี้ยเลี้ยง + คอมมิชชัน)',
+          meaning_en: 'compensation structure / package breakdown',
+          radical: '艹',
+          radical_name_th: 'หมวดหญ้า (草字头)',
+          stroke_count: 27,
+          mnemonic: 'ค่าฟืนและค่าตอบแทนแรงงาน (薪酬) ประกอบร่างเป็นโครงสร้างสัดส่วน (结构) = โครงสร้างผลตอบแทน',
+          kid_mnemonic: 'กล่องเค้กของขวัญที่แบ่งเป็นชั้นเงินเดือนฐาน ชั้นโบนัส และชั้นสวัสดิการ = 薪酬结构',
+          body_gesture: 'ยกสองมือเรียงระดับชั้นเค้กแสดงโครงสร้าง'
+        },
+        {
+          id: 'hsk3_3212',
+          hanzi: '年终奖',
+          pinyin: 'niánzhōngjiǎng',
+          display_pinyin: 'niánzhōngjiǎng',
+          pinyin_tone: 'nian2zhong1jiang3',
+          meaning_th: 'โบนัสสิ้นปี (Annual Bonus)',
+          meaning_en: 'annual bonus / year-end bonus',
+          radical: '干',
+          radical_name_th: 'หมวดแห้ง (干部)',
+          stroke_count: 27,
+          mnemonic: 'รางวัลผลตอบแทน (奖) ในตอนสิ้นสุดปลายปี (年终) = โบนัสสิ้นปี',
+          kid_mnemonic: 'ซองอั่งเปาสีแดงใบใหญ่ที่ได้รับตอนสิ้นปี = 年终奖',
+          body_gesture: 'สองมือทำท่ารับซองอั่งเปาใหญ่พร้อมรอยยิ้มกว้าง'
+        },
+        {
+          id: 'hsk3_3213',
+          hanzi: '股票期权',
+          pinyin: 'gǔpiào qīquán',
+          display_pinyin: 'gǔpiào qīquán',
+          pinyin_tone: 'gu3piao4 qi1quan2',
+          meaning_th: 'ออปชันหุ้นของบริษัท (Stock Options)',
+          meaning_en: 'stock options',
+          radical: '木',
+          radical_name_th: 'หมวดต้นไม้ (木字旁)',
+          stroke_count: 36,
+          mnemonic: 'ตั๋วหุ้นส่วนของบริษัท (股票) ที่มีสิทธิซื้อในกำหนดเวลา (期权) = ออปชันหุ้น',
+          kid_mnemonic: 'ใบหุ้นส่วนทองคำของบริษัทสตาร์ตอัป = 股票期权',
+          body_gesture: 'ทำท่าเซ็นชื่อลงบนใบรับรองหุ้นด้วยความภูมิใจ'
+        },
+        {
+          id: 'hsk3_3214',
+          hanzi: '团队氛围',
+          pinyin: 'tuánduì fēnwéi',
+          display_pinyin: 'tuánduì fēnwéi',
+          pinyin_tone: 'tuan2dui4 fen1wei2',
+          meaning_th: 'บรรยากาศและวัฒนธรรมการทำงานในทีม',
+          meaning_en: 'team atmosphere / team vibe',
+          radical: '囗',
+          radical_name_th: 'หมวดกรอบล้อม (大口框)',
+          stroke_count: 27,
+          mnemonic: 'ทีมงานกลมเกลียว (团队) อบอวลไปด้วยบรรยากาศอันอบอุ่น (氛围) = บรรยากาศในทีม',
+          kid_mnemonic: 'เพื่อนๆ ในออฟฟิศนั่งกินขนมและหัวเราะทำงานด้วยกัน = 团队氛围',
+          body_gesture: 'วาดสองมือโอบล้อมเป็นวงกลมแสดงความอบอุ่น'
+        },
+        {
+          id: 'hsk3_3215',
+          hanzi: '晋升',
+          pinyin: 'jìnshēng',
+          display_pinyin: 'jìnshēng',
+          pinyin_tone: 'jin4sheng1',
+          meaning_th: 'การเลื่อนขั้นเลื่อนตำแหน่ง (Promotion)',
+          meaning_en: 'promotion / career advancement',
+          radical: '日',
+          radical_name_th: 'หมวดดวงอาทิตย์ (日字旁)',
+          stroke_count: 14,
+          mnemonic: 'ก้าวไปข้างหน้าอย่างสดใส (晋) ทะยานขึ้นสู่ระดับสูง (升) = การเลื่อนตำแหน่ง',
+          kid_mnemonic: 'เหยียบบันไดก้าวขึ้นไปยืนบนแท่นรับเหรียญรางวัล = 晋升',
+          body_gesture: 'ชูมือขวาชี้นิ้วขึ้นสู่ท้องฟ้าทีละสเต็ป'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 晋升 (jìnshēng)',
+        description_th: 'คำว่า 晋 (jìn) เป็นเสียง 4 หนักแน่น ส่วน 升 (shēng) เป็นเสียง 1 สูงยาว',
+        example: '晋升空间与通道 (โอกาสและช่องทางในการเลื่อนตำแหน่ง)',
+        fun_metaphor: 'เหมือนสปริงบอร์ดดีดตัวจากพื้นแล้วลอยค้างบนอากาศอย่างสง่างาม!',
+        reassurance: 'เมื่อถามถึงโอกาสในการเติบโต การออกเสียงคำว่า 晋升 ให้ชัดถ้อยชัดคำแสดงถึงความทะเยอทะยานเชิงบวก'
+      },
+      grammar_bite: {
+        title: 'ศิลปะการถามกลับ (Reverse Questions): 我想进一步了解贵公司在...方面的规划',
+        explanation_th: 'เมื่อผู้สัมภาษณ์เปิดโอกาสให้ถามคำถาม (你有什么想问我们的吗？) ให้ถามคำถามเชิงวิสัยทัศน์',
+        patterns: [
+          {
+            formula: '我想进一步了解贵公司在 [ด้านใด] 方面的长远规划',
+            zh: '我想进一步了解贵公司在东南亚本地化团队建设方面的长远规划。',
+            pinyin: 'Wǒ xiǎng jìnyíbù liǎojiě guì gōngsī zài Dōngnányà běndìhuà tuánduì jiànshè fāngmiàn de chángyuǎn guīhuà.',
+            th: 'ผมอยากเรียนถามเพิ่มเติมเกี่ยวกับแผนงานระยะยาวของบริษัทท่าน ในการสร้างทีมงานท้องถิ่นในเอเชียตะวันออกเฉียงใต้ครับ',
+            en: 'I would like to further understand your firm’s long-term planning regarding local team building in Southeast Asia.'
+          },
+          {
+            formula: '关于薪酬结构，请问是由 + [ส่วนประกอบ] + 构成的吗？',
+            zh: '关于薪酬结构，请问是由基本薪资、绩效奖金以及年终奖构成的吗？',
+            pinyin: 'Guānyú xīnchóu jiégòu, qǐngwèn shì yóu jīběn xīnzī, jìxiào jiǎngjīn yǐjí niánzhōngjiǎng gòuchéng de ma?',
+            th: 'เกี่ยวกับโครงสร้างผลตอบแทน ขออนุญาตสอบถามว่าประกอบด้วยเงินเดือนฐาน โบนัสตามผลงาน และโบนัสสิ้นปีใช่ไหมครับ?',
+            en: 'Regarding compensation structure, may I ask if it consists of base salary, performance bonus, and year-end bonus?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '宋先生，面试进行得很愉快。请问您目前的薪酬期望大概是多少？',
+          pinyin: 'Sòng xiānsheng, miànshì jìnxíng de hěn yúkuài. Qǐngwèn nín mùqián de xīnchóu qīwàng dàgài shì duōshao?',
+          th: 'คุณซ่งคะ การสัมภาษณ์ราบรื่นและน่าประทับใจมาก ไม่ทราบว่าความคาดหวังเรื่องเงินเดือนของคุณในปัจจุบันอยู่ที่ประมาณเท่าใดคะ?',
+          en: 'Mr. Song, the interview went very pleasantly. May I ask what your current compensation expectations are?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '结合我的实战经验与岗位职责，我期望的税前年薪在四十万到五十万元之间，同时我也很看重公司的激励机制。',
+          pinyin: 'Jiéhé wǒ de shízhàn jīngyàn yǔ gǎngwèi zhízé, wǒ qīwàng de shuìqián niánxīn zài sìshíwàn dào wǔshíwàn yuán zhījiān, tóngshí wǒ yě hěn kànzhòng gōngsī de jīlì jīzhì.',
+          th: 'เมื่อพิจารณาจากประสบการณ์จริงและขอบเขตงาน ผมคาดหวังรายได้รวมก่อนหักภาษีที่ 400,000 ถึง 500,000 หยวนต่อปี ขณะเดียวกันผมก็ให้ความสำคัญกับกลไกแรงจูงใจของบริษัทครับ',
+          en: 'Combining practical experience and job duties, my expected pre-tax annual salary is 400K-500K RMB, and I value incentive mechanisms.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่จิ้ง (HR Director) 👩‍💼',
+          zh: '这个区间符合我们的预算。除了基本工资和丰厚的年终奖，对于核心骨干我们还会配发股票期权。公司平时还为大家准备了免费咖啡、茶水和可口的午餐，工作环境非常舒适！',
+          pinyin: 'Zhè ge qūjiān fúhé wǒmen de yùsuàn. Chúle jīběn gōngzī hé fēnghòu de niánzhōngjiǎng, duìyú héxīn gǔgàn wǒmen hái huì pèifā gǔpiào qīquán. Gōngsī píngshí hái wèi dàjiā zhǔnbèi le miǎnfèi kāfēi, cháshuǐ hé kěkǒu de wǔcān, gōngzuò huánjìng fēicháng shūshì!',
+          th: 'ช่วงตัวเลขนี้ตรงตามงบประมาณของเราค่ะ นอกจากเงินเดือนฐานและโบนัสสิ้นปีที่คุ้มค่าแล้ว สำหรับบุคลากรหลักเรายังมีออปชันหุ้นมอบให้ด้วยค่ะ บริษัทยังจัดเตรียมกาแฟ ชา และอาหารกลางวันแสนอร่อยให้ทุกคนฟรี บรรยากาศการทำงานสบายมากค่ะ!',
+          en: 'This fits our budget. Besides base pay and bonuses, we offer stock options. The company provides free coffee, tea, and tasty lunch, with a cozy workplace!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '太好了！请问如果我下个月入职，需要提前准备护照和相关体检证明吗？最后我也想进一步了解一下，公司的团队氛围以及未来的晋升通道是怎样的？',
+          pinyin: 'Tài hǎo le! Qǐngwèn rúguǒ wǒ xià ge yuè rùzhí, xūyào tíqián zhǔnbèi hùzhào hé xiāngguān tǐjiǎn zhèngmíng ma? Zuìhòu wǒ yě xiǎng jìnyíbù liǎojiě yíxià, gōngsī de tuánduì fēnwéi yǐjí wèilái de jìnshēng tōngdào shì zěnyàng de?',
+          th: 'ยอดเยี่ยมมากครับ! ขออนุญาตสอบถามว่า หากผมเริ่มงานในเดือนหน้า จำเป็นต้องเตรียมพาสปอร์ตและใบรับรองตรวจสุขภาพล่วงหน้าไหมครับ? และสุดท้ายนี้ผมอยากเรียนถามเพิ่มเติมสักนิด บรรยากาศในทีมและช่องทางการเติบโตของบริษัทเป็นอย่างไรบ้างครับ?',
+          en: 'Great! If I onboard next month, do I need to prepare my passport and health check certificates in advance? Finally, I would love to learn more about team vibe and career progression!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '年终奖' (niánzhōngjiǎng) หมายถึงอะไร?",
+          options: [
+            'เงินโบนัสพิเศษช่วงสิ้นปี (Annual Bonus)',
+            'เงินค่าเดินทางประจำวัน',
+            'ค่าอาหารกลางวัน',
+            'เงินมัดจำค่าเช่าบ้าน'
+          ],
+          correct_index: 0,
+          explanation_th: "'年终奖' คือ โบนัสสิ้นปี ซึ่งเป็นส่วนสำคัญมากในโครงสร้างผลตอบแทนของบริษัทจีน",
+          encouragement: 'จำคำศัพท์ผลตอบแทนการทำงานได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อต้องการถามถึงโอกาส 'การเลื่อนขั้นเลื่อนตำแหน่ง' ภาษาจีนใช้คำว่าอะไร?",
+          options: [
+            '晋升 (jìnshēng)',
+            '请假 (qǐngjià)',
+            '报销 (bàoxiāo)',
+            '打折 (dǎzhé)'
+          ],
+          correct_index: 0,
+          explanation_th: "'晋升' คือ การเลื่อนตำแหน่งหรือการเติบโตในสายอาชีพ (Promotion)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์การพัฒนาสายอาชีพเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ผมอยากเรียนถามเพิ่มเติมเกี่ยวกับแผนงานในอนาคตของบริษัท"',
+          tokens: ['长远规划', '我想进一步了解', '贵公司的'],
+          correct_sequence: ['我想进一步了解', '贵公司的', '长远规划'],
+          pinyin: 'Wǒ xiǎng jìnyíbù liǎojiě guì gōngsī de chángyuǎn guīhuà',
+          meaning_th: 'ผมอยากเรียนถามเพิ่มเติมเกี่ยวกับแผนงานระยะยาวของบริษัทท่าน',
+          explanation_th: 'ความประสงค์ (我想进一步了解) + เจ้าของ (贵公司的) + สิ่งที่ถาม (长远规划)',
+          encouragement: 'ประโยคถามกลับระดับมืออาชีพสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '薪酬' ตัว '薪' (เงินเดือน/ฟืน) มีหมวดนำใด?",
+          options: [
+            '艹 (หมวดหญ้า 草字头)',
+            '金 (หมวดโลหะ 金字旁)',
+            '贝 (หมวดเงิน 贝字旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'薪' มีหมวดนำ '艹' (หญ้า) เดิมหมายถึงฟืนหรือหญ้าแห้ง ในอดีตนำมาใช้แทนเงินค่าฟืนไฟ (薪水/薪酬)",
+          encouragement: 'รอบรู้รากศัพท์อักษรจีนเป็นเลิศ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ผู้สัมภาษณ์ถามว่า "คุณมีคำถามอะไรอยากถามทางเราไหม?" คุณต้องการถามคำถามที่แสดงถึงความใส่ใจในผลสำเร็จของงานและวัฒนธรรมทีม ควรพูดอย่างไร?',
+        options: [
+          '我想请问，如果我有幸加入，您期望该岗位在入职前三个月达成的最核心目标是什么？团队的协作氛围是怎样的？ (Wǒ xiǎng qǐngwèn, rúguǒ wǒ yǒuxìng jiārù, nín qīwàng gāi gǎngwèi zài rùzhí qián sān ge yuè dáchéng de zuì héxīn mùbiāo shì shénme? Tuánduì de xiézuò fēnwéi shì zěnyàng de?)',
+          '请问每个月几号发工资？迟到会扣钱吗？ (Qǐngwèn měi ge yuè jǐ hào fā gōngzī? Chídào huì kòu qián ma?)',
+          '你们平时加班严重吗？我不喜欢加班。 (Nǐmen píngshí jiābān yánzhòng ma? Wǒ bù xǐhuan jiābān.)',
+          '请问附近有吸烟区吗？ (Qǐngwèn fùjìn yǒu xīyānqū ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำถาม '您期望该岗位在入职前三个月达成的最核心目标是什么？团队的协作氛围是怎样的？' โฟกัสที่ผลงาน ความสำเร็จ และวัฒนธรรมทีม แสดงถึงความเป็นมืออาชีพที่พร้อมสร้างคุณค่าให้องค์กรทันที",
+        encouragement: 'ปิดการสัมภาษณ์ด้วยคำถามระดับ Executive ได้รับ Offer ทันที!'
+      }
+    },
+    {
+      lesson_id: 't3_u32_l04',
+      lesson_number: 4,
+      title: {
+        zh: 'Boss Challenge: 终面！中国科技巨头BD总监模拟战',
+        th: 'ภารกิจบอส: สัมภาษณ์รอบสุดท้าย ผู้อำนวยการ BD บิ๊กเทคจีน',
+        en: 'Boss Challenge: Final Round Interview with Tech Giant VP'
+      },
+      can_do: {
+        th: 'บูรณาการทักษะสัมภาษณ์ทั้งหมด พิชิตการสัมภาษณ์รอบไฟนอลตำแหน่ง ผู้อำนวยการฝ่ายพัฒนาธุรกิจ (BD Director)',
+        en: 'Synthesize all interview skills to conquer final interview for Overseas BD Director'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เอาชนะใจรองประธานบริษัทเทคยักษ์ใหญ่ แสดงวิสัยทัศน์ และคว้าสัญญาจ้างงานในฝัน!',
+      vocabulary: [
+        {
+          id: 'hsk3_3216',
+          hanzi: '业务拓展',
+          pinyin: 'yèwù tuòzhǎn',
+          display_pinyin: 'yèwù tuòzhǎn',
+          pinyin_tone: 'ye4wu4 tuo4zhan3',
+          meaning_th: 'การพัฒนาและขยายธุรกิจ (Business Development / BD)',
+          meaning_en: 'business development (BD)',
+          radical: '一',
+          radical_name_th: 'หมวดหนึ่ง (一部)',
+          stroke_count: 22,
+          mnemonic: 'งานกิจการธุรกิจ (业务) บุกเบิกแผ่ขยายอาณาเขต (拓展) = พัฒนาธุรกิจ',
+          kid_mnemonic: 'ปักธงสัญลักษณ์บริษัทลงบนเกาะใหม่ในแผนที่โลก = 业务拓展',
+          body_gesture: 'กวาดฝ่ามือไปข้างหน้าอย่างกว้างไกลแสดงการขยายอาณาเขต'
+        },
+        {
+          id: 'hsk3_3217',
+          hanzi: '跨国协同',
+          pinyin: 'kuàguó xiétóng',
+          display_pinyin: 'kuàguó xiétóng',
+          pinyin_tone: 'kua4guo2 xie2tong2',
+          meaning_th: 'การประสานความร่วมมือข้ามประเทศ',
+          meaning_en: 'cross-border synergy / international coordination',
+          radical: '足',
+          radical_name_th: 'หมวดเท้า (足字旁)',
+          stroke_count: 26,
+          mnemonic: 'ก้าวข้ามแดนประเทศ (跨国) ประสานใจทำงานร่วมกัน (协同) = การร่วมมือข้ามชาติ',
+          kid_mnemonic: 'หน้าจอวิดีโอคอลประชุมสองฝั่งโลกจับมือข้ามหน้าจอกัน = 跨国协同',
+          body_gesture: 'สองมือทำท่าสะพานเชื่อมโยงสองฝั่งเข้าด้วยกัน'
+        },
+        {
+          id: 'hsk3_3218',
+          hanzi: '战略眼光',
+          pinyin: 'zhànluè yǎnguāng',
+          display_pinyin: 'zhànluè yǎnguāng',
+          pinyin_tone: 'zhan4lu:e4 yan3guang1',
+          meaning_th: 'สายตายาวไกลเชิงยุทธศาสตร์ (Strategic Vision)',
+          meaning_en: 'strategic vision / foresight',
+          radical: '戈',
+          radical_name_th: 'หมวดอาวุธหอก (戈字旁)',
+          stroke_count: 29,
+          mnemonic: 'แผนการรบยุทธศาสตร์ (战略) สายตาเปล่งประกายมองทะลุอนาคต (眼光) = สายตายุทธศาสตร์',
+          kid_mnemonic: 'ส่องกล้องสลับลายมองเห็นภาพเมืองในอนาคตอันสดใส = 战略眼光',
+          body_gesture: 'ยกมือขึ้นบังแดดตรงหน้าผากมองทอดสายตาไปไกล'
+        },
+        {
+          id: 'hsk3_3219',
+          hanzi: '独当一面',
+          pinyin: 'dúdāngyímiàn',
+          display_pinyin: 'dúdāngyímiàn',
+          pinyin_tone: 'du2dang1yi2mian4',
+          meaning_th: 'สามารถรับผิดชอบดูแลงานด้านหนึ่งได้อย่างสมบูรณ์แบบโดยลำพัง',
+          meaning_en: 'take charge of a domain independently / stand on one’s own',
+          radical: '犭',
+          radical_name_th: 'หมวดสุนัข (反犬旁)',
+          stroke_count: 27,
+          mnemonic: 'คนเดียวโดดเด่น (独) สามารถรับมือดูแล (当) ทิศทางด้านหนึ่ง (一面) ได้ทั้งหมด = คุมงานได้ครบเครื่อง',
+          kid_mnemonic: 'แม่ทัพยืนสง่าคุมป้อมปราการอย่างมั่นคงไร้กังวล = 独当一面',
+          body_gesture: 'กางสองแขนยืนหลังตรงอย่างผึ่งผายและมั่นใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 独当一面 (dúdāngyímiàn) กฎวรรณยุกต์ 一',
+        description_th: 'คำว่า 面 (miàn) เป็นเสียง 4 ดังนั้น คำว่า 一 จะผันเป็นเสียง 2 เป็น yí (dúdāngyímiàn)',
+        example: '能够独当一面 (สามารถรับผิดชอบงานด้านนั้นได้อย่างเต็มภาคภูมิ)',
+        fun_metaphor: 'เหมือนแม่ทัพชักดาบขึ้นฟ้าแล้วตวัดลงมาฟันเป้าหมายขาดสะบั้น!',
+        reassurance: 'คำนี้เป็นคำชมระดับสูงสุดที่ผู้บริหารชาวจีนมอบให้แก่ลูกน้องที่มีความสามารถ'
+      },
+      grammar_bite: {
+        title: 'การประกาศวิสัยทัศน์ในรอบสุดท้าย: 既有...战略眼光，又能...独当一面',
+        explanation_th: 'โครงสร้างสรุปความพร้อมสำหรับการดำรงตำแหน่งผู้บริหารระดับสูง',
+        patterns: [
+          {
+            formula: '作为业务负责人，既要具备宏观的战略眼光，又能脚踏实地独当一面',
+            zh: '作为出海业务负责人，既要具备国际化的战略眼光，又能在开拓市场时独当一面。',
+            pinyin: 'Zuòwéi chūhǎi yèwù fùzérén, jì yào jùbèi guójìhuà de zhànluè yǎnguāng, yòu néng zài kāituò shìchǎng shí dúdāngyímiàn.',
+            th: 'ในฐานะผู้นำธุรกิจโกอินเตอร์ จะต้องมีทั้งสายตายาวไกลเชิงยุทธศาสตร์ระดับสากล และสามารถรับผิดชอบการบุกเบิกตลาดได้ด้วยตนเองอย่างเต็มตัว',
+            en: 'As overseas business leader, one must possess global strategic vision while taking charge independently in market expansion.'
+          },
+          {
+            formula: '通过深化跨国协同，推动业务实现跨越式增长',
+            zh: '通过深化中泰两地的跨国协同，我有信心推动公司业务实现突破性拓展！',
+            pinyin: 'Tōngguò shēnhuà Zhōng-Tài liǎng dì de kuàguó xiétóng, wǒ yǒu xìnxīn tuīdòng gōngsī yèwù shíxiàn tūpòxìng tuòzhǎn!',
+            th: 'จากการกระชับความร่วมมือข้ามพรมแดนไทย-จีน ผมมีความมั่นใจว่าจะผลักดันให้ธุรกิจของบริษัทเติบโตก้าวกระโดดได้อย่างแน่นอน!',
+            en: 'By deepening Sino-Thai cross-border synergy, I am confident in driving breakthrough expansion for the company!'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หวังเทียนอี (รองประธานบริหารอาวุโส) 👨‍💼',
+          zh: '小宋，今天这是终面。作为未来东南亚BD总监，如果总部与本地团队理念冲突，你怎么办？',
+          pinyin: 'Xiǎo Sòng, jīntiān zhè shì zhōngmiàn. Zuòwéi wèilái Dōngnányà BD zǒngjiān, rúguǒ zǒngbù yǔ běndì tuánduì lǐniàn chōngtū, nǐ zěnme bàn?',
+          th: 'เสี่ยวซ่ง วันนี้คือการสัมภาษณ์รอบไฟนอล ในฐานะว่าที่ผู้อำนวยการ BD ประจำเอเชียตะวันออกเฉียงใต้ หากสำนักงานใหญ่กับทีมท้องถิ่นมีความเห็นขัดแย้งกัน เธอจะทำอย่างไร?',
+          en: 'Xiao Song, this is the final round. As future SE Asia BD Director, if HQ and local teams clash in philosophy, what do you do?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '王总，我认为核心在于“战略同频与跨国协同”。一方面，我会用事实和数据向总部汇报本地用户痛点；另一方面，脚踏实地协助团队理解总部的战略眼光。',
+          pinyin: 'Wáng zǒng, wǒ rènwéi héxīn zàiyú “zhànluè tóngpín yǔ kuàguó xiétóng”. Yì fāngmiàn, wǒ huì yòng shìshí hé shùjù xiàng zǒngbù huìbào běndì yònghù tòngdiǎn; lìng yì fāngmiàn, jiǎotàshídì xiézhù tuánduì lǐjiě zǒngbù de zhànluè yǎnguāng.',
+          th: 'คุณหวังครับ ผมมองว่าหัวใจสำคัญอยู่ที่ “การปรับคลื่นยุทธศาสตร์ให้ตรงกันและการประสานงานข้ามชาติ” ด้านหนึ่งผมจะใช้ข้อมูลและข้อเท็จจริงสะท้อนปัญหาของผู้ใช้ท้องถิ่นให้สำนักงานใหญ่เข้าใจ อีกด้านหนึ่งจะนำพาทีมให้เข้าใจสายตายาวไกลของสำนักงานใหญ่อย่างรอบคอบครับ',
+          en: 'President Wang, core lies in strategic alignment and cross-border synergy. I report local pain points with data while helping teams understand HQ vision.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หวังเทียนอี (รองประธานบริหารอาวุโส) 👨‍💼',
+          zh: '有大局观！东南亚市场广阔，我们正需要一位能独当一面、开拓进取的将才！',
+          pinyin: 'Yǒu dàjúguān! Dōngnányà shìchǎng guǎngkuò, wǒmen zhèng xūyào yí wèi néng dúdāngyímiàn, kāituò-jìnqǔ de jiàngcái!',
+          th: 'มีวิสัยทัศน์เห็นภาพรวมใหญ่ดีมาก! ตลาดเอเชียตะวันออกเฉียงใต้กว้างใหญ่ไพศาล เราต้องการขุนพลที่คุมงานได้ครบเครื่องและกล้าบุกเบิกเช่นนี้พอดี!',
+          en: 'Great big-picture sense! SE Asia market is vast; we need a general who can stand independently and pioneer boldly!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '感谢王总的信任！我已做好准备，自告奋勇，全力以赴为集团开疆拓土！',
+          pinyin: 'Gǎnxiè Wáng zǒng de xìnrèn! Wǒ yǐ zuò hǎo zhǔnbèi, zìgàofènyǒng, quánlì yǐ fù wèi jítuán kāijiāng-tuòtǔ!',
+          th: 'ขอบพระคุณในความไว้วางใจของคุณหวังครับ! ผมพร้อมแล้วที่จะขันอาสา ทุ่มเทสุดกำลังเพื่อบุกเบิกขยายอาณาเขตธุรกิจให้แก่เครือบริษัทครับ!',
+          en: 'Thank you for your trust President Wang! I am ready to volunteer boldly and go all out to expand frontiers for the group!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '独当一面' (dúdāngyímiàn) มีความหมายตรงกับข้อใด?",
+          options: [
+            'สามารถรับผิดชอบดูแลงานด้านหนึ่งได้อย่างครบเครื่องและสมบูรณ์แบบโดยลำพัง',
+            'การทำงานคนเดียวโดยไม่สนใจเพื่อนร่วมงาน',
+            'การแอบอู้งานในเวลาทำงาน',
+            'การนั่งทำงานอยู่มุมห้อง'
+          ],
+          correct_index: 0,
+          explanation_th: "'独当一面' หมายถึง การมีความสามารถและความรับผิดชอบสูงจนสามารถเป็นผู้นำดูแลงานด้านนั้นได้โดยอิสระ",
+          encouragement: 'จำสุดยอดสำนวนประเมินความเป็นผู้นำได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '业务拓展' (yèwù tuòzhǎn) ตรงกับตำแหน่งงานภาษาอังกฤษใด?",
+          options: [
+            'Business Development (BD)',
+            'Human Resources (HR)',
+            'Quality Assurance (QA)',
+            'Public Relations (PR)'
+          ],
+          correct_index: 0,
+          explanation_th: "'业务拓展' คือ Business Development หรือการพัฒนาและขยายธุรกิจ",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์ตำแหน่งงานระดับสากลเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ต้องการผู้นำที่สามารถคุมงานได้อย่างครบเครื่องโดยลำพัง"',
+          tokens: ['能独当一面的将才', '我们正需要', '一位'],
+          correct_sequence: ['我们正需要', '一位', '能独当一面的将才'],
+          pinyin: 'Wǒmen zhèng xūyào yí wèi néng dúdāngyímiàn de jiàngcái',
+          meaning_th: 'พวกเรากำลังต้องการผู้นำที่มีความสามารถคุมงานได้ครบเครื่องโดยลำพัง',
+          explanation_th: 'ประธาน (我们正需要) + ลักษณนาม (一位) + คุณสมบัติ (能独当一面的将才)',
+          encouragement: 'ต่อประโยคสัมภาษณ์งานระดับสูงได้อย่างสง่างาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '独当一面' ตัว '独' (เดี่ยว/เอกเทศ) มีหมวดนำใด?",
+          options: [
+            '犭 (หมวดสุนัข/สัตว์ 反犬旁)',
+            '亻 (หมวดคน 单人旁)',
+            '口 (หมวดปาก 口字旁)',
+            '木 (หมวดไม้ 木字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'独' มีหมวดนำ '犭' (สุนัข/สัตว์) สื่อถึงการแยกตัวอยู่ลำพังอย่างโดดเด่น",
+          encouragement: 'เข้าใจรากศัพท์อักษรจีนอย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'รองประธานบริหารยื่นมือมาข้างหน้าเพื่อจับมือคุณและพูดว่า "ยินดีต้อนรับสู่ทีม! เราพร้อมเซ็นสัญญากับคุณวันนี้" คุณควรจับมือและกล่าวตอบรับอย่างไรให้ทรงพลังที่สุด?',
+        options: [
+          '非常荣幸能加入集团！我一定不负重托，秉持战略眼光，深化跨国协同，在东南亚业务拓展中独当一面，创造佳绩！ (Fēicháng róngxìng néng jiārù jítuán! Wǒ yídìng bú fù zhòngtuō, bǐngchí zhànluè yǎnguāng, shēnhuà kuàguó xiétóng, zài Dōngnányà yèwù tuòzhǎn zhōng dúdāngyímiàn, chuàngzào jiājì!)',
+          '好吧，我勉为其难答应你们。 (Hǎo ba, wǒ miǎnqíwéinán dāying nǐmen.)',
+          '请问今天能先借我一点钱花吗？ (Qǐngwèn jīntiān néng xiān jiè wǒ yìdiǎnr qián huā ma?)',
+          '这家公司到底靠不靠谱啊？ (Zhè jiā gōngsī dàodǐ kào bu kàopǔ a?)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำกล่าว '非常荣幸能加入集团！我一定不负重托，秉持战略眼光，深化跨国协同，在东南亚业务拓展中独当一面，创造佳绩！' แสดงถึงความซาบซึ้ง ให้เกียรติ ย้ำวิสัยทัศน์ และมุ่งมั่นทำผลงานระดับปรากฏการณ์",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge สัมภาษณ์งานผู้บริหารบิ๊กเทคจีนสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u32_master',
+        badge_name: 'แม่ทัพธุรกิจข้ามพรมแดนผู้ไร้เทียมทาน 💼🏆',
+        message_th: 'ขอแสดงความยินดี! คุณสำเร็จ Unit 32 พร้อมพิชิตการสัมภาษณ์งานและดำรงตำแหน่งผู้บริหารในองค์กรข้ามชาติจีนได้อย่างสง่างาม!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

@@ -1,0 +1,373 @@
+/**
+ * src/engines/hanzi/strokeDataLoader.ts
+ * Pure Engine: Multi-tier stroke data loader and cacher for Hanzi Writer.
+ * L1: In-Memory Map (0ms)
+ * L2: Cold IndexedDB "hanzi_strokes" store via coldStorage.ts (<5ms)
+ * L3: jsDelivr CDN fetch with AbortSignal timeout & JSON validation
+ *
+ * Strict TypeScript: Zero 'any'
+ */
+
+import { getStrokeCache, setStrokeCache } from '../storage/coldStorage';
+import { HanziStrokeCacheRecord } from '../storage/types';
+
+export interface HanziStrokeData {
+  strokes: string[];
+  medians: number[][][];
+  radStrokes?: number[];
+}
+
+export type StrokeDataLoaderErrorCode =
+  | 'INVALID_CHAR'
+  | 'NETWORK_ERROR'
+  | 'HTTP_ERROR'
+  | 'MALFORMED_DATA'
+  | 'NOT_FOUND'
+  | 'OFFLINE'
+  | 'ABORTED';
+
+export class StrokeDataLoaderError extends Error {
+  readonly code: StrokeDataLoaderErrorCode;
+  readonly status?: number;
+
+  constructor(message: string, code: StrokeDataLoaderErrorCode, status?: number) {
+    super(message);
+    this.name = 'StrokeDataLoaderError';
+    this.code = code;
+    this.status = status;
+  }
+}
+
+export interface StrokeLoaderOptions {
+  signal?: AbortSignal;
+  timeoutMs?: number;
+  fetchFn?: typeof fetch;
+  cdnBaseUrl?: string;
+}
+
+// In-Memory L1 Cache for fast recall during active session with LRU eviction
+export const MAX_L1_CACHE_SIZE = 50;
+const memoryCache = new Map<string, HanziStrokeData>();
+
+function setL1MemoryCache(char: string, data: HanziStrokeData): void {
+  if (memoryCache.has(char)) {
+    memoryCache.delete(char);
+  } else if (memoryCache.size >= MAX_L1_CACHE_SIZE) {
+    const oldestKey = memoryCache.keys().next().value;
+    if (oldestKey !== undefined) {
+      memoryCache.delete(oldestKey);
+    }
+  }
+  memoryCache.set(char, data);
+}
+
+function getL1MemoryCache(char: string): HanziStrokeData | undefined {
+  const hit = memoryCache.get(char);
+  if (hit) {
+    // Refresh LRU order (delete & re-insert)
+    memoryCache.delete(char);
+    memoryCache.set(char, hit);
+  }
+  return hit;
+}
+
+export function _getStrokeDataLoaderMemoryCacheSize(): number {
+  return memoryCache.size;
+}
+
+// In-Flight Promise Registry for request coalescing (prevents duplicate storage checks and fetches)
+const inFlightRequests = new Map<string, Promise<HanziStrokeData>>();
+
+const DEFAULT_CDN_BASE = 'https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0';
+const DEFAULT_TIMEOUT_MS = 5000;
+
+/**
+ * Normalizes and sanitizes single character input.
+ * Extracts the first valid CJK character if a string is provided.
+ */
+export function sanitizeHanziChar(input: string): string {
+  if (!input || typeof input !== 'string') {
+    throw new StrokeDataLoaderError('Character input must be a non-empty string', 'INVALID_CHAR');
+  }
+
+  const trimmed = input.trim();
+  if (trimmed.length === 0) {
+    throw new StrokeDataLoaderError('Character input cannot be empty', 'INVALID_CHAR');
+  }
+
+  // Get first character code point (supporting surrogate pairs)
+  const firstGlyph = Array.from(trimmed)[0];
+
+  // Regex matches CJK Unified Ideographs, Extension A, and common CJK ranges
+  const isCjk = /^[\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF]$/.test(firstGlyph);
+  if (!isCjk) {
+    throw new StrokeDataLoaderError(
+      `Character "${firstGlyph}" is not a valid CJK Chinese character`,
+      'INVALID_CHAR'
+    );
+  }
+
+  return firstGlyph;
+}
+
+/**
+ * Strict runtime type guard for HanziStrokeData.
+ * Prevents corrupted cache entries or captive portal HTML injections.
+ */
+export function isHanziStrokeData(val: unknown): val is HanziStrokeData {
+  if (typeof val !== 'object' || val === null) return false;
+  const obj = val as Record<string, unknown>;
+
+  if (!Array.isArray(obj.strokes) || obj.strokes.length === 0) return false;
+  if (!Array.isArray(obj.medians) || obj.medians.length === 0) return false;
+  // Guard against length mismatch crash (H-01)
+  if (obj.strokes.length !== obj.medians.length) return false;
+
+  const validStrokes = obj.strokes.every((s) => typeof s === 'string' && s.length > 0);
+  if (!validStrokes) return false;
+
+  const validMedians = obj.medians.every(
+    (strokeMedians) =>
+      Array.isArray(strokeMedians) &&
+      strokeMedians.every(
+        (point) =>
+          Array.isArray(point) &&
+          point.length === 2 &&
+          typeof point[0] === 'number' &&
+          Number.isFinite(point[0]) &&
+          typeof point[1] === 'number' &&
+          Number.isFinite(point[1])
+      )
+  );
+
+  return validMedians;
+}
+
+/**
+ * Fetches raw stroke data from CDN with timeout, abort handling, and validation.
+ */
+export async function fetchStrokeFromCdn(
+  char: string,
+  options?: StrokeLoaderOptions
+): Promise<HanziStrokeData> {
+  const fetchImpl = options?.fetchFn ?? fetch;
+  const baseUrl = options?.cdnBaseUrl ?? DEFAULT_CDN_BASE;
+  const timeoutMs = options?.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+  const url = `${baseUrl}/${encodeURIComponent(char)}.json`;
+
+  const controller = new AbortController();
+  let timer: ReturnType<typeof setTimeout> | null = null;
+
+  if (options?.signal) {
+    if (options.signal.aborted) {
+      throw new StrokeDataLoaderError('Request was aborted', 'ABORTED');
+    }
+    options.signal.addEventListener('abort', () => controller.abort(), { once: true });
+  }
+
+  timer = setTimeout(() => {
+    controller.abort();
+  }, timeoutMs);
+
+  try {
+    const response = await fetchImpl(url, { signal: controller.signal });
+    if (timer) clearTimeout(timer);
+
+    if (response.status === 404) {
+      throw new StrokeDataLoaderError(`Stroke data for character "${char}" was not found (404)`, 'NOT_FOUND', 404);
+    }
+
+    if (!response.ok) {
+      throw new StrokeDataLoaderError(
+        `Failed to fetch stroke data: HTTP ${response.status}`,
+        'HTTP_ERROR',
+        response.status
+      );
+    }
+
+    let parsed: unknown;
+    try {
+      parsed = await response.json();
+    } catch {
+      throw new StrokeDataLoaderError(
+        'Failed to parse stroke data response as JSON (possible captive portal or corrupt response)',
+        'MALFORMED_DATA'
+      );
+    }
+
+    if (!isHanziStrokeData(parsed)) {
+      throw new StrokeDataLoaderError(
+        'Stroke data payload does not match the required HanziStrokeData schema',
+        'MALFORMED_DATA'
+      );
+    }
+
+    return {
+      strokes: parsed.strokes,
+      medians: parsed.medians,
+      radStrokes: Array.isArray(parsed.radStrokes) ? parsed.radStrokes : undefined,
+    };
+  } catch (err: unknown) {
+    if (timer) clearTimeout(timer);
+
+    if (err instanceof StrokeDataLoaderError) {
+      throw err;
+    }
+
+    if (err instanceof Error) {
+      if (err.name === 'AbortError') {
+        if (options?.signal?.aborted) {
+          throw new StrokeDataLoaderError('Request was aborted by caller', 'ABORTED');
+        }
+        throw new StrokeDataLoaderError(
+          `Request timed out after ${timeoutMs}ms`,
+          'NETWORK_ERROR'
+        );
+      }
+      if (err.message.includes('offline') || err.message.includes('Failed to fetch')) {
+        throw new StrokeDataLoaderError(
+          `Network offline or unreachable while fetching "${char}"`,
+          'OFFLINE'
+        );
+      }
+    }
+
+    throw new StrokeDataLoaderError(
+      `Unexpected error while loading stroke data for "${char}": ${String(err)}`,
+      'NETWORK_ERROR'
+    );
+  }
+}
+
+/**
+ * Loads stroke data through the multi-tier caching hierarchy:
+ * 1. L1 Memory Cache
+ * 2. In-flight request deduplication
+ * 3. L2 IndexedDB Cold Storage
+ * 4. L3 CDN Network Fetch + Backfill
+ */
+export async function loadStrokeData(
+  charInput: string,
+  options?: StrokeLoaderOptions
+): Promise<HanziStrokeData> {
+  const char = sanitizeHanziChar(charInput);
+
+  if (options?.signal?.aborted) {
+    throw new StrokeDataLoaderError('Request was aborted before execution', 'ABORTED');
+  }
+
+  // 1. Check L1 Memory Cache
+  const memoryHit = getL1MemoryCache(char);
+  if (memoryHit) {
+    return memoryHit;
+  }
+
+  // 2. Check In-Flight Coalescing (encompasses both IDB check and CDN fetch)
+  let sharedPromise = inFlightRequests.get(char);
+  if (!sharedPromise) {
+    sharedPromise = (async () => {
+      try {
+        // 3. Check L2 IndexedDB Cold Storage
+        try {
+          const idbHit = await getStrokeCache(char);
+          if (idbHit && isHanziStrokeData(idbHit)) {
+            const formattedData: HanziStrokeData = {
+              strokes: idbHit.strokes,
+              medians: idbHit.medians,
+            };
+            setL1MemoryCache(char, formattedData);
+            return formattedData;
+          }
+        } catch {
+          // If IDB read fails, smoothly proceed to network tier
+        }
+
+        // 4. L3 Network Fetch (isolated from single caller's AbortSignal)
+        const strokeData = await fetchStrokeFromCdn(char, {
+          fetchFn: options?.fetchFn,
+          cdnBaseUrl: options?.cdnBaseUrl,
+          timeoutMs: options?.timeoutMs,
+        });
+
+        // Backfill L1 Memory Cache
+        setL1MemoryCache(char, strokeData);
+
+        // Backfill L2 IndexedDB Cold Storage (fire & forget)
+        const recordToStore: HanziStrokeCacheRecord = {
+          char,
+          strokes: strokeData.strokes,
+          medians: strokeData.medians,
+          cached_at: Date.now(),
+        };
+        setStrokeCache(recordToStore).catch((e) => {
+          console.warn('[Hanzero] Failed to backfill stroke data into IndexedDB:', e);
+        });
+
+        return strokeData;
+      } finally {
+        inFlightRequests.delete(char);
+      }
+    })();
+
+    inFlightRequests.set(char, sharedPromise);
+  }
+
+  // 5. If caller provided an AbortSignal, race caller's abort with shared promise
+  if (options?.signal) {
+    const signal = options.signal;
+    if (signal.aborted) {
+      throw new StrokeDataLoaderError('Request was aborted by caller', 'ABORTED');
+    }
+    return new Promise<HanziStrokeData>((resolve, reject) => {
+      const onAbort = () => {
+        signal.removeEventListener('abort', onAbort);
+        reject(new StrokeDataLoaderError('Request was aborted by caller', 'ABORTED'));
+      };
+      signal.addEventListener('abort', onAbort, { once: true });
+
+      sharedPromise!.then(
+        (data) => {
+          signal.removeEventListener('abort', onAbort);
+          resolve(data);
+        },
+        (err) => {
+          signal.removeEventListener('abort', onAbort);
+          reject(err);
+        }
+      );
+    });
+  }
+
+  return sharedPromise;
+}
+
+/**
+ * Factory for HanziWriter's `charDataLoader` option.
+ * Compatible with HanziWriter's `(char, onLoad, onError) => Promise<CharacterJson> | void`.
+ */
+export function createCharDataLoader(
+  options?: StrokeLoaderOptions
+): (
+  char: string,
+  onLoad: (data: HanziStrokeData) => void,
+  onError: (err: unknown) => void
+) => Promise<HanziStrokeData> {
+  return async (char: string, onLoad: (data: HanziStrokeData) => void, onError: (err: unknown) => void) => {
+    try {
+      const data = await loadStrokeData(char, options);
+      onLoad(data);
+      return data;
+    } catch (error) {
+      onError(error);
+      throw error;
+    }
+  };
+}
+
+/**
+ * Testing utility: Clears in-memory caches and in-flight promises.
+ */
+export function _resetStrokeDataLoaderMemoryCacheForTesting(): void {
+  memoryCache.clear();
+  inFlightRequests.clear();
+}

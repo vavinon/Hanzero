@@ -140,11 +140,18 @@ export interface UserStateSchema {
 }
 ```
 
-### 3.2 Cold State (`IndexedDB: hanzero_db`)
-สำหรับเก็บก้อนข้อมูลขนาดใหญ่และประวัติการเรียนระยะยาว 1–2 ปี:
+### 3.2 Cold State (`IndexedDB: 3-Database Architecture`)
+เพื่อป้องกันปัญหาฐานข้อมูลชนกัน (Lock contention) และเพิ่มความทนทานต่อ Safari 7-day ITP data eviction โค้ดจริงแบ่งการจัดเก็บใน IndexedDB ออกเป็น **3 ฐานข้อมูลอิสระ (3 Isolated Databases)**:
+
+1. **`hanzero_srs_db`** (ObjectStore: `srs_records`, Primary Key: `word_id`):
+   - เก็บสถานะการจำคำศัพท์ SM-2, วันครบกำหนดทบทวน, Ease Factor, และประวัติการทบทวน
+2. **`hanzero_strokes_db`** (ObjectStore: `hanzi_strokes`, Primary Key: `char`):
+   - เก็บข้อมูลแคชเวกเตอร์ลำดับขีดอักษรจีน (Strokes & Medians) เพื่อโหลดซ้ำได้ทันทีแม้ออฟไลน์
+3. **`hanzero_mirror_db`** (ObjectStore: `cold_hot_mirror`, Key: `'active_user_state'`):
+   - ทำสำเนา Hot State (`hanzero_user_state_v1`) ลงใน IndexedDB ควบคู่กับ LocalStorage เสมอ เพื่อรองรับกลไก **Boot Resurrection Gate**
 
 ```typescript
-// ObjectStore: "srs_records" (Primary Key: word_id)
+// ObjectStore: "srs_records" in "hanzero_srs_db" (Primary Key: word_id)
 export interface SrsItemRecord {
   word_id: string;               // e.g. "hsk1_0001"
   hanzi: string;
@@ -157,16 +164,16 @@ export interface SrsItemRecord {
   last_reviewed: string;        // ISO Date
   review_history: Array<{       // ประวัติการตอบย้อนหลัง
     date: string;
-    grade: number;              // 0 - 5
+    grade: number;              // 0 - 3 (Again, Hard, Good, Easy)
   }>;
 }
 
-// ObjectStore: "hanzi_strokes" (Primary Key: char)
+// ObjectStore: "hanzi_strokes" in "hanzero_strokes_db" (Primary Key: char)
 export interface HanziStrokeCacheRecord {
   char: string;                 // อักษรจีน 1 ตัว เช่น "我"
   strokes: string[];            // SVG stroke data
   medians: number[][][];        // แนวเส้นสำหรับตรวจจับการลาก
-  cached_at: number;            // Timestamp
+  cached_at: number;            // Timestamp Epoch ms
 }
 ```
 
@@ -220,9 +227,15 @@ export function migrateUserState(raw: unknown): UserStateSchema {
    }
    ```
 
-4. **Compressed Base64 QR Sync (Zero-Server P2P Migration):**
+4. **Boot Resurrection Gate (Auto-Healing from Cold Mirror):**
+   - เมื่อเริ่มต้นแอป ระบบจะตรวจสอบ Hot State ใน `LocalStorage` หากตรวจพบว่าสูญหายหรือเสียหาย (เช่น ถูก Safari ITP ล้างหลังจากไม่เปิด 7 วัน)
+   - ระบบจะเข้าสู่ **Resurrection Gate** โดยดึงสำเนาล่าสุดจาก `hanzero_mirror_db` (Store: `cold_hot_mirror`) ขึ้นมาเขียนทับใน `LocalStorage` อัตโนมัติทันที
+   - ผู้เรียนจะไม่สูญเสียความก้าวหน้าแม้แต่น้อย (Zero Progress Loss)
+
+5. **Compressed Base64 QR Sync (Zero-Server P2P Migration):**
    - ผู้เรียนสามารถสร้าง Dynamic QR Code จากมือถือเครื่องเดิม เพื่อให้แท็บเล็ตหรือคอมพิวเตอร์เครื่องใหม่สแกนกล้องรับสถานะความก้าวหน้าได้ทันทีภายใน 5 วินาที
    - ใช้งานไลบรารี `pako` (Deflate/Gzip) บีบอัด Payload ของ Hot State + Active SRS Records เหลือประมาณ **1.5 KB - 2.5 KB** บรรจุลงใน QR Code ได้อย่างปลอดภัย
 
-5. **Future BYOS Cloud Sync (Bring-Your-Own-Storage):**
+6. **Future BYOS Cloud Sync (Bring-Your-Own-Storage):**
    - สถาปัตยกรรมเตรียม Hook สำหรับเชื่อมต่อ Google Drive REST API (ผ่าน Client-side OAuth 2.0 PKCE) เพื่อซิงก์ไฟล์สำรองไปยังโฟลเดอร์ส่วนตัว `AppData` ของผู้เรียนโดยตรง ฟรีค่าเซิร์ฟเวอร์ 100% และข้อมูลเป็นส่วนตัวสูงสุด
+

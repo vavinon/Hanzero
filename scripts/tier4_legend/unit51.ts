@@ -1,0 +1,900 @@
+/**
+ * scripts/tier4_legend/unit51.ts
+ * Unit 51: 知识产权与跨国诉讼法务 (Intellectual Property & Cross-border Litigation)
+ * Tier 4 Legend - Unit 6 (L-06)
+ * Strict typing, zero 'any', simplified Chinese only, tone sandhi compliant, interleaving >= 20%.
+ */
+
+export const unit51Data = {
+  unit_id: 'tier4_u51',
+  tier: 4,
+  unit_number: 51,
+  title: {
+    zh: '知识产权与跨国诉讼法务',
+    th: 'ทรัพย์สินทางปัญญาและการดำเนินคดีข้ามแดน',
+    en: 'Intellectual Property & Cross-Border Litigation'
+  },
+  description: 'เรียนรู้ศัพท์กฎหมายชั้นสูง การจดสิทธิบัตร การปกป้องทรัพย์สินทางปัญญา ข้อพิพาททางกฎหมายข้ามชาติ และกระบวนการอนุญาโตตุลาการสากล',
+  lessons: [
+    {
+      lesson_id: 't4_u51_l01',
+      lesson_number: 1,
+      title: {
+        zh: '知识产权：专利申请与确权维权',
+        th: 'ทรัพย์สินทางปัญญา: การยื่นขอสิทธิบัตรและการยืนยันสิทธิ์',
+        en: 'Intellectual Property: Patents & Rights Confirmation'
+      },
+      can_do: {
+        th: 'ใช้คำศัพท์ทางกฎหมายทรัพย์สินทางปัญญา เช่น 知识产权, 专利, 商标, 侵权, 确权 ในการเจรจาปกป้องผลงานนวัตกรรมได้',
+        en: 'Master IP terms: Intellectual Property, Patent, Trademark, Infringement, and Rights Confirmation'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้คำว่า 知识产权, 专利 และ 侵权 ในการร่างหนังสือเตือนการละเมิดสิทธิบัตร!',
+      vocabulary: [
+        {
+          id: 'hsk4_5101',
+          hanzi: '知识产权',
+          pinyin: 'zhīshichǎnquán',
+          display_pinyin: 'zhīshichǎnquán',
+          pinyin_tone: 'zhi1shi0chan3quan2',
+          meaning_th: 'ทรัพย์สินทางปัญญา (IP - Intellectual Property)',
+          meaning_en: 'intellectual property / IP rights',
+          radical: '木',
+          radical_name_th: 'หมวดต้นไม้ (木字旁)',
+          stroke_count: 29,
+          mnemonic: 'สติปัญญาความรู้ (知识) ก่อกำเนิดทรัพย์สิน (产) อันชอบธรรมด้วยสิทธิ์และกฎหมาย (权) = ทรัพย์สินทางปัญญา',
+          kid_mnemonic: 'เกราะทองคำคุ้มครองภาพวาดและสิ่งประดิษฐ์ของตนเองไม่ให้ใครขโมย = 知识产权',
+          body_gesture: 'เอานิ้วชี้แตะขมับแล้วกางสองแขนทำท่าโล่กำบังระดับอก'
+        },
+        {
+          id: 'hsk4_5102',
+          hanzi: '专利',
+          pinyin: 'zhuānlì',
+          display_pinyin: 'zhuānlì',
+          pinyin_tone: 'zhuan1li4',
+          meaning_th: 'สิทธิบัตร / สิทธิพิเศษแต่เพียงผู้เดียว',
+          meaning_en: 'patent / exclusive right',
+          radical: '寸',
+          radical_name_th: 'หมวดนิ้วนิ้วมือ (寸字旁)',
+          stroke_count: 12,
+          mnemonic: 'ความเชี่ยวชาญเฉพาะทาง (专) นำมาซึ่งผลประโยชน์และความคุ้มครอง (利) = สิทธิบัตร',
+          kid_mnemonic: 'ประทับตราครุฑแดงลงบนใบประกาศนียบัตรสิ่งประดิษฐ์ใหม่ = 专利',
+          body_gesture: 'กำหมัดขวาทำท่าประทับตราลงบนฝ่ามือซ้าย'
+        },
+        {
+          id: 'hsk4_5103',
+          hanzi: '商标',
+          pinyin: 'shāngbiāo',
+          display_pinyin: 'shāngbiāo',
+          pinyin_tone: 'shang1biao1',
+          meaning_th: 'เครื่องหมายการค้า / ตราสินค้า (Trademark)',
+          meaning_en: 'trademark / logo / brand mark',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 26,
+          mnemonic: 'ตราสัญลักษณ์การค้าพาณิชย์ (商) ปักป้ายเป้าหมายเด่นชัด (标) = เครื่องหมายการค้า',
+          kid_mnemonic: 'โลโก้รูปแอปเปิลหรือนกอินทรีบนกล่องสินค้า = 商标',
+          body_gesture: 'สองมือทำเป็นกรอบสี่เหลี่ยมรอบหน้าอกแสดงโลโก้'
+        },
+        {
+          id: 'hsk4_5104',
+          hanzi: '侵权',
+          pinyin: 'qīnquán',
+          display_pinyin: 'qīnquán',
+          pinyin_tone: 'qin1quan2',
+          meaning_th: 'การละเมิดสิทธิ์ / การละเมิดลิขสิทธิ์หรือสิทธิบัตร',
+          meaning_en: 'infringe / violation of rights / infringement',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 15,
+          mnemonic: 'คนบุกรุกรุกล้ำ (侵) เข้ามาลิดรอนสิทธิ์ชอบธรรม (权) = ละเมิดสิทธิ์',
+          kid_mnemonic: 'คนร้ายแอบคัดลอกแบบสิ่งประดิษฐ์ไปทำขายเอง = 侵权',
+          body_gesture: 'ทำมือผลักออกไปข้างหน้าพร้อมส่ายหน้าแสดงการปฏิเสธการละเมิด'
+        },
+        {
+          id: 'hsk4_5105',
+          hanzi: '确权',
+          pinyin: 'quèquán',
+          display_pinyin: 'quèquán',
+          pinyin_tone: 'que4quan2',
+          meaning_th: 'การยืนยันและรับรองสิทธิความเป็นเจ้าของตามกฎหมาย',
+          meaning_en: 'confirm and determine property/patent rights',
+          radical: '石',
+          radical_name_th: 'หมวดก้อนหิน (石字旁)',
+          stroke_count: 18,
+          mnemonic: 'หนักแน่นดั่งก้อนหินยืนยันความจริง (确) แห่งสิทธิอำนาจ (权) = ยืนยันสิทธิ์',
+          kid_mnemonic: 'เซ็นชื่อรับโฉนดและใบสิทธิบัตรต่อหน้าผู้พิพากษา = 确权',
+          body_gesture: 'สองมือถือเอกสารสำคัญชูขึ้นระดับสายตาอย่างมั่นใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 侵权 (qīnquán)',
+        description_th: 'qīn (เสียง 1) quán (เสียง 2)',
+        example: '涉嫌专利侵权 (Shèxián zhuānlì qīnquán)',
+        fun_metaphor: 'เสียง qīn แหลมคมเหมือนใบมีดบุกรุก และ quán คือสิทธิ์ที่ต้องปกป้อง',
+        reassurance: 'คำว่า 侵 (qīn) ออกเสียง 1 ห้ามสับสนกับ qǐn หรือ qìn'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการกล่าวหาละเมิดสิทธิ์: 涉嫌侵犯……，依法申请确权',
+        formula: '该产品涉嫌严重侵犯我方[专利/商标/著作]权，我们将依法追究法律责任',
+        explanation_th: 'ใช้ในหนังสือเตือนทางกฎหมาย (Cease and Desist Letter) และการฟ้องร้องศาล',
+        patterns: [
+          {
+            formula: '保护知识产权，打击侵权行为。',
+            zh: '科技创新必须以严格保护知识产权为前提，坚决打击恶意侵权行为。',
+            pinyin: 'Kējì chuàngxīn bìxū yǐ yángé bǎohù zhīshichǎnquán wéi qiántí, jiānjué dǎjī èyì qīnquán xíngwéi.',
+            th: 'นวัตกรรมทางเทคโนโลยีต้องมีเงื่อนไขเบื้องต้นคือการคุ้มครองทรัพย์สินทางปัญญาอย่างเข้มงวด และปราบปรามพฤติกรรมละเมิดลิขสิทธิ์โดยเจตนาร้ายอย่างเด็ดเดี่ยว',
+            en: 'Technological innovation must be premised on strict IP protection, resolutely cracking down on malicious infringement.'
+          },
+          {
+            formula: '加快专利确权，筑牢技术壁垒。',
+            zh: '我们团队在完成技术研发后，第一时间向国家知识产权局申请了专利确权。',
+            pinyin: 'Wǒmen tuánduì zài wánchéng jìshù yánfā hòu, dì-yī shíjiān xiàng guójiā zhīshichǎnquán jú shēnqǐng le zhuānlì quèquán.',
+            th: 'หลังจากทีมงานของเราวิจัยและพัฒนาเทคโนโลยีเสร็จสิ้น ก็ได้ยื่นขอยืนยันสิทธิบัตรต่อสำนักงานทรัพย์สินทางปัญญาแห่งชาติในทันที',
+            en: 'Immediately after completing R&D, our team applied for patent rights confirmation at the National Intellectual Property Administration.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '法务总监 (General Counsel) ⚖️',
+          zh: '各位研发主管，我们在国际市场上发现竞争对手涉嫌严重侵犯我们的核心发明专利。',
+          pinyin: 'Gèwèi yánfā zhǔguǎn, wǒmen zài guójì shìchǎng shang fāxiàn jìngzhēng duìshǒu shèxián yánzhòng qīnfàn wǒmen de héxīn fāmíng zhuānlì.',
+          th: 'หัวหน้าทีมวิจัยทุกท่านครับ ในตลาดต่างประเทศเราพบว่าคู่แข่งต้องสงสัยว่าละเมิดสิทธิบัตรการประดิษฐ์ที่เป็นหัวใจหลักของเราอย่างร้ายแรงครับ',
+          en: 'R&D directors, we discovered in the international market that competitors are suspected of seriously infringing our core invention patents.',
+          audio_trigger: 't4_u51_l01_d01'
+        },
+        {
+          speaker: '首席技术官 (CTO) 💻',
+          zh: '那项专利是我们团队历时三年攻关的成果，商标与专利确权手续早已在全球主要国家办理完毕。',
+          pinyin: 'Nà xiàng zhuānlì shì wǒmen tuánduì lìshí sān nián gōngguān de chéngguǒ, shāngbiāo yǔ zhuānlì quèquán shǒuxù zǎoyǐ zài quánqiú zhǔyào guójiā bànlǐ wánbì.',
+          th: 'สิทธิบัตรนั้นเป็นผลงานการทุ่มเทฟันฝ่าของทีมงานเรานานถึงสามปี ขั้นตอนการยืนยันสิทธิบัตรและเครื่องหมายการค้าได้ดำเนินการเสร็จสิ้นในประเทศหลักทั่วโลกเรียบร้อยแล้วครับ',
+          en: 'That patent is the fruit of three years of hard work by our team; trademark and patent confirmation procedures have long been completed across major global nations.',
+          audio_trigger: 't4_u51_l01_d02'
+        },
+        {
+          speaker: '法务总监 (General Counsel) ⚖️',
+          zh: '很好。我们要实事求是固定侵权证据，发出严正律师函，坚决捍卫企业的知识产权。',
+          pinyin: 'Hěn hǎo. Wǒmen yào shíshìqiúshì gùdìng qīnquán zhèngjù, fāchū yánzhèng lǜshīhán, jiānjué hànwèi qǐyè de zhīshichǎnquán.',
+          th: 'ดีมาก พวกเราต้องรวบรวมหลักฐานการละเมิดตามความเป็นจริง ออกจดหมายเตือนของทนายความอย่างจริงจัง และปกป้องทรัพย์สินทางปัญญาขององค์กรอย่างเด็ดเดี่ยว',
+          en: 'Very good. We must freeze infringement evidence objectively, issue solemn attorney letters, and resolutely safeguard the enterprise\'s IP rights.',
+          audio_trigger: 't4_u51_l01_d03'
+        },
+        {
+          speaker: '首席技术官 (CTO) 💻',
+          zh: '知己知彼百战不殆，如果对方拒绝停止侵权，我们立即启动跨国诉讼，决不退缩！',
+          pinyin: 'Zhījǐzhībǐ bǎizhànbùdài, rúguǒ duìfāng jùjué tíngzhǐ qīnquán, wǒmen lìjí qǐdòng kuàguó sùsòng, juébù tuìsuō!',
+          th: 'รู้เขารู้รบร้อยครั้งมิพ่าย หากอีกฝ่ายปฏิเสธที่จะหยุดการละเมิด พวกเราจะเริ่มกระบวนการฟ้องร้องข้ามแดนทันที ไม่มีวันถอยก้าวเดียว!',
+          en: 'Know yourself and know your enemy, a hundred battles without danger; if the other party refuses to cease infringement, we will initiate cross-border litigation immediately without backing down!',
+          audio_trigger: 't4_u51_l01_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "确权" (quèquán) ในกฎหมายทรัพย์สินทางปัญญาหมายถึงกระบวนการใด?',
+          options: [
+            'การตรวจสอบและรับรองทางกฎหมายว่าใครเป็นผู้ถือครองสิทธิในสิทธิบัตรหรือทรัพย์สินนั้นอย่างแท้จริง',
+            'การประมูลขายสิทธิบัตรทอดตลาด',
+            'การยกเลิกสิทธิบัตรทั้งหมด',
+            'การแจกจ่ายเทคโนโลยีให้สาธารณะฟรี'
+          ],
+          correct_index: 0,
+          explanation_th: '"确权" คือ การยืนยันสิทธิความเป็นเจ้าของตามกฎหมายเพื่อใช้เป็นหลักฐานในการคุ้มครองและฟ้องร้อง',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจกระบวนการทางกฎหมายอย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ปกป้องทรัพย์สินทางปัญญา ปราบปรามการละเมิดสิทธิ์"',
+          tokens: ['严厉打击侵权', '保护知识产权'],
+          correct_sequence: ['保护知识产权', '严厉打击侵权'],
+          pinyin: 'Bǎohù zhīshichǎnquán, yánlì dǎjī qīnquán.',
+          meaning_th: 'ปกป้องทรัพย์สินทางปัญญา ปราบปรามการละเมิดสิทธิ์',
+          explanation_th: 'เป้าหมายคุ้มครอง (保护知识产权) + มาตรการลงโทษ (严厉打击侵权)',
+          encouragement: 'จัดประโยคกฎหมายได้อย่างทรงอำนาจ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "权" (quán - อำนาจ/สิทธิ์) มีหมวดนำ "木" (ไม้) สื่อถึงต้นกำเนิดประวัติศาสตร์ใด?',
+          options: [
+            'ลูกตุ้มถ่วงน้ำหนักคานไม้ตาชั่งโบราณ ที่ใช้ชั่งตวงวัดความยุติธรรมและความสมดุล',
+            'การตัดไม้ทำฟืน',
+            'การปลูกป่าไม้ผล',
+            'การสร้างบ้านไม้ริมน้ำ'
+          ],
+          correct_index: 0,
+          explanation_th: '"权" เดิมทีคือลูกตุ้มถ่วงตาชั่งไม้ สื่อถึงการชั่งวัดความยุติธรรมและดุลอำนาจ (权力/权利)',
+          encouragement: 'เข้าใจรากศัพท์ประวัติศาสตร์ตาชั่งแห่งความยุติธรรมอย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'การนำตราสัญลักษณ์หรือเครื่องหมายของผู้อื่นไปใช้โดยไม่ได้รับอนุญาต เรียกว่าอะไร?',
+          options: [
+            '商标侵权 (shāngbiāo qīnquán - การละเมิดเครื่องหมายการค้า)',
+            '专利确权 (zhuānlì quèquán - การยืนยันสิทธิบัตร)',
+            '破局突围 (pòjú tūwéi - การทะลวงกรอบ)',
+            '互利共赢 (hùlì gòngyíng - ผลประโยชน์ร่วมกัน)'
+          ],
+          correct_index: 0,
+          explanation_th: 'การปลอมแปลงหรือลอกเลียนตราสินค้าคือ "商标侵权" (Trademark infringement)',
+          encouragement: 'แยกแยะประเภทความผิดทางทรัพย์สินทางปัญญาได้อย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในหนังสือเตือนทางกฎหมาย (Cease & Desist Letter) ข้อความใดระบุสิทธิและข้อเรียกร้องได้อย่างรัดกุมและเด็ดขาดที่สุด?',
+        options: [
+          '贵司相关产品涉嫌严重侵犯我司核心发明专利，请立即停止侵权行为并依法赔偿损失，否则我司将提起跨国诉讼。',
+          '企业团队致力于创新低碳，在合同谈判与仲裁条款中达成共识。',
+          '鉴于国际局势复杂，各国团队应当致力于协调创新，推动低碳发展。',
+          '双方顺其自然上善若水，和而不同秉持仁爱修身中庸。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกระบุ "涉嫌侵犯核心发明专利", "停止侵权并赔偿损失" และ "提起跨国诉讼" ได้อย่างเฉียบขาด ถูกต้องตามแบบแผนนิติกรรมระหว่างประเทศ'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้พิทักษ์สิทธิบัตรสากล (Global Patent Defender)',
+        message_th: 'ยินดีด้วย! คุณเข้าใจคำศัพท์ 知识产权, 专利, 商标 และ 侵权 อย่างถ่องแท้ พร้อมปกป้องผลงานนวัตกรรมระดับโลก!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u51_l02',
+      lesson_number: 2,
+      title: {
+        zh: '跨国诉讼：管辖权与跨国取证',
+        th: 'การดำเนินคดีข้ามแดน (跨国诉讼): เขตอำนาจศาลและการแสวงหาพยานหลักฐาน',
+        en: 'Cross-Border Litigation: Jurisdiction & Evidence Gathering'
+      },
+      can_do: {
+        th: 'อธิบายกระบวนการดำเนินคดีในศาลระหว่างประเทศ เช่น 诉讼, 管辖权, 适用法律, 质证, 胜诉 ได้อย่างถูกต้อง',
+        en: 'Master cross-border lawsuit vocabulary: Litigation, Jurisdiction, Applicable Law, Cross-examination, and Winning Suit'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำคำว่า 管辖权 และ 质证 ไปใช้วิเคราะห์การต่อสู้ในศาลระหว่างประเทศ!',
+      vocabulary: [
+        {
+          id: 'hsk4_5106',
+          hanzi: '诉讼',
+          pinyin: 'sùsòng',
+          display_pinyin: 'sùsòng',
+          pinyin_tone: 'su4song4',
+          meaning_th: 'การดำเนินคดีในศาล / การฟ้องร้องคดีความ (Litigation / Lawsuit)',
+          meaning_en: 'litigation / lawsuit / legal proceeding',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 21,
+          mnemonic: 'บอกเล่าเรื่องราวความอยุติธรรม (诉) ร้องขอให้ศาลไต่สวนพิพากษา (讼) = ฟ้องร้องคดีความ',
+          kid_mnemonic: 'ทนายความสวมครุยดำยืนว่าความต่อหน้าผู้พิพากษาในศาล = 诉讼',
+          body_gesture: 'กำมือขวาเคาะลงบนโต๊ะเหมือนค้อนผู้พิพากษาตัดสินคดี'
+        },
+        {
+          id: 'hsk4_5107',
+          hanzi: '管辖权',
+          pinyin: 'guǎnxiáquán',
+          display_pinyin: 'guǎnxiáquán',
+          pinyin_tone: 'guan3xia2quan2',
+          meaning_th: 'เขตอำนาจศาล / อำนาจในการรับฟ้องและพิจารณาคดี (Jurisdiction)',
+          meaning_en: 'jurisdiction / judicial competence',
+          radical: '⺮',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 34,
+          mnemonic: 'ปกครองดูแลด้วยไม้ไผ่ (管) ควบคุมสลักล้อรถม้า (辖) ด้วยอำนาจชอบธรรม (权) = เขตอำนาจศาล',
+          kid_mnemonic: 'ผู้พิพากษาขีดเส้นอาณาเขตคุ้มครองกฎหมายของตนเอง = 管辖权',
+          body_gesture: 'สองมือวาดเป็นกรอบอาณาเขตบนโต๊ะแสดงเขตอำนาจ'
+        },
+        {
+          id: 'hsk4_5108',
+          hanzi: '适用法律',
+          pinyin: 'shìyòngfǎlǜ',
+          display_pinyin: 'shìyòngfǎlǜ',
+          pinyin_tone: 'shi4yong4fa3lü4',
+          meaning_th: 'กฎหมายที่ใช้บังคับ (Governing Law / Applicable Law)',
+          meaning_en: 'applicable law / governing law',
+          radical: '辶',
+          radical_name_th: 'หมวดทางเดิน (走之底)',
+          stroke_count: 36,
+          mnemonic: 'เหมาะสมสอดคล้อง (适) นำไปปรับใช้ (用) กับประมวลกฎเกณฑ์กฎหมาย (法律) = กฎหมายที่ใช้บังคับ',
+          kid_mnemonic: 'เปิดหนังสือกฎหมายสากลค้นหามาตราที่ตรงกับคดี = 适用法律',
+          body_gesture: 'เปิดสองฝ่ามือออกเหมือนเปิดหนังสือประมวลกฎหมาย'
+        },
+        {
+          id: 'hsk4_5109',
+          hanzi: '质证',
+          pinyin: 'zhìzhèng',
+          display_pinyin: 'zhìzhèng',
+          pinyin_tone: 'zhi4zheng4',
+          meaning_th: 'การไต่สวนและซักค้านพยานหลักฐานในชั้นศาล (Cross-examination / Evidentiary hearing)',
+          meaning_en: 'cross-examination of evidence / evidence confrontation',
+          radical: '贝',
+          radical_name_th: 'หมวดหอยเบี้ย (贝字旁)',
+          stroke_count: 20,
+          mnemonic: 'ซักถามคุณสมบัติความจริง (质) ต่อหน้าหลักฐานพยานบุคคล (证) = ซักค้านพยานหลักฐาน',
+          kid_mnemonic: 'ทนายความถือแว่นขยายตรวจพิสูจน์รอยนิ้วมือบนเอกสาร = 质证',
+          body_gesture: 'ทำมือส่องแว่นขยายตรวจสอบเอกสารอย่างละเอียดถี่ถ้วน'
+        },
+        {
+          id: 'hsk4_5110',
+          hanzi: '胜诉',
+          pinyin: 'shèngsù',
+          display_pinyin: 'shèngsù',
+          pinyin_tone: 'sheng4su4',
+          meaning_th: 'การชนะคดีในศาล (ตรงข้ามกับ 败诉 - แพ้คดี)',
+          meaning_en: 'win a lawsuit / prevail in court',
+          radical: '月',
+          radical_name_th: 'หมวดดวงจันทร์ (月字旁)',
+          stroke_count: 21,
+          mnemonic: 'คว้าชัยชนะอันงดงาม (胜) ในกระบวนการคดีความ (诉) = ชนะคดี',
+          kid_mnemonic: 'ชูมือแสดงสัญลักษณ์ตัว V แห่งชัยชนะหน้าบันไดศาลยุติธรรม = 胜诉',
+          body_gesture: 'ชูสองนิ้วเป็นสัญลักษณ์รูปตัว V พร้อมรอยยิ้มภาคภูมิใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 适用法律 (shìyòngfǎlǜ)',
+        description_th: 'shì (เสียง 4) yòng (เสียง 4) fǎ (เสียง 3) lǜ (เสียง 4)',
+        example: '确定合同争议的适用法律 (Quèdìng hétong zhēngyì de shìyòng fǎlǜ)',
+        fun_metaphor: 'คำว่า fǎlǜ ออกเสียง fa3 lü4 ระวังเสียง lǜ สระ ü มีจุด',
+        reassurance: 'เป็นวลีมาตรฐานที่ต้องระบุในข้อตกลงระงับข้อพิพาททุกฉบับ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการต่อสู้ในศาล: 就……提起诉讼，对管辖权提出异议',
+        formula: '向有管辖权的人民法院提起诉讼，依据适用法律进行质证，争取最终胜诉',
+        explanation_th: 'ใช้ในการวิเคราะห์ยุทธศาสตร์การว่าความและรายงานผลการพิจารณาคดี',
+        patterns: [
+          {
+            formula: '确定管辖权，提起跨国诉讼。',
+            zh: '根据双方合同约定的争议解决条款，本案由被告所在地法院拥有专属管辖权。',
+            pinyin: 'Gēnjù shuāngfāng hétong yuēdìng de zhēngyì jiějué tiáokuǎn, běn\'àn yóu bèigào suǒzàidì fǎyuàn yōngyǒu zhuānshǔ guǎnxiáquán.',
+            th: 'ตามข้อสัญญาว่าด้วยการระงับข้อพิพาทที่ทั้งสองฝ่ายตกลงกัน ศาล ณ ถิ่นที่อยู่ของจำเลยเป็นผู้มีเขตอำนาจศาลเฉพาะในคดีนี้',
+            en: 'According to the dispute resolution clause agreed upon in the contract, the court at the defendant\'s domicile possesses exclusive jurisdiction over this case.'
+          },
+          {
+            formula: '严格质证，确保胜诉判决。',
+            zh: '诉讼代理人在法庭上对对方提交的关键证据进行了全面质证，为最终胜诉奠定了坚实基础。',
+            pinyin: 'Sùsòng dàilǐrén zài fǎtíng shang duì duìfāng tíjiāo de guānjiàn zhèngjù jìnxíng le quánmiàn zhìzhèng, wèi zuìzhōng shèngsù diàndìng le jiānshí jīchǔ.',
+            th: 'ทนายความผู้รับมอบอำนาจในคดีได้ซักค้านพยานหลักฐานสำคัญที่อีกฝ่ายยื่นต่อศาลอย่างรอบด้าน วางรากฐานอันมั่นคงให้แก่คำพิพากษาชนะคดีในที่สุด',
+            en: 'The litigation counsel conducted comprehensive cross-examination of key evidence submitted by the opposing party in court, laying a solid foundation for eventual victory.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '资深诉讼律师 (Senior Litigator) ⚖️',
+          zh: '张总，对方在美国联邦地区法院对我们提起了专利侵权诉讼，要求巨额赔偿。',
+          pinyin: 'Zhāng zǒng, duìfāng zài Měiguó liánbāng dìqū fǎyuàn duì wǒmen tíqǐ le zhuānlì qīnquán sùsòng, yāoqiú jù\'é péicháng.',
+          th: 'คุณจางครับ อีกฝ่ายได้ยื่นฟ้องเราในข้อหาละเมิดสิทธิบัตรต่อศาลแขวงรัฐบาลกลางสหรัฐฯ โดยเรียกร้องค่าเสียหายมูลค่ามหาศาลครับ',
+          en: 'Director Zhang, the opposing party filed a patent infringement lawsuit against us in a US Federal District Court, demanding huge damages.',
+          audio_trigger: 't4_u51_l02_d01'
+        },
+        {
+          speaker: '张总 (Director Zhang) 👔',
+          zh: '我们不要慌。首先要审查管辖权异议，该法院是否具有法定管辖权？合同中的适用法律是如何约定的？',
+          pinyin: 'Wǒmen búyào huāng. Shǒuxiān yào shěnchá guǎnxiáquán yìyì, gāi fǎyuàn shìfǒu jùyǒu fǎdìng guǎnxiáquán? Hétong zhōng de shìyòng fǎlǜ shì rúhé yuēdìng de?',
+          th: 'พวกเราอย่าตื่นตระหนกครับ อันดับแรกต้องตรวจสอบข้อคัดค้านเขตอำนาจศาล ศาลดังกล่าวมีอำนาจตามกฎหมายหรือไม่? และกฎหมายที่ใช้บังคับในสัญญาระบุไว้อย่างไร?',
+          en: 'Let us not panic. First, review jurisdictional objections: does that court have statutory jurisdiction? How is the applicable law specified in the contract?',
+          audio_trigger: 't4_u51_l02_d02'
+        },
+        {
+          speaker: '资深诉讼律师 (Senior Litigator) ⚖️',
+          zh: '合同明确约定适用中国法律，且发生争议应提交北京仲裁。我们将提出管辖权抗辩，并在证据开示中严格质证。',
+          pinyin: 'Hétong míngquè yuēdìng shìyòng Zhōngguó fǎlǜ, qiě fāshēng zhēngyì yīng tíjiāo Běijīng zhòngcái. Wǒmen jiāng tíchū guǎnxiáquán kàngbiàn, bìng zài zhèngjù kāishì zhōng yángé zhìzhèng.',
+          th: 'สัญญาระบุชัดเจนว่าให้ใช้กฎหมายจีนบังคับ และเมื่อเกิดข้อพิพาทให้ส่งอนุญาโตตุลาการที่ปักกิ่ง เราจะยื่นคำคัดค้านเขตอำนาจศาล และซักค้านพยานหลักฐานอย่างเคร่งครัดในกระบวนการเปิดเผยพยาน',
+          en: 'The contract clearly stipulates Chinese law as governing law and submitting disputes to Beijing arbitration. We will raise jurisdictional defense and strictly cross-examine during discovery.',
+          audio_trigger: 't4_u51_l02_d03'
+        },
+        {
+          speaker: '张总 (Director Zhang) 👔',
+          zh: '很好！运筹帷幄、赏罚分明，我们要组织全球顶尖法务团队全力以赴，争取最终胜诉！',
+          pinyin: 'Hěn hǎo! Yùnchóuwéiwò, shǎngfáfēnmíng, wǒmen yào zǔzhī quánqiú dǐngjiān fǎwù tuánduì quánlìyǐfù, zhēngqǔ zuìzhōng shèngsù!',
+          th: 'ดีมาก! วางแผนในกระโจมบัญชาการและบริหารจัดการอย่างเฉียบขาด เราจะระดมทีมกฎหมายชั้นนำระดับโลกเพื่อสู้ศึกเต็มกำลัง คว้าชัยชนะในคดีมาให้ได้!',
+          en: 'Very good! Strategic planning and clear rewards; we will organize top-tier global legal teams to go all out and strive for ultimate victory in court!',
+          audio_trigger: 't4_u51_l02_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ข้อต่อสู้เรื่อง "管辖权异议" (Jurisdictional objection) ในคดีข้ามชาติมีจุดประสงค์เพื่ออะไร?',
+          options: [
+            'โต้แย้งว่าศาลที่รับฟ้องไม่มีอำนาจทางกฎหมายในการพิจารณาคดีนั้น ควรส่งคดีไปยังศาลหรือสถาบันอนุญาโตตุลาการที่ถูกต้อง',
+            'ยอมรับสารภาพผิดทุกข้อกล่าวหา',
+            'ขอเพิ่มเงินค่าชดเชยแก่โจทก์',
+            'ขอเปลี่ยนตัวจำเลยเป็นผู้อื่น'
+          ],
+          correct_index: 0,
+          explanation_th: '"管辖权异议" คือ การคัดค้านอำนาจศาล ซึ่งเป็นแนวป้องกันด่านแรกที่สำคัญที่สุดในการดำเนินคดีข้ามชาติ',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจกลยุทธ์การต่อสู้คดีระดับนานาชาติ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ซักค้านพยานหลักฐาน คว้าชัยชนะในคดีความ"',
+          tokens: ['争取最终胜诉', '法庭严格质证'],
+          correct_sequence: ['法庭严格质证', '争取最终胜诉'],
+          pinyin: 'Fǎtíng yángé zhìzhèng, zhēngqǔ zuìzhōng shèngsù.',
+          meaning_th: 'ซักค้านพยานหลักฐาน คว้าชัยชนะในคดีความ',
+          explanation_th: 'กระบวนการในศาล (法庭严格质证) + เป้าหมายชัยชนะ (争取最终胜诉)',
+          encouragement: 'จัดประโยคการว่าความได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "讼" (sòng - คดีความ) ใน "诉讼" มีหมวดนำ "讠" (คำพูด) และ "公" (สาธารณะ/ศาล) สื่อถึงอะไร?',
+          options: [
+            'การพูดชี้แจงข้อเท็จจริงในที่สาธารณะต่อหน้าตัวแทนความยุติธรรมของแผ่นดิน',
+            'การกระซิบความลับสองต่อสอง',
+            'การร้องเพลงประสานเสียง',
+            'การอ่านบทกวีคนเดียว'
+          ],
+          correct_index: 0,
+          explanation_th: '"讠" (คำพูด) + "公" (ศาล/ความยุติธรรมส่วนรวม) = การว่าความเพื่อพิสูจน์ความจริงในศาล (诉讼)',
+          encouragement: 'จำรากศัพท์ได้อย่างลึกซึ้งและแม่นยำ!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "胜诉" (shèngsù) ตรงข้ามกับคำใดในภาษาจีน?',
+          options: [
+            '败诉 (bàisù - แพ้คดี)',
+            '免诉 (miǎnsù - งดฟ้อง)',
+            '撤诉 (chèsù - ถอนฟ้อง)',
+            '起诉 (qǐsù - ยื่นฟ้อง)'
+          ],
+          correct_index: 0,
+          explanation_th: '"胜诉" (ชนะคดี) ตรงข้ามกับ "败诉" (แพ้คดี)',
+          encouragement: 'เข้าใจคำศัพท์ผลการตัดสินคดีได้อย่างถูกต้อง!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในแถลงการณ์สรุปผลการพิจารณาคดีของศาลสูง ประโยคใดรายงานชัยชนะทางกฎหมายได้อย่างทรงเกียรติที่สุด?',
+        options: [
+          '经过法庭严格审查与质证，法院依法驳回对方全部诉讼请求，我司取得跨国知识产权诉讼全面胜诉！',
+          '公关发言人迅速响应媒体舆论，实事求是进行官方澄清。',
+          '鉴于国际局势复杂，各国团队应当致力于协调创新，推动低碳发展。',
+          '古为今用与和而不同相得益彰，知己知彼百战不殆。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกระบุ "法庭严格审查与质证", "驳回全部诉讼请求" และ "取得全面胜诉" ได้อย่างถูกต้องตามแบบแผนกฎหมายชั้นสูง'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้ชนะคดีความข้ามพรมแดน (Cross-Border Litigation Victor)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญคำศัพท์ 诉讼, 管辖权, 适用法律 และ 质证 พร้อมรับมือคดีความระหว่างประเทศระดับสูง!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u51_l03',
+      lesson_number: 3,
+      title: {
+        zh: '商事仲裁：裁决执行与争端和解',
+        th: 'อนุญาโตตุลาการทางการค้า (商事仲裁): การบังคับตามคำชี้ขาดและการประนีประนอม',
+        en: 'Commercial Arbitration: Award Enforcement & Settlement'
+      },
+      can_do: {
+        th: 'ใช้คำศัพท์ทางอนุญาโตตุลาการสากล เช่น 仲裁, 裁决, 斡旋, 履约, 和解 ในการบริหารข้อพิพาทสัญญาได้',
+        en: 'Master arbitration terms: Arbitration, Award, Mediation, Performance/Compliance, and Settlement'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำคำว่า 仲裁, 裁决 และ 和解 ไปใช้ในการร่างข้อตกลงระงับข้อพิพาท!',
+      vocabulary: [
+        {
+          id: 'hsk4_5111',
+          hanzi: '仲裁',
+          pinyin: 'zhòngcái',
+          display_pinyin: 'zhòngcái',
+          pinyin_tone: 'zhong4cai2',
+          meaning_th: 'อนุญาโตตุลาการ / การระงับข้อพิพาทโดยคนกลางผู้ทรงคุณวุฒิ (Arbitration)',
+          meaning_en: 'arbitration / arbitrate',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 18,
+          mnemonic: 'คนกลางผู้เที่ยงธรรม (仲) ตัดสินชี้ขาดข้อพิพาท (裁) = อนุญาโตตุลาการ',
+          kid_mnemonic: 'กรรมการผู้ทรงเกียรติเป่านกหวีดตัดสินข้อพิพาทการแข่งขัน = 仲裁',
+          body_gesture: 'ผายสองมือออกสองข้างในระดับอกแสดงความเป็นคนกลางผู้เที่ยงธรรม'
+        },
+        {
+          id: 'hsk4_5112',
+          hanzi: '裁决',
+          pinyin: 'cáijué',
+          display_pinyin: 'cáijué',
+          pinyin_tone: 'cai2jue2',
+          meaning_th: 'คำชี้ขาดของอนุญาโตตุลาการ / คำวินิจฉัย (Arbitral Award / Ruling)',
+          meaning_en: 'ruling / award (arbitral) / adjudicate',
+          radical: '衣',
+          radical_name_th: 'หมวดเสื้อผ้า (衣字底)',
+          stroke_count: 18,
+          mnemonic: 'ใช้กรรไกรตัดผ้าอย่างเฉียบขาด (裁) ตัดสินอย่างเด็ดเดี่ยวไม่ลังเล (决) = คำชี้ขาด',
+          kid_mnemonic: 'เปิดซองจดหมายคำตัดสินชี้ขาดฉบับสุดท้าย = 裁决',
+          body_gesture: 'สองมือทำท่าคลี่คำชี้ขาดอ่านอย่างเด็ดขาด'
+        },
+        {
+          id: 'hsk4_5113',
+          hanzi: '斡旋',
+          pinyin: 'wòxuán',
+          display_pinyin: 'wòxuán',
+          pinyin_tone: 'wo4xuan2',
+          meaning_th: 'การไกล่เกลี่ยคนกลาง / การเจรจาประนีประนอม (Mediation / Good offices)',
+          meaning_en: 'mediate / good offices / broker a compromise',
+          radical: '斗',
+          radical_name_th: 'หมวดทัพพีตัก (斗字旁)',
+          stroke_count: 25,
+          mnemonic: 'หมุนกระบวยตักน้ำปรับสมดุล (斡) หมุนวนคลี่คลายปมปัญหา (旋) = ไกล่เกลี่ยข้อพิพาท',
+          kid_mnemonic: 'จับมือคู่กรณีทั้งสองฝ่ายมานั่งดื่มน้ำชาคุยกันดีๆ = 斡旋',
+          body_gesture: 'สองมือทำท่าหมุนวนประสานกันระดับอกอย่างนุ่มนวล'
+        },
+        {
+          id: 'hsk4_5114',
+          hanzi: '履约',
+          pinyin: 'lǚyuē',
+          display_pinyin: 'lǚyuē',
+          pinyin_tone: 'lü3yue1',
+          meaning_th: 'การปฏิบัติตามสัญญา / การปฏิบัติตามภาระผูกพัน (Contract performance)',
+          meaning_en: 'perform a contract / fulfill agreement obligations',
+          radical: '尸',
+          radical_name_th: 'หมวดร่างคน (尸字头)',
+          stroke_count: 21,
+          mnemonic: 'สวมรองเท้าก้าวเดินตามรอยสัญญา (履) รักษาคำมั่นสัญญา (约) = ปฏิบัติตามสัญญา',
+          kid_mnemonic: 'ส่งมอบสินค้าครบตามสัญญาแล้วเซ็นรับอย่างถูกต้อง = 履约',
+          body_gesture: 'ก้าวเท้าไปข้างหน้าหนึ่งก้าวพร้อมยื่นมือขวาจับมือแสดงการทำตามสัญญา'
+        },
+        {
+          id: 'hsk4_5115',
+          hanzi: '和解',
+          pinyin: 'héjiě',
+          display_pinyin: 'héjiě',
+          pinyin_tone: 'he2jie3',
+          meaning_th: 'การประนีประนอมยอมความ / การคืนดีกัน (Settlement / Reconciliation)',
+          meaning_en: 'settlement / reconcile / compromise',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 21,
+          mnemonic: 'ปรองดองกลมเกลียว (和) ปลดเปลื้องคลายปมเงื่อนขัดแย้ง (解) = ประนีประนอมยอมความ',
+          kid_mnemonic: 'เพื่อนสองคนจับมือคืนดีกันหลังปรับความเข้าใจ = 和解',
+          body_gesture: 'สองมือประกบเข้าหากันแสดงการประนีประนอมสมานฉันท์'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 裁决 (cáijué)',
+        description_th: 'cái (เสียง 2) jué (เสียง 2)',
+        example: '仲裁庭作出终局裁决 (Zhòngcáitíng zuòchū zhōngjú cáijué)',
+        fun_metaphor: 'คำว่า cái jué เสียง 2+2 มีน้ำหนักดั่งค้อนที่เคาะลงมาเด็ดขาด',
+        reassurance: 'คำชี้ขาดอนุญาโตตุลาการเป็นที่สิ้นสุด (终局裁决) มีผลผูกพันทันที'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างอนุญาโตตุลาการ: 提交……仲裁，达成和解协议',
+        formula: '将合同争议提交国际仲裁院，在专家斡旋下积极促成争议和解，督促对方全面履约',
+        explanation_th: 'ใช้ในการระงับข้อพิพาททางการค้าและการทำบันทึกข้อตกลงยอมความ',
+        patterns: [
+          {
+            formula: '申请国际仲裁，执行终局裁决。',
+            zh: '双方约定将所有争议提交中国国际经济贸易仲裁委员会（CIETAC）仲裁，裁决为终局的。',
+            pinyin: 'Shuāngfāng yuēdìng jiāng suǒyǒu zhēngyì tíjiāo Zhōngguó Guójì Jīngjì Màoyì Zhòngcái Wěiyuánhuì (CIETAC) zhòngcái, cáijué wéi zhōngjú de.',
+            th: 'ทั้งสองฝ่ายตกลงที่จะส่งข้อพิพาททั้งหมดให้อนุญาโตตุลาการคณะกรรมการการค้าและเศรษฐกิจระหว่างประเทศแห่งประเทศจีน (CIETAC) โดยคำชี้ขาดถือเป็นที่สุด',
+            en: 'Both sides agreed to submit all disputes to CIETAC arbitration; the arbitral award is final and binding.'
+          },
+          {
+            formula: '积极斡旋调解，达成争端和解。',
+            zh: '在仲裁庭的主持与积极斡旋下，双方最终签署和解协议，确保了长期业务合作的延续。',
+            pinyin: 'Zài zhòngcáitíng de zhǔchí yǔ jījí wòxuán xià, shuāngfāng zuìzhōng qiānshǔ héjiě xiéyì, quèbǎo le chángqī yèwù hézuò de yánxù.',
+            th: 'ภายใต้การดูแลและการไกล่เกลี่ยอย่างแข็งขันของคณะอนุญาโตตุลาการ ทั้งสองฝ่ายได้ลงนามในข้อตกลงยอมความในที่สุด เพื่อสานต่อความร่วมมือทางธุรกิจระยะยาว',
+            en: 'Under the auspices and active mediation of the arbitral tribunal, both parties ultimately signed a settlement agreement, ensuring the continuation of long-term business cooperation.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '仲裁员 (Arbitrator) 📜',
+          zh: '欢迎双方代表出席商事仲裁庭听证会。根据《纽约公约》，本庭作出的仲裁裁决在全球范围内具有执行力。',
+          pinyin: 'Huānyíng shuāngfāng dàibiǎo chūxí shāngshì zhòngcáitíng tīngzhènghuì. Gēnjù "Niǔyuē Gōngyuē", běntíng zuòchū de zhòngcái cáijué zài quánqiú fànwéi nèi jùyǒu zhíxínglì.',
+          th: 'ขอต้อนรับตัวแทนทั้งสองฝ่ายสู่การไต่สวนของคณะอนุญาโตตุลาการทางการค้า ตาม《อนุสัญญาเจนีวา/นิวยอร์ก》 คำชี้ขาดของคณะอนุญาโตตุลาการนี้มีผลบังคับใช้ทั่วโลกครับ',
+          en: 'Welcome representatives of both sides to the commercial arbitration hearing. Pursuant to the New York Convention, the arbitral award made by this tribunal has worldwide enforceability.',
+          audio_trigger: 't4_u51_l03_d01'
+        },
+        {
+          speaker: '企业法务总监 (General Counsel) ⚖️',
+          zh: '仲裁员先生，对方长期违约拖欠货款，严重损害了我方的合法权益，我们请求仲裁庭责令对方立即履约并赔偿损失。',
+          pinyin: 'Zhòngcáiyuán xiānsheng, duìfāng chángqī wéiyuē tuōqiàn huòkuǎn, yánzhòng sǔnhài le wǒfāng de héfǎ quányì, wǒmen qǐngqiú zhòngcáitíng zélìng duìfāng lìjí lǚyuē bìng péicháng sǔnshī.',
+          th: 'ท่านอนุญาโตตุลาการครับ อีกฝ่ายผิดสัญญาค้างชำระค่าสินค้ามาอย่างยาวนาน สร้างความเสียหายต่อสิทธิอันชอบธรรมของเราอย่างร้ายแรง เราขอให้คณะอนุญาโตตุลาการมีคำสั่งให้อีกฝ่ายปฏิบัติตามสัญญาทันทีและชดใช้ค่าเสียหายครับ',
+          en: 'Mr. Arbitrator, the other party has long breached the contract by defaulting on payments, severely harming our legitimate rights; we request the tribunal to order immediate performance and compensation for damages.',
+          audio_trigger: 't4_u51_l03_d02'
+        },
+        {
+          speaker: '对方代表律师 (Opposing Counsel) 💼',
+          zh: '我方充分理解申请人的关切，考虑到双方长期的战略伙伴关系，我们希望仲裁庭能够进行斡旋，促成和解。',
+          pinyin: 'Wǒfāng chōngfèn lǐjiě shēnqǐngrén de guānqiè, kǎolǜ dào shuāngfāng chángqī de zhànlüè huǒbàn guānxì, wǒmen xīwàng zhòngcáitíng nénggòu jìnxíng wòxuán, cùchéng héjiě.',
+          th: 'ฝ่ายเราเข้าใจข้อกังวลของผู้ร้องอย่างถ่องแท้ เมื่อคำนึงถึงความเป็นพันธมิตรทางยุทธศาสตร์ระยะยาว เราหวังว่าคณะอนุญาโตตุลาการจะช่วยไกล่เกลี่ยเพื่อให้เกิดการประนีประนอมยอมความครับ',
+          en: 'We fully appreciate the claimant\'s concerns; considering our long-term strategic partnership, we hope the tribunal can mediate to facilitate a settlement.',
+          audio_trigger: 't4_u51_l03_d03'
+        },
+        {
+          speaker: '仲裁员 (Arbitrator) 📜',
+          zh: '很好！求同存异、互利共赢是商业合作之道。如果双方愿意各让一步，本庭乐意主持签署具有法律约束力和解协议。',
+          pinyin: 'Hěn hǎo! Qiútóngcúnyì, hùlì gòngyíng shì shāngyè hézuò zhī dào. Rúguǒ shuāngfāng yuànyì gè ràng yībù, běntíng lèyì zhǔchí qiānshǔ jùyǒu fǎlǜ yuēshùlì héjiě xiéyì.',
+          th: 'ดีมาก! การแสวงจุดร่วมสงวนจุดต่างและชัยชนะร่วมกันคือวิถีแห่งการค้า หากทั้งสองฝ่ายพร้อมถอยคนละก้าว คณะอนุญาโตตุลาการก็ยินดีช่วยกำกับดูแลการลงนามในข้อตกลงยอมความที่มีผลผูกพันทางกฎหมายครับ',
+          en: 'Very good! Seeking common ground while reserving differences and mutual benefit is the way of business. If both sides are willing to compromise, this tribunal is glad to preside over signing a legally binding settlement.',
+          audio_trigger: 't4_u51_l03_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ข้อได้เปรียบที่โดดเด่นที่สุดของ "商事仲裁" (Commercial Arbitration) เมื่อเทียบกับคดีในศาลคืออะไร?',
+          options: [
+            'ความเป็นความลับ การบังคับใช้ข้ามพรมแดนได้ง่ายตามอนุสัญญานิวยอร์ก และคำชี้ขาดเป็นที่สิ้นสุด',
+            'การเปิดให้ประชาชนทั่วไปเข้ามาร่วมฟังการพิจารณาได้ทุกคน',
+            'การไม่มีค่าธรรมเนียมใดๆ ทั้งสิ้น',
+            'การอนุญาตให้ยกเลิกสัญญาทั้งหมดโดยไม่ต้องชดเชย'
+          ],
+          correct_index: 0,
+          explanation_th: '"商事仲裁" โดดเด่นเรื่องการรักษาความลับทางธุรกิจ รวดเร็ว และบังคับใช้ได้ใน 170+ ประเทศทั่วโลกตาม《อนุสัญญานิวยอร์ก 1958》',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจกลไกอนุญาโตตุลาการสากลอย่างถ่องแท้!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ไกล่เกลี่ยด้วยความเป็นธรรม บรรลุการยอมความ"',
+          tokens: ['达成争议和解', '积极斡旋协调'],
+          correct_sequence: ['积极斡旋协调', '达成争议和解'],
+          pinyin: 'Jījí wòxuán xiétiáo, dáchéng zhēngyì héjiě.',
+          meaning_th: 'ไกล่เกลี่ยด้วยความเป็นธรรม บรรลุการยอมความ',
+          explanation_th: 'การไกล่เกลี่ย (积极斡旋协调) + ผลลัพธ์ยอมความ (达成争议和解)',
+          encouragement: 'จัดประโยคการระงับข้อพิพาทได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "履" (lǚ - ปฏิบัติตาม/ก้าวเดิน) ใน "履约" มีหมวดนำ "尸" และมีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?',
+          options: [
+            'รองเท้าและการย่างก้าวเดินตามรอยทางที่ตกลงไว้',
+            'อาวุธหอกดาบ',
+            'เครื่องดนตรีกู่เจิง',
+            'เรือพายโบราณ'
+          ],
+          correct_index: 0,
+          explanation_th: '"履" เดิมทีหมายถึงรองเท้า สื่อถึงการก้าวเดินตามรอยคำมั่นสัญญา (履约)',
+          encouragement: 'เข้าใจรากศัพท์แห่งการก้าวเดินตามสัญญาได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำชี้ขาดของอนุญาโตตุลาการเรียกว่าอะไรในภาษาจีน?',
+          options: [
+            '裁决 (cáijué)',
+            '判决 (pànjué - คำพิพากษาศาล)',
+            '辩护 (biànhù - การว่าความแก้ต่าง)',
+            '公证 (gōngzhèng - การรับรองเอกสาร)'
+          ],
+          correct_index: 0,
+          explanation_th: 'อนุญาโตตุลาการออก "裁决" (Arbitral Award) ส่วนศาลออก "判决" (Court Judgment)',
+          encouragement: 'แยกแยะคำศัพท์ทางกฎหมายได้อย่างแม่นยำระดับมืออาชีพ!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในข้อสัญญาว่าด้วยการระงับข้อพิพาททางธุรกิจ ข้อความใดเขียนได้อย่างสมบูรณ์และรัดกุมตามมาตรฐานสากล?',
+        options: [
+          '凡因本合同引起的任何争议，均应提交仲裁委员会仲裁解决，其裁决是终局的，对双方均有约束力。',
+          '公关发言人迅速响应媒体舆论，实事求是进行官方澄清。',
+          '企业团队致力于创新低碳，在合同谈判与仲裁条款中达成共识。',
+          '温故知新实事求是，知己知彼百战不殆。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกคือข้อสัญญาอนุญาโตตุลาการมาตรฐาน (Standard Arbitration Clause) ที่ได้รับการยอมรับทั่วโลก'
+      },
+      cheer_trophy: {
+        badge_name: 'ปรมาจารย์อนุญาโตตุลาการสากล (Master Arbitrator)',
+        message_th: 'ยินดีด้วย! คุณเข้าใจกลไก 仲裁, 裁决, 斡旋 และ 履约 อย่างแม่นยำ พร้อมระงับข้อพิพาทสัญญาระดับพันล้าน!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u51_l04',
+      lesson_number: 4,
+      title: {
+        zh: '合规风控：法律救济与防患未然',
+        th: 'การบริหารความเสี่ยงด้านการปฏิบัติตามกฎหมาย (合规风控): การเยียวยาและการป้องกันล่วงหน้า',
+        en: 'Compliance & Risk Control: Legal Remedies & Prevention'
+      },
+      can_do: {
+        th: 'ใช้คำศัพท์ทางนิติศาสตร์องค์กร เช่น 合规, 救济, 赔偿, 禁令, 防患未然 ในการวางระบบกำกับดูแลความเสี่ยงของบริษัทได้',
+        en: 'Master corporate compliance terms: Compliance, Legal Remedy, Compensation, Injunction, and Precaution'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำสำนวน 防患未然 และคำว่า 合规 ไปใช้วางระบบป้องกันความเสี่ยงขององค์กร!',
+      vocabulary: [
+        {
+          id: 'hsk4_5116',
+          hanzi: '合规',
+          pinyin: 'héguī',
+          display_pinyin: 'héguī',
+          pinyin_tone: 'he2gui1',
+          meaning_th: 'การปฏิบัติตามกฎหมายและกฎระเบียบ (Regulatory Compliance)',
+          meaning_en: 'compliance / conform to regulations',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 14,
+          mnemonic: 'สอดคล้องประสาน (合) กับวงเวียนกฎเกณฑ์กติกา (规) = ปฏิบัติตามกฎเกณฑ์',
+          kid_mnemonic: 'เดินข้ามถนนตรงทางม้าลายและปฏิบัติตามสัญญาณไฟจราจร = 合规',
+          body_gesture: 'ใช้นิ้วชี้และนิ้วโป้งมือขวาวาดเป็นวงกลมประกบกับฝ่ามือซ้าย'
+        },
+        {
+          id: 'hsk4_5117',
+          hanzi: '救济',
+          pinyin: 'jiùjì',
+          display_pinyin: 'jiùjì',
+          pinyin_tone: 'jiu4ji4',
+          meaning_th: 'การเยียวยาทางกฎหมาย (Legal Remedy / Relief)',
+          meaning_en: 'remedy (legal) / relief / redress',
+          radical: '攵',
+          radical_name_th: 'หมวดตีเคาะ (反文旁)',
+          stroke_count: 20,
+          mnemonic: 'ยื่นมือเข้าช่วยเหลือให้รอดพ้น (救) ข้ามฟากสายน้ำแห่งความทุกข์ (济) = การเยียวยาทางกฎหมาย',
+          kid_mnemonic: 'กล่องปฐมพยาบาลทางกฎหมายที่ช่วยเยียวยาผู้เสียหาย = 救济',
+          body_gesture: 'สองมือทำท่ายื่นกล่องช่วยเหลือส่งมอบให้ผู้ประสบภัย'
+        },
+        {
+          id: 'hsk4_5118',
+          hanzi: '赔偿',
+          pinyin: 'péicháng',
+          display_pinyin: 'péicháng',
+          pinyin_tone: 'pei2chang2',
+          meaning_th: 'การชดใช้ค่าสินไหมทดแทน / การจ่ายค่าเสียหาย (Compensation / Damages)',
+          meaning_en: 'compensate / indemnify / damages',
+          radical: '贝',
+          radical_name_th: 'หมวดหอยเบี้ย (贝字旁)',
+          stroke_count: 24,
+          mnemonic: 'ชดเชยด้วยเงินตราหอยเบี้ย (赔) ให้สมน้ำสมเนื้อกับความสูญเสีย (偿) = ชดใช้ค่าเสียหาย',
+          kid_mnemonic: 'ทำแจกันเพื่อนแตกจึงนำเงินหยอดกระปุกมาซื้อแจกันใบใหม่คืนให้ = 赔偿',
+          body_gesture: 'สองมือทำท่ายื่นเงินชดเชยด้วยความจริงใจ'
+        },
+        {
+          id: 'hsk4_5119',
+          hanzi: '禁令',
+          pinyin: 'jìnlìng',
+          display_pinyin: 'jìnlìng',
+          pinyin_tone: 'jin4ling4',
+          meaning_th: 'คำสั่งห้ามของศาล (Court Injunction / Prohibitory Order)',
+          meaning_en: 'injunction / ban / prohibitory order',
+          radical: '木',
+          radical_name_th: 'หมวดต้นไม้ (木字旁)',
+          stroke_count: 18,
+          mnemonic: 'ป่าไม้ศักดิ์สิทธิ์ห้ามล่วงล้ำ (禁) ภายใต้คำสั่งเด็ดขาดของเจ้าเมือง (令) = คำสั่งห้าม',
+          kid_mnemonic: 'ป้ายสีแดงเขียนสัญลักษณ์กากบาทห้ามเข้า = 禁令',
+          body_gesture: 'ทำสองแขนไขว้กันเป็นรูปกากบาทขนาดใหญ่หน้าระดับอก'
+        },
+        {
+          id: 'hsk4_5120',
+          hanzi: '防患未然',
+          pinyin: 'fánghuànwèirán',
+          display_pinyin: 'fánghuànwèirán',
+          pinyin_tone: 'fang2huan4wei4ran2',
+          meaning_th: 'ป้องกันภัยก่อนที่เหตุร้ายจะเกิดขึ้น (Nip trouble in the bud / Take precautions)',
+          meaning_en: 'prevent trouble before it happens / take preventive measures',
+          radical: '阝',
+          radical_name_th: 'หมวดหูซ้าย (左耳旁)',
+          stroke_count: 35,
+          mnemonic: 'ป้องกันกำบัง (防) ภัยพิบัติอันตราย (患) ในยามที่มันยังไม่เกิดขึ้น (未然) = ป้องกันก่อนเกิดเหตุ',
+          kid_mnemonic: 'พกร่มติดกระเป๋าก่อนออกจากบ้านแม้ท้องฟ้าจะยังไม่มีเมฆฝน = 防患未然',
+          body_gesture: 'กางร่มเหนือศีรษะเตรียมพร้อมรับมือทุกสถานการณ์'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 防患未然 (fánghuànwèirán)',
+        description_th: 'fáng (เสียง 2) huàn (เสียง 4) wèi (เสียง 4) rán (เสียง 2)',
+        example: '建立合规审查机制，防患于未然 (Jiànlì héguī shěnchá jīzhì, fánghuànyùwèirán)',
+        fun_metaphor: 'เหมือนมีเกราะป้องกันล่วงหน้า ทำให้หลบภัยได้ทันท่วงที',
+        reassurance: 'สำนวนยอดฮิตที่หัวหน้าฝ่ายกำกับดูแลความเสี่ยง (Chief Risk Officer) ต้องใช้เสมอ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการเยียวยาและป้องกัน: 申请司法禁令，切实防患未然',
+        formula: '依法向法院申请诉前禁令与损害赔偿，完善企业跨国合规体系，防患未然',
+        explanation_th: 'ใช้ในการนำเสนอรายงานระบบควบคุมภายในและยื่นคำร้องขอคุ้มครองชั่วคราว',
+        patterns: [
+          {
+            formula: '申请司法禁令，获得法律救济。',
+            zh: '为防止侵权产品进入市场造成不可挽回的损失，原告成功向法院申请了行为禁令与财产保全。',
+            pinyin: 'Wèi fángzhǐ qīnquán chǎnpǐn jìnrù shìchǎng zàochéng bùkě wǎnhuí de sǔnshī, yuángào chénggōng xiàng fǎyuàn shēnqǐng le xíngwéi jìnlìng yǔ cáichǎn bǎoquán.',
+            th: 'เพื่อป้องกันไม่ให้สินค้าละเมิดลิขสิทธิ์เข้าสู่ตลาดจนก่อความเสียหายที่ไม่อาจกอบกู้ได้ โจทก์ได้ยื่นขอคำสั่งห้ามชั่วคราวและอายัดทรัพย์สินต่อศาลได้สำเร็จ',
+            en: 'To prevent infringing products from entering the market causing irreparable harm, the plaintiff successfully obtained a preliminary injunction and asset preservation.'
+          },
+          {
+            formula: '强化合规审查，做到防患未然。',
+            zh: '跨国企业必须建立端到端的全球合规风控审查机制，切实做到防患未然。',
+            pinyin: 'Kuàguó qǐyè bìxū jiànlì duāndàoduān de quánqiú héguī fēngkòng shěnchá jīzhì, qièshí zuòdào fánghuànwèirán.',
+            th: 'วิสาหกิจข้ามชาติต้องสร้างกลไกการตรวจสอบการปฏิบัติตามกฎหมายและบริหารความเสี่ยงระดับโลกแบบครบวงจร เพื่อป้องกันเหตุร้ายก่อนเกิดขึ้นได้อย่างแท้จริง',
+            en: 'Multinational enterprises must establish end-to-end global compliance risk review mechanisms to effectively prevent trouble before it occurs.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '首席合规官 (Chief Compliance Officer) 🛡️',
+          zh: '各位业务总裁，随着海外业务快速扩张，我们必须将合规风控提升到企业最高战略高度。',
+          pinyin: 'Gèwèi yèwù zǒngcái, suízhe hǎiwài yèwù kuàisù kuòzhāng, wǒmen bìxū jiāng héguī fēngkòng tíshēng dào qǐyè zuìgāo zhànlüè gāodù.',
+          th: 'ท่านประธานสายธุรกิจทุกท่าน เนื่องจากการขยายธุรกิจในต่างประเทศเติบโตอย่างรวดเร็ว เราต้องยกระดับการกำกับดูแลความเสี่ยงด้านกฎหมายสู่จุดสูงสุดของยุทธศาสตร์องค์กรครับ',
+          en: 'Business presidents, with the rapid expansion of overseas business, we must elevate compliance and risk control to our highest corporate strategic height.',
+          audio_trigger: 't4_u51_l04_d01'
+        },
+        {
+          speaker: '海外事业部总裁 (President Overseas) 🌍',
+          zh: '上个月我们的竞品在欧洲遭遇了反垄断审查和巨额罚款禁令，这给我们敲响了警钟。',
+          pinyin: 'Shàng gè yuè wǒmen de jìngpǐn zài Ōuzhōu zāoyù le fǎnlǒngduàn shěnchá yǔ jù\'é fákuǎn jìnlìng, zhè gěi wǒmen qiāoxiǎng le jǐngzhōng.',
+          th: 'เมื่อเดือนก่อน สินค้าคู่แข่งของเราในยุโรปถูกตรวจสอบการผูกขาดทางการค้า โดนปรับมหาศาลและออกคำสั่งห้ามขาย สิ่งนี้ส่งเสียงสัญญาณเตือนภัยแก่เราอย่างชัดเจนครับ',
+          en: 'Last month, our competitor in Europe faced antitrust investigations, massive fines, and injunctions, which sounded an alarm bell for us.',
+          audio_trigger: 't4_u51_l04_d02'
+        },
+        {
+          speaker: '首席合规官 (Chief Compliance Officer) 🛡️',
+          zh: '是的。我们要建立事前合规审查、事中法律救济和事后责任追究的全流程闭环，真正做到防患未然。',
+          pinyin: 'Shì de. Wǒmen yào jiànlì shìqián héguī shěnchá, shìzhōng fǎlǜ jiùjì hé shìhòu zérèn zhuījiū de quánliúchéng bìhuán, zhēnzhèng zuòdào fánghuànwèirán.',
+          th: 'ถูกต้องครับ เราต้องสร้างวงจรปิดเต็มรูปแบบ ตั้งแต่การตรวจสอบกฎเกณฑ์ล่วงหน้า การเยียวยาทางกฎหมายระหว่างทาง และการไล่เบี้ยความรับผิดชอบย้อนหลัง เพื่อป้องกันภัยก่อนเกิดเหตุได้อย่างแท้จริง',
+          en: 'Yes. We must establish full-process closed loops of ex-ante compliance reviews, interim legal remedies, and ex-post accountability to genuinely nip troubles in the bud.',
+          audio_trigger: 't4_u51_l04_d03'
+        },
+        {
+          speaker: '海外事业部总裁 (President Overseas) 🌍',
+          zh: '行稳致远！只要筑牢合规底线，实事求是、诚信履约，我们的出海之路必将越来越宽广！',
+          pinyin: 'Xíngwěnzhìyuǎn! Zhǐyào zhùláo héguī dǐxiàn, shíshìqiúshì, chéngxìn lǚyuē, wǒmen de chūhǎi zhī lù bìjiāng yuèláiyuè kuānguǎng!',
+          th: 'ก้าวอย่างมั่นคงย่อมไปได้ไกล! ขอเพียงสร้างฐานรากแห่งเส้นตายความถูกต้องทางกฎหมาย ยึดความจริงเป็นหลัก และปฏิบัติตามสัญญาด้วยความซื่อสัตย์ เส้นทางสู่เวทีโลกของเราย่อมจะกว้างไกลยิ่งขึ้นอย่างแน่นอนครับ!',
+          en: 'Steady progress ensures far-reaching success! As long as we solidify compliance bottom lines, seek truth from facts, and perform contracts faithfully, our global journey will surely grow broader!',
+          audio_trigger: 't4_u51_l04_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'สำนวน "防患未然" (fánghuànwèirán) ในการบริหารความเสี่ยงองค์กรเทียบเท่ากับหลักการใด?',
+          options: [
+            'Proactive Risk Prevention (การวางมาตรการป้องกันและตัดไฟแต่ต้นลมก่อนเกิดความเสียหาย)',
+            'Post-crisis Disaster Recovery (การรอให้เกิดเหตุก่อนแล้วค่อยตามไปดับไฟ)',
+            'Bankruptcy Liquidation (การชำระบัญชีล้มละลาย)',
+            'Advertising Campaign (การยิงโฆษณาประชาสัมพันธ์)'
+          ],
+          correct_index: 0,
+          explanation_th: '"防患未然" คือ การป้องกันล่วงหน้าเพื่อไม่ให้วิกฤตเกิดขึ้น ประหยัดต้นทุนกว่าการมาแก้ไขภายหลังมหาศาล',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจแก่นแท้แห่งการบริหารความเสี่ยงระดับโลก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ยื่นคำสั่งห้ามของศาล ป้องกันภัยก่อนเกิดเหตุ"',
+          tokens: ['做到防患未然', '申请司法禁令'],
+          correct_sequence: ['申请司法禁令', '做到防患未然'],
+          pinyin: 'Shēnqǐng sīfǎ jìnlìng, zuòdào fánghuànwèirán.',
+          meaning_th: 'ยื่นคำสั่งห้ามของศาล ป้องกันภัยก่อนเกิดเหตุ',
+          explanation_th: 'มาตรการทางกฎหมาย (申请司法禁令) + วัตถุประสงค์ป้องกัน (做到防患未然)',
+          encouragement: 'จัดประโยคมาตรการคุ้มครองฉุกเฉินได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "患" (huàn - ภัย/ความกังวล) ใน "防患未然" มีหมวดนำ "心" (หัวใจ) ด้านล่าง สื่อถึงอะไร?',
+          options: [
+            'สิ่งที่ทิ่มแทงหัวใจให้เกิดความหวาดระแวงและทุกข์กังวลใจจากอันตราย',
+            'ความรักความเมตตา',
+            'ความเบิกบานใจ',
+            'ความกล้าหาญ'
+          ],
+          correct_index: 0,
+          explanation_th: '"心" (หัวใจ) โดนร้อยรัดทิ่มแทง สื่อถึงภัยพิบัติและความทุกข์กังวล (隐患/灾患) จึงต้องป้องกันก่อนเกิด (防患未然)',
+          encouragement: 'จำรากศัพท์ได้อย่างลึกซึ้งและเฉียบคม!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำสั่งศาลที่สั่งห้ามไม่ให้ผู้ใดกระทำการละเมิดหรือขายสินค้าชั่วคราว เรียกว่าอะไร?',
+          options: [
+            '禁令 (jìnlìng - Injunction)',
+            '特赦 (tèshè - การอภัยโทษ)',
+            '保释 (bǎoshì - การประกันตัว)',
+            '通缉 (tōngjī - หมายจับ)'
+          ],
+          correct_index: 0,
+          explanation_th: '"禁令" (Injunction) คือ คำสั่งศาลห้ามกระทำการใดการหนึ่งเพื่อระงับความเสียหายทันที',
+          encouragement: 'เข้าใจเครื่องมือระงับยับยั้งทางกฎหมายอย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในรายงานประจำปีต่อคณะกรรมการบริษัท ประโยคใดสรุปความสำเร็จของระบบการปฏิบัติตามกฎหมายได้อย่างสมบูรณ์แบบที่สุด?',
+        options: [
+          '本年度公司全面深化全球合规治理，成功获得多项司法禁令与法律救济，切实做到了防患未然，保障企业行稳致远。',
+          '两国领导人达成广泛共识，正式签署了绿色经贸合作备忘录。',
+          '中方对此提出严正交涉，坚定捍卫领土主权，绝不容许触碰底线！',
+          '各国应当秉持求同存异精神，展现大国担当，积极参与全球治理，携手构建人类命运共同体。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "全球合规治理", "司法禁令与法律救济", "防患未然" และ "行稳致远" ได้อย่างสมบูรณ์แบบตามขนบภาษาธุรกิจระดับสูง'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้อำนวยการฝ่ายกำกับดูแลความเสี่ยงสากล (Global Chief Compliance Officer)',
+        message_th: 'ขอแสดงความยินดีด้วยอย่างยิ่ง! คุณได้พิชิตหน่วยเรียนทรัพย์สินทางปัญญา การดำเนินคดีข้ามแดน และการบริหารความเสี่ยงครบถ้วน ยืนหยัดอย่างสง่างามบนเวทีกฎหมายสากล!',
+        xp_reward: 150
+      }
+    }
+  ]
+};

@@ -4,7 +4,7 @@
 
 > 💡 **หมายเหตุสำคัญจาก Senior PM (Architectural Clarification):**  
 > ใน Phase 2 นี้ เป็นการสร้างบทเรียน Unit 1 ในเชิง **Technical Proof of Concept (PoC)** เพื่อทดสอบความสมบูรณ์ของคอมโพเนนต์ Flashcard, Dialogue, Grammar และ Quiz ร่วมกันก่อน  
-> **ไม่ใช่ลำดับจริงของผู้เรียนใหม่:** สำหรับผู้เรียนที่เริ่มต้นจากศูนย์ (Zero-knowledge) เมื่อแอปเปิดตัวจริง เส้นทาง Onboarding จะพาเข้าสู่ [Tier 0: Pinyin Mastery](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_04_tier0_pinyin_mastery.md) ก่อนเสมอ
+> **ไม่ใช่ลำดับจริงของผู้เรียนใหม่:** สำหรับผู้เรียนที่เริ่มต้นจากศูนย์ (Zero-knowledge) เมื่อแอปเปิดตัวจริง เส้นทาง Onboarding จะพาเข้าสู่ [Tier 0: Pinyin Mastery](./phase_04_tier0_pinyin_mastery.md) ก่อนเสมอ
 
 ---
 
@@ -16,7 +16,7 @@
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
 ### 1. โครงสร้างข้อมูลบทเรียน (Unit 1 Data JSON)
-- [ ] นำเข้าและตรวจสอบไฟล์ `src/data/lessons/tier1/unit01_greetings.json` ตาม Schema:
+- [x] นำเข้าและตรวจสอบไฟล์ `src/data/lessons/tier1/unit01_greetings.json` ตาม Schema:
   - **Lesson 1.1:** สวัสดี & ขอบคุณ (`你好`, `谢谢`, `不客气`, `再见`)
     - *Tone Sandhi Check:* กำกับเสียงเปลี่ยนของ `不客气` เป็น `bú kèqi`
   - **Lesson 1.2:** ฉันคือ... คุณชื่ออะไร? (`我`, `叫`, `什么`, `名字`)
@@ -25,7 +25,7 @@
   - **Lesson 1.4 (Boss Challenge):** จำลองสถานการณ์แนะนำตัวในที่ทำงานจริง
 
 ### 2. คอมโพเนนต์การ์ดคำศัพท์ 3 ภาษา (Trilingual VocabCard)
-- [ ] พัฒนา `src/components/lesson/VocabCard.tsx`:
+- [x] พัฒนา `src/components/lesson/VocabCard.tsx`:
   - แสดงตัวอักษรจีนขนาดใหญ่ไม่ต่ำกว่า 36px (`2.25rem`) เพื่อความคมชัดของเส้นขีด
   - **Accessible Tone Indicators:** วรรณยุกต์พินอินกำกับสีควบคู่สัญลักษณ์คลื่นเสียง (¯ ˊ ˇ ˋ) หรือตัวเลข รองรับผู้มีภาวะตาบอดสี
   - คำแปล 2 ภาษา: ภาษาไทยเป็นธรรมชาติ + ภาษาอังกฤษสากล
@@ -36,25 +36,28 @@
   - รองรับการแตะเพื่อพลิกการ์ด 3D ดูตัวอย่างประโยคบริบทจริง
 
 ### 3. ตัวเล่นบทสนทนาจำลอง (Interactive Dialogue Player)
-- [ ] พัฒนา `src/components/lesson/DialoguePlayer.tsx`:
+- [x] พัฒนา `src/components/lesson/DialoguePlayer.tsx`:
   - ดีไซน์สไตล์ Modern Chat Bubble สลับฝั่งคู่สนทนา A - B
   - ปุ่มเล่นเสียงต่อเนื่องทั้งบท หรือแตะฟังทีละประโยค
   - ไฮไลต์ข้อความและคำศัพท์แบบคาราโอเกะขณะที่เสียงกำลังเล่น
   - ปุ่มสลับการแสดงผล 3 ระดับ: "อักษรจีน+พินอิน+ไทย" / "อักษรจีน+พินอิน" / "อักษรจีนล้วน" เพื่อท้าทายผู้เรียน
 
 ### 4. ตัวอธิบายไวยากรณ์จิ๋ว 1 นาที (Grammar Bite Card)
-- [ ] พัฒนา `src/components/lesson/GrammarBite.tsx`:
+- [x] พัฒนา `src/components/lesson/GrammarBite.tsx`:
   - การเปรียบเทียบโครงสร้างประโยค 3 ภาษา (จีน vs ไทย vs อังกฤษ)
   - สรุปสั้น กระชับ จบใน 1 หน้าจอ ไม่ต้องเลื่อนยาว
+  - Visual Lego Formula Visualizer แสดงสูตรประโยคสำเร็จรูปแยกสีตามหมวดคำ
+  - กฎการผันเสียงวรรณยุกต์ (Tone Sandhi) พร้อมภาพจำสนุกๆ 🎢 และกล่องคลายกังวล 💖
+  - ปุ่มฟังเสียง Native Voice พร้อมตัวสลับความเร็ว 1.0x / 0.75x (Hitbox $\ge 44\text{px}$)
 
 ### 5. มินิเกมทดสอบท้ายบท (Interactive Quiz Engine)
-- [ ] พัฒนา `src/components/lesson/QuizContainer.tsx` รองรับ 4 โหมด:
+- [x] พัฒนา `src/components/lesson/QuizContainer.tsx` รองรับ 4 โหมด:
   - **Tone & Sound Matcher:** ฟังเสียงแล้วเลือกพินอิน/วรรณยุกต์ที่ถูกต้อง
   - **Word Meaning Match:** จับคู่ตัวอักษรจีนกับความหมายภาษาไทย
   - **Sentence Builder:** แตะเรียงคำศัพท์ในกล่องให้เป็นประโยคที่ถูกต้อง
   - **Mini Hanzi Stroke:** ทดสอบลำดับขีดตัวอักษร 1 ตัวสำคัญ
-- [ ] **Silent Mode Adaptive Logic:** หากเปิด Silent Mode ข้อสอบข้อฟังเสียงจะถูกแปลงเป็นโหมดดูพินอินจับคู่ความหมายอัตโนมัติ
-- [ ] **Boss Victory & Milestone Card:** เมื่อผ่าน Lesson 1.4 Boss Challenge แสดงหน้าต่างชัยชนะพร้อมบัตรเกียรติยศพรีวิวสำหรับกดแชร์
+- [x] **Silent Mode Adaptive Logic:** หากเปิด Silent Mode ข้อสอบข้อฟังเสียงจะถูกแปลงเป็นโหมดดูพินอินจับคู่ความหมายอัตโนมัติ
+- [x] **Boss Victory & Milestone Card:** เมื่อผ่าน Lesson 1.4 Boss Challenge แสดงหน้าต่างชัยชนะพร้อมบัตรเกียรติยศพรีวิวสำหรับกดแชร์
 
 ---
 
@@ -72,5 +75,5 @@
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 2
-เมื่อผู้ใช้สามารถเปิดเว็บขึ้นมา กดเลือก Unit 1 เรียนเนื้อหาตั้งแต่ Lesson 1.1 ถึง 1.4 ผ่านแบบทดสอบทั้งในโหมดปกติและ Silent Mode ทดสอบระบบซ่อนพินอินได้ และเห็นหน้าสรุปคะแนนโดยไม่มีข้อผิดพลาดบน Console จึงถือว่า Phase 2 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 3: Gamification & SRS](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_03_gamification_srs.md)
+เมื่อผู้ใช้สามารถเปิดเว็บขึ้นมา กดเลือก Unit 1 เรียนเนื้อหาตั้งแต่ Lesson 1.1 ถึง 1.4 ผ่านแบบทดสอบทั้งในโหมดปกติและ Silent Mode ทดสอบระบบซ่อนพินอินได้ และเห็นหน้าสรุปคะแนนโดยไม่มีข้อผิดพลาดบน Console จึงถือว่า Phase 2 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 3: Gamification & SRS](./phase_03_gamification_srs.md)
 

@@ -1,3 +1,22 @@
+---
+plan_type: "ROADMAP_PHASE"
+phase: "04"
+created_at: "2026-09-18"
+updated_at: "2026-09-21"
+status: "COMPLETED"
+priority: "HIGH"
+target_engines: ["src/engines/audio/voiceHealthEngine.ts"]
+target_components: [
+  "src/components/layout/WelcomeModal.tsx",
+  "src/components/layout/VoiceHealthModal.tsx",
+  "src/components/games/ToneCoaster.tsx",
+  "src/components/games/EchoMicRecorder.tsx",
+  "src/components/games/MinimalPairBoard.tsx",
+  "src/components/games/RadicalPuzzle.tsx",
+  "src/components/layout/MilestonePassportModal.tsx"
+]
+---
+
 # 🌱 Phase 4: Tier 0 Pinyin Mastery (Pre-HSK 6 Units & Onboarding)
 
 เอกสารแผนปฏิบัติการและรายการตรวจสอบอย่างละเอียดสำหรับ **Phase 4** ของการพัฒนา Hanzero: ระบบปูพื้นฐานการออกเสียงพินอิน วรรณยุกต์ และอักษรจีนเบื้องต้นแบบ Dual-Track (เรียนเสียงคู่คำจริง) พร้อม **ระบบ Onboarding ต้อนรับผู้เรียนเข้าสู่เส้นทางที่ถูกต้อง**
@@ -11,16 +30,19 @@
 
 ## 📋 แผนงานปฏิบัติการย่อย (Actionable Checklist)
 
-### 1. ระบบต้อนรับผู้เรียนและเลือกเส้นทาง (Onboarding & Welcome Flow)
-- [ ] พัฒนา `src/components/layout/WelcomeModal.tsx`:
-  - แสดงผลเมื่อเข้าใช้งานครั้งแรก (ตรวจไม่พบข้อมูลใน LocalStorage)
+### 1. ระบบต้อนรับผู้เรียนและเลือกเส้นทาง พร้อมระบบตรวจสุขภาพเสียง (Onboarding & Voice Health Flow)
+- [x] พัฒนา `src/components/layout/WelcomeModal.tsx` ร่วมกับ `VoiceHealthModal.tsx`:
+  - แสดงผลเมื่อเข้าใช้งานครั้งแรก (ตรวจไม่พบข้อมูลใน LocalStorage หรือยังไม่เคยทำ Onboarding)
   - ตัวเลือก 2 เส้นทาง:
-    - 🐼 **"เริ่มจาก 0 ไม่เคยเรียนจีนมาก่อน" (แนะนำ):** นำทางเข้าสู่ Tier 0 Unit 0.1 ทันที
+    - 🐰 **"เริ่มจาก 0 ไม่เคยเรียนจีนมาก่อน" (แนะนำ):** นำทางเข้าสู่ Tier 0 Unit 0.1 ทันที
     - 🚀 **"พอรู้พินอินแล้ว ข้ามไปบทสนทนา":** ปลดล็อกข้ามไปที่ Tier 1 Unit 1.1 ได้ทันที
-  - สวิตช์ตั้งค่าเสียงเบื้องต้น ("ตอนนี้เปิดเสียงได้หรือไม่?")
+  - **Voice Health Quick Check (Zero-MP3):**
+    - เรียก `ensureVoicesReady()` ตรวจจับชุดเสียงภาษาจีนของ OS (Optimal/Good/Fallback/Unsupported)
+    - หากเครื่องยังไม่มีเสียงจีน แสดงการ์ดแนะนำติดตั้งเสียงแท้ (Windows/Mac/Android/iOS) ภายใน 1 นาที
+    - สวิตช์ตั้งค่าเสียงเบื้องต้น ("ตอนนี้เปิดเสียงได้หรือไม่?") พร้อมปุ่มทดสอบฟังเสียงกระต่ายทู่ทู่
 
-### 2. นำเข้าข้อมูลบทเรียน Tier 0 (6 Units ครบตามแม่บทหลักสูตร) พร้อม Static Audio Pack
-- [ ] นำเข้าไฟล์ข้อมูล `src/data/lessons/tier0/`:
+### 2. นำเข้าข้อมูลบทเรียน Tier 0 (6 Units ครบตามแม่บทหลักสูตร) พร้อมระบบเสียง Zero-MP3 Cascade
+- [x] นำเข้าไฟล์ข้อมูล `src/data/lessons/tier0/`:
   - **`unit00_01_lips_tongue.json`:**
     - พยัญชนะริมฝีปาก & ปลายลิ้น: `b`, `p`, `m`, `f`, `d`, `t`, `n`, `l`
     - สระเดี่ยวพื้นฐาน: `a`, `o`, `e`
@@ -41,35 +63,41 @@
     - 🔤 คำแรกในชีวิต: `饭` (fàn), `这` (zhè), `家` (jiā), `问` (wèn)
   - **`unit00_06_strokes_radicals.json`:**
     - 8 เส้นขีดพื้นฐานจีน และ 6 หมวดนำตั้งต้น (`亻`, `女`, `子`, `口`, `氵`, `木`)
-    - 🏆 Tier 0 Grand Boss Quest: "ไขรหัสลับเปาเปา"
-- [ ] ติดตั้งชุดไฟล์เสียงคนจริง **Pre-rendered Static Audio Pack (`assets/audio/tier0/`)** สำหรับทุกพยัญชนะ/สระ/วรรณยุกต์ การันตีเสียงชัด 100% แม้ไม่มีเน็ตหรือเบราว์เซอร์ไม่มีเสียงจีน
+    - 🏆 Tier 0 Grand Boss Quest: "ไขรหัสลับน้องกระต่ายทู่ทู่"
+- [x] สถาปัตยกรรมเสียง **Zero-MP3 Pure Neural Voice (อ้างอิง `docs/architecture/zero_mp3_audio_health_blueprint.md`)**:
+  - ตัดการพึ่งพาไฟล์ MP3 ทั้งหมด (ประหยัดพื้นที่ Bundle/PWA 15–30 MB)
+  - ใช้ **3-Tier Cascade**: (1) OS Neural TTS (Xiaoxiao/Siri/Google) $\rightarrow$ (2) Youdao HD Stream $\rightarrow$ (3) Web Audio Tone Contour
 
-### 3. มินิเกมรถไฟเหาะ 4 วรรณยุกต์ (Panda Tone Coaster)
-- [ ] พัฒนา `src/components/games/ToneCoaster.tsx`:
+### 3. มินิเกมรถไฟเหาะ 4 วรรณยุกต์ (Bunny Tone Coaster)
+- [x] พัฒนา `src/components/games/ToneCoaster.tsx`:
   - กราฟิกภาพเคลื่อนไหวแสดงรูปคลื่นเสียง 4 รูปแบบ (1: สูงราบเรียบ, 2: พุ่งทะยาน, 3: โค้งดิ่งแล้วเด้งขึ้น, 4: ทิ้งดิ่งลงมา)
-  - เสียงนำการออกเสียงตามระดับ Pitch สูง-ต่ำ (รองรับ Static Audio Pack)
+  - เสียงนำการออกเสียงตามระดับ Pitch สูง-ต่ำ (รองรับ Web Audio Tone Contour + Speech Synthesis)
   - มินิเกมฟังเสียงที่สุ่มมา แล้วผู้เรียนแตะเลือกรางรถไฟวรรณยุกต์ที่ถูกต้อง (ไม่มีการหักหัวใจเมื่อตอบผิด)
 
 ### 4. ระบบฝึกพูดและเทียบเสียงตนเอง (Shadowing Echo Mic)
-- [ ] พัฒนา `src/components/games/EchoMicRecorder.tsx`:
+- [x] พัฒนา `src/components/games/EchoMicRecorder.tsx`:
   - ปุ่มไมโครโฟนสำหรับกดค้างเพื่ออัดเสียงผู้เรียน (2 วินาที)
   - เล่นเสียงต้นฉบับ Native แล้วตามด้วยเสียงอัดของผู้เรียนทันที (Client-side MediaRecorder)
   - ให้ผู้เรียนฝึกฟังและปรับแต่งรูปปากและวรรณยุกต์ด้วยตัวเองโดยไม่กดดัน
 
 ### 5. กระดานเปรียบเทียบเสียงคู่ก้ำกึ่ง (Minimal Pairs Board)
-- [ ] พัฒนา `src/components/games/MinimalPairBoard.tsx`:
+- [x] พัฒนา `src/components/games/MinimalPairBoard.tsx`:
   - โหมดฟังเทียบเสียงที่คนไทยมักสับสน (`b` vs `p`, `shì` vs `sì`, `u` vs `ü`)
   - ภาพแอนิเมชันรูปปากและตำแหน่งลิ้นช่วยอธิบายความต่าง
   - เลย์เอาต์ Responsive ปรับเป็น Vertical Stack อัตโนมัติบนหน้าจอมือถือเล็ก (<400px)
 
 ### 6. ด่านประกอบร่างอักษรจีน (Radical Puzzle Builder)
-- [ ] พัฒนา `src/components/games/RadicalPuzzle.tsx`:
-  - นำหมวดนำ (เช่น `女` หญิง + `子` ลูก) ลากมารวมกันเป็นตัวอักษร `好` (ดี) พร้อมคำอธิบายความหมายรากศัพท์
+- [x] พัฒนา `src/components/games/RadicalPuzzle.tsx`:
+  - นำหมวดนำ (เช่น `女` หญิง + `子` ลูก ➔ `好` ดี, `木` + `木` ➔ `林` ป่า, `饣` + `反` ➔ `饭` ข้าว) ประกอบร่างเลโก้อักษรจีน
+  - ครอบคลุม 3 โครงสร้างมิติ (ซ้าย-ขวา, บน-ล่าง, กึ่งล้อมรอบ) และแยกแยะคำผสมความหมาย (会意字) vs คำผสมเสียง (形声字)
+  - คำอธิบายภาพจำช่วยจำ (Mnemonic) และเคล็ดวิชาหลบขีด (Spatial Yielding: 偏旁变形与避让)
+  - Safe Practice Zone 100% ไม่หักหัวใจเมื่อตอบผิด พร้อมเสียงพี่เลี้ยงกระต่ายทู่ทู่ปลอบใจ
 
 ### 7. บัตรเกียรติยศส่งต่อความสำเร็จ (Shareable Hanzero Passport)
-- [ ] พัฒนา `src/components/layout/MilestonePassportModal.tsx`:
-  - การ์ดความสำเร็จเมื่อจบ Tier 0 แสดงตราประทับแพนด้าเปาเปา, ชื่อผู้เรียน, จำนวนเสียงพินอินที่ผ่าน
-  - ปุ่มส่งออกเป็นไฟล์รูปภาพ (Canvas-to-Image) หรือแชร์ลง Social Media ทันทีผ่าน Web Share API
+- [x] พัฒนา `src/components/layout/MilestonePassportModal.tsx`:
+  - การ์ดความสำเร็จเมื่อจบ Tier 0 แสดงตราประทับหยกแดงน้องกระต่ายทู่ทู่, ชื่อผู้เรียน, สถิติ 23 พยัญชนะ 24 สระ 5 วรรณยุกต์ 8 เส้นขีด 6 หมวดนำ และ 5 อักษรจีนแรกในชีวิต
+  - ระบบ Native Canvas 2D High-DPI Exporter คมชัดสูง 1080x1440px พร้อมระบบ Pre-render ป้องกัน iOS Safari Share Gesture หมดอายุ
+  - ปุ่มส่งออกเป็นไฟล์รูปภาพ PNG หรือแชร์เข้าแอปอื่นทันทีผ่าน Web Share API พร้อมระบบคัดลอกข้อความ
 
 ---
 
@@ -78,16 +106,17 @@
 | จุดตรวจสอบ | วิธีการทดสอบ (How to Verify) | เกณฑ์การผ่าน (Acceptance Criteria) |
 | :--- | :--- | :--- |
 | **1. First-Run Welcome Flow** | เคลียร์แคชเปิดเว็บครั้งแรก | หน้าต่าง WelcomeModal ปรากฏขึ้น สามารถเลือกเส้นทาง "เริ่มจาก 0" และพาเข้า Tier 0 ด่านแรกได้ถูกต้อง |
-| **2. Safe Practice Zero Penalty** | จงใจกดเลือกวรรณยุกต์ผิดใน Tone Coaster 10 ครั้ง | หัวใจไม่ลดลงแม้แต่ดวงเดียว มีข้อความเฉลยและแอนิเมชันให้ลองใหม่ |
-| **3. Offline Phoneme Audio** | ปิดอินเทอร์เน็ตแล้วกดฟังเสียงสระ/พยัญชนะใน Tier 0 | เสียงจาก Static Audio Pack เล่นได้คมชัด 100% |
-| **4. Echo Mic Shadowing** | กดอัดเสียงพูดตาม 2 วินาทีใน Echo Mic | ระบบเล่นเสียงต้นฉบับสลับกับเสียงผู้เรียนทันที ไม่มีค้าง |
-| **5. Tone Sandhi 3+3 & Half-3** | กดฟังคำว่า `你好` ใน Unit 0.3 | เสียงที่สังเคราะห์ต้องผันเป็นเสียง 2+3 (`ní hǎo`) ชัดเจน ไม่ใช่เสียง 3 ทั้งคู่ และมีคำอธิบาย Half-3 |
-| **6. Compound & Nasal Finals** | ทดสอบบทเรียน Unit 0.5 ในหน้า Quest Map | พบบทเรียนสระผสมและสระนาสิก (`an`, `en`, `ang`, `iu`, `ui`) ครบถ้วนตามแม่บท |
-| **7. Shareable Passport Card** | เล่นด่าน Boss Quest Unit 0.6 จนจบ แล้วกดปุ่มแชร์ | สร้างรูป Passport Card สวยงามพร้อมดาวน์โหลดหรือแชร์เข้าแอปอื่นได้สำเร็จ |
+| **2. Voice Health Detection** | เปิดทดสอบบนเบราว์เซอร์ต่างๆ | ตรวจจับเกรดเสียงถูกต้อง (Optimal/Good/Fallback) และแนะนำการติดตั้งเสียงได้อย่างตรงรุ่น |
+| **3. Safe Practice Zero Penalty** | จงใจกดเลือกวรรณยุกต์ผิดใน Tone Coaster 10 ครั้ง | หัวใจไม่ลดลงแม้แต่ดวงเดียว มีข้อความเฉลยและแอนิเมชันให้ลองใหม่ |
+| **4. Zero-MP3 Audio Cascade** | ปิดอินเทอร์เน็ตแล้วกดฟังเสียงสระ/พยัญชนะใน Tier 0 | หากมีเสียง OS จะพูดได้ชัด 100% หากไม่มีเสียง จะดังเป็น Sine Wave Tone Contour ไม่เงียบใบ้ |
+| **5. Echo Mic Shadowing** | กดอัดเสียงพูดตาม 2 วินาทีใน Echo Mic | ระบบเล่นเสียงต้นฉบับสลับกับเสียงผู้เรียนทันที ไม่มีค้าง |
+| **6. Tone Sandhi 3+3 & Half-3** | กดฟังคำว่า `你好` ใน Unit 0.3 | เสียงสังเคราะห์ผันเป็นเสียง 2+3 (`ní hǎo`) ชัดเจน ไม่ใช่เสียง 3 ทั้งคู่ และมีคำอธิบาย Half-3 |
+| **7. Compound & Nasal Finals** | ทดสอบบทเรียน Unit 0.5 ในหน้า Quest Map | พบบทเรียนสระผสมและสระนาสิก (`an`, `en`, `ang`, `iu`, `ui`) ครบถ้วนตามแม่บท |
+| **8. Shareable Passport Card** | เล่นด่าน Boss Quest Unit 0.6 จนจบ แล้วกดปุ่มแชร์ | สร้างรูป Passport Card สวยงามพร้อมดาวน์โหลดหรือแชร์เข้าแอปอื่นได้สำเร็จ |
 
 ---
 
 ## 🛑 Definition of Done (DoD) สำหรับ Phase 4
-เมื่อผู้เรียนใหม่ถูกพาเข้าสู่เส้นทาง Tier 0 อย่างเป็นมิตร ผ่านครบทั้ง **6 Units** ปูพื้นฐานเสียงพินอิน สระเดี่ยว สระผสม และสระนาสิกโดยไม่เสียหัวใจ มีระบบ Static Audio และ Echo Mic ช่วยฝึกออกเสียง ได้รับ Passport Card และปลดล็อกประตูเชื่อมสู่ Tier 1 ที่พัฒนาไว้ใน Phase 2 จึงถือว่า Phase 4 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 5: Tier 1 Content Rollout](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_05_tier1_content_rollout.md)
+เมื่อผู้เรียนใหม่ถูกพาเข้าสู่เส้นทาง Tier 0 อย่างเป็นมิตร ผ่านครบทั้ง **6 Units** ปูพื้นฐานเสียงพินอิน สระเดี่ยว สระผสม และสระนาสิกโดยไม่เสียหัวใจ มีระบบ Static Audio และ Echo Mic ช่วยฝึกออกเสียง ได้รับ Passport Card และปลดล็อกประตูเชื่อมสู่ Tier 1 ที่พัฒนาไว้ใน Phase 2 จึงถือว่า Phase 4 เสร็จสมบูรณ์และพร้อมเข้าสู่ [Phase 5: Tier 1 Content Rollout](./phase_05_tier1_content_rollout.md)
 
 

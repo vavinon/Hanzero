@@ -1,0 +1,895 @@
+import { UnitLessonData } from '../../src/types/lesson';
+
+export const unit46Data: UnitLessonData = {
+  unit_id: 'tier4_u46',
+  tier: 4,
+  unit_number: 46,
+  title: {
+    zh: '文言虚词在现代汉语中的沉淀',
+    th: 'คำเชื่อมและอนุภาคภาษาจีนโบราณในภาษาปัจจุบัน (文言虚词)',
+    en: 'Classical Chinese Function Words in Modern Usage'
+  },
+  description: 'ศึกษาคำช่วยและคำเชื่อมไวยากรณ์โบราณ 8 ตัวสำคัญ (之、乎、者、也、以、于、而、其) ที่ยังคงใช้ในภาษาเขียนทางการและสำนวนชั้นสูง',
+  lessons: [
+    {
+      lesson_id: 't4_u46_l01',
+      lesson_number: 1,
+      title: {
+        zh: '之与乎的文言遗风',
+        th: 'กลิ่นอายโบราณของ 之 (zhī) และ 乎 (hū)',
+        en: 'Echoes of Zhi and Hu in Modern Contexts'
+      },
+      can_do: {
+        th: 'เข้าใจและใช้คำช่วยโบราณ 之 (แสดงความเป็นเจ้าของ/แทนสรรพนาม) และ 乎 (คำถาม/คำเชื่อม) ในภาษาเขียนทางการได้',
+        en: 'Understand and use classical particles Zhi (possessive/pronoun) and Hu (question/preposition) in formal writing'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ถอดรหัสการใช้ 之 และ 乎 ในสำนวนและภาษาข่าวทางการได้อย่างมั่นใจ!',
+      vocabulary: [
+        {
+          id: 'hsk4_4601',
+          hanzi: '之',
+          pinyin: 'zhī',
+          display_pinyin: 'zhī',
+          pinyin_tone: 'zhi1',
+          meaning_th: 'ของ / แห่ง / ไปยัง / คำสรรพนามแทนสิ่งนั้น (文言虚词)',
+          meaning_en: 'possessive particle / him / her / it / go to',
+          radical: '丶',
+          radical_name_th: 'หมวดหยดน้ำ (点部)',
+          stroke_count: 3,
+          mnemonic: 'เส้นโค้งสามจังหวะ สื่อถึงก้าวเดินหรือสายใยเชื่อมโยง = 之',
+          kid_mnemonic: 'หยดหมึกโบราณหยดลงบนกระดาษสาเชื่อมโยงสองคำเข้าหากัน = 之',
+          body_gesture: 'ยกนิ้วชี้วาดเส้นโค้งตัว S ในอากาศอย่างสง่างาม'
+        },
+        {
+          id: 'hsk4_4602',
+          hanzi: '乎',
+          pinyin: 'hū',
+          display_pinyin: 'hū',
+          pinyin_tone: 'hu1',
+          meaning_th: 'หรือไม่ / หรือ / ณ / ที่ (คำลงท้ายถามหรืออุทาน เทียบเท่า 吗/呢 หรือ 于)',
+          meaning_en: 'question particle / exclamatory particle / in / at',
+          radical: '丿',
+          radical_name_th: 'หมวดขีดตวัดซ้าย (撇字旁)',
+          stroke_count: 5,
+          mnemonic: 'เสียงถอนหายใจล่องลอยขึ้นฟ้า = 乎',
+          kid_mnemonic: 'เป่าลมออกจากปากเป็นเสียง ฮู... ด้วยความสงสัย = 乎',
+          body_gesture: 'สองมือแตะริมฝีปากแล้วผายออกด้านหน้าเหมือนเป่าลมเบาๆ'
+        },
+        {
+          id: 'hsk4_4603',
+          hanzi: '之所以',
+          pinyin: 'zhīsuǒyǐ',
+          display_pinyin: 'zhīsuǒyǐ',
+          pinyin_tone: 'zhi1suo3yi3',
+          meaning_th: 'สาเหตุที่... / เหตุผลที่... (之 + 所以)',
+          meaning_en: 'the reason why...',
+          radical: '斤',
+          radical_name_th: 'หมวดขวาน (斤字旁)',
+          stroke_count: 11,
+          mnemonic: 'เหตุแห่งสิ่งนั้น (之) ซึ่งเป็นต้นกำเนิด (所以) = สาเหตุที่...',
+          kid_mnemonic: 'นักสืบชี้แว่นขยายหาต้นตอว่าทำไมผลลัพธ์จึงเป็นแบบนี้ = 之所以',
+          body_gesture: 'ชี้นิ้วชี้ขึ้นฟ้าแล้วแตะที่ขมับทำท่ากำลังคิดหาเหตุผล'
+        },
+        {
+          id: 'hsk4_4604',
+          hanzi: '出乎意料',
+          pinyin: 'chūhūyìliào',
+          display_pinyin: 'chūhūyìliào',
+          pinyin_tone: 'chu1hu1yi4liao4',
+          meaning_th: 'เหนือความคาดหมาย / ผิดคาดอย่างมาก',
+          meaning_en: 'beyond expectations / unexpected',
+          radical: '凵',
+          radical_name_th: 'หมวดอ่างเปิด (凵字框)',
+          stroke_count: 28,
+          mnemonic: 'ก้าวพ้นออกไป (出) จากจุด (乎) ที่จิตใจคาดการณ์ไว้ (意料) = เหนือความคาดหมาย',
+          kid_mnemonic: 'เปิดกล่องของขวัญแล้วลูกโป่งยักษ์เด้งออกมาตกใจว้าว = 出乎意料',
+          body_gesture: 'กางสองมือออกทำตาโตแสดงความประหลาดใจอย่างยินดี'
+        },
+        {
+          id: 'hsk4_4605',
+          hanzi: '敬而远之',
+          pinyin: 'jìng\'éryuǎnzhī',
+          display_pinyin: 'jìng\'éryuǎnzhī',
+          pinyin_tone: 'jing4\'er2yuan3zhi1',
+          meaning_th: 'เคารพอยู่ห่างๆ / ให้เกียรติแต่ไม่ขอสนิทสนมด้วย',
+          meaning_en: 'respect from a distance / keep at arm\'s length',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะเบาๆ (反文旁)',
+          stroke_count: 27,
+          mnemonic: 'เคารพยำเกรง (敬) ทว่าขออยู่ห่าง (远) จากบุคคลนั้น (之) = ให้เกียรติแต่เว้นระยะ',
+          kid_mnemonic: 'ยกมือไหว้ทักทายคุณหมีตัวใหญ่แต่ถอยหลังยืนเว้นระยะปลอดภัย = 敬而远之',
+          body_gesture: 'ประสานสองมือคำนับพร้อมถอยหลังหนึ่งก้าวอย่างสุภาพ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงวรรณยุกต์เบาในคำช่วยโบราณ 之 (zhī)',
+        description_th: 'เมื่อ 之 ทำหน้าที่เป็นสรรพนามหรือคำเชื่อมท้ายประโยคมักอ่านออกเสียงสั้นเบาเป็นธรรมชาติ',
+        example: '敬而远之 (jìng\'éryuǎnzhī)',
+        fun_metaphor: 'เหมือนหางว่าวที่พลิ้วไหวตามแรงลมอย่างนุ่มนวล',
+        reassurance: 'คำโบราณที่ลงท้ายด้วย 之 ให้ออกเสียงชัดเจนแต่ไม่เน้นกระแทกเสียง'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างเหตุผลชั้นสูง: ……之所以……，是因为……',
+        formula: '主体 + 之所以 + [ผลลัพธ์/พฤติกรรม] + 是因为/在于 + [สาเหตุที่แท้จริง]',
+        explanation_th: 'ใช้เน้นย้ำถึงเบื้องหลังและสาเหตุที่แท้จริงของเหตุการณ์ นิยมใช้ในสุนทรพจน์ บทวิเคราะห์ และภาษาเขียนทางการ',
+        patterns: [
+          {
+            formula: '企业之所以成功，是因为坚持创新。',
+            zh: '这个企业之所以能够取得巨大的成功，是因为他们始终坚持科技创新。',
+            pinyin: 'Zhège qǐyè zhīsuǒyǐ nénggòu qǔdé jùdà de chénggōng, shì yīnwèi tāmen shǐzhōng jiānchí kējì chuàngxīn.',
+            th: 'สาเหตุที่องค์กรนี้สามารถประสบความสำเร็จอันยิ่งใหญ่ได้ เป็นเพราะพวกเขายึดมั่นในนวัตกรรมเทคโนโลยีมาโดยตลอด',
+            en: 'The reason why this enterprise achieved great success is that they consistently adhered to technological innovation.'
+          },
+          {
+            formula: '结果出乎意料，令人深思。',
+            zh: '这次调研的结果出乎意料，值得我们深入研究。',
+            pinyin: 'Zhè cì diàoyán de jiéguǒ chūhūyìliào, zhídé wǒmen shēnrù yánjiū.',
+            th: 'ผลลัพธ์ของการสำรวจวิจัยในครั้งนี้เหนือความคาดหมายอย่างมาก สมควรที่พวกเราจะศึกษาอย่างลึกซึ้ง',
+            en: 'The result of this survey was unexpected and worthy of our in-depth research.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '小王，你认为这次合作的成效如何？',
+          pinyin: 'Xiǎo Wáng, nǐ rènwéi zhè cì hézuò de chéngxiào rúhé?',
+          th: 'เสี่ยวหวัง คุณคิดว่าประสิทธิผลของความร่วมมือในครั้งนี้เป็นอย่างไรบ้าง?',
+          en: 'Xiao Wang, how do you evaluate the effectiveness of this collaboration?',
+          audio_trigger: 't4_u46_l01_d01'
+        },
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '坦白说，调研数据的发展出乎意料，令人振奋。',
+          pinyin: 'Tǎnbái shuō, diàoyán shùjù de fāzhǎn chūhūyìliào, lìngrén zhènfèn.',
+          th: 'พูดตามตรง การพัฒนาของข้อมูลการสำรวจนั้นเหนือความคาดหมาย ทำให้รู้สึกตื่นเต้นมีกำลังใจมากครับ',
+          en: 'Frankly speaking, the development of survey data was beyond expectations and inspiring.',
+          audio_trigger: 't4_u46_l01_d02'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '我们的方案之所以受到市场欢迎，是因为解决了实际问题。',
+          pinyin: 'Wǒmen de fāng\'àn zhīsuǒyǐ shòudào shìchǎng huānyíng, shì yīnwèi jiějué le shíjì wèntí.',
+          th: 'สาเหตุที่แผนงานของเราได้รับการต้อนรับจากตลาด เป็นเพราะแก้ปัญหาการใช้งานจริงได้',
+          en: 'The reason why our plan was welcomed by the market is that it solved real practical problems.',
+          audio_trigger: 't4_u46_l01_d03'
+        },
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '对那些不讲诚信的合作方，我们应当敬而远之，确保企业健康发展。',
+          pinyin: 'Duì nàxiē bù jiǎng chéngxìn de hézuòfāng, wǒmen yīngdāng jìng\'éryuǎnzhī, quèbǎo qǐyè jiànkāng fāzhǎn.',
+          th: 'สำหรับคู่ค้าที่ไม่รักษาสัจจะความจริงใจ พวกเราควรให้เกียรติอยู่ห่างๆ เพื่อรับประกันการพัฒนาที่มั่นคงขององค์กรครับ',
+          en: 'For partners who lack integrity, we should keep them at arm\'s length to ensure the healthy growth of our enterprise.',
+          audio_trigger: 't4_u46_l01_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "之所以" ในประโยค "我们之所以努力，是为了实现目标" มีความหมายว่าอย่างไร?',
+          options: [
+            'สาเหตุที่ / เหตุผลที่พวกเราพยายาม',
+            'หลังจากที่พวกเราพยายาม',
+            'แม้ว่าพวกเราจะพยายาม',
+            'หากพวกเราไม่พยายาม'
+          ],
+          correct_index: 0,
+          explanation_th: '"之所以" ทำหน้าที่นำส่วนผลลัพธ์เพื่อชี้แจงเหตุผล แปลว่า "สาเหตุที่..." หรือ "เหตุผลที่..."',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจกลไกการเชื่อมโยงเหตุผลระดับสูง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สาเหตุที่เขาประสบความสำเร็จ เป็นเพราะความขยันหมั่นเพียร"',
+          tokens: ['是因为勤奋', '他之所以成功'],
+          correct_sequence: ['他之所以成功', '是因为勤奋'],
+          pinyin: 'Tā zhīsuǒyǐ chénggōng, shì yīnwèi qínfèn.',
+          meaning_th: 'สาเหตุที่เขาประสบความสำเร็จ เป็นเพราะความขยันหมั่นเพียร',
+          explanation_th: 'โครงสร้าง: 主语 + 之所以... + 是因为...',
+          encouragement: 'จัดโครงสร้างประโยค 之所以 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "之" (zhī) ในพจนานุกรมจีนมักจัดอยู่ในหมวดนำใด?',
+          options: [
+            '丶 (หมวดหยดน้ำ 点部)',
+            '一 (หมวดเส้นนอน 一字旁)',
+            '丨 (หมวดเส้นตั้ง 竖部)',
+            '乙 (หมวดโค้งหัก 乙部)'
+          ],
+          correct_index: 0,
+          explanation_th: 'อักษรโบราณ "之" มีจุดตั้งต้นด้านบน จัดอยู่ในหมวด 丶 (点部)',
+          encouragement: 'จำหมวดอักษรโบราณได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'สำนวน "敬而远之" สะท้อนถึงทัศนคติแบบใด?',
+          options: [
+            'เคารพให้เกียรติตามมารยาท แต่รักษาระยะห่างไม่สุงสิงใกล้ชิด',
+            'เกลียดชังและประณามอย่างเปิดเผย',
+            'สนิทสนมกลมเกลียวเป็นพี่น้องร่วมสาบาน',
+            'หลีกหนีด้วยความหวาดกลัว'
+          ],
+          correct_index: 0,
+          explanation_th: '"敬而远之" หมายถึง ให้ความเคารพยำเกรงตามสมควร แต่รักษาระยะห่างอย่างมีสติ',
+          encouragement: 'เข้าใจปรัชญามารยาทและความสัมพันธ์ระดับสูง!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในการร่างข้อตกลงธุรกิจ หากต้องการเขียนว่า "สาเหตุที่ทั้งสองฝ่ายร่วมมือกัน เกิดจากวิสัยทัศน์ร่วม" ควรใช้ประโยคใด?',
+        options: [
+          '双方之所以开展合作，是因为拥有共同的发展愿景。',
+          '双方虽然合作，但是没有共同愿景。',
+          '双方因为合作，所以必须出乎意料。',
+          '双方敬而远之，因此达成商业共识。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกใช้โครงสร้าง "之所以……是因为……" ได้อย่างถูกต้องและสละสลวยตามมาตรฐานภาษาเขียนทางการ'
+      },
+      cheer_trophy: {
+        badge_name: 'บัณฑิตถอดรหัสคำช่วยโบราณ (Zhi & Hu Master)',
+        message_th: 'ยินดีด้วย! คุณสามารถถอดรหัสคำช่วยโบราณ 之 และ 乎 ในบริบทภาษาปัจจุบันได้อย่างยอดเยี่ยม!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u46_l02',
+      lesson_number: 2,
+      title: {
+        zh: '者与也的判断与定性',
+        th: 'การวินิจฉัยและจำกัดความด้วย 者 (zhě) และ 也 (yě)',
+        en: 'Definition & Judgment with Zhe and Ye'
+      },
+      can_do: {
+        th: 'ใช้โครงสร้างการนิยามเชิงปรัชญา "...者，...也" และจำแนกบทบาทของ 者 ในการสร้างคำเรียกกลุ่มบุคคลได้',
+        en: 'Use classical definition formula "...zhe, ...ye" and identify Zhe in categorizing human agents'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สร้างประโยคนิยามมโนทัศน์ขั้นสูงด้วยโครงสร้าง 者 与 也 ได้อย่างสง่างาม!',
+      vocabulary: [
+        {
+          id: 'hsk4_4606',
+          hanzi: '者',
+          pinyin: 'zhě',
+          display_pinyin: 'zhě',
+          pinyin_tone: 'zhe3',
+          meaning_th: 'ผู้ที่ / สิ่งที่ / บุคคลที่มีคุณสมบัตินั้น (คำต่อท้ายระบุบุคคลหรือประเภท)',
+          meaning_en: 'one who / those who / that which',
+          radical: '耂',
+          radical_name_th: 'หมวดคนชรา (老字头)',
+          stroke_count: 8,
+          mnemonic: 'คนชราทรงภูมิปัญญา (耂) ชี้แนะแสงสว่างใต้ดวงตะวัน (日) = ผู้รู้/ผู้ปฏิบัติ',
+          kid_mnemonic: 'ปราชญ์ผมขาวยืนถือตำราแนะนำความรู้ = 者',
+          body_gesture: 'ยกมือหนึ่งข้างลูบคางเหมือนเคราบัณฑิตโบราณ'
+        },
+        {
+          id: 'hsk4_4607',
+          hanzi: '也',
+          pinyin: 'yě',
+          display_pinyin: 'yě',
+          pinyin_tone: 'ye3',
+          meaning_th: 'คำลงท้ายยืนยันความจริงในภาษาโบราณ / เช่นกัน / ก็ด้วย',
+          meaning_en: 'classical emphatic particle / also / too',
+          radical: '乙',
+          radical_name_th: 'หมวดโค้งหัก (乙字旁)',
+          stroke_count: 3,
+          mnemonic: 'เส้นสายลื่นไหลยืนยันความจริงแท้หนักแน่น = 也',
+          kid_mnemonic: 'งูน้อยเลื้อยพยักหน้ายืนยันว่าใช่แน่นอน = 也',
+          body_gesture: 'พยักหน้าหนึ่งครั้งพร้อมยกมือสองข้างแบออกด้านข้าง'
+        },
+        {
+          id: 'hsk4_4608',
+          hanzi: '智者',
+          pinyin: 'zhìzhě',
+          display_pinyin: 'zhìzhě',
+          pinyin_tone: 'zhi4zhe3',
+          meaning_th: 'ผู้มีปัญญา / นักปราชญ์ / ผู้มีวิจารณญาณ',
+          meaning_en: 'the wise / sage / wise person',
+          radical: '日',
+          radical_name_th: 'หมวดพระอาทิตย์ (日字底)',
+          stroke_count: 20,
+          mnemonic: 'ความรู้แจ้งดั่งแสงอาทิตย์ (智) สถิตในบุคคล (者) = ปราชญ์ผู้รู้แจ้ง',
+          kid_mnemonic: 'กระต่ายสวมแว่นอ่านหนังสือประวัติศาสตร์ใต้ต้นไม้ = 智者',
+          body_gesture: 'ใช้นิ้วชี้เคาะที่หน้าผากเบาๆ สื่อถึงปัญญาความคิด'
+        },
+        {
+          id: 'hsk4_4609',
+          hanzi: '所谓',
+          pinyin: 'suǒwèi',
+          display_pinyin: 'suǒwèi',
+          pinyin_tone: 'suo3wei4',
+          meaning_th: 'สิ่งที่เรียกว่า / สิ่งที่คนทั่วไปพูดถึง',
+          meaning_en: 'so-called / what is meant by',
+          radical: '斤',
+          radical_name_th: 'หมวดขวาน (斤字旁)',
+          stroke_count: 12,
+          mnemonic: 'สิ่งที่ (所) เอ่ยขานกล่าวถึง (谓) = สิ่งที่เรียกว่า',
+          kid_mnemonic: 'ทำนิ้วเครื่องหมายคำพูดในอากาศเพื่อเน้นคำ = 所谓',
+          body_gesture: 'ยกสองมือขึ้นงอนิ้วชี้และนิ้วกลางสองข้างทำสัญลักษณ์เครื่องหมายคำพูด'
+        },
+        {
+          id: 'hsk4_4610',
+          hanzi: '学者',
+          pinyin: 'xuézhě',
+          display_pinyin: 'xuézhě',
+          pinyin_tone: 'xue2zhe3',
+          meaning_th: 'นักวิชาการ / ผู้คงแก่เรียน / นักศึกษาค้นคว้า',
+          meaning_en: 'scholar / researcher / academician',
+          radical: '子',
+          radical_name_th: 'หมวดเด็ก/ลูก (子字旁)',
+          stroke_count: 16,
+          mnemonic: 'ผู้ที่ (者) ทุ่มเทให้กับการศึกษาเล่าเรียน (学) = นักวิชาการ',
+          kid_mnemonic: 'ถือปากกาขนนกกำลังบันทึกค้นคว้าข้อมูลในห้องสมุด = 学者',
+          body_gesture: 'ทำท่าเปิดหนังสืออ่านอย่างตั้งอกตั้งใจ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การผันเสียงวรรณยุกต์ 3 ติดกันใน 所谓学者 (suǒwèi xuézhě)',
+        description_th: 'คำว่า suǒ (เสียง 3) ตามด้วย wèi (เสียง 4) และ xué (เสียง 2) zhě (เสียง 3) ออกเสียงตามเสียงจริงของแต่ละคำได้อย่างชัดเจน',
+        example: '所谓学者 (suǒwèi xuézhě)',
+        fun_metaphor: 'คล้ายจังหวะดนตรีขึ้นลงอย่างมีแบบแผนของนักปราชญ์',
+        reassurance: 'อ่านแยกพยางค์อย่างมั่นคงจะช่วยเพิ่มน้ำหนักความน่าเชื่อถือ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการนิยามเชิงปรัชญา: ……者，……也',
+        formula: '概念名词 + 者，+ [คำอธิบายขยายความ/นิยาม] + 也',
+        explanation_th: 'รูปแบบการนิยามความหมายดั้งเดิมจากคัมภีร์โบราณ แปลว่า "สิ่งที่เรียกว่า... นั้น คือ... นั่นเอง"',
+        patterns: [
+          {
+            formula: '仁者，爱人也。',
+            zh: '古人云：“仁者，爱人也。”意在关爱社会大众。',
+            pinyin: 'Gǔrén yún: "Rénzhě, àirén yě." Yì zài guān\'ài shèhuì dàzhòng.',
+            th: 'คนโบราณกล่าวไว้ว่า: "ผู้มีเมตตาย่อมรักเพื่อนมนุษย์" มุ่งเน้นการเอาใจใส่ประชาชนในสังคม',
+            en: 'The ancients said: "The benevolent loves others," emphasizing care for the general public.'
+          },
+          {
+            formula: '所谓创新者，敢于探索未知也。',
+            zh: '所谓创新者，敢于打破常规、探索未知也。',
+            pinyin: 'Suǒwèi chuàngxīnzhě, gǎnyú dǎpò chángguī, tànsuǒ wèizhī yě.',
+            th: 'สิ่งที่เรียกว่าผู้สร้างสรรค์นวัตกรรม คือผู้ที่กล้าทำลายกรอบเดิมและสำรวจสิ่งที่ไม่รู้ นั่นเอง',
+            en: 'The so-called innovator is one who dares to break conventions and explore the unknown.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '李馆长 (Curator Li) 🏛️',
+          zh: '张教授，您如何理解现代管理中的“智者”？',
+          pinyin: 'Zhāng jiàoshòu, nín rúhé lǐjiě xiàndài guǎnlǐ zhōng de "zhìzhě"?',
+          th: 'ศาสตราจารย์จางครับ ท่านเข้าใจคำว่า "ผู้มีปัญญา" ในการบริหารสมัยใหม่อย่างไร?',
+          en: 'Prof. Zhang, how do you understand "the wise" in modern management?',
+          audio_trigger: 't4_u46_l02_d01'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '所谓智者，通晓规律而顺应时代发展也。',
+          pinyin: 'Suǒwèi zhìzhě, tōngxiǎo guīlǜ ér shùnyìng shídài fāzhǎn yě.',
+          th: 'สิ่งที่เรียกว่าผู้มีปัญญา คือผู้ที่รู้แจ้งในกฎเกณฑ์และปรับตัวสอดรับกับการพัฒนาของยุคสมัยนั่นเองครับ',
+          en: 'The so-called wise person is one who understands natural laws and adapts to the development of times.',
+          audio_trigger: 't4_u46_l02_d02'
+        },
+        {
+          speaker: '李馆长 (Curator Li) 🏛️',
+          zh: '很多学者认为，企业的发展不仅看利润，更看社会责任。',
+          pinyin: 'Hěnduō xuézhě rènwéi, qǐyè de fāzhǎn bùjǐn kàn lìrùn, gèng kàn shèhuì zérèn.',
+          th: 'นักวิชาการจำนวนมากมองว่า การพัฒนาขององค์กรไม่เพียงดูที่ผลกำไร แต่ยิ่งต้องดูที่ความรับผิดชอบต่อสังคม',
+          en: 'Many scholars believe that corporate development relies not only on profits, but also on social responsibility.',
+          audio_trigger: 't4_u46_l02_d03'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '确实如此，仁者见仁，智者见智，但共同目标是造福人类。',
+          pinyin: 'Quèshí rúcǐ, rénzhě jiàn rén, zhìzhě jiàn zhì, dàn gòngtóng mùbiāo shì zàofú rénlèi.',
+          th: 'เป็นเช่นนั้นจริงครับ นานาจิตตังต่างคนต่างมุมมอง แต่เป้าหมายร่วมคือการสร้างคุณประโยชน์แก่มวลมนุษยชาติ',
+          en: 'Indeed, different people have different views, but the common goal is benefiting humanity.',
+          audio_trigger: 't4_u46_l02_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ในโครงสร้าง "...者，...也" คำว่า "也" ทำหน้าที่อะไร?',
+          options: [
+            'เป็นคำลงท้ายแสดงการยืนยันและตัดสินคุณค่าอย่างหนักแน่น',
+            'เป็นคำถามแสดงความสงสัย',
+            'เป็นคำสั่งห้ามกระทำสิ่งใด',
+            'เป็นคำสรรพนามแทนสถานที่'
+          ],
+          correct_index: 0,
+          explanation_th: 'ในภาษาจีนคลาสสิก "...者，...也" เป็นประโยคการวินิจฉัยและนิยามความหมาย โดย "也" ยืนยันข้อเท็จจริง',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจกลไกประโยคโบราณระดับลึก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สิ่งที่เรียกว่าผู้มีปัญญา คือผู้ที่มองเห็นอนาคตนั่นเอง"',
+          tokens: ['预见未来也', '所谓智者'],
+          correct_sequence: ['所谓智者', '预见未来也'],
+          pinyin: 'Suǒwèi zhìzhě, yùjiàn wèilái yě.',
+          meaning_th: 'สิ่งที่เรียกว่าผู้มีปัญญา คือผู้ที่มองเห็นอนาคตนั่นเอง',
+          explanation_th: 'ประธานและตัวกำหนด (所谓智者) + ส่วนขยายและคำลงท้าย (预见未来也)',
+          encouragement: 'เรียงประโยคนิยามความหมายได้แม่นยำดั่งปราชญ์!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'อักษร "者" (zhě) มีส่วนประกอบด้านบนคือหมวดนำใด?',
+          options: [
+            '耂 (หมวดคนชรา 老字头)',
+            '土 (หมวดดิน 提土旁)',
+            '十 (หมวดสิบ 十字儿)',
+            '木 (หมวดไม้ 木字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: '"者" มีส่วนบนแปลงมาจากหมวด "耂" (老 - ผู้อาวุโส/ปราชญ์)',
+          encouragement: 'จำรากศัพท์ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'สำนวน "仁者见仁，智者见智" มีความหมายตรงกับข้อใด?',
+          options: [
+            'แต่ละคนมองปัญหาตามมุมมองและประสบการณ์ของตน (นานาจิตตัง)',
+            'คนฉลาดมักจะคิดเหมือนกันเสมอ',
+            'คนเมตตามักจะถูกคนอื่นหลอกลวง',
+            'นักวิชาการมักจะโต้เถียงกันไม่จบสิ้น'
+          ],
+          correct_index: 0,
+          explanation_th: 'สำนวนนี้หมายถึง คนใจเมตตามองเห็นความเมตตา คนมีปัญญามองเห็นสติปัญญา สื่อถึงมุมมองที่หลากหลายของแต่ละบุคคล',
+          encouragement: 'เข้าใจสำนวนระดับปรัชญาได้อย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ข้อความใดต่อไปนี้ใช้โครงสร้าง "...者，...也" ในการนิยามได้อย่างถูกต้องตามฉันทลักษณ์โบราณ?',
+        options: [
+          '良医者，治病救人也。',
+          '良医因为治病，所以救人也。',
+          '良医虽然治病，但是救人也。',
+          '良医如果治病，就是救人也。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรก "良医者，治病救人也" แปลว่า แพทย์ที่ดี คือผู้ที่รักษาโรคภัยและช่วยชีวิตผู้คนนั่นเอง ถูกต้องตามโครงสร้างโบราณ 100%'
+      },
+      cheer_trophy: {
+        badge_name: 'ปรัชญาเมธีผู้นิยามความหมาย (Philosophical Definer)',
+        message_th: 'ยอดเยี่ยม! คุณสามารถใช้โครงสร้าง 者 และ 也 เพื่อสร้างประโยคนิยามเชิงปรัชญาได้อย่างสมบูรณ์แบบ!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u46_l03',
+      lesson_number: 3,
+      title: {
+        zh: '以与于的介词纽带',
+        th: 'คำบุพบทสะพานเชื่อม 以 (yǐ) และ 于 (yú)',
+        en: 'Prepositional Bridges: Yi and Yu'
+      },
+      can_do: {
+        th: 'ใช้คำบุพบทโบราณ 以 (ใช้/ยึดถือ) และ 于 (ใน/ต่อ/เทียบกับ) ในบริบทการทำงาน การทูต และการวิเคราะห์',
+        en: 'Master classical prepositions Yi (use/by means of) and Yu (in/at/towards/than) in professional contexts'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ใช้โครงสร้าง 以...为... และ ...致力于... ในเอกสารทางการได้อย่างมืออาชีพ!',
+      vocabulary: [
+        {
+          id: 'hsk4_46011',
+          hanzi: '以',
+          pinyin: 'yǐ',
+          display_pinyin: 'yǐ',
+          pinyin_tone: 'yi3',
+          meaning_th: 'ใช้ / โดย / อาศัย / ยึดถือ / เพื่อที่จะ (คำเชื่อมและบุพบทสำคัญ)',
+          meaning_en: 'use / by means of / in order to / with',
+          radical: '人',
+          radical_name_th: 'หมวดคน (人字旁)',
+          stroke_count: 4,
+          mnemonic: 'คนหยิบจับสิ่งของมาใช้งานเป็นเครื่องมือ = 以',
+          kid_mnemonic: 'ช่างไม้หยิบไม้บรรทัดมาวัดระยะเพื่อสร้างบ้าน = 以',
+          body_gesture: 'ยื่นมือข้างหนึ่งออกไปทำท่าหยิบเครื่องมือมาใช้งาน'
+        },
+        {
+          id: 'hsk4_46012',
+          hanzi: '于',
+          pinyin: 'yú',
+          display_pinyin: 'yú',
+          pinyin_tone: 'yu2',
+          meaning_th: 'ใน / ณ / ต่อ / สู่ / เปรียบเทียบกับ (เทียบเท่า 在/向/对/比)',
+          meaning_en: 'in / at / towards / than (classical preposition)',
+          radical: '二',
+          radical_name_th: 'หมวดสอง (二字部)',
+          stroke_count: 3,
+          mnemonic: 'เส้นทางเชื่อมสองฝั่งเข้าหากัน = 于',
+          kid_mnemonic: 'ป้ายบอกทางชี้ไปยังเมืองแห่งความสุข = 于',
+          body_gesture: 'ผายมือชี้ตรงไปข้างหน้าแสดงทิศทาง'
+        },
+        {
+          id: 'hsk4_46013',
+          hanzi: '以便',
+          pinyin: 'yǐbiàn',
+          display_pinyin: 'yǐbiàn',
+          pinyin_tone: 'yi3bian4',
+          meaning_th: 'เพื่อความสะดวก / เพื่อที่จะได้... (คำเชื่อมแสดงจุดประสงค์)',
+          meaning_en: 'so that / in order to facilitate',
+          radical: '亻',
+          radical_name_th: 'หมวดคนยืน (单人旁)',
+          stroke_count: 13,
+          mnemonic: 'กระทำเพื่อให้เกิด (以) ความสะดวกราบรื่น (便) = เพื่อความสะดวก',
+          kid_mnemonic: 'ตัดถนนทางลัดเพื่อให้ทุกคนเดินทางสะดวก = 以便',
+          body_gesture: 'สองมือทำท่าผายทางสะดวกไปข้างหน้า'
+        },
+        {
+          id: 'hsk4_46014',
+          hanzi: '致力于',
+          pinyin: 'zhìlìyú',
+          display_pinyin: 'zhìlìyú',
+          pinyin_tone: 'zhi4li4yu2',
+          meaning_th: 'อุทิศตนให้กับ / ทุ่มเทกำลังเพื่อ... / มุ่งมั่นใน...',
+          meaning_en: 'devote oneself to / dedicated to',
+          radical: '力',
+          radical_name_th: 'หมวดพลังแรง (力字旁)',
+          stroke_count: 15,
+          mnemonic: 'ส่งมอบความมุ่งมั่นและพลัง (致力) ไปยังเป้าหมาย (于) = อุทิศตนให้',
+          kid_mnemonic: 'นักวิจัยใส่แว่นตาทุ่มเททดลองยาใหม่เพื่อช่วยเหลือผู้คน = 致力于',
+          body_gesture: 'กำหมัดขวาแนบอกแสดงความมุ่งมั่นตั้งใจ'
+        },
+        {
+          id: 'hsk4_46015',
+          hanzi: '鉴于',
+          pinyin: 'jiànyú',
+          display_pinyin: 'jiànyú',
+          pinyin_tone: 'jian4yu2',
+          meaning_th: 'เมื่อพิจารณาจาก / โดยคำนึงถึงว่า... / จากบทเรียนที่ว่า...',
+          meaning_en: 'in view of / seeing that / considering',
+          radical: '钅',
+          radical_name_th: 'หมวดโลหะ (金字旁)',
+          stroke_count: 16,
+          mnemonic: 'ส่องกระจกโลหะโบราณ (鉴) มองทะลุสถานการณ์ (于) = เมื่อพิจารณาจาก',
+          kid_mnemonic: 'ส่องกระจกดูอดีตเพื่อวางแผนอนาคตอย่างรอบคอบ = 鉴于',
+          body_gesture: 'ยกสองมือขึ้นแตะขมับก้มหน้าพิจารณาอย่างลึกซึ้ง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงสระประสมใน 鉴于 (jiànyú)',
+        description_th: 'jiàn (เสียง 4 สั้นหนักแน่น) ตามด้วย yú (เสียง 2 ผันขึ้นนุ่มนวล) ให้จังหวะที่เด็ดขาดและเป็นทางการ',
+        example: '鉴于当前形势 (jiànyú dāngqián xíngshì)',
+        fun_metaphor: 'เหมือนเสียงเคาะระฆังทองคำดังกังวานก่อนเริ่มแถลงการณ์',
+        reassurance: 'นิยมใช้ขึ้นต้นประโยคในเอกสารมติที่ประชุมหรือสัญญาข้อตกลง'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างหลักการบริหาร: 以……为本 / 以……为基础',
+        formula: '主体 + 坚持 / 始终 + 以 + [คุณค่าหลัก] + 为本/为核心/为导向',
+        explanation_th: 'โครงสร้างภาษาเขียนชั้นสูง แปลว่า "ยึดถือ...เป็นหัวใจสำคัญ / ยึดถือ...เป็นรากฐาน"',
+        patterns: [
+          {
+            formula: '坚持以人为本，致力于社会和谐。',
+            zh: '现代企业应当坚持以人为本，致力于推动社会和谐发展。',
+            pinyin: 'Xiàndài qǐyè yīngdāng jiānchí yǐ rén wéi běn, zhìlìyú tuīdòng shèhuì héxié fāzhǎn.',
+            th: 'องค์กรสมัยใหม่ควรยึดมั่นในการถือเอามนุษย์เป็นศูนย์กลาง และทุ่มเทเพื่อขับเคลื่อนการพัฒนาสังคมอย่างกลมเกลียว',
+            en: 'Modern enterprises should adhere to people-oriented principles and dedicate themselves to promoting harmonious social development.'
+          },
+          {
+            formula: '鉴于当前情况，需要采取措施。',
+            zh: '鉴于市场环境的变化，我们必须及时调整发展策略。',
+            pinyin: 'Jiànyú shìchǎng huánjìng de biànhuà, wǒmen bìxū jíshí tiáozhěng fāzhǎn cèlüè.',
+            th: 'เมื่อพิจารณาจากการเปลี่ยนแปลงของสภาวะแวดล้อมทางตลาด พวกเราจำเป็นต้องปรับกลยุทธ์การพัฒนาให้ทันท่วงที',
+            en: 'In view of changes in the market environment, we must adjust our development strategy promptly.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '张教授，我们的新课题将重点关注哪个方向？',
+          pinyin: 'Zhāng jiàoshòu, wǒmen de xīn kètí jiāng zhòngdiǎn guānzhù nǎge fāngxiàng?',
+          th: 'ศาสตราจารย์จางครับ หัวข้องานวิจัยใหม่ของเราจะมุ่งเน้นไปที่ทิศทางใดเป็นหลักครับ?',
+          en: 'Prof. Zhang, which direction will our new research project focus on?',
+          audio_trigger: 't4_u46_l03_d01'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '我们团队始终致力于绿色低碳技术的研发与普及。',
+          pinyin: 'Wǒmen tuánduì shǐzhōng zhìlìyú lǜsè dītàn jìshù de yánfā yǔ pǔjí.',
+          th: 'ทีมของพวกเราทุ่มเทให้กับการวิจัยพัฒนาและการเผยแพร่เทคโนโลยีสีเขียวคาร์บอนต่ำมาโดยตลอด',
+          en: 'Our team has always been devoted to the research, development, and popularization of green and low-carbon technologies.',
+          audio_trigger: 't4_u46_l03_d02'
+        },
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '鉴于国际合作的新机遇，我们应该尽快整理成果以便交流。',
+          pinyin: 'Jiànyú guójì hézuò de xīn jīyù, wǒmen yīnggāi jǐnkuài zhěnglǐ chéngguǒ yǐbiàn jiāoliú.',
+          th: 'เมื่อพิจารณาถึงโอกาสใหม่จากความร่วมมือระหว่างประเทศ พวกเราควรรีบสรุปผลสัมฤทธิ์เพื่อความสะดวกในการแลกเปลี่ยนครับ',
+          en: 'In view of new opportunities for international cooperation, we should compile our findings promptly to facilitate exchange.',
+          audio_trigger: 't4_u46_l03_d03'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '很好，我们要以事实为依据，向国际同行展示我们的研究价值。',
+          pinyin: 'Hěn hǎo, wǒmen yào yǐ shìshí wéi yījù, xiàng guójì tóngháng zhǎnshì wǒmen de yánjiū jiàzhí.',
+          th: 'ดีมาก พวกเราต้องยึดข้อเท็จจริงเป็นหลักฐานอ้างอิง เพื่อแสดงคุณค่าทางงานวิจัยของเราต่อเพื่อนร่วมวิชาชีพสากล',
+          en: 'Very well, we must take facts as our basis to demonstrate our research value to international peers.',
+          audio_trigger: 't4_u46_l03_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ในประโยค "公司致力于技术创新", คำว่า "致力于" มีความหมายว่าอย่างไร?',
+          options: [
+            'อุทิศตนและทุ่มเทกำลังให้กับนวัตกรรมเทคโนโลยี',
+            'หลีกเลี่ยงนวัตกรรมเทคโนโลยี',
+            'สงสัยในคุณค่าของเทคโนโลยี',
+            'ยุติการวิจัยเทคโนโลยี'
+          ],
+          correct_index: 0,
+          explanation_th: '"致力于" หมายถึง มุ่งมั่นทุ่มเทกำลังกายใจเพื่อเป้าหมายอย่างใดอย่างหนึ่ง',
+          encouragement: 'แม่นยำมาก! เข้าใจคำศัพท์ระดับทางการ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เมื่อพิจารณาจากสภาวะปัจจุบัน พวกเราต้องรอบคอบ"',
+          tokens: ['我们必须谨慎', '鉴于当前形势'],
+          correct_sequence: ['鉴于当前形势', '我们必须谨慎'],
+          pinyin: 'Jiànyú dāngqián xíngshì, wǒmen bìxū jǐnshèn.',
+          meaning_th: 'เมื่อพิจารณาจากสภาวะปัจจุบัน พวกเราต้องรอบคอบ',
+          explanation_th: 'คำบุพบทบอกบริบท (鉴于当前形势) + ประโยคหลัก (我们必须谨慎)',
+          encouragement: 'จัดเรียงประโยคภาษาทางการได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "鉴" ใน "鉴于" มีหมวดนำโลหะ (钅/金) ด้านล่างหรือด้านซ้าย สื่อถึงอะไรในอดีต?',
+          options: [
+            'กระจกสำริดโบราณที่ใช้ส่องสะท้อนความจริง',
+            'ดาบและอาวุธสงคราม',
+            'เงินทองเหรียญกษาปณ์',
+            'เครื่องดนตรีระฆัง'
+          ],
+          correct_index: 0,
+          explanation_th: 'ในอดีต "鉴" คือกระจกโลหะสำริดสำหรับส่องตรวจดู นำมาเปรียบกับการพิจารณาไตร่ตรองบทเรียนในอดีต',
+          encouragement: 'เข้าใจรากเหง้าวัฒนธรรมอักษรจีนอย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'ประโยค "以人为本" มีความหมายตรงกับหลักปรัชญาข้อใด?',
+          options: [
+            'ยึดถือมนุษย์เป็นศูนย์กลางและให้ความสำคัญกับชีวิตความเป็นอยู่ของประชาชน',
+            'ยึดผลกำไรสูงสุดเป็นหลัก',
+            'ปล่อยให้เป็นไปตามยถากรรม',
+            'ใช้กำลังบังคับประชาชน'
+          ],
+          correct_index: 0,
+          explanation_th: '"以人为本" (People-oriented) คือ ปรัชญาการถือเอามนุษย์และประชาชนเป็นรากฐานสำคัญสูงสุด',
+          encouragement: 'เข้าใจหลักการบริหารบ้านเมืองและองค์กรชั้นสูง!'
+        }
+      ],
+      boss_challenge: {
+        question: 'หากคุณต้องการเขียนบันทึกช่วยจำระบุว่า "เพื่อความสะดวกในการประสานงาน ขอให้ส่งรายงานภายในวันพรุ่งนี้" ควรใช้คำใดขึ้นต้นประโยค?',
+        options: [
+          '以便顺利沟通，请于明日提交报告。',
+          '之所以顺利沟通，请于明日提交报告。',
+          '出乎意料沟通，请于明日提交报告。',
+          '敬而远之沟通，请于明日提交报告。'
+        ],
+        correct_index: 0,
+        explanation_th: '"以便" (yǐbiàn) แปลว่า เพื่อความสะดวกในการ... ใช้เชื่อมโยงวัตถุประสงค์ในการปฏิบัติงานได้อย่างถูกต้อง'
+      },
+      cheer_trophy: {
+        badge_name: 'ทูตเชื่อมโยงความสัมพันธ์ (Yi & Yu Connector)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญการใช้คำเชื่อม 以 และ 于 ในการเขียนเชิงวิชาชีพและการทูตอย่างยอดเยี่ยม!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u46_l04',
+      lesson_number: 4,
+      title: {
+        zh: '而与其的承接与转折',
+        th: 'การสมานฉันท์และการหักมุมด้วย 而 (ér) และ 其 (qí)',
+        en: 'Conjunction & Determination: Er and Qi'
+      },
+      can_do: {
+        th: 'ใช้คำเชื่อม 而 ในการแสดงความสัมพันธ์คล้อยตามหรือขัดแย้ง และใช้คำสรรพนาม 其 ควบคู่กับสำนวนชั้นสูงได้',
+        en: 'Utilize Er for progressive or contrasting transitions and Qi with classical idioms'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำสำนวน 温故知新 และ 实事求是 ไปปรับใช้ในการสรุปบทเรียนชีวิตและงาน!',
+      vocabulary: [
+        {
+          id: 'hsk4_46016',
+          hanzi: '而',
+          pinyin: 'ér',
+          display_pinyin: 'ér',
+          pinyin_tone: 'er2',
+          meaning_th: 'และ / แต่ / อีกทั้ง / ทว่า (คำเชื่อมแสดงความต่อเนื่องหรือหักมุม)',
+          meaning_en: 'and / yet / but / furthermore',
+          radical: '而',
+          radical_name_th: 'หมวดเคราคาง (而字部)',
+          stroke_count: 6,
+          mnemonic: 'เคราคางใต้ริมฝีปากที่พลิ้วไหวตามคำพูด = 而',
+          kid_mnemonic: 'วาดเคราแพะสี่เส้นเรียงกันอย่างน่ารัก = 而',
+          body_gesture: 'ยกมือขวาทำท่าลูบเคราคางเบาๆ ขณะคิดไตร่ตรอง'
+        },
+        {
+          id: 'hsk4_46017',
+          hanzi: '其',
+          pinyin: 'qí',
+          display_pinyin: 'qí',
+          pinyin_tone: 'qi2',
+          meaning_th: 'ของเขา / ของสิ่งนั้น / ในบรรดานั้น (สรรพนามบุรุษที่ 3 เชิงโบราณ)',
+          meaning_en: 'his / her / its / their / among them',
+          radical: '八',
+          radical_name_th: 'หมวดแปด (八字底)',
+          stroke_count: 8,
+          mnemonic: 'ตะกร้าสานทรงสี่เหลี่ยมมีฐานตั้งสองขา (其) เก็บสิ่งสำคัญไว้ข้างใน = ของสิ่งนั้น',
+          kid_mnemonic: 'กล่องสมบัติมีสองขาวางตั้งมั่นคง = 其',
+          body_gesture: 'สองมือทำเป็นกรอบสี่เหลี่ยมชี้ไปข้างหน้า'
+        },
+        {
+          id: 'hsk4_46018',
+          hanzi: '实事求是',
+          pinyin: 'shíshìqiúshì',
+          display_pinyin: 'shíshìqiúshì',
+          pinyin_tone: 'shi2shi4qiu2shi4',
+          meaning_th: 'แสวงหาความจริงจากข้อเท็จจริง / ปฏิบัติตามความจริงไม่ปรุงแต่ง',
+          meaning_en: 'seek truth from facts / be practical and realistic',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคา (宝盖头)',
+          stroke_count: 31,
+          mnemonic: 'ยึดถือความเป็นจริงของสรรพสิ่ง (实事) เพื่อแสวงหาสัจธรรม (求是) = แสวงหาความจริงจากข้อเท็จจริง',
+          kid_mnemonic: 'นักวิทยาศาสตร์ทำการทดลองซ้ำแล้วซ้ำเล่าจนพบความจริง = 实事求是',
+          body_gesture: 'สองมือกดลงขนานกับพื้นอย่างมั่นคงสื่อถึงความหนักแน่นจริงแท้'
+        },
+        {
+          id: 'hsk4_46019',
+          hanzi: '顺其自然',
+          pinyin: 'shùnqízìrán',
+          display_pinyin: 'shùnqízìrán',
+          pinyin_tone: 'shun4qi2zi4ran2',
+          meaning_th: 'ปล่อยให้เป็นไปตามธรรมชาติ / คล้อยตามวิถีแห่งธรรมชาตินั้น',
+          meaning_en: 'let nature take its course / follow natural flow',
+          radical: '页',
+          radical_name_th: 'หมวดหน้ากระดาษ/ศีรษะ (页字旁)',
+          stroke_count: 36,
+          mnemonic: 'ไหลไปตามกระแสน้ำ (顺) สู่ภาวะดั้งเดิมของสิ่งนั้น (其自然) = คล้อยตามธรรมชาติ',
+          kid_mnemonic: 'เรือใบลอยล่องไปตามสายลมและลำธารอย่างสบายใจ = 顺其自然',
+          body_gesture: 'วาดสองมือพลิ้วไหวไปตามระลอกคลื่นน้ำอย่างผ่อนคลาย'
+        },
+        {
+          id: 'hsk4_46020',
+          hanzi: '温故知新',
+          pinyin: 'wēngùzhīxīn',
+          display_pinyin: 'wēngùzhīxīn',
+          pinyin_tone: 'wen1gu4zhi1xin1',
+          meaning_th: 'ทบทวนความรู้เก่าเพื่อเข้าใจและสร้างสรรค์สิ่งใหม่ (สุภาษิตขงจื๊อ)',
+          meaning_en: 'review the old and learn the new (Confucian idiom)',
+          radical: '氵',
+          radical_name_th: 'หมวดสามจุดน้ำ (三点水)',
+          stroke_count: 42,
+          mnemonic: 'อุ่นบทเรียนเก่าให้ร้อน (温故) จึงเกิดปัญญาใหม่แตกยอด (知新) = ทบทวนของเก่าเรียนรู้สิ่งใหม่',
+          kid_mnemonic: 'เปิดตำราเก่าดูภาพประวัติศาสตร์แล้วคิดประดิษฐ์หุ่นยนต์รุ่นใหม่ = 温故知新',
+          body_gesture: 'มือซ้ายเปิดอ่านหนังสือเก่า มือขวาชูหลอดไฟแห่งความคิดสร้างสรรค์'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงวรรณยุกต์สำนวน 4 พยางค์ 温故知新 (wēngùzhīxīn)',
+        description_th: 'wēn (เสียง 1) gù (เสียง 4) zhī (เสียง 1) xīn (เสียง 1) มีเสียงระดับสูง 3 พยางค์ตัดด้วยเสียง 4 ตรงกลาง ออกเสียงสง่างามและเปี่ยมพลัง',
+        example: '温故而知新，可以为师矣。',
+        fun_metaphor: 'เหมือนเสียงพิณโบราณดีดสายก้องกังวานในหอพระสมุด',
+        reassurance: 'สำนวนขงจื๊อยอดนิยมที่ใช้ได้ทั้งในวงการศึกษา การวิจัย และการดำเนินชีวิต'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการประยุกต์ภูมิปัญญาโบราณ: 温故知新，实事求是',
+        formula: '在……中，不仅要[ทบทวนความรู้เดิม]，更要[แสวงหาความจริงสร้างสิ่งใหม่]',
+        explanation_th: 'ใช้สรุปแนวทางการทำงานและการศึกษาอย่างเป็นระบบ เพื่อผสานรากเหง้าประวัติศาสตร์เข้ากับนวัตกรรมสมัยใหม่',
+        patterns: [
+          {
+            formula: '只有温故知新，才能不断进步。',
+            zh: '在学术探索的道路上，我们只有温故知新，才能不断取得新的突破。',
+            pinyin: 'Zài xuéshù tànsuǒ de dàolù shang, wǒmen zhǐyǒu wēngùzhīxīn, cái néng bùduàn qǔdé xīn de tūpò.',
+            th: 'บนเส้นทางแห่งการสำรวจทางวิชาการ มีเพียงการทบทวนของเก่าเพื่อแตกยอดสิ่งใหม่เท่านั้น พวกเราจึงจะบรรลุความก้าวหน้าอย่างต่อเนื่องได้',
+            en: 'On the path of academic exploration, only by reviewing the old to learn the new can we continuously make new breakthroughs.'
+          },
+          {
+            formula: '坚持实事求是，尊重客观规律。',
+            zh: '无论遇到多么复杂的局面，我们都要坚持实事求是，顺其自然。',
+            pinyin: 'Wúlùn yù dào duōme fùzá de júmiàn, wǒmen dōu yào jiānchí shíshìqiúshì, shùnqízìrán.',
+            th: 'ไม่ว่าจะเผชิญกับสถานการณ์ที่ซับซ้อนเพียงใด พวกเราล้วนต้องยึดมั่นในการแสวงหาความจริงจากข้อเท็จจริง และปล่อยให้เป็นไปตามวิถีธรรมชาติ',
+            en: 'No matter how complex the situation, we must adhere to seeking truth from facts and let nature take its course.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '同学们，完成了虚词的学习，大家有什么体会？',
+          pinyin: 'Tóngxuémen, wánchéng le xūcí de xuéxí, dàjiā yǒu shénme tǐhuì?',
+          th: 'นักศึกษาทุกท่าน เรียนจบเรื่องคำช่วยโบราณแล้ว ทุกคนมีความรู้สึกอย่างไรบ้าง?',
+          en: 'Students, having finished studying function words, what are your reflections?',
+          audio_trigger: 't4_u46_l04_d01'
+        },
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '我深刻体会到了古汉语“温故知新”的魅力，很多成语豁然开朗。',
+          pinyin: 'Wǒ shēnkè tǐhuì dào le gǔ hànyǔ "wēngùzhīxīn" de mèilì, hěnduō chéngyǔ huòrán kāilǎng.',
+          th: 'ผมเข้าใจถึงเสน่ห์ของ "การทบทวนของเก่าเรียนรู้สิ่งใหม่" ในภาษาจีนโบราณอย่างลึกซึ้ง สำนวนมากมายกระจ่างแจ้งขึ้นมาทันทีครับ',
+          en: 'I deeply felt the charm of "learning the new by reviewing the old" in classical Chinese, and many idioms became crystal clear.',
+          audio_trigger: 't4_u46_l04_d02'
+        },
+        {
+          speaker: '张教授 (Prof. Zhang) 👨‍🏫',
+          zh: '很好，学习古代文化要实事求是，取其精华，去其糟粕。',
+          pinyin: 'Hěn hǎo, xuéxí gǔdài wénhuà yào shíshìqiúshì, qǔ qí jīnghuá, qù qí zāopò.',
+          th: 'ดีมาก การเรียนรู้วัฒนธรรมโบราณต้องยึดหลักแสวงหาความจริงจากข้อเท็จจริง เลือกรับส่วนที่เป็นแก่นสารและคัดทิ้งส่วนที่ไม่เหมาะสม',
+          en: 'Very good, studying ancient culture requires seeking truth from facts, absorbing the essence and discarding the dregs.',
+          audio_trigger: 't4_u46_l04_d03'
+        },
+        {
+          speaker: '王研究员 (Researcher Wang) 👨‍💼',
+          zh: '面对科研压力，我也学会了顺其自然，保持平稳心态全力以赴。',
+          pinyin: 'Miànduì kēyán yālì, wǒ yě xuéhuì le shùnqízìrán, bǎochí píngwěn xīntài quánlìyǐfù.',
+          th: 'เมื่อต้องเผชิญกับแรงกดดันทางวิจัย ผมก็เรียนรู้ที่จะปล่อยให้เป็นไปตามธรรมชาติ รักษาจิตใจให้สงบและทุ่มสุดกำลังครับ',
+          en: 'Facing research pressure, I also learned to let nature take its course, maintaining a calm mindset while doing my utmost.',
+          audio_trigger: 't4_u46_l04_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'คำสอนขงจื๊อ "温故而知新，可以为师矣" มีความหมายตรงกับข้อใด?',
+          options: [
+            'ผู้ที่หมั่นทบทวนความรู้เก่าและแตกฉานสิ่งใหม่ ย่อมสามารถเป็นครูของผู้อื่นได้',
+            'การเรียนรู้แต่เรื่องใหม่ทำให้ลืมอดีต',
+            'ครูที่ดีต้องสอนเฉพาะเรื่องโบราณเท่านั้น',
+            'ความรู้เก่าไม่มีประโยชน์ในโลกสมัยใหม่'
+          ],
+          correct_index: 0,
+          explanation_th: '"温故知新" สื่อถึง การทบทวนสิ่งที่เคยเรียนรู้มาจนเกิดความเข้าใจลึกซึ้งและริเริ่มสิ่งใหม่ได้ ย่อมคู่ควรแก่การเป็นครูบาอาจารย์',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจแก่นปรัชญาการเรียนรู้ตลอดชีวิต!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราควรยึดมั่นในการแสวงหาความจริงจากข้อเท็จจริง"',
+          tokens: ['实事求是', '我们应当'],
+          correct_sequence: ['我们应当', '实事求是'],
+          pinyin: 'Wǒmen yīngdāng shíshìqiúshì.',
+          meaning_th: 'พวกเราควรยึดมั่นในการแสวงหาความจริงจากข้อเท็จจริง',
+          explanation_th: 'ประธานและกริยาช่วย (我们应当) + กริยาสำนวน (实事求是)',
+          encouragement: 'จัดประโยคคุณธรรมความจริงได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "温" ใน "温故知新" มีหมวดนำน้ำ (氵) ด้านซ้าย เดิมทีสื่อถึงความหมายใด?',
+          options: [
+            'การต้มหรืออุ่นน้ำให้อุ่นสบาย (นำมาเปรียบกับการทบทวนความรู้ให้อบอุ่นใจ)',
+            'น้ำท่วมใหญ่ในอดีต',
+            'น้ำแข็งในฤดูหนาว',
+            'น้ำฝนที่ตกลงมาจากฟ้า'
+          ],
+          correct_index: 0,
+          explanation_th: '"温" เดิมทีหมายถึงน้ำอุ่น เปรียบกับการอุ่นความรู้เดิมไม่ให้เย็นชาและเลือนหายไป',
+          encouragement: 'เข้าใจมโนทัศน์คำศัพท์ได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'สำนวน "顺其自然" แนะนำให้บุคคลปฏิบัติตนอย่างไรเมื่อเผชิญกับสิ่งที่ควบคุมไม่ได้?',
+          options: [
+            'ผ่อนคลายจิตใจและคล้อยตามวิถีธรรมชาติอย่างมีสติ ไม่ฝืนดันทุรัง',
+            'ยอมแพ้และทำลายทุกสิ่งทิ้ง',
+            'โกรธเกรี้ยวและต่อสู้ด้วยกำลัง',
+            'หลีกหนีปัญหาและไม่ทำอะไรเลย'
+          ],
+          correct_index: 0,
+          explanation_th: '"顺其自然" สะท้อนปรัชญาเต๋า แนะนำให้เคารพกฎธรรมชาติ ไม่ฝืนดื้อรั้น แต่ทำหน้าที่อย่างสงบสง่างาม',
+          encouragement: 'เข้าใจปรัชญาการใช้ชีวิตอย่างสมดุล!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในบทความวิชาการ หากต้องการสรุปคำแนะนำว่า "นักวิจัยควรศึกษาประวัติศาสตร์ควบคู่กับการค้นหาข้อเท็จจริงใหม่" ควรใช้ประโยคใด?',
+        options: [
+          '研究人员不仅要温故知新，更要坚持实事求是。',
+          '研究人员应该出乎意料，并且敬而远之。',
+          '研究人员所谓智者，半途而废也。',
+          '研究人员顺其自然，不需要任何实事求是。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "温故知新" และ "实事求是" ได้อย่างถูกต้องตามหลักวิชาการและไวยากรณ์ขั้นสูง'
+      },
+      cheer_trophy: {
+        badge_name: 'ปรมาจารย์แห่งอักษรศาสตร์โบราณ (Classical Chinese Master)',
+        message_th: 'ขอแสดงความยินดีด้วยอย่างยิ่ง! คุณได้พิชิตหน่วยเรียน文言虚词 8 คำช่วยโบราณ ก้าวสู่ความเป็นปราชญ์ภาษาจีนอย่างแท้จริง!',
+        xp_reward: 150
+      }
+    }
+  ]
+};

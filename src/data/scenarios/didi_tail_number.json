@@ -1,0 +1,167 @@
+{
+  "id": "scenario_u13_didi_tail_number",
+  "title": {
+    "zh": "滴滴出行：核对手机尾号与系安全带",
+    "th": "เรียกรถ DiDi: ยืนยันเลขท้ายมือถือและการคาดเข็มขัดนิรภัย",
+    "en": "DiDi Ride: Tail Number & Seatbelt Safety"
+  },
+  "npc": {
+    "id": "driver_li",
+    "name": "李师傅 (คนขับแซ่หลี่)",
+    "role": "driver",
+    "avatar": "🚕",
+    "initialMood": "neutral"
+  },
+  "initialPatience": 70,
+  "startNodeId": "node_board_car",
+  "nodes": {
+    "node_board_car": {
+      "id": "node_board_car",
+      "speaker": {
+        "name": "李师傅",
+        "role": "driver",
+        "avatar": "🚕"
+      },
+      "text": {
+        "zh": "您好，去北京南站对吧？请问手机尾号多少？",
+        "pinyin": "Nín hǎo, qù Běijīng Nánzhàn duì ba? Qǐngwèn shǒujī wěihào duōshao?",
+        "th": "สวัสดีครับ ไปสถานีรถไฟปักกิ่งใต้ใช่ไหมครับ? ไม่ทราบว่าสี่ตัวท้ายเบอร์มือถืออะไรครับ?",
+        "en": "Hello, going to Beijing South Railway Station, right? What are the last 4 digits of your phone?"
+      },
+      "culturalNote": {
+        "id": "culture_didi_tail_number",
+        "category": "public_transit",
+        "titleTh": "มารยาทการขึ้นรถแท็กซี่และ DiDi ในจีน",
+        "insightTh": "คนขับรถในจีนต้องถาม '手机尾号' (เลข 4 ตัวท้ายของเบอร์มือถือ) ตามกฎความปลอดภัยของแอป และผู้โดยสารเบาะหลังต้องคาดเข็มขัดนิรภัยเสมอเพื่อหลีกเลี่ยงกล้อง AI จราจรปรับ",
+        "doAndDont": {
+          "doTh": "ตอบเลข 4 ตัวอย่างกระชับ เช่น '尾号5678' หรือ '5678' พร้อมคาดเข็มขัดนิรภัยทันที",
+          "dontTh": "อย่าตอบเบอร์โทรศัพท์ทั้ง 11 ตัว หรือนั่งเฉยๆ โดยไม่คาดเข็มขัดนิรภัย"
+        },
+        "goldenPhrase": {
+          "zh": "师傅好！尾号5678，后排也系好安全带了。",
+          "pinyin": "Shīfu hǎo! Wěihào 5678, hòupái yě xì hǎo ānquándài le.",
+          "th": "สวัสดีครับพี่! สี่ตัวท้าย 5678 คาดเข็มขัดนิรภัยเรียบร้อยแล้วครับ"
+        },
+        "badgeReward": "เหรียญผู้โดยสารยอดมารยาท 🚕✨"
+      },
+      "branches": [
+        {
+          "id": "branch_optimal_tail_and_seatbelt",
+          "text": {
+            "zh": "师傅好！尾号5678，我已经系好安全带了，辛苦您！",
+            "pinyin": "Shīfu hǎo! Wěihào 5678, wǒ yǐjīng xì hǎo ānquándài le, xīnkǔ nín!",
+            "th": "สวัสดีครับพี่! เลขท้าย 5678 ผมคาดเข็มขัดนิรภัยเรียบร้อยแล้วครับ ขอบคุณครับ!",
+            "en": "Hello! Last 4 digits are 5678, seatbelt is already fastened. Thanks!"
+          },
+          "nextNodeId": "node_smooth_trip",
+          "patienceDelta": 20,
+          "pragmaticType": "optimal",
+          "feedbackTh": "สมบูรณ์แบบ! ตอบเลขท้าย 4 ตัวทันใจ พร้อมแจ้งคาดเข็มขัดนิรภัย คนขับสบายใจไร้กังวลโดนปรับ"
+        },
+        {
+          "id": "branch_just_four_digits",
+          "text": {
+            "zh": "5678。",
+            "pinyin": "Wǔ liù qī bā.",
+            "th": "5678 ครับ",
+            "en": "5678."
+          },
+          "nextNodeId": "node_remind_seatbelt",
+          "patienceDelta": 5,
+          "pragmaticType": "acceptable",
+          "feedbackTh": "กระชับ ตรงเป้าหมาย แต่คนขับอาจต้องเอ่ยเตือนให้คาดเข็มขัดนิรภัยเพิ่ม"
+        },
+        {
+          "id": "branch_full_eleven_digits",
+          "text": {
+            "zh": "我的电话是一三八零零一三五六七八。",
+            "pinyin": "Wǒ de diànhuà shì yī sān bā líng líng yī sān wǔ liù qī bā.",
+            "th": "เบอร์โทรของฉันคือ 13800135678",
+            "en": "My phone number is 13800135678."
+          },
+          "nextNodeId": "node_driver_confused",
+          "patienceDelta": -15,
+          "pragmaticType": "misunderstanding",
+          "feedbackTh": "คนขับต้องการแค่เลข 4 ตัวท้าย การท่องเบอร์ 11 หลักขณะขับรถทำให้คนขับจำยากและเสียสมาธิ"
+        }
+      ]
+    },
+    "node_remind_seatbelt": {
+      "id": "node_remind_seatbelt",
+      "speaker": {
+        "name": "李师傅",
+        "role": "driver",
+        "avatar": "🚕"
+      },
+      "text": {
+        "zh": "好的，信息核对上了。前面路口有交警摄像头，后排请务必系好安全带！",
+        "pinyin": "Hǎo de, xìnxī héduì shàng le. Qiánmiàn lùkǒu yǒu jiāojǐng shèxiàngtóu, hòupái qǐng wùbì xì hǎo ānquándài!",
+        "th": "โอเค ข้อมูลตรงกันครับ ด้านหน้าสี่แยกมีกล้องจราจร เบาะหลังช่วยคาดเข็มขัดนิรภัยด้วยนะครับ!",
+        "en": "Alright, info verified. Traffic camera ahead at the intersection, please make sure your seatbelt is fastened in the back!"
+      },
+      "branches": [
+        {
+          "id": "branch_fasten_now",
+          "text": {
+            "zh": "好的，马上系好！谢谢提醒。",
+            "pinyin": "Hǎo de, mǎshàng xì hǎo! Xièxie tíxǐng.",
+            "th": "ได้ครับ คาดทันทีเลยครับ! ขอบคุณที่เตือนครับ",
+            "en": "Sure, fastening right away! Thanks for reminding me."
+          },
+          "nextNodeId": "node_smooth_trip",
+          "patienceDelta": 10,
+          "pragmaticType": "optimal",
+          "feedbackTh": "ตอบรับอย่างรวดเร็วและให้ความร่วมมือ"
+        }
+      ]
+    },
+    "node_driver_confused": {
+      "id": "node_driver_confused",
+      "speaker": {
+        "name": "李师傅",
+        "role": "driver",
+        "avatar": "🚕"
+      },
+      "text": {
+        "zh": "哎呀小伙子，不用报全号，系统只要最后四位！后四位是5678对吧？",
+        "pinyin": "Āiyā xiǎohuǒzi, bú yòng bào quán hào, xìtǒng zhǐ yào zuìhòu sì wèi! Hòu sì wèi shì 5678 duì ba?",
+        "th": "โธ่พ่อหนุ่ม ไม่ต้องบอกเบอร์เต็ม ระบบต้องการแค่ 4 ตัวสุดท้าย! 4 ตัวท้ายคือ 5678 ใช่ไหม?",
+        "en": "Oh friend, no need for the full number, the system only needs the last 4 digits! Last 4 are 5678, right?"
+      },
+      "branches": [
+        {
+          "id": "branch_apologize_confirm",
+          "text": {
+            "zh": "对对对，不好意思！后四位是5678。",
+            "pinyin": "Duì duì duì, bù hǎoyìsi! Hòu sì wèi shì 5678.",
+            "th": "ใช่ๆ ครับ ขอโทษด้วยครับ! สี่ตัวท้ายคือ 5678 ครับ",
+            "en": "Yes yes, apologies! Last four digits are 5678."
+          },
+          "nextNodeId": "node_remind_seatbelt",
+          "patienceDelta": 5,
+          "pragmaticType": "acceptable",
+          "feedbackTh": "แก้ไขสถานการณ์ได้อย่างเป็นมิตร"
+        }
+      ]
+    },
+    "node_smooth_trip": {
+      "id": "node_smooth_trip",
+      "speaker": {
+        "name": "李师傅",
+        "role": "driver",
+        "avatar": "🚕"
+      },
+      "text": {
+        "zh": "好嘞！咱们出发，大概25分钟到达北京南站出发层，祝您旅途平安！",
+        "pinyin": "Hǎo lei! Zánmen chūfā, dàgài 25 fēnzhōng dàodá Běijīng Nánzhàn chūfā céng, zhù nín lǚtú píng'ān!",
+        "th": "เยี่ยมเลย! ออกเดินทางครับ ประมาณ 25 นาทีถึงชั้นผู้โดยสารขาออกสถานีรถไฟปักกิ่งใต้ เดินทางปลอดภัยนะครับ!",
+        "en": "Great! Let's hit the road, about 25 minutes to Beijing South departure hall. Safe travels!"
+      },
+      "branches": [],
+      "isEnding": true,
+      "endingType": "grand_pass",
+      "endingTitleTh": "การเดินทางราบรื่นปลอดภัย! 🌟",
+      "endingMessageTh": "คุณยืนยันตัวตนรวดเร็ว คาดเข็มขัดนิรภัยถูกต้อง คนขับพึงพอใจและขับส่งถึงสถานีรถไฟอย่างตรงเวลา"
+    }
+  }
+}

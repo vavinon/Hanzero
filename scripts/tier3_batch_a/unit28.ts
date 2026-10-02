@@ -1,0 +1,870 @@
+/**
+ * scripts/tier3_batch_a/unit28.ts
+ * Tier 3 Unit 28: 中国电商生态 (E-Commerce Ecosystem: อีคอมเมิร์ซ & ไลฟ์สดจีน)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit28 = {
+  unit_id: 'tier3_u28',
+  tier: 3,
+  unit_number: 28,
+  title: {
+    zh: '中国电商生态',
+    th: 'อีคอมเมิร์ซ & ไลฟ์สดจีน',
+    en: 'Chinese E-Commerce Ecosystem'
+  },
+  description: 'เจาะลึกระบบนิเวศอีคอมเมิร์ซที่ทรงพลังที่สุดในโลก: การบริหารทราฟฟิก (平台运营与流量), การไลฟ์ขายของและอินฟลูเอนเซอร์ (直播带货与KOL), ตลอดจนซัพพลายเชนและบริการหลังการขาย (供应链与售后)',
+  lessons: [
+    {
+      lesson_id: 't3_u28_l01',
+      lesson_number: 1,
+      title: {
+        zh: '平台运营与流量',
+        th: 'การบริหารแพลตฟอร์มและทราฟฟิก',
+        en: 'Platform Operations & Traffic'
+      },
+      can_do: {
+        th: 'อธิบายระบบแพลตฟอร์ม ทราฟฟิก อัตราการซื้อ (Conversion Rate) และการยิงแอด โดยใช้โครงสร้าง 所谓...是指...',
+        en: 'Explain platforms, traffic, conversion rate, and ad spend using 所谓...是指...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: วิเคราะห์สถิติทราฟฟิกผู้เข้าชม อัตราเปลี่ยนเป็นยอดซื้อ และวางแผนยิงแอดในตลาดจีน!',
+      vocabulary: [
+        {
+          id: 'hsk3_2801',
+          hanzi: '电商',
+          pinyin: 'diànshāng',
+          display_pinyin: 'diànshāng',
+          pinyin_tone: 'dian4shang1',
+          meaning_th: 'อีคอมเมิร์ซ (ธุรกิจพาณิชย์อิเล็กทรอนิกส์)',
+          meaning_en: 'e-commerce',
+          radical: '日',
+          radical_name_th: 'หมวดดวงอาทิตย์ (日字旁)',
+          stroke_count: 16,
+          mnemonic: 'ระบบไฟฟ้าคอมพิวเตอร์ (电) ทำการค้าขาย (商) = ธุรกิจอีคอมเมิร์ซ',
+          kid_mnemonic: 'รถเข็นช็อปปิ้งติดหน้าจอคอมพิวเตอร์และมีสายฟ้าวิบวับ = 电商',
+          body_gesture: 'ใช้นิ้วเคาะแป้นพิมพ์ในอากาศแล้วทำมือเปิดตะกร้าสินค้า'
+        },
+        {
+          id: 'hsk3_2802',
+          hanzi: '流量',
+          pinyin: 'liúliàng',
+          display_pinyin: 'liúliàng',
+          pinyin_tone: 'liu2liang4',
+          meaning_th: 'ทราฟฟิก / ปริมาณผู้เข้าชมออนไลน์',
+          meaning_en: 'traffic (online viewers/visitors)',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 21,
+          mnemonic: 'สายน้ำผู้คนไหลเวียน (流) นับเป็นปริมาณมหาศาล (量) = ทราฟฟิก',
+          kid_mnemonic: 'แม่น้ำที่มีคนตัวจิ๋วๆ ลอยไหลเข้าสู่หน้าร้านค้าออนไลน์ = 流量',
+          body_gesture: 'สองมือทำคลื่นน้ำไหลเข้าหาตัวอย่างต่อเนื่อง'
+        },
+        {
+          id: 'hsk3_2803',
+          hanzi: '转化率',
+          pinyin: 'zhuǎnhuàlǜ',
+          display_pinyin: 'zhuǎnhuàlǜ',
+          pinyin_tone: 'zhuan3hua4lu:4',
+          meaning_th: 'อัตราเปลี่ยนเป็นยอดซื้อ (Conversion Rate)',
+          meaning_en: 'conversion rate',
+          radical: '车',
+          radical_name_th: 'หมวดเกวียน/รถ (车字旁)',
+          stroke_count: 20,
+          mnemonic: 'หมุนเปลี่ยน (转) จากคนดูเฉยๆ กลายมาเป็นลูกค้า (化) คิดเป็นสัดส่วน (率) = อัตราซื้อ',
+          kid_mnemonic: 'คนกดดูสินค้าแล้วมีไฟปิ๊งเปลี่ยนเป็นเงินจ่ายซื้อ = 转化率',
+          body_gesture: 'หมุนข้อมือหนึ่งรอบแล้วชี้นิ้วโป้งตกลงซื้อ'
+        },
+        {
+          id: 'hsk3_2804',
+          hanzi: '投流',
+          pinyin: 'tóuliú',
+          display_pinyin: 'tóuliú',
+          pinyin_tone: 'tou2liu2',
+          meaning_th: 'การยิงแอด / ลงทุนซื้อทราฟฟิก',
+          meaning_en: 'traffic advertising investment / run paid ads',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 16,
+          mnemonic: 'ใช้มือโยนเงินลงทุน (投) เพื่อซื้อทราฟฟิกสายน้ำผู้ใช้ (流) = ยิงแอด',
+          kid_mnemonic: 'หยอดเหรียญใส่ตู้โฆษณาแล้วคนวิ่งกรูเข้ามาดูไลฟ์ = 投流',
+          body_gesture: 'ทำท่าปาเหรียญไปข้างหน้าเหมือนการยิงแอด'
+        },
+        {
+          id: 'hsk3_2805',
+          hanzi: '私域',
+          pinyin: 'sīyù',
+          display_pinyin: 'sīyù',
+          pinyin_tone: 'si1yu4',
+          meaning_th: 'ฐานลูกค้าส่วนตัว (Private Traffic เช่น WeChat Group)',
+          meaning_en: 'private domain / private traffic pool',
+          radical: '禾',
+          radical_name_th: 'หมวดรวงข้าว (禾木旁)',
+          stroke_count: 17,
+          mnemonic: 'อาณาเขตแดน (域) ที่เป็นของกลุ่มเราเป็นการส่วนตัว (私) = ฐานลูกค้าส่วนตัว',
+          kid_mnemonic: 'บ้านหลังน้อยน่ารักที่รวมแฟนคลับเหนียวแน่น = 私域',
+          body_gesture: 'เอาสองมือโอบเข้าหาตัวเป็นวงกลมล้อมฐานแฟนคลับ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 转化率 (zhuǎnhuàlǜ)',
+        description_th: 'คำว่า 转 (zhuǎn) เป็นเสียง 3 ต่ำ 化 (huà) เป็นเสียง 4 หนักแน่น และ 率 (lǜ) เป็นเสียง 4 หนักแน่นสั้น (ปากกลม)',
+        example: '提高转化率 (tígāo zhuǎnhuàlǜ: เพิ่มอัตราเปลี่ยนเป็นยอดซื้อ)',
+        fun_metaphor: 'เสียงกดลงต่ำแล้วตามด้วยเสียงสับลงสองจังหวะแน่นเปรี๊ยะ!',
+        reassurance: 'คำนี้เป็นศัพท์ทองคำของวงการดิจิทัลมาร์เก็ตติงในจีน ออกเสียงให้ถูกต้องจะเพิ่มความน่าเชื่อถือ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการให้คำนิยามเชิงวิชาการ: 所谓...是指... (สิ่งที่เรียกว่า...หมายถึง...)',
+        explanation_th: 'ใช้ในการนำเสนอแผนกลยุทธ์ อธิบายโมเดลธุรกิจ หรือสรุปหลักการทำงานให้ทีมงานเข้าใจตรงกัน',
+        patterns: [
+          {
+            formula: '所谓 + [แนวคิด], 是指 + [คำอธิบาย]',
+            zh: '所谓私域流量，是指品牌自主拥有、可以免费反复触达的用户池。',
+            pinyin: 'Suǒwèi sīyù liúliàng, shì zhǐ pǐnpái zìzhǔ yōngyǒu, kěyǐ miǎnfèi fǎnfù chùdá de yònghù chí.',
+            th: 'สิ่งที่เรียกว่า Private Traffic หมายถึง บ่อผู้ใช้ที่แบรนด์เป็นเจ้าของเอง สามารถสื่อสารซ้ำได้ฟรีตลอดเวลา',
+            en: 'So-called private domain traffic refers to a user pool owned by the brand and reachable repeatedly for free.'
+          },
+          {
+            formula: '日益 + [กริยา/คุณศัพท์]',
+            zh: '随着电商竞争的加剧，精准投流的重要性日益突显。',
+            pinyin: 'Suízhe diànshāng jìngzhēng de jiājù, jīngzhǔn tóuliú de zhòngyàoxìng rìyì tūxiǎn.',
+            th: 'เมื่อการแข่งขันในอีคอมเมิร์ซทวีความรุนแรง ความสำคัญของการยิงแอดแม่นยำจึงเด่นชัดขึ้นทุกวัน',
+            en: 'As e-commerce competition intensifies, the importance of precise ad spending becomes increasingly prominent.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ผู้จัดการการตลาด) 🧑‍💼',
+          zh: '小赵，我们泰国香米专营店昨天的访客流量怎么样？转化率高吗？',
+          pinyin: 'Xiǎo Zhào, wǒmen Tàiguó xiāngmǐ zhuānyíngdiàn zuótiān de fǎngkè liúliàng zěnmeyàng? Zhuǎnhuàlǜ gāo ma?',
+          th: 'เสี่ยวจ้าว หน้าร้านข้าวหอมมะลิไทยของเราเมื่อวานนี้ทราฟฟิกผู้เข้าชมเป็นไงบ้าง? อัตราซื้อสูงไหม?',
+          en: 'Xiao Zhao, how was yesterday visitor traffic for our Thai jasmine rice store? Was conversion rate high?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวจ้าว (ฝ่ายโอเปอเรชัน) 👩‍💻',
+          zh: '昨天我们尝试了新的短视频投流，进店曝光量大涨，转化率达到了百分之四点五！',
+          pinyin: 'Zuótiān wǒmen chángshì le xīn de duǎnshìpín tóuliú, jìn diàn bàoguāngliàng dàzhǎng, zhuǎnhuàlǜ dádào le bǎifēnzhī sì diǎn wǔ!',
+          th: 'เมื่อวานเราลองยิงแอดวิดีโอสั้นตัวใหม่ ยอดคนเข้าชมร้านพุ่งสูงมาก อัตราซื้อแตะที่ 4.5% ค่ะ!',
+          en: 'Yesterday we tested short-video ad spend; store impressions surged, conversion rate reached 4.5%!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ผู้จัดการการตลาด) 🧑‍💼',
+          zh: '太棒了！所谓做电商，不能只依赖公域投流，一定要把买家沉淀到私域里。',
+          pinyin: 'Tài bàng le! Suǒwèi zuò diànshāng, bùnéng zhǐ yīlài gōngyù tóuliú, yídìng yào bǎ mǎijiā chéndiàn dào sīyù lǐ.',
+          th: 'ยอดเยี่ยมมาก! การทำอีคอมเมิร์ซจะพึ่งแต่การยิงแอดสาธารณะอย่างเดียวไม่ได้ ต้องดึงลูกค้าเข้ามาตกตะกอนในกลุ่มแฟนคลับส่วนตัวให้ได้',
+          en: 'Awesome! In e-commerce, we cannot just rely on public ad spend; we must funnel buyers into our private domain.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวจ้าว (ฝ่ายโอเปอเรชัน) 👩‍💻',
+          zh: '明白！每个包裹里我们都放了专属福利卡，方便粉丝扫码进群！',
+          pinyin: 'Míngbai! Měi ge bāoguǒ lǐ wǒmen dōu fàng le zhuānshǔ fúlì kǎ, fāngbiàn fěnsī sǎomǎ jìn qún!',
+          th: 'เข้าใจแล้วค่ะ! ในทุกพัสดุพวกเราใส่การ์ดสิทธิพิเศษไว้ เพื่อให้แฟนๆ สแกนคิวอาร์โค้ดเข้ากลุ่มได้สะดวกค่ะ!',
+          en: 'Understood! Every parcel includes an exclusive card for fans to easily scan and join the group!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '转化率' (zhuǎnhuàlǜ) ในการทำร้านค้าออนไลน์หมายถึงข้อใด?",
+          options: [
+            'สัดส่วนผู้เข้าชมที่ตัดสินใจซื้อสินค้า (Conversion Rate)',
+            'ความเร็วในการจัดส่งพัสดุ',
+            'อัตราการเปลี่ยนภาษาของเว็บไซต์',
+            'สัดส่วนสินค้าชำรุดเสียหาย'
+          ],
+          correct_index: 0,
+          explanation_th: "'转化率' คือ อัตราการเปลี่ยนผู้เข้าชมเป็นลูกค้าจริง หรือ Conversion Rate",
+          encouragement: 'แม่นยำมาก! ศัพท์การตลาดดิจิทัลจำได้ขึ้นใจ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "การยิงแอดหรือลงทุนซื้อทราฟฟิกในวงการอีคอมเมิร์ซจีน เรียกว่าอะไร?",
+          options: [
+            '投流 (tóuliú)',
+            '外卖 (wàimài)',
+            '租房 (zūfáng)',
+            '改签 (gǎiqiān)'
+          ],
+          correct_index: 0,
+          explanation_th: "'投流' (投广告买流量) คือ คำสแลงการตลาดยอดนิยม หมายถึง การยิงโฆษณาซื้อทราฟฟิก",
+          encouragement: 'จำศัพท์อินไซด์ของวงการอีคอมเมิร์ซจีนได้เป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ความสำคัญของการยิงแอดที่แม่นยำเด่นชัดขึ้นทุกวัน"',
+          tokens: ['精准投流的重要性', '日益突显', '随着电商竞争加剧'],
+          correct_sequence: ['随着电商竞争加剧', '精准投流的重要性', '日益突显'],
+          pinyin: 'Suízhe diànshāng jìngzhēng jiājù, jīngzhǔn tóuliú de zhòngyàoxìng rìyì tūxiǎn',
+          meaning_th: 'เมื่อการแข่งขันในอีคอมเมิร์ซทวีความรุนแรง ความสำคัญของการยิงแอดแม่นยำจึงเด่นชัดขึ้นทุกวัน',
+          explanation_th: 'เงื่อนไข (随着电商竞争加剧) + ประธาน (精准投流的重要性) + ภาคแสดง (日益突显)',
+          encouragement: 'เก่งกาจมาก! แต่งประโยควิเคราะห์ตลาดจีนได้สละสลวย!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '流量' ตัว '流' มีหมวดนำใด?",
+          options: [
+            '氵 (หมวดน้ำ 三点水)',
+            '木 (หมวดไม้ 木字旁)',
+            '火 (หมวดไฟ 火字旁)',
+            '土 (หมวดดิน 提土旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'流' มีหมวดนำ '氵' (น้ำ) สื่อถึงการไหลเวียน",
+          encouragement: 'หมวดนำอักษรจีนจำได้แม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในที่ประชุมสรุปแผนการตลาด ผู้บริหารถามว่าทำไมเราถึงต้องให้ความสำคัญกับ Private Traffic (私域流量) คุณควรตอบอย่างไรให้เห็นภาพกลยุทธ์?',
+        options: [
+          '因为所谓私域流量是品牌自己的资产，可以反复触达用户，从而大幅降低获客成本！ (Yīnwèi suǒwèi sīyù liúliàng shì pǐnpái zìjǐ de zīchǎn, kěyǐ fǎnfù chùdá yònghù, cóng’ér dàfú jiàngdī huòkè chéngběn!)',
+          '因为我喜欢在手机上聊天，很好玩。 (Yīnwèi wǒ xǐhuan zài shǒujī shang liáotiān, hěn hǎowán.)',
+          '这是秘密，我不能告诉您。 (Zhè shì mìmì, wǒ bù néng gàosu nín.)',
+          '请问打印机怎么用？我想打印纸张。 (Qǐngwèn dǎyìnjī zěnme yòng? Wǒ xiǎng dǎyìn zhǐzhāng.)'
+        ],
+        correct_index: 0,
+        explanation_th: "คำตอบ '因为所谓私域流量是品牌自己的资产，可以反复触达用户，从而大幅降低获客成本！' ตอกย้ำความเข้าใจเรื่องการเป็นเจ้าของสินทรัพย์และการลดต้นทุนหาลูกค้าอย่างเฉียบคม",
+        encouragement: 'ผ่านด่านกลยุทธ์ทราฟฟิกอีคอมเมิร์ซอย่างสวยงาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u28_l02',
+      lesson_number: 2,
+      title: {
+        zh: '直播带货与KOL',
+        th: 'ไลฟ์ขายของและอินฟลูเอนเซอร์',
+        en: 'Live Commerce & KOLs'
+      },
+      can_do: {
+        th: 'สื่อสารการดีลกับอินฟลูเอนเซอร์ ค่าเปิดโต๊ะ (Pit Fee) คอมมิชชัน และใช้สำนวน 货真价实',
+        en: 'Communicate influencer deals, pit fees, commissions, and use idiom 货真价实'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: คัดเลือกอินฟลูเอนเซอร์ (KOL) เจรจาค่าจ้างและค่าคอมมิชชันเพื่อสร้างสินค้าขายดีถล่มทลาย!',
+      vocabulary: [
+        {
+          id: 'hsk3_2806',
+          hanzi: '直播带货',
+          pinyin: 'zhíbō dàihuò',
+          display_pinyin: 'zhíbō dàihuò',
+          pinyin_tone: 'zhi2bo1 dai4huo4',
+          meaning_th: 'ไลฟ์สดขายของ (Live Commerce)',
+          meaning_en: 'live stream sales / live commerce',
+          radical: '目',
+          radical_name_th: 'หมวดตา (目字旁)',
+          stroke_count: 31,
+          mnemonic: 'ถ่ายทอดสดตรงหน้าจอ (直播) แบกนำสินค้ามานำเสนอ (带货) = ไลฟ์ขายของ',
+          kid_mnemonic: 'หยิบโทรศัพท์ตั้งกล้องไลฟ์แล้วชูขนมชวนเพื่อนๆ ซื้อ = 直播带货',
+          body_gesture: 'สองมือทำท่าถือกล้องมือถือแล้วผายมือแนะนำสินค้า'
+        },
+        {
+          id: 'hsk3_2807',
+          hanzi: '主播',
+          pinyin: 'zhǔbō',
+          display_pinyin: 'zhǔbō',
+          pinyin_tone: 'zhu3bo1',
+          meaning_th: 'สตรีมเมอร์ / พิธีกรไลฟ์สด',
+          meaning_en: 'streamer / host',
+          radical: '丶',
+          radical_name_th: 'หมวดหยดน้ำ (点部)',
+          stroke_count: 20,
+          mnemonic: 'ผู้ควบคุมหลัก (主) ในการแพร่ภาพกระจายเสียง (播) = พิธีกรไลฟ์สด',
+          kid_mnemonic: 'คนที่ใส่หูฟังมีไมค์จ่อปากพูดจ้อยๆ หน้ากล้องไลฟ์ = 主播',
+          body_gesture: 'ยกกำปั้นขวาแนบปากทำท่าพูดไมโครโฟน'
+        },
+        {
+          id: 'hsk3_2808',
+          hanzi: '坑位费',
+          pinyin: 'kēngwèifèi',
+          display_pinyin: 'kēngwèifèi',
+          pinyin_tone: 'keng1wei4fei4',
+          meaning_th: 'ค่าเปิดโต๊ะ / ค่าลงคิวสินค้าในไลฟ์ (Pit Fee)',
+          meaning_en: 'pit fee / slotting fee for live streams',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (提土旁)',
+          stroke_count: 23,
+          mnemonic: 'ค่าใช้จ่าย (费) ในการจองช่องตำแหน่งหลุม (坑位) หน้ากล้องไลฟ์ = ค่าลงคิวสินค้า',
+          kid_mnemonic: 'หยอดตั๋วเพื่อจองช่องวางสินค้าหน้าร้านไลฟ์สด = 坑位费',
+          body_gesture: 'ใช้นิ้วชี้จิ้มลงบนโต๊ะเพื่อจองตำแหน่งที่นั่ง'
+        },
+        {
+          id: 'hsk3_2809',
+          hanzi: '佣金',
+          pinyin: 'yòngjīn',
+          display_pinyin: 'yòngjīn',
+          pinyin_tone: 'yong4jin1',
+          meaning_th: 'ค่าคอมมิชชัน / ค่านายหน้า',
+          meaning_en: 'commission',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 15,
+          mnemonic: 'คนกลาง (佣) ได้รับเงินทองส่วนแบ่งตามยอดขาย (金) = ค่าคอมมิชชัน',
+          kid_mnemonic: 'ขายของได้ชิ้นหนึ่ง ก็ได้เหรียญรางวัลพิเศษหนึ่งเหรียญ = 佣金',
+          body_gesture: 'ทำมือนับเหรียญเงินอย่างเบิกบานใจ'
+        },
+        {
+          id: 'hsk3_2810',
+          hanzi: '货真价实',
+          pinyin: 'huòzhēnjiàshí',
+          display_pinyin: 'huòzhēnjiàshí',
+          pinyin_tone: 'huo4zhen1jia4shi2',
+          meaning_th: 'สินค้าแท้คุณภาพคุ้มราคา (ไม่ย้อมแมว)',
+          meaning_en: 'genuine goods at fair price',
+          radical: '贝',
+          radical_name_th: 'หมวดเงิน/เปลือกหอย (贝字旁)',
+          stroke_count: 34,
+          mnemonic: 'สินค้าเป็นของจริง (货真) ราคาเป็นธรรมเหมาะสมจริง (价实) = สินค้าแท้คุ้มราคา',
+          kid_mnemonic: 'หยิบของแท้มีตรายางประทับว่าของดีแน่นอน = 货真价实',
+          body_gesture: 'ยกสองนิ้วโป้งขึ้นพร้อมกันชื่นชมสินค้าคุณภาพ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 货真价实 (huòzhēnjiàshí) จังหวะเสียง 4-1-4-2',
+        description_th: 'พยางค์: huò (4), zhēn (1), jià (4), shí (2) — จังหวะ หนัก-สูงยาว-หนัก-เหินขึ้น สื่อถึงความน่าเชื่อถือระดับตำนาน',
+        example: '百年老店，货真价实 (ร้านเก่าแก่ร้อยปี สินค้าแท้ราคายุติธรรม)',
+        fun_metaphor: 'เหมือนประทับตราครุฑแดงลงบนกล่องทองคำ!',
+        reassurance: 'คำนี้ใช้บ่อยทั้งในการค้าและชีวิตประจำวัน ออกเสียงให้ชัดเจนจะสร้างความประทับใจทันที'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการคิดค่าจ้างไลฟ์สด: 纯佣模式 vs 坑位费+佣金',
+        explanation_th: 'คำศัพท์และโครงสร้างที่ฝ่ายการตลาดต้องใช้เมื่อติดต่อ MCN หรือผู้จัดการดาราอินฟลูเอนเซอร์ในจีน',
+        patterns: [
+          {
+            formula: '我们希望采用 + [รูปแบบ] + 的合作模式',
+            zh: '这次专场，我们希望能采用纯佣金、零坑位费的合作模式。',
+            pinyin: 'Zhè cì zhuānchǎng, wǒmen xīwàng néng cǎiyòng chún yòngjīn, líng kēngwèifèi de hézuò móshì.',
+            th: 'รอบไลฟ์พิเศษนี้ พวกเราหวังว่าจะใช้โมเดลคิดค่าคอมมิชชันล้วนโดยไม่มีค่าเปิดโต๊ะครับ',
+            en: 'For this special session, we hope to adopt a pure commission, zero pit-fee cooperation model.'
+          },
+          {
+            formula: '只要我们的产品 + 货真价实, 就一定能 + [ผลลัพธ์]',
+            zh: '只要我们的泰国榴莲货真价实，就一定能在直播间打造出爆款！',
+            pinyin: 'Zhǐyào wǒmen de Tàiguó liúlián huòzhēnjiàshí, jiù yídìng néng zài zhíbōjiān dǎzào chū bàokuǎn!',
+            th: 'ขอเพียงทุเรียนไทยของเราเป็นของแท้คุณภาพคุ้มราคา ก็จะสร้างสินค้าฮิตถล่มทลายในห้องไลฟ์ได้อย่างแน่นอน!',
+            en: 'As long as our Thai durian is genuine at fair price, we can surely create a blockbuster in the live room!'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '张经理，这位头部美妆主播的直播带货档期敲定了吗？',
+          pinyin: 'Zhāng jīnglǐ, zhè wèi tóubù měizhuāng zhǔbō de zhíbō dàihuò dàngqī qiāodìng le ma?',
+          th: 'ผู้จัดการจาง คิวไลฟ์ขายของของบิวตี้บล็อกเกอร์ตัวท็อปคนนี้เคาะวันลงตัวหรือยังครับ?',
+          en: 'Manager Zhang, is the live stream sales schedule for this top beauty streamer finalized?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการจาง (ฝ่ายเอเจนซี) 👨‍💼',
+          zh: '敲定了！不过对方要求的坑位费是两万元，外加百分之二十的销售佣金。',
+          pinyin: 'Qiāodìng le! Búguò duìfāng yāoqiú de kēngwèifèi shì liǎngwàn yuán, wàijiā bǎifēnzhī èrshí de xiāoshòu yòngjīn.',
+          th: 'ลงตัวแล้วครับ! แต่ทางนั้นขอคิดค่าเปิดโต๊ะ 20,000 หยวน พร้อมบวกค่าคอมมิชชัน 20% จากยอดขายครับ',
+          en: 'Finalized! But they request a 20,000 yuan pit fee plus 20% sales commission.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '我们可以接受这个条件。只要主播强调我们的精油是泰国直采、货真价实！',
+          pinyin: 'Wǒmen kěyǐ jiēshòu zhè ge tiáojiàn. Zhǐyào zhǔbō qiángdiào wǒmen de jīngyóu shì Tàiguó zhícǎi, huòzhēnjiàshí!',
+          th: 'พวกเรายอมรับเงื่อนไขนี้ได้ครับ ขอเพียงพิธีกรช่วยเน้นย้ำว่าน้ำมันหอมระเหยของเรานำเข้าตรงจากไทย เป็นของแท้คุณภาพคุ้มราคา!',
+          en: 'We accept these terms. As long as the streamer emphasizes our essential oil is directly sourced from Thailand, genuine at fair price!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการจาง (ฝ่ายเอเจนซี) 👨‍💼',
+          zh: '没问题，主播团队非常专业，他们有信心在这场大促中做出破百万的爆款！',
+          pinyin: 'Méi wèntí, zhǔbō tuánduì fēicháng zhuānyè, tāmen yǒu xìnxīn zài zhè chǎng dàcù zhōng zuò chū pò bǎiwàn de bàokuǎn!',
+          th: 'ไม่มีปัญหาครับ ทีมงานของสตรีมเมอร์มืออาชีพมาก พวกเขามั่นใจว่าจะสร้างยอดขายถล่มทลายทะลุล้านในเทศกาลโปรโมชันนี้ครับ!',
+          en: 'No problem, their team is very professional; they are confident in creating a million-plus hit in this mega promotion!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '坑位费' (kēngwèifèi) ในการไลฟ์สดขายของที่จีนคือค่าใช้จ่ายอะไร?",
+          options: [
+            'ค่าเปิดโต๊ะหรือค่าลงคิวสินค้าในไลฟ์',
+            'ค่าปรับสินค้าส่งช้า',
+            'ค่าเช่าสัญญาณอินเทอร์เน็ต',
+            'ค่าทำความสะอาดสตูดิโอ'
+          ],
+          correct_index: 0,
+          explanation_th: "'坑位费' คือ ค่าธรรมเนียมคงที่เพื่อขอให้สตรีมเมอร์นำสินค้าขึ้นโชว์หน้ากล้องไลฟ์",
+          encouragement: 'จำศัพท์เฉพาะของวงการไลฟ์สดจีนได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "สำนวนใดหมายถึง 'สินค้าแท้คุณภาพคุ้มราคา' ไม่หลอกลวงผู้บริโภค?",
+          options: [
+            '货真价实 (huòzhēnjiàshí)',
+            '马马虎虎 (mǎmǎhūhū)',
+            '讨价还价 (tǎojiàhuánjià)',
+            '人山人海 (rénshānrénhǎi)'
+          ],
+          correct_index: 0,
+          explanation_th: "'货真价实' สื่อถึง สินค้าแท้ มีคุณภาพสมราคา น่าเชื่อถือ 100%",
+          encouragement: 'ยอดเยี่ยมมาก! สำนวนการค้ายอดนิยมจำได้เป๊ะ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "สินค้าแท้คุณภาพคุ้มราคาย่อมสร้างยอดขายถล่มทลายได้แน่นอน"',
+          tokens: ['一定能打造出爆款', '只要产品货真价实', '就'],
+          correct_sequence: ['只要产品货真价实', '就', '一定能打造出爆款'],
+          pinyin: 'Zhǐyào chǎnpǐn huòzhēnjiàshí, jiù yídìng néng dǎzào chū bàokuǎn',
+          meaning_th: 'ขอเพียงสินค้าแท้คุณภาพคุ้มราคา ย่อมสร้างยอดขายถล่มทลายได้แน่นอน',
+          explanation_th: 'เงื่อนไข (只要产品货真价实) + คำเชื่อม (就) + ผลลัพธ์ (一定能打造出爆款)',
+          encouragement: 'ต่อประโยคการตลาดสดใสทรงพลังมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '货真价实' ตัว '货' (สินค้า) มีหมวดนำใด?",
+          options: [
+            '贝 (หมวดเปลือกหอย/เงิน 贝字底)',
+            '木 (หมวดไม้ 木字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '日 (หมวดวัน 日字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'货' ประกอบด้วย '贝' (เงินตรา/มีมูลค่า) ที่ด้านล่าง สื่อถึงสินค้าสิ่งของที่มีราคา",
+          encouragement: 'เข้าใจรากศัพท์อักษรจีนอย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณกำลังเจรจากับผู้จัดการของอินฟลูเอนเซอร์ชื่อดัง เขาเรียกค่าตัวและค่าเปิดโต๊ะสูงเกินไป คุณต้องการเสนอปรับลดค่าเปิดโต๊ะและเพิ่มเปอร์เซ็นต์คอมมิชชันตามยอดขายจริงแทน ควรพูดอย่างไร?',
+        options: [
+          '为了实现共赢，我们建议将坑位费降至五千元，同时将销售佣金提高至25%，靠真实销量说话！ (Wèile shíxiàn gòngyíng, wǒmen jiànyì jiāng kēngwèifèi jiàng zhì wǔqiān yuán, tóngshí jiāng xiāoshòu yòngjīn tígāo zhì bǎifēnzhī èrshíwǔ, kào zhēnshí xiàoliàng shuōhuà!)',
+          '你太贪心了，我再也不找你们了。 (Nǐ tài tānxīn le, wǒ zài yě bù zhǎo nǐmen le.)',
+          '这碗面太辣了，请给我一杯冰水。 (Zhè wǎn miàn tài là le, qǐng gěi wǒ yì bēi bīngshuǐ.)',
+          '高铁票退票需要多少手续费？ (Gāotiěpiào tuìpiào xūyào duōshao shǒuxùfèi?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '为了实现共赢，我们建议将坑位费降至五千元，同时将销售佣金提高至25%，靠真实销量说话！' ลดความเสี่ยงของแบรนด์ จูงใจให้อินฟลูเอนเซอร์ตั้งใจขาย และเป็นโมเดลที่ทั้งสองฝ่ายยอมรับได้",
+        encouragement: 'ชั้นเชิงการดีลกับอินฟลูเอนเซอร์ระดับเทพ ปิดจ็อบสำเร็จ!'
+      }
+    },
+    {
+      lesson_id: 't3_u28_l03',
+      lesson_number: 3,
+      title: {
+        zh: '供应链与售后',
+        th: 'ซัพพลายเชนและบริการหลังการขาย',
+        en: 'Supply Chain & After-Sales'
+      },
+      can_do: {
+        th: 'อธิบายการบริหารคลังสินค้า การส่งมอบสินค้า อัตราการคืนของ และอัตราซื้อซ้ำ โดยใช้โครงสร้าง 正是由于...从而导致...',
+        en: 'Explain warehousing, fulfillment, return rate, repurchase rate using 正是由于...从而导致...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: บริหารจัดการคลังสินค้า ลดอัตราการคืนของ และเพิ่มอัตราการกลับมาซื้อซ้ำของลูกค้า!',
+      vocabulary: [
+        {
+          id: 'hsk3_2811',
+          hanzi: '仓储',
+          pinyin: 'cāngchǔ',
+          display_pinyin: 'cāngchǔ',
+          pinyin_tone: 'cang1chu3',
+          meaning_th: 'การจัดเก็บคลังสินค้า (Warehousing)',
+          meaning_en: 'warehousing / storage',
+          radical: '人',
+          radical_name_th: 'หมวดคน (人字头)',
+          stroke_count: 16,
+          mnemonic: 'ยุ้งฉางเก็บผลผลิต (仓) สะสมกักตุนไว้ (储) = การจัดเก็บคลังสินค้า',
+          kid_mnemonic: 'โกดังขนาดใหญ่มีชั้นวางกล่องพัสดุเรียงกันเป็นแถว = 仓储',
+          body_gesture: 'ยกสองมือทำกรอบหลังคาโกดังทรงสามเหลี่ยม'
+        },
+        {
+          id: 'hsk3_2812',
+          hanzi: '履约',
+          pinyin: 'lǚyuē',
+          display_pinyin: 'lǚyuē',
+          pinyin_tone: 'lu:3yue1',
+          meaning_th: 'การส่งมอบและปฏิบัติตามสัญญา (Fulfillment)',
+          meaning_en: 'order fulfillment / honor an agreement',
+          radical: '尸',
+          radical_name_th: 'หมวดร่าง (尸字头)',
+          stroke_count: 18,
+          mnemonic: 'ย่ำเท้าก้าวเดิน (履) ทำตามข้อสัญญาที่ตกลงไว้ (约) = ส่งมอบครบถ้วน',
+          kid_mnemonic: 'ไรเดอร์ส่งของเคาะประตูยื่นกล่องถึงมือลูกค้าตรงเวลา = 履约',
+          body_gesture: 'ยื่นสองมือส่งกล่องของขวัญพร้อมรอยยิ้ม'
+        },
+        {
+          id: 'hsk3_2813',
+          hanzi: '退换货率',
+          pinyin: 'tuìhuànhuòlǜ',
+          display_pinyin: 'tuìhuànhuòlǜ',
+          pinyin_tone: 'tui4huan4huo4lu:4',
+          meaning_th: 'อัตราการขอเปลี่ยนหรือคืนสินค้า',
+          meaning_en: 'return and exchange rate',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 34,
+          mnemonic: 'ถอยหลังคืน (退) และเปลี่ยนของ (换货) คำนวณเป็นอัตราส่วน (率) = อัตราคืนสินค้า',
+          kid_mnemonic: 'กล่องพัสดุถูกส่งย้อนศรกลับมาที่คลังสินค้า = 退换货率',
+          body_gesture: 'โบกมือปฏิเสธแล้วทำท่าผลักกล่องกลับ'
+        },
+        {
+          id: 'hsk3_2814',
+          hanzi: '好评率',
+          pinyin: 'hǎopínglǜ',
+          display_pinyin: 'hǎopínglǜ',
+          pinyin_tone: 'hao3ping2lu:4',
+          meaning_th: 'อัตราการรีวิวชื่นชม (คะแนนบวก)',
+          meaning_en: 'favorable review rate / positive feedback rate',
+          radical: '女',
+          radical_name_th: 'หมวดผู้หญิง (女字旁)',
+          stroke_count: 23,
+          mnemonic: 'คำชื่นชมว่าดี (好评) คำนวณเป็นอัตราร้อยละ (率) = อัตรารีวิวดี',
+          kid_mnemonic: 'ดาวห้าดาวสีทองสว่างวาบหน้าร้านค้า = 好评率',
+          body_gesture: 'ชูห้านิ้วทำท่าดาวส่องแสงกระพริบวิบวับ'
+        },
+        {
+          id: 'hsk3_2815',
+          hanzi: '复购',
+          pinyin: 'fùgòu',
+          display_pinyin: 'fùgòu',
+          pinyin_tone: 'fu4gou4',
+          meaning_th: 'การซื้อซ้ำ (Repurchase)',
+          meaning_en: 'repeat purchase / repurchase',
+          radical: '夂',
+          radical_name_th: 'หมวดตามหลัง (折文旁)',
+          stroke_count: 17,
+          mnemonic: 'กลับมาซ้ำอีกครั้ง (复) เพื่อเลือกซื้อสินค้า (购) = ซื้อซ้ำ',
+          kid_mnemonic: 'ลูกค้าเดินกลับเข้ามาในร้านอีกรอบพร้อมรอยยิ้ม = 复购',
+          body_gesture: 'กวักมือเรียกให้ลูกค้ากลับเข้ามาซื้ออีกครั้ง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 履约 (lǚyuē)',
+        description_th: 'คำว่า 履 (lǚ) เป็นเสียง 3 ต่ำลึก (ปากกลม ü) ส่วน 约 (yuē) เป็นเสียง 1 สูงยาว',
+        example: '履约能力 (lǚyuē nénglì: ขีดความสามารถในการส่งมอบสินค้า)',
+        fun_metaphor: 'เหมือนก้มตัวลงผูกเชือกรองเท้าแล้วกระโดดส่งของถึงมือลูกค้า!',
+        reassurance: 'คำว่า 履约 ใช้บ่อยทั้งในด้านโลจิสติกส์และกฎหมายสัญญา ออกเสียงให้ชัดเจน'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างสาเหตุและผลกระทบเชิงลึก: 正是由于...从而导致... (ก็เนื่องจาก...จึงส่งผลให้เกิด...)',
+        explanation_th: 'ใช้ในการวิเคราะห์ปัญหาข้อบกพร่องของระบบ หรือถอดบทเรียนเพื่อปรับปรุงการดำเนินงาน',
+        patterns: [
+          {
+            formula: '正是由于 + [สาเหตุหลัก], 从而导致 + [ผลกระทบ]',
+            zh: '正是由于物流包装不够结实，从而导致了运输破损和退换货率上升。',
+            pinyin: 'Zhèng shì yóuyú wùliú bāozhuāng bú gòu jiēshi, cóng’ér dǎozhì le yùnshū pòsǔn hé tuìhuànhuòlǜ shàngshēng.',
+            th: 'ก็เนื่องจากบรรจุภัณฑ์โลจิสติกส์ไม่แน่นหนาพอ จึงส่งผลให้เกิดความเสียหายในการขนส่งและอัตราคืนของพุ่งสูงขึ้น',
+            en: 'Precisely because logistics packaging was not sturdy enough, it led to transit damage and rising return rates.'
+          },
+          {
+            formula: '只要优化 + [ขั้นตอน], 就能大幅提升 + [ตัวชี้วัด]',
+            zh: '只要优化履约体验，就能大幅提升客户的好评率和复购率。',
+            pinyin: 'Zhǐyào yōuhuà lǚyuē tǐyàn, jiù néng dàfú tíshēng kèhù de hǎopínglǜ hé fùgòulǜ.',
+            th: 'ขอเพียงปรับปรุงประสบการณ์ส่งมอบให้ยอดเยี่ยม ก็จะสามารถเพิ่มอัตรารีวิวดีและการซื้อซ้ำของลูกค้าได้อย่างมหาศาล',
+            en: 'As long as fulfillment experience is optimized, positive review and repurchase rates can be greatly boosted.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '小陈，上周大促发货完毕后，后台的售后数据有什么异常吗？',
+          pinyin: 'Xiǎo Chén, shàng zhōu dàcù fāhuò wánbì hòu, hòutái de shòuhòu shùjù yǒu shénme yìcháng ma?',
+          th: 'เสี่ยวเฉิน หลังส่งของล็อตใหญ่เมื่อสัปดาห์ก่อน ข้อมูลบริการหลังการขายมีอะไรผิดปกติไหม?',
+          en: 'Xiao Chen, after shipping last week mega sale, any anomalies in backend after-sales data?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวเฉิน (ฝ่ายบริการลูกค้า) 👩‍💻',
+          zh: '整体好评率保持在98%以上，但是有个别批次的退换货率略有抬头。',
+          pinyin: 'Zhěngtǐ hǎopínglǜ bǎochí zài bǎifēnzhī jiǔshíbā yǐshàng, dànshì yǒu gèbié pīcì de tuìhuànhuòlǜ luè yǒu táitóu.',
+          th: 'ภาพรวมอัตราประเมินดีรักษาไว้ได้ที่กว่า 98% ค่ะ แต่มีบางล็อตที่อัตราขอคืนสินค้ากระเตื้องขึ้นนิดหน่อย',
+          en: 'Overall positive rate stays above 98%, but a few batches had a slightly raised return rate.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '具体原因查清楚了吗？我们绝不能损害消费者的信任。',
+          pinyin: 'Jùtǐ yuányīn chá qīngchu le ma? Wǒmen jué bùnéng sǔnhài xiāofèizhě de xìnrèn.',
+          th: 'ตรวจสอบสาเหตุที่แน่ชัดแล้วหรือยัง? เราจะทำลายความไว้วางใจของผู้บริโภคไม่ได้เป็นอันขาด',
+          en: 'Did we clarify specific reasons? We must never harm consumer trust.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เสี่ยวเฉิน (ฝ่ายบริการลูกค้า) 👩‍💻',
+          zh: '正是由于部分地区暴雨导致了仓储履约延迟。我们已经主动为买家发放了补偿优惠券，带动了二次复购！',
+          pinyin: 'Zhèng shì yóuyú bùfen dìqū bàoyǔ dǎozhì le cāngchǔ lǚyuē yánchí. Wǒmen yǐjīng zhǔdòng wèi mǎijiā fāfàng le bǔcháng yōuhuìquàn, dàidòng le èr cì fùgòu!',
+          th: 'ก็เนื่องจากฝนตกหนักในบางพื้นที่ทำให้การส่งมอบจากคลังล่าช้าค่ะ พวกเราได้ส่งคูปองชดเชยให้ลูกค้าเชิงรุกแล้ว ช่วยกระตุ้นให้กลับมาซื้อซ้ำรอบสองค่ะ!',
+          en: 'Heavy rain in some regions delayed warehouse fulfillment. We proactively issued compensation coupons, driving repeat purchases!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '复购' (fùgòu) ในการบริหารร้านค้าออนไลน์หมายถึงข้อใด?",
+          options: [
+            'การที่ลูกค้าเดิมกลับมาซื้อสินค้าซ้ำ',
+            'การยกเลิกคำสั่งซื้อสินค้า',
+            'การร้องเรียนไปยังสคบ.',
+            'การเปลี่ยนรหัสผ่านบัญชี'
+          ],
+          correct_index: 0,
+          explanation_th: "'复购' คือ การซื้อซ้ำ (Repeat Purchase) ซึ่งเป็นหัวใจสำคัญของกำไรระยะยาวในอีคอมเมิร์ซ",
+          encouragement: 'จำศัพท์ดัชนีชี้วัดความจงรักภักดีของลูกค้าได้แม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '履约' (lǚyuē) ในด้านโลจิสติกส์และการค้าหมายถึงอะไร?",
+          options: [
+            'การปฏิบัติตามสัญญาและส่งมอบสินค้าให้สำเร็จ (Fulfillment)',
+            'การเดินทางไปต่างประเทศ',
+            'การจองห้องพักในโรงแรม',
+            'การต่อคิวซื้อตั๋วรถไฟ'
+          ],
+          correct_index: 0,
+          explanation_th: "'履约' หมายถึง การปฏิบัติตามข้อผูกพันหรือการส่งมอบสินค้าครบตามสัญญา",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์ธุรกิจระดับทางการแม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ก็เนื่องจากบรรจุภัณฑ์ไม่แน่นหนาจึงส่งผลให้อัตราคืนของสูงขึ้น"',
+          tokens: ['导致了退换货率上升', '包装不够结实', '正是由于', '从而'],
+          correct_sequence: ['正是由于', '包装不够结实', '从而', '导致了退换货率上升'],
+          pinyin: 'Zhèng shì yóuyú bāozhuāng bú gòu jiēshi, cóng’ér dǎozhì le tuìhuànhuòlǜ shàngshēng',
+          meaning_th: 'ก็เนื่องจากบรรจุภัณฑ์ไม่แน่นหนา จึงส่งผลให้อัตราคืนของสูงขึ้น',
+          explanation_th: 'โครงสร้าง: 正是由于... (ก็เนื่องจาก...) + 从而 (จึงส่งผลให้...) + 导致了... (ก่อให้เกิด...)',
+          encouragement: 'ต่อบล็อกประโยควิเคราะห์เหตุผลได้เนียนกริบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '好评率' ตัว '评' (วิจารณ์/ประเมิน) มีหมวดนำใด?",
+          options: [
+            '讠 (หมวดคำพูด 言字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '手 (หมวดมือ 手字旁)',
+            '心 (หมวดใจ 心字底)'
+          ],
+          correct_index: 0,
+          explanation_th: "'评' คือ การออกความเห็นและวิจารณ์ จึงมีหมวดนำ '讠' (คำพูด)",
+          encouragement: 'เข้าใจหมวดนำอย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ลูกค้าไม่พอใจที่พัสดุกล่องบุบและต้องการขอคืนสินค้า คุณในฐานะผู้จัดการฝ่ายบริการลูกค้า ควรกล่าวขออภัยและแก้ไขปัญหาเชิงรุกอย่างไร?',
+        options: [
+          '非常抱歉给您带来不好的体验！我们立刻为您免费补发一份新品，并赠送一张专享无门槛优惠券，请您放心！ (Fēicháng bàoqiàn gěi nín dàilái bù hǎo de tǐyàn! Wǒmen lìkè wèi nín miǎnfèi bǔfā yí fèn xīnpǐn, bìng zèngsòng yì zhāng zhuānxiǎng wú ménkǎn yōuhuìquàn, qǐng nín fàngxīn!)',
+          '那是快递员弄坏的，不关我们的事。 (Nà shì kuàidìyuán nòng huài de, bù guān wǒmen de shì.)',
+          '退就退吧，你真麻烦。 (Tuì jiù tuì ba, nǐ zhēn máfan.)',
+          '请问火车站怎么走？ (Qǐngwèn huǒchēzhàn zěnme zǒu?)'
+        ],
+        correct_index: 0,
+        explanation_th: "การขออภัยอย่างจริงใจ ส่งของทดแทนทันที และมอบคูปองชดเชย เป็นบริการหลังการขายระดับพรีเมียมที่เปลี่ยนลูกค้าร้องเรียนให้กลายเป็นแฟนพันธุ์แท้",
+        encouragement: 'สุดยอดการบริการลูกค้าระดับมืออาชีพ ปัญหาคลี่คลายอย่างสมบูรณ์!'
+      }
+    },
+    {
+      lesson_id: 't3_u28_l04',
+      lesson_number: 4,
+      title: {
+        zh: 'Boss Challenge: 抖音双11大促战役总指挥',
+        th: 'ภารกิจบอส: บัญชาการแคมเปญ 11.11 บน Douyin',
+        en: 'Boss Challenge: Directing Douyin Double 11 Campaign'
+      },
+      can_do: {
+        th: 'บูรณาการศัพท์การตลาด เทคนิคการยิงแอด และการจัดการซัพพลายเชน วางแผนแคมเปญ 11.11 สู่ยอดขายเป้าหมาย',
+        en: 'Synthesize marketing, ad spend, and supply chain tactics to lead Double 11 campaign'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: บัญชาการแคมเปญ 11.11 บน Douyin จัดเต็มพรีเซลล์ ลดแลกแจกแถม และคว้ายอดขายอันดับหนึ่ง!',
+      vocabulary: [
+        {
+          id: 'hsk3_2816',
+          hanzi: '大促',
+          pinyin: 'dàcù',
+          display_pinyin: 'dàcù',
+          pinyin_tone: 'da4cu4',
+          meaning_th: 'เทศกาลลดราคาครั้งใหญ่ (เช่น 11.11 หรือ 618)',
+          meaning_en: 'mega shopping festival / grand promotion',
+          radical: '大',
+          radical_name_th: 'หมวดใหญ่ (大字旁)',
+          stroke_count: 12,
+          mnemonic: 'เทศกาลยิ่งใหญ่ (大) ในการกระตุ้นและส่งเสริมการขาย (促) = เทศกาลลดราคาใหญ่',
+          kid_mnemonic: 'ป้ายสีแดงทองตัวโตๆ เขียนว่า "ลดกระหน่ำ 11.11" = 大促',
+          body_gesture: 'กางสองแขนออกกว้างๆ แสดงความยิ่งใหญ่ของเทศกาล'
+        },
+        {
+          id: 'hsk3_2817',
+          hanzi: '预售',
+          pinyin: 'yùshòu',
+          display_pinyin: 'yùshòu',
+          pinyin_tone: 'yu4shou4',
+          meaning_th: 'การเปิดสั่งจองล่วงหน้า (Pre-sale)',
+          meaning_en: 'pre-sale / advance booking',
+          radical: '页',
+          radical_name_th: 'หมวดหน้า (页字旁)',
+          stroke_count: 22,
+          mnemonic: 'วางแผนล่วงหน้า (预) เพื่อเริ่มจัดจำหน่าย (售) = เปิดสั่งจองล่วงหน้า',
+          kid_mnemonic: 'จ่ายเงินจองสินค้าก่อนใครในราคาพิเศษสุดๆ = 预售',
+          body_gesture: 'ยื่นมือไปข้างหน้าเหมือนปักธงจองสิทธิ'
+        },
+        {
+          id: 'hsk3_2818',
+          hanzi: '满减',
+          pinyin: 'mǎnjiǎn',
+          display_pinyin: 'mǎnjiǎn',
+          pinyin_tone: 'man3jian3',
+          meaning_th: 'โปรโมชันซื้อครบยอดแล้วลดทันที (เช่น ซื้อครบ 300 ลด 50)',
+          meaning_en: 'cross-store discount on minimum spend',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 23,
+          mnemonic: 'ช็อปปิ้งเต็มจำนวนยอดที่กำหนด (满) ก็จะหักลดราคาให้ทันที (减) = ซื้อครบยอดลดทันที',
+          kid_mnemonic: 'ตะกร้ามีของเต็มเปี่ยม แล้วมีคูปองลดราคาตกลงมาใส่ = 满减',
+          body_gesture: 'สองมือทำท่ากอบของให้เต็มแล้วตัดเฉือนลงแสดงส่วนลด'
+        },
+        {
+          id: 'hsk3_2819',
+          hanzi: '留存',
+          pinyin: 'liúcún',
+          display_pinyin: 'liúcún',
+          pinyin_tone: 'liu2cun2',
+          meaning_th: 'การรักษาผู้ใช้ให้อยู่ต่อ (Retention)',
+          meaning_en: 'user retention',
+          radical: '田',
+          radical_name_th: 'หมวดทุ่งนา (田字底)',
+          stroke_count: 16,
+          mnemonic: 'เหนี่ยวรั้งให้อยู่ (留) และเก็บสะสมไว้ในระบบ (存) = การรักษาผู้ใช้',
+          kid_mnemonic: 'ลูกค้าเข้ามาแล้วไม่เดินหนีไปไหน อยู่เป็นเพื่อนกับเราตลอดไป = 留存',
+          body_gesture: 'กอดอกแน่นแสดงถึงการเก็บรักษาแฟนคลับไว้กับตัว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 满减 (mǎnjiǎn) กฎเสียง 3 ซ้อน (3+3 -> 2+3)',
+        description_th: 'คำว่า 满 (mǎn) และ 减 (jiǎn) เป็นเสียง 3 ทั้งคู่ เมื่อพูดติดกัน ให้ผัน 满 เป็นเสียง 2 กลายเป็น mánjiǎn',
+        example: '跨店满减 (kuà diàn mánjiǎn: ซื้อข้ามร้านครบยอดลดทันที)',
+        fun_metaphor: 'น้องเสียงสามเหินขึ้นเป็นเสียงสองอย่างรวดเร็วเพื่อฉลองโปรโมชัน!',
+        reassurance: 'คำนี้จะได้ยินบ่อยมากในช่วงเทศกาล 11.11 ออกเสียงเป็น mánjiǎn จะเหมือนเจ้าของภาษาทันที'
+      },
+      grammar_bite: {
+        title: 'การวางกลยุทธ์แคมเปญ: 以预售锁定销量，以满减促进客单价',
+        explanation_th: 'สูตรสำเร็จของการทำยอดขายแคมเปญ Double 11 ในระบบนิเวศอีคอมเมิร์ซจีน',
+        patterns: [
+          {
+            formula: '通过 + [วิธีที่ 1] + 锁定销量，通过 + [วิธีที่ 2] + 提高留存',
+            zh: '我们计划通过超值预售提前锁定销量，通过会员社群提高粉丝留存。',
+            pinyin: 'Wǒmen jìhuà tōngguò chāozhí yùshòu tíqián suǒdìng xiàoliàng, tōngguò huìyuán shèqún tígāo fěnsī liúcún.',
+            th: 'พวกเราวางแผนล็อคยอดขายล่วงหน้าผ่านการพรีเซลล์สุดคุ้ม และเพิ่มการรักษาแฟนคลับผ่านกลุ่มคอมมูนิตี้สมาชิก',
+            en: 'We plan to lock in sales early through pre-sales and boost fan retention via member communities.'
+          },
+          {
+            formula: '配合平台 + [ชนิดโปรโมชัน] + 活动',
+            zh: '配合抖音官方的跨店满减活动，全店销量有望突破历史新高。',
+            pinyin: 'Pèihé Dǒuyīn guānfāng de kuà diàn mǎnjiǎn huódòng, quán diàn xiàoliàng yǒuwàng tūpò lìshǐ xīngāo.',
+            th: 'ประสานกับกิจกรรมซื้อครบยอดลดทันทีของโต่วอิน ยอดขายทั้งร้านมีหวังทะลุสถิติสูงสุดเป็นประวัติการณ์',
+            en: 'Teaming up with Douyin official cross-store discounts, total sales are expected to hit a record high.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (แม่ทัพแคมเปญ) 🧑‍💼',
+          zh: '各位战友，双11大促今晚八点正式开抢，我们的投流和库存都准备就绪了吗？',
+          pinyin: 'Gèwèi zhànyǒu, Shuāng-shíyī dàcù jīnwǎn bādiǎn zhèngshì kāiqiǎng, wǒmen de tóuliú hé kùcún dōu zhǔnbèi jiùxù le ma?',
+          th: 'เพื่อนร่วมรบทุกท่าน เทศกาลลดกระหน่ำ 11.11 จะเปิดศึกแย่งซื้ออย่างเป็นทางการตอนสองทุ่มคืนนี้ การยิงแอดและสต็อกสินค้าพร้อมแล้วหรือยัง?',
+          en: 'Comrades, Double 11 mega sale kicks off officially at 8 PM tonight; are ad spend and inventory all ready?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่ฮวา (ฝ่ายคลังสินค้า) 👩‍💼',
+          zh: '报告总指挥！预售定金已经锁定了三万单，保税仓智能履约系统已经全速运转！',
+          pinyin: 'Bàogào zǒngzhǐhuī! Yùshòu dìngjīn yǐjīng suǒdìng le sānwàn dān, bǎoshuìcāng zhìnéng lǚyuē xìtǒng yǐjīng quánsù yùnzhuǎn!',
+          th: 'รายงานท่านผู้บัญชาการ! เงินมัดจำพรีเซลล์ล็อคออเดอร์ไว้แล้ว 30,000 ออเดอร์ ระบบอัจฉริยะในคลังสินค้าทัณฑ์บนพร้อมส่งมอบเต็มกำลังค่ะ!',
+          en: 'Reporting commander! Pre-sale deposits locked 30,000 orders; bonded warehouse smart fulfillment is running at full speed!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (แม่ทัพแคมเปญ) 🧑‍💼',
+          zh: '非常好！直播间要全力宣传跨店满减，货真价实，服务到位，确保用户留存！',
+          pinyin: 'Fēicháng hǎo! Zhíbōjiān yào quánlì xuānchuán kuà diàn mǎnjiǎn, huòzhēnjiàshí, fúwù dàowèi, quèbǎo yònghù liúcún!',
+          th: 'ดีมาก! ห้องไลฟ์สดต้องโปรโมตโปรซื้อครบยอดลดทันทีเต็มที่ สินค้าแท้คุณภาพคุ้มราคา บริการประทับใจ เพื่อมัดใจลูกค้าให้อยู่กับเรา!',
+          en: 'Great! Stream room must promote cross-store discounts fully, genuine at fair prices, top service to ensure user retention!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่ฮวา (ฝ่ายคลังสินค้า) 👩‍💼',
+          zh: '收到！大家全力以赴，今晚必破纪录！',
+          pinyin: 'Shōudào! Dàjiā quánlì yǐ fù, jīnwǎn bì pò jìlù!',
+          th: 'รับทราบค่ะ! ทุกคนทุ่มสุดกำลัง คืนนี้ต้องทำลายสถิติแน่นอนค่ะ!',
+          en: 'Roger! Everyone all out, we will break records tonight!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "โปรโมชัน '满减' (mǎnjiǎn) ในเทศกาลช็อปปิ้งจีนหมายถึงข้อใด?",
+          options: [
+            'ซื้อสินค้าครบยอดที่กำหนดแล้วได้รับส่วนลดทันที',
+            'ต้องซื้อสินค้าเต็มราคาทุกชิ้น',
+            'สินค้าลดราคาเฉพาะผู้ที่มาเข้าคิวคนแรก',
+            'ส่งฟรีเฉพาะในเขตชนบท'
+          ],
+          correct_index: 0,
+          explanation_th: "'满减' คือ โปรโมชันยอดนิยมของแพลตฟอร์มจีน เช่น 满300减50 (ซื้อครบ 300 ลด 50 หยวนทันที)",
+          encouragement: 'จำรูปแบบโปรโมชันฮิตติดชาร์ตของจีนได้แม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '留存' (liúcún) ในการบริหารผู้ใช้และการตลาดดิจิทัลหมายถึงอะไร?",
+          options: [
+            'การรักษาผู้ใช้และลูกค้าให้อยู่ในระบบ (Retention)',
+            'การลบบัญชีผู้ใช้ทิ้ง',
+            'การคืนเงินเข้าบัตรเครดิต',
+            'การย้ายเซิร์ฟเวอร์'
+          ],
+          correct_index: 0,
+          explanation_th: "'留存' คือ อัตราการคงอยู่หรือรักษาผู้ใช้ (User Retention)",
+          encouragement: 'เลือกคำศัพท์สถิติการตลาดได้เป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ล็อคยอดขายล่วงหน้าผ่านการเปิดสั่งจองสินค้า"',
+          tokens: ['锁定销量', '通过超值预售', '提前'],
+          correct_sequence: ['通过超值预售', '提前', '锁定销量'],
+          pinyin: 'Tōngguò chāozhí yùshòu tíqián suǒdìng xiàoliàng',
+          meaning_th: 'ล็อคยอดขายล่วงหน้าผ่านการเปิดสั่งจองสินค้าสุดคุ้ม',
+          explanation_th: 'วิธีการ (通过超值预售) + เวลา (提前) + เป้าหมาย (锁定销量)',
+          encouragement: 'ยอดเยี่ยมมาก! กลยุทธ์การขายเฉียบขาด!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '大促' ตัว '促' (เร่ง/ส่งเสริม) มีหมวดนำใด?",
+          options: [
+            '亻 (หมวดคน 单人旁)',
+            '口 (หมวดปาก 口字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)',
+            '火 (หมวดไฟ 火字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'促' มีหมวดนำ '亻' (คน) สื่อถึงการที่คนเร่งเร้าหรือกระตุ้นให้ลงมือทำ",
+          encouragement: 'แม่นยำในโครงสร้างอักษรจีน!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'เวลา 23:59 น. คืนวันช็อปปิ้ง 11.11 ทีมงานประกาศว่าแบรนด์สินค้าไทยของคุณทำยอดขายทะลุ 50 ล้านหยวน คว้าอันดับหนึ่งในหมวดอาหารนำเข้า คุณควรกล่าวปลุกใจและขอบคุณทีมงานอย่างไร?',
+        options: [
+          '今晚我们凭借货真价实的产品与极致的履约，创造了奇迹！感谢大家的全力以赴，泰国品牌在抖音立住了！ (Jīnwǎn wǒmen píngjiè huòzhēnjiàshí de chǎnpǐn yǔ jízhì de lǚyuē, chuàngzào le qíjī! Gǎnxiè dàjiā de quánlì yǐ fù, Tàiguó pǐnpái zài Dǒuyīn lì zhù le!)',
+          '累死了，明天大家都别来上班了。 (Lèi sǐ le, míngtiān dàjiā dōu bié lái shàngbān le.)',
+          '才卖这么点，我很失望。 (Cái mài zhèmediǎn, wǒ hěn shīwàng.)',
+          '请问最近的地铁站在哪里？ (Qǐngwèn zuìjìn de dìtiězhàn zài nǎlǐ?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ถ้อยคำประกาศชัยชนะ '今晚我们凭借货真价实的产品与极致的履约，创造了奇迹！感谢大家的全力以赴，泰国品牌在抖音立住了！' ยกย่องความร่วมมือของทีม ตอกย้ำคุณภาพสินค้า และสร้างขวัญกำลังใจระดับสูงสุด",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge แคมเปญ 11.11 โต่วอินระดับ Tier 3 สำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u28_master',
+        badge_name: 'แม่ทัพอีคอมเมิร์ซจีนระดับตำนาน 📱🏆',
+        message_th: 'สุดยอดมาก! คุณสำเร็จ Unit 28 พร้อมบุกเบิกและบริหารธุรกิจอีคอมเมิร์ซและไลฟ์สดในประเทศจีนได้อย่างช่ำชอง!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

@@ -1,10 +1,14 @@
-# 📜 Master Prompt: ระบบสร้างหลักสูตรและเนื้อหาบทเรียน Hanzero (Trilingual: 中-泰-英)
+# 📜 Executable Master Prompt: สร้างเนื้อหาบทเรียน 3 ภาษา (中-泰-英)
 
-เอกสารนี้เก็บ **Master Prompt Template** สำหรับใช้สั่งการ AI ในการออกแบบหลักสูตร บทเรียนย่อย และแบบฝึกหัดของ Hanzero โดยออกแบบมาสำหรับ **ผู้เริ่มต้นความรู้เป็น 0 (Zero-Knowledge Beginner)** ให้เรียนสนุก ไม่กลัว และได้ทั้งภาษาจีน ภาษาไทย และภาษาอังกฤษไปพร้อมกัน
+> **เอกสารอ้างอิงแม่บท (SSOT):**  
+> รายละเอียดมาตรฐานบทเรียนฉบับสมบูรณ์ถูกกำกับอยู่ที่ **[`docs/curriculum/00_lesson_framework.md`](../curriculum/00_lesson_framework.md)**  
+> และพิมพ์เขียวบทบาท Agent ประจำการอยู่ที่ **[`agents/curriculum_tutor.md`](../../agents/curriculum_tutor.md)**
+
+เอกสารนี้เป็น **Executable Master Prompt** สำหรับคัดลอกนำไปใช้สั่งการ AI ในการสร้างบทเรียนภาษาจีนแบบ Bite-sized สำหรับผู้เริ่มต้นจาก 0 อย่างรวดเร็ว
 
 ---
 
-## 📋 แม่แบบ Master Prompt (คัดลอกนำไปใช้งานได้ทันที)
+## 📋 แม่แบบ Master Prompt (คัดลอกนำไปสั่งการได้ทันที)
 
 ```markdown
 # Role & Mission

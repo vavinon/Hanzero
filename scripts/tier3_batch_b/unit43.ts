@@ -1,0 +1,915 @@
+import { UnitLessonData } from '../../src/types/lesson';
+
+export const unit43Data: UnitLessonData = {
+  unit_id: 'tier3_u43',
+  tier: 3,
+  unit_number: 43,
+  title: {
+    zh: '企业危机公关',
+    th: 'การบริหารวิกฤตประชาสัมพันธ์องค์กร',
+    en: 'Corporate Crisis PR & Reputation Management'
+  },
+  description: 'เรียนรู้กลยุทธ์การสื่อสารในภาวะวิกฤต การแถลงข่าว การกอบกู้ศรัทธาแบรนด์ และสำนวน 亡羊补牢',
+  lessons: [
+    {
+      lesson_id: 't3_u43_l01',
+      lesson_number: 1,
+      title: {
+        zh: '舆情发酵与公关响应',
+        th: 'กระแสสังคมลุกลามและการตอบสนองภาวะวิกฤต',
+        en: 'Public Opinion Fermentation & Crisis Response'
+      },
+      can_do: {
+        th: 'อธิบายกระแสความคิดเห็นสาธารณะ (舆论), การลุกลามของข่าว (发酵), เทรนด์ฮิต (热搜) และวิกฤตประชาสัมพันธ์ (公关)',
+        en: 'Explain public opinion, news escalation, trending topics (Resou), and PR crisis management'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการติดตามกระแสสังคมออนไลน์และการรับมือวิกฤตสื่อสาร!',
+      vocabulary: [
+        {
+          id: 'hsk3_4301',
+          hanzi: '舆论',
+          pinyin: 'yúlùn',
+          display_pinyin: 'yúlùn',
+          pinyin_tone: 'yu2lun4',
+          meaning_th: 'มติมหาชน / กระแสความคิดเห็นของสังคมสาธารณะ',
+          meaning_en: 'public opinion / general sentiment',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 15,
+          mnemonic: 'รถม้าของมวลชน (舆) ที่ส่งเสียงแสดงความคิดเห็น (论) = มติมหาชน',
+          kid_mnemonic: 'ทุกคนในเมืองร่วมพูดคุยออกความเห็นในเรื่องเดียวกัน = 舆论',
+          body_gesture: 'สองมือทำท่าผายออกกว้างสื่อถึงเสียงของประชาชนทุกคน'
+        },
+        {
+          id: 'hsk3_4302',
+          hanzi: '发酵',
+          pinyin: 'fājiào',
+          display_pinyin: 'fājiào',
+          pinyin_tone: 'fa1jiao4',
+          meaning_th: 'ลุกลามบานปลาย / หมักบ่มจนขยายตัวรวดเร็ว',
+          meaning_en: 'ferment / escalate rapidly in public discourse',
+          radical: '酉',
+          radical_name_th: 'หมวดไหเหล้า (酉字旁)',
+          stroke_count: 19,
+          mnemonic: 'ปฏิกิริยาเกิดขึ้น (发) ในไหหมักยีสต์ (酵) = บ่มเพาะลุกลาม',
+          kid_mnemonic: 'ฟองแป้งขนมปังฟูพองขึ้นจนล้นถ้วย = 发酵',
+          body_gesture: 'กางสองมือออกแล้วค่อยๆ ยกขึ้นขยายตัวกว้างขึ้นเลียนแบบฟองฟู'
+        },
+        {
+          id: 'hsk3_4303',
+          hanzi: '热搜',
+          pinyin: 'rèsōu',
+          display_pinyin: 'rèsōu',
+          pinyin_tone: 're4sou1',
+          meaning_th: 'หัวข้อยอดฮิต / ติดอันดับคำค้นหายอดนิยมบนโซเชียล',
+          meaning_en: 'top search trend / viral trending topic',
+          radical: '灬',
+          radical_name_th: 'หมวดสี่จุดไฟ (四点底)',
+          stroke_count: 22,
+          mnemonic: 'การค้นหา (搜) ที่ร้อนแรงที่สุด (热) = เทรนด์ยอดฮิต',
+          kid_mnemonic: 'เห็นรายชื่อข่าวที่มีสัญลักษณ์ไฟสีแดงขึ้นอันดับหนึ่งบนหน้าจอ = 热搜',
+          body_gesture: 'ชูนิ้วชี้ขวาขึ้นแตะบนฝ่ามือซ้ายแล้วทำมือเหมือนเปลวไฟลุก'
+        },
+        {
+          id: 'hsk3_4304',
+          hanzi: '公关',
+          pinyin: 'gōngguān',
+          display_pinyin: 'gōngguān',
+          pinyin_tone: 'gong1guan1',
+          meaning_th: 'การประชาสัมพันธ์ / งานสร้างความสัมพันธ์อันดีกับสาธารณชน',
+          meaning_en: 'public relations (PR)',
+          radical: '八',
+          radical_name_th: 'หมวดแปด (八字头)',
+          stroke_count: 10,
+          mnemonic: 'สานสัมพันธ์ (关) กับสาธารณชน (公) = ประชาสัมพันธ์',
+          kid_mnemonic: 'โฆษกองค์กรยืนแถลงข่าวตอบคำถามสื่อมวลชนด้วยรอยยิ้ม = 公关',
+          body_gesture: 'ผายสองมือออกข้างลำตัวด้วยท่าทางสง่างามเป็นมิตร'
+        },
+        {
+          id: 'hsk3_4305',
+          hanzi: '响应',
+          pinyin: 'xiǎngyìng',
+          display_pinyin: 'xiǎngyìng',
+          pinyin_tone: 'xiang3ying4',
+          meaning_th: 'ตอบสนองอย่างรวดเร็ว / ขานรับและลงมือปฏิบัติการทันที',
+          meaning_en: 'respond / reaction speed in emergency',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 21,
+          mnemonic: 'ส่งเสียงสะท้อน (响) ขานรับอย่างทันท่วงที (应) = ตอบสนองรวดเร็ว',
+          kid_mnemonic: 'เมื่อได้ยินเสียงสัญญาณเตือนภัย ทีมงานวิ่งเข้าประจำที่ทันที = 响应',
+          body_gesture: 'เอามือแตะใบหูฟังแล้วพยักหน้าอย่างกระฉับกระเฉง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 发酵 (fājiào) ตัว 酵 ออกเสียง jiào (ไม่ใช่ xiào)',
+        description_th: 'คำว่า 酵 ในภาษาจีนมาตรฐานออกเสียงว่า jiào (เสียง 4 เด็ดขาด)',
+        example: '舆论迅速发酵 (yúlùn xùnsù fājiào)',
+        fun_metaphor: 'เหมือนเสียงฟู่ของก๊าซในถังหมักที่พุ่งขึ้นมาฉับพลัน',
+        reassurance: 'แม้คนทั่วไปบางคนอาจสับสน แต่ผู้เชี่ยวชาญภาษาจะออกเสียง jiào อย่างถูกต้องเสมอ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการรับมือภาวะฉุกเฉิน: 启动应急预案，在黄金时间内...',
+        explanation_th: 'ใช้ในแวดวงประชาสัมพันธ์และการบริหารความเสี่ยงเพื่อเน้นความเร็วในการชี้แจง',
+        patterns: [
+          {
+            formula: '舆论迅速发酵，企业应当在黄金时间内 + [ทำอะไร]',
+            zh: '面对舆论迅速发酵，企业应当在黄金时间内迅速启动应急预案。',
+            pinyin: 'Miànduì yúlùn xùnsù fājiào, qǐyè yīngdāng zài huángjīn shíjiān nèi xùnsù qǐdòng yìngjí yù’àn.',
+            th: 'เมื่อเผชิญกับกระแสสังคมที่ลุกลามอย่างรวดเร็ว องค์กรควรเปิดใช้งานแผนฉุกเฉินในทันทีภายในชั่วโมงทอง',
+            en: 'Facing rapidly fermenting public opinion, enterprises should swiftly activate contingency plans within the golden window.'
+          },
+          {
+            formula: '事件登上热搜，引发了广泛关注',
+            zh: '产品质量问题登上热搜，瞬间引发了社会各界的广泛关注。',
+            pinyin: 'Chǎnpǐn zhìliàng wèntí dēng shàng rèsōu, shùnjiān yǐnfā le shèhuì gèjiè de guǎnfàn guānzhù.',
+            th: 'ปัญหาคุณภาพสินค้าติดอันดับคำค้นยอดฮิต ก่อให้เกิดความสนใจอย่างกว้างขวางจากทุกภาคส่วนในสังคมทันที',
+            en: 'The product quality issue trended on top searches, instantly triggering widespread attention across society.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '张总，我们在办公室开会收到紧急消息，公司的一款新产品在网络上被消费者投诉，现在已经登上微博热搜了！',
+          pinyin: 'Zhāng zǒng, wǒmen zài bàngōngshì kāihuì shōudào jǐnjí xiāoxi, gōngsī de yì kuǎn xīn chǎnpǐn zài wǎngluò shàng bèi xiāofèizhě tóusù, xiànzài yǐjīng dēng shàng Wēibó rèsōu le!',
+          th: 'บอสจางคะ พวกเราประชุมกันในออฟฟิศได้รับแจ้งข่าวด่วน สินค้าใหม่ตัวหนึ่งของบริษัทเราถูกผู้บริโภคร้องเรียนบนเน็ต ตอนนี้ติดอันดับเทรนด์ฮิตบนเว่ยป๋อแล้วค่ะ!',
+          en: 'President Zhang, we held a meeting in the office and got urgent news: one of our new products was complained about online and has trended on Weibo!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '舆论发酵非常迅速，公关团队和各位同事必须立即响应，面对面沟通，切不可逃避或者拖延。',
+          pinyin: 'Yúlùn fājiào fēicháng xùnsù, gōngguān tuánduì hé gèwèi tóngshì bìxū lìjí xiǎngyìng, miànduìmiàn gōutōng, qiè bù kě táobì huòzhě tuōyán.',
+          th: 'กระแสสังคมลุกลามเร็วมาก ทีมงานประชาสัมพันธ์และเพื่อนร่วมงานทุกคนต้องตอบสนองทันที สื่อสารแบบเผชิญหน้า อย่าได้หลบเลี่ยงหรือผัดวันประกันพรุ่งเด็ดขาดครับ',
+          en: 'Public opinion ferments rapidly; the PR team and colleagues must respond immediately, communicating face to face, never evading or delaying.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '我们已经核实了相关批次的数据，确实存在部分包装密封不严的问题。客服部门接到了许多电话和微信咨询。',
+          pinyin: 'Wǒmen yǐjīng héshí le xiāngguān pīcì de shùjù, quèshí cúnzài bùfen bāozhuāng mìmǐng bù yán de wèntí. Kèfú bùmén jiēdào le xǔduō diànhuà hé Wēixìn zīxún.',
+          th: 'พวกเราตรวจสอบข้อมูลในล็อตที่เกี่ยวข้องแล้ว พบปัญหาเรื่องบรรจุภัณฑ์ปิดผนึกไม่แน่นหนาในบางส่วนจริงๆ ค่ะ แผนกบริการลูกค้าได้รับสายโทรศัพท์และข้อความวีแชตสอบถามมากมายค่ะ',
+          en: 'We verified batch data; there indeed exists a sealing defect in some items. Customer service received many phone calls and WeChat inquiries.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '实事求是是危机公关的第一准则，李经理立刻准备发布官方声明，坦诚说明真实情况并道歉，给广大消费者一个满意的交代。',
+          pinyin: 'Shíshìqiúshì shì wēijī gōngguān de dì-yī zhǔnzé, lìkè zhǔnbèi fābù guānfāng shēngmíng, tǎnchéng shuōmíng zhēnshí qíngkuàng bìng dàoqiàn, gěi guǎngdà xiāofèizhě yí gè mǎnyì de jiāodài.',
+          th: 'การยึดถือความจริงคือหลักการอันดับหนึ่งของการจัดการวิกฤต เตรียมออกแถลงการณ์อย่างเป็นทางการทันที ชี้แจงข้อเท็จจริงอย่างจริงใจและขออภัย ให้คำตอบที่น่าพึงพอใจแก่ผู้บริโภคครับ',
+          en: 'Seeking truth from facts is the first rule; prepare an official statement immediately, honestly explaining the truth and apologizing, giving consumers a satisfactory answer.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '明白了，太谢谢张总的果断决策！今天上午和您认真讨论，大家克服困难，明天我们一定全力解决！',
+          pinyin: 'Míngbai le, tài xièxie Zhāng zǒng de guǒduàn juécè! Jīntiān shàngwǔ hé nín rènzhēn tǎolùn, dàjiā kèfú kùnnan, míngtiān wǒmen yídìng quánlì jiějué!',
+          th: 'เข้าใจแล้วค่ะ ขอบพระคุณการตัดสินใจที่เด็ดขาดของบอสจาง ช่วงเช้าวันนี้ได้หารือกับคุณอย่างจริงจัง ทุกคนจะร่วมฟันฝ่าความยากลำบาก พรุ่งนี้พวกเราจะทุ่มเทแก้ไขเต็มที่ค่ะ!',
+          en: 'Understood, thank you for your decisive leadership! Discussing with you this morning, everyone will overcome difficulties and resolve it tomorrow!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '不客气，抓紧时间落实方案，脚踏实地工作，明天见，再见！',
+          pinyin: 'Bú kèqi, zhuājǐn shíjiān luòshí fāng’àn, jiǎotàshídì gōngzuò, míngtiān jiàn, zàijiàn!',
+          th: 'ยินดีครับ รีบดำเนินการตามแผน ทำงานอย่างมุ่งมั่นติดดิน พรุ่งนี้พบกัน ลาก่อนครับ!',
+          en: 'You are welcome, implement plans promptly and work down-to-earth; see you tomorrow, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในภาวะวิกฤตขององค์กร คำว่า '舆论发酵' (yúlùn fājiào) หมายถึงสภาวะใด?",
+          options: [
+            'กระแสความคิดเห็นของสังคมและสื่อมวลชนกำลังขยายตัวและลุกลามอย่างรวดเร็ว (Public opinion escalating rapidly)',
+            'การผลิตไวน์ผลไม้ในโรงงาน',
+            'การแจกคูปองส่วนลดให้ลูกค้า',
+            'การจัดงานเลี้ยงฉลองความสำเร็จ'
+          ],
+          correct_index: 0,
+          explanation_th: "'舆论发酵' คืออุปมาเปรียบเทียบว่ากระแสสังคมกำลังบ่มเพาะและลุกลามขยายวงกว้างขึ้นเรื่อยๆ",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจคำศัพท์การสื่อสารมวลชนระดับมืออาชีพ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "หลักการสำคัญที่สุดในการบริหารวิกฤตประชาสัมพันธ์ (危机公关) คือข้อใด?",
+          options: [
+            'การพูดความจริงอย่างจริงใจ รวดเร็ว และแสดงความรับผิดชอบ (Honesty, Speed, Responsibility)',
+            'การปิดปากเงียบและลบคอมเมนต์ของลูกค้าทิ้งทั้งหมด',
+            'การโยนความผิดให้พนักงานระดับล่าง',
+            'การปิดบริษัทหนีปัญหา'
+          ],
+          correct_index: 0,
+          explanation_th: "การยึดถือความจริง (实事求是), ความรวดเร็วในการตอบสนอง (快速响应) และความจริงใจ (诚意) คือหัวใจของวิกฤตพีอาร์",
+          encouragement: 'แม่นยำมาก! มีวิสัยทัศน์การบริหารจัดการระดับผู้บริหาร!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เมื่อเผชิญกับกระแสสังคม องค์กรควรเปิดใช้งานแผนฉุกเฉินทันที"',
+          tokens: ['企业应当迅速启动应急预案', '面对舆论发酵'],
+          correct_sequence: ['面对舆论发酵', '企业应当迅速启动应急预案'],
+          pinyin: 'Miànduì yúlùn fājiào, qǐyè yīngdāng xùnsù qǐdòng yìngjí yù’àn.',
+          meaning_th: 'เมื่อเผชิญกับกระแสสังคมที่ลุกลาม องค์กรควรเปิดใช้งานแผนฉุกเฉินทันที',
+          explanation_th: 'ส่วนระบุสถานการณ์ (面对舆论发酵) + ภาคแสดงหลัก (企业应当迅速启动应急预案)',
+          encouragement: 'ประกอบประโยคการจัดการภาวะฉุกเฉินได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '发酵' (fājiào) ตัว '酵' มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '酉 (หมวดไหเหล้า/การหมัก 酉字旁)',
+            '氵 (หมวดน้ำ 三点水)',
+            '皿 (หมวดภาชนะ 皿字底)',
+            '火 (หมวดไฟ 火字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'酵' มีหมวด '酉' (ไหเหล้า/น้ำหมัก) ด้านซ้าย สื่อถึงกระบวนการหมักบ่มของจุลินทรีย์",
+          encouragement: 'แม่นยำเรื่องหมวดอักษรเกี่ยวกับการหมักทางชีวภาพ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u43_l02',
+      lesson_number: 2,
+      title: {
+        zh: '官方声明与责任担当',
+        th: 'แถลงการณ์ทางการและความรับผิดชอบอย่างจริงใจ',
+        en: 'Official Statement & Corporate Accountability'
+      },
+      can_do: {
+        th: 'ร่างและวิเคราะห์แถลงการณ์อย่างเป็นทางการ (声明), การชี้แจง (澄清), การแสดงความจริงใจ (诚意) และการเยียวยาชดเชย (赔偿)',
+        en: 'Draft and analyze official statements, clarifications, sincerity, and compensation protocols'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการออกแถลงการณ์ขออภัยอย่างมืออาชีพและการแสดงความรับผิดชอบ!',
+      vocabulary: [
+        {
+          id: 'hsk3_4306',
+          hanzi: '声明',
+          pinyin: 'shēngmíng',
+          display_pinyin: 'shēngmíng',
+          pinyin_tone: 'sheng1ming2',
+          meaning_th: 'แถลงการณ์ / คำประกาศอย่างเป็นทางการขององค์กร',
+          meaning_en: 'official statement / formal announcement',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 15,
+          mnemonic: 'ส่งเสียงดัง (声) ให้กระจ่างแจ้งชัดเจน (明) = แถลงการณ์ทางการ',
+          kid_mnemonic: 'ประธานบริษัทอ่านเอกสารแถลงการณ์หน้าไมโครโฟน = 声明',
+          body_gesture: 'สองมือถือกระดาษแถลงการณ์อ่านด้วยสีหน้าจริงจัง'
+        },
+        {
+          id: 'hsk3_4307',
+          hanzi: '澄清',
+          pinyin: 'chéngqīng',
+          display_pinyin: 'chéngqīng',
+          pinyin_tone: 'cheng2qing1',
+          meaning_th: 'ชี้แจงให้กระจ่าง / ขจัดความเข้าใจผิดด้วยข้อเท็จจริง',
+          meaning_en: 'clarify / clear up misunderstandings',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 26,
+          mnemonic: 'ทำให้น้ำขุ่น (澄) กลับมาใสสะอาดบริสุทธิ์ (清) = ชี้แจงให้กระจ่าง',
+          kid_mnemonic: 'กรองน้ำขุ่นจนกลายเป็นน้ำใสสะอาด = 澄清',
+          body_gesture: 'กวาดฝ่ามือขวาจากอกออกไปข้างหน้าดั่งปัดเป่าม่านหมอกให้กระจ่าง'
+        },
+        {
+          id: 'hsk3_4308',
+          hanzi: '诚意',
+          pinyin: 'chéngyì',
+          display_pinyin: 'chéngyì',
+          pinyin_tone: 'cheng2yi4',
+          meaning_th: 'ความจริงใจ / ความบริสุทธิ์ใจในการแก้ปัญหา',
+          meaning_en: 'sincerity / good faith',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 21,
+          mnemonic: 'คำพูดที่ซื่อตรง (诚) ออกมาจากเจตจำนงหัวใจ (意) = ความจริงใจ',
+          kid_mnemonic: 'ค้อมตัว 90 องศาขอโทษลูกค้าด้วยความจริงใจ = 诚意',
+          body_gesture: 'สองมือประสานแนบอกพร้อมค้อมศีรษะลงแสดงความจริงใจ'
+        },
+        {
+          id: 'hsk3_4309',
+          hanzi: '赔偿',
+          pinyin: 'péicháng',
+          display_pinyin: 'péicháng',
+          pinyin_tone: 'pei2chang2',
+          meaning_th: 'ชดเชยค่าเสียหาย / ชดใช้เยียวยาผลกระทบ',
+          meaning_en: 'compensate / indemnify / pay damages',
+          radical: '贝',
+          radical_name_th: 'หมวดหอยเบี้ย/ทรัพย์สิน (贝字旁)',
+          stroke_count: 23,
+          mnemonic: 'จ่ายทรัพย์สิน (赔) เพื่อชดเชยสิ่งที่สูญเสียไป (偿) = ชดใช้ค่าเสียหาย',
+          kid_mnemonic: 'มอบเช็คเงินเยียวยาและของขวัญปลอบขวัญให้แก่ผู้เสียหาย = 赔偿',
+          body_gesture: 'ยื่นสองมือออกไปข้างหน้าในลักษณะส่งมอบของชดเชย'
+        },
+        {
+          id: 'hsk3_4310',
+          hanzi: '担当',
+          pinyin: 'dāndāng',
+          display_pinyin: 'dāndāng',
+          pinyin_tone: 'dan1dang1',
+          meaning_th: 'ความรับผิดชอบและกล้าเผชิญหน้า / การแบกรับภาระหน้าที่',
+          meaning_en: 'take on responsibility / accountability',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'ใช้สองมือแบกรับ (担) ภารกิจตรงหน้า (当) = กล้าแบกรับความรับผิดชอบ',
+          kid_mnemonic: 'นักกีฬายกมือยอมรับการฟาวล์และมุ่งมั่นแก้ไข = 担当',
+          body_gesture: 'ยืดอกผึ่งไหล่สองมือแตะที่หน้าอกแสดงความพร้อมรับผิดชอบ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 澄清 (chéngqīng) เสียง 2 ต่อด้วยเสียง 1',
+        description_th: 'chéng (เสียง 2 ทอดขึ้นนุ่มนวล) ตามด้วย qīng (เสียง 1 สูงใสสะอาด)',
+        example: '澄清事实真相 (chéngqīng shìshí zhēnxiàng)',
+        fun_metaphor: 'เหมือนเสียงน้ำใสไหลรินผ่านก้อนกรวดขาวสะอาด',
+        reassurance: 'คำว่า 澄清 เป็นศัพท์ทางการที่มักใช้ในบริบท 澄清事实 (ชี้แจงความจริง)'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการแถลงการณ์แสดงความรับผิดชอบ: 不回避问题，以最大诚意...',
+        explanation_th: 'ใช้ในแถลงการณ์เพื่อสื่อว่าองค์กรไม่ปฏิเสธความรับผิดชอบ และพร้อมเยียวยาเต็มที่',
+        patterns: [
+          {
+            formula: '企业绝不回避问题，将以最大诚意 + [ทำอะไร]',
+            zh: '公司郑重声明：绝不回避问题，将以最大诚意做好客户的赔偿与退换工作。',
+            pinyin: 'Gōngsī zhèngzhòng shēngmíng: jué bù huíbì wèntí, jiāng yǐ zuì dà chéngyì zuò hǎo kèhù de péicháng yǔ tuìhuàn gōngzuò.',
+            th: 'บริษัทขอแถลงอย่างจริงจังว่า: จะไม่หลบเลี่ยงปัญหาเป็นอันขาด และจะดำเนินการชดเชยและเปลี่ยนคืนสินค้าให้ลูกค้าด้วยความจริงใจสูงสุด',
+            en: 'The company solemnly states: we will never evade issues and will handle compensation and returns with utmost sincerity.'
+          },
+          {
+            formula: '及时发布声明澄清事实，体现了企业的担当',
+            zh: '管理层第一时间发布声明澄清事实，充分体现了一家大企业的责任担当。',
+            pinyin: 'Guǎnlǐcéng dì-yī shíjiān fābù shēngmíng chéngqīng shìshí, chōngfèn tǐxiàn le yì jiā dà qǐyè de zérèn dāndāng.',
+            th: 'ฝ่ายบริหารออกแถลงการณ์ชี้แจงข้อเท็จจริงในทันที สะท้อนถึงความรับผิดชอบอันหนักแน่นขององค์กรชั้นนำอย่างเต็มเปี่ยม',
+            en: 'Management promptly issued a statement to clarify facts, fully reflecting a major enterprise\'s accountability.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '张总，官方致歉声明已经起草完毕，措辞真诚恳切，明确承诺对受影响的消费者进行全额赔偿。',
+          pinyin: 'Zhāng zǒng, guānfāng zhìqiàn shēngmíng yǐjīng qǐcǎo wánbì, cuòcí zhēnchéng kěnqiè, míngquè chéngnuò duì shòu yǐngxiǎng de xiāofèizhě jìnxíng quán’é péicháng.',
+          th: 'บอสจางคะ ร่างแถลงการณ์ขออภัยอย่างเป็นทางการจัดทำเสร็จเรียบร้อยแล้วค่ะ ถ้อยคำจริงใจนอบน้อม และให้คำมั่นอย่างชัดเจนว่าจะชดเชยเต็มจำนวนแก่ผู้บริโภคที่ได้รับผลกระทบ',
+          en: 'President Zhang, the official apology statement has been drafted with sincere wording, clearly pledging full compensation to affected consumers.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '很好。不仅要在声明中澄清事实，更要公布具体的客服热线和退换方案，积极协助顾客退货换货，展现我们的诚意。',
+          pinyin: 'Hěn hǎo. Bùjǐn yào zài shēngmíng zhōng chéngqīng shìshí, gèng yào gōngbù jùtǐ de kèfú rèxiàn hé tuìhuàn fāng’àn, jījí xiézhù gùkè tuìhuò huànhuò, zhǎnxiàn wǒmen de chéngyì.',
+          th: 'ดีมากครับ ไม่เพียงต้องชี้แจงความจริงในแถลงการณ์ หากแต่ยังต้องเปิดเผยสายด่วนบริการลูกค้าและแผนการเปลี่ยนคืนสินค้า ให้ความช่วยเหลือลูกค้าในการเปลี่ยนคืนอย่างกระตือรือร้น เพื่อแสดงความจริงใจของเรา',
+          en: 'Very good. We must not only clarify facts in the statement, but also announce customer service hotlines and return plans, assisting returns to show sincerity.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '网友们看到我们的诚恳态度和迅速行动，很多负面情绪已经开始缓和了，大家对公司的信任正在恢复。',
+          pinyin: 'Wǎngyǒu men kàndào wǒmen de chéngkěn tàidu hé xùnsù xíngdòng, hěn duō fùmiàn qíngxù yǐjīng kāishǐ huǎnhé le, dàjiā duì gōngsī de xìnrèn zhèngzài huīfù.',
+          th: 'ชาวเน็ตเมื่อเห็นทัศนคติที่จริงใจและการลงมืออย่างรวดเร็วของเรา อารมณ์เชิงลบจำนวนมากเริ่มคลี่คลายลงแล้ว ทุกคนเริ่มกลับมาไว้วางใจบริษัทอีกครั้งค่ะ',
+          en: 'Netizens seeing our earnest attitude and rapid action have calmed down; everyone\'s trust in the company is recovering.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '态度决定一切。敢于担当、勇于负责，与客户达成共识，危机才能真正转化为重塑信任的契机。',
+          pinyin: 'Tàidu juédìng yíqiè. Gǎnyú dāndāng, yǒngyú fùzé, yǔ kèhù dáchéng gòngshí, wēijī cái néng zhēnzhèng zhuǎnhuà wéi chóngshù xìnrèn de qìjī.',
+          th: 'ทัศนคติเป็นตัวตัดสินทุกสิ่ง กล้าแบกรับ กล้ารับผิดชอบ บรรลุฉันทามติร่วมกับลูกค้า วิกฤตจึงจะสามารถแปรเปลี่ยนเป็นโอกาสในการฟื้นฟูความไว้วางใจได้อย่างแท้จริงครับ',
+          en: 'Attitude determines everything. Daring to take responsibility and reaching consensus with clients turns a crisis into an opportunity to rebuild trust.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '明白了，太谢谢张总的指点！今天和您认真讨论，希望长期合作，明天我们一定全面落实赔偿方案！',
+          pinyin: 'Míngbai le, tài xièxie Zhāng zǒng de zhǐdiǎn! Jīntiān hé nín rènzhēn tǎolùn, xīwàng chángqī hézuò, míngtiān wǒmen yídìng quánmiàn luòshí péicháng fāng’àn!',
+          th: 'เข้าใจแล้วค่ะ ขอบพระคุณคำชี้แนะของบอสจาง วันนี้ได้หารือกับคุณอย่างจริงจัง มุ่งหวังความร่วมมือระยะยาว พรุ่งนี้พวกเราจะปฏิบัติตามแผนชดเชยอย่างรอบด้านค่ะ!',
+          en: 'Understood, thank you so much for your guidance! Earnestly discussing with you today, hoping for long-term cooperation, tomorrow we will fully implement the plan!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '不客气，继续严格把关质量，保障每一位客人的安全，明天见，再见！',
+          pinyin: 'Bú kèqi, jìxù yángé bǎguān zhìliàng, bǎozhàng měi yí wèi kèrén de ānquán, míngtiān jiàn, zàijiàn!',
+          th: 'ยินดีครับ ควบคุมคุณภาพอย่างเข้มงวดต่อไป คุ้มครองความปลอดภัยของลูกค้าทุกคน พรุ่งนี้พบกัน ลาก่อนครับ!',
+          en: 'You are welcome, keep strictly monitoring quality and protecting the safety of every guest; see you tomorrow, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในเอกสารแถลงการณ์ขององค์กร คำว่า '澄清事实' (chéngqīng shìshí) หมายถึงอะไร?",
+          options: [
+            'การชี้แจงข้อเท็จจริงอย่างโปร่งใสเพื่อขจัดข่าวลือและความเข้าใจผิด (Clarifying facts)',
+            'การล้างทำความสะอาดพื้นโรงงาน',
+            'การเปิดเผยรายชื่อพนักงานทั้งหมด',
+            'การขึ้นราคาสินค้า'
+          ],
+          correct_index: 0,
+          explanation_th: "'澄清事实' คือการนำพยานหลักฐานและข้อเท็จจริงมาชี้แจงให้สาธารณชนเข้าใจอย่างถูกต้อง โปร่งใส ไร้ข้อคลุมเครือ",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจสำนวนการสื่อสารระดับผู้บริหาร!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '担当' (dāndāng) สะท้อนถึงคุณลักษณะใดของผู้นำองค์กร?",
+          options: [
+            'ความกล้าหาญในการเผชิญหน้าและแบกรับความรับผิดชอบต่อความผิดพลาด (Accountability)',
+            'ความสามารถในการเล่นเครื่องดนตรีกีตาร์',
+            'การทำงานคนเดียวโดยไม่ปรึกษาใคร',
+            'การลาพักร้อนในเวลาเกิดปัญหา'
+          ],
+          correct_index: 0,
+          explanation_th: "'担当' (ความกล้ารับผิดชอบ) คือจิตวิญญาณแห่งการไม่หนีปัญหาและพร้อมแบกรับผลที่ตามมาเพื่อแก้ไขให้ถูกต้อง",
+          encouragement: 'แม่นยำมาก! เข้าใจแก่นแท้ของภาวะผู้นำเชิงจริยธรรม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "บริษัทให้คำมั่นสัญญาอย่างจริงจังว่าจะไม่หลบเลี่ยงปัญหา"',
+          tokens: ['绝不回避问题', '公司郑重承诺'],
+          correct_sequence: ['公司郑重承诺', '绝不回避问题'],
+          pinyin: 'Gōngsī zhèngzhòng chéngnuò, jué bù huíbì wèntí.',
+          meaning_th: 'บริษัทให้คำมั่นอย่างจริงจัง จะไม่หลบเลี่ยงปัญหาเป็นอันขาด',
+          explanation_th: 'ประธานและคำกริยา (公司郑重承诺) + ข้อความสัญญา (绝不回避问题)',
+          encouragement: 'ประกอบประโยคคำมั่นสัญญาแห่งความจริงใจได้อย่างลงตัว!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '赔偿' (péicháng - ชดใช้ค่าเสียหาย) ตัว '赔' มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '贝 (หมวดหอยเบี้ย/ทรัพย์สิน 贝字旁)',
+            '金 (หมวดโลหะ 金字旁)',
+            '言 (หมวดคำพูด 言字旁)',
+            '心 (หมวดหัวใจ 心字底)'
+          ],
+          correct_index: 0,
+          explanation_th: "'赔' มีหมวด '贝' (เปลือกหอยเบี้ยโบราณที่ใช้แทนเงินตรา) สื่อถึงการชดเชยทางทรัพย์สินเงินทอง",
+          encouragement: 'แม่นยำเรื่องอักษรหมวดการเงินและทรัพย์สินโบราณ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u43_l03',
+      lesson_number: 3,
+      title: {
+        zh: '亡羊补牢与质量隐患',
+        th: 'วัวหายล้อมคอก (亡羊补牢) และการขจัดภัยเงียบด้านคุณภาพ',
+        en: 'Mending the Fold (Wángyángbǔláo) & Quality Audits'
+      },
+      can_do: {
+        th: 'อธิบายการตรวจสอบความเสี่ยง (隐患), การเรียกคืนสินค้า (召回), การกำกับดูแล (监督) และสำนวน 亡羊补牢 (วัวหายล้อมคอก)',
+        en: 'Explain risk hazards, product recall, supervision, and the idiom Wángyángbǔláo (mending the fold)'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการเรียกคืนสินค้าเชิงรุกและสุภาษิตเตือนใจ 亡羊补牢!',
+      vocabulary: [
+        {
+          id: 'hsk3_4311',
+          hanzi: '亡羊补牢',
+          pinyin: 'wángyángbǔláo',
+          display_pinyin: 'wángyángbǔláo',
+          pinyin_tone: 'wang2yang2bu3lao2',
+          meaning_th: 'วัวหายล้อมคอก / เสียแกะแล้วจึงซ่อมคอก / แก้ไขข้อผิดพลาดทันทียังไม่สายเกินไป',
+          meaning_en: 'better late than never / mend the fold after the sheep is lost',
+          radical: '羊',
+          radical_name_th: 'หมวดแกะ (羊字旁)',
+          stroke_count: 24,
+          mnemonic: 'แกะสูญหายไป (亡羊) จึงรีบซ่อมแซมคอก (补牢) = วัวหายล้อมคอก แก้ไขยังทัน',
+          kid_mnemonic: 'แกะวิ่งหนีออกจากรั้ว ชายเลี้ยงแกะรีบตอกไม้ซ่อมรั้วป้องกันแกะตัวอื่น = 亡羊补牢',
+          body_gesture: 'สองมือทำท่าตอกค้อนซ่อมรั้วไม้อย่างแข็งขัน'
+        },
+        {
+          id: 'hsk3_4312',
+          hanzi: '隐患',
+          pinyin: 'yǐnhuàn',
+          display_pinyin: 'yǐnhuàn',
+          pinyin_tone: 'yin3huan4',
+          meaning_th: 'ภัยเงียบที่แฝงอยู่ / จุดอันตรายที่ยังไม่ปรากฏชัด',
+          meaning_en: 'hidden danger / latent hazard',
+          radical: '阝',
+          radical_name_th: 'หมวดเนินเขา (双耳旁)',
+          stroke_count: 22,
+          mnemonic: 'ซ่อนเร้นอยู่ลึกๆ (隐) ก่อเกิดเป็นภัยพิบัติ (患) = ภัยเงียบแอบแฝง',
+          kid_mnemonic: 'ช่างใช้ไฟฉายส่องดูรอยร้าวเล็กๆ ใต้ท้องเรือ = 隐患',
+          body_gesture: 'เอามือป้องคิ้วก้มมองหาข้อบกพร่องที่ซ่อนเร้น'
+        },
+        {
+          id: 'hsk3_4313',
+          hanzi: '召回',
+          pinyin: 'zhàohuí',
+          display_pinyin: 'zhàohuí',
+          pinyin_tone: 'zhao4hui2',
+          meaning_th: 'เรียกคืนสินค้า / สั่งเก็บสินค้าที่มีตำหนิกลับคืนโรงงาน',
+          meaning_en: 'recall (defective products)',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 11,
+          mnemonic: 'เปล่งเสียงเรียก (召) ให้นำกลับคืนมา (回) = เรียกคืนสินค้า',
+          kid_mnemonic: 'รถบรรทุกขนกล่องสินค้าที่มีปัญหาเพื่อนำกลับไปซ่อมที่โรงงาน = 召回',
+          body_gesture: 'กวักมือสองข้างเข้าหาตัวเป็นจังหวะสื่อถึงการเรียกกลับคืน'
+        },
+        {
+          id: 'hsk3_4314',
+          hanzi: '严谨',
+          pinyin: 'yánjǐn',
+          display_pinyin: 'yánjǐn',
+          pinyin_tone: 'yan2jin3',
+          meaning_th: 'รัดกุมรอบคอบ / มีระเบียบวินัยเคร่งครัดไร้ข้อผิดพลาด',
+          meaning_en: 'rigorous / strict and meticulous',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 19,
+          mnemonic: 'เข้มงวดกวดขัน (严) ระมัดระวังรอบคอบ (谨) = รัดกุมรอบคอบ',
+          kid_mnemonic: 'นักวิทยาศาสตร์ตรวจเช็กตัวเลขในรายงานซ้ำ 3 รอบ = 严谨',
+          body_gesture: 'ชี้นิ้วชี้ลงตรวจเช็กกระดาษทีละบรรทัดอย่างละเอียด'
+        },
+        {
+          id: 'hsk3_4315',
+          hanzi: '监督',
+          pinyin: 'jiāndū',
+          display_pinyin: 'jiāndū',
+          pinyin_tone: 'jian1du1',
+          meaning_th: 'กำกับดูแล / ตรวจตราควบคุมมาตรฐานอย่างใกล้ชิด',
+          meaning_en: 'supervise / oversee / monitor',
+          radical: '皿',
+          radical_name_th: 'หมวดภาชนะ (皿字底)',
+          stroke_count: 24,
+          mnemonic: 'จ้องมองตรวจตรา (监) สั่งการควบคุม (督) = กำกับดูแล',
+          kid_mnemonic: 'หัวหน้างานสวมหมวกนิรภัยเดินตรวจเช็กสายการผลิต = 监督',
+          body_gesture: 'สองมือไพล่หลังยืดตัวมองสอดส่องตรวจตราพื้นที่'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 亡羊补牢 (wángyángbǔláo) 2-2-3-2 ลื่นไหล',
+        description_th: 'wáng (เสียง 2) -> yáng (เสียง 2) -> bǔ (เสียง 3 ทอดต่ำ) -> láo (เสียง 2 ผันขึ้น)',
+        example: '亡羊补牢，未为迟也 (wángyángbǔláo, wèi wéi chí yě)',
+        fun_metaphor: 'เหมือนคลื่นน้ำกระเพื่อมสองระลอก จุ่มลงลึก แล้วยกตัวขึ้นสู่ฝั่ง',
+        reassurance: 'สำนวน 亡羊补牢 มักต่อด้วยคำว่า 为时未晚 (ยังไม่สายเกินแก้)'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างสุภาษิตเตือนสติ: 亡羊补牢，犹未为晚',
+        explanation_th: 'ใช้สอนใจว่า แม้จะเกิดความเสียหายขึ้นแล้ว แต่หากรีบแก้ไขตอนนี้ก็ยังไม่สายเกินไป',
+        patterns: [
+          {
+            formula: '发生问题后及时整改，亡羊补牢，未为迟也',
+            zh: '虽然出现了一定损失，但企业立刻主动召回、严肃整改，亡羊补牢犹未为晚。',
+            pinyin: 'Suīrán chūxiàn le yídìng sǔnshī, dàn qǐyè lìkè zhǔdòng zhàohuí, yánsù zhěnggǎi, wángyángbǔláo yóu wèi wéi wǎn.',
+            th: 'แม้จะเกิดความเสียหายขึ้นบ้าง แต่หากองค์กรเรียกคืนสินค้าโดยสมัครใจและปรับปรุงอย่างจริงจัง วัวหายล้อมคอกก็ยังไม่สายเกินแก้',
+            en: 'Although some loss occurred, the enterprise promptly initiated voluntary recall and rectification; mending the fold is not too late.'
+          },
+          {
+            formula: '全面排查质量隐患，加强全流程监督',
+            zh: '工厂全面排查潜在的质量隐患，并加强全流程的质量监督。',
+            pinyin: 'Gōngchǎng quánmiàn páichá qiánzài de zhìliàng yǐnhuàn, bìng jiāqiáng quán liúchéng de zhìliàng jiāndū.',
+            th: 'โรงงานดำเนินการตรวจคัดกรองภัยเงียบด้านคุณภาพที่แฝงอยู่อย่างรอบด้าน และกระชับการกำกับดูแลคุณภาพตลอดกระบวนการ',
+            en: 'The factory comprehensively screened latent quality hazards and strengthened whole-process supervision.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '张总，技术质检部门已经完成了全面排查，彻底找出了导致密封不良的隐患原因。',
+          pinyin: 'Zhāng zǒng, jìshù zhìjiǎn bùmén yǐjīng wánchéng le quánmiàn páichá, chèdǐ zhǎochū le dǎozhì mìmǐng bùliáng de yǐnhuàn yuányīn.',
+          th: 'บอสจางคะ แผนกควบคุมคุณภาพด้านเทคนิคได้ตรวจคัดกรองอย่างรอบด้านเสร็จสิ้นแล้ว และค้นพบต้นตอของภัยเงียบที่ทำให้การปิดผนึกมีปัญหาแล้วค่ะ',
+          en: 'President Zhang, the technical QA department has completed a comprehensive screening and thoroughly identified the latent cause of defective sealing.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '很好！对所有涉及隐患的产品必须坚决全部主动召回，绝不能让一件有瑕疵的商品留在市场上。',
+          pinyin: 'Hěn hǎo! Duì suǒyǒu shèjí yǐnhuàn de chǎnpǐn bìxū jiānjué quánbù zhǔdòng zhàohuí, jué bù néng ràng yí jiàn yǒu xiácī de shāngpǐn liú zài shìchǎng shàng.',
+          th: 'ดีมากครับ! สินค้าทั้งหมดที่มีส่วนเกี่ยวข้องกับภัยเงียบนี้ ต้องเรียกคืนโดยสมัครใจอย่างเด็ดขาด ไม่อาจปล่อยให้สินค้าที่มีตำหนิแม้แต่ชิ้นเดียวหลุดรอดอยู่ในตลาดครับ',
+          en: 'Very good! We must resolutely initiate a voluntary recall for all products involving hazards; not a single flawed item can remain on the market.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '古人说“亡羊补牢，犹未为晚”，这次事件暴露出了生产流程的漏洞，正好提醒我们要和工程师、工人朋友们一起按时检查，脚踏实地升级严谨的质量体系。',
+          pinyin: 'Gǔrén shuō “wángyángbǔláo, yóu wèi wéi wǎn”, zhè cì shìjiàn bàolù chū shēngchǎn liúchéng de lòudòng, zhènghǎo tíxǐng wǒmen yào ànshí jiǎnchá, shēngjí yánjǐn zhìliàng tǐxì.',
+          th: 'คนโบราณกล่าวว่า "วัวหายล้อมคอก ยังไม่สายเกินแก้" เหตุการณ์ครั้งนี้เผยให้เห็นช่องโหว่ในกระบวนการผลิต ซึ่งเตือนให้พวกเราต้องตรวจเช็กตรงเวลา เพื่อยกระดับระบบคุณภาพที่รัดกุมค่ะ',
+          en: 'Ancients said "mending the fold is not too late"; this incident exposed loopholes, reminding us to inspect on time and upgrade quality systems.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '是的，我们要邀请第三方专业机构加入监督，优化管理，以最严谨的标准重新赢得公众和朋友们的信任。',
+          pinyin: 'Shì de, wǒmen yào yāoqǐng dì-sān fāng zhuānyè jīgòu jiārù jiāndū, yòuhuà guǎnlǐ, yǐ zuì yánjǐn de biāozhǔn chóngxīn yíngdé gōngzhòng hé péngyoumen de xìnrèn.',
+          th: 'ถูกต้องครับ พวกเราต้องเชิญองค์กรวิชาชีพภายนอกมากำกับดูแล เพิ่มประสิทธิภาพการบริหาร ใช้นอร์มมาตรฐานที่รัดกุมที่สุดเพื่อกอบกู้ศรัทธาและความไว้วางใจของสาธารณชนและเพื่อนๆ กลับคืนมาครับ',
+          en: 'Yes, we must invite third-party professional bodies for supervision, optimizing management to regain trust of the public and friends.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '明白了，太谢谢张总的指点！今天下午和您认真讨论，总结经验，明天我们一定全面落实召回工作！',
+          pinyin: 'Míngbai le, tài xièxie Zhāng zǒng de zhǐdiǎn! Jīntiān xiàwǔ hé nín rènzhēn tǎolùn, zǒngjié jīngyàn, míngtiān wǒmen yídìng quánmiàn luòshí zhàohuí gōngzuò!',
+          th: 'เข้าใจแล้วค่ะ ขอบพระคุณคำชี้แนะของบอสจาง บ่ายวันนี้ได้หารือกับคุณอย่างจริงจัง สรุปบทเรียนประสบการณ์ พรุ่งนี้พวกเราจะปฏิบัติตามงานเรียกคืนสินค้าอย่างรอบด้านค่ะ!',
+          en: 'Understood, thank you so much for your guidance! Discussing with you this afternoon, summarizing experience, tomorrow we will implement recall work!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '不客气，互利共赢才能走得长远，继续严格把关质量，明天见，再见！',
+          pinyin: 'Bú kèqi, hùlì gòngyíng cái néng zǒu de chángyuǎn, jìxù yángé bǎguān zhìliàng, míngtiān jiàn, zàijiàn!',
+          th: 'ยินดีครับ ประโยชน์ร่วมกันอย่างยั่งยืนจึงจะเดินไปได้ไกล ควบคุมคุณภาพอย่างเข้มงวดต่อไป พรุ่งนี้พบกัน ลาก่อนครับ!',
+          en: 'You are welcome, mutual win-win enables going far; keep strictly monitoring quality; see you tomorrow, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '亡羊补牢' (wángyángbǔláo) มีความหมายตรงกับข้อใด?",
+          options: [
+            'แม้จะเกิดความเสียหายขึ้นแล้ว แต่การรีบแก้ไขทันทียังไม่สายเกินไป (Mending the fold after losing sheep / Better late than never)',
+            'การปล่อยให้แกะหนีไปโดยไม่สนใจ',
+            'การสร้างฟาร์มแกะแห่งใหม่',
+            'การไปซื้อแกะตัวใหม่ที่ตลาด'
+          ],
+          correct_index: 0,
+          explanation_th: "'亡羊补牢' (วัวหายล้อมคอก) สื่อว่าเมื่อเกิดความผิดพลาดขึ้นแล้ว หากรีบซ่อมแซมแก้ไขทันทีย่อมป้องกันความเสียหายครั้งใหญ่ในอนาคตได้",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจนัยคติเตือนใจของสำนวนโบราณได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "การที่บริษัทประกาศ '主动召回' (zhǔdòng zhàohuí) สินค้าที่มีตำหนิ สะท้อนถึงสิ่งใด?",
+          options: [
+            'ความรับผิดชอบต่อผู้บริโภคและความซื่อสัตย์ในคุณภาพสินค้า (Product Recall & Consumer Protection)',
+            'การขาดทุนจนต้องปิดกิจการ',
+            'การจัดกิจกรรมคืนกำไรให้ลูกค้า',
+            'การเลิกผลิตสินค้าทุกประเภท'
+          ],
+          correct_index: 0,
+          explanation_th: "'主动召回' คือการแสดงความรับผิดชอบอย่างมืออาชีพขององค์กรในการเรียกเก็บสินค้าที่มีข้อบกพร่องเพื่อปกป้องความปลอดภัยของลูกค้า",
+          encouragement: 'แม่นยำมาก! เข้าใจมาตรฐานการคุ้มครองผู้บริโภคระดับสากล!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แม้จะเกิดความเสียหายขึ้นบ้าง แต่วัวหายล้อมคอกยังไม่สายเกินแก้"',
+          tokens: ['亡羊补牢犹未为晚', '虽然出现了一定损失'],
+          correct_sequence: ['虽然出现了一定损失', '亡羊补牢犹未为晚'],
+          pinyin: 'Suīrán chūxiàn le yídìng sǔnshī, wángyángbǔláo yóu wèi wéi wǎn.',
+          meaning_th: 'แม้จะเกิดความเสียหายขึ้นบ้าง แต่วัวหายล้อมคอกยังไม่สายเกินไป',
+          explanation_th: 'ประโยคยอมรับความจริง (虽然出现了一定损失) + สุภาษิตเตือนใจ (亡羊补牢犹未为晚)',
+          encouragement: 'ประกอบประโยคคติเตือนใจการบริหารงานได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '亡羊补牢' ตัว '牢' (láo - คอกสัตว์/แน่นหนา) มีหมวดนำใดอยู่ด้านบน?",
+          options: [
+            '宀 (หมวดหลังคาเรือน 宝盖头)',
+            '广 (หมวดเพิงพัก 广字旁)',
+            '穴 (หมวดถ้ำ 穴宝盖)',
+            '户 (หมวดประตู 户字头)'
+          ],
+          correct_index: 0,
+          explanation_th: "'牢' มีหมวด '宀' (หลังคาเรือน/คอกกั้น) อยู่เหนือ '牛' (วัว) เดิมหมายถึงคอกขังวัวควาย",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรคอกสัตว์โบราณได้อย่างแม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u43_l04',
+      lesson_number: 4,
+      title: {
+        zh: '品牌重塑与信任重建',
+        th: 'การฟื้นฟูแบรนด์และการกอบกู้ศรัทธาความไว้วางใจ',
+        en: 'Brand Rejuvenation & Trust Rebuilding'
+      },
+      can_do: {
+        th: 'อธิบายการกอบกู้ชื่อเสียงแบรนด์ (品牌), การฟื้นฟูความไว้วางใจ (信任) และการพลิกวิกฤตเป็นโอกาส (契机)',
+        en: 'Explain brand reputation recovery, trust reconstruction, and turning crises into opportunities'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการสร้างความเชื่อมั่นระยะยาว และพิชิต Boss Challenge นักกู้วิกฤตพีอาร์มือทอง!',
+      vocabulary: [
+        {
+          id: 'hsk3_4316',
+          hanzi: '品牌',
+          pinyin: 'pǐnpái',
+          display_pinyin: 'pǐnpái',
+          pinyin_tone: 'pin3pai2',
+          meaning_th: 'ตราสินค้า / แบรนด์และชื่อเสียงขององค์กร',
+          meaning_en: 'brand / trademark / corporate reputation',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 21,
+          mnemonic: 'คุณภาพสินค้า (品) ที่มีป้ายชื่อรับประกัน (牌) = แบรนด์คุณภาพ',
+          kid_mnemonic: 'โลโก้รูปสิงโตสีทองบนกล่องสินค้าที่ทุกคนเชื่อถือ = 品牌',
+          body_gesture: 'สองมือทำท่ากรอบสี่เหลี่ยมชูขึ้นดั่งป้ายตราสินค้า'
+        },
+        {
+          id: 'hsk3_4317',
+          hanzi: '信任',
+          pinyin: 'xìnrèn',
+          display_pinyin: 'xìnrèn',
+          pinyin_tone: 'xin4ren4',
+          meaning_th: 'ความไว้วางใจ / ความเชื่อมั่นและศรัทธา',
+          meaning_en: 'trust / confidence',
+          radical: '亻',
+          radical_name_th: 'หมวดคนยืน (单人旁)',
+          stroke_count: 15,
+          mnemonic: 'คนมีสัจจะคำพูด (信) ได้รับการแต่งตั้งมอบหมาย (任) = ความไว้วางใจ',
+          kid_mnemonic: 'เพื่อนสองคนจับมือให้คำสัญญาด้วยแววตาจริงใจ = 信任',
+          body_gesture: 'ยื่นมือขวาออกไปข้างหน้าทำท่าจับมือเช็กแฮนด์ด้วยความจริงใจ'
+        },
+        {
+          id: 'hsk3_4318',
+          hanzi: '重塑',
+          pinyin: 'chóngsù',
+          display_pinyin: 'chóngsù',
+          pinyin_tone: 'chong2su4',
+          meaning_th: 'หล่อหลอมขึ้นใหม่ / กอบกู้สร้างภาพลักษณ์ใหม่ให้แข็งแกร่ง',
+          meaning_en: 'reshape / rebuild / remold',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (提土旁)',
+          stroke_count: 22,
+          mnemonic: 'ปั้นแต่งขึ้นอีกครั้ง (重) จากผืนดินเหนียว (塑) = หล่อหลอมใหม่',
+          kid_mnemonic: 'นำดินน้ำมันมาปั้นขึ้นเป็นรูปปราสาทหลังใหม่อย่างประณีต = 重塑',
+          body_gesture: 'สองมือทำท่าปั้นดินเหนียวเป็นรูปทรงสง่างาม'
+        },
+        {
+          id: 'hsk3_4319',
+          hanzi: '契机',
+          pinyin: 'qìjī',
+          display_pinyin: 'qìjī',
+          pinyin_tone: 'qi4ji1',
+          meaning_th: 'จุดเปลี่ยนสำคัญ / โอกาสทองในการพลิกสถานการณ์',
+          meaning_en: 'turning point / favorable opportunity / juncture',
+          radical: '大',
+          radical_name_th: 'หมวดคนตัวใหญ่ (大字头)',
+          stroke_count: 15,
+          mnemonic: 'ข้อตกลงสัญญา (契) ที่เป็นจังหวะเวลาพอเหมาะ (机) = จุดเปลี่ยนโอกาส',
+          kid_mnemonic: 'นักฟุตบอลตัดลูกบอลได้และเปิดเกมรุกทำประตูชัย = 契机',
+          body_gesture: 'กำหมัดขวาชูขึ้นอย่างฮึกเหิมสื่อถึงการคว้าโอกาสสำคัญ'
+        },
+        {
+          id: 'hsk3_4320',
+          hanzi: '口碑',
+          pinyin: 'kǒubēi',
+          display_pinyin: 'kǒubēi',
+          pinyin_tone: 'kou3bei1',
+          meaning_th: 'เสียงบอกต่อของลูกค้า / ชื่อเสียงที่เล่าขานปากต่อปาก',
+          meaning_en: 'word of mouth / public praise',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 16,
+          mnemonic: 'คำชื่นชมจากปาก (口) ที่จารึกหนักแน่นดั่งศิลาจารึก (碑) = เสียงชมปากต่อปาก',
+          kid_mnemonic: 'ลูกค้าเดินออกจากร้านแล้วยกนิ้วชมบอกต่อเพื่อนๆ = 口碑',
+          body_gesture: 'เอามือป้องปากกระซิบคำชมแล้วยกนิ้วโป้งเยี่ยม'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 重塑 (chóngsù) ตัว 重 ออกเสียง chóng (ไม่ใช่ zhòng)',
+        description_th: '重 ในคำว่า 重塑 เป็นอักษรหลายเสียง ออกเสียง chóng แปลว่า ทำซ้ำ/อีกครั้ง',
+        example: '重塑品牌形象 (chóngsù pǐnpái xíngxiàng)',
+        fun_metaphor: 'เหมือนกดปุ่มรีสตาร์ตระบบใหม่เพื่อก้าวที่มั่นคงกว่าเดิม',
+        reassurance: 'คำว่า 重 สื่อถึงการทำซ้ำ เช่น 重新, 重塑 ให้ออกเสียง chóng เสมอ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการพลิกวิกฤตเป็นโอกาส: 将危机转化为...的契机',
+        explanation_th: 'ใช้อธิบายกลยุทธ์เชิงบวกในการเปลี่ยนสถานการณ์ลำบากให้เป็นโอกาสพัฒนาองค์กร',
+        patterns: [
+          {
+            formula: '把危机转化为重塑形象的契机',
+            zh: '卓越的企业善于把危机转化为推动改革与重塑口碑的宝贵契机。',
+            pinyin: 'Zhuóyuè de qǐyè shànyú bǎ wēijī zhuǎnhuà wéi tuīdòng gǎigé yǔ chóngsù kǒubēi de bǎoguì qìjī.',
+            th: 'องค์กรที่ยอดเยี่ยมเชี่ยวชาญในการพลิกวิกฤตให้เป็นโอกาสล้ำค่าในการขับเคลื่อนการปฏิรูปและกอบกู้เสียงชื่นชมของลูกค้า',
+            en: 'Outstanding enterprises excel at turning crises into valuable opportunities to drive reform and rebuild reputation.'
+          },
+          {
+            formula: '金杯银杯不如消费者的口碑',
+            zh: '商界常说“金杯银杯不如消费者的口碑”，唯有真诚才能赢得持久的信任。',
+            pinyin: 'Shāngjiè cháng shuō “jīnbēi yínbēi bùrú xiāofèizhě de kǒubēi”, wéiyǒu zhēnchéng cái néng yíngdé chíchí de xìnrèn.',
+            th: 'ในวงการธุรกิจมักกล่าวว่า "ถ้วยทองถ้วยเงินก็สู้เสียงบอกต่อของผู้บริโภคไม่ได้" มีเพียงความจริงใจเท่านั้นจึงจะชนะความไว้วางใจที่ยั่งยืน',
+            en: 'The business world often says "gold and silver cups are not as good as consumer word-of-mouth"; only sincerity wins lasting trust.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '张总，经过两个月的全面质量整改与公开透明的溯源直播，我们产品的销量和口碑全面回升了！电商平台的退换货率大大降低，好评率超过了百分之九十九！',
+          pinyin: 'Zhāng zǒng, jīngguò liǎng ge yuè de quánmiàn zhìliàng zhěnggǎi yǔ gōngkāi tòumíng de sùyuán zhībō, wǒmen chǎnpǐn de xiàoliàng hé kǒubēi quánmiàn huíshēng le! Diànshāng píngtái de tuìhuànhuò lǜ dàdà jiàngdī, hǎopínglǜ chāoguò le bǎifēnzhī jiǔshíjiǔ!',
+          th: 'บอสจางคะ หลังจากการปรับปรุงคุณภาพรอบด้านสองเดือนและการไลฟ์สดเปิดเผยแหล่งผลิตอย่างโปร่งใส ยอดขายและเสียงบอกต่อของสินค้าเราฟื้นตัวกลับมาอย่างสมบูรณ์แล้วค่ะ! อัตราการคืนเปลี่ยนสินค้าบนแพลตฟอร์มอีคอมเมิร์ซลดลงอย่างมาก และอัตราความพึงพอใจสูงเกิน 99% ค่ะ!',
+          en: 'President Zhang, after two months of quality overhaul and transparent livestreaming, sales and reputation rebounded! E-commerce return rate dropped, and favorable rating exceeded 99%!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '这证明广大消费者感受到了我们的真诚。品牌形象的重塑从来不是靠公关话术，而是靠脚踏实地生产货真价实的好产品。',
+          pinyin: 'Zhè zhèngmíng guǎngdà xiāofèizhě gǎnshòu dào le wǒmen de zhēnchéng. Pǐnpái xíngxiàng de chóngsù cónglái bú shì kào gōngguān huàshù, ér shì kào jiǎotàshídì shēngchǎn huòzhēnjiàshí de hǎo chǎnpǐn.',
+          th: 'นี่พิสูจน์ว่าผู้บริโภคสัมผัสได้ถึงความจริงใจของเรา การกอบกู้ภาพลักษณ์แบรนด์ไม่เคยอาศัยเทคนิคคำพูดพีอาร์ แต่ขึ้นอยู่กับการผลิตสินค้าที่ดีจริงอย่างซื่อสัตย์และติดดินครับ',
+          en: 'This proves consumers felt our sincerity. Rebuilding brand image never relies on PR rhetoric, but on down-to-earth production of genuine goods.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '这次危机成了我们完善全流程风控的重要契机，让团队更加深刻体会到了“客户第一”的真谛。大家克服困难，充满信心！',
+          pinyin: 'Zhè cì wēijī chéng le wǒmen wánshàn quán liúchéng fēngkòng de zhòngyào qìjī, ràng tuánduì gèngjiā shēnkè tǐhuì dào le “kèhù dì-yī” de zhēndì. Dàjiā kèfú kùnnan, chōngmǎn xìnxīn!',
+          th: 'วิกฤตครั้งนี้กลายเป็นโอกาสสำคัญในการพัฒนาระบบควบคุมความเสี่ยงอย่างสมบูรณ์ ทำให้ทีมงานเข้าใจความหมายแท้จริงของ "ลูกค้ามาเป็นอันดับหนึ่ง" อย่างลึกซึ้ง ทุกคนก้าวข้ามความยากลำบากและเต็มเปี่ยมด้วยความมั่นใจค่ะ!',
+          en: 'This crisis became a vital opportunity to perfect risk control, grasping "Customer First." Everyone overcame difficulties with full confidence!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '金杯银杯不如消费者的口碑。珍惜这份来之不易的信任，我们将走得更加稳健高远。',
+          pinyin: 'Jīnbēi yínbēi bùrú xiāofèizhě de kǒubēi. Zhēnxī zhè fèn láizhībùyì de xìnrèn, wǒmen jiāng zǒu de gèngjiā wěnjiàn gāoyuǎn.',
+          th: 'ถ้วยทองถ้วยเงินสู้เสียงชื่นชมของลูกค้าไม่ได้ ทะนุถนอมความไว้วางใจที่ได้มาอย่างยากลำบากนี้ พวกเราจะก้าวไปได้อย่างมั่นคงและสง่างามยิ่งขึ้นครับ',
+          en: 'Gold and silver cups pale beside consumer word-of-mouth. Cherishing this hard-won trust, we will advance more steadily and far.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิน (ผู้จัดการสื่อสาร) 👩‍💼',
+          zh: '明白了，太谢谢张总的指点！今天和您认真讨论，明天我们一定全面落实新质检标准！',
+          pinyin: 'Míngbai le, tài xièxie Zhāng zǒng de zhǐdiǎn! Jīntiān hé nín rènzhēn tǎolùn, míngtiān wǒmen yídìng quánmiàn luòshí xīn zhìjiǎn biāozhǔn!',
+          th: 'เข้าใจแล้วค่ะ ขอบพระคุณคำชี้แนะของบอสจาง วันนี้ได้หารือกับคุณอย่างจริงจัง พรุ่งนี้พวกเราจะปฏิบัติตามมาตรฐานการตรวจสอบคุณภาพใหม่อย่างรอบด้านค่ะ!',
+          en: 'Understood, thank you so much for your guidance! Earnestly discussing with you today, tomorrow we will fully implement the new QA standards!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'บอสจาง (ผู้บริหาร) 👨‍💼',
+          zh: '不客气，坚守初心定创辉煌，明天见，再见！',
+          pinyin: 'Bú kèqi, jiānshǒu chūxīn dìng chuàng huīhuáng, míngtiān jiàn, zàijiàn!',
+          th: 'ยินดีครับ ยึดมั่นในปณิธานแรกย่อมสร้างความรุ่งโรจน์ พรุ่งนี้พบกัน ลาก่อนครับ!',
+          en: 'You are welcome, upholding original aspiration surely creates brilliance; see you tomorrow, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สุภาษิตธุรกิจ '金杯银杯不如消费者的口碑' เน้นย้ำคุณค่าใดเป็นสำคัญ?",
+          options: [
+            'เสียงชื่นชมและความไว้วางใจที่แท้จริงจากผู้บริโภค มีค่ายิ่งกว่ารางวัลเกียรติยศใดๆ (Consumer Trust & Word-of-mouth)',
+            'การประมูลซื้อถ้วยรางวัลทองคำมาตั้งโชว์ในบริษัท',
+            'การแจกแก้วน้ำฟรีให้ลูกค้าทุกคน',
+            'การเปิดร้านขายเครื่องเงินเครื่องทอง'
+          ],
+          correct_index: 0,
+          explanation_th: "สุภาษิตนี้สอนว่ารางวัลเกียรติยศใดๆ ก็ไม่เทียบเท่ากับความชื่นชมและศรัทธาที่แท้จริงในใจของลูกค้า",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจปรัชญาการสร้างแบรนด์ที่ยั่งยืน!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '契机' (qìjī) มีความหมายสอดคล้องกับข้อใด?",
+          options: [
+            'จุดเปลี่ยนสำคัญหรือโอกาสอันดีในการพัฒนาสถานการณ์ให้ดีขึ้น (Favorable Turning Point)',
+            'เครื่องจักรโรงงานที่ชำรุดเสียหาย',
+            'สัญญาซื้อขายที่ดินเปล่า',
+            'การยกเลิกเที่ยวบินเนื่องจากสภาพอากาศ'
+          ],
+          correct_index: 0,
+          explanation_th: "'契机' คือโอกาสทองหรือจังหวะเวลาสำคัญที่สามารถพลิกสถานการณ์ที่ย่ำแย่ให้กลับกลายเป็นการเริ่มต้นที่งดงาม",
+          encouragement: 'แม่นยำมาก! นำศัพท์กลยุทธ์การบริหารไปใช้ได้อย่างคล่องแคล่ว!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "มีเพียงความจริงใจเท่านั้น จึงจะชนะความไว้วางใจที่ยั่งยืนของผู้บริโภค"',
+          tokens: ['才能赢得持久的信任', '唯有真诚'],
+          correct_sequence: ['唯有真诚', '才能赢得持久的信任'],
+          pinyin: 'Wéiyǒu zhēnchéng, cái néng yíngdé chíchí de xìnrèn.',
+          meaning_th: 'มีเพียงความจริงใจ จึงจะได้รับความไว้วางใจที่ยาวนาน',
+          explanation_th: 'เงื่อนไขเด็ดขาด (唯有真诚) + ผลลัพธ์ที่ตามมา (才能赢得持久的信任)',
+          encouragement: 'ประกอบประโยคสัจธรรมแห่งการบริหารแบรนด์ได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '重塑' ตัว '塑' (sù - ปั้นหล่อ) มีหมวดนำใดอยู่ด้านล่าง?",
+          options: [
+            '土 (หมวดดิน 提土旁)',
+            '木 (หมวดไม้ 木字旁)',
+            '金 (หมวดโลหะ 金字旁)',
+            '水 (หมวดน้ำ 水字底)'
+          ],
+          correct_index: 0,
+          explanation_th: "'塑' มีหมวด '土' (ดิน) อยู่ด้านล่าง สื่อถึงการนำดินเหนียวมาปั้นแต่งหล่อหลอมเป็นรูปทรงใหม่อย่างประณีต",
+          encouragement: 'เข้าใจรากศัพท์การปั้นสร้างสิ่งใหม่ได้อย่างลึกซึ้ง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณได้รับแต่งตั้งเป็นโฆษกพิเศษแถลงข่าวปิดคดีวิกฤตสินค้าของบริษัทต่อหน้าสื่อมวลชนชั้นนำ จงเลือกประโยคแถลงการณ์สรุปที่สะท้อนความรับผิดชอบ การแก้ไขแบบ "วัวหายล้อมคอก" และการกอบกู้ศรัทธาแบรนด์ได้อย่างไร้ที่ติ',
+        dialogue_context: [
+          {
+            speaker: '记者提问',
+            zh: '请问贵公司在这次危机中吸取了什么教训？未来将如何保障消费者的权益并重建品牌信任？'
+          }
+        ],
+        options: [
+          '主动召回彻底排查隐患，亡羊补牢未为晚；我们将以最严谨的品质坚守初心，重塑广大消费者的口碑与信任！',
+          '这次事件都是消费者的误解，我们公司没有任何责任。',
+          '我们已经把负责员工开除了，大家不要再关注这件事情。',
+          '以后产品出现问题绝不公布，免得上热搜影响股票价格。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ตัวเลือกที่ 1 ครบถ้วนทั้งมิติการแสดงความรับผิดชอบ (主动召回彻底排查隐患) สุภาษิตคติเตือนใจ (亡羊补牢未为晚) และการกอบกู้ศรัทธาด้วยคุณภาพ (重塑广大消费者的口碑与信任)',
+        cheer_message: 'ยอดเยี่ยมระดับปรมาจารย์! คุณพิชิตการเป็นยอดนักสื่อสารกู้วิกฤตองค์กรระดับโลกได้อย่างสมบูรณ์แบบ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u43_master',
+        badge_name: 'ผู้นำบริหารวิกฤตองค์กร (Crisis PR Strategist Master)',
+        message_th: 'ยินดีด้วย! คุณเชี่ยวชาญศาสตร์การสื่อสารภาวะวิกฤต การออกแถลงการณ์แสดงความรับผิดชอบ และสำนวน 亡羊补牢 ได้อย่างสง่างาม!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

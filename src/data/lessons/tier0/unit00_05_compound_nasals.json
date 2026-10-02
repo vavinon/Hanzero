@@ -1,0 +1,260 @@
+{
+  "unit_id": "tier0_u05",
+  "tier": 0,
+  "unit_number": 5,
+  "title": {
+    "zh": "复韵母与鼻韵母",
+    "th": "สระผสม & สระนาสิก",
+    "en": "Compound & Nasal Finals"
+  },
+  "description": "ก้าวสู่ความลื่นไหลระดับสูง! สระผสมลดรูป (iu, ui, un) และสระขึ้นจมูก/นาสิก (an, en, ang, eng, ong) พร้อม 4 หมวดนำวิถีชีวิต 饣, 辶, 宀, 门",
+  "lessons": [
+    {
+      "lesson_id": "t0_u05_l01",
+      "archetype": "phonics",
+      "title": {
+        "zh": "复韵母与鼻音韵母探索",
+        "th": "สัมผัสสระผสมและสระนาสิกขึ้นจมูก",
+        "en": "Exploring Compound Finals & Nasal Echoes"
+      },
+      "can_do": {
+        "th": "ออกเสียงสระผสมลดรูปและสระขึ้นจมูกได้ถูกต้อง รู้จักกฎการสะกดพินอินที่ลดรูป (iu, ui, un) และพูด 4 คำสำคัญในชีวิตประจำวัน",
+        "en": "Pronounce compound and nasal finals clearly, understand spelling reduction rules (iu, ui, un), and master 4 essential everyday vocabulary words"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: เป่าเสียงสระนาสิก 'an' (อัน) และ 'ang' (อาง) ให้สะท้อนขึ้นจมูกก้องกังวาน!",
+      "is_safe_practice_zone": true,
+      "sound_cards": [
+        {
+          "pinyin": "an",
+          "ipa": "[an]",
+          "mouth_shape_th": "อ้าปากเริ่มต้นด้วย a แล้วเลื่อนปลายลิ้นแตะปุ่มเหงือกลมออกทางจมูก (สระ อัน)",
+          "fun_hint": "เริ่มจาก 'อา' จบที่ลิ้นแตะฟัน 'อัน'",
+          "example_words": [
+            { "hanzi": "安", "pinyin": "ān", "th": "ปลอดภัย" },
+            { "hanzi": "饭", "pinyin": "fàn", "th": "ข้าว" }
+          ]
+        },
+        {
+          "pinyin": "en",
+          "ipa": "[ən]",
+          "mouth_shape_th": "อ้าปากปานกลาง e ในลำคอ แล้วแตะปลายลิ้นขึ้นปุ่มเหงือก (สระ เอิน)",
+          "fun_hint": "เสียงสั้นนุ่มในคอ 'เอิน'",
+          "example_words": [
+            { "hanzi": "门", "pinyin": "mén", "th": "ประตู" },
+            { "hanzi": "很", "pinyin": "hěn", "th": "มาก" }
+          ]
+        },
+        {
+          "pinyin": "ang",
+          "ipa": "[ɑŋ]",
+          "mouth_shape_th": "อ้าปากกว้าง a แล้วยกโคนลิ้นอุดเพดานอ่อน ลมขึ้นจมูกกังวาน (สระ อาง)",
+          "fun_hint": "เสียงก้องกังวานในโพรงจมูก 'อาง~'",
+          "example_words": [
+            { "hanzi": "忙", "pinyin": "máng", "th": "ยุ่ง" },
+            { "hanzi": "帮", "pinyin": "bāng", "th": "ช่วย" }
+          ]
+        },
+        {
+          "pinyin": "eng",
+          "ipa": "[ɤŋ]",
+          "mouth_shape_th": "รูปปาก e แล้วยกโคนลิ้นขึ้นจมูก (สระ เอิง)",
+          "fun_hint": "ก้องในโพรงจมูกด้านใน 'เอิง~'",
+          "example_words": [
+            { "hanzi": "朋", "pinyin": "péng", "th": "เพื่อน" },
+            { "hanzi": "冷", "pinyin": "lěng", "th": "หนาว" }
+          ]
+        },
+        {
+          "pinyin": "ong",
+          "ipa": "[ʊŋ]",
+          "mouth_shape_th": "ริมฝีปากห่อกลม แล้วยกโคนลิ้นขึ้นจมูก (สระ อง)",
+          "fun_hint": "ปากห่อกลม ส่งเสียงก้อง 'อง'",
+          "example_words": [
+            { "hanzi": "红", "pinyin": "hóng", "th": "สีแดง" },
+            { "hanzi": "中", "pinyin": "zhōng", "th": "กลาง" }
+          ]
+        },
+        {
+          "pinyin": "iu",
+          "ipa": "[joʊ]",
+          "mouth_shape_th": "รูปเต็มคือ iou แต่เมื่อมีพยัญชนะนำหน้าจะลดรูปเขียนเป็น iu (สระ อิว/เอียว)",
+          "fun_hint": "ฉีกยิ้มแล้วห่อปากเร็วๆ 'อี+โอว ➔ อิว'",
+          "example_words": [
+            { "hanzi": "九", "pinyin": "jiǔ", "th": "เก้า" },
+            { "hanzi": "六", "pinyin": "liù", "th": "หก" }
+          ]
+        },
+        {
+          "pinyin": "ui",
+          "ipa": "[weɪ]",
+          "mouth_shape_th": "รูปเต็มคือ uei เมื่อมีพยัญชนะนำหน้าลดรูปเหลือ ui (สระ อุย/เว่ย)",
+          "fun_hint": "ห่อปากแล้วฉีกยิ้ม 'อู+เอ ➔ อุย/เว่ย'",
+          "example_words": [
+            { "hanzi": "水", "pinyin": "shuǐ", "th": "น้ำ" },
+            { "hanzi": "对", "pinyin": "duì", "th": "ถูก" }
+          ]
+        },
+        {
+          "pinyin": "un",
+          "ipa": "[wən]",
+          "mouth_shape_th": "รูปเต็มคือ uen เมื่อมีพยัญชนะนำหน้าลดรูปเหลือ un (สระ อุน/เวิน)",
+          "fun_hint": "ห่อปากแล้วแตะลิ้นขึ้นจมูก 'อู+เอิน ➔ อุน/เวิน'",
+          "example_words": [
+            { "hanzi": "问", "pinyin": "wèn", "th": "ถาม" },
+            { "hanzi": "轮", "pinyin": "lún", "th": "ล้อ" }
+          ]
+        }
+      ],
+      "radical_cards": [
+        {
+          "radical": "饣",
+          "radical_name_zh": "食字旁",
+          "radical_name_th": "หมวดอาหาร (สือจื้อผัง)",
+          "meaning_th": "อาหาร, ข้าว, การกิน",
+          "meaning_en": "food, eating, meals",
+          "mnemonic": "ฝาชีครอบชามข้าวสวยร้อนๆ หอมกรุ่น",
+          "example_chars": ["饭", "饱", "饺", "馆"]
+        },
+        {
+          "radical": "辶",
+          "radical_name_zh": "走之底",
+          "radical_name_th": "หมวดก้าวเดิน (โจ่วจือตี่)",
+          "meaning_th": "การก้าวเดิน, ถนน, ระยะทาง",
+          "meaning_en": "walk, stepping, movement",
+          "mnemonic": "คนกำลังก้าวเท้าเดินอย่างคล่องแคล่วบนถนนคดเคี้ยว",
+          "example_chars": ["这", "进", "远", "近"]
+        },
+        {
+          "radical": "宀",
+          "radical_name_zh": "宝盖头",
+          "radical_name_th": "หมวดหลังคาบ้าน (เป่าไก้โถว)",
+          "meaning_th": "หลังคาบ้าน, ที่อยู่อาศัย, ความปลอดภัย",
+          "meaning_en": "roof, shelter, home",
+          "mnemonic": "จั่วหลังคาบ้านที่มีปล่องควันคอยคุ้มแดดคุ้มฝน",
+          "example_chars": ["家", "安", "字", "室"]
+        },
+        {
+          "radical": "门",
+          "radical_name_zh": "门字框",
+          "radical_name_th": "หมวดประตู (เหมินจื้อควง)",
+          "meaning_th": "บานประตู, ทางเข้า",
+          "meaning_en": "door, gate, entrance",
+          "mnemonic": "บานประตูสองบานเปิดต้อนรับแขกผู้มาเยือน",
+          "example_chars": ["问", "间", "闭", "开"]
+        }
+      ],
+      "vocabulary": [
+        {
+          "id": "t0_0017",
+          "hanzi": "饭",
+          "pinyin": "fàn",
+          "pinyin_tone": "fan4",
+          "meaning_th": "ข้าว, มื้ออาหาร",
+          "meaning_en": "cooked rice, meal",
+          "radical": "饣",
+          "radical_name_th": "หมวดอาหาร (食字旁)",
+          "stroke_count": 7,
+          "mnemonic": "มีหมวดอาหาร (饣) ย่อมเป็นข้าวสวยมื้ออร่อย",
+          "kid_mnemonic": "ตักข้าวสวยร้อนๆ ใส่ชาม กลิ่นหอมฟุ้ง 'ฟ่าน!'",
+          "body_gesture": "ทำมือประคองชามข้าวแล้วส่งกลิ่นหอม"
+        },
+        {
+          "id": "t0_0018",
+          "hanzi": "这",
+          "pinyin": "zhè",
+          "pinyin_tone": "zhe4",
+          "meaning_th": "นี่, นี้ (สิ่งของใกล้ตัว)",
+          "meaning_en": "this, these",
+          "radical": "辶",
+          "radical_name_th": "หมวดก้าวเดิน (走之底)",
+          "stroke_count": 7,
+          "mnemonic": "ก้าวเดิน (辶) มาถึงตรงจุดนี้แล้ว = นี่/นี้",
+          "kid_mnemonic": "ชี้นิ้วลงที่ของตรงหน้าใกล้ๆ บอกว่า 'อันนี้ไง!'",
+          "body_gesture": "ชี้นิ้วชี้ลงที่ฝ่ามืออีกข้างใกล้ๆ ตัว"
+        },
+        {
+          "id": "t0_0019",
+          "hanzi": "家",
+          "pinyin": "jiā",
+          "pinyin_tone": "jia1",
+          "meaning_th": "บ้าน, ครอบครัว",
+          "meaning_en": "home, family, household",
+          "radical": "宀",
+          "radical_name_th": "หมวดหลังคาบ้าน (宝盖头)",
+          "stroke_count": 10,
+          "mnemonic": "อยู่ใต้หลังคาบ้าน (宀) อันอบอุ่นร่วมกัน = บ้าน",
+          "kid_mnemonic": "เอามือสองข้างทำหลังคาจั่วบ้านบนหัว บอกว่า 'บ้านแสนสุข'",
+          "body_gesture": "ยกแขนสองข้างมาชนกันเป็นจั่วหลังคาบ้านเหนือศีรษะ"
+        },
+        {
+          "id": "t0_0020",
+          "hanzi": "问",
+          "pinyin": "wèn",
+          "pinyin_tone": "wen4",
+          "meaning_th": "ถาม",
+          "meaning_en": "to ask, inquire",
+          "radical": "门",
+          "radical_name_th": "หมวดประตู (门字框)",
+          "stroke_count": 6,
+          "mnemonic": "เอาปาก (口) โผล่ไปที่ประตู (门) เพื่อเอ่ยถามทาง",
+          "kid_mnemonic": "โผล่หน้าไปเคาะประตูแล้วถามว่า 'ขอถามหน่อยนะครับ!'",
+          "body_gesture": "ทำมือป้องปากเหมือนกำลังเคาะประตูเอ่ยถาม"
+        }
+      ],
+      "quizzes": [
+        {
+          "question_th": "สระผสม 'iou' เมื่อมีพยัญชนะนำหน้า จะลดรูปเขียนเป็นอย่างไรในระบบพินอิน?",
+          "explanation_th": "กฎสระลดรูป: iou จะลดรูปเหลือ 'iu' (เช่น d + iou ➔ diū, j + iou ➔ jiǔ)",
+          "encouragement": "เก่งมาก! กฎสระลดรูปช่วยให้เราไม่งงเวลาเห็นการสะกดพินอิน 🐰✨",
+          "type": "listen_match",
+          "options": [
+            "ลดรูปเหลือ iu",
+            "ลดรูปเหลือ io",
+            "ลดรูปเหลือ ou",
+            "เขียนเต็ม iou เหมือนเดิมเสมอ"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "คำว่า '问' (ถาม) เกิดจากตัวอักษรใดอยู่ในบานประตู (门)?",
+          "explanation_th": "问 เกิดจากเอา '口' (ปาก) เข้าไปอยู่ในบานประตู 门 สื่อถึงการโผล่หน้าไปเอ่ยปากถาม",
+          "encouragement": "ยอดเยี่ยม! สัมผัสความงดงามเชิงความหมายของอักษรจีนได้ลึกซึ้ง",
+          "type": "radical_focus",
+          "options": [
+            "口 (ปาก)",
+            "人 (คน)",
+            "子 (เด็ก)",
+            "水 (น้ำ)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "คำว่า '饭' (ข้าว/มื้ออาหาร) ออกเสียงพินอินตรงกับข้อใด?",
+          "explanation_th": "饭 สะกดด้วย f + สระนาสิก an เสียง 4 ออกเสียงว่า 'fàn'",
+          "encouragement": "ถูกต้องเป๊ะ! ต่อไปสั่งข้าวสวย (米饭 mǐfàn) สบายใจแน่นอน",
+          "type": "tone_match",
+          "options": [
+            "fàn (ฟั่น)",
+            "fēn (เฟิน)",
+            "fāng (ฟาง)",
+            "fàng (ฟ่าง)"
+          ],
+          "correct_index": 0
+        },
+        {
+          "question_th": "หมวดนำ '辶' (走之底) สื่อถึงความหมายประเภทใด?",
+          "explanation_th": "辶 สื่อถึงการก้าวเดิน ถนนหนทาง หรือการเคลื่อนที่",
+          "encouragement": "สุดยอด! หมวดก้าวเดินเป็นหนึ่งในหมวดนำที่พบบ่อยที่สุดในภาษาจีน",
+          "type": "radical_focus",
+          "options": [
+            "การก้าวเดิน ถนนหนทาง",
+            "อาหาร ข้าวสวย การกิน",
+            "หลังคาบ้าน ที่อยู่อาศัย",
+            "โลหะ เงินทอง แร่ธาตุ"
+          ],
+          "correct_index": 0
+        }
+      ]
+    }
+  ]
+}

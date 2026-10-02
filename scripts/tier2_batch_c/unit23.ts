@@ -1,0 +1,893 @@
+/**
+ * scripts/tier2_batch_c/unit23.ts
+ * Tier 2 Unit 23: 日常办公初探 (Workplace Orientation & Business Basics)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit23 = {
+  unit_id: 'tier2_u23',
+  tier: 2,
+  unit_number: 23,
+  title: {
+    zh: '日常办公初探',
+    th: 'ปฐมนิเทศออฟฟิศจีน',
+    en: 'Workplace Orientation'
+  },
+  description: 'ปรับตัวเข้ากับสภาพแวดล้อมการทำงานในออฟฟิศจีน ใช้อุปกรณ์สำนักงาน ปริ้นต์และสแกนเอกสาร เขียนอีเมลทางการตามธรรมเนียมจีน ประชุมประสานงานข้ามแผนก และเขียนใบลาป่วยพร้อมส่งมอบงาน',
+  lessons: [
+    {
+      lesson_id: 't2_u23_l01',
+      lesson_number: 1,
+      title: {
+        zh: '办公室日常设施',
+        th: 'อุปกรณ์สำนักงาน & งานเอกสาร',
+        en: 'Office Facilities & Documentation'
+      },
+      can_do: {
+        th: 'อธิบายการใช้อุปกรณ์ในออฟฟิศ เช่น เครื่องพิมพ์ สแกน ถ่ายเอกสาร และใช้โครงสร้างบอกลำดับขั้นตอน 首先...然后...最后...',
+        en: 'Explain office equipment usage like printing and scanning, and use sequence structures 首先...然后...最后...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ถามเพื่อนร่วมงานและบอกขั้นตอนการสั่งปริ้นต์ ถ่ายเอกสารสี 2 หน้า และสแกนส่งเข้าอีเมลได้อย่างคล่องแคล่ว!',
+      vocabulary: [
+        {
+          id: 'hsk2_2301',
+          hanzi: '办公室',
+          pinyin: 'bàngōngshì',
+          display_pinyin: 'bàngōngshì',
+          pinyin_tone: 'ban4gong1shi4',
+          meaning_th: 'ห้องทำงาน / ที่ทำการ / ออฟฟิศ',
+          meaning_en: 'office',
+          radical: '力',
+          radical_name_th: 'หมวดพลังแรง (力字旁)',
+          stroke_count: 18,
+          mnemonic: 'ห้องอาคาร (室) ที่ผู้คนทุ่มเทแรงกาย (力) จัดการธุระการงานส่วนรวม (办公) = ห้องทำงาน',
+          kid_mnemonic: 'โต๊ะทำงาน คอมพิวเตอร์ เก้าอี้หมุน ทุกคนตั้งใจทำงานเงียบกริบ = 办公室',
+          body_gesture: 'ทำท่าพิมพ์คีย์บอร์ดคอมพิวเตอร์อย่างคล่องแคล่ว'
+        },
+        {
+          id: 'hsk2_2302',
+          hanzi: '打印机',
+          pinyin: 'dǎyìnjī',
+          display_pinyin: 'dǎyìnjī',
+          pinyin_tone: 'da3yin4ji1',
+          meaning_th: 'เครื่องพิมพ์ / เครื่องปริ้นต์',
+          meaning_en: 'printer',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 14,
+          mnemonic: 'เครื่องจักรกล (机) ที่ประทับตราหมึกพิมพ์ (打印) ลงบนกระดาษ = เครื่องปริ้นต์',
+          kid_mnemonic: 'กระดาษสีขาวป้อนเข้าเครื่อง มีตัวหนังสือพิมพ์ออกมาฟึ่บๆ = 打印机',
+          body_gesture: 'ทำท่ายื่นสองมือรอรับแผ่นกระดาษที่ออกจากเครื่องพิมพ์'
+        },
+        {
+          id: 'hsk2_2303',
+          hanzi: '复印',
+          pinyin: 'fùyìn',
+          display_pinyin: 'fùyìn',
+          pinyin_tone: 'fu4yin4',
+          meaning_th: 'ถ่ายเอกสาร / คัดลอกสำเนา',
+          meaning_en: 'to photocopy / to duplicate',
+          radical: '夂',
+          radical_name_th: 'หมวดก้าวเดินช้า (折文旁)',
+          stroke_count: 15,
+          mnemonic: 'ทำสำเนาซ้ำอีกครั้ง (复) โดยการประทับตราหมึกเสมือนจริง (印) = ถ่ายเอกสาร',
+          kid_mnemonic: 'เปิดฝากระจก วางกระดาษ แสงไฟสีเขียวสแกนวาบ สำเนาออกมาทันที = 复印',
+          body_gesture: 'ทำท่ายกฝาเครื่องถ่ายเอกสารแล้ววางกระดาษลงบนกระจก'
+        },
+        {
+          id: 'hsk2_2304',
+          hanzi: '扫描',
+          pinyin: 'sǎomiáo',
+          display_pinyin: 'sǎomiáo',
+          pinyin_tone: 'sao3miao2',
+          meaning_th: 'สแกนเอกสาร / ตรวจกวาดภาพ',
+          meaning_en: 'to scan (documents)',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 22,
+          mnemonic: 'ใช้แสงกวาดผ่านอย่างรวดเร็ว (扫) วาดจำลองเส้นสายดิจิทัล (描) = สแกนเอกสาร',
+          kid_mnemonic: 'แสงเลเซอร์สีเขียววิ่งผ่านเอกสาร แปลงเป็นไฟล์ PDF เข้าเครื่อง = 扫描',
+          body_gesture: 'ยกฝ่ามือปาดผ่านจากซ้ายไปขวาขนานกับพื้นเหมือนลำแสงสแกน'
+        },
+        {
+          id: 'hsk2_2305',
+          hanzi: '文件',
+          pinyin: 'wénjiàn',
+          display_pinyin: 'wénjiàn',
+          pinyin_tone: 'wen2jian4',
+          meaning_th: 'เอกสาร / ไฟล์งาน',
+          meaning_en: 'document / file',
+          radical: '文',
+          radical_name_th: 'หมวดอักษรภาษา (文字旁)',
+          stroke_count: 10,
+          mnemonic: 'ชิ้นส่วนรายการ (件) ที่บันทึกถ้อยคำข้อความภาษา (文) = เอกสาร / ไฟล์',
+          kid_mnemonic: 'แฟ้มเอกสารสีน้ำเงิน ข้างในมีรายงานสรุปการประชุม = 文件',
+          body_gesture: 'สองมือทำท่าเปิดแฟ้มเอกสารอ่านอย่างตั้งใจ'
+        },
+        {
+          id: 'hsk2_2306',
+          hanzi: '碎纸机',
+          pinyin: 'suìzhǐjī',
+          display_pinyin: 'suìzhǐjī',
+          pinyin_tone: 'sui4zhi3ji1',
+          meaning_th: 'เครื่องทำลายเอกสาร / เครื่องย่อยกระดาษ',
+          meaning_en: 'paper shredder',
+          radical: '石',
+          radical_name_th: 'หมวดก้อนหิน (石字旁)',
+          stroke_count: 22,
+          mnemonic: 'เครื่องจักร (机) บดแผ่นกระดาษ (纸) ให้แหลกละเอียดเป็นเศษเล็กเศษน้อย (碎) = เครื่องทำลายเอกสาร',
+          kid_mnemonic: 'ป้อนกระดาษที่เป็นความลับ เครื่องตัดเป็นเส้นฝอยเล็กๆ = 碎纸机',
+          body_gesture: 'สองมือกางนิ้วซอยขยับรัวๆ เหมือนใบมีดย่อยกระดาษ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์ลำดับขั้นตอน: 首先...然后...最后...',
+        description_th: 'ใช้แจกแจงลำดับการปฏิบัติงานหรือคำสั่งอย่างเป็นระบบ (首先 = อันดับแรก, 然后 = หลังจากนั้น, 最后 = ขั้นสุดท้าย)',
+        example: '首先连上Wi-Fi，然后打印文件，最后进行扫描 (Shǒuxiān liánshàng Wi-Fi, ránhòu dǎyìn wénjiàn, zuìhòu jìnxíng sǎomiáo)',
+        fun_metaphor: 'เหมือนสูตรทำขนม 1-2-3 ชัดเจน ไม่ข้ามขั้น ทุกคนเข้าใจตรงกัน!',
+        reassurance: 'การใช้โครงสร้างนี้ในการประชุมจะทำให้คุณดูเป็นมืออาชีพมาก'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ลำดับการทำงาน: 首先 + [ขั้นที่ 1] + 然后 + [ขั้นที่ 2] + 最后 + [ขั้นสุดท้าย]',
+        explanation_th: 'ใช้ในการสอนงาน แนะนำเพื่อนร่วมงานใหม่ หรือรายงานความคืบหน้าของโปรเจกต์',
+        patterns: [
+          {
+            formula: '首先把文件放好 + 然后选择双面打印 + 最后点击确定',
+            zh: '首先把文件放好，然后选择双面复印，最后点击绿色确定键。',
+            pinyin: 'Shǒuxiān bǎ wénjiàn fàng hǎo, ránhòu xuǎnzé shuāngmiàn fùyìn, zuìhòu diǎnjī lǜsè quèdìng jiàn.',
+            th: 'อันดับแรกวางเอกสารให้เรียบร้อย จากนั้นเลือกถ่ายสำเนาสองหน้า และสุดท้ายกดปุ่มยืนยันสีเขียวครับ',
+            en: 'First place the document properly, then choose double-sided copy, and finally press the green confirm button.'
+          },
+          {
+            formula: '请问办公室的 + 打印机 + 怎么连接？',
+            zh: '请问办公室的多功能打印机怎么连接？',
+            pinyin: 'Qǐngwèn bàngōngshì de duōgōngnéng dǎyìnjī zěnme liánjiē?',
+            th: 'ขอถามหน่อยเครื่องพิมพ์มัลติฟังก์ชันของออฟฟิศเชื่อมต่ออย่างไรครับ?',
+            en: 'Excuse me, how do I connect to the office multifunction printer?'
+          },
+          {
+            formula: '这份废弃的保密文件 + 需要放进 + 碎纸机',
+            zh: '这份包含客户信息的废弃文件需要放进碎纸机。',
+            pinyin: 'Zhè fèn bāohán kèhù xìnxī de fèiqì wénjiàn xūyào fàng jìn suìzhǐjī.',
+            th: 'เอกสารที่ยกเลิกนี้มีข้อมูลลูกค้าอยู่ ต้องนำใส่เครื่องทำลายเอกสารครับ',
+            en: 'This discarded document containing client information needs to be put into the paper shredder.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '张姐，您好！我是今天刚入职的实习生小柴，请问咱们办公室的打印机在哪里？',
+          pinyin: 'Zhāng jiě, nín hǎo! Wǒ shì jīntiān gāng rùzhí de shíxíshēng Xiǎo Chái, qǐngwèn zánmen bàngōngshì de dǎyìnjī zài nǎlǐ?',
+          th: 'พี่จาง สวัสดีครับ! ผมเสี่ยวชาย เด็กฝึกงานที่เพิ่งเริ่มงานวันนี้ครับ ขอถามหน่อยเครื่องพิมพ์ของออฟฟิศเราอยู่ที่ไหนครับ?',
+          en: 'Sister Zhang, hello! I am intern Xiao Chai starting today. Where is our office printer located?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พี่จาง (เพื่อนร่วมงานอาวุโส) 👩‍💼',
+          zh: '小柴欢迎你！打印机在茶水间旁边。这台机器既能彩色打印，也能扫描和复印。',
+          pinyin: 'Xiǎo Chái huānyíng nǐ! Dǎyìnjī zài cháshuǐjiān pángbiān. Zhè tái jīqì jì néng cǎisè dǎyìn, yě néng sǎomiáo hé fùyìn.',
+          th: 'ยินดีต้อนรับเสี่ยวชาย! เครื่องพิมพ์อยู่ข้างห้องพักผ่อนดื่มน้ำจ้ะ เครื่องนี้ปริ้นต์สีได้ อีกทั้งยังสแกนและถ่ายเอกสารได้ด้วยนะ',
+          en: 'Welcome Xiao Chai! The printer is next to the pantry. This machine can print in color, and also scan and copy.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太好了！如果我想把这份纸质合同扫描成电子版发送给客户，应该怎么操作呢？',
+          pinyin: 'Tài hǎo le! Rúguǒ wǒ xiǎng bǎ zhè fèn zhǐzhì hétong sǎomiáo chéng diànzǐ bǎn fāsòng gěi kèhù, yīnggāi zěnme cāozuò ne?',
+          th: 'ดีเลยครับ! ถ้าผมต้องการสแกนสัญญาฉบับกระดาษนี้เป็นไฟล์ดิจิทัลเพื่อส่งให้ลูกค้า ควรทำอย่างไรครับ?',
+          en: 'Great! If I want to scan this paper contract into a digital file and email it to the client, how should I operate it?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พี่จาง (เพื่อนร่วมงานอาวุโส) 👩‍💼',
+          zh: '很简单：首先掀开盖板放好合同，然后输入你的员工工号，最后点击“扫描发送到邮箱”就可以了！',
+          pinyin: 'Hěn jiǎndān: Shǒuxiān xiānkāi gàibǎn fàng hǎo hétong, ránhòu shūrù nǐ de yuángōng gōnghào, zuìhòu diǎnjī "sǎomiáo fāsòng dào yóuxiāng" jiù kěyǐ le!',
+          th: 'ง่ายมากจ้ะ: อันดับแรกเปิดฝาครอบวางสัญญาให้ตรง จากนั้นกรอกรหัสพนักงานของนาย และสุดท้ายแตะ "สแกนส่งเข้าอีเมล" ก็เรียบร้อยแล้ว!',
+          en: 'Very simple: First lift the cover and place the contract, then enter your employee ID, and finally click "Scan to Email" and you are done!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อต้องการ 'สแกนเอกสารกระดาษเป็นไฟล์ PDF' ควรใช้ฟังก์ชันใด?",
+          options: [
+            '扫描 (sǎomiáo)',
+            '碎纸 (suìzhǐ)',
+            '退货 (tuìhuò)',
+            '跑步 (pǎobù)'
+          ],
+          correct_index: 0,
+          explanation_th: "'扫描' (sǎomiáo) แปลว่า สแกนเอกสาร",
+          encouragement: 'จำคำศัพท์อุปกรณ์ออฟฟิศได้แม่นยำมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '印' ในคำว่า '复印' (ถ่ายเอกสาร) มีหมวดนำใด?",
+          options: [
+            '卩 (หมวดตราประทับ 卩字旁)',
+            '氵 (หมวดน้ำ 三点水)',
+            '火 (หมวดไฟ 火字旁)',
+            '木 (หมวดไม้ 木字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'印' มาจากหมวดตราประทับ '卩' สื่อถึงการประทับตราหรือทำสำเนา",
+          encouragement: 'จำรากศัพท์หมวดตราประทับได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "อันดับแรกวางเอกสาร จากนั้นกดถ่ายเอกสาร และสุดท้ายตรวจสอบไฟล์"',
+          tokens: ['然后复印', '最后检查文件', '首先放好文件'],
+          correct_sequence: ['首先放好文件', '然后复印', '最后检查文件'],
+          pinyin: 'Shǒuxiān fàng hǎo wénjiàn, ránhòu fùyìn, zuìhòu jiǎnchá wénjiàn',
+          meaning_th: 'อันดับแรกวางเอกสาร จากนั้นกดถ่ายเอกสาร และสุดท้ายตรวจสอบไฟล์',
+          explanation_th: 'ลำดับขั้นตอน (首先...) + (然后...) + (最后...)',
+          encouragement: 'ต่อบล็อกเลโก้ลำดับขั้นตอนงานได้เป็นมืออาชีพมาก!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '碎纸机' (suìzhǐjī) มีความหมายตรงกับข้อใด?",
+          options: [
+            'เครื่องทำลายเอกสาร',
+            'เครื่องชงกาแฟ',
+            'ตู้เซฟเก็บเงินสด',
+            'โทรทัศน์ห้องประชุม'
+          ],
+          correct_index: 0,
+          explanation_th: "'碎纸机' คือ เครื่องทำลายเอกสารหรือย่อยกระดาษให้เป็นเศษชิ้นเล็กๆ",
+          encouragement: 'จำคำศัพท์สิ่งอำนวยความสะดวกในออฟฟิศได้แม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u23_l02',
+      lesson_number: 2,
+      title: {
+        zh: '邮件沟通与请假',
+        th: 'อีเมลงาน & การยื่นใบลาป่วย',
+        en: 'Business Email & Sick Leave'
+      },
+      can_do: {
+        th: 'เขียนอีเมลการทำงานที่เป็นทางการ ระบุไฟล์แนบ สำเนาถึง (CC) และเขียนคำขอลาป่วยด้วยสำนวนสุภาพ 望领导批准',
+        en: 'Draft formal workplace emails, mention attachments and CC, and write leave requests politely'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เขียนอีเมลขอลาป่วย 1 วันเนื่องจากมีไข้ แนบใบรับรองแพทย์ และ CC เพื่อนร่วมงานได้อย่างถูกต้อง!',
+      vocabulary: [
+        {
+          id: 'hsk2_2307',
+          hanzi: '发送',
+          pinyin: 'fāsòng',
+          display_pinyin: 'fāsòng',
+          pinyin_tone: 'fa1song4',
+          meaning_th: 'ส่ง (อีเมล / ข้อความ / พัสดุ)',
+          meaning_en: 'to send / to transmit',
+          radical: '又',
+          radical_name_th: 'หมวดมือขวา (又字旁)',
+          stroke_count: 14,
+          mnemonic: 'ยิงส่งพลังออกไป (发) เพื่อนำพาสารส่งตรงไปยังจุดหมาย (送) = ส่ง',
+          kid_mnemonic: 'คลิกปุ่มสีน้ำเงินรูปลูกศร ส่งอีเมลออกไปทันที = 发送',
+          body_gesture: 'ใช้นิ้วชี้คลิกอากาศเหมือนกดปุ่มส่งอีเมล'
+        },
+        {
+          id: 'hsk2_2308',
+          hanzi: '抄送',
+          pinyin: 'chāosòng',
+          display_pinyin: 'chāosòng',
+          pinyin_tone: 'chao1song4',
+          meaning_th: 'สำเนาถึง (CC ในอีเมล)',
+          meaning_en: 'to carbon copy (CC in email)',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 16,
+          mnemonic: 'คัดลอกข้อความด้วยมือ (抄) แล้วจัดส่งไปให้ผู้เกี่ยวข้องทราบพร้อมกัน (送) = สำเนาถึง (CC)',
+          kid_mnemonic: 'ใส่ที่อยู่อีเมลของหัวหน้าในช่อง CC เพื่อแจ้งให้รับรู้ = 抄送',
+          body_gesture: 'เอานิ้วสองนิ้วกางออกเหมือนคัดลอกสำเนาสองฉบับ'
+        },
+        {
+          id: 'hsk2_2309',
+          hanzi: '附件',
+          pinyin: 'fùjiàn',
+          display_pinyin: 'fùjiàn',
+          pinyin_tone: 'fu4jian4',
+          meaning_th: 'ไฟล์แนบ / เอกสารแนบท้าย',
+          meaning_en: 'attachment / enclosure',
+          radical: '阝',
+          radical_name_th: 'หมวดเนินเขาซ้าย (双耳旁)',
+          stroke_count: 13,
+          mnemonic: 'สิ่งของชิ้นย่อย (件) ที่แนบพ่วงติดไปกับตัวจดหมายหลัก (附) = ไฟล์แนบ',
+          kid_mnemonic: 'ไอคอนคลิปหนีบกระดาษ หนีบไฟล์ PDF ส่งไปด้วย = 附件',
+          body_gesture: 'ใช้นิ้วชี้และนิ้วโป้งทำท่าเหมือนคลิปหนีบกระดาษ'
+        },
+        {
+          id: 'hsk2_2310',
+          hanzi: '请假',
+          pinyin: 'qǐngjià',
+          display_pinyin: 'qǐngjià',
+          pinyin_tone: 'qing3jia4',
+          meaning_th: 'ขอลางาน / ยื่นใบลา',
+          meaning_en: 'to ask for leave / to take time off',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 20,
+          mnemonic: 'เอ่ยปากร้องขอ (请) ขอเวลาพักผ่อนในวันหยุดราชการ (假) = ขอลางาน',
+          kid_mnemonic: 'ยื่นใบลาให้คุณครูหรือหัวหน้าอย่างสุภาพ = 请假',
+          body_gesture: 'สองมือกุมเข้าหากันระดับอกโน้มตัวขออนุญาต'
+        },
+        {
+          id: 'hsk2_2311',
+          hanzi: '病假',
+          pinyin: 'bìngjià',
+          display_pinyin: 'bìngjià',
+          pinyin_tone: 'bing4jia4',
+          meaning_th: 'ลาป่วย',
+          meaning_en: 'sick leave',
+          radical: '疒',
+          radical_name_th: 'หมวดโรคภัย (病字旁)',
+          stroke_count: 20,
+          mnemonic: 'วันหยุดพักผ่อน (假) เนื่องจากอาการเจ็บป่วยทางร่างกาย (病) = ลาป่วย',
+          kid_mnemonic: 'นอนพักฟื้นบนเตียง ดื่มน้ำอุ่น หายป่วยแล้วค่อยกลับไปทำงาน = 病假',
+          body_gesture: 'เอามือข้างหนึ่งทาบหน้าผากวัดไข้'
+        },
+        {
+          id: 'hsk2_2312',
+          hanzi: '批准',
+          pinyin: 'pīzhǔn',
+          display_pinyin: 'pīzhǔn',
+          pinyin_tone: 'pi1zhun3',
+          meaning_th: 'อนุมัติ / อนุญาตอย่างเป็นทางการ',
+          meaning_en: 'to approve / approval',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'สะบัดมือจรดปากกาเซ็นชื่อ (批) ตามเกณฑ์มาตรฐานที่ถูกต้อง (准) = อนุมัติ',
+          kid_mnemonic: 'ตราประทับสีแดงปั๊มคำว่า "อนุมัติ" ผ่านฉลุย = 批准',
+          body_gesture: 'ทำท่าจรดปากกาเซ็นลายเซ็นลงบนเอกสาร'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: 请假 (qǐngjià) และ 望领导批准',
+        description_th: 'คำว่า 请 (3) + 假 (4) ไม่มีการเปลี่ยนเสียงวรรณยุกต์ ออกเสียงเป็น Half-3rd tone นุ่มนวล ชัดถ้อยชัดคำ ส่วนสำนวน 望领导批准 เป็นวลีปิดท้ายอีเมลขอลาหยุดที่สุภาพที่สุด',
+        example: '请假一天 (qǐngjià yì tiān), 望领导批准 (wàng lǐngdǎo pīzhǔn)',
+        fun_metaphor: 'ลงท้ายด้วย "望领导批准" (หวังว่าหัวหน้าจะอนุมัติ) ดูอ่อนน้อมและเปี่ยมด้วยสัมมาคารวะ!',
+        reassurance: 'คำว่า 假 ใน 请假 ออกเสียง 4 (jià) ห้ามออกเสียง 3 (jiǎ ที่แปลว่าของปลอม)'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้โครงสร้างอีเมลทางการ: 关于...的请假申请',
+        explanation_th: 'ใช้ตั้งหัวข้ออีเมล (Subject) และโครงสร้างเนื้อความเพื่อขออนุมัติลางานอย่างเป็นมืออาชีพ',
+        patterns: [
+          {
+            formula: '关于 + [ชื่อ/ตำแหน่ง] + [ประเภทการลา] + 的申请',
+            zh: '关于实习生小柴申请病假一天的邮件。',
+            pinyin: 'Guānyú shíxíshēng Xiǎo Chái shēnqǐng bìngjià yì tiān de yóujiàn.',
+            th: 'อีเมลเกี่ยวกับคำขอลาป่วย 1 วันของเด็กฝึกงานเสี่ยวชายครับ',
+            en: 'Email regarding one-day sick leave application from intern Xiao Chai.'
+          },
+          {
+            formula: '医院的假条 + 已在附件中上传 + 望领导批准',
+            zh: '医院诊断证明已在附件中上传，望领导批准。',
+            pinyin: 'Yīyuàn zhěnduàn zhèngmíng yǐ zài fùjiàn zhōng shàngchuán, wàng lǐngdǎo pīzhǔn.',
+            th: 'ใบรับรองแพทย์จากโรงพยาบาลแนบไว้ในไฟล์แนบแล้ว หวังว่าหัวหน้าจะอนุมัติครับ',
+            en: 'Hospital medical certificate is attached, looking forward to leadership approval.'
+          },
+          {
+            formula: '我已将今天紧急的工作 + 抄送并交接给 + [ชื่อเพื่อนร่วมงาน]',
+            zh: '我已将今天的紧急工作抄送并交接给李明。',
+            pinyin: 'Wǒ yǐ jiāng jīntiān de jǐnjí gōngzuò chāosòng bìng jiāojiē gěi Lǐ Míng.',
+            th: 'ผมได้สำเนาและส่งมอบงานด่วนของวันนี้ให้หลี่หมิงเรียบร้อยแล้วครับ',
+            en: 'I have CCed and handed over today urgent work to Li Ming.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '王经理您好！我昨晚突发高烧三十八度五，今天实在无法坚持去办公室上班，特向您请病假一天。',
+          pinyin: 'Wáng jīnglǐ nín hǎo! Wǒ zuówǎn tūfā gāoshāo sānshí-bā dù wǔ, jīntiān shízài wúfǎ jiānchí qù bàngōngshì shàngbān, tè xiàng nín qǐng bìngjià yì tiān.',
+          th: 'ผู้จัดการหวัง สวัสดีครับ! เมื่อคืนผมมีไข้สูงกะทันหัน 38.5 องศา วันนี้ไม่สามารถฝืนไปทำงานที่ออฟฟิศได้ จึงขออนุญาตลาป่วย 1 วันครับ',
+          en: 'Hello Manager Wang! I suddenly developed a 38.5C fever last night and truly cannot make it to work today. I would like to request one day of sick leave.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหวัง 👨‍💼',
+          zh: '小柴，身体第一！你先去医院看病好好休息，别担心工作。',
+          pinyin: 'Xiǎo Chái, shēntǐ dì-yī! Nǐ xiān qù yīyuàn kànbìng hǎohāo xiūxi, bié dānxīn gōngzuò.',
+          th: 'เสี่ยวชาย ร่างกายต้องมาก่อนเป็นอันดับแรก! นายรีบไปหาหมอที่โรงพยาบาลแล้วพักผ่อนให้เต็มที่นะ ไม่ต้องกังวลเรื่องงาน',
+          en: 'Xiao Chai, health comes first! Go see a doctor at the hospital and rest well, do not worry about work.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '谢谢经理关心！我已经在钉钉系统提交了请假申请，并把医院的病假单放在邮件附件中抄送给您了。',
+          pinyin: 'Xièxie jīnglǐ guānxīn! Wǒ yǐjīng zài Dīngdīng xìtǒng tíjiāo le qǐngjià shēnqǐng, bìng bǎ yīyuàn de bìngjiàdān fàng zài yóujiàn fùjiàn zhōng chāosòng gěi nín le.',
+          th: 'ขอบคุณผู้จัดการที่ห่วงใยครับ! ผมยื่นคำขอลาในระบบ DingTalk แล้ว และแนบใบรับรองแพทย์ไว้ในไฟล์แนบอีเมลพร้อม CC ถึงผู้จัดการแล้วครับ',
+          en: 'Thank you for your concern, Manager! I submitted the leave application in the DingTalk system, and attached the hospital sick slip in an email CCed to you.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหวัง 👨‍💼',
+          zh: '好的，我已经点击批准了。今天交接给李明处理就行，祝你早日康复！',
+          pinyin: 'Hǎo de, wǒ yǐjīng diǎnjī pīzhǔn le. Jīntiān jiāojiē gěi Lǐ Míng chǔlǐ jiù xíng, zhù nǐ zǎorì kāngfù!',
+          th: 'โอเคจ้ะ ฉันกดอนุมัติให้เรียบร้อยแล้ว วันนี้ส่งมอบงานให้หลี่หมิงช่วยจัดการได้เลย ขอให้หายป่วยไวๆ นะ!',
+          en: 'Alright, I have already clicked approve. Handing over to Li Ming for today is fine, wish you a speedy recovery!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อต้องการบอกว่า 'ยื่นใบลาป่วย' ภาษาจีนใช้คำว่าอะไร?",
+          options: [
+            '请病假 (qǐng bìngjià)',
+            '买车票 (mǎi chēpiào)',
+            '发快递 (fā kuàidì)',
+            '点外卖 (diǎn wàimài)'
+          ],
+          correct_index: 0,
+          explanation_th: "'请病假' (qǐng bìngjià) แปลว่า ลาป่วย / ยื่นใบลาป่วย",
+          encouragement: 'จำคำศัพท์การลางานได้ถูกต้องแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '病' ในคำว่า '病假' (ลาป่วย) มีหมวดนำใด?",
+          options: [
+            '疒 (หมวดโรคภัย 病字旁)',
+            '讠 (หมวดคำพูด 言字旁)',
+            '扌 (หมวดมือ 提手旁)',
+            '亻 (หมวดคน 单人旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'病' มีหมวดนำ '疒' สื่อถึงอาการเจ็บป่วยหรือโรคภัยไข้เจ็บ",
+          encouragement: 'จำรากศัพท์หมวดโรคภัย 疒 ได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ใบรับรองแพทย์ได้แนบไว้ในไฟล์แนบแล้ว หวังว่าหัวหน้าจะอนุมัติ"',
+          tokens: ['望领导批准', '病假证明已在附件中'],
+          correct_sequence: ['病假证明已在附件中', '望领导批准'],
+          pinyin: 'Bìngjià zhèngmíng yǐ zài fùjiàn zhōng, wàng lǐngdǎo pīzhǔn',
+          meaning_th: 'ใบรับรองแพทย์ได้แนบไว้ในไฟล์แนบแล้ว หวังว่าหัวหน้าจะอนุมัติ',
+          explanation_th: 'หลักฐานแนบ (病假证明已在附件中) + สำนวนสุภาพปิดท้าย (望领导批准)',
+          encouragement: 'ต่อบล็อกสำนวนอีเมลทางการจีนได้เป๊ะสุดๆ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '抄送' (chāosòng) ในการส่งอีเมลหมายถึงอะไร?",
+          options: [
+            'สำเนาถึง (CC)',
+            'ลบอีเมลทิ้ง',
+            'ตั้งเวลาส่งล่วงหน้า',
+            'แนบไฟล์เสียง'
+          ],
+          correct_index: 0,
+          explanation_th: "'抄送' (chāosòng) คือ ฟังก์ชัน CC (Carbon Copy) หรือส่งสำเนาให้ผู้อื่นทราบ",
+          encouragement: 'เข้าใจคำศัพท์การสื่อสารทางธุรกิจได้อย่างถูกต้อง!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u23_l03',
+      lesson_number: 3,
+      title: {
+        zh: '跨部门协作与会议',
+        th: 'การทำงานข้ามแผนก & การประชุม',
+        en: 'Cross-team Meetings & Deadlines'
+      },
+      can_do: {
+        th: 'ประสานงานข้ามแผนก นัดหมายการประชุม ยืนยันกำหนดส่งงาน และใช้โครงสร้าง 保证按时交付',
+        en: 'Collaborate across departments, schedule meetings, confirm deadlines, and commit to on-time delivery'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นัดประชุมออนไลน์กับแผนกโปรดักต์ ยืนยันความต้องการของลูกค้า และรับรองว่าจะส่งมอบงานตรงเวลา 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_2313',
+          hanzi: '开会',
+          pinyin: 'kāihuì',
+          display_pinyin: 'kāihuì',
+          pinyin_tone: 'kai1hui4',
+          meaning_th: 'เปิดประชุม / เข้าประชุม',
+          meaning_en: 'to hold or attend a meeting',
+          radical: '门',
+          radical_name_th: 'หมวดประตู (门字框)',
+          stroke_count: 10,
+          mnemonic: 'เปิดประตูห้องประชุม (开) เพื่อให้ทุกคนมารวมตัวปรึกษาหารือ (会) = ประชุม',
+          kid_mnemonic: 'ทุกคนนั่งล้อมโต๊ะกลม เปิดสไลด์เริ่มประชุม = 开会',
+          body_gesture: 'กางสองมือออกระดับอกเหมือนเปิดเริ่มการประชุม'
+        },
+        {
+          id: 'hsk2_2314',
+          hanzi: '沟通',
+          pinyin: 'gōutōng',
+          display_pinyin: 'gōutōng',
+          pinyin_tone: 'gou1tong1',
+          meaning_th: 'สื่อสาร / ประสานงานพูดคุย',
+          meaning_en: 'to communicate / communication',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 22,
+          mnemonic: 'ขุดคูน้ำเชื่อมต่อกัน (沟) เพื่อให้น้ำไหลเวียนทะลุผ่านได้สะดวก (通) = สื่อสารประสานงาน',
+          kid_mnemonic: 'ต่อสายคุยโทรศัพท์ แลกเปลี่ยนข้อมูลจนเข้าใจตรงกัน = 沟通',
+          body_gesture: 'ชูมือข้างหูทำท่าโทรศัพท์แล้วพยักหน้าเข้าใจ'
+        },
+        {
+          id: 'hsk2_2315',
+          hanzi: '确认',
+          pinyin: 'quèrèn',
+          display_pinyin: 'quèrèn',
+          pinyin_tone: 'que4ren4',
+          meaning_th: 'ยืนยัน / คอนเฟิร์มความถูกต้อง',
+          meaning_en: 'to confirm / confirmation',
+          radical: '石',
+          radical_name_th: 'หมวดหิน (石字旁)',
+          stroke_count: 19,
+          mnemonic: 'ตรวจสอบให้มั่นคงดั่งหินผา (确) และจดจำยอมรับข้อเท็จจริง (认) = ยืนยัน / คอนเฟิร์ม',
+          kid_mnemonic: 'ทำเครื่องหมายถูกสีเขียว กดยืนยันความถูกต้อง = 确认',
+          body_gesture: 'พยักหน้าหนักแน่นพร้อมทำนิ้วชี้ตกลง'
+        },
+        {
+          id: 'hsk2_2316',
+          hanzi: '按时',
+          pinyin: 'ànshí',
+          display_pinyin: 'ànshí',
+          pinyin_tone: 'an4shi2',
+          meaning_th: 'ตรงต่อเวลา / ตามกำหนดเวลา',
+          meaning_en: 'on time / on schedule',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 13,
+          mnemonic: 'กดตามเข็มนาฬิกา (按) ไม่ให้คลาดเคลื่อนจากเวลาที่ตกลงไว้ (时) = ตรงเวลา',
+          kid_mnemonic: 'ส่งการบ้านก่อนระฆังดัง เป๊ะตามเวลา = 按时',
+          body_gesture: 'ชี้นิ้วเคาะที่หน้าปัดนาฬิกาข้อมือแสดงความตรงต่อเวลา'
+        },
+        {
+          id: 'hsk2_2317',
+          hanzi: '交付',
+          pinyin: 'jiāofù',
+          display_pinyin: 'jiāofù',
+          pinyin_tone: 'jiao1fu4',
+          meaning_th: 'ส่งมอบ (ชิ้นงาน / โปรเจกต์)',
+          meaning_en: 'to deliver / delivery (of projects/goods)',
+          radical: '亠',
+          radical_name_th: 'หมวดหัวหมวก (文字头)',
+          stroke_count: 11,
+          mnemonic: 'แลกเปลี่ยนส่งต่อ (交) มอบหมายให้แก่ผู้รับ (付) = ส่งมอบงาน',
+          kid_mnemonic: 'ส่งมอบชิ้นงานสำเร็จรูปให้ลูกค้าตรวจรับ = 交付',
+          body_gesture: 'ยื่นสองมือส่งมอบสิ่งของไปข้างหน้าอย่างภาคภูมิใจ'
+        },
+        {
+          id: 'hsk2_2318',
+          hanzi: '项目',
+          pinyin: 'xiàngmù',
+          display_pinyin: 'xiàngmù',
+          pinyin_tone: 'xiang4mu4',
+          meaning_th: 'โครงการ / โปรเจกต์',
+          meaning_en: 'project / program',
+          radical: '页',
+          radical_name_th: 'หมวดใบหน้า (页字旁)',
+          stroke_count: 17,
+          mnemonic: 'หัวข้อแผนงานหลัก (项) แบ่งเป็นรายการย่อยๆ ตามเป้าหมาย (目) = โครงการ / โปรเจกต์',
+          kid_mnemonic: 'กระดานโปรเจกต์ มีแผนงานและเส้นตายกำหนดชัดเจน = 项目',
+          body_gesture: 'วาดสี่เหลี่ยมในอากาศแทนกระดานโปรเจกต์'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์ยืนยันความมั่นใจ: 保证按时交付 (bǎozhèng ànshí jiāofù)',
+        description_th: 'คำว่า 保证 (3+4) ตามด้วย 按时 (4+2) และ 交付 (1+4) เป็นกลุ่มคำมาตรฐานระดับมืออาชีพในการให้คำมั่นสัญญาต่อลูกค้าและหัวหน้างาน',
+        example: '我们保证按时交付这个项目 (Wǒmen bǎozhèng ànshí jiāofù zhège xiàngmù)',
+        fun_metaphor: 'คำมั่นสัญญาที่ทรงพลังที่สุดในโลกธุรกิจคือ "ส่งงานตรงเวลาและเปี่ยมคุณภาพ"!',
+        reassurance: 'เมื่อประสานงานข้ามแผนก การพูด 确认一下 จะช่วยลดความเข้าใจผิดได้ 100%'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้การประสานงาน: 跟...确认一下 / 保证按时...',
+        explanation_th: 'ใช้เพื่อขอตรวจสอบความต้องการให้ตรงกัน และให้คำมั่นสัญญากับทีมงาน',
+        patterns: [
+          {
+            formula: '开会前我需要跟产品部门 + 沟通并确认 + [หัวข้อ]',
+            zh: '开会前我需要跟产品部门沟通并确认需求细节。',
+            pinyin: 'Kāihuì qián wǒ xūyào gēn chǎnpǐn bùmén gōutōng bìng quèrèn xūqiú xìjié.',
+            th: 'ก่อนประชุมผมจำเป็นต้องสื่อสารและยืนยันรายละเอียดความต้องการกับแผนกโปรดักต์ครับ',
+            en: 'Before the meeting, I need to communicate and confirm requirement details with the product department.'
+          },
+          {
+            formula: '我们团队保证 + 按时交付 + 这个项目',
+            zh: '请大家放心，我们团队保证按时交付这个重要项目。',
+            pinyin: 'Qǐng dàjiā fàngxīn, wǒmen tuánduì bǎozhèng ànshí jiāofù zhège zhòngyào xiàngmù.',
+            th: 'ขอให้ทุกคนวางใจ ทีมของพวกเรารับรองว่าจะส่งมอบโปรเจกต์สำคัญนี้ตรงเวลาครับ',
+            en: 'Please rest assured, our team guarantees on-time delivery of this important project.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิวหมิ่น (ผู้จัดการโปรเจกต์) 👩‍💼',
+          zh: '小柴，下周五是泰国电商项目的交付截止日期，你们团队目前进展顺利吗？',
+          pinyin: 'Xiǎo Chái, xià zhōuwǔ shì Tàiguó diànshāng xiàngmù de jiāofù jiézhǐ rìqī, nǐmen tuánduì mùqián jìnzhǎn shùnlì ma?',
+          th: 'เสี่ยวชาย วันศุกร์หน้าเป็นวันครบกำหนดส่งมอบโปรเจกต์อีคอมเมิร์ซไทย ตอนนี้ทีมของพวกนายคืบหน้าราบรื่นดีไหม?',
+          en: 'Xiao Chai, next Friday is the delivery deadline for the Thai e-commerce project, is your team progressing smoothly?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '刘经理，目前核心模块已经开发完成。明天上午十点我们打算跟技术部门开会，确认接口细节。',
+          pinyin: 'Liú jīnglǐ, mùqián héxīn mókuài yǐjīng kāifā wánchéng. Míngtiān shàngwǔ shí diǎn wǒmen dǎsuàn gēn jìshù bùmén kāihuì, quèrèn jiēkǒu xìjié.',
+          th: 'ผู้จัดการหลิว ตอนนี้โมดูลหลักพัฒนาเสร็จเรียบร้อยแล้วครับ พรุ่งนี้สิบโมงเช้าพวกเราวางแผนจะประชุมกับแผนกไอทีเพื่อยืนยันรายละเอียด API ครับ',
+          en: 'Manager Liu, the core modules are completed. Tomorrow at 10 AM we plan to meet with tech team to confirm API details.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิวหมิ่น (ผู้จัดการโปรเจกต์) 👩‍💼',
+          zh: '很好！跨部门沟通一定要及时，遇到问题随时跟我汇报。',
+          pinyin: 'Hěn hǎo! Kuà bùmén gōutōng yídìng yào jíshí, yùdào wèntí suíshí gēn wǒ huìbào.',
+          th: 'ดีมาก! การสื่อสารข้ามแผนกต้องรวดเร็วทันท่วงทีเสมอ หากพบปัญหาให้รายงานฉันได้ตลอดเวลานะ',
+          en: 'Great! Cross-department communication must be timely. Report to me whenever you encounter issues.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '明白！请经理放心，我们一定通力合作，保证下周五按时高质量交付！',
+          pinyin: 'Míngbai! Qǐng jīnglǐ fàngxīn, wǒmen yídìng tōnglì hézuò, bǎozhèng xià zhōuwǔ ànshí gāo zhìliàng jiāofù!',
+          th: 'เข้าใจแล้วครับ! ขอให้ผู้จัดการวางใจ พวกเราจะร่วมแรงร่วมใจกัน รับรองว่าจะส่งมอบงานอย่างมีคุณภาพตรงเวลาวันศุกร์หน้าแน่นอนครับ!',
+          en: 'Understood! Please rest assured, we will work together closely to guarantee on-time, high-quality delivery next Friday!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "วลี '按时交付' (ànshí jiāofù) ในการทำงานหมายถึงอะไร?",
+          options: [
+            'ส่งมอบงานตรงตามกำหนดเวลา',
+            'ยกเลิกโครงการกะทันหัน',
+            'ขอเบิกงบประมาณเพิ่ม',
+            'ลาพักร้อนยาว'
+          ],
+          correct_index: 0,
+          explanation_th: "'按时' (ตรงเวลา) + '交付' (ส่งมอบ) แปลว่า ส่งมอบงานตรงตามกำหนดเวลา",
+          encouragement: 'จำศัพท์สัญญาการทำงานได้ยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '交' ในคำว่า '交付' (ส่งมอบ) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'การแลกเปลี่ยน / การส่งต่อ',
+            'การต่อสู้รุนแรง',
+            'การล่องเรือในทะเล',
+            'การเพาะปลูกข้าว'
+          ],
+          correct_index: 0,
+          explanation_th: "'交' บ่งบอกถึงการแลกเปลี่ยน เชื่อมต่อ หรือส่งมอบสิ่งของระหว่างกัน",
+          encouragement: 'จำความหมายรากศัพท์ 交 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ทีมของพวกเรารับรองว่าจะส่งมอบโปรเจกต์ตรงเวลา"',
+          tokens: ['保证按时交付项目', '我们团队'],
+          correct_sequence: ['我们团队', '保证按时交付项目'],
+          pinyin: 'Wǒmen tuánduì bǎozhèng ànshí jiāofù xiàngmù',
+          meaning_th: 'ทีมของพวกเรารับรองว่าจะส่งมอบโปรเจกต์ตรงเวลา',
+          explanation_th: 'ประธาน (我们团队) + คำมั่นสัญญา (保证按时交付项目)',
+          encouragement: 'ต่อบล็อกประโยคความมั่นใจทางธุรกิจได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '沟通' (gōutōng) มีความหมายตรงกับข้อใด?",
+          options: [
+            'สื่อสาร / ประสานงานพูดคุย',
+            'ทำความสะอาดโต๊ะ',
+            'รับประทานอาหารเที่ยง',
+            'บันทึกบัญชีการเงิน'
+          ],
+          correct_index: 0,
+          explanation_th: "'沟通' แปลว่า สื่อสาร หรือประสานงานพูดคุยแลกเปลี่ยน",
+          encouragement: 'จำศัพท์ทักษะการทำงานยอดนิยมได้อย่างยอดเยี่ยม!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u23_l04',
+      lesson_number: 4,
+      title: {
+        zh: '突发病假与工作交接',
+        th: 'ลาป่วยด่วน & ส่งมอบงาน',
+        en: 'Sudden Sick Leave & Handover Boss Challenge'
+      },
+      can_do: {
+        th: 'สื่อสารการขอลาป่วยฉุกเฉิน ยื่นใบรับรองแพทย์ ส่งมอบงานด่วนให้เพื่อนร่วมงาน และผ่านด่าน Boss Challenge ออฟฟิศจีน',
+        en: 'Communicate sudden sick leave, submit medical certificates, hand over urgent tasks, and conquer the Office Boss Challenge'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิต Boss Challenge เขียนอีเมลและข้อความขอลาป่วยด่วน ส่งต่องานสัญญาด่วนให้เพื่อนร่วมงานได้ 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_2319',
+          hanzi: '交接',
+          pinyin: 'jiāojiē',
+          display_pinyin: 'jiāojiē',
+          pinyin_tone: 'jiao1jie1',
+          meaning_th: 'ส่งมอบงาน / ส่งต่องานให้ผู้อื่นทำแทน',
+          meaning_en: 'to hand over (work/duties)',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'ยื่นส่งงานออกไป (交) และอีกฝ่ายยื่นมือเข้ามารองรับเชื่อมต่อ (接) = ส่งมอบงาน',
+          kid_mnemonic: 'ส่งไม้ผลัดวิ่งแข่ง อีกคนรับไม้แล้ววิ่งต่ออย่างราบรื่น = 交接',
+          body_gesture: 'ยื่นสองมือส่งแฟ้มงานให้อีกคนรับต่อ'
+        },
+        {
+          id: 'hsk2_2320',
+          hanzi: '证明',
+          pinyin: 'zhèngmíng',
+          display_pinyin: 'zhèngmíng',
+          pinyin_tone: 'zheng4ming2',
+          meaning_th: 'ใบรับรอง / หลักฐานยืนยัน',
+          meaning_en: 'certificate / proof / to prove',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 18,
+          mnemonic: 'เอ่ยถ้อยคำข้อเท็จจริง (证) ชี้แจงให้เห็นกระจ่างแจ้ง (明) = ใบรับรอง / หลักฐาน',
+          kid_mnemonic: 'กระดาษมีตราประทับสีแดงจากแพทย์ยืนยันว่าป่วยจริง = 证明',
+          body_gesture: 'ชูแผ่นกระดาษใบรับรองขึ้นมาแสดง'
+        },
+        {
+          id: 'hsk2_2321',
+          hanzi: '耽误',
+          pinyin: 'dānwu',
+          display_pinyin: 'dānwu',
+          pinyin_tone: 'dan1wu5',
+          meaning_th: 'ทำให้ล่าช้า / เสียการเสียงาน',
+          meaning_en: 'to delay / to hold up / to waste time',
+          radical: '耳',
+          radical_name_th: 'หมวดใบหู (耳字旁)',
+          stroke_count: 18,
+          mnemonic: 'มัวแต่ปล่อยเวลาล่วงเลย (耽) จนเกิดความผิดพลาดคลาดเคลื่อน (误) = ทำให้งานล่าช้า',
+          kid_mnemonic: 'รถติดจนไปสาย งานสะดุด ทำหน้ากังวลใจ = 耽误',
+          body_gesture: 'ขมวดคิ้วส่ายหน้าพร้อมยกมือขออภัย'
+        },
+        {
+          id: 'hsk2_2322',
+          hanzi: '抱歉',
+          pinyin: 'bàoqiàn',
+          display_pinyin: 'bàoqiàn',
+          pinyin_tone: 'bao4qian4',
+          meaning_th: 'ขออภัย / รู้สึกผิดจากใจจริง',
+          meaning_en: 'to feel sorry / apologize',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 18,
+          mnemonic: 'โอบกอดความรู้สึกผิดไว้ในใจ (抱) เมื่อรู้สึกบกพร่องติดค้างผู้อื่น (歉) = ขออภัยอย่างยิ่ง',
+          kid_mnemonic: 'ก้มหัวโค้งคำนับเล็กน้อย พูด "ขอโทษที่ทำให้เดือดร้อนนะครับ" = 抱歉',
+          body_gesture: 'สองมือกุมแนบอกแล้วค้อมศีรษะขออภัย'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'คำสุภาพทางธุรกิจ: 抱歉耽误大家 (bàoqiàn dānwu dàjiā)',
+        description_th: 'คำว่า 耽误 (dānwu) คำว่า 误 ออกเสียงเบา ใช้ในประโยคแสดงความเกรงใจเมื่อต้องลางานกะทันหัน เช่น 抱歉耽误大家工作了',
+        example: '非常抱歉耽误大家的进度 (Fēicháng bàoqiàn dānwu dàjiā de jìndù)',
+        fun_metaphor: 'เมื่อเราพูดขอโทษอย่างจริงใจและจัดเตรียมคนรับงานต่อ ทุกคนจะพร้อมช่วยเหลือและเห็นใจเราทันที!',
+        reassurance: 'นี่คือมารยาทสากลของคนทำงานในบริษัทชั้นนำของจีน'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้การส่งมอบงานด่วน: 很抱歉...已交接给...不会耽误进度',
+        explanation_th: 'โครงสร้าง 3 สเต็ป: 1. ขอโทษที่กระทบงาน 2. ระบุผู้รับมอบงานแทน 3. ยืนยันว่างานจะไม่สะดุด',
+        patterns: [
+          {
+            formula: '很抱歉耽误大家 + 今日紧急工作 + 已交接给 + [ชื่อเพื่อนร่วมงาน]',
+            zh: '很抱歉耽误大家的工作，今日紧急事项已交接给李明处理。',
+            pinyin: 'Hěn bàoqiàn dānwu dàjiā de gōngzuò, jīnrì jǐnjí shìxiàng yǐ jiāojiē gěi Lǐ Míng chǔlǐ.',
+            th: 'ขออภัยอย่างยิ่งที่ทำให้งานทุกคนล่าช้า เรื่องด่วนวันนี้ได้ส่งมอบให้หลี่หมิงช่วยดูแลแล้วครับ',
+            en: 'Very sorry for holding up everyone work, today urgent matters have been handed over to Li Ming.'
+          },
+          {
+            formula: '医院的假条和证明 + 已上传至系统 + 望领导批准',
+            zh: '医院开具的诊断证明已上传至钉钉，望领导批准病假。',
+            pinyin: 'Yīyuàn kāijù de zhěnduàn zhèngmíng yǐ shàngchuán zhì Dīngdīng, wàng lǐngdǎo pīzhǔn bìngjià.',
+            th: 'ใบรับรองแพทย์จากโรงพยาบาลอัปโหลดขึ้นระบบ DingTalk แล้ว หวังว่าหัวหน้าจะอนุมัติการลาป่วยครับ',
+            en: 'The diagnosis certificate issued by the hospital has been uploaded to DingTalk, requesting approval for sick leave.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '李明，真是不好意思！我今天急性肠胃炎发烧，必须去医院输液，能麻烦你帮我交接一下今天下午和客户的对接吗？',
+          pinyin: 'Lǐ Míng, zhēn shì bù hǎoyìsi! Wǒ jīntiān jíxìng chángwèiyán fāshāo, bìxū qù yīyuàn shūyè, néng máfan nǐ bāng wǒ jiāojiē yíxià jīntiān xiàwǔ hé kèhù de duìjiē ma?',
+          th: 'หลี่หมิง เกรงใจนายจริงๆ เลย! วันนี้ฉันลำไส้อักเสบเฉียบพลันและเป็นไข้ ต้องไปโรงพยาบาลให้น้ำเกลือ รบกวนนายช่วยรับส่งต่องานประสานกับลูกค้าบ่ายนี้หน่อยได้ไหม?',
+          en: 'Li Ming, I am really sorry! Today I have acute gastroenteritis and fever, need an IV at the hospital. Could you please help cover my client coordination this afternoon?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '天哪小柴，身体要紧！没问题，客户资料和合同方案你发我邮箱就行，我全权帮你对接，绝不耽误进度！',
+          pinyin: 'Tiān na Xiǎo Chái, shēntǐ yàojǐn! Méi wèntí, kèhù zīliào hé hétong fāng\'àn nǐ fā wǒ yóuxiāng jiù xíng, wǒ quánquán bāng nǐ duìjiē, jué bù dānwu jìndù!',
+          th: 'คุณพระช่วยเสี่ยวชาย สุขภาพสำคัญที่สุด! ไม่มีปัญหาเลย ข้อมูลลูกค้าและแบบร่างสัญญาเพียงนายส่งเข้าอีเมลฉัน ฉันจะช่วยประสานให้เต็มที่ ไม่กระทบความคืบหน้าแน่นอน!',
+          en: 'Oh my Xiao Chai, health is what matters! No problem at all, just email me the client info and contract proposal. I will handle it all, won\'t delay progress!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太感谢你了！文件都在附件中，领导那边我也抄送并批准了。改天我请你吃大餐！',
+          pinyin: 'Tài gǎnxiè nǐ le! Wénjiàn dōu zài fùjiàn zhōng, lǐngdǎo nàbiān wǒ yě chāosòng bìng pīzhǔn le. Gǎitiān wǒ qǐng nǐ chī dàcān!',
+          th: 'ขอบคุณนายมากๆ เลยนะ! ไฟล์ทั้งหมดอยู่ในไฟล์แนบแล้ว ทางหัวหน้าฉันก็ CC และได้รับอนุมัติเรียบร้อยแล้ว ไว้วันหลังฉันเลี้ยงข้าวชุดใหญ่นายนะ!',
+          en: 'Thank you so much! All files are attached, and I also CCed the manager who approved it. I will treat you to a big meal another day!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '小事一桩，快去安心看病吧，祝你早日恢复健康！',
+          pinyin: 'Xiǎoshì yì zhuāng, kuài qù ānxīn kànbìng ba, zhù nǐ zǎorì huìfù jiànkāng!',
+          th: 'เรื่องเล็กน้อยน่า รีบไปหาหมอให้สบายใจเถอะ ขอให้นายฟื้นตัวกลับมาแข็งแรงไวๆ นะ!',
+          en: 'It is a small thing, hurry and see the doctor with peace of mind. Wish you a quick recovery!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'meaning_match',
+          question_th: "เมื่อต้องการ 'ส่งต่องานในความรับผิดชอบให้ผู้อื่นทำแทนระหว่างไม่อยู่' ภาษาจีนเรียกว่าอะไร?",
+          options: [
+            '工作交接 (gōngzuò jiāojiē)',
+            '打车回家 (dǎchē huíjiā)',
+            '退还差价 (tuìhuán chājià)',
+            '预约门票 (yùyuē ménpiào)'
+          ],
+          correct_index: 0,
+          explanation_th: "'工作交接' (gōngzuò jiāojiē) แปลว่า การส่งมอบงานหรือส่งต่องานให้เพื่อนร่วมงาน",
+          encouragement: 'เข้าใจคำศัพท์กระบวนการทำงานระดับสากล!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '接' ในคำว่า '交接' (ส่งต่องาน) มีหมวดนำใด?",
+          options: [
+            '扌 (หมวดมือ 提手旁)',
+            '口 (หมวดปาก 口字旁)',
+            '足 (หมวดเท้า 足字旁)',
+            '目 (หมวดตา 目字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'接' ใช้หมวดนำมือ '扌' สื่อถึงการยื่นมือออกไปรับสิ่งของหรือภาระหน้าที่",
+          encouragement: 'จำรากศัพท์หมวดมือ 扌 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เรื่องด่วนวันนี้ได้ส่งมอบให้หลี่หมิงช่วยดูแลแล้ว"',
+          tokens: ['已交接给李明处理', '今日紧急事项'],
+          correct_sequence: ['今日紧急事项', '已交接给李明处理'],
+          pinyin: 'Jīnrì jǐnjí shìxiàng yǐ jiāojiē gěi Lǐ Míng chǔlǐ',
+          meaning_th: 'เรื่องด่วนวันนี้ได้ส่งมอบให้หลี่หมิงช่วยดูแลแล้ว',
+          explanation_th: 'หัวข้องาน (今日紧急事项) + ผลการส่งมอบ (已交接给李明处理)',
+          encouragement: 'ต่อบล็อกประโยคส่งมอบงานได้อย่างมืออาชีพ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '耽误' (dānwu) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ทำให้ล่าช้า / เสียการเสียงาน',
+            'สั่งอาหารมื้อค่ำ',
+            'ออกกำลังกายสม่ำเสมอ',
+            'ช็อปปิ้งลดราคา'
+          ],
+          correct_index: 0,
+          explanation_th: "'耽误' แปลว่า ทำให้ล่าช้า หรือส่งผลกระทบต่อกำหนดการของผู้อื่น",
+          encouragement: 'จำศัพท์ความหมายเฉพาะทางในที่ทำงานได้อย่างยอดเยี่ยม!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณทำงานในบริษัทร่วมทุนที่ปักกิ่ง เช้าวันนี้คุณมีอาการไข้ขึ้นสูงและท้องเสียเฉียบพลันจากอาหารเป็นพิษ คุณจำเป็นต้องไปโรงพยาบาลและขอลางานกะทันหัน 1 วัน แต่บ่ายวันนี้มีนัดเซ็นสัญญากับลูกค้ารายสำคัญ คุณเขียนอีเมลถึงผู้จัดการแผนก (王经理) แนบใบรับรองแพทย์ (诊断证明) พร้อมทั้งสำเนาถึงหลี่หมิง (李明) ซึ่งเป็นเพื่อนร่วมงานที่ตกลงจะช่วยรับมอบงาน (交接) ไปประสานต่อเพื่อไม่ให้งานล่าช้า คุณควรเขียนแจ้งอย่างไร?',
+        options: [
+          '王经理您好！我今天突发急性肠胃炎，特向您请病假一天，医院证明已在附件中上传。今日紧急的客户签约已交接给李明协助处理并抄送给他，绝不耽误项目进度，望领导批准！ (Wáng jīnglǐ nín hǎo! Wǒ jīntiān tūfā jíxìng chángwèiyán, tè xiàng nín qǐng bìngjià yì tiān, yīyuàn zhèngmíng yǐ zài fùjiàn zhōng shàngchuán. Jīnrì jǐnjí de kèhù qiānyuē yǐ jiāojiē gěi Lǐ Míng xiézhù chǔlǐ bìng chāosòng gěi tā, jué bù dānwu xiàngmù jìndù, wàng lǐngdǎo pīzhǔn!)',
+          '经理，我今天不想起床，我不去了，你们自己开会吧！ (Jīnglǐ, wǒ jīntiān bù xiǎng qǐchuáng, wǒ bú qù le, nǐmen zìjǐ kāihuì ba!)',
+          '服务员，买单！发票抬头写我们公司的名字，可以微信支付吗？ (Fúwùyuán, mǎidān! Fāpiào táitóu xiě wǒmen gōngsī de míngzi, kěyǐ Wēixìn zhīfù ma?)',
+          '司机师傅，去首都机场二号航站楼，请把空调开大一点儿！ (Sījī shīfu, qù Shǒudū jīchǎng èr hào hángzhànlóu, qǐng bǎ kōngtiáo kāi dà yìdiǎnr!)'
+        ],
+        correct_index: 0,
+        explanation_th: "ตัวเลือกแรกสมบูรณ์แบบตามมาตรฐานมารยาทออฟฟิศจีน: ทักทายผู้จัดการสุภาพ แจ้งสาเหตุอาการป่วย (急性肠胃炎) ขอลาป่วย 1 วัน ยื่นหลักฐานใบรับรองแพทย์ในไฟล์แนบ (医院证明已在附件中上传) ส่งต่องานและสำเนาให้หลี่หมิง (交接给李明协助处理并抄送) ยืนยันว่าไม่กระทบความคืบหน้า (绝不耽误项目进度) และลงท้ายด้วยคำขออนุมัติสุภาพ (望领导批准)",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่านด่าน Boss Challenge การทำงานในออฟฟิศจีน สื่อสารอย่างมืออาชีพและจัดการส่งมอบงานได้อย่างไร้ที่ติ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u23_master',
+        badge_name: 'มือโปรการทำงานและสื่อสารในออฟฟิศจีน 💼💻📧',
+        message_th: 'ยอดเยี่ยมมาก! คุณสำเร็จ Unit 23 แล้ว พร้อมทำงานในออฟฟิศจีน ปริ้นต์งาน สแกนเอกสาร เขียนอีเมลทางการ และจัดการเรื่องงานได้อย่างมืออาชีพ!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

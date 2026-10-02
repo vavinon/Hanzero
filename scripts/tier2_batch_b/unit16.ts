@@ -1,0 +1,900 @@
+/**
+ * scripts/tier2_batch_b/unit16.ts
+ * Tier 2 Unit 16: 商场退换货 (Shopping Returns & Exchange)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit16 = {
+  unit_id: 'tier2_u16',
+  tier: 2,
+  unit_number: 16,
+  title: {
+    zh: '商场退换货',
+    th: 'ช็อปปิ้ง เปลี่ยน & คืนสินค้า',
+    en: 'Shopping Returns & Exchange'
+  },
+  description: 'ช็อปปิ้งในห้างสรรพสินค้าจีนอย่างมั่นใจ ลองสวมเสื้อผ้า เปรียบเทียบไซส์ เคลมสินค้ามีตำหนิด้วยประโยค 被 คืนสินค้าพร้อมใบเสร็จ และขอคืนเงินส่วนต่าง',
+  lessons: [
+    {
+      lesson_id: 't2_u16_l01',
+      lesson_number: 1,
+      title: {
+        zh: '尺码与试穿',
+        th: 'ขนาดไซส์ & การลองสวม',
+        en: 'Sizes & Fitting'
+      },
+      can_do: {
+        th: 'สอบถามไซส์เสื้อผ้า ลองสวม และเปรียบเทียบความพอดีโดยใช้โครงสร้าง 比...更... และ 有点儿',
+        en: 'Ask for clothing sizes, try on clothes, and compare fitting using 比...更... and 有点儿'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ลองเสื้อในห้องลองแล้วบอกพนักงานได้ว่า "หลวมไปนิด ขอเปลี่ยนเป็นไซส์เล็กลงหนึ่งเบอร์" อย่างคล่องแคล่ว!',
+      vocabulary: [
+        {
+          id: 'hsk2_1601',
+          hanzi: '尺码',
+          pinyin: 'chǐmǎ',
+          display_pinyin: 'chǐmǎ',
+          pinyin_tone: 'chi3ma3',
+          meaning_th: 'ไซส์ / ขนาดเสื้อผ้า',
+          meaning_en: 'clothing size',
+          radical: '尸',
+          radical_name_th: 'หมวดร่างคน (尸字头)',
+          stroke_count: 7,
+          mnemonic: 'ใช้ไม้บรรทัด (尺) วัดสัดส่วนของร่างกายแล้วเทียบเป็นตัวเลข (码) = ขนาดไซส์',
+          kid_mnemonic: 'ไม้บรรทัดวิเศษทาบตัว วัดได้เบอร์ S M L = 尺码',
+          body_gesture: 'ทาบฝ่ามือวัดรอบเอวแล้วชูนิ้วบอกขนาด'
+        },
+        {
+          id: 'hsk2_1602',
+          hanzi: '试穿',
+          pinyin: 'shìchuān',
+          display_pinyin: 'shìchuān',
+          pinyin_tone: 'shi4chuan1',
+          meaning_th: 'ลองสวมใส่เสื้อผ้า',
+          meaning_en: 'to try on clothes',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 17,
+          mnemonic: 'เอ่ยปากขอทดลอง (试) สวมใส่เสื้อผ้าทะลุผ่านแขนเสื้อ (穿) = ลองสวม',
+          kid_mnemonic: 'เปิดผ้าม่านห้องลองเสื้อ สวมเสื้อตัวใหม่หมุนตัวดูหน้ากระจก = 试穿',
+          body_gesture: 'ยื่นแขนสองข้างสวมเสื้อคลุมแล้วรูดซิป'
+        },
+        {
+          id: 'hsk2_1603',
+          hanzi: '合身',
+          pinyin: 'héshēn',
+          display_pinyin: 'héshēn',
+          pinyin_tone: 'he2shen1',
+          meaning_th: 'พอดีตัว / เข้ากับรูปร่าง',
+          meaning_en: 'well-fitting',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 13,
+          mnemonic: 'ประกอบเข้ากันพอดี (合) แนบกับเรือนร่างของมนุษย์ (身) = พอดีตัว',
+          kid_mnemonic: 'เสื้อแนบตัวสวยเป๊ะ ไม่คับไม่หลวม ยิ้มกว้างชมหน้ากระจก = 合身',
+          body_gesture: 'ลูบข้างเอวทั้งสองข้างแนบกระชับลำตัวแล้วยกนิ้วโป้ง'
+        },
+        {
+          id: 'hsk2_1604',
+          hanzi: '宽松',
+          pinyin: 'kuānsōng',
+          display_pinyin: 'kuānsōng',
+          pinyin_tone: 'kuan1song1',
+          meaning_th: 'หลวมโปร่งสบาย / โอเวอร์ไซส์',
+          meaning_en: 'loose / comfortable fit',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาเรือน (宝盖头)',
+          stroke_count: 18,
+          mnemonic: 'อยู่ใต้หลังคาบ้านอันกว้างขวาง (宽) มีต้นสนผ่อนคลายสบายใจ (松) = หลวมสบาย',
+          kid_mnemonic: 'เสื้อยืดตัวใหญ่โปร่งสบาย ลมพัดเย็นสบายตัว = 宽松',
+          body_gesture: 'กางแขนแกว่งไปมาอย่างสบายตัว'
+        },
+        {
+          id: 'hsk2_1605',
+          hanzi: '肥',
+          pinyin: 'féi',
+          display_pinyin: 'féi',
+          pinyin_tone: 'fei2',
+          meaning_th: 'หลวมเกินไป (เสื้อผ้า) / อ้วน',
+          meaning_en: 'loose (clothing) / fat',
+          radical: '月',
+          radical_name_th: 'หมวดเนื้อหนัง (月字旁)',
+          stroke_count: 8,
+          mnemonic: 'เนื้อหนัง (月) มีชั้นไขมันหนา เสื้อผ้าจึงดูหลวมพอง = หลวมเกินไป',
+          kid_mnemonic: 'กางเกงตัวใหญ่เอวหลวมจนต้องเอามือดึงไว้ = 肥',
+          body_gesture: 'ทำสองมือพองข้างลำตัวแล้วดึงเอวกางเกง'
+        },
+        {
+          id: 'hsk2_1606',
+          hanzi: '瘦',
+          pinyin: 'shòu',
+          display_pinyin: 'shòu',
+          pinyin_tone: 'shou4',
+          meaning_th: 'คับเกินไป (เสื้อผ้า) / ผอม',
+          meaning_en: 'tight (clothing) / thin',
+          radical: '疒',
+          radical_name_th: 'หมวดโรคภัย (病字旁)',
+          stroke_count: 14,
+          mnemonic: 'เจ็บป่วย (疒) ซูบผอมจนเสื้อผ้าที่สวมดูรัดแน่นตึงเปรี๊ยะ = คับเกินไป',
+          kid_mnemonic: 'เสื้อรัดแขนแน่นดึงไม่ออก ทำหน้าอึดอัด = 瘦',
+          body_gesture: 'ดึงเสื้อให้รัดตึงแล้วทำท่าหายใจไม่ออก'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การเปรียบเทียบขนาดด้วย 有点儿 และ 比...更...',
+        description_th: '有点儿 วางหน้าคุณศัพท์แสดงความรู้สึกที่ไม่ค่อยพอใจ (หลวมไปนิด คับไปหน่อย) ส่วน 比...更... ใช้เปรียบเทียบว่าอีกตัวหนึ่งดียิ่งกว่า',
+        example: '这件有点儿肥 (Zhè jiàn yǒudiǎnr féi), 这件比那件更合身 (Zhè jiàn bǐ nà jiàn gèng héshēn)',
+        fun_metaphor: '有点儿 เหมือนเหยาะเกลือลงไปนิดหน่อย บ่งบอกว่ายังไม่ถูกใจ 100%!',
+        reassurance: 'คำว่า 肥 และ 瘦 ในบริบทเสื้อผ้า แปลว่า "หลวมโพรก" และ "คับติ้ว" ไม่ได้แปลว่าว่าใครอ้วนหรือผอม!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เปรียบเทียบเสื้อผ้า: 比...更... และ 有点儿',
+        explanation_th: 'ใช้ 有点儿 หน้าคำบอกขนาดเพื่อบอกข้อบกพร่อง และใช้ 比...更... เพื่อขอตัวเลือกที่ลงตัวกว่า',
+        patterns: [
+          {
+            formula: '这件 + 有点儿 + [肥 / 瘦 / 大 / 小]',
+            zh: '这条裤子有点儿肥。',
+            pinyin: 'Zhè tiáo kùzi yǒudiǎnr féi.',
+            th: 'กางเกงตัวนี้หลวมไปหน่อยครับ',
+            en: 'These pants are a bit too loose.'
+          },
+          {
+            formula: 'A + 比 + B + 更 + [คุณศัพท์]',
+            zh: '这件比那件更合身。',
+            pinyin: 'Zhè jiàn bǐ nà jiàn gèng héshēn.',
+            th: 'ตัวนี้พอดีตัวมากกว่าตัวนั้นครับ',
+            en: 'This one fits better than that one.'
+          },
+          {
+            formula: '请问有 + 比这件更 + [小/大] + 一号的吗？',
+            zh: '请问有比这件更小一号的吗？',
+            pinyin: 'Qǐngwèn yǒu bǐ zhè jiàn gèng xiǎo yí hào de ma?',
+            th: 'ขอถามหน่อย มีไซส์ที่เล็กกว่าตัวนี้หนึ่งเบอร์ไหมครับ?',
+            en: 'Is there a size one smaller than this?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'พนักงานขาย 👩‍💼',
+          zh: '先生您好！您试穿后觉得尺码合适吗？',
+          pinyin: 'Xiānsheng nín hǎo! Nín shìchuān hòu juéde chǐmǎ héshì ma?',
+          th: 'สวัสดีค่ะคุณผู้ชาย! ลองสวมแล้วรู้สึกว่าขนาดพอดีไหมคะ?',
+          en: 'Hello sir! After trying it on, how does the size feel?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '这件外套有点儿肥，袖子也长了。',
+          pinyin: 'Zhè jiàn wàitào yǒudiǎnr féi, xiùzi yě cháng le.',
+          th: 'เสื้อตัวนอกตัวนี้หลวมไปนิดครับ แขนเสื้อก็ยาวไปด้วย',
+          en: 'This jacket is a bit too loose, and the sleeves are too long.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'พนักงานขาย 👩‍💼',
+          zh: '那您试试M码吧，M码比L码更合身。',
+          pinyin: 'Nà nín shìshi M mǎ ba, M mǎ bǐ L mǎ gèng héshēn.',
+          th: 'ถ้างั้นคุณลองไซส์ M ดูนะคะ ไซส์ M จะพอดีตัวมากกว่าไซส์ L ค่ะ',
+          en: 'Then please try size M, size M fits better than size L.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太好了，请帮我拿一件M码试穿一下。',
+          pinyin: 'Tài hǎo le, qǐng bāng wǒ ná yí jiàn M mǎ shìchuān yíxià.',
+          th: 'ดีจังเลยครับ ช่วยหยิบไซส์ M ให้ผมลองสวมหน่อยนะครับ',
+          en: 'Great, please help me get a size M to try on.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อลองเสื้อแล้วรู้สึกว่า '有点儿肥' หมายถึงข้อใด?",
+          options: [
+            'หลวมไปหน่อย',
+            'คับเกินไป',
+            'สั้นเกินไป',
+            'แพงเกินไป'
+          ],
+          correct_index: 0,
+          explanation_th: "ในบริบทเสื้อผ้า '肥' (féi) แปลว่า หลวมเกินไป ดังนั้น '有点儿肥' แปลว่า หลวมไปหน่อย",
+          encouragement: 'จำศัพท์เฉพาะทางของเสื้อผ้าจีนได้แม่นยำมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '试' ในคำว่า '试穿' (ลองสวม) มีหมวดนำใด?",
+          options: [
+            '讠 (หมวดคำพูด 言字旁)',
+            '扌 (หมวดมือ 提手旁)',
+            '亻 (หมวดคน 单人旁)',
+            '衣 (หมวดเสื้อผ้า 衣字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'试' ใช้หมวดนำ '讠' สื่อถึงการเอ่ยปากพูดขอทดลองสิ่งต่างๆ",
+          encouragement: 'สังเกตรากศัพท์ 讠 ได้เฉียบคมมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ตัวนี้พอดีตัวมากกว่าตัวนั้น"',
+          tokens: ['更合身', '比那件', '这件'],
+          correct_sequence: ['这件', '比那件', '更合身'],
+          pinyin: 'Zhè jiàn bǐ nà jiàn gèng héshēn',
+          meaning_th: 'ตัวนี้พอดีตัวมากกว่าตัวนั้น',
+          explanation_th: 'ประธาน A (这件) + 比 + กรรม B (那件) + 更 + คุณศัพท์ (合身)',
+          encouragement: 'ต่อบล็อกเลโก้ประโยคเปรียบเทียบ 比 ได้เนียนกริบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '合身' (héshēn) มีความหมายตรงกับข้อใด?",
+          options: [
+            'พอดีตัว',
+            'ราคาถูก',
+            'สีตก',
+            'ขาดรุ่งริ่ง'
+          ],
+          correct_index: 0,
+          explanation_th: "'合身' แปลว่า พอดีตัว (合 = เหมาะเจาะ, 身 = ร่างกาย)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์หมวดแฟชั่นเป๊ะสุดๆ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u16_l02',
+      lesson_number: 2,
+      title: {
+        zh: '质量问题与退换',
+        th: 'ปัญหาคุณภาพ & การเปลี่ยนคืน',
+        en: 'Defects & Returns'
+      },
+      can_do: {
+        th: 'แจ้งปัญหาคุณภาพสินค้า สีตก ซิปแตก และขอเปลี่ยนหรือคืนสินค้าด้วยโครงสร้าง 被 และ 只要...就...',
+        en: 'Report defects like fading or broken zippers, and request return/exchange using 被 and 只要...就...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำเสื้อที่มีตำหนิพร้อมใบเสร็จไปแจ้งพนักงานขอเปลี่ยนตัวใหม่ได้อย่างถูกต้อง!',
+      vocabulary: [
+        {
+          id: 'hsk2_1607',
+          hanzi: '退货',
+          pinyin: 'tuìhuò',
+          display_pinyin: 'tuìhuò',
+          pinyin_tone: 'tui4huo4',
+          meaning_th: 'คืนสินค้า (ขอเงินคืน)',
+          meaning_en: 'to return goods (for refund)',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 20,
+          mnemonic: 'ก้าวถอยหลัง (退) นำสินค้าสิ่งของ (货) ไปส่งคืนร้าน = คืนสินค้า',
+          kid_mnemonic: 'เดินถอยหลังเอาของใส่ถุงคืนที่เคาน์เตอร์ = 退货',
+          body_gesture: 'ผลักสองมือดันกล่องสินค้าคืนไปข้างหน้า'
+        },
+        {
+          id: 'hsk2_1608',
+          hanzi: '换货',
+          pinyin: 'huànhuò',
+          display_pinyin: 'huànhuò',
+          pinyin_tone: 'huan4huo4',
+          meaning_th: 'เปลี่ยนสินค้า (เอาชิ้นใหม่)',
+          meaning_en: 'to exchange goods',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 19,
+          mnemonic: 'ยื่นมือ (扌) แลกเปลี่ยนสิ่งของเดิมเพื่อรับสินค้าชิ้นใหม่ (货) = เปลี่ยนสินค้า',
+          kid_mnemonic: 'ยื่นของเก่าส่งไป รับของชิ้นใหม่กลับมา = 换货',
+          body_gesture: 'หมุนฝ่ามือสองข้างวนสลับที่กัน'
+        },
+        {
+          id: 'hsk2_1609',
+          hanzi: '质量',
+          pinyin: 'zhìliàng',
+          display_pinyin: 'zhìliàng',
+          pinyin_tone: 'zhi4liang4',
+          meaning_th: 'คุณภาพสินค้า',
+          meaning_en: 'quality',
+          radical: '贝',
+          radical_name_th: 'หมวดหอยเบี้ย/เงินตรา (贝字旁)',
+          stroke_count: 21,
+          mnemonic: 'ใช้หอยเบี้ยของมีค่า (贝) ชั่งตวงวัดน้ำหนัก (量) เพื่อตรวจเกรด = คุณภาพ',
+          kid_mnemonic: 'ส่องแว่นขยายดูเนื้อผ้า ตรวจเช็กความเนี้ยบ = 质量',
+          body_gesture: 'ทำมือชั่งน้ำหนักสองข้างขึ้นลงอย่างประณีต'
+        },
+        {
+          id: 'hsk2_1610',
+          hanzi: '掉色',
+          pinyin: 'diàosè',
+          display_pinyin: 'diàosè',
+          pinyin_tone: 'diao4se4',
+          meaning_th: 'สีตก / สีซีดหลุดลอก',
+          meaning_en: 'color fading',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 17,
+          mnemonic: 'มือเผลอทำหล่นร่วง (掉) ทำให้สีสันสดใส (色) หลุดลอกออกมา = สีตก',
+          kid_mnemonic: 'จุ่มเสื้อลงในน้ำ สีแดงไหลออกมาเต็มกะละมัง = 掉色',
+          body_gesture: 'สะบัดนิ้วมือเหมือนน้ำสีหยดออกจากเสื้อผ้า'
+        },
+        {
+          id: 'hsk2_1611',
+          hanzi: '拉链',
+          pinyin: 'lāliàn',
+          display_pinyin: 'lāliàn',
+          pinyin_tone: 'la1lian4',
+          meaning_th: 'ซิป (เสื้อผ้า/กระเป๋า)',
+          meaning_en: 'zipper',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 20,
+          mnemonic: 'ใช้มือดึงลาก (拉) สายโซ่เหล็กข้อต่อฟันปลา (链) = ซิป',
+          kid_mnemonic: 'รูดซิปขึ้นชึ้ด รูดซิปลงชึ้ด = 拉链',
+          body_gesture: 'ทำท่ารูดซิปเสื้อจากล่างขึ้นบนจนถึงคอหอย'
+        },
+        {
+          id: 'hsk2_1612',
+          hanzi: '只要',
+          pinyin: 'zhǐyào',
+          display_pinyin: 'zhǐyào',
+          pinyin_tone: 'zhi3yao4',
+          meaning_th: 'ขอเพียงแค่... / ตราบใดที่...',
+          meaning_en: 'as long as / provided that',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 14,
+          mnemonic: 'เปล่งเสียงจากปากเพียงอย่างเดียว (只) ตามที่ต้องการ (要) = ขอเพียงแค่',
+          kid_mnemonic: 'ขอเพียงข้อแม้ข้อเดียวผ่าน ทุกอย่างก็ฉลุย = 只要',
+          body_gesture: 'ชูนิ้วชี้หนึ่งนิ้วเน้นเงื่อนไขสำคัญ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'โครงสร้างประโยค 被 (Passive Voice) สำหรับเหตุการณ์เสียหาย',
+        description_th: 'โครงสร้าง 被 ใช้เมื่อประธานเป็นผู้ถูกกระทำ และมักเกิดความเสียหายหรือผลลัพธ์ไม่พึงประสงค์ โดยกริยาต้องมีส่วนประกอบอื่นหรือ 了 ต่อท้ายเสมอ ห้ามลอยเดี่ยว',
+        example: '衣服被洗掉色了 (Yīfu bèi xǐ diàosè le - เสื้อถูกซักจนสีตก)',
+        fun_metaphor: 'น้อง 被 เปรียบเหมือนโล่รับแรงกระแทก รับเคราะห์จากการกระทำของผู้อื่น!',
+        reassurance: 'จำง่ายๆ: ผู้ถูกกระทำ + 被 + ผู้กระทำ/วิธีทำ + กริยา + ผลลัพธ์!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ประโยค 被 และเงื่อนไข 只要...就...',
+        explanation_th: 'ใช้ประโยค 被 เล่าถึงสิ่งของที่ชำรุดเสียหาย และใช้ 只要...就... เพื่อระบุเงื่อนไขการเคลม',
+        patterns: [
+          {
+            formula: '[สิ่งของ] + 被 + [กริยา] + [ผลลัพธ์ / 坏了 / 掉了]',
+            zh: '衣服被洗掉色了。',
+            pinyin: 'Yīfu bèi xǐ diàosè le.',
+            th: 'เสื้อถูกซักจนสีตกแล้วครับ',
+            en: 'The clothes faded after being washed.'
+          },
+          {
+            formula: '拉链 + 被 + 弄坏了',
+            zh: '拉链被弄坏了。',
+            pinyin: 'Lāliàn bèi nòng huài le.',
+            th: 'ซิปถูกทำพังเสียหายแล้ว',
+            en: 'The zipper was broken.'
+          },
+          {
+            formula: '只要 + [เงื่อนไข] + 就 + 可以 + [ผล]',
+            zh: '只要发票在，就可以免费退换。',
+            pinyin: 'Zhǐyào fāpiào zài, jiù kěyǐ miǎnfèi tuìhuàn.',
+            th: 'ขอเพียงมีใบเสร็จอยู่ ก็สามารถเปลี่ยนหรือคืนได้ฟรีครับ',
+            en: 'As long as you have the receipt, you can return or exchange for free.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我前天买的外套，拉链被卡住弄坏了，可以换一件吗？',
+          pinyin: 'Nǐ hǎo! Wǒ qiántiān mǎi de wàitào, lāliàn bèi kǎzhù nòng huài le, kěyǐ huàn yí jiàn ma?',
+          th: 'สวัสดีครับ! เสื้อตัวนอกที่ผมซื้อเมื่อวานซืน ซิปติดขัดจนพัง สามารถเปลี่ยนตัวใหม่ได้ไหมครับ?',
+          en: 'Hello! The jacket I bought the day before yesterday got stuck and broken, can I exchange it?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานบริการ 👩‍💼',
+          zh: '您好！只要发票和吊牌都在，七天之内都可以换货。',
+          pinyin: 'Nín hǎo! Zhǐyào fāpiào hé diàopái dōu zài, qī tiān zhīnèi dōu kěyǐ huànhuò.',
+          th: 'สวัสดีค่ะ! ขอเพียงใบเสร็จและป้ายราคายังอยู่ครบ ภายใน 7 วันสามารถเปลี่ยนสินค้าได้ค่ะ',
+          en: 'Hello! As long as the receipt and tags are intact, you can exchange within 7 days.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '发票在这里。这件衣服洗了一次就被洗掉色了，质量好像有问题。',
+          pinyin: 'Fāpiào zài zhèlǐ. Zhè jiàn yīfu xǐ le yí cì jiù bèi xǐ diàosè le, zhìliàng hǎoxiàng yǒu wèntí.',
+          th: 'ใบเสร็จอยู่นี่ครับ เสื้อตัวนี้ซักครั้งเดียวก็สีตกเลย คุณภาพเหมือนจะมีปัญหานะครับ',
+          en: 'The receipt is here. This clothes faded after one wash, there seems to be a quality issue.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานบริการ 👩‍💼',
+          zh: '确实是质量问题，真对不起！我马上给您办理换货，换一件同款全新的。',
+          pinyin: 'Quèshí shì zhìliàng wèntí, zhēn duìbuqǐ! Wǒ mǎshàng gěi nín bànlǐ huànhuò, huàn yí jiàn tóngkuǎn quánxīn de.',
+          th: 'เป็นปัญหาด้านคุณภาพจริงๆ ค่ะ ต้องขออภัยด้วยนะคะ! ฉันจะรีบทำเรื่องเปลี่ยนสินค้าเป็นตัวใหม่รุ่นเดียวกันให้เดี๋ยวนี้ค่ะ',
+          en: 'It is indeed a quality issue, truly sorry! I will process the exchange for a brand new identical one immediately.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อได้ยินประโยค '只要发票在，就可以退货' หมายถึงข้อใด?",
+          options: [
+            'ขอเพียงมีใบเสร็จ ก็สามารถคืนสินค้าได้',
+            'ต้องมีเงินสดเท่านั้น จึงจะซื้อสินค้าได้',
+            'หากไม่มีใบเสร็จ ต้องจ่ายเงินเพิ่ม',
+            'สินค้าลดราคาแล้ว ห้ามคืนเด็ดขาด'
+          ],
+          correct_index: 0,
+          explanation_th: "'只要...就...' แปลว่า ขอเพียงแค่...ก็... และ '发票' คือ ใบเสร็จ จึงแปลว่า ขอเพียงมีใบเสร็จ ก็คืนสินค้าได้",
+          encouragement: 'เข้าใจเงื่อนไขการคืนสินค้าของจีนอย่างชัดเจน!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '换' ในคำว่า '换货' (เปลี่ยนสินค้า) มีหมวดนำใด?",
+          options: [
+            '扌 (หมวดมือ 提手旁)',
+            '口 (หมวดปาก 口字旁)',
+            '辶 (หมวดก้าวเดิน 走之底)',
+            '贝 (หมวดเงินตรา 贝字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'换' ใช้หมวดนำ '扌' สื่อถึงการยื่นมือไปสลับหรือเปลี่ยนสิ่งของ",
+          encouragement: 'จำหมวดนำมือ 扌 ได้แม่นยำมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เสื้อถูกซักจนสีตกแล้ว"',
+          tokens: ['被洗掉色了', '衣服'],
+          correct_sequence: ['衣服', '被洗掉色了'],
+          pinyin: 'Yīfu bèi xǐ diàosè le',
+          meaning_th: 'เสื้อถูกซักจนสีตกแล้ว',
+          explanation_th: 'กรรม (衣服) + โครงสร้างถูกกระทำ (被) + กริยาและผลลัพธ์ (洗掉色了)',
+          encouragement: 'เรียงประโยค 被 ได้อย่างถูกต้องและรวดเร็ว!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '质量' (zhìliàng) หมายถึงข้อใด?",
+          options: [
+            'คุณภาพ',
+            'จำนวนเงิน',
+            'น้ำหนักตัว',
+            'ใบเสร็จรับเงิน'
+          ],
+          correct_index: 0,
+          explanation_th: "'质量' แปลว่า คุณภาพ (เช่น 质量问题 = ปัญหาด้านคุณภาพ)",
+          encouragement: 'จำคำศัพท์สำคัญได้ขึ้นใจแล้ว!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u16_l03',
+      lesson_number: 3,
+      title: {
+        zh: '折扣与质保服务',
+        th: 'ส่วนลด & ประกันคุณภาพ',
+        en: 'Discounts & Warranty'
+      },
+      can_do: {
+        th: 'คำนวณส่วนลดระบบจีน ขอคืนเงินส่วนต่าง (补差价) และสอบถามเงื่อนไขการรับประกันสินค้า',
+        en: 'Calculate Chinese discounts, request price difference refunds, and inquire about warranty terms'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: คำนวณราคาหักส่วนลด และรับเงินส่วนต่างคืนเข้า WeChat Pay หรือ Alipay อย่างคล่องแคล่ว!',
+      vocabulary: [
+        {
+          id: 'hsk2_1613',
+          hanzi: '打折',
+          pinyin: 'dǎzhé',
+          display_pinyin: 'dǎzhé',
+          pinyin_tone: 'da3zhe2',
+          meaning_th: 'ลดราคา (ระบบส่วนลดจีน)',
+          meaning_en: 'to offer a discount',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 13,
+          mnemonic: 'ใช้มือฟันหัก (打) ทอนตัวเลขราคาลงมา (折) = ลดราคา',
+          kid_mnemonic: 'ป้ายสีแดงติดหน้าร้าน หักราคาลงมาถูกกระหน่ำ = 打折',
+          body_gesture: 'เอามือขวาทำท่าสับลงบนฝ่ามือซ้ายเหมือนหั่นราคา'
+        },
+        {
+          id: 'hsk2_1614',
+          hanzi: '质保',
+          pinyin: 'zhìbǎo',
+          display_pinyin: 'zhìbǎo',
+          pinyin_tone: 'zhi4bao3',
+          meaning_th: 'ประกันคุณภาพสินค้า',
+          meaning_en: 'quality warranty / guarantee',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 15,
+          mnemonic: 'สาระสำคัญของคุณภาพ (质) ได้รับการรับประกันและคุ้มครอง (保) = ประกันคุณภาพสินค้า',
+          kid_mnemonic: 'มีตราประทับโล่ทอง การันตีว่าคุณภาพดีเยี่ยม = 质保',
+          body_gesture: 'ยกนิ้วโป้งแตะหน้าอกเพื่อการันตีคุณภาพ'
+        },
+        {
+          id: 'hsk2_1615',
+          hanzi: '售后',
+          pinyin: 'shòuhòu',
+          display_pinyin: 'shòuhòu',
+          pinyin_tone: 'shou4hou4',
+          meaning_th: 'บริการหลังการขาย',
+          meaning_en: 'after-sales service',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 17,
+          mnemonic: 'หลังจากขายสินค้าเสร็จสิ้น (售) ยังคงดูแลลูกค้าต่อมาในภายหลัง (后) = บริการหลังการขาย',
+          kid_mnemonic: 'ซื้อของเสร็จ มีพนักงานยิ้มคอยซัพพอร์ตตลอด = 售后',
+          body_gesture: 'ทำท่ายกหูโทรศัพท์คุยให้บริการด้วยรอยยิ้ม'
+        },
+        {
+          id: 'hsk2_1616',
+          hanzi: '专柜',
+          pinyin: 'zhuānguì',
+          display_pinyin: 'zhuānguì',
+          pinyin_tone: 'zhuan1gui4',
+          meaning_th: 'เคาน์เตอร์แบรนด์ในห้าง',
+          meaning_en: 'specialized counter / brand kiosk',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 15,
+          mnemonic: 'เคาน์เตอร์ไม้ (柜) ที่จัดไว้เฉพาะแบรนด์ชั้นนำ (专) = เคาน์เตอร์แบรนด์',
+          kid_mnemonic: 'บูทหรูหราไฟสว่างในห้าง มีพนักงานแต่งสูทบริการ = 专柜',
+          body_gesture: 'วาดกรอบสี่เหลี่ยมเคาน์เตอร์หรูหราตรงหน้า'
+        },
+        {
+          id: 'hsk2_1617',
+          hanzi: '折扣',
+          pinyin: 'zhékòu',
+          display_pinyin: 'zhékòu',
+          pinyin_tone: 'zhe2kou4',
+          meaning_th: 'ส่วนลด / อัตราส่วนลด',
+          meaning_en: 'discount / rebate',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 10,
+          mnemonic: 'หักทอนตัวเลข (折) และดึงรวบราคาเข้ามา (扣) = ส่วนลด',
+          kid_mnemonic: 'ป้ายแท็กสีแดงเขียนตัวเลขลดราคา = 折扣',
+          body_gesture: 'ทำมือสองข้างขยับเข้าหากันแสดงการลดทอน'
+        },
+        {
+          id: 'hsk2_1618',
+          hanzi: '退还',
+          pinyin: 'tuìhuán',
+          display_pinyin: 'tuìhuán',
+          pinyin_tone: 'tui4huan2',
+          meaning_th: 'คืนกลับมา (เช่น คืนเงิน/ส่งคืน)',
+          meaning_en: 'to return / refund back',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 16,
+          mnemonic: 'ก้าวถอยหลัง (退) เพื่อส่งสิ่งของกลับคืนสู่เจ้าของเดิม (还) = คืนกลับมา',
+          kid_mnemonic: 'เงินบินกลับเข้าวอลเล็ต ติ๊งต่อง! = 退还',
+          body_gesture: 'กวักมือสองข้างดึงของหรือเงินกลับเข้าหาตัว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ระบบส่วนลดของจีน (打折) และการออกเสียง Half-3rd Tone',
+        description_th: '打折 (dǎzhé) เป็นคำเสียง 3 ตามด้วยเสียง 2 คำว่า 打 จะออกเสียงเป็น Half-3rd Tone (ต่ำ ไม่ตวัดขึ้น) ส่วนระบบคิดเลขจีน: 打八折 หมายถึง คิดราคา 80% (ลด 20%)',
+        example: '打八折 = คิด 80% (ลด 20%), 打五折 = คิด 50% (ลดครึ่งราคา)',
+        fun_metaphor: 'คนจีนนับเลขที่ต้องจ่าย! 打八折 คือ จ่ายแค่ 8 ส่วนจาก 10 ส่วน ยิ่งเลขน้อยยิ่งลดเยอะ!',
+        reassurance: 'คำว่า 打折 พินอินคือ dǎzhé เสมอ ไม่ใช่ dázhé เพราะ 折 เป็นเสียง 2!'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้ส่วนลดและคืนส่วนต่าง: 打折 และ 补/退差价',
+        explanation_th: 'บอกการลดราคาด้วย 打 + ตัวเลข + 折 และบอกการคืนส่วนต่างด้วย 退还 + จำนวนเงิน + 差价',
+        patterns: [
+          {
+            formula: '商场 + 正在 + 打 + [ตัวเลข] + 折',
+            zh: '商场正在打八折。',
+            pinyin: 'Shāngchǎng zhèngzài dǎ bā zhé.',
+            th: 'ห้างสรรพสินค้ากำลังลดราคา 20% (คิดราคา 80%)',
+            en: 'The mall is having a 20% off sale (charging 80%).'
+          },
+          {
+            formula: '退还 + [จำนวนเงิน] + 差价',
+            zh: '我们会把五十块差价退还给您。',
+            pinyin: 'Wǒmen huì bǎ wǔshí kuài chājià tuìhuán gěi nín.',
+            th: 'พวกเราจะคืนเงินส่วนต่าง 50 หยวนให้ท่านครับ',
+            en: 'We will refund the 50 yuan price difference to you.'
+          },
+          {
+            formula: '凭 + [หลักฐาน] + 享受 + [สิทธิ์]',
+            zh: '凭发票可以享受一年全国质保。',
+            pinyin: 'Píng fāpiào kěyǐ xiǎngshòu yì nián quánguó zhìbǎo.',
+            th: 'ใช้ใบเสร็จรับสิทธิ์ประกันคุณภาพศูนย์ทั่วประเทศ 1 ปี',
+            en: 'With the receipt, you can enjoy one year nationwide warranty.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '你好！我想把这件外套换成那件短款的，那件今天是不是在打八折？',
+          pinyin: 'Nǐ hǎo! Wǒ xiǎng bǎ zhè jiàn wàitào huàn chéng nà jiàn duǎnkuǎn de, nà jiàn jīntiān shì bu shì zài dǎ bā zhé?',
+          th: 'สวัสดีครับ! ผมอยากเปลี่ยนเสื้อตัวนอกตัวนี้เป็นทรงสั้นตัวนั้น ตัวนั้นวันนี้ลดราคา 20% (打八折) อยู่ใช่ไหมครับ?',
+          en: 'Hello! I want to exchange this jacket for that short one, is that one 20% off today?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานเคาน์เตอร์ 👩‍💼',
+          zh: '是的，打完折后比您原先买的便宜五十块。',
+          pinyin: 'Shì de, dǎ wán zhé hòu bǐ nín yuánxiān mǎi de piányi wǔshí kuài.',
+          th: 'ใช่ค่ะ หลังจากหักส่วนลดแล้วจะถูกกว่าตัวเดิมที่คุณซื้อไป 50 หยวนค่ะ',
+          en: 'Yes, after the discount it is 50 yuan cheaper than what you originally bought.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '那五十块差价怎么退还给我呢？',
+          pinyin: 'Nà wǔshí kuài chājià zěnme tuìhuán gěi wǒ ne?',
+          th: 'ถ้างั้นส่วนต่าง 50 หยวนจะคืนกลับมาให้ผมทางไหนครับ?',
+          en: 'Then how will the 50 yuan price difference be refunded to me?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'พนักงานเคาน์เตอร์ 👩‍💼',
+          zh: '会原路退回到您的微信钱包，凭新发票还可以享受一年全国专柜质保。',
+          pinyin: 'Huì yuánlù tuìhuí dào nín de Wēixìn qiánbāo, píng xīn fāpiào hái kěyǐ xiǎngshòu yì nián quánguó zhuānguì zhìbǎo.',
+          th: 'จะคืนกลับไปตามช่องทางเดิมเข้ากระเป๋า WeChat Pay ของคุณค่ะ และใช้ใบเสร็จใหม่รับสิทธิ์ประกันคุณภาพเคาน์เตอร์ทั่วประเทศ 1 ปีค่ะ',
+          en: 'It will be refunded to your WeChat wallet via original payment path, and with the new receipt you can enjoy 1-year warranty across all counters nationwide.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อร้านค้าติดป้าย '打八折' หมายถึงข้อใด?",
+          options: [
+            'คิดราคา 80% (ลด 20%)',
+            'ลดราคาทันที 80% (จ่ายเพียง 20%)',
+            'ซื้อ 8 ชิ้นแถม 1 ชิ้น',
+            'ลดราคาเฉพาะเวลา 8 โมงเช้า'
+          ],
+          correct_index: 0,
+          explanation_th: "ระบบส่วนลดจีน '打八折' หมายถึง คิดราคา 8 ส่วนจาก 10 ส่วน (80%) หรือลด 20% นั่นเอง",
+          encouragement: 'เข้าใจระบบส่วนลดตัวเลขจีนอย่างถูกต้องแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '保' ในคำว่า '质保' (ประกันคุณภาพ) มีหมวดนำใด?",
+          options: [
+            '亻 (หมวดคน 单人旁)',
+            '木 (หมวดไม้ 木字旁)',
+            '讠 (หมวดคำพูด 言字旁)',
+            '口 (หมวดปาก 口字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'保' มีหมวดนำคน '亻' สื่อถึงบุคคลที่คอยปกป้องคุ้มครองและรับประกัน",
+          encouragement: 'จำหมวดนำคน 亻 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "คืนเงินส่วนต่าง 50 หยวนให้คุณ"',
+          tokens: ['差价', '退还给您', '五十块'],
+          correct_sequence: ['退还给您', '五十块', '差价'],
+          pinyin: 'Tuìhuán gěi nín wǔshí kuài chājià',
+          meaning_th: 'คืนเงินส่วนต่าง 50 หยวนให้คุณ',
+          explanation_th: 'กริยา (退还给您) + จำนวนเงิน (五十块) + กรรมนาม (差价)',
+          encouragement: 'เรียงประโยคธุรกิจการเงินได้คล่องแคล่วมาก!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '折扣' (zhékòu) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ส่วนลด / อัตราส่วนลด',
+            'ราคาเต็ม',
+            'ราคาส่ง',
+            'ค่าบริการพิเศษ'
+          ],
+          correct_index: 0,
+          explanation_th: "'折扣' แปลว่า ส่วนลด หรือ อัตราส่วนลด (折 = หักทอน, 扣 = รวบดึง)",
+          encouragement: 'เก่งมาก! ศัพท์การค้าและการช็อปปิ้งแม่นยำสุดๆ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u16_l04',
+      lesson_number: 4,
+      title: {
+        zh: '商场退换货挑战',
+        th: 'ภารกิจเปลี่ยนคืนสินค้าห้างหังโจว',
+        en: 'InTime Mall Showdown'
+      },
+      can_do: {
+        th: 'เจรจาเปลี่ยนไซส์เสื้อผ้า เคลมตำหนิด้วยประโยค 被 และขอรับเงินส่วนต่างคืนเข้ากระเป๋าดิจิทัลได้อย่างสมบูรณ์แบบ',
+        en: 'Negotiate size exchange, claim defects with 被, and obtain price difference refund smoothly'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่ห้างหังโจว จัดการเปลี่ยนไซส์และรับเงินส่วนต่าง 50 หยวนคืนสำเร็จ!',
+      vocabulary: [
+        {
+          id: 'hsk2_1619',
+          hanzi: '商场',
+          pinyin: 'shāngchǎng',
+          display_pinyin: 'shāngchǎng',
+          pinyin_tone: 'shang1chang3',
+          meaning_th: 'ห้างสรรพสินค้า / ศูนย์การค้า',
+          meaning_en: 'shopping mall',
+          radical: '土',
+          radical_name_th: 'หมวดดิน (提土旁)',
+          stroke_count: 17,
+          mnemonic: 'ลานดินกว้างใหญ่ (场) ที่พ่อค้าแม่ค้านำสินค้ามาค้าขาย (商) = ห้างสรรพสินค้า',
+          kid_mnemonic: 'ตึกใหญ่หลายชั้น มีแอร์เย็นฉ่ำ ขายของทุกอย่าง = 商场',
+          body_gesture: 'กางแขนออกกว้างหมุนรอบตัวชี้อาคารห้าง'
+        },
+        {
+          id: 'hsk2_1620',
+          hanzi: '小票',
+          pinyin: 'xiǎopiào',
+          display_pinyin: 'xiǎopiào',
+          pinyin_tone: 'xiao3piao4',
+          meaning_th: 'สลิปใบเสร็จรับเงินใบเล็ก',
+          meaning_en: 'sales slip / receipt',
+          radical: '小',
+          radical_name_th: 'หมวดเล็ก (小字旁)',
+          stroke_count: 14,
+          mnemonic: 'แผ่นตั๋วกระดาษ (票) แผ่นเล็กๆ ยาวๆ จากแคชเชียร์ (小) = สลิปใบเสร็จ',
+          kid_mnemonic: 'กระดาษสลิปยาวๆ ปริ้นต์ออกจากตู้แคชเชียร์ดังครืดๆ = 小票',
+          body_gesture: 'ทำสองมือดึงแผ่นกระดาษสลิปยาวๆ ออกมาดู'
+        },
+        {
+          id: 'hsk2_1621',
+          hanzi: '吊牌',
+          pinyin: 'diàopái',
+          display_pinyin: 'diàopái',
+          pinyin_tone: 'diao4pai2',
+          meaning_th: 'ป้ายราคาที่ห้อยกับเสื้อผ้า',
+          meaning_en: 'price tag / hang tag',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 18,
+          mnemonic: 'ป้ายการ์ดแบรนด์เนม (牌) ที่ผูกห้อยติดไว้กับคอเสื้อ (吊) = ป้ายราคา',
+          kid_mnemonic: 'ป้ายกระดาษแข็งผูกเชือกห้อยอยู่ที่คอเสื้อ ห้ามตัดทิ้งถ้าจะคืน = 吊牌',
+          body_gesture: 'ใช้นิ้วชี้หยิบแผ่นป้ายเล็กๆ ที่คอเสื้อขึ้นมาดู'
+        },
+        {
+          id: 'hsk2_1622',
+          hanzi: '经理',
+          pinyin: 'jīnglǐ',
+          display_pinyin: 'jīnglǐ',
+          pinyin_tone: 'jing1li3',
+          meaning_th: 'ผู้จัดการ',
+          meaning_en: 'manager',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 19,
+          mnemonic: 'ผู้ร้อยเรียงเส้นไหมการทำงาน (经) และจัดการสะสางปัญหาอย่างมีเหตุผล (理) = ผู้จัดการ',
+          kid_mnemonic: 'หัวหน้าใส่สูทผูกเนกไท มาช่วยอนุมัติการคืนเงิน = 经理',
+          body_gesture: 'ยืนตัวตรงจัดสูทเนกไทแล้วพยักหน้าอย่างสุขุม'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: การรวมคำศัพท์ 小票 (xiǎopiào) และ 经理 (jīnglǐ)',
+        description_th: 'คำว่า 小 (3) นำหน้า 票 (4) อ่านเป็น Half-3rd Tone ไม่เปลี่ยนเสียง ส่วน 经理 (1+3) ออกเสียงตามวรรณยุกต์เดิมชัดเจน',
+        example: '小票 (xiǎopiào), 专柜经理 (zhuānguì jīnglǐ)',
+        fun_metaphor: 'เมื่อจะคืนของในห้างจีน เพียงแค่มี 小票 และ 吊牌 ทุกอย่างก็ราบรื่นไร้กังวล!',
+        reassurance: 'คำว่า 经理 ใช้เรียกผู้จัดการแผนกหรือผู้จัดการร้านค้าได้อย่างสุภาพ'
+      },
+      grammar_bite: {
+        title: 'สรุปการสื่อสารในสถานการณ์เปลี่ยนคืนสินค้า (Returns Playbook)',
+        explanation_th: 'รวมประโยคเด็ด: แจ้งปัญหาด้วย 被, ยื่นหลักฐานด้วย 只要, และยืนยันการรับเงินส่วนต่าง',
+        patterns: [
+          {
+            formula: '我昨天买的 + [สิ่งของ] + 被 + [กริยา] + 坏了',
+            zh: '我昨天买的裤子被拉链划破了。',
+            pinyin: 'Wǒ zuótiān mǎi de kùzi bèi lāliàn huápò le.',
+            th: 'กางเกงที่ผมซื้อเมื่อวานถูกซิปขูดจนขาดครับ',
+            en: 'The pants I bought yesterday were scratched and torn by the zipper.'
+          },
+          {
+            formula: '请问可以 + 换成 + [ไซส์/แบบ] + 吗？',
+            zh: '请问可以换成M码吗？',
+            pinyin: 'Qǐngwèn kěyǐ huàn chéng M mǎ ma?',
+            th: 'ขอถามหน่อยเปลี่ยนเป็นไซส์ M ได้ไหมครับ?',
+            en: 'Could I please exchange it for a size M?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '经理您好！我昨天买的这件外套有点儿肥，而且拉链被卡住坏了，吊牌和小票都在，可以退换吗？',
+          pinyin: 'Jīnglǐ nín hǎo! Wǒ zuótiān mǎi de zhè jiàn wàitào yǒudiǎnr féi, érqiě lāliàn bèi kǎzhù huài le, diàopái hé xiǎopiào dōu zài, kěyǐ tuìhuàn ma?',
+          th: 'สวัสดีครับผู้จัดการ! เสื้อนอกที่ผมซื้อเมื่อวานหลวมไปหน่อย และซิปก็ติดจนพัง ป้ายราคาและสลิปยังอยู่ครบ สามารถเปลี่ยนหรือคืนได้ไหมครับ?',
+          en: 'Hello manager! The jacket I bought yesterday is a bit too loose, and the zipper got stuck and broken. The tag and receipt are both here, can I return or exchange it?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการร้าน 👨‍💼',
+          zh: '先生您好！只要吊牌没剪、小票齐全，属于质量问题我们无条件给您换货。您想换小一号吗？',
+          pinyin: 'Xiānsheng nín hǎo! Zhǐyào diàopái méi jiǎn, xiǎopiào qíquán, shǔyú zhìliàng wèntí wǒmen wútiáojiàn gěi nín huànhuò. Nín xiǎng huàn xiǎo yí hào ma?',
+          th: 'สวัสดีครับคุณผู้ชาย! ขอเพียงป้ายยังไม่ถูกตัดและสลิปครบ เป็นปัญหาด้านคุณภาพเรายินดีเปลี่ยนชิ้นใหม่ให้โดยไม่มีเงื่อนไขครับ คุณอยากเปลี่ยนเป็นไซส์เล็กลงหนึ่งเบอร์ไหมครับ?',
+          en: 'Hello sir! As long as the tag is not cut and receipt is complete, for quality issues we exchange unconditionally. Would you like to exchange for one size smaller?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '是的，换成M码。这款今天打八折，应该会便宜五十块吧？',
+          pinyin: 'Shì de, huàn chéng M mǎ. Zhè kuǎn jīntiān dǎ bā zhé, yīnggāi huì piányi wǔshí kuài ba?',
+          th: 'ใช่ครับ เปลี่ยนเป็นไซส์ M ครับ รุ่นนี้วันนี้ลด 20% (打八折) น่าจะถูกลง 50 หยวนใช่ไหมครับ?',
+          en: 'Yes, change to size M. This model is 20% off today, it should be 50 yuan cheaper right?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการร้าน 👨‍💼',
+          zh: '没错！新外套给您装好了，五十块差价已经通过微信退还到您的账户，请查收！',
+          pinyin: 'Méi cuò! Xīn wàitào gěi nín zhuāng hǎo le, wǔshí kuài chājià yǐjīng tōngguò Wēixìn tuìhuán dào nín de zhànghù, qǐng cháchōu!',
+          th: 'ถูกต้องเลยครับ! เสื้อนอกตัวใหม่แพ็กใส่ถุงให้เรียบร้อยแล้วครับ และเงินส่วนต่าง 50 หยวนโอนคืนเข้าบัญชี WeChat ให้แล้ว กรุณาตรวจสอบนะครับ!',
+          en: 'Exactly! The new jacket is packed for you, and the 50 yuan price difference has been refunded to your account via WeChat, please check!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'meaning_match',
+          question_th: "สิ่งสำคัญ 2 อย่างที่ต้องนำติดตัวไปเมื่อต้องการเปลี่ยนคืนสินค้าในห้างจีนคือข้อใด?",
+          options: [
+            'สลิปใบเสร็จ (小票) และ ป้ายราคาที่ยังไม่ตัด (吊牌)',
+            'เงินสด และ พาสปอร์ต',
+            'รูปถ่ายสินค้า และ คูปองส่วนลด',
+            'ถุงช็อปปิ้งใบใหญ่ และ บัตรประชาชน'
+          ],
+          correct_index: 0,
+          explanation_th: "ในห้างจีน เงื่อนไขหลักคือ '只要吊牌没剪、小票齐全' (ขอเพียงป้ายราคายังไม่ตัดและมีสลิปใบเสร็จ) จึงจะเปลี่ยนหรือคืนได้",
+          encouragement: 'รู้ลึกรู้จริงเรื่องมารยาทและกฎการช็อปปิ้งในจีน!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '场' ในคำว่า '商场' (ห้างสรรพสินค้า) มีหมวดนำใด?",
+          options: [
+            '土 (หมวดดิน 提土旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)',
+            '广 (หมวดหลังคาลาด 广字头)',
+            '门 (หมวดประตู 门字框)'
+          ],
+          correct_index: 0,
+          explanation_th: "'场' ใช้หมวดนำดิน '土' สื่อถึงลานดินกว้างสำหรับทำกิจกรรมหรือค้าขาย",
+          encouragement: 'จำรากศัพท์หมวดดิน 土 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ขอเพียงมีใบเสร็จ ก็สามารถเปลี่ยนสินค้าได้"',
+          tokens: ['就可以换货', '只要小票在'],
+          correct_sequence: ['只要小票在', '就可以换货'],
+          pinyin: 'Zhǐyào xiǎopiào zài, jiù kěyǐ huànhuò',
+          meaning_th: 'ขอเพียงมีใบเสร็จ ก็สามารถเปลี่ยนสินค้าได้',
+          explanation_th: 'เงื่อนไข (只要小票在) + ผลลัพธ์ (就可以换货)',
+          encouragement: 'ต่อบล็อกเลโก้เงื่อนไข 只要...就... ได้เฉียบคม!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '吊牌' (diàopái) หมายถึงสิ่งใด?",
+          options: [
+            'ป้ายราคาที่ห้อยกับเสื้อผ้า',
+            'ป้ายบอกทางในห้าง',
+            'บัตรจอดรถ',
+            'สลิปบัตรเครดิต'
+          ],
+          correct_index: 0,
+          explanation_th: "'吊牌' คือ ป้ายราคา/ป้ายยี่ห้อที่ห้อยติดอยู่กับเสื้อผ้า (吊 = ห้อยแขวน, 牌 = ป้าย)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์สำคัญจำได้แม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณซื้อเสื้อแจ็กเก็ตมาเมื่อวานจากห้างหังโจวอินไท่ แต่พอลองที่ห้องพักพบว่าหลวมไปนิด (有点儿肥) และพบว่าตะเข็บด้ายมีปัญหาหลุดลุ่ย (质量问题) จึงนำกลับมาที่ห้างพร้อมสลิป (小票) และป้ายราคา (吊牌) เพื่อเปลี่ยนเป็นไซส์ M ที่กำลังจัดโปรโมชั่นลด 20% (打八折) และขอรับเงินส่วนต่าง 50 หยวนคืนเข้ากระเป๋า WeChat Pay คุณควรพูดกับผู้จัดการร้านอย่างไร?',
+        options: [
+          '经理您好！这件外套有点儿肥，而且拉链被弄坏了，小票和吊牌都在，我想换成M码，并退还五十块差价。 (Jīnglǐ nín hǎo! Zhè jiàn wàitào yǒudiǎnr féi, érqiě lāliàn bèi nòng huài le, xiǎopiào hé diàopái dōu zài, wǒ xiǎng huàn chéng M mǎ, bìng tuìhuán wǔshí kuài chājià.)',
+          '我不要了，这件衣服太贵，我不给钱！ (Wǒ bú yào le, zhè jiàn yīfu tài guì, wǒ bù gěi qián!)',
+          '这里的服务太慢了，请问洗手间在哪儿？ (Zhèlǐ de fúwù tài màn le, qǐngwèn xǐshǒujiān zài nǎr?)',
+          '服务员，我们要两碗米饭，一条鱼！ (Fúwùyuán, wǒmen yào liǎng wǎn mǐfàn, yì tiáo yú!)'
+        ],
+        correct_index: 0,
+        explanation_th: "ตัวเลือกแรกสื่อสารครบถ้วนที่สุด: เรียกผู้จัดการอย่างสุภาพ แจ้งว่าหลวม (有点儿肥) มีปัญหาซิปชำรุดด้วยประโยค 被 (拉链被弄坏了) ยืนยันว่ามีหลักฐานครบ (小票和吊牌都在) ขอเปลี่ยนไซส์ และขอคืนเงินส่วนต่าง (退还差价)",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่านด่าน Boss Challenge ห้างหังโจวอินไท่ เปลี่ยนสินค้าและรับเงินส่วนต่างคืนสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u16_master',
+        badge_name: 'ปรมาจารย์ช็อปปิ้งและเปลี่ยนคืนสินค้า 🛍️🧾',
+        message_th: 'สุดยอดมาก! คุณสำเร็จ Unit 16 แล้ว พร้อมลุยช็อปปิ้งในห้างจีน ลองเสื้อผ้า เปลี่ยนไซส์ เคลมของมีตำหนิ และขอเงินคืนส่วนต่างได้อย่างมั่นใจไร้กังวล!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

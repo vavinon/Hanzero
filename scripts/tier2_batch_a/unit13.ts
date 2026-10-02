@@ -1,0 +1,940 @@
+/**
+ * scripts/tier2_batch_a/unit13.ts
+ * Tier 2 Unit 13: 高铁与出行 (High-Speed Rail & Travel)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit13 = {
+  unit_id: 'tier2_u13',
+  tier: 2,
+  unit_number: 13,
+  title: {
+    zh: '高铁与出行',
+    th: 'รถไฟความเร็วสูง & การเดินทางไกล',
+    en: 'High-Speed Rail & Travel'
+  },
+  description: 'จองตั๋วรถไฟความเร็วสูงผ่าน 12306 เลือกที่นั่งชั้นหนึ่ง/ชั้นสอง ผ่านจุดตรวจตั๋วและสแกนความปลอดภัย รวมถึงการเปลี่ยนตั๋วและขอคืนเงิน',
+  lessons: [
+    {
+      lesson_id: 't2_u13_l01',
+      lesson_number: 1,
+      title: {
+        zh: '预订高铁票',
+        th: 'จองตั๋วรถไฟความเร็วสูง & เลือกระดับที่นั่ง',
+        en: 'Booking High-Speed Rail Tickets'
+      },
+      can_do: {
+        th: 'จองตั๋วรถไฟความเร็วสูง เลือกระหว่างชั้นหนึ่งและชั้นสอง และใช้โครงสร้าง "不但...而且..." เพื่อเปรียบเทียบ',
+        en: 'Book high-speed rail tickets, choose seat classes, and use "不但...而且..." to make comparisons'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: คุยจองตั๋วรถไฟความเร็วสูงไประหว่างปักกิ่งกับเซี่ยงไฮ้ได้สำเร็จ!',
+      vocabulary: [
+        {
+          id: 'hsk2_1301',
+          hanzi: '高铁',
+          pinyin: 'gāotiě',
+          display_pinyin: 'gāotiě',
+          pinyin_tone: 'gao1tie3',
+          meaning_th: 'รถไฟความเร็วสูง (G-Train)',
+          meaning_en: 'high-speed rail (bullet train)',
+          radical: '高',
+          radical_name_th: 'หมวดสูง (高字旁)',
+          stroke_count: 20,
+          mnemonic: 'รางเหล็ก (铁) ที่วิ่งด้วยความเร็วสูง (高) ข้ามเมือง = รถไฟความเร็วสูง',
+          kid_mnemonic: 'รถไฟหัวเรียวยาวสีขาว พุ่งฉิวยังกะจรวด = 高铁',
+          body_gesture: 'สองมือทำเป็นหัวรถไฟพุ่งไปข้างหน้าอย่างรวดเร็ว'
+        },
+        {
+          id: 'hsk2_1302',
+          hanzi: '动车',
+          pinyin: 'dòngchē',
+          display_pinyin: 'dòngchē',
+          pinyin_tone: 'dong4che1',
+          meaning_th: 'รถไฟหัวกระสุน (D-Train)',
+          meaning_en: 'EMU bullet train',
+          radical: '力',
+          radical_name_th: 'หมวดพลังแรง (力字旁)',
+          stroke_count: 10,
+          mnemonic: 'ยานพาหนะติดล้อ (车) ที่ขับเคลื่อนด้วยมอเตอร์ไฟฟ้าพลังสูง (动) = รถไฟหัวกระสุน',
+          kid_mnemonic: 'รถไฟสายลมสีขาววิ่งนุ่มสบาย = 动车',
+          body_gesture: 'กางสองแขนทำท่าลื่นไหลไปตามราง'
+        },
+        {
+          id: 'hsk2_1303',
+          hanzi: '一等座',
+          pinyin: 'yīděngzuò',
+          display_pinyin: 'yìděngzuò',
+          pinyin_tone: 'yi1deng3zuo4',
+          meaning_th: 'ที่นั่งชั้นหนึ่ง (กว้างขวาง สบาย แถวละ 4 ที่นั่ง)',
+          meaning_en: 'first class seat',
+          radical: '竹',
+          radical_name_th: 'หมวดไผ่ (竹字头)',
+          stroke_count: 23,
+          mnemonic: 'ที่นั่ง (座) ระดับชั้นคุณภาพอันดับ 1 (一等) = ที่นั่งชั้นหนึ่ง',
+          kid_mnemonic: 'เบาะโซฟานุ่มตัวใหญ่ มีหมอนรองคอ = 一等座',
+          body_gesture: 'กางสองแขนกว้างๆ พิงหลังทำท่าผ่อนคลาย'
+        },
+        {
+          id: 'hsk2_1304',
+          hanzi: '二等座',
+          pinyin: 'èrděngzuò',
+          display_pinyin: 'èrděngzuò',
+          pinyin_tone: 'er4deng3zuo4',
+          meaning_th: 'ที่นั่งชั้นสอง (มาตรฐาน แถวละ 5 ที่นั่ง ยอดนิยม)',
+          meaning_en: 'second class seat',
+          radical: '二',
+          radical_name_th: 'หมวดสอง (二字部)',
+          stroke_count: 24,
+          mnemonic: 'ที่นั่ง (座) ระดับชั้นที่สอง (二等) ราคาประหยัด = ที่นั่งชั้นสอง',
+          kid_mnemonic: 'ที่นั่งมาตรฐานสุดฮิต นั่งกับเพื่อนสนุกสนาน = 二等座',
+          body_gesture: 'ชูสองนิ้วเป็นตัว V หน้าที่นั่ง'
+        },
+        {
+          id: 'hsk2_1305',
+          hanzi: '商务座',
+          pinyin: 'shāngwùzuò',
+          display_pinyin: 'shāngwùzuò',
+          pinyin_tone: 'shang1wu4zuo4',
+          meaning_th: 'ที่นั่งชั้นธุรกิจ (เบาะปรับนอนราบ VIP)',
+          meaning_en: 'business class seat',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 26,
+          mnemonic: 'ที่นั่ง (座) หรูหราระดับนักธุรกิจ (商务) ปรับนอนได้ = ที่นั่งชั้นธุรกิจ',
+          kid_mnemonic: 'เบาะยานอวกาศปรับนอนราบได้ มีขนมน้ำฟรี = 商务座',
+          body_gesture: 'สองมือแตะไหล่ทำท่าเป็นผู้บริหารนั่งเครื่องบินเจ็ต'
+        },
+        {
+          id: 'hsk2_1306',
+          hanzi: '车次',
+          pinyin: 'chēcì',
+          display_pinyin: 'chēcì',
+          pinyin_tone: 'che1ci4',
+          meaning_th: 'ขบวนรถไฟ / รหัสเที่ยวรถ (เช่น G123)',
+          meaning_en: 'train number / service',
+          radical: '车',
+          radical_name_th: 'หมวดรถ (车字旁)',
+          stroke_count: 10,
+          mnemonic: 'ลำดับรอบเที่ยว (次) ของรถไฟ (车) = ขบวนรถไฟ',
+          kid_mnemonic: 'ตัวเลขขบวนรถไฟ เช่น G1 ปักกิ่งไปเซี่ยงไฮ้ = 车次',
+          body_gesture: 'ชูมือเขียนตัวอักษร G ในอากาศ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎการผันเสียงของ 一 在 一等座 (yìděngzuò)',
+        description_th: 'คำว่า 一 (yī) เมื่ออยู่หน้า 等 (děng เสียงที่ 3) จะต้องผันเป็นเสียงที่ 4 คือ "yì"',
+        example: '一等座 (yìděngzuò), 一起 (yìqǐ), 一点儿 (yìdiǎnr)',
+        fun_metaphor: 'คำว่า 一 พอเจอน้องเสียงสาม děng เลยต้องกระโดดทิ้งน้ำหนักเสียงลงมาเป็น yì!',
+        reassurance: 'ออกเสียง yì-děng-zuò หนักแน่นชัดเจน พนักงานขายตั๋วจะฟังออกทันที!'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างเปรียบเทียบข้อดีคู่: 不但...而且... (ไม่เพียงแต่...แถมยัง...)',
+        explanation_th: 'ใช้ 不但 A 而且 B เพื่อบอกว่ารถไฟความเร็วสูงไม่เพียงแต่เร็ว แถมยังสะดวกสบายมาก',
+        patterns: [
+          {
+            formula: '不但 + [ข้อดี A] + 而且 + [ข้อดี B]',
+            zh: '高铁不但快，而且很舒服。',
+            pinyin: 'Gāotiě búdàn kuài, érqiě hěn shūfu.',
+            th: 'รถไฟความเร็วสูงไม่เพียงแต่เร็ว แถมยังสบายมากด้วย',
+            en: 'High-speed rail is not only fast, but also very comfortable.'
+          },
+          {
+            formula: '我想订 + [จำนวนใบ] + 张 + [ประเภทที่นั่ง] + 的票',
+            zh: '我想订两张二等座的票。',
+            pinyin: 'Wǒ xiǎng dìng liǎng zhāng èrděngzuò de piào.',
+            th: 'ผมต้องการจองตั๋วที่นั่งชั้นสองจำนวน 2 ใบครับ',
+            en: 'I want to book two second-class tickets.'
+          },
+          {
+            formula: '从 + [ต้นทาง] + 到 + [ปลายทาง] + 坐 + [ยานพาหนะ]',
+            zh: '从北京到上海坐高铁只要四个多小时。',
+            pinyin: 'Cóng Běijīng dào Shànghǎi zuò gāotiě zhǐ yào sì ge duō xiǎoshí.',
+            th: 'จากปักกิ่งไปเซี่ยงไฮ้นั่งรถไฟความเร็วสูงใช้เวลาแค่ 4 ชั่วโมงกว่าๆ',
+            en: 'From Beijing to Shanghai by HSR takes only over 4 hours.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'เพื่อนคนจีน เสี่ยวเฉิน 👦',
+          zh: 'สมชาย，周末我们去西安旅游吧！坐高铁去怎么样？',
+          pinyin: 'Somchai, zhōumò wǒmen qù Xī\'ān lǚyóu ba! Zuò gāotiě qù zěnmeyàng?',
+          th: 'สมชาย สุดสัปดาห์นี้พวกเราไปเที่ยวซีอานกันเถอะ! นั่งรถไฟความเร็วสูงไปดีไหม?',
+          en: 'Somchai, let us travel to Xi\'an this weekend! How about taking HSR?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好主意！高铁不但快而且很准时。我们买哪个车次？',
+          pinyin: 'Hǎo zhǔyi! Gāotiě búdàn kuài érqiě hěn zhǔnshí. Wǒmen mǎi nǎge chēcì?',
+          th: 'ความคิดเยี่ยมมาก! รถไฟความเร็วสูงไม่เพียงแต่เร็วแถมยังตรงเวลามากด้วย เราจะซื้อขบวนไหนดี?',
+          en: 'Great idea! HSR is not only fast but also very punctual. Which train number should we buy?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'เพื่อนคนจีน เสี่ยวเฉิน 👦',
+          zh: '早上八点半的G651次车，我们订二等座还是一等座？',
+          pinyin: 'Zǎoshang bā diǎn bàn de G liù wǔ yāo cì chē, wǒmen dìng èrděngzuò háishi yìděngzuò?',
+          th: 'เที่ยวรถ G651 ตอนแปดโมงครึ่งเช้า พวกเราจะจองที่นั่งชั้นสองหรือชั้นหนึ่งดี?',
+          en: 'Train G651 at 8:30 AM, shall we book second class or first class?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '二等座性价比很高，就订二等座吧！我用12306订票。',
+          pinyin: 'Èrděngzuò xìngjiàbǐ hěn gāo, jiù dìng èrděngzuò ba! Wǒ yòng yāo èr sān líng liù dìng piào.',
+          th: 'ชั้นสองคุ้มค่าคุ้มราคามาก จองชั้นสองนี่แหละ! เดี๋ยวฉันใช้แอป 12306 จองตั๋วเอง',
+          en: 'Second class is very good value, let us book second class! I will use 12306 to book.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ประโยค '高铁不但快，而且很舒服' หมายความว่าอย่างไร?",
+          options: [
+            'รถไฟความเร็วสูงไม่เพียงแต่เร็ว แถมยังสบายมากด้วย',
+            'รถไฟความเร็วสูงช้าและแพงมาก',
+            'รถไฟความเร็วสูงไม่มีที่นั่งว่างเลย',
+            'ต้องจองตั๋วล่วงหน้าหนึ่งเดือน'
+          ],
+          correct_index: 0,
+          explanation_th: "'不但...而且...' แปลว่า ไม่เพียงแต่...แถมยัง... เชื่อมข้อดีสองประการเข้าด้วยกัน",
+          encouragement: 'ยอดเยี่ยมมาก! ไวยากรณ์ขั้นกลาง 不但...而且... ใช้งานได้คล่องแคล่วแล้ว!'
+        },
+        {
+          type: 'tone_match',
+          question_th: "คำว่า '一' ในวลี '一等座' (ที่นั่งชั้นหนึ่ง) ต้องผันเป็นเสียงวรรณยุกต์ใด?",
+          options: [
+            'เสียง 4 (yì)',
+            'เสียง 1 (yī)',
+            'เสียง 2 (yí)',
+            'เสียงเบา (yi)'
+          ],
+          correct_index: 0,
+          explanation_th: "一 อยู่หน้าพยางค์เสียงที่ 3 (děng) ต้องผันเป็นเสียงที่ 4 คือ 'yì' เป็น 'yìděngzuò'",
+          encouragement: 'หูทองคำ! กฎผันเสียงของ 一 จำแม่นยำไร้ที่ติ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ผมต้องการจองตั๋วชั้นสองจำนวนสองใบ"',
+          tokens: ['两张', '二等座的票', '我想订'],
+          correct_sequence: ['我想订', '两张', '二等座的票'],
+          pinyin: 'Wǒ xiǎng dìng liǎng zhāng èrděngzuò de piào',
+          meaning_th: 'ผมต้องการจองตั๋วชั้นสองจำนวนสองใบ',
+          explanation_th: 'โครงสร้าง: 我想订 (ผมต้องการจอง) + จำนวน (两张) + ชนิดตั๋ว (二等座的票)',
+          encouragement: 'เรียงประโยคจองตั๋วได้ถูกต้อง 100% เลย!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "ที่นั่งประเภทที่คุ้มค่าและเป็นที่นิยมที่สุดบนรถไฟความเร็วสูงจีนคือข้อใด?",
+          options: [
+            '二等座 (èrděngzuò)',
+            '一等座 (yìděngzuò)',
+            '商务座 (shāngwùzuò)',
+            '站票 (zhànpiào)'
+          ],
+          correct_index: 0,
+          explanation_th: "'二等座' คือ ที่นั่งชั้นสอง ราคาประหยัดและสะดวกสบาย ได้รับความนิยมสูงสุด",
+          encouragement: 'ตอบได้ฉับไว! เป็นเซียนท่องเที่ยวจีนตัวจริง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณต้องการจองตั๋วรถไฟความเร็วสูงจากปักกิ่งไปซีอาน ขบวน G651 ที่นั่งชั้นสอง 2 ใบ ผ่านเคาน์เตอร์สถานีรถไฟ ควรพูดกับเจ้าหน้าที่ว่าอย่างไร?',
+        options: [
+          '您好！我想买两张去西安的G651次二等座车票。 (Nǐn hǎo! Wǒ xiǎng mǎi liǎng zhāng qù Xī\'ān de G liù wǔ yāo cì èrděngzuò chēpiào.)',
+          '对不起，这里有洗手间吗？ (Duìbuqǐ, zhèlǐ yǒu xǐshǒujiān ma?)',
+          '这碗面不好吃，可以退吗？ (Zhè wǎn miàn bù hǎochī, kěyǐ tuì ma?)',
+          '请问地铁站怎么走？ (Qǐngwèn dìtiězhàn zěnme zǒu?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '您好！我想买两张去西安的G651次二等座车票。' ระบุครบถ้วนทั้งปลายทาง (西安) ขบวนรถ (G651) ชนิดที่นั่ง (二等座) และจำนวน (两张)",
+        encouragement: 'ว้าว! สื่อสารซื้อตั๋วรถไฟความเร็วสูงได้อย่างชัดเจนและเป็นมืออาชีพ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u13_l01',
+        badge_name: 'นักจองตั๋วรถไฟหัวกระสุน 🚄🎫',
+        message_th: 'ยินดีด้วยนะคนเก่ง! คุณสามารถจองตั๋วรถไฟความเร็วสูงและเลือกระดับชั้นที่นั่งได้อย่างเชี่ยวชาญแล้ว!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u13_l02',
+      lesson_number: 2,
+      title: {
+        zh: '进站与安检',
+        th: 'เข้าสถานี ผ่านจุดตรวจตั๋ว & ตรวจความปลอดภัย',
+        en: 'Station Entry, Security & Boarding Gate'
+      },
+      can_do: {
+        th: 'แสดงพาสปอร์ตผ่านด่านตรวจ สแกนสัมภาระ และมองหาประตูตรวจตั๋ว (检票口) บนป้ายจอ LED',
+        en: 'Present passport at gates, pass security inspection, and locate boarding gates on LED screens'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เดินเข้าสถานีรถไฟใหญ่ ผ่านจุดตรวจความปลอดภัย และหาประตูขึ้นรถได้เอง!',
+      vocabulary: [
+        {
+          id: 'hsk2_1307',
+          hanzi: '身份证',
+          pinyin: 'shēnfènzhèng',
+          display_pinyin: 'shēnfènzhèng',
+          pinyin_tone: 'shen1fen4zheng4',
+          meaning_th: 'บัตรประจำตัวประชาชน (ของคนจีน)',
+          meaning_en: 'ID card',
+          radical: '身',
+          radical_name_th: 'หมวดลำตัว (身字旁)',
+          stroke_count: 23,
+          mnemonic: 'หลักฐานบัตรรับรอง (证) ตัวตนของบุคคล (身份) = บัตรประชาชน',
+          kid_mnemonic: 'บัตรการ์ดสีฟ้าที่คนจีนใช้แตะผ่านประตูปิ๊บๆ = 身份证',
+          body_gesture: 'ทำท่ายื่นบัตรสี่เหลี่ยมแตะที่เซนเซอร์ประตู'
+        },
+        {
+          id: 'hsk2_1308',
+          hanzi: '护照',
+          pinyin: 'hùzhào',
+          display_pinyin: 'hùzhào',
+          pinyin_tone: 'hu4zhao4',
+          meaning_th: 'หนังสือเดินทาง (พาสปอร์ต)',
+          meaning_en: 'passport',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 22,
+          mnemonic: 'ใช้มือปกป้องคุ้มครอง (护) ใบอนุญาตฉายภาพเดินทาง (照) = พาสปอร์ต',
+          kid_mnemonic: 'สมุดเล่มสีแดงเลือดหมูของคนไทยไว้เดินทางข้ามแดน = 护照',
+          body_gesture: 'หยิบสมุดพาสปอร์ตจากกระเป๋าเสื้อเปิดให้เจ้าหน้าที่ตรวจ'
+        },
+        {
+          id: 'hsk2_1309',
+          hanzi: '检票口',
+          pinyin: 'jiǎnpiàokǒu',
+          display_pinyin: 'jiǎnpiàokǒu',
+          pinyin_tone: 'jian3piao4kou3',
+          meaning_th: 'ประตูตรวจตั๋วขึ้นรถไฟ (Gate)',
+          meaning_en: 'ticket gate / boarding gate',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 26,
+          mnemonic: 'ช่องทางเข้าออก (口) สำหรับตรวจเช็ก (检) ตั๋วเดินทาง (票) = ประตูตรวจตั๋ว',
+          kid_mnemonic: 'ประตูรั้วกั้นทางเดินลงไปชานชาลารถไฟ = 检票口',
+          body_gesture: 'ชี้มือไปที่ป้ายไฟสีเขียวเหนือประตูตรวจตั๋ว'
+        },
+        {
+          id: 'hsk2_1310',
+          hanzi: '候车室',
+          pinyin: 'hòuchēshì',
+          display_pinyin: 'hòuchēshì',
+          pinyin_tone: 'hou4che1shi4',
+          meaning_th: 'ห้องพักผู้โดยสารรอขึ้นรถ (โถงรอรถไฟ)',
+          meaning_en: 'waiting room / hall',
+          radical: '亻',
+          radical_name_th: 'หมวดคนยืน (单人旁)',
+          stroke_count: 22,
+          mnemonic: 'ห้องโถงกว้างใหญ่ (室) สำหรับรอคอย (候) รถไฟ (车) = ห้องพักผู้โดยสาร',
+          kid_mnemonic: 'ห้องโถงยักษ์มีเก้าอี้พันตัวให้นั่งรอรถไฟ = 候车室',
+          body_gesture: 'กางสองแขนแสดงถึงห้องโถงกว้างใหญ่'
+        },
+        {
+          id: 'hsk2_1311',
+          hanzi: '行李架',
+          pinyin: 'xínglijà',
+          display_pinyin: 'xínglijà',
+          pinyin_tone: 'xing2li5jia4',
+          meaning_th: 'ชั้นวางกระเป๋าสัมภาระเหนือที่นั่ง',
+          meaning_en: 'luggage rack',
+          radical: '木',
+          radical_name_th: 'หมวดไม้ (木字旁)',
+          stroke_count: 21,
+          mnemonic: 'โครงสร้างชั้นวางของ (架) สำหรับวางกระเป๋าเดินทาง (行李) = ชั้นวางสัมภาระ',
+          kid_mnemonic: 'ตะแกรงวางกระเป๋าเหนือหัวในตู้รถไฟ = 行李架',
+          body_gesture: 'ยกสองมือชูกระเป๋าขึ้นไปวางบนชั้นเหนือศีรษะ'
+        },
+        {
+          id: 'hsk2_1312',
+          hanzi: '安检',
+          pinyin: 'ānjiǎn',
+          display_pinyin: 'ānjiǎn',
+          pinyin_tone: 'an1jian3',
+          meaning_th: 'ตรวจความปลอดภัย (Security Check)',
+          meaning_en: 'security check',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาบ้าน (宝盖头)',
+          stroke_count: 17,
+          mnemonic: 'ตรวจตราอย่างละเอียด (检) เพื่อความปลอดภัยสงบสุข (安) = ตรวจความปลอดภัย',
+          kid_mnemonic: 'เดินผ่านอุโมงค์ตรวจ สัมภาระเข้าเครื่องสแกนเอ็กซเรย์ = 安检',
+          body_gesture: 'กางสองแขนออกให้เจ้าหน้าที่ใช้เครื่องตรวจสแกนรอบตัว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 检票口 (jiǎnpiàokǒu)',
+        description_th: 'คำว่า 检 (jiǎn เสียง 3) อยู่หน้า 票 (piào เสียง 4) ออกเป็นเสียงครึ่งเสียงสาม (ต่ำ 21) แล้วตามด้วย 票 ที่หนักแน่น และลงท้ายด้วย 口 (kǒu เสียง 3)',
+        example: '检票口 (jiǎnpiàokǒu), 进站口 (jìnzhànkǒu)',
+        fun_metaphor: 'เหมือนเสียงเคาะจังหวะ: ทุ่ม-ฟึ่บ-กึ๊ก ชัดเจนสะดุดตา!',
+        reassurance: 'ฟังเสียงประกาศในสถานีรถไฟจีนบ่อยๆ จะคุ้นชินกับคำว่า jiǎn-piào-kǒu อย่างรวดเร็ว!'
+      },
+      grammar_bite: {
+        title: 'สูตรถามหาประตูตรวจตั๋ว: 请问[ขบวนรถ]在哪一个检票口？',
+        explanation_th: 'ในสถานีรถไฟความเร็วสูงขนาดใหญ่ มีประตูตรวจตั๋วหลายสิบช่อง ใช้โครงสร้างนี้ถามเจ้าหน้าที่หรืออาสาสมัคร',
+        patterns: [
+          {
+            formula: '请问 + [ขบวนรถ] + 在哪个检票口？',
+            zh: '请问G651次车在哪个检票口检票？',
+            pinyin: 'Qǐngwèn G liù wǔ yāo cì chē zài nǎge jiǎnpiàokǒu jiǎnpiào?',
+            th: 'ขอถามหน่อยครับ ขบวน G651 ตรวจตั๋วที่เกตไหนครับ?',
+            en: 'Excuse me, which gate does train G651 board at?'
+          },
+          {
+            formula: '请出示您的 + 护照 / 证件',
+            zh: '进站时请出示您的护照。',
+            pinyin: 'Jìn zhàn shí qǐng chūshì nín de hùzhào.',
+            th: 'เวลาเข้าสถานีกรุณาแสดงหนังสือเดินทางของท่านครับ',
+            en: 'Please show your passport when entering the station.'
+          },
+          {
+            formula: '请把行李放在 + 安检机上',
+            zh: '请把大件行李放在安检机上。',
+            pinyin: 'Qǐng bǎ dàjiàn xíngli fàngzài ānjiǎnjī shang.',
+            th: 'กรุณาวางกระเป๋าสัมภาระใบใหญ่ลงบนเครื่องสแกนตรวจความปลอดภัยครับ',
+            en: 'Please place large luggage on the security check machine.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'เจ้าหน้าที่สถานีรถไฟ 👮‍♂️',
+          zh: '你好！外国朋友请走人工通道，出示您的护照。',
+          pinyin: 'Nǐ hǎo! Wàiguó péngyou qǐng zǒu réngōng tōngdào, chūshì nín de hùzhào.',
+          th: 'สวัสดีครับ! ผู้โดยสารชาวต่างชาติกรุณาเข้าช่องเจ้าหน้าที่ แล้วแสดงพาสปอร์ตครับ',
+          en: 'Hello! Foreign travelers please use the manual lane and present your passport.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '您好！这是我的护照。请问安检在哪里？',
+          pinyin: 'Nǐn hǎo! Zhè shì wǒ de hùzhào. Qǐngwèn ānjiǎn zài nǎlǐ?',
+          th: 'สวัสดีครับ! นี่คือพาสปอร์ตของผมครับ ขอถามหน่อยจุดตรวจความปลอดภัยอยู่ตรงไหนครับ?',
+          en: 'Hello! Here is my passport. Where is the security check?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'เจ้าหน้าที่สถานีรถไฟ 👮‍♂️',
+          zh: '前面就是安检，水杯需要喝一口。进站后请看大屏幕找检票口。',
+          pinyin: 'Qiánmiàn jiù shì ānjiǎn, shuǐbēi xūyào hē yì kǒu. Jìn zhàn hòu qǐng kàn dà píngmù zhǎo jiǎnpiàokǒu.',
+          th: 'ข้างหน้าก็คือจุดตรวจครับ แก้วน้ำดื่มต้องลองจิบหนึ่งคำ เข้าสถานีแล้วดูจอใหญ่หาเกตตรวจตั๋วนะครับ',
+          en: 'Security is right ahead, please take a sip of your water bottle. Look at the big screen to find your gate.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '明白了，非常感谢您！',
+          pinyin: 'Míngbai le, fēicháng gǎnxiè nín!',
+          th: 'เข้าใจแล้วครับ ขอบพระคุณมากครับ!',
+          en: 'Understood, thank you very much!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อเดินเข้าสถานีรถไฟจีน ชาวต่างชาติที่ใช้พาสปอร์ตควรเดินเข้าช่องใด?",
+          options: [
+            'ช่องตรวจโดยเจ้าหน้าที่ (人工通道 Réngōng tōngdào)',
+            'ช่องสแกนบัตรประชาชนจีนอัตโนมัติ',
+            'ช่องทางออกฉุกเฉิน',
+            'ช่องขนส่งสินค้า'
+          ],
+          correct_index: 0,
+          explanation_th: "ผู้โดยสารที่ใช้หนังสือเดินทาง (护照) ต้องเดินเข้าช่อง '人工通道' (ช่องที่มีเจ้าหน้าที่คอยสแกนพาสปอร์ต)",
+          encouragement: 'รู้ลึกรู้จริงเรื่องการเดินทางในจีน เก่งมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "กรุณาแสดงหนังสือเดินทางของท่าน"',
+          tokens: ['您的', '请出示', '护照'],
+          correct_sequence: ['请出示', '您的', '护照'],
+          pinyin: 'Qǐng chūshì nín de hùzhào',
+          meaning_th: 'กรุณาแสดงหนังสือเดินทางของท่าน',
+          explanation_th: 'โครงสร้าง: 请出示 (กรุณาแสดง) + 您的护照 (หนังสือเดินทางของท่าน)',
+          encouragement: 'เรียงประโยคทางการได้เป๊ะเวอร์!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "ประตูทางออกไปขึ้นชานชาลารถไฟความเร็วสูง เรียกว่าอะไรในภาษาจีน?",
+          options: [
+            '检票口 (jiǎnpiàokǒu)',
+            '登机口 (dēngjīkǒu)',
+            '售票处 (shòupiàochù)',
+            '出站口 (chūzhànkǒu)'
+          ],
+          correct_index: 0,
+          explanation_th: "สำหรับรถไฟ ประตูตรวจตั๋วขึ้นรถเรียกว่า '检票口' (ส่วน 登机口 ใช้กับสนามบิน)",
+          encouragement: 'แม่นยำมาก! แยกคำศัพท์รถไฟกับเครื่องบินได้เด็ดขาด!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '照' ในคำว่า '护照' มีหมวดนำสี่จุดไฟ '灬' สื่อถึงสิ่งใดในอดีต?",
+          options: [
+            'แสงสว่างส่องประกายส่องเห็นภาพชัดเจน',
+            'หยดน้ำสี่หยด',
+            'รอยเท้าสัตว์',
+            'กิ่งไม้ร่วง'
+          ],
+          correct_index: 0,
+          explanation_th: "หมวด '灬' คือ หมวดไฟ สื่อถึงการส่องแสงสว่าง (照耀) ให้เห็นชัดเจน",
+          encouragement: 'ตาไวเฉียบคมมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณผ่านจุดตรวจความปลอดภัยเข้ามาในโถงผู้โดยสารสถานีรถไฟปักกิ่งใต้ที่กว้างใหญ่มาก คุณถือตั๋วขบวน G651 ต้องการถามเจ้าหน้าที่ประชาสัมพันธ์ว่าขบวนของคุณต้องไปขึ้นที่เกตไหน ควรพูดว่าอย่างไร?',
+        options: [
+          '您好！请问去西安的G651次车在哪个检票口？ (Nǐn hǎo! Qǐngwèn qù Xī\'ān de G liù wǔ yāo cì chē zài nǎge jiǎnpiàokǒu?)',
+          '对不起，我想要一杯热茶。 (Duìbuqǐ, wǒ xiǎng yào yì bēi rè chá.)',
+          '你们这里收外卖吗？ (Nǐmen zhèlǐ shōu wàimài ma?)',
+          '再见，明天见！ (Zàijiàn, míngtiān jiàn!)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '您好！请问去西安的G651次车在哪个检票口？' ถามได้ตรงจุด ระบุทั้งปลายทางและขบวนรถ เจ้าหน้าที่จะชี้บอกทางได้ทันที",
+        encouragement: 'ยอดเยี่ยมมาก! ไม่มีวันหลงทางในสถานีรถไฟจีนแน่นอน!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u13_l02',
+        badge_name: 'ผู้พิทักษ์ประตูชานชาลา 🛂🚄',
+        message_th: 'ยินดีด้วยนะคนเก่ง! คุณสามารถผ่านด่านตรวจความปลอดภัยและค้นหาประตูขึ้นรถไฟได้อย่างมั่นใจ!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u13_l03',
+      lesson_number: 3,
+      title: {
+        zh: '改签与退票',
+        th: 'เลื่อนตั๋ว คืนตั๋ว & ผลลัพธ์กริยา',
+        en: 'Ticket Change, Refund & Resultative Complements'
+      },
+      can_do: {
+        th: 'ขอเลื่อนตั๋ว ขอคืนเงินเมื่อแผนเปลี่ยน และเข้าใจคำเสริมบอกผลลัพธ์ (改好了 / 没赶上 / 买到了)',
+        en: 'Request ticket modifications/refunds and master resultative complements (改好了 / 没赶上 / 买到了)'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พูดขอเปลี่ยนตั๋วรถไฟรอบใหม่ที่เคาน์เตอร์สถานีได้สำเร็จ!',
+      vocabulary: [
+        {
+          id: 'hsk2_1313',
+          hanzi: '改签',
+          pinyin: 'gǎiqiān',
+          display_pinyin: 'gǎiqiān',
+          pinyin_tone: 'gai3qian1',
+          meaning_th: 'เลื่อนตั๋ว / เปลี่ยนเที่ยวรถไฟ',
+          meaning_en: 'change ticket / reschedule',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะเบาๆ (反文旁)',
+          stroke_count: 15,
+          mnemonic: 'แก้ไขเปลี่ยนแปลง (改) วันเวลาในตั๋วที่มีการลงนาม (签) = เลื่อนตั๋ว',
+          kid_mnemonic: 'หยิบยางลบมาลบเวลาเดิม แล้วเขียนเวลาใหม่ลงไป = 改签',
+          body_gesture: 'ทำท่ายกมือเปลี่ยนการ์ดใบใหม่ในอากาศ'
+        },
+        {
+          id: 'hsk2_1314',
+          hanzi: '退票',
+          pinyin: 'tuìpiào',
+          display_pinyin: 'tuìpiào',
+          pinyin_tone: 'tui4piao4',
+          meaning_th: 'คืนตั๋ว / ยกเลิกตั๋วขอรับเงินคืน',
+          meaning_en: 'refund ticket',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 20,
+          mnemonic: 'ก้าวถอยหลังถอนคืน (退) ตั๋วเดินทาง (票) = คืนตั๋ว',
+          kid_mnemonic: 'ยื่นตั๋วคืนให้เจ้าหน้าที่ แล้วรับเงินกลับมา = 退票',
+          body_gesture: 'สองมือดันตั๋วส่งคืนไปข้างหน้า'
+        },
+        {
+          id: 'hsk2_1315',
+          hanzi: '晚点',
+          pinyin: 'wǎndiǎn',
+          display_pinyin: 'wándiǎn',
+          sandhi_rule: '3+3',
+          pinyin_tone: 'wan3dian3',
+          meaning_th: 'รถไฟดีเลย์ / มาช้ากว่ากำหนด',
+          meaning_en: 'delayed (train/flight)',
+          radical: '日',
+          radical_name_th: 'หมวดดวงอาทิตย์ (日字旁)',
+          stroke_count: 20,
+          mnemonic: '晚 (เสียง 3) + 点 (เสียง 3) ชนกัน ผันเป็น wándiǎn',
+          kid_mnemonic: 'เข็มนาฬิกาเดินช้า รถไฟมาช้ากว่าเวลา = 晚点',
+          body_gesture: 'ทำหน้ารอคอยพร้อมมองนาฬิกาข้อมือ'
+        },
+        {
+          id: 'hsk2_1316',
+          hanzi: '准时',
+          pinyin: 'zhǔnshí',
+          display_pinyin: 'zhǔnshí',
+          pinyin_tone: 'zhun3shi2',
+          meaning_th: 'ตรงเวลา / เป๊ะตามกำหนด',
+          meaning_en: 'punctual / on time',
+          radical: '冫',
+          radical_name_th: 'หมวดสองจุดน้ำแข็ง (两点水)',
+          stroke_count: 20,
+          mnemonic: 'เทียบมาตรฐานแม่นยำ (准) ตามเวลา (时) = ตรงเวลา',
+          kid_mnemonic: 'นาฬิกาดังเป๊ง รถไฟมาเทียบชานชาลาพอดีเป๊ะ = 准时',
+          body_gesture: 'ยกนิ้วโป้งสองข้างกดไลก์ว่าตรงเวลามาก'
+        },
+        {
+          id: 'hsk2_1317',
+          hanzi: '差价',
+          pinyin: 'chājià',
+          display_pinyin: 'chājià',
+          pinyin_tone: 'cha1jia4',
+          meaning_th: 'ส่วนต่างราคา',
+          meaning_en: 'price difference',
+          radical: '工',
+          radical_name_th: 'หมวดงานช่าง (工字部)',
+          stroke_count: 20,
+          mnemonic: 'ความแตกต่าง (差) ของมูลค่าราคา (价) = ส่วนต่างราคา',
+          kid_mnemonic: 'ตั๋วใหม่แพงกว่านิดหน่อย จ่ายเงินเพิ่มส่วนต่าง = 差价',
+          body_gesture: 'ยกสองมือเทียบระดับสูงต่ำแล้วบอกส่วนต่าง'
+        },
+        {
+          id: 'hsk2_1318',
+          hanzi: '手续费',
+          pinyin: 'shǒuxùfèi',
+          display_pinyin: 'shǒuxùfèi',
+          pinyin_tone: 'shou3xu4fei4',
+          meaning_th: 'ค่าธรรมเนียมการดำเนินการ',
+          meaning_en: 'handling fee / service charge',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 26,
+          mnemonic: 'ค่าใช้จ่าย (费) สำหรับขั้นตอนการจัดการด้วยมือ (手续) = ค่าธรรมเนียม',
+          kid_mnemonic: 'ค่าบริการจัดการเอกสารแผ่นเล็กๆ = 手续费',
+          body_gesture: 'ทำมือนับเหรียญสองสามเหรียญเป็นค่าธรรมเนียม'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'กฎเสียงสามชนกันในคำว่า 晚点 (wǎndiǎn ➔ wándiǎn)',
+        description_th: 'คำว่า 晚 (wǎn เสียง 3) เมื่ออยู่หน้า 点 (diǎn เสียง 3) จะผันขึ้นเป็นเสียงที่ 2 คือ "wán"',
+        example: '火车晚点了 (Huǒchē wándiǎn le)',
+        fun_metaphor: 'คลื่นเสียงสไลด์ขึ้นสูงก่อนตกลงมา wán-diǎn!',
+        reassurance: 'พูดว่า wándiǎn ลื่นหูและเป็นธรรมชาติมาก เจ้าของภาษาออกเสียงแบบนี้ทุกคน!'
+      },
+      grammar_bite: {
+        title: 'คำเสริมบอกผลลัพธ์: 改好 (เปลี่ยนเสร็จแล้ว) vs 没赶上 (ตามไม่ทัน/ตกรถ)',
+        explanation_th: 'นำคำบอกผล เช่น 好 (เสร็จเรียบร้อย), 到 (พบ/ได้), 上 (ทัน) วางไว้หลังคำกริยาเพื่อแสดงผลลัพธ์ของการกระทำ',
+        patterns: [
+          {
+            formula: '票 + 已经 + 改好了',
+            zh: '您的车票已经改好了。',
+            pinyin: 'Nín de chēpiào yǐjīng gǎi hǎo le.',
+            th: 'ตั๋วรถไฟของท่านเปลี่ยนเสร็จเรียบร้อยแล้วครับ',
+            en: 'Your ticket has been rescheduled successfully.'
+          },
+          {
+            formula: '没 + 赶上 + [ยานพาหนะ]',
+            zh: '对不起，我没赶上八点的高铁。',
+            pinyin: 'Duìbuqǐ, wǒ méi gǎnshàng bā diǎn de gāotiě.',
+            th: 'ขอโทษครับ ผมมาไม่ทันรถไฟความเร็วสูงรอบแปดโมง',
+            en: 'Sorry, I missed the 8 o\'clock high-speed train.'
+          },
+          {
+            formula: '需要 + 补 / 退 + 差价',
+            zh: '换一等座需要补五十块钱差价。',
+            pinyin: 'Huàn yìděngzuò xūyào bǔ wǔshí kuài qián chājià.',
+            th: 'เปลี่ยนเป็นชั้นหนึ่งต้องจ่ายส่วนต่างเพิ่ม 50 หยวนครับ',
+            en: 'Upgrading to first class requires paying a 50 yuan difference.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '师傅您好！因为路上堵车，我没赶上G651次车，请问能改签吗？',
+          pinyin: 'Shīfu nín hǎo! Yīnwèi lùshang dǔchē, wǒ méi gǎnshàng G liù wǔ yāo cì chē, qǐngwèn néng gǎiqiān ma?',
+          th: 'สวัสดีครับพี่! เพราะรถติดบนทาง ผมเลยมาไม่ทันขบวน G651 ขอถามหน่อยเลื่อนตั๋วได้ไหมครับ?',
+          en: 'Hello! Because of traffic jam, I missed train G651, can I reschedule it?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่เคาน์เตอร์ขายตั๋ว 👩‍💼',
+          zh: '可以的！当日其他车次还有票，可以免费改签一次。',
+          pinyin: 'Kěyǐ de! Dāngrì qítā chēcì hái yǒu piào, kěyǐ miǎnfèi gǎiqiān yí cì.',
+          th: 'ได้ค่ะ! เที่ยวอื่นของวันนี้ยังมีตั๋วว่าง สามารถเลื่อนตั๋วฟรีได้ 1 ครั้งค่ะ',
+          en: 'Sure! There are seats on other trains today, you can reschedule once for free.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太好了！我想改签到十点半的G655次车，二等座有票吗？',
+          pinyin: 'Tài hǎo le! Wǒ xiǎng gǎiqiān dào shí diǎn bàn de G liù wǔ wǔ cì chē, èrděngzuò yǒu piào ma?',
+          th: 'ดีจังเลยครับ! ผมอยากเลื่อนไปรอบสิบโมงครึ่ง ขบวน G655 ที่นั่งชั้นสองมีตั๋วไหมครับ?',
+          en: 'Awesome! I want to reschedule to G655 at 10:30, are there second-class seats?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'เจ้าหน้าที่เคาน์เตอร์ขายตั๋ว 👩‍💼',
+          zh: '有票！票已经改好了，不需要补差价，请拿好您的护照！',
+          pinyin: 'Yǒu piào! Piào yǐjīng gǎi hǎo le, bù xūyào bǔ chājià, qǐng ná hǎo nín de hùzhào!',
+          th: 'มีตั๋วค่ะ! ตั๋วเปลี่ยนเสร็จเรียบร้อยแล้ว ไม่ต้องจ่ายส่วนต่างเพิ่ม กรุณาเก็บพาสปอร์ตให้ดีนะคะ!',
+          en: 'Yes! Ticket rescheduled, no extra difference needed, please keep your passport safe!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ตามกฎระเบียบของรถไฟจีน เมื่อคุณ '没赶上' (ตกรถ) ในวันเดินทาง สามารถทำสิ่งใดได้?",
+          options: [
+            'สามารถขอเลื่อนตั๋ว (改签) ไปขบวนอื่นในวันเดียวกันได้ฟรี 1 ครั้ง (หากยังมีที่นั่งว่าง)',
+            'ต้องซื้อตั๋วใหม่ราคาเต็มเสมอ',
+            'ต้องจ่ายค่าปรับ 500 หยวน',
+            'ถูกยกเลิกสิทธิ์เดินทาง 1 ปี'
+          ],
+          correct_index: 0,
+          explanation_th: "การรถไฟจีนอนุญาตให้ผู้โดยสารที่มาไม่ทันรถไฟ ขอเปลี่ยนเที่ยวรถ (改签) ในวันเดียวกันได้ฟรี 1 ครั้งหากมีที่นั่งว่าง",
+          encouragement: 'รู้สิทธิประโยชน์ผู้โดยสารรถไฟจีนอย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ตั๋วรถไฟของท่านเปลี่ยนเสร็จเรียบร้อยแล้ว"',
+          tokens: ['已经', '您的车票', '改好了'],
+          correct_sequence: ['您的车票', '已经', '改好了'],
+          pinyin: 'Nín de chēpiào yǐjīng gǎi hǎo le',
+          meaning_th: 'ตั๋วรถไฟของท่านเปลี่ยนเสร็จเรียบร้อยแล้ว',
+          explanation_th: 'โครงสร้าง: ประธาน (您的车票) + กริยาวิเศษณ์ (已经) + กริยาบอกผล (改好了)',
+          encouragement: 'แม่นยำมาก! ใช้คำเสริมบอกผลลัพธ์ 改好 ได้สมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '晚点' (wándiǎn) ในบริบทการเดินทาง มีความหมายตรงกับภาษาไทยว่าอย่างไร?",
+          options: [
+            'ดีเลย์ / มาช้ากว่ากำหนด',
+            'ออกเดินทางตรงเวลา',
+            'ยกเลิกเที่ยวเดินทาง',
+            'ขายตั๋วหมดแล้ว'
+          ],
+          correct_index: 0,
+          explanation_th: "'晚点' หมายถึง รถไฟหรือเที่ยวบินมาช้ากว่าเวลาที่กำหนดไว้บนตาราง",
+          encouragement: 'จำคำศัพท์สำคัญได้ขึ้นใจแล้ว!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '退' ในคำว่า '退票' (คืนตั๋ว) มีหมวดนำก้าวเดิน '辶' สื่อถึงสิ่งใด?",
+          options: [
+            'การก้าวถอยหลัง / ถอยกลับคืนมา',
+            'การวิ่งไปข้างหน้าอย่างรวดเร็ว',
+            'การหยุดนิ่งอยู่กับที่',
+            'การกระโดดข้ามรั้ว'
+          ],
+          correct_index: 0,
+          explanation_th: "หมวด '辶' เกี่ยวกับการเคลื่อนที่ โดยคำว่า '退' คือ การถอยหลังหรือส่งคืนกลับ",
+          encouragement: 'เข้าใจรากศัพท์ลึกซึ้งมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณมาถึงสถานีรถไฟช้าไป 15 นาทีเพราะแท็กซี่ติดไฟแดง ขบวนรถไฟของคุณเพิ่งออกไป คุณรีบวิ่งไปที่เคาน์เตอร์บริการตั๋ว ต้องการขอเลื่อนไปขบวนถัดไปของวันนี้ ควรพูดว่าอย่างไร?',
+        options: [
+          '师傅不好意思，我没赶上车，请问今天还能改签到下一班吗？ (Shīfu bù hǎoyìsi, wǒ méi gǎnshàng chē, qǐngwèn jīntiān hái néng gǎiqiān dào xià yì bān ma?)',
+          '请给我退钱，我不要去西安了。 (Qǐng gěi wǒ tuì qián, wǒ bú yào qù Xī\'ān le.)',
+          '你的面馆在哪儿？ (Nǐ de miànguǎn zài nǎr?)',
+          '请问可以用现金支付吗？ (Qǐngwèn kěyǐ yòng xiànjīn zhīfù ma?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '师傅不好意思，我没赶上车，请问今天还能改签到下一班吗？' สุภาพ ชี้แจงเหตุผลชัดเจน และถามถึงทางออกที่เป็นไปได้ เจ้าหน้าที่จะช่วยเหลือเปิดตารางหารอบถัดไปให้ทันที",
+        encouragement: 'สุดยอดไหวพริบ! แก้ไขวิกฤติตกรถไฟความเร็วสูงได้อย่างมือโปร!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u13_l03',
+        badge_name: 'ผู้จัดการวิกฤติตั๋วเดินทาง 🔄🎫',
+        message_th: 'ยินดีด้วยนะคนเก่ง! คุณสามารถเลื่อนตั๋ว คืนตั๋ว และรับมือกับเหตุการณ์ไม่คาดฝันในการเดินทางได้อย่างยอดเยี่ยม!',
+        xp_reward: 50
+      }
+    },
+    {
+      lesson_id: 't2_u13_l04',
+      lesson_number: 4,
+      title: {
+        zh: '北京南站紧急改签',
+        th: 'บอสชาเลนจ์: เลื่อนตั๋วด่วนที่สถานีปักกิ่งใต้',
+        en: 'Boss Challenge: Emergency Ticket Rescheduling'
+      },
+      can_do: {
+        th: 'บูรณาการการพูดคุยกับเจ้าหน้าที่เคาน์เตอร์ ยื่นพาสปอร์ต เปลี่ยนตั๋วสำเร็จ และวิ่งไปขึ้นรถไฟทันเวลา 100%',
+        en: 'Integrate counter negotiations, passport validation, successful ticket changes, and catching the train on time'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตบอสใหญ่ เปลี่ยนตั๋วรถไฟความเร็วสูงที่สถานีปักกิ่งใต้สำเร็จ 100%!',
+      vocabulary: [
+        {
+          id: 'hsk2_1319',
+          hanzi: '窗口',
+          pinyin: 'chuāngkǒu',
+          display_pinyin: 'chuāngkǒu',
+          pinyin_tone: 'chuang1kou3',
+          meaning_th: 'เคาน์เตอร์บริการ / ช่องบริการจำหน่ายตั๋ว',
+          meaning_en: 'service window / counter',
+          radical: '穴',
+          radical_name_th: 'หมวดถ้ำ (穴宝盖)',
+          stroke_count: 14,
+          mnemonic: 'ช่องหน้าต่าง (窗) ที่มีปากช่องติดต่อสื่อสาร (口) = ช่องบริการเคาน์เตอร์',
+          kid_mnemonic: 'ช่องกระจกที่มีเจ้าหน้าที่นั่งให้บริการ = 窗口',
+          body_gesture: 'สองมือทำท่ากางกรอบหน้าต่างเคาน์เตอร์บริการ'
+        },
+        {
+          id: 'hsk2_1320',
+          hanzi: '误车',
+          pinyin: 'wùchē',
+          display_pinyin: 'wùchē',
+          pinyin_tone: 'wu4che1',
+          meaning_th: 'ตกรถ / พลาดขบวนรถไฟ',
+          meaning_en: 'miss the train',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 11,
+          mnemonic: 'เกิดความผิดพลาดล่าช้า (误) จนพลาดรถไฟ (车) = ตกรถ',
+          kid_mnemonic: 'วิ่งตามรถไฟแต่ประตู ปิดชึ้บ ตกรถซะแล้ว = 误车',
+          body_gesture: 'ยกมือตบหน้าผากเบาๆ แสดงความเสียดาย'
+        },
+        {
+          id: 'hsk2_1321',
+          hanzi: '赶上',
+          pinyin: 'gǎnshang',
+          display_pinyin: 'gǎnshang',
+          pinyin_tone: 'gan3shang',
+          meaning_th: 'ทันเวลา / วิ่งตามทัน',
+          meaning_en: 'catch up / make it in time',
+          radical: '走',
+          radical_name_th: 'หมวดวิ่ง/เดิน (走字旁)',
+          stroke_count: 10,
+          mnemonic: 'วิ่งไล่กวด (赶) จนกระทั่งก้าวขึ้นไปบนรถได้ทัน (上) = ทันเวลา',
+          kid_mnemonic: 'วิ่งกระหืดกระหอบ ก้าวเท้าขึ้นรถไฟทันพอดี = 赶上',
+          body_gesture: 'กำสองหมัดทำท่าวิ่งสับขาอย่างรวดเร็ว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 赶上 (gǎnshang) ด้วยความตื่นเต้นดีใจ',
+        description_th: 'คำว่า 赶 (gǎn เสียงที่ 3) หนักแน่น ส่วน 上 (shang) ออกเป็นเสียงเบา (Neutral Tone) สั้นๆ เมื่อพูดว่า "赶上了！" แสดงถึงความโล่งอก',
+        example: '终于赶上了！ (Zhōngyú gǎnshang le!)',
+        fun_metaphor: 'วิ่งเหนื่อยแทบแย่ พอแตะขบวนรถปุ๊บก็ถอนหายใจโล่งอก เฮ้อออ ทันแล้ว!',
+        reassurance: 'พูดประโยคนี้พร้อมรอยยิ้มกว้างๆ เมื่อก้าวขึ้นรถไฟสำเร็จ!'
+      },
+      grammar_bite: {
+        title: 'สูตรบอกความโล่งอก: 终于 + [กริยาบอกผล] + 了！',
+        explanation_th: 'ใช้ 终于 (ในที่สุด) คู่กับคำกริยาบอกผลลัพธ์ เช่น 赶上了 (ทันแล้ว) หรือ 改好了 (เปลี่ยนเสร็จแล้ว)',
+        patterns: [
+          {
+            formula: '终于 + 赶上 + [รถไฟ] + 了！',
+            zh: '太好了，终于赶上高铁了！',
+            pinyin: 'Tài hǎo le, zhōngyú gǎnshang gāotiě le!',
+            th: 'ดีจังเลย ในที่สุดก็ขึ้นรถไฟความเร็วสูงทันแล้ว!',
+            en: 'Awesome, finally caught the high-speed train!'
+          },
+          {
+            formula: '请到 + [หมายเลข] + 号窗口办理',
+            zh: '请到7号改签窗口办理。',
+            pinyin: 'Qǐng dào qī hào gǎiqiān chuāngkǒu bànlǐ.',
+            th: 'กรุณาไปติดต่อดำเนินการที่ช่องเลื่อนตั๋วหมายเลข 7 ครับ',
+            en: 'Please proceed to rescheduling window number 7.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'เจ้าหน้าที่ข้อมูลสถานี 💁‍♀️',
+          zh: '先生您好，有什么可以帮您的？',
+          pinyin: 'Xiānsheng nín hǎo, yǒu shénme kěyǐ bāng nín de?',
+          th: 'สวัสดีค่ะคุณผู้ชาย มีอะไรให้ช่วยเหลือไหมคะ?',
+          en: 'Hello sir, how can I help you?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '您好！我误车了，没赶上G651次车，请问应该去哪里改签？',
+          pinyin: 'Nǐn hǎo! Wǒ wùchē le, méi gǎnshàng G liù wǔ yāo cì chē, qǐngwèn yīnggāi qù nǎlǐ gǎiqiān?',
+          th: 'สวัสดีครับ! ผมตกรถ มาไม่ทันขบวน G651 ขอถามหน่อยควรไปเลื่อนตั๋วที่ไหนครับ?',
+          en: 'Hello! I missed train G651, may I ask where should I go to reschedule?'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'เจ้าหน้าที่ข้อมูลสถานี 💁‍♀️',
+          zh: '请拿着护照，往右走去7号人工改签窗口，现在人不多，很快就能办好。',
+          pinyin: 'Qǐng názhe hùzhào, wǎng yòu zǒu qù qī hào réngōng gǎiqiān chuāngkǒu, xiànzài rén bù duō, hěn kuài jiù néng bàn hǎo.',
+          th: 'กรุณาถือพาสปอร์ต เลี้ยวขวาไปที่ช่องบริการเลื่อนตั๋วหมายเลข 7 นะคะ ตอนนี้คนไม่เยอะ แป๊บเดียวก็เสร็จค่ะ',
+          en: 'Please take your passport, walk right to window 7, not many people now, very fast.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '太好了！改好票后我就能赶上下午的会议了，非常感谢您！',
+          pinyin: 'Tài hǎo le! Gǎi hǎo piào hòu wǒ jiù néng gǎnshang xiàwǔ de huìyì le, fēicháng gǎnxiè nín!',
+          th: 'ดีจังเลยครับ! พอเลื่อนตั๋วเสร็จผมก็จะไปทันประชุมช่วงบ่าย ขอบพระคุณมากครับ!',
+          en: 'Great! After rescheduling I can make it to the afternoon meeting, thank you so much!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อต้องการถามเจ้าหน้าที่ว่า 'ช่องเลื่อนตั๋วอยู่ที่ไหน' ควรพูดว่าอย่างไร?",
+          options: [
+            '请问改签窗口在哪里？',
+            '请问洗手间在哪里？',
+            '请问这碗面多少钱？',
+            '请问你是哪国人？'
+          ],
+          correct_index: 0,
+          explanation_th: "'改签窗口在哪里？' แปลว่า เคาน์เตอร์เลื่อนตั๋วอยู่ที่ไหน เป็นคำถามที่สำคัญมากเมื่อตกรถไฟ",
+          encouragement: 'ถูกต้องยอดเยี่ยม! ถามเคาน์เตอร์บริการได้คล่องแคล่ว!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ในที่สุดก็ขึ้นรถไฟความเร็วสูงทันแล้ว"',
+          tokens: ['赶上高铁了', '终于', '太好了'],
+          correct_sequence: ['太好了', '终于', '赶上高铁了'],
+          pinyin: 'Tài hǎo le, zhōngyú gǎnshang gāotiě le',
+          meaning_th: 'ดีจังเลย ในที่สุดก็ขึ้นรถไฟความเร็วสูงทันแล้ว',
+          explanation_th: 'โครงสร้าง: 太好了 (ดีจังเลย) + 终于 (ในที่สุด) + 赶上高铁了 (ขึ้นรถไฟความเร็วสูงทันแล้ว)',
+          encouragement: 'เรียงประโยคแสดงอารมณ์สำเร็จได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '误车' (wùchē) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ตกรถ / พลาดขบวนรถไฟ',
+            'รถไฟชนกัน',
+            'รถไฟวิ่งเร็วมาก',
+            'จองตั๋วรถไฟผิดวัน'
+          ],
+          correct_index: 0,
+          explanation_th: "'误车' คือ การมาไม่ทันเวลาจนตกรถไฟ",
+          encouragement: 'จำคำศัพท์เฉพาะทางได้ขึ้นใจแล้ว!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '赶' (ไล่กวด/ตามให้ทัน) ในคำว่า '赶上' มีหมวดนำใด?",
+          options: [
+            '走 (หมวดวิ่ง/เดิน 走字旁)',
+            '足 (หมวดเท้า 足字旁)',
+            '车 (หมวดรถ 车字旁)',
+            '马 (หมวดม้า 马字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "หมวด '走' สื่อถึงการวิ่งหรือก้าวเดินอย่างรวดเร็วเพื่อให้ทันขบวนรถ",
+          encouragement: 'แม่นยำมาก! สังเกตหมวดนำได้อย่างเฉียบคม!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณมาถึงสถานีรถไฟปักกิ่งใต้สายไป 10 นาที ขบวนรถของคุณออกไปแล้ว คุณรีบเดินไปที่เคาน์เตอร์เลื่อนตั๋วหมายเลข 7 ยื่นพาสปอร์ตให้เจ้าหน้าที่ และต้องการขอเลื่อนไปขบวนถัดไปรอบ 11 โมง ควรพูดว่าอย่างไร?',
+        options: [
+          '您好！我不小心误车了，这是我的护照，请问能帮我改签到上午十一点那一班吗？ (Nǐn hǎo! Wǒ bù xiǎoxīn wùchē le, zhè shì wǒ de hùzhào, qǐngwèn néng bāng wǒ gǎiqiān dào shàngwǔ shíyī diǎn nà yì bān ma?)',
+          '不要买票，太贵了，再见！ (Bú yào mǎi piào, tài guì le, zàijiàn!)',
+          '这个菜里不要放香菜。 (Zhè ge cài lǐ bú yào fàng xiāngcài.)',
+          '多少钱一斤苹果？ (Duōshao qián yì jīn píngguǒ?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '您好！我不小心误车了，这是我的护照，请问能帮我改签到上午十一点那一班吗？' สุภาพ ครบถ้วนทั้งการยอมรับว่าพลาดรถ ยื่นเอกสารพาสปอร์ต และระบุเวลาขบวนใหม่ที่ต้องการ เจ้าหน้าที่จะดำเนินการออกตั๋วใหม่ให้ทันที",
+        encouragement: 'ยินดีด้วย! คุณพิชิตบอสใหญ่ เลื่อนตั๋วรถไฟความเร็วสูงที่ปักกิ่งใต้สำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u13_master',
+        badge_name: 'กัปตันรถไฟความเร็วสูงทั่วแดนจีน 🏆🚄',
+        message_th: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Unit 13 สมบูรณ์แบบ พร้อมเดินทางท่องเที่ยวด้วยรถไฟความเร็วสูงทั่วประเทศจีนคนเดียวได้อย่างมั่นใจ!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

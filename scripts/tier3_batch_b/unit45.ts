@@ -1,0 +1,823 @@
+import { UnitLessonData } from '../../src/types/lesson';
+
+export const unit45Data: UnitLessonData = {
+  unit_id: 'tier3_u45',
+  tier: 3,
+  unit_number: 45,
+  title: {
+    zh: '硕士论文答辩与学术求索',
+    th: 'การสอบป้องกันวิทยานิพนธ์มหาบัณฑิตและการแสวงหาทางวิชาการ',
+    en: "Master's Thesis Defense & Academic Pursuit"
+  },
+  description: 'เตรียมความพร้อมและเผชิญหน้ากับการสอบป้องกันวิทยานิพนธ์ระดับปริญญาโทอย่างมั่นใจ ถ่ายทอดตรรกะทางวิชาการ และใช้สำนวน 全力以赴',
+  lessons: [
+    {
+      lesson_id: 't3_u45_l01',
+      lesson_number: 1,
+      title: {
+        zh: '选题与文献综述',
+        th: 'การเลือกหัวข้อวิจัยและการทบทวนวรรณกรรม',
+        en: 'Research Topic & Literature Review'
+      },
+      can_do: {
+        th: 'อธิบายการกำหนดหัวข้อวิจัย (选题), การทบทวนวรรณกรรม (文献综述), การให้เหตุผลสนับสนุน (论证), จุดเด่นเชิงนวัตกรรม (创新点) และเอกสารอ้างอิง (参考文献)',
+        en: 'Explain topic selection, literature review, theoretical argumentation, research innovations, and references'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สนทนาเรื่องการคัดเลือกหัวข้อวิทยานิพนธ์และการวิเคราะห์วรรณกรรมวิชาการอย่างเป็นระบบ!',
+      vocabulary: [
+        {
+          id: 'hsk3_4501',
+          hanzi: '选题',
+          pinyin: 'xuǎntí',
+          display_pinyin: 'xuǎntí',
+          pinyin_tone: 'xuan3ti2',
+          meaning_th: 'การเลือกหัวข้อวิจัย / การกำหนดหัวข้อศึกษา',
+          meaning_en: 'topic selection / choose a research topic',
+          radical: '辶',
+          radical_name_th: 'หมวดทางเดิน (走之底)',
+          stroke_count: 21,
+          mnemonic: 'คัดเลือก (选) ประเด็นและคำถามวิจัยที่ตรงเป้า (题) = การเลือกหัวข้อวิจัย',
+          kid_mnemonic: 'เดินเลือกหยิบคำถามที่อยากรู้คำตอบมากที่สุดมาทำรายงาน = 选题',
+          body_gesture: 'ชี้นิ้วเลือกหัวข้อบนกระดานด้วยความแน่วแน่'
+        },
+        {
+          id: 'hsk3_4502',
+          hanzi: '文献综述',
+          pinyin: 'wénxiànzōngshù',
+          display_pinyin: 'wénxiàn zōngshù',
+          pinyin_tone: 'wen2xian4zong1shu4',
+          meaning_th: 'การทบทวนวรรณกรรม / การประมวลเอกสารวิชาการ',
+          meaning_en: 'literature review / comprehensive survey',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 27,
+          mnemonic: 'รวบรวมเอกสารวิชาการ (文献) มาร้อยเรียงสรุปสังเคราะห์อย่างเป็นระบบ (综述) = การทบทวนวรรณกรรม',
+          kid_mnemonic: 'หยิบหนังสืองานวิจัยหลายๆ เล่มมาร้อยเรียงสรุปใจความสำคัญ = 文献综述',
+          body_gesture: 'กางสองมือออกแล้วรวบเข้าหากันทำท่าสรุปประมวลผล'
+        },
+        {
+          id: 'hsk3_4503',
+          hanzi: '论证',
+          pinyin: 'lùnzhèng',
+          display_pinyin: 'lùnzhèng',
+          pinyin_tone: 'lun4zheng4',
+          meaning_th: 'การให้เหตุผลเชิงวิชาการ / การพิสูจน์ยืนยันข้อสมมติฐาน',
+          meaning_en: 'argumentation / theoretical demonstration',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 10,
+          mnemonic: 'ใช้ถ้อยคำอภิปราย (论) พร้อมหลักฐานพิสูจน์ยืนยัน (证) = การให้เหตุผลทางวิชาการ',
+          kid_mnemonic: 'พูดคุยชี้แจงพร้อมยกหลักฐานมาประกอบความจริง = 论证',
+          body_gesture: 'ผายมือออกพร้อมพยักหน้าแสดงการพิสูจน์ด้วยเหตุผล'
+        },
+        {
+          id: 'hsk3_4504',
+          hanzi: '创新点',
+          pinyin: 'chuàngxīndiǎn',
+          display_pinyin: 'chuàngxīndiǎn',
+          pinyin_tone: 'chuang4xin1dian3',
+          meaning_th: 'จุดเด่นเชิงนวัตกรรม / องค์ความรู้ใหม่ที่ค้นพบ',
+          meaning_en: 'innovation point / original contribution',
+          radical: '刂',
+          radical_name_th: 'หมวดมีดข้าง (立刀旁)',
+          stroke_count: 22,
+          mnemonic: 'จุดหรือประเด็น (点) ที่ริเริ่มสร้างสรรค์ใหม่ (创新) แตกต่างจากงานเดิม = จุดเด่นเชิงนวัตกรรม',
+          kid_mnemonic: 'หลอดไฟปิ๊งไอเดียใหม่ที่ยังไม่มีใครเคยคิดมาก่อน = 创新点',
+          body_gesture: 'เอานิ้วชี้แตะที่ขมับแล้วชูขึ้นเหมือนหลอดไฟสว่าง'
+        },
+        {
+          id: 'hsk3_4505',
+          hanzi: '参考文献',
+          pinyin: 'cānkǎowénxiàn',
+          display_pinyin: 'cānkǎowénxiàn',
+          pinyin_tone: 'can1kao3wen2xian4',
+          meaning_th: 'เอกสารอ้างอิง / บรรณานุกรมวิชาการ',
+          meaning_en: 'references / bibliography',
+          radical: '厶',
+          radical_name_th: 'หมวดสามเหลี่ยมส่วนตัว (私字儿)',
+          stroke_count: 27,
+          mnemonic: 'เอกสารตำรา (文献) ที่นำมาเปรียบเทียบพิจารณาศึกษาอ้างอิง (参考) = เอกสารอ้างอิง',
+          kid_mnemonic: 'รายการชื่อหนังสือที่เปิดอ่านหาข้อมูลด้านหลังเล่ม = 参考文献',
+          body_gesture: 'ทำมือเปิดพลิกหน้าหนังสือไปดูหน้าสุดท้าย'
+        }
+      ],
+      grammar_bite: {
+        title: 'โครงสร้างเปิดประเด็นวิชาการ: 基于……的基础，深入探讨……',
+        explanation_th: 'โครงสร้างระดับวิชาการที่ใช้เปิดประเด็นในบทนำและระเบียบวิธีวิจัย เพื่อชี้ว่างานวิจัยนี้ต่อยอดมาจากฐานวรรณกรรมเดิมอย่างไร',
+        patterns: [
+          {
+            formula: '基于大量文献综述的基础，深入探讨 + [หัวข้อวิจัย]',
+            zh: '基于大量文献综述的基础，本论文深入探讨了中国传统文化与现代社会的交流发展。',
+            pinyin: 'Jīyú dàliàng wénxiàn zōngshù de jīchǔ, běn lùnwén shēnrù tàntǎole Zhōngguó chuántǒng wénhuà yǔ xiàndài shèhuì de jiāoliú fāzhǎn.',
+            th: 'บนพื้นฐานของการทบทวนวรรณกรรมจำนวนมาก วิทยานิพนธ์ฉบับนี้อภิปรายเจาะลึกถึงการพัฒนาการแลกเปลี่ยนระหว่างวัฒนธรรมดั้งเดิมของจีนกับสังคมสมัยใหม่',
+            en: 'Based on extensive literature review, this thesis deeply explores the exchange and development between traditional Chinese culture and modern society.'
+          },
+          {
+            formula: '基于前期调查的基础，深入探讨 + [ปัญหา/คุณค่า]',
+            zh: '基于前期调查的基础，我们深入探讨了该选题的理论价值与现实意义。',
+            pinyin: 'Jīyú qiánqī diàochá de jīchǔ, wǒmen shēnrù tàntǎole gāi xuǎntí de lǐlùn jiàzhí yǔ xiànshí yìyì.',
+            th: 'บนพื้นฐานของการสำรวจเบื้องต้น พวกเราได้อภิปรายเจาะลึกถึงคุณค่าเชิงทฤษฎีและความหมายเชิงปฏิบัติของหัวข้อวิจัยนี้',
+            en: 'Based on preliminary surveys, we deeply discussed the theoretical value and practical significance of this research topic.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: '李教授 (อาจารย์ที่ปรึกษา) 👨‍🏫',
+          zh: '小王同学，今天我们在大学图书馆开会，认真讨论你的硕士论文选题，准备得怎么样了？',
+          pinyin: 'Xiǎo Wáng tóngxué, jīntiān wǒmen zài dàxué túshūguǎn kāihuì, rènzhēn tǎolùn nǐ de shuòshì lùnwén xuǎntí, zhǔnbèi de zěnmeyàng le?',
+          th: 'นักศึกษาเสี่ยวหวัง วันนี้พวกเราประชุมกันที่ห้องสมุดมหาวิทยาลัย เพื่อหารือการเลือกหัวข้อวิทยานิพนธ์ปริญญาโทของคุณอย่างจริงจัง เตรียมตัวถึงไหนแล้ว?',
+          en: 'Student Xiao Wang, today we meet at the university library to earnestly discuss your master thesis topic selection. How is your preparation going?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '小王 (นักศึกษาปริญญาโท) 🧑‍🎓',
+          zh: '王老师好！在您的热心帮助下，我查阅了大量参考文献，结合中国历史与文化，完成了文献综述。',
+          pinyin: 'Wáng lǎoshī hǎo! Zài nín de rèxīn bāngzhù xià, wǒ cháyuèle dàliàng cānkǎowénxiàn, jiéhé Zhōngguó lìshǐ yǔ wénhuà, wánchéngle wénxiàn zōngshù.',
+          th: 'สวัสดีครับอาจารย์! ด้วยความช่วยเหลืออย่างอบอุ่นของอาจารย์ ผมได้ค้นคว้าเอกสารอ้างอิงจำนวนมาก ผสานประวัติศาสตร์และวัฒนธรรมจีน และทำรายงานทบทวนวรรณกรรมเสร็จสมบูรณ์แล้วครับ',
+          en: 'Hello Professor Wang! With your kind help, I consulted many references, combined Chinese history and culture, and completed the literature review.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: '李教授 (อาจารย์ที่ปรึกษา) 👨‍🏫',
+          zh: '很好！做学术研究必须严谨，选题要明确创新点，通过扎实的证据进行严密论证，才能解决现实问题。',
+          pinyin: 'Hěn hǎo! Zuò xuéshù yánjiū bìxū yánjǐn, xuǎntí yào míngquè chuàngxīndiǎn, tōngguò zhāshi de zhèngjù jìnxíng yánmì lùnzhèng, cáinéng jiějué xiànshí wèntí.',
+          th: 'ดีมาก! การทำงานวิจัยวิชาการต้องรัดกุม การเลือกหัวข้อต้องมีจุดเด่นนวัตกรรมชัดเจน ผ่านการให้เหตุผลที่แน่นหนาด้วยหลักฐานที่มั่นคง จึงจะแก้ไขปัญหาความเป็นจริงได้',
+          en: 'Very good! Academic research must be rigorous; topic selection needs clear innovation points and rigorous argumentation through solid evidence to solve real problems.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '小王 (นักศึกษาปริญญาโท) 🧑‍🎓',
+          zh: '明白！我一定努力工作，明天把修改方案发到您的电子邮箱，非常感谢老师的指导，明天见，再见！',
+          pinyin: 'Míngbai! Wǒ yídìng nǔlì gōngzuò, míngtiān bǎ xiūgǎi fāng’àn fā dào nín de diànzǐ yóuxiāng, fēicháng gǎnxiè lǎoshī de zhǐdǎo, míngtiān jiàn, zàijiàn!',
+          th: 'เข้าใจครับ! ผมจะตั้งใจทำงานอย่างเต็มที่ พรุ่งนี้จะส่งแผนงานแก้ไขไปยังอีเมลของอาจารย์ ขอบพระคุณคำแนะนำของอาจารย์เป็นอย่างยิ่ง พรุ่งนี้พบกัน ลาก่อนครับ!',
+          en: 'Understood! I will definitely work hard and email you the revised plan tomorrow. Thank you so much for your guidance, see you tomorrow, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '文献综述' (wénxiàn zōngshù) หมายถึงขั้นตอนใดในกระบวนการทำงานวิจัย?",
+          options: [
+            'การค้นคว้าและประมวลสรุปผลงานวิจัยและทฤษฎีที่เกี่ยวข้องในอดีต (Literature Review)',
+            'การจัดพิมพ์หนังสือจำหน่ายตามร้านทั่วไป',
+            'การสัมภาษณ์ผู้สมัครเข้าทำงานในบริษัท',
+            'การตรวจข้อสอบวิชาภาษาอังกฤษ'
+          ],
+          correct_index: 0,
+          explanation_th: "'文献综述' คือการรวบรวม สังเคราะห์ และวิพากษ์วรรณกรรมวิชาการที่เกี่ยวข้องเพื่อสร้างฐานทฤษฎีให้กับงานวิจัย",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจคำศัพท์หัวใจของกระบวนการวิจัยทางวิชาการ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "ในวิทยานิพนธ์ระดับบัณฑิตศึกษา '创新点' (chuàngxīndiǎn) มีความสำคัญอย่างไร?",
+          options: [
+            'เป็นจุดเด่นและองค์ความรู้ใหม่ที่ค้นพบ ซึ่งทำให้งานวิจัยมีคุณค่าทางวิชาการ (Original Innovation)',
+            'เป็นจำนวนหน้ากระดาษที่ยาวที่สุดในเล่ม',
+            'เป็นลายเซ็นของเพื่อนร่วมชั้นเรียน',
+            'เป็นราคาค่าจัดพิมพ์เล่มวิทยานิพนธ์'
+          ],
+          correct_index: 0,
+          explanation_th: "'创新点' คือสิ่งใหม่ที่งานวิจัยนี้นำเสนอสู่แวดวงวิชาการ ไม่ว่าจะเป็นแนวคิดใหม่ ข้อมูลใหม่ หรือวิธีการใหม่",
+          encouragement: 'แม่นยำมาก! เข้าใจแก่นแท้ของคุณค่าทางวิชาการระดับสากล!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "วิทยานิพนธ์ต้องมีทั้งการเลือกหัวข้อที่ดีและจุดเด่นเชิงนวัตกรรมที่ชัดเจน"',
+          tokens: ['更要有明确的创新点', '论文要有恰当的选题'],
+          correct_sequence: ['论文要有恰当的选题', '更要有明确的创新点'],
+          pinyin: 'Lùnwén yào yǒu qiàdàng de xuǎntí, gèng yào yǒu míngquè de chuàngxīndiǎn.',
+          meaning_th: 'วิทยานิพนธ์ต้องมีการเลือกหัวข้อที่เหมาะสม และยิ่งต้องมีจุดเด่นนวัตกรรมที่ชัดเจน',
+          explanation_th: 'โครงสร้างเน้นย้ำลำดับขั้น: (论文要有恰当的选题) + (更要有明确的创新点)',
+          encouragement: 'เรียงประโยคเชิงตรรกะทางวิชาการได้อย่างคล่องแคล่ว!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '文献' ใน '综述' ตัว '综' (zōng) มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '纟 (หมวดเส้นไหม 绞丝旁)',
+            '讠 (หมวดคำพูด 言字旁)',
+            '木 (หมวดต้นไม้ 木字旁)',
+            '氵 (หมวดหยดน้ำ 三点水)'
+          ],
+          correct_index: 0,
+          explanation_th: "'综' มีหมวด '纟' (เส้นไหม) ด้านซ้าย เดิมหมายถึงการรวบเส้นไหมหลายเส้นเข้าด้วยกัน สื่อถึงการสังเคราะห์รวบรวม",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรหมวดเส้นไหมได้อย่างยอดเยี่ยม!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u45_l02',
+      lesson_number: 2,
+      title: {
+        zh: '答辩陈述与专家问辩',
+        th: 'การนำเสนอและการตอบข้อซักถามจากคณะกรรมการผู้ทรงคุณวุฒิ',
+        en: 'Defense Presentation & Committee Q&A'
+      },
+      can_do: {
+        th: 'อธิบายการนำเสนอต่อที่ประชุม (陈述), การสอบป้องกันวิทยานิพนธ์ (答辩), การอธิบายขยายความเชิงลึก (阐述), การตอบข้อสงสัย (答疑) และคณะกรรมการผู้ทรงคุณวุฒิ (评委)',
+        en: 'Master oral presentation, defense, in-depth elaboration, Q&A clarification, and committee evaluations'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ฝึกทักษะการนำเสนอผลงานวิจัยและการชี้แจงตอบคำถามผู้เชี่ยวชาญอย่างสง่างาม!',
+      vocabulary: [
+        {
+          id: 'hsk3_4506',
+          hanzi: '陈述',
+          pinyin: 'chénshù',
+          display_pinyin: 'chénshù',
+          pinyin_tone: 'chen2shu4',
+          meaning_th: 'การนำเสนอ / การแถลงชี้แจงอย่างเป็นทางการ',
+          meaning_en: 'presentation / oral statement',
+          radical: '阝',
+          radical_name_th: 'หมวดเนินเขาซ้าย (左耳旁)',
+          stroke_count: 15,
+          mnemonic: 'จัดแจงข้อความเรียงราย (陈) แล้วกล่าวบรรยายออกมา (述) = การแถลงชี้แจงนำเสนอ',
+          kid_mnemonic: 'ยืนหน้าชั้นเรียนพูดบรรยายรายงานที่เตรียมมาอย่างมั่นใจ = 陈述',
+          body_gesture: 'ยืนตรงผายมือสองข้างไปข้างหน้าราวกับกำลังบรรยายสไลด์'
+        },
+        {
+          id: 'hsk3_4507',
+          hanzi: '答辩',
+          pinyin: 'dábiàn',
+          display_pinyin: 'dábiàn',
+          pinyin_tone: 'da2bian4',
+          meaning_th: 'การสอบป้องกันวิทยานิพนธ์ / การชี้แจงโต้ตอบข้อซักถาม',
+          meaning_en: 'oral defense / reply to queries',
+          radical: '竹',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 28,
+          mnemonic: 'ตอบคำถาม (答) พร้อมชี้แจงอภิปรายให้กระจ่างแจ้ง (辩) = การสอบป้องกันวิทยานิพนธ์',
+          kid_mnemonic: 'คณะกรรมการถามคำถาม แล้วเราตอบอธิบายด้วยรอยยิ้มมั่นใจ = 答辩',
+          body_gesture: 'พยักหน้ารับคำถามแล้วยกมือขึ้นอธิบายอย่างฉะฉาน'
+        },
+        {
+          id: 'hsk3_4508',
+          hanzi: '阐述',
+          pinyin: 'chǎnshù',
+          display_pinyin: 'chǎnshù',
+          pinyin_tone: 'chan3shu4',
+          meaning_th: 'การอธิบายขยายความเชิงลึก / การสาธยายให้กระจ่างแจ้ง',
+          meaning_en: 'expound / elaborate thoroughly',
+          radical: '门',
+          radical_name_th: 'หมวดประตู (门字框)',
+          stroke_count: 20,
+          mnemonic: 'เปิดประตูให้ความจริงกระจ่าง (阐) แล้วอธิบายถ่ายทอด (述) = การอธิบายขยายความให้กระจ่าง',
+          kid_mnemonic: 'เปิดประตูห้องให้เห็นข้างในชัดเจน พูดอธิบายทีละขั้นตอน = 阐述',
+          body_gesture: 'กางสองมือออกช้าๆ แสดงการขยายความให้เข้าใจลึกซึ้ง'
+        },
+        {
+          id: 'hsk3_4509',
+          hanzi: '答疑',
+          pinyin: 'dáyí',
+          display_pinyin: 'dáyí',
+          pinyin_tone: 'da2yi2',
+          meaning_th: 'การตอบข้อสงสัย / การชี้แจงคลายความข้องใจ',
+          meaning_en: 'answer queries / resolve doubts',
+          radical: '竹',
+          radical_name_th: 'หมวดไม้ไผ่ (竹字头)',
+          stroke_count: 26,
+          mnemonic: 'ตอบคำตอบที่ถูกต้อง (答) เพื่อคลี่คลายข้อกังขาและสงสัย (疑) = การตอบข้อสงสัย',
+          kid_mnemonic: 'เพื่อนมีคำถามสงสัย เราก็ช่วยอธิบายให้เข้าใจหายข้องใจ = 答疑',
+          body_gesture: 'เอามือแตะคางคิดแล้วชูนิ้วชี้ขึ้นตอบคลายข้อสงสัย'
+        },
+        {
+          id: 'hsk3_4510',
+          hanzi: '评委',
+          pinyin: 'píngwěi',
+          display_pinyin: 'píngwěi',
+          pinyin_tone: 'ping2wei3',
+          meaning_th: 'คณะกรรมการตัดสิน / กรรมการผู้ทรงคุณวุฒิ',
+          meaning_en: 'judge / defense committee member',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 16,
+          mnemonic: 'ผู้ที่ได้รับมอบหมาย (委) ให้มาประเมินและวิจารณ์ให้คะแนน (评) = กรรมการตัดสิน',
+          kid_mnemonic: 'คุณครูหรือผู้เชี่ยวชาญที่นั่งฟังเราพูดแล้วให้คะแนน = 评委',
+          body_gesture: 'ประสานมือไว้ที่หน้าอกทำท่าตั้งใจฟังและพยักหน้าให้คะแนน'
+        }
+      ],
+      grammar_bite: {
+        title: 'โครงสร้างการตอบข้อซักถาม: 针对评委提出的……，本研究进一步阐明……',
+        explanation_th: 'ประโยคแม่แบบระดับสูงในการตอบข้อซักถามในการสอบป้องกันวิทยานิพนธ์ เพื่อแสดงความสุภาพ นอบน้อม และความเชี่ยวชาญในข้อมูล',
+        patterns: [
+          {
+            formula: '针对评委提出的问题，本研究进一步阐明 + [ข้อเท็จจริง/เหตุผล]',
+            zh: '针对评委提出的样本量问题，本研究进一步阐明了数据抽样的科学依据。',
+            pinyin: 'Zhēnduì píngwěi tíchū de yàngběnliàng wèntí, běn yánjiū jìnyíbù chǎnmíngle shùjù chōuyàng de kēxué yījù.',
+            th: 'สืบเนื่องจากประเด็นเรื่องขนาดกลุ่มตัวอย่างที่คณะกรรมการได้ซักถาม งานวิจัยนี้ขออธิบายขยายความเพิ่มเติมถึงหลักเกณฑ์ทางวิทยาศาสตร์ในการสุ่มข้อมูล',
+            en: 'In response to the sample size question raised by the committee, this research further clarifies the scientific basis of data sampling.'
+          },
+          {
+            formula: '针对各位评委的关切，进一步阐述 + [มุมมอง/ทิศทาง]',
+            zh: '针对各位评委的关切，我在此进一步阐述研究模型的实际应用前景。',
+            pinyin: 'Zhēnduì gèwèi píngwěi de guānqiè, wǒ zài cǐ jìnyíbù chǎnshù yánjiū móxíng de shíjì yìngyòng qiánjǐng.',
+            th: 'สืบเนื่องจากข้อสังเกตของคณะกรรมการทุกท่าน ข้าพเจ้าขออธิบายขยายความเพิ่มเติม ณ ที่นี้ถึงแนวโน้มการประยุกต์ใช้โมเดลวิจัยในทางปฏิบัติ',
+            en: 'Regarding the concerns of the committee members, I hereby further elaborate on the practical application prospects of the research model.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: '答辩主席 (ประธานสอบป้องกัน) 👨‍🏫',
+          zh: '各位评委老师和同学大家上午好！欢迎来到会议室，请答辩人准时开始陈述，系统阐明论文的核心观点，时间十五分钟。',
+          pinyin: 'Gèwèi píngwěi lǎoshī hé tóngxué dàjiā shàngwǔ hǎo! Huānyíng lái dào huìyìshì, qǐng dábiànrén zhǔnshí kāishǐ chénshù, xìtǒng chǎnmíng lùnwén de héxīn guāndiǎn, shíjiān shíwǔ fēnzhōng.',
+          th: 'เรียนอาจารย์คณะกรรมการและนักศึกษาทุกท่าน สวัสดีตอนเช้าครับ! ยินดีต้อนรับสู่ห้องประชุม ขอเชิญผู้เข้าสอบป้องกันเริ่มนำเสนอตรงเวลา และอธิบายทัศนะแกนกลางของวิทยานิพนธ์อย่างเป็นระบบในเวลา 15 นาทีครับ',
+          en: 'Good morning respected committee members and students! Welcome to the meeting room. Please have the candidate begin presentation on time, systematically expounding core viewpoints within 15 minutes.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '答辩研究生 (ผู้เข้าสอบป้องกัน) 🧑‍🎓',
+          zh: '尊敬的主席好！今天非常高兴参加硕士答辩，我们克服了许多困难和挑战，我将从选题背景、文献综述、创新点和研究结论展开阐述。',
+          pinyin: 'Zūnjìng de zhǔxí hǎo! Jīntiān fēicháng gāoxìng cānjiā shuòshì dábiàn, wǒmen kèfúle xǔduō kùnnan hé tiǎozhàn, wǒ jiāng cóng xuǎntí bèijǐng, wénxiàn zōngshù, chuàngxīndiǎn hé yánjiū jiélùn zhǎnkāi chǎnshù.',
+          th: 'กราบเรียนท่านประธาน! วันนี้มีความยินดีเป็นอย่างยิ่งที่ได้เข้าร่วมการสอบป้องกันวิทยานิพนธ์มหาบัณฑิต พวกเราได้ฟันฝ่าความยากลำบากและความท้าทายมากมาย ผมจะขออธิบายขยายความจากภูมิหลังการเลือกหัวข้อ การทบทวนวรรณกรรม จุดเด่นนวัตกรรม และบทสรุปการวิจัยครับ',
+          en: 'Respected chair! I am very glad to attend the master defense today. We overcame many difficulties and challenges. I will expound from background, literature review, innovations, and conclusions.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: '评委老师 (อาจารย์กรรมการ) 👩‍🏫',
+          zh: '陈述逻辑很清楚！大家十分赞同你的观点。现在进入专家答疑环节，请针对论文中的传统文化对比数据做进一步补充说明。',
+          pinyin: 'Chénshù luóji hěn qīngchu! Dàjiā shífēn zàntóng nǐ de guāndiǎn. Xiànzài jìnrù zhuānjiā dáyí huánjié, qǐng zhēnduì lùnwén zhōng de chuántǒng wénhuà duìbǐ shùjù zuò jìnyíbù bǔchōng shuōmíng.',
+          th: 'การนำเสนอตรรกะชัดเจนมาก! ทุกคนเห็นพ้องต้องกันกับทัศนะของคุณเป็นอย่างยิ่ง ตอนนี้เข้าสู่ช่วงตอบข้อซักถามจากผู้เชี่ยวชาญ กรุณาชี้แจงข้อมูลเปรียบเทียบวัฒนธรรมดั้งเดิมในวิทยานิพนธ์เพิ่มเติมครับ',
+          en: 'The logic is very clear! Everyone strongly agrees with your viewpoint. Now entering expert Q&A. Please provide further clarification on comparative cultural data.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '答辩研究生 (ผู้เข้าสอบป้องกัน) 🧑‍🎓',
+          zh: '感谢评委老师提出的宝贵问题！我们团队认真研究并严密论证了这一问题，达成共识，非常感谢各位老师，再见！',
+          pinyin: 'Gǎnxiè píngwěi lǎoshī tíchū de bǎoguì wèntí! Wǒmen tuánduì rènzhēn yánjiū bìng yánmì lùnzhèngle zhè yí gè wèntí, dáchéng gòngshí, fēicháng gǎnxiè gèwèi lǎoshī, zàijiàn!',
+          th: 'ขอบพระคุณคำถามอันมีค่ายิ่งจากท่านอาจารย์กรรมการ! ทีมงานของพวกเราได้ศึกษาอย่างตั้งใจและให้เหตุผลพิสูจน์ยืนยันอย่างรัดกุมจนบรรลุฉันทามติต่อประเด็นนี้ ขอบพระคุณอาจารย์ทุกท่าน ลาก่อนครับ!',
+          en: 'Thank you for the question, professor! Our team earnestly researched and demonstrated this issue, reaching consensus. Thank you all, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "ในห้องสอบป้องกันวิทยานิพนธ์ คำว่า '答辩' (dábiàn) มีความหมายตรงกับข้อใดมากที่สุด?",
+          options: [
+            'การนำเสนอและแถลงชี้แจงเพื่อป้องกันและยืนยันความถูกต้องของงานวิจัยต่อคณะกรรมการ (Thesis Oral Defense)',
+            'การเขียนจดหมายร้องเรียนต่อฝ่ายบริหาร',
+            'การโต้เถียงกันด้วยความโกรธในที่สาธารณะ',
+            'การอ่านหนังสือคนเดียวในห้องสมุด'
+          ],
+          correct_index: 0,
+          explanation_th: "'答辩' คือการสอบปากเปล่าเพื่อปกป้องและชี้แจงความสมบูรณ์ถูกต้องของวิทยานิพนธ์ต่อหน้าคณะกรรมการผู้ทรงคุณวุฒิ",
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจความหมายของการสอบปากเปล่าวิทยานิพนธ์ระดับบัณฑิตศึกษา!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '阐述' (chǎnshù) แตกต่างจากการพูดคุยทั่วไปอย่างไร?",
+          options: [
+            'เป็นการอธิบายชี้แจงอย่างมีโครงสร้าง ตรรกะ และรายละเอียดที่ลึกซึ้งเป็นระบบ (Systematic Elaboration)',
+            'เป็นการกระซิบคุยกันเบาๆ',
+            'เป็นการพูดคุยเรื่องตลกไร้สาระ',
+            'เป็นการส่งข้อความทักทายสั้นๆ'
+          ],
+          correct_index: 0,
+          explanation_th: "'阐述' เป็นคำศัพท์ระดับทางการ หมายถึงการสาธยายขยายความให้ประเด็นกระจ่างแจ้งด้วยตรรกะและเหตุผล",
+          encouragement: 'ถูกต้องแม่นยำ! สามารถแยกแยะคำศัพท์วิชาการชั้นสูงได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ผู้เข้าสอบได้นำเสนอผลงานวิจัยอย่างเป็นระบบต่อหน้าคณะกรรมการ"',
+          tokens: ['在评委面前', '答辩人系统地陈述了研究成果'],
+          correct_sequence: ['答辩人系统地陈述了研究成果', '在评委面前'],
+          pinyin: 'Dábiànrén xìtǒng de chénshùle yánjiū chéngguǒ zài píngwěi miànqián.',
+          meaning_th: 'ผู้เข้าสอบได้นำเสนอผลงานวิจัยอย่างเป็นระบบต่อหน้าคณะกรรมการ',
+          explanation_th: 'โครงสร้างประโยค: (答辩人系统地陈述了研究成果) + (在评委面前)',
+          encouragement: 'ประกอบประโยคบรรยายบรรยากาศการสอบวิทยานิพนธ์ได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '评委' ตัว '评' (píng - ประเมิน/วิจารณ์) มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '讠 (หมวดคำพูด 言字旁)',
+            '彳 (หมวดก้าวเดิน 双人旁)',
+            '扌 (หมวดมือ 提手旁)',
+            '宀 (หมวดหลังคา 宝盖头)'
+          ],
+          correct_index: 0,
+          explanation_th: "'评' มีหมวด '讠' (言字旁) สื่อถึงการใช้คำพูดในการแสดงความเห็น วิจารณ์ หรือประเมินค่า",
+          encouragement: 'วิเคราะห์หมวดคำพูดได้อย่างแม่นยำไร้ที่ติ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u45_l03',
+      lesson_number: 3,
+      title: {
+        zh: '学术严谨与结论展望',
+        th: 'ความเคร่งครัดทางวิชาการและบทสรุปทัศนะสู่อนาคต',
+        en: 'Academic Rigor & Forward Outlook'
+      },
+      can_do: {
+        th: 'อธิบายความเคร่งครัดรัดกุม (严谨), ตรรกะและเหตุผล (逻辑), ข้อจำกัดของการวิจัย (局限性), คำกล่าวขอบคุณ (致谢) และสำนวน ทุ่มเทสุดกำลัง (全力以赴)',
+        en: 'Master academic rigor, logical reasoning, research limitations, acknowledgments, and idiom Quán Lì Yǐ Fù'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ถ่ายทอดความถ่อมตนทางวิชาการ ยอมรับข้อจำกัด และใช้สำนวน 全力以赴 ได้อย่างคล่องแคล่ว!',
+      vocabulary: [
+        {
+          id: 'hsk3_4511',
+          hanzi: '严谨',
+          pinyin: 'yánjǐn',
+          display_pinyin: 'yánjǐn',
+          pinyin_tone: 'yan2jin3',
+          meaning_th: 'เคร่งครัดรัดกุม / ละเอียดรอบคอบตามมาตรฐานวิชาการ',
+          meaning_en: 'rigorous / meticulous',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 19,
+          mnemonic: 'เข้มงวดจริงจัง (严) และระมัดระวังรอบคอบไม่ให้มีข้อผิดพลาด (谨) = เคร่งครัดรัดกุม',
+          kid_mnemonic: 'ตรวจทานตัวเลขและข้อความซ้ำแล้วซ้ำเล่าให้เป๊ะที่สุด = 严谨',
+          body_gesture: 'สองมือทำท่าปรับเนกไทให้ตรงเป๊ะแสดงความเนี้ยบรัดกุม'
+        },
+        {
+          id: 'hsk3_4512',
+          hanzi: '逻辑',
+          pinyin: 'luóji',
+          display_pinyin: 'luóji',
+          pinyin_tone: 'luo2ji2',
+          meaning_th: 'ตรรกะ / ความสมเหตุสมผลเชิงตรรกศาสตร์',
+          meaning_en: 'logic / reasoning',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 23,
+          mnemonic: 'ร้อยเรียงความคิดเป็นสายใยต่อเนื่อง (逻) มีลำดับขั้นตอน (辑) = ตรรกะและเหตุผล',
+          kid_mnemonic: 'ต่อจิ๊กซอว์ทีละชิ้นตามลำดับเรื่องราวอย่างถูกต้อง = 逻辑',
+          body_gesture: 'ใช้นิ้วชี้สองข้างแตะกันเป็นข้อต่อลูกโซ่ต่อเนื่อง'
+        },
+        {
+          id: 'hsk3_4513',
+          hanzi: '局限性',
+          pinyin: 'júxiànxìng',
+          display_pinyin: 'júxiànxìng',
+          pinyin_tone: 'ju2xian4xing4',
+          meaning_th: 'ข้อจำกัด / ขอบเขตจำกัดของงานวิจัย',
+          meaning_en: 'limitation / bounded constraint',
+          radical: '尸',
+          radical_name_th: 'หมวดศพหรือโครงร่าง (尸字头)',
+          stroke_count: 23,
+          mnemonic: 'ขอบเขตที่ถูกจำกัดไว้ (局限) ด้วยธรรมชาติหรือเงื่อนไข (性) = ข้อจำกัดของงานวิจัย',
+          kid_mnemonic: 'กรอบสี่เหลี่ยมที่บอกว่าการทดลองนี้ทำได้แค่ในห้องทดลอง = 局限性',
+          body_gesture: 'กางสองมือออกเป็นกรอบจำกัดแสดงว่ามีขอบเขต'
+        },
+        {
+          id: 'hsk3_4514',
+          hanzi: '致谢',
+          pinyin: 'zhìxiè',
+          display_pinyin: 'zhìxiè',
+          pinyin_tone: 'zhi4xie4',
+          meaning_th: 'กิตติกรรมประกาศ / คำขอบคุณผู้มีอุปการคุณ',
+          meaning_en: 'acknowledgments / express gratitude',
+          radical: '至',
+          radical_name_th: 'หมวดมาถึง (至字旁)',
+          stroke_count: 18,
+          mnemonic: 'ส่งมอบความรู้สึกจากใจจริง (致) เพื่อขอบพระคุณ (谢) ครูบาอาจารย์และครอบครัว = กิตติกรรมประกาศ',
+          kid_mnemonic: 'โค้งคำนับกล่าวขอบคุณคุณพ่อคุณแม่และอาจารย์ที่คอยสนับสนุน = 致谢',
+          body_gesture: 'ประสานมือก้มศีรษะลงเล็กน้อยด้วยความกตัญญูและซาบซึ้ง'
+        },
+        {
+          id: 'hsk3_4515',
+          hanzi: '全力以赴',
+          pinyin: 'quánlìyǐfù',
+          display_pinyin: 'quán lì yǐ fù',
+          pinyin_tone: 'quan2li4yi3fu4',
+          meaning_th: 'ทุ่มเทสุดกำลัง / ทำเต็มที่ด้วยสรรพกำลังที่มี (สำนวน成语)',
+          meaning_en: 'go all out / spare no effort (idiom)',
+          radical: '人',
+          radical_name_th: 'หมวดคน (人字头)',
+          stroke_count: 20,
+          mnemonic: 'รวบรวมกำลังทั้งหมดทั้งมวล (全力) มุ่งหน้าไปข้างหน้าให้ถึงเป้าหมาย (以赴) = ทุ่มเทสุดกำลัง',
+          kid_mnemonic: 'นักวิ่งออกแรงวิ่งสุดฝีเท้าจนเข้าเส้นชัย = 全力以赴',
+          body_gesture: 'กำหมัดสองข้างแน่นดึงเข้าหาเอวด้วยพลังมุ่งมั่นเต็มร้อย'
+        }
+      ],
+      grammar_bite: {
+        title: 'โครงสร้างการยอมรับข้อจำกัด: 尽管存在……的局限性，但我们全力以赴……',
+        explanation_th: 'โครงสร้างที่แสดงความรอบคอบและความถ่อมตนทางวิชาการ ชี้ข้อจำกัดอย่างตรงไปตรงมา ควบคู่กับการยืนยันความทุ่มเทอย่างเต็มที่',
+        patterns: [
+          {
+            formula: '尽管存在……的局限性，但我们全力以赴 + [เป้าหมายการแก้ปัญหา]',
+            zh: '尽管存在实验样本量较小的局限性，但研究团队全力以赴确保了数据的真实性。',
+            pinyin: 'Jǐnguǎn cúnzài shíyàn yàngběnliàng jiào xiǎo de júxiànxìng, dàn yánjiū tuánduì quánlìyǐfù quèbǎole shùjù de zhēnshíxìng.',
+            th: 'แม้ว่าจะมีข้อจำกัดเรื่องขนาดกลุ่มตัวอย่างทดลองที่ค่อนข้างเล็ก แต่ทีมวิจัยได้ทุ่มเทสุดกำลังเพื่อรับประกันความเที่ยงตรงแท้จริงของข้อมูล',
+            en: 'Although bounded by the limitation of a small sample size, the research team spared no effort to ensure data authenticity.'
+          },
+          {
+            formula: '尽管时间有限，但在……中全力以赴',
+            zh: '尽管时间有限，但他在论文写作中全力以赴，保证了逻辑的严谨。',
+            pinyin: 'Jǐnguǎn shíjiān yǒuxiàn, dàn tā zài lùnwén xiězuò zhōng quánlìyǐfù, bǎozhèngle luóji de yánjǐn.',
+            th: 'แม้ว่าเวลาจะมีจำกัด แต่เขาได้ทุ่มเทสุดกำลังในการเขียนวิทยานิพนธ์ เพื่อรับประกันความรัดกุมของตรรกะ',
+            en: 'Although time was limited, he spared no effort in writing the thesis to ensure logical rigor.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: '评委老师 (อาจารย์กรรมการ) 👨‍🏫',
+          zh: '论文的结论写得很深刻，但从学术严谨的角度来看，你认为这项研究最大的局限性是什么？',
+          pinyin: 'Lùnwén de jiélùn xiě de hěn shēnkè, dàn cóng xuéshù yánjǐn de jiǎodù lái kàn, nǐ rènwéi zhè xiàng yánjiū zuìdà de júxiànxìng shì shénme?',
+          th: 'ส่วนสรุปของวิทยานิพนธ์เขียนได้ลึกซึ้งมาก แต่มองจากมุมมองความรัดกุมทางวิชาการ คุณคิดว่าข้อจำกัดที่ใหญ่ที่สุดของงานวิจัยชิ้นนี้คืออะไร?',
+          en: 'The conclusion section is written very deeply, but from the perspective of academic rigor, what do you think is the biggest limitation of this research?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '研究生 (นักศึกษา) 🧑‍🎓',
+          zh: '老师说得对！因为调查时间有限，本研究在逻辑推导和普遍适用性上存在局限性，未来需要进一步完善。',
+          pinyin: 'Lǎoshī shuō de duì! Yīnwèi diàochá shíjiān yǒuxiàn, běn yánjiū zài luóji tuīdǎo hé pǔbiàn shìyòngxìng shàng cúnzài júxiànxìng, wèilái xūyào jìnyíbù wánshàn.',
+          th: 'อาจารย์กล่าวได้ถูกต้องครับ! เนื่องจากเวลาสำรวจมีจำกัด งานวิจัยนี้จึงมีข้อจำกัดด้านการอนุมานตรรกะและการประยุกต์ใช้ทั่วไป ในอนาคตจำเป็นต้องพัฒนาต่อไปครับ',
+          en: 'You are right, professor! Because survey time was limited, this study has limitations in logical inference and generalizability, needing future improvement.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: '评委老师 (อาจารย์กรรมการ) 👨‍🏫',
+          zh: '态度非常诚恳严谨！能清醒看到局限性，正是科学家和优秀学者必须坚持的学术精神。',
+          pinyin: 'Tàidù fēicháng chéngkěn yánjǐn! Néng qīngxǐng kàndào júxiànxìng, zhèngshì kēxuéjiā hé yòuxiù xuézhě bìxū jiānchí de xuéshù jīngshén.',
+          th: 'ทัศนคติจริงใจและรัดกุมมาก! การมองเห็นข้อจำกัดได้อย่างกระจ่างชัด คือจิตวิญญาณทางวิชาการที่นักวิทยาศาสตร์และนักวิชาการชั้นยอดต้องยึดมั่น',
+          en: 'Very sincere and rigorous attitude! Being clearly aware of limitations is precisely the academic spirit that scientists and top scholars must adhere to.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '研究生 (นักศึกษา) 🧑‍🎓',
+          zh: '在论文最后的致谢部分，我要向各位老师致谢！正是大家的关怀激励我全力以赴，非常感谢，再见！',
+          pinyin: 'Zài lùnwén zuìhòu de zhìxiè bùfen, wǒ yào xiàng gèwèi lǎoshī zhìxiè! Zhèngshì dàjiā de guānhuái jīlì wǒ quánlìyǐfù, fēicháng gǎnxiè, zàijiàn!',
+          th: 'ในส่วนกิตติกรรมประกาศท้ายเล่มวิทยานิพนธ์ ผมขอขอบพระคุณอาจารย์ทุกท่าน! ความห่วงใยของทุกคนคือพลังให้ผมทุ่มเทสุดกำลัง ขอบพระคุณมากครับ ลาก่อนครับ!',
+          en: 'In the acknowledgments section at the end of the thesis, I want to thank all professors! It was everyone’s care that inspired me to spare no effort. Thank you, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '全力以赴' (quán lì yǐ fù) มีความหมายตรงกับพฤติกรรมใด?",
+          options: [
+            'การทุ่มเทสรรพกำลัง ความสามารถ และความพยายามทั้งหมดที่มีเพื่อบรรลุเป้าหมาย (Going all out)',
+            'การทำบ้างหยุดบ้างตามอารมณ์',
+            'การทอดทิ้งงานกลางคันเมื่อเจอปัญหา',
+            'การให้ผู้อื่นทำงานแทนโดยตนเองนั่งรอเฉยๆ'
+          ],
+          correct_index: 0,
+          explanation_th: "'全力以赴' หมายถึงการระดมพละกำลังและสติปัญญาทั้งหมดที่มีเพื่อพุ่งตรงไปสู่เป้าหมายอย่างไม่ย่อท้อ",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เข้าใจจิตวิญญาณแห่งความทุ่มเทมุ่งมั่นอันแรงกล้า!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '严谨' (yánjǐn) เป็นคุณลักษณะสำคัญของสิ่งใด?",
+          options: [
+            'ทัศนคติการทำงานทางวิชาการและการวิจัยที่รอบคอบ รัดกุม ปราศจากความประมาท (Academic Rigor)',
+            'การแต่งกายตามแฟชั่นสมัยใหม่',
+            'การเลือกซื้ออาหารที่มีราคาแพง',
+            'การพูดเสียงดังในที่สาธารณะ'
+          ],
+          correct_index: 0,
+          explanation_th: "'严谨' เป็นหัวใจสำคัญของงานวิชาการ หมายถึงความมีระเบียบ ละเอียดรอบคอบ และเคารพความจริงเชิงประจักษ์",
+          encouragement: 'ยอดเยี่ยมมาก! ซึมซับคุณธรรมของนักวิชาการชั้นยอดได้อย่างแท้จริง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ไม่ว่าจะเผชิญกับอุปสรรคใด พวกเราล้วนทุ่มเทสุดกำลังเพื่อทำงานวิจัยให้สำเร็จ"',
+          tokens: ['我们都全力以赴完成研究', '无论面对什么困难'],
+          correct_sequence: ['无论面对什么困难', '我们都全力以赴完成研究'],
+          pinyin: 'Wúlùn miànduì shénme kùnnan, wǒmen dōu quánlìyǐfù wánchéng yánjiū.',
+          meaning_th: 'ไม่ว่าจะเผชิญกับความยากลำบากใด พวกเราล้วนทุ่มเทสุดกำลังเพื่อทำงานวิจัยให้สำเร็จ',
+          explanation_th: 'โครงสร้างเงื่อนไข: (无论面对什么困难) + (我们都全力以赴完成研究)',
+          encouragement: 'ประกอบประโยคสำนวน 全力以赴 ได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '致谢' ตัว '致' (zhì - ส่งมอบ/มุ่งสู่) มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '至 (หมวดมาถึง 至字旁)',
+            '攵 (หมวดเคาะตี 反文旁)',
+            '方 (หมวดทิศทาง 方字旁)',
+            '矢 (หมวดลูกศร 矢字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'致' มีหมวด '至' (มาถึง) ทางซ้าย และมี '攵' (การกระทำ) ทางขวา รวมกันสื่อถึงการส่งมอบความรู้สึกให้ไปถึงผู้รับ",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรหมวด 至 ได้อย่างเฉียบแหลม!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't3_u45_l04',
+      lesson_number: 4,
+      title: {
+        zh: '顺利通过与前程似锦',
+        th: 'สอบผ่านอย่างราบรื่นและความสำเร็จสู่อนาคตอันรุ่งโรจน์',
+        en: 'Successful Defense & Bright Future Ahead'
+      },
+      can_do: {
+        th: 'อธิบายการสำเร็จการศึกษา (毕业), การสอบป้องกันผ่านอย่างราบรื่น (答辩通过), ผลลัพธ์อันอุดมสมบูรณ์ (硕果累累), อนาคตสดใสรุ่งโรจน์ (前程似锦) และการสืบสานองค์ความรู้ (传承)',
+        en: 'Celebrate graduation, passing defense, fruitful achievements, splendid future prospects, and knowledge inheritance'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ฉลองความสำเร็จแห่งบัณฑิตศึกษา ส่งมอบคำอวยพรอันเป็นมงคล และพิชิต Grand Boss Challenge แห่ง Tier 3!',
+      vocabulary: [
+        {
+          id: 'hsk3_4516',
+          hanzi: '毕业',
+          pinyin: 'bìyè',
+          display_pinyin: 'bìyè',
+          pinyin_tone: 'bi4ye4',
+          meaning_th: 'สำเร็จการศึกษา / เรียนจบหลักสูตร',
+          meaning_en: 'graduation / graduate',
+          radical: '十',
+          radical_name_th: 'หมวดเลขสิบ (十字头)',
+          stroke_count: 16,
+          mnemonic: 'หลักสูตรวิชาการ (业) ได้ดำเนินมาจนเสร็จสิ้นสมบูรณ์ (毕) = สำเร็จการศึกษา',
+          kid_mnemonic: 'สวมชุดครุยหมวกปริญญารับใบประกาศนียบัตร = 毕业',
+          body_gesture: 'ทำท่าโยนหมวกปริญญาขึ้นสู่ท้องฟ้าด้วยความปลาบปลื้มยินดี'
+        },
+        {
+          id: 'hsk3_4517',
+          hanzi: '答辩通过',
+          pinyin: 'dábiàntōngguò',
+          display_pinyin: 'dábiàn tōngguò',
+          pinyin_tone: 'da2bian4tong1guo4',
+          meaning_th: 'สอบป้องกันวิทยานิพนธ์ผ่าน / ผ่านการประเมินวิทยานิพนธ์',
+          meaning_en: 'pass the thesis defense',
+          radical: '辶',
+          radical_name_th: 'หมวดทางเดิน (走之底)',
+          stroke_count: 38,
+          mnemonic: 'การสอบปากเปล่าชี้แจง (答辩) ได้รับมติเห็นชอบให้ผ่านฉลุย (通过) = สอบป้องกันผ่าน',
+          kid_mnemonic: 'คณะกรรมการเซ็นชื่ออนุมัติในเอกสารให้ผ่านฉลุย = 答辩通过',
+          body_gesture: 'ชูสองนิ้วส่งยิ้มกว้างด้วยความสุขและโล่งใจ'
+        },
+        {
+          id: 'hsk3_4518',
+          hanzi: '硕果累累',
+          pinyin: 'shuòguǒlěilěi',
+          display_pinyin: 'shuòguǒ lěilěi',
+          pinyin_tone: 'shuo4guo3lei3lei3',
+          meaning_th: 'ผลลัพธ์ดกหนาอุดมสมบูรณ์ / ประสบความสำเร็จงดงามมากมาย (สำนวน成语)',
+          meaning_en: 'fruitful achievements / abundant results (idiom)',
+          radical: '石',
+          radical_name_th: 'หมวดหิน (石字旁)',
+          stroke_count: 41,
+          mnemonic: 'ผลไม้อันใหญ่โตและงดงาม (硕果) ออกผลซ้อนทับกันดกหนาเต็มต้น (累累) = ผลลัพธ์อุดมสมบูรณ์',
+          kid_mnemonic: 'ต้นแอปเปิลที่มีผลสุกสีแดงเต็มต้นจนกิ่งโน้ม = 硕果累累',
+          body_gesture: 'กางสองแขนโอบผลผลิตแห่งความสำเร็จอันยิ่งใหญ่ไว้แนบอก'
+        },
+        {
+          id: 'hsk3_4519',
+          hanzi: '前程似锦',
+          pinyin: 'qiánchéngsìjǐn',
+          display_pinyin: 'qiánchéng sì jǐn',
+          pinyin_tone: 'qian2cheng2si4jin3',
+          meaning_th: 'อนาคตสดใสรุ่งโรจน์ดุจแพรไหม (คำอวยพรมงคล成语)',
+          meaning_en: 'bright future like brocade / splendid prospects (idiom)',
+          radical: '钅',
+          radical_name_th: 'หมวดโลหะ (金字旁)',
+          stroke_count: 42,
+          mnemonic: 'เส้นทางข้างหน้าในอนาคต (前程) สวยงามประณีตดั่งผ้าไหมปักทอง (似锦) = อนาคตรุ่งโรจน์',
+          kid_mnemonic: 'พรมแดงปักดิ้นทองปูทอดยาวสู่อนาคตอันสดใส = 前程似锦',
+          body_gesture: 'ผายมือชี้ไปข้างหน้าสู่ขอบฟ้ากว้างไกลเปี่ยมด้วยความหวัง'
+        },
+        {
+          id: 'hsk3_4520',
+          hanzi: '传承',
+          pinyin: 'chuánchéng',
+          display_pinyin: 'chuánchéng',
+          pinyin_tone: 'chuan2cheng2',
+          meaning_th: 'การสืบทอด / การส่งต่อองค์ความรู้และจิตวิญญาณสู่รุ่นต่อไป',
+          meaning_en: 'inheritance / carry forward',
+          radical: '亻',
+          radical_name_th: 'หมวดคนยืน (单人旁)',
+          stroke_count: 14,
+          mnemonic: 'ส่งต่อถ่ายทอดข้ามรุ่น (传) และรับสืบสานอย่างมั่นคง (承) = การสืบทอดมรดกทางปัญญา',
+          kid_mnemonic: 'ส่งคบเพลิงไฟสว่างจากรุ่นพี่สู่รุ่นน้อง = 传承',
+          body_gesture: 'สองมือทำท่ายื่นส่งมอบคบเพลิงแห่งปัญญาไปข้างหน้า'
+        }
+      ],
+      grammar_bite: {
+        title: 'โครงสร้างสรุปความสำเร็จ: 历经……，不仅……更……',
+        explanation_th: 'โครงสร้างสรุปความสำเร็จขั้นสูงหลังจากผ่านความยากลำบาก สะท้อนการเติบโตทั้งด้านสติปัญญาและจิตใจ',
+        patterns: [
+          {
+            formula: '历经数年的努力，不仅……更……',
+            zh: '历经数年的刻苦钻研，他不仅顺利答辩通过，更在国际期刊发表了重要论文。',
+            pinyin: 'Lìjīng shù nián de kèkǔ zuānyán, tā bùjǐn shùnlì dábiàn tōngguò, gèng zài guójì qīkān fābiǎole zhòngyào lùnwén.',
+            th: 'หลังจากผ่านการค้นคว้าอย่างทรหดมานานหลายปี เขาไม่เพียงสอบผ่านการป้องกันวิทยานิพนธ์อย่างราบรื่น ยิ่งไปกว่านั้นยังได้ตีพิมพ์บทความสำคัญในวารสารนานาชาติอีกด้วย',
+            en: 'Having gone through years of painstaking research, he not only smoothly passed the defense, but even published important papers in international journals.'
+          },
+          {
+            formula: '历经磨砺，不仅收获了……，更体会到……',
+            zh: '历经论文写作的磨砺，同学们不仅收获了学术知识，更深刻体会到传承的精神。',
+            pinyin: 'Lìjīng lùnwén xiězuò de mólì, tóngxuémen bùjǐn shōuhuòle xuéshù zhīshi, gèng shēnkè tǐhuì dào chuánchéng de jīngshén.',
+            th: 'หลังจากผ่านการเคี่ยวกรำของการเขียนวิทยานิพนธ์ เหล่านักศึกษาไม่เพียงเก็บเกี่ยวความรู้ทางวิชาการ ยิ่งไปกว่านั้นยังซาบซึ้งถึงจิตวิญญาณแห่งการสืบทอด',
+            en: 'Having gone through the trials of thesis writing, students not only gained academic knowledge, but even more deeply appreciated the spirit of heritage.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: '答辩委员会主席 👨‍🏫',
+          zh: '各位老师同学好！经答辩委员会表决，一致同意小王同学答辩通过，祝贺你顺利毕业！',
+          pinyin: 'Gèwèi lǎoshī tóngxué hǎo! Jīng dábiàn wěiyuánhuì biǎojué, yízhì tóngyì Xiǎo Wáng tóngxué dábiàn tōngguò, zhùhè nǐ shùnlì bìyè!',
+          th: 'เรียนอาจารย์และนักศึกษาทุกท่าน! ผ่านการลงมติของคณะกรรมการสอบป้องกัน มีมติเป็นเอกฉันท์ให้คุณเสี่ยวหวังสอบผ่านการป้องกันวิทยานิพนธ์ ขอแสดงความยินดีที่สำเร็จการศึกษาอย่างราบรื่นครับ!',
+          en: 'Hello teachers and students! By committee vote, it is unanimously agreed that student Xiao Wang passed the thesis defense. Congratulations on graduating smoothly!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '小王 (มหาบัณฑิตใหม่) 🧑‍🎓',
+          zh: '太高兴了！这三年在学校里认真学习研究，得到了老师和朋友们的热情帮助，收获了硕果累累！',
+          pinyin: 'Tài gāoxìng le! Zhè sān nián zài xuéxiào lǐ rènzhēn xuéxí yánjiū, dédàole lǎoshī hé péngyoumen de rèqíng bāngzhù, shōuhuòle shuòguǒlěilěi!',
+          th: 'ดีใจมากเลยครับ! ตลอดสามปีนี้ที่ได้ตั้งใจเรียนและทำงานวิจัยในมหาวิทยาลัย ได้รับความช่วยเหลืออย่างอบอุ่นจากอาจารย์และเพื่อนๆ ทำให้เก็บเกี่ยวผลลัพธ์อันอุดมสมบูรณ์!',
+          en: 'I am so happy! Studying and researching diligently in university these three years, receiving warm help from teachers and friends, I reaped fruitful results!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: '导师王老师 👨‍🏫',
+          zh: '祝贺你顺利毕业！希望你在未来的工作和生活中前程似锦，不忘初心，将优秀文化与学术精神代代传承！',
+          pinyin: 'Zhùhè nǐ shùnlì bìyè! Xīwàng nǐ zài wèilái de gōngzuò hé shēnghuó zhōng qiánchéngsìjǐn, bú wàng chūxīn, jiāng yòuxiù wénhuà yǔ xuéshù jīngshén dàidài chuánchéng!',
+          th: 'ขอแสดงความยินดีที่สำเร็จการศึกษาอย่างราบรื่น! ขอให้การทำงานและการใช้ชีวิตในอนาคตของคุณรุ่งโรจน์ดุจแพรไหม ไม่ลืมปณิธานเดิม และสืบสานวัฒนธรรมอันยอดเยี่ยมกับจิตวิญญาณวิชาการต่อไป!',
+          en: 'Congratulations on graduating! Wish you a splendid future in your future work and life, never forget original aspiration, and pass on fine culture!'
+        },
+        {
+          speaker: 'B',
+          speaker_name: '小王 (มหาบัณฑิตใหม่) 🧑‍🎓',
+          zh: '学生谨记老师教诲！我们一定全力以赴努力奋斗，今天真的太激动了，谢谢老师，再见！',
+          pinyin: 'Xuéshēng jǐnjì lǎoshī jiàohuì! Wǒmen yídìng quánlìyǐfù nǔlì fèndòu, jīntiān zhēnde tài jīdòng le, xièxie lǎoshī, zàijiàn!',
+          th: 'ศิษย์ขอน้อมจดจำคำสั่งสอนของอาจารย์! พวกเราจะทุ่มเทสุดกำลังและพยายามต่อสู้ วันนี้ตื่นเต้นและดีใจเหลือเกินครับ ขอบพระคุณอาจารย์ ลาก่อนครับ!',
+          en: 'I will keep your teachings in mind! We will spare no effort to strive hard. Today is truly thrilling, thank you teacher, goodbye!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำอวยพร '前程似锦' (qiánchéng sì jǐn) นิยมมอบให้แก่ผู้ใดในโอกาสใด?",
+          options: [
+            'อวยพรแก่ผู้สำเร็จการศึกษาหรือผู้เริ่มต้นก้าวใหม่ในชีวิต ให้มีอนาคตที่รุ่งเรืองสวยงามดั่งผ้าไหมปักทอง (Splendid Future)',
+            'อวยพรให้หายจากอาการเจ็บป่วยไข้หวัด',
+            'อวยพรในงานเปิดร้านอาหารขายของทอด',
+            'อวยพรให้เดินทางปลอดภัยบนรถไฟ'
+          ],
+          correct_index: 0,
+          explanation_th: "'前程似锦' เป็นสำนวนอวยพรมงคลชั้นสูง เปรียบเส้นทางอนาคตว่าสดใสงดงามดุจผืนผ้าไหมหลากสีสัน นิยมใช้อย่างยิ่งในพิธีสำเร็จการศึกษา",
+          encouragement: 'ถูกต้องยอดเยี่ยม! เชี่ยวชาญสำนวนมงคลแห่งการเริ่มต้นก้าวใหม่ในชีวิต!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "สำนวน '硕果累累' (shuòguǒ lěilěi) มีความหมายแฝงทางวิชาการว่าอย่างไร?",
+          options: [
+            'การเก็บเกี่ยวผลสัมฤทธิ์และผลงานวิจัยอันทรงคุณค่ามากมายหลังจากเพียรพยายามมาอย่างยาวนาน (Fruitful Accomplishments)',
+            'การปลูกต้นไม้ในสวนหลังบ้าน',
+            'การซื้อผลไม้มาฝากเพื่อนร่วมงาน',
+            'การทำอาหารเลี้ยงสังสรรค์ในวันหยุด'
+          ],
+          correct_index: 0,
+          explanation_th: "'硕果累累' นิยมใช้อุปมาถึงผลลัพธ์และความสำเร็จอันงดงามมากมายที่ผลิดอกออกผลจากหยาดเหงื่อแรงกาย",
+          encouragement: 'แม่นยำมาก! เข้าใจการใช้ภาษาเปรียบเปรยเชิงวรรณศิลป์ได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ขออวยพรให้บัณฑิตทุกคนประสบความสำเร็จรุ่งโรจน์ดุจแพรไหม และสืบทอดจิตวิญญาณแห่งปัญญา"',
+          tokens: ['传承学术精神', '祝愿毕业生前程似锦'],
+          correct_sequence: ['祝愿毕业生前程似锦', '传承学术精神'],
+          pinyin: 'Zhùyuàn bìyèshēng qiánchéngsìjǐn, chuánchéng xuéshù jīngshén.',
+          meaning_th: 'ขออวยพรให้บัณฑิตทุกคนอนาคตรุ่งโรจน์ดุจแพรไหม และร่วมสืบสานจิตวิญญาณแห่งวิชาการ',
+          explanation_th: 'ประโยคอวยพรคู่ขนาน: (祝愿毕业生前程似锦) + (传承学术精神)',
+          encouragement: 'ประกอบประโยคอวยพรมงคลแห่งบัณฑิตศึกษาได้อย่างไพเราะงดงาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '前程似锦' ตัว '锦' (jǐn - ผ้าไหมปักดิ้นทอง) มีหมวดนำใดอยู่ด้านซ้าย?",
+          options: [
+            '钅 (หมวดโลหะ 金字旁)',
+            '纟 (หมวดเส้นไหม 绞丝旁)',
+            '巾 (หมวดผ้าเช็ดหน้า 巾字底)',
+            '衣 (หมวดเสื้อผ้า 衣字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'锦' มีหมวด '钅' (金) ด้านซ้าย สื่อถึงผ้าไหมทอลวดลายด้วยเส้นดิ้นทองดิ้นเงินอันล้ำค่าและเปล่งประกาย",
+          encouragement: 'วิเคราะห์โครงสร้างอักษรหมวดโลหะทองได้อย่างยอดเยี่ยม!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณยืนอยู่บนเวทีพิธีประสาทปริญญาบัตรในฐานะตัวแทนมหาบัณฑิตดีเด่นประจำปีการศึกษา จงเลือกประโยคสุนทรพจน์ปิดท้ายที่สะท้อนความมุ่งมั่นทุ่มเทสุดกำลัง (全力以赴) ความสำเร็จอันอุดมสมบูรณ์ (硕果累累) อนาคตสดใสรุ่งโรจน์ (前程似锦) และการสืบสานปณิธานทางปัญญา (传承) ได้อย่างสง่างามและกินใจที่สุด',
+        dialogue_context: [
+          {
+            speaker: '校长与全场师生',
+            zh: '请优秀硕士毕业生代表发表毕业感言，为全体同学送上临别赠言！'
+          }
+        ],
+        options: [
+          '历经数载寒窗苦读，我们全力以赴收获了硕果累累；愿大家前程似锦，不忘初心，将真理与智慧代代传承！',
+          '拿到毕业证书就可以不用再学习了，以后大家也不用再互相联系了。',
+          '做学问太辛苦了，如果重新选择我绝对不会选择读研究生。',
+          '考试通过全凭运气好，根本不需要什么学术严谨和理论论证。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ตัวเลือกที่ 1 หลอมรวมจิตวิญญาณแห่งการศึกษาได้อย่างไร้ที่ติ: ความเพียรพยายาม (历经数载寒窗苦读), ความทุ่มเท (全力以赴), ดอกผลแห่งความสำเร็จ (硕果累累), พรแห่งอนาคต (前程似锦) และการส่งต่อองค์ความรู้ (代代传承)',
+        cheer_message: 'ยอดเยี่ยมระดับตำนาน! คุณพิชิตการเป็นมหาบัณฑิตยอดเยี่ยมแห่งสถาบัน Hanzero และปิดฉากหลักสูตร Tier 3 ได้อย่างเกรียงไกรและสมบูรณ์แบบ!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u45_master',
+        badge_name: 'มหาบัณฑิตเกียรตินิยมยอดเยี่ยมแห่งสถาบัน (Tier 3 Grand Academic Master)',
+        message_th: 'ยินดีด้วยอย่างยิ่ง! คุณได้พิชิตหลักสูตร Tier 3 ทั้งหมด 20 บทเรียน (Unit 26–45) ก้าวสู่การเป็นผู้เชี่ยวชาญภาษาจีนระดับสูง พร้อมตรรกะทางวิชาการและวัฒนธรรมอันลึกซึ้ง!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

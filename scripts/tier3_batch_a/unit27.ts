@@ -1,0 +1,870 @@
+/**
+ * scripts/tier3_batch_a/unit27.ts
+ * Tier 3 Unit 27: 商务谈判 (Business Negotiation: การเจรจาและต่อรองการค้า)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit27 = {
+  unit_id: 'tier3_u27',
+  tier: 3,
+  unit_number: 27,
+  title: {
+    zh: '商务谈判',
+    th: 'การเจรจาและต่อรองการค้า',
+    en: 'Business Negotiation'
+  },
+  description: 'ศิลปะการเจรจาธุรกิจระดับมืออาชีพ: การขอใบเสนอราคา (询价与报价), การต่อรองเครดิตเทอมและเงื่อนไขการชำระเงิน (支付条款与账期), และการประนีประนอมเพื่อสร้างผลประโยชน์ร่วมกัน (互利共赢)',
+  lessons: [
+    {
+      lesson_id: 't3_u27_l01',
+      lesson_number: 1,
+      title: {
+        zh: '询价与报价',
+        th: 'การขอใบเสนอราคาและการเสนอราคา',
+        en: 'Inquiry & Quotation'
+      },
+      can_do: {
+        th: 'ต่อรองราคาสินค้า ต้นทุน และปริมาณสั่งซื้อขั้นต่ำ (MOQ) โดยใช้โครงสร้าง 哪怕...也... และ 绝不能...',
+        en: 'Negotiate price, cost, and MOQ using structures like 哪怕...也... and 绝不能...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: สอบถามใบเสนอราคา ตรวจสอบขั้นต่ำในการสั่งซื้อ และต่อรองต้นทุนได้อย่างมั่นใจ!',
+      vocabulary: [
+        {
+          id: 'hsk3_2701',
+          hanzi: '报价',
+          pinyin: 'bàojià',
+          display_pinyin: 'bàojià',
+          pinyin_tone: 'bao4jia4',
+          meaning_th: 'ใบเสนอราคา / เสนอราคา',
+          meaning_en: 'quotation / quote a price',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 18,
+          mnemonic: 'แจ้งรายงาน (报) ตัวเลขราคา (价) ของสินค้า = เสนอราคา',
+          kid_mnemonic: 'ถือกระดาษมีป้ายราคาตัวโตๆ ยื่นให้ลูกค้าดู = 报价',
+          body_gesture: 'ยื่นฝ่ามือขวาไปข้างหน้าราวกับยื่นแผ่นกระดาษเสนอราคา'
+        },
+        {
+          id: 'hsk3_2702',
+          hanzi: '询价',
+          pinyin: 'xúnjià',
+          display_pinyin: 'xúnjià',
+          pinyin_tone: 'xun2jia4',
+          meaning_th: 'ขอใบเสนอราคา / สอบถามราคา',
+          meaning_en: 'price inquiry / request for quote',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 14,
+          mnemonic: 'เอ่ยปากไต่ถาม (询) ตัวเลขราคา (价) = ขอเสนอราคา',
+          kid_mnemonic: 'ทำตาโตชี้นิ้วถามคนขายว่าสินค้านี้คิดราคาเท่าไหร่ = 询价',
+          body_gesture: 'เอียงศีรษะเล็กน้อยแล้วทำมือแสดงการสอบถาม'
+        },
+        {
+          id: 'hsk3_2703',
+          hanzi: '成本',
+          pinyin: 'chéngběn',
+          display_pinyin: 'chéngběn',
+          pinyin_tone: 'cheng2ben3',
+          meaning_th: 'ต้นทุน',
+          meaning_en: 'cost',
+          radical: '木',
+          radical_name_th: 'หมวดต้นไม้ (木字旁)',
+          stroke_count: 11,
+          mnemonic: 'รากฐาน (本) ของเงินที่นำมาสร้างผลลัพธ์ (成) = ต้นทุน',
+          kid_mnemonic: 'กองเหรียญทองที่เป็นฐานอยู่ใต้ตึกสูง = 成本',
+          body_gesture: 'สองมือคว่ำลงระดับเอวแสดงฐานรากของต้นทุน'
+        },
+        {
+          id: 'hsk3_2704',
+          hanzi: '起订量',
+          pinyin: 'qǐdìngliàng',
+          display_pinyin: 'qǐdìngliàng',
+          pinyin_tone: 'qi3ding4liang4',
+          meaning_th: 'ปริมาณสั่งซื้อขั้นต่ำ (MOQ)',
+          meaning_en: 'minimum order quantity (MOQ)',
+          radical: '走',
+          radical_name_th: 'หมวดเดิน (走字旁)',
+          stroke_count: 23,
+          mnemonic: 'จุดเริ่มต้น (起) ของการสั่งจอง (订) ปริมาณสินค้า (量) = ขั้นต่ำที่สั่งได้',
+          kid_mnemonic: 'ป้ายเขียนว่า "ต้องซื้อ 500 ชิ้นขึ้นไปนะจ๊ะ" = 起订量',
+          body_gesture: 'ยกฝ่ามือขึ้นระดับอกเป็นขีดกั้นปริมาณขั้นต่ำ'
+        },
+        {
+          id: 'hsk3_2705',
+          hanzi: '利润率',
+          pinyin: 'lìrùnlǜ',
+          display_pinyin: 'lìrùnlǜ',
+          pinyin_tone: 'li4run4lu:4',
+          meaning_th: 'อัตรากำไร (Profit Margin)',
+          meaning_en: 'profit margin',
+          radical: '禾',
+          radical_name_th: 'หมวดรวงข้าว (禾木旁)',
+          stroke_count: 23,
+          mnemonic: 'กำไรที่ได้รับ (利润) คิดคำนวณเป็นอัตราส่วน (率) = อัตรากำไร',
+          kid_mnemonic: 'เหรียญทองหล่นใส่กระเป๋าเพิ่มขึ้นเรื่อยๆ = 利润率',
+          body_gesture: 'กำมือขวากระดิกนิ้วโป้งขึ้นแสดงถึงผลกำไร'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 成本 (chéngběn) ชัดเจนไม่สับสน',
+        description_th: 'คำว่า 成 (chéng) เป็นเสียง 2 สูงขึ้น ส่วน 本 (běn) เป็นเสียง 3 ต่ำลึก ทอดเสียงนิ่งมั่นคง',
+        example: '控制成本 (kòngzhì chéngběn: ควบคุมต้นทุน)',
+        fun_metaphor: 'เหมือนเสียงดีดสายพิณขึ้นสูงแล้วกลับมาพักที่ฐานเดิมอย่างมั่นคง!',
+        reassurance: 'เมื่อเจรจาธุรกิจ การออกเสียงคำว่า 成本 ให้มีน้ำหนักจะทำให้ดูน่าเชื่อถือและเฉียบคม'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการยืนกราน: 哪怕...也... (แม้กระทั่ง...ก็...) และ 绝不能... (จะ...ไม่ได้เป็นอันขาด)',
+        explanation_th: 'ใช้ในสถานการณ์ต่อรองเมื่อต้องการตั้งเงื่อนไข หรือยืนยันจุดยืนที่ไม่สามารถประนีประนอมได้',
+        patterns: [
+          {
+            formula: '哪怕 + [เงื่อนไขยากลำบาก], 我们也 + [การยืนกราน]',
+            zh: '哪怕利润率低一点儿，我们也绝不能在质量上妥协。',
+            pinyin: 'Nǎpà lìrùnlǜ dī yìdiǎnr, wǒmen yě jué bùnéng zài zhìliàng shang tuǒxié.',
+            th: 'แม้ว่าอัตรากำไรจะต่ำลงสักนิด พวกเราก็ไม่ยอมลดทอนคุณภาพเป็นอันขาด',
+            en: 'Even if the profit margin is slightly lower, we must never compromise on quality.'
+          },
+          {
+            formula: '如果 + [เงื่อนไข], 起订量 + 是否可以 + 稍微降低？',
+            zh: '如果我们长期采购，起订量是否可以稍微降低？',
+            pinyin: 'Rúguǒ wǒmen chángqī cǎigòu, qǐdìngliàng shìfǒu kěyǐ shāowēi jiàngdī?',
+            th: 'หากพวกเราสั่งซื้อระยะยาว ยอดสั่งซื้อขั้นต่ำพอจะลดลงสักหน่อยได้ไหมครับ?',
+            en: 'If we purchase long-term, could the MOQ be slightly lowered?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '刘经理您好，我们对贵公司的智能手表非常感兴趣，想先做一次正式询价。',
+          pinyin: 'Liú jīnglǐ nín hǎo, wǒmen duì guì gōngsī de zhìnéng shǒubiǎo fēicháng gǎn xìngqù, xiǎng xiān zuò yí cì zhèngshì xúnjià.',
+          th: 'สวัสดีครับผู้จัดการหลิว พวกเราสนใจสมาร์ตวอทช์ของบริษัทท่านเป็นอย่างมาก อยากขอใบเสนอราคาอย่างเป็นทางการครับ',
+          en: 'Hello Manager Liu, we are very interested in your smartwatches and would like a formal quotation.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว (ซัพพลายเออร์เซินเจิ้น) 👨‍💼',
+          zh: '欢迎欢迎！这是我们最新的出厂报价单，每台单价是两百元，起订量是一千台。',
+          pinyin: 'Huānyíng huānyíng! Zhè shì wǒmen zuìxīn de chūchǎng bàojiàdān, měi tái dānjià shì liǎngbǎi yuán, qǐdìngliàng shì yìqiān tái.',
+          th: 'ยินดีต้อนรับครับ! นี่คือใบเสนอราคาหน้าโรงงานล่าสุด เครื่องละ 200 หยวน ขั้นต่ำสั่งซื้อ 1,000 เครื่องครับ',
+          en: 'Welcome! This is our latest factory quotation, 200 yuan each, MOQ is 1,000 units.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (ฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '我们首批订单想先测款，起订量能否先降到五百台？这样我们的资金成本压力也小一些。',
+          pinyin: 'Wǒmen shǒupī dìngdān xiǎng xiān cèkuǎn, qǐdìngliàng néngfǒu xiān jiàng dào wǔbǎi tái? Zhèyàng wǒmen de zījīn chéngběn yālì yě xiǎo yìxiē.',
+          th: 'ล็อตแรกพวกเราอยากทดลองตลาดก่อน ขั้นต่ำพอจะลดเหลือ 500 เครื่องได้ไหมครับ? แบบนี้ภาระต้นทุนเงินทุนของพวกเราจะได้เบาลงด้วยครับ',
+          en: 'We want to test the market with the first batch, can MOQ be lowered to 500 units? This lowers our capital cost pressure.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว (ซัพพลายเออร์เซินเจิ้น) 👨‍💼',
+          zh: '如果是为了建立长期合作，我们愿意支持！哪怕首批利润薄一些，我也给您特批！',
+          pinyin: 'Rúguǒ shì wèile jiànlì chángqī hézuò, wǒmen yuànyì zhīchí! Nǎpà shǒupī lìrùn báo yìxiē, wǒ yě gěi nín tèpī!',
+          th: 'ถ้าเพื่อสร้างความร่วมมือระยะยาว ทางเรายินดีสนับสนุนครับ! แม้ว่าล็อตแรกกำไรจะบางลงสักหน่อย ผมก็อนุมัติให้เป็นกรณีพิเศษครับ!',
+          en: 'If it is for long-term cooperation, we support you! Even if first batch margin is thinner, I will grant special approval!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '起订量' (qǐdìngliàng) ในการค้าระหว่างประเทศตรงกับศัพท์ภาษาอังกฤษใด?",
+          options: [
+            'MOQ (Minimum Order Quantity)',
+            'ROI (Return on Investment)',
+            'FOB (Free on Board)',
+            'KPI (Key Performance Indicator)'
+          ],
+          correct_index: 0,
+          explanation_th: "'起订量' คือ ปริมาณสั่งซื้อขั้นต่ำ หรือ Minimum Order Quantity (MOQ)",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์การค้าสากลจำได้แม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อต้องการพูดว่า 'ต้นทุน' ในภาษาจีน ควรใช้คำใด?",
+          options: [
+            '成本 (chéngběn)',
+            '行李 (xíngli)',
+            '发票 (fāpiào)',
+            '菜单 (càidān)'
+          ],
+          correct_index: 0,
+          explanation_th: "'成本' แปลว่า ต้นทุน เช่น 资金成本 (ต้นทุนเงินทุน)",
+          encouragement: 'จำคำศัพท์ธุรกิจสำคัญได้เป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราไม่ยอมลดทอนเรื่องคุณภาพเป็นอันขาด"',
+          tokens: ['在质量上妥协', '我们也绝不能', '哪怕利润率低一点儿'],
+          correct_sequence: ['哪怕利润率低一点儿', '我们也绝不能', '在质量上妥协'],
+          pinyin: 'Nǎpà lìrùnlǜ dī yìdiǎnr, wǒmen yě jué bùnéng zài zhìliàng shang tuǒxié',
+          meaning_th: 'แม้ว่าอัตรากำไรจะต่ำลงสักนิด พวกเราก็ไม่ยอมลดทอนเรื่องคุณภาพเป็นอันขาด',
+          explanation_th: 'โครงสร้าง: 哪怕... (แม้ว่า...) + 主语+也绝不能... (พวกเราก็ไม่...เป็นอันขาด) + 妥协 (ประนีประนอม)',
+          encouragement: 'โครงสร้างประโยคเจรจาต่อรองแน่นเปรี๊ยะ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '报价' (เสนอราคา) ตัว '价' มีหมวดนำใด?",
+          options: [
+            '亻 (หมวดคน 单人旁)',
+            '贝 (หมวดเปลือกหอย/เงิน 贝字旁)',
+            '金 (หมวดโลหะ 金字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'价' มีหมวดนำ '亻' (คน) สื่อถึงคุณค่าและราคาที่คนเป็นผู้กำหนด",
+          encouragement: 'เข้าใจหมวดนำอย่างลึกซึ้ง!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ซัพพลายเออร์เสนอราคาสูงกว่างบประมาณของคุณ 15% คุณต้องการต่อรองโดยอ้างอิงถึงความร่วมมือระยะยาวและปริมาณสั่งซื้อในอนาคต ควรพูดอย่างไร?',
+        options: [
+          '刘经理，如果我们建立长期合作并增加后续订单，这个单价是否还有商量空间？ (Liú jīnglǐ, rúguǒ wǒmen jiànlì chángqī hézuò bìng zēngjiā hòuxù dìngdān, zhè ge dānjià shìfǒu hái yǒu shāngliang kōngjiān?)',
+          '太贵了，你骗人！ (Tài guì le, nǐ piànrén!)',
+          '请问今天几点关门？ (Qǐngwèn jīntiān jǐ diǎn guānmén?)',
+          '我不想买了，再见。 (Wǒ bù xiǎng mǎi le, zàijiàn.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '如果我们建立长期合作并增加后续订单，这个单价是否还有商量空间？' สุภาพ เป็นมืออาชีพ และเปิดช่องให้คู่ค้าลดราคาให้อย่างเต็มใจ",
+        encouragement: 'ชั้นเชิงการเจรจาระดับมืออาชีพเฉียบขาดมาก!'
+      }
+    },
+    {
+      lesson_id: 't3_u27_l02',
+      lesson_number: 2,
+      title: {
+        zh: '支付条款与账期',
+        th: 'เงื่อนไขการชำระเงินและเครดิตเทอม',
+        en: 'Payment Terms & Credit'
+      },
+      can_do: {
+        th: 'อธิบายเงื่อนไขเงินมัดจำ เงินงวดสุดท้าย เครดิตเทอม และใช้สำนวน 讨价还价',
+        en: 'Explain deposit, final balance, credit term, and use idiom 讨价还价'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ต่อรองเงื่อนไขการจ่ายเงินและระยะเวลาชำระเงิน (เครดิตเทอม) ได้อย่างรัดกุม!',
+      vocabulary: [
+        {
+          id: 'hsk3_2706',
+          hanzi: '账期',
+          pinyin: 'zhàngqī',
+          display_pinyin: 'zhàngqī',
+          pinyin_tone: 'zhang4qi1',
+          meaning_th: 'เครดิตเทอม / ระยะเวลาชำระเงิน',
+          meaning_en: 'credit term / payment period',
+          radical: '贝',
+          radical_name_th: 'หมวดเงิน/เปลือกหอย (贝字旁)',
+          stroke_count: 16,
+          mnemonic: 'สมุดบัญชีเงิน (账) มีกำหนดระยะเวลา (期) ในการชำระ = เครดิตเทอม',
+          kid_mnemonic: 'ปฏิทินที่วงวันที่ครบกำหนดจ่ายเงินเอาไว้ = 账期',
+          body_gesture: 'ใช้นิ้วชี้เคาะลงบนฝ่ามือเหมือนนับวันเวลาบนปฏิทิน'
+        },
+        {
+          id: 'hsk3_2707',
+          hanzi: '预付款',
+          pinyin: 'yùfùkuǎn',
+          display_pinyin: 'yùfùkuǎn',
+          pinyin_tone: 'yu4fu4kuan3',
+          meaning_th: 'เงินมัดจำล่วงหน้า',
+          meaning_en: 'advance payment / deposit',
+          radical: '页',
+          radical_name_th: 'หมวดหน้า (页字旁)',
+          stroke_count: 22,
+          mnemonic: 'จ่ายเงินล่วงหน้า (预付) ก้อนแรก (款) = เงินมัดจำล่วงหน้า',
+          kid_mnemonic: 'จ่ายเหรียญมัดจำไว้ก่อนเพื่อให้เขาเริ่มทำของให้เรา = 预付款',
+          body_gesture: 'ยื่นสองมือส่งเงินก้อนเล็กไปข้างหน้า'
+        },
+        {
+          id: 'hsk3_2708',
+          hanzi: '尾款',
+          pinyin: 'wěikuǎn',
+          display_pinyin: 'wěikuǎn',
+          pinyin_tone: 'wei3kuan3',
+          meaning_th: 'เงินงวดสุดท้าย / ยอดคงเหลือ',
+          meaning_en: 'final balance payment',
+          radical: '尸',
+          radical_name_th: 'หมวดร่าง/หาง (尸字头)',
+          stroke_count: 19,
+          mnemonic: 'เงินก้อนสุดท้ายที่ต่อตรงหางแถว (尾) = เงินงวดสุดท้าย',
+          kid_mnemonic: 'จ่ายเงินปิดท้ายก้อนสุดท้ายหลังตรวจรับของเรียบร้อย = 尾款',
+          body_gesture: 'สองมือทำท่าปิดผนึกกล่องพัสดุเสร็จสมบูรณ์'
+        },
+        {
+          id: 'hsk3_2709',
+          hanzi: '信用证',
+          pinyin: 'xìnyòngzhèng',
+          display_pinyin: 'xìnyòngzhèng',
+          pinyin_tone: 'xin4yong4zheng4',
+          meaning_th: 'เลตเตอร์ออฟเครดิต (L/C)',
+          meaning_en: 'letter of credit (L/C)',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 23,
+          mnemonic: 'เอกสารรับรอง (证) ความน่าเชื่อถือของธนาคาร (信用) = L/C',
+          kid_mnemonic: 'ใบการันตีสีทองจากธนาคารว่าจ่ายเงินแน่นอน = 信用证',
+          body_gesture: 'ชูสองมือเสมือนกางแผ่นประกาศนียบัตรสำคัญ'
+        },
+        {
+          id: 'hsk3_2710',
+          hanzi: '讨价还价',
+          pinyin: 'tǎojiàhuánjià',
+          display_pinyin: 'tǎojiàhuánjià',
+          pinyin_tone: 'tao3jia4huan2jia4',
+          meaning_th: 'ต่อรองเงื่อนไขอย่างละเอียดรอบคอบ (ต่อรองราคา)',
+          meaning_en: 'bargain back and forth / haggle',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 28,
+          mnemonic: 'ฝ่ายหนึ่งขอราคา (讨价) อีกฝ่ายเสนอราคากลับ (还价) = ต่อรองอย่างละเอียด',
+          kid_mnemonic: 'สองฝ่ายผลัดกันส่งตัวเลขในเครื่องคิดเลขให้กัน = 讨价还价',
+          body_gesture: 'สองมือผลัดกันขยับเข้าออกเหมือนการเจรจาไปมา'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'สำนวน 讨价还价 (tǎojiàhuánjià) จังหวะเสียงขึ้นลง',
+        description_th: 'พยางค์: tǎo (เสียง 3), jià (เสียง 4), huán (เสียง 2), jià (เสียง 4) — มีการสลับระดับเสียง 3-4-2-4 อย่างมีชีวิตชีวา',
+        example: '商务谈判中难免需要讨价还价 (ในการเจรจาการค้าย่อมต้องมีการต่อรอง)',
+        fun_metaphor: 'เหมือนลูกปิงปองเด้งไปเด้งมาข้ามโต๊ะเจรจา!',
+        reassurance: 'อ่านให้มีจังหวะจะโคน แสดงถึงความรอบคอบและคล่องแคล่วในการค้า'
+      },
+      grammar_bite: {
+        title: 'การระบุสัดส่วนการชำระเงิน: [ตัวเลข]% + 预付款，[ตัวเลข]% + 尾款',
+        explanation_th: 'รูปแบบมาตรฐานสากลในการเจรจาสัญญาซื้อขายระหว่างประเทศ',
+        patterns: [
+          {
+            formula: '我们建议采用 + [สัดส่วน]% 预付 + [สัดส่วน]% 尾款的形式',
+            zh: '我们建议采用百分之三十预付款，发货后支付百分之七十尾款的形式。',
+            pinyin: 'Wǒmen jiànyì cǎiyòng bǎifēnzhī sānshí yùfùkuǎn, fāhuò hòu zhīfù bǎifēnzhī qīshí wěikuǎn de xíngshì.',
+            th: 'พวกเราขอแนะนำรูปแบบชำระเงินมัดจำ 30% และชำระเงินงวดสุดท้าย 70% หลังส่งสินค้า',
+            en: 'We suggest a form of 30% advance payment and 70% final balance after shipment.'
+          },
+          {
+            formula: '账期能否顺延至 + [จำนวนวัน] + 天？',
+            zh: '经过友好协商，账期能否顺延至六十天？',
+            pinyin: 'Jīngguò yǒuhǎo xiéshāng, zhàngqī néngfǒu shùnyán zhì liùshí tiān?',
+            th: 'หลังการเจรจาด้วยดี เครดิตเทอมพอจะขยายเป็น 60 วันได้ไหมครับ?',
+            en: 'Through friendly negotiation, can the credit term be extended to 60 days?'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '刘经理，关于付款方式，我们希望能争取到六十天的账期。',
+          pinyin: 'Liú jīnglǐ, guānyú fùkuǎn fāngshì, wǒmen xīwàng néng zhēngqǔ dào liùshí tiān de zhàngqī.',
+          th: 'ผู้จัดการหลิวครับ เกี่ยวกับวิธีการชำระเงิน พวกเราหวังว่าจะขอขยายเครดิตเทอมเป็น 60 วันครับ',
+          en: 'Manager Liu, regarding payment terms, we hope to obtain a 60-day credit term.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว 👨‍💼',
+          zh: '六十天对我们的现金流压力太大了，我们通常只做三十天账期或者即期信用证。',
+          pinyin: 'Liùshí tiān duì wǒmen de xiànjīnliú yālì tài dà le, wǒmen tōngcháng zhǐ zuò sānshí tiān zhàngqī huòzhě jíqī xìnyòngzhèng.',
+          th: '60 วันสร้างแรงกดดันต่อกระแสเงินสดของเรามากเกินไปครับ ปกติเราทำแค่เครดิตเทอม 30 วันหรือเปิด L/C แบบจ่ายทันทีครับ',
+          en: '60 days puts too much pressure on our cash flow; we usually only do 30 days or sight L/C.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '谈判嘛，就是要相互讨价还价才能达成平衡。如果我们提高预付款比例到40%呢？',
+          pinyin: 'Tánpàn ma, jiù shì yào xiānghù tǎojiàhuánjià cái néng dáchéng pínghéng. Rúguǒ wǒmen tígāo yùfùkuǎn bǐlì dào bǎifēnzhī sìshí ne?',
+          th: 'การเจรจานี่ครับ ก็ต้องผลัดกันต่อรองเพื่อหาจุดสมดุล หากเราเพิ่มสัดส่วนเงินมัดจำล่วงหน้าเป็น 40% ล่ะครับ?',
+          en: 'Negotiation means bargaining to reach balance. What if we raise advance payment to 40%?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว 👨‍💼',
+          zh: '这样的话我们双方都有保障！好，那就四成预付，尾款四十五天结清！',
+          pinyin: 'Zhèyàng de huà wǒmen shuāngfāng dōu yǒu bǎozhàng! Hǎo, nà jiù sì chéng yùfù, wěikuǎn sìshíwǔ tiān jiéqīng!',
+          th: 'ถ้าแบบนี้เราสองฝ่ายต่างมีความมั่นคงทั้งคู่! ตกลงครับ งั้นมัดจำ 40% ส่วนยอดคงเหลือจ่ายครบใน 45 วันครับ!',
+          en: 'In that case both of us have safeguards! Agreed: 40% advance, balance cleared in 45 days!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '账期' (zhàngqī) ในการทำธุรกิจมีความหมายตรงกับข้อใด?",
+          options: [
+            'ระยะเวลาชำระเงิน / เครดิตเทอม',
+            'วันหมดอายุของผลิตภัณฑ์',
+            'เวลาทำการของธนาคาร',
+            'วันหยุดราชการ'
+          ],
+          correct_index: 0,
+          explanation_th: "'账期' คือ ระยะเวลาให้สินเชื่อหรือเครดิตเทอมในการชำระค่าสินค้า",
+          encouragement: 'จำศัพท์การเงินและการค้าได้ถูกต้องแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เงินงวดสุดท้ายที่ต้องจ่ายเมื่อได้รับสินค้าครบเรียบร้อย เรียกว่าอะไร?",
+          options: [
+            '尾款 (wěikuǎn)',
+            '外卖 (wàimài)',
+            '小费 (xiǎofèi)',
+            '车票 (chēpiào)'
+          ],
+          correct_index: 0,
+          explanation_th: "'尾款' คือ เงินงวดสุดท้าย หรือยอดคงเหลือหลังจากหักมัดจำแล้ว",
+          encouragement: 'ยอดเยี่ยมมาก! เลือกคำศัพท์ได้ตรงเป้า!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "การเจรจาต้องผลัดกันต่อรองจึงจะเกิดสมดุล"',
+          tokens: ['就是要相互讨价还价', '才能达成平衡', '谈判'],
+          correct_sequence: ['谈判', '就是要相互讨价还价', '才能达成平衡'],
+          pinyin: 'Tánpàn jiù shì yào xiānghù tǎojiàhuánjià cái néng dáchéng pínghéng',
+          meaning_th: 'การเจรจาต้องผลัดกันต่อรองจึงจะเกิดสมดุล',
+          explanation_th: 'หัวข้อ (谈判) + กริยาเน้นย้ำ (就是要相互讨价还价) + ผลลัพธ์ (才能达成平衡)',
+          encouragement: 'ต่อประโยคชั้นเชิงเจรจาได้ยอดเยี่ยมมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '账' (บัญชี/หนี้) มีหมวดนำ '贝' (เปลือกหอย) สื่อถึงอะไรในอดีต?",
+          options: [
+            'เงินตราและการค้าในยุคโบราณ',
+            'สัตว์น้ำในทะเล',
+            'เครื่องประดับผู้หญิง',
+            'ยาบำรุงสุขภาพ'
+          ],
+          correct_index: 0,
+          explanation_th: "ในสมัยโบราณของจีน เปลือกหอย (贝) ถูกใช้เป็นตัวแทนเงินตรา จึงมักปรากฏในคำศัพท์เกี่ยวกับการเงิน",
+          encouragement: 'เกร็ดประวัติศาสตร์อักษรจีนแม่นยำมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คู่ค้าปฏิเสธไม่ยอมให้เครดิตเทอม 60 วันเพราะกังวลเรื่องกระแสเงินสด คุณต้องการเสนอเพิ่มสัดส่วนเงินมัดจำเป็น 40% เพื่อแลกกับเครดิตเทอม 45 วัน ควรพูดอย่างไร?',
+        options: [
+          '为了平衡双方的资金压力，我们愿意将预付款提高至40%，账期调整为45天，您看如何？ (Wèile pínghéng shuāngfāng de zījīn yālì, wǒmen yuànyì jiāng yùfùkuǎn tígāo zhì bǎifēnzhī sìshí, zhàngqī tiáozhěng wéi sìshíwǔ tiān, nín kàn rúhé?)',
+          '你不同意就算了，我们不买了。 (Nǐ bù tóngyì jiù suàn le, wǒmen bù mǎi le.)',
+          '请把门关上，外面很冷。 (Qǐng bǎ mén guān shàng, wàimiàn hěn lěng.)',
+          '我有两张电影票，一起去看吧。 (Wǒ yǒu liǎng zhāng diànyǐngpiào, yìqǐ qù kàn ba.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ข้อเสนอ '为了平衡双方的资金压力，我们愿意将预付款提高至40%，账期调整为45天，您看如何？' แสดงถึงความเข้าใจคู่ค้าและหาทางออกร่วมกันอย่างชาญฉลาด",
+        encouragement: 'ปิดดีลเงื่อนไขการชำระเงินได้อย่างไร้ที่ติ!'
+      }
+    },
+    {
+      lesson_id: 't3_u27_l03',
+      lesson_number: 3,
+      title: {
+        zh: '妥协与双赢',
+        th: 'การประนีประนอมและผลประโยชน์ร่วมกัน',
+        en: 'Compromise & Win-Win'
+      },
+      can_do: {
+        th: 'แสดงจุดยืนและขอบเขตขั้นต่ำ (底线) พร้อมใช้คำเชื่อมสละสลวย 本着互惠互利的原则...',
+        en: 'Express bottom line and compromise using 本着互惠互利的原则...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ถอยหนึ่งก้าวเพื่อก้าวหน้าสองก้าว บรรลุข้อตกลงแบบ Win-Win ที่ทุกฝ่ายพึงพอใจ!',
+      vocabulary: [
+        {
+          id: 'hsk3_2711',
+          hanzi: '让步',
+          pinyin: 'ràngbù',
+          display_pinyin: 'ràngbù',
+          pinyin_tone: 'rang4bu4',
+          meaning_th: 'ยอมผ่อนปรน / ถอยหนึ่งก้าว',
+          meaning_en: 'concession / to yield / make a step back',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 9,
+          mnemonic: 'เอ่ยปากยินยอม (让) ถอยหลังหนึ่งก้าว (步) = ยอมผ่อนปรน',
+          kid_mnemonic: 'ถอยหลังหนึ่งก้าวเพื่อให้เพื่อนเดินผ่านได้อย่างสะดวก = 让步',
+          body_gesture: 'ก้าวถอยหลังหนึ่งก้าวพร้อมผายสองมือออก'
+        },
+        {
+          id: 'hsk3_2712',
+          hanzi: '互利共赢',
+          pinyin: 'hùlìgòngyíng',
+          display_pinyin: 'hùlìgòngyíng',
+          pinyin_tone: 'hu4li4gong4ying2',
+          meaning_th: 'ผลประโยชน์ร่วมกัน / ชนะทั้งสองฝ่าย (Win-Win)',
+          meaning_en: 'mutual benefit and win-win',
+          radical: '二',
+          radical_name_th: 'หมวดสอง (二部)',
+          stroke_count: 31,
+          mnemonic: 'ต่างฝ่ายให้ประโยชน์ซึ่งกันและกัน (互利) และได้รับชัยชนะร่วมกัน (共赢) = ชนะทั้งคู่',
+          kid_mnemonic: 'เพื่อนสองคนจับมือชูขึ้นพร้อมกัน ร้องเย้ด้วยกัน = 互利共赢',
+          body_gesture: 'สองมือจับกันแน่นแล้วเขย่าแสดงความยินดี'
+        },
+        {
+          id: 'hsk3_2713',
+          hanzi: '底线',
+          pinyin: 'dǐxiàn',
+          display_pinyin: 'dǐxiàn',
+          pinyin_tone: 'di3xian4',
+          meaning_th: 'จุดยืนขั้นต่ำ / ขีดจำกัดที่ยอมรับได้ (Bottom Line)',
+          meaning_en: 'bottom line',
+          radical: '广',
+          radical_name_th: 'หมวดอาคาร (广字旁)',
+          stroke_count: 16,
+          mnemonic: 'เส้นขีด (线) ที่ก้นบึ้งสุด (底) ที่ยอมถอยไม่ได้อีกแล้ว = จุดยืนขั้นต่ำ',
+          kid_mnemonic: 'ขีดเส้นสีแดงบนพื้นบอกว่า "ห้ามข้ามเส้นนี้นะ" = 底线',
+          body_gesture: 'ใช้นิ้วชี้ขีดเส้นแนวนอนในอากาศระดับเอว'
+        },
+        {
+          id: 'hsk3_2714',
+          hanzi: '顾全大局',
+          pinyin: 'gùquándàjú',
+          display_pinyin: 'gùquándàjú',
+          pinyin_tone: 'gu4quan2da4ju2',
+          meaning_th: 'คำนึงถึงภาพรวมใหญ่เป็นสำคัญ',
+          meaning_en: 'take the big picture into account',
+          radical: '页',
+          radical_name_th: 'หมวดหน้า (页字旁)',
+          stroke_count: 27,
+          mnemonic: 'เหลียวมอง (顾) ความสมบูรณ์ (全) ของกระดานหมากทั้งกระดาน (大局) = เห็นแก่ส่วนรวม',
+          kid_mnemonic: 'มองดูภาพต่อจิ๊กซอว์ทั้งภาพแทนที่จะมองแค่ชิ้นเดียว = 顾全大局',
+          body_gesture: 'วาดวงกลมกว้างๆ ด้วยสองมือครอบคลุมพื้นที่ทั้งหมด'
+        },
+        {
+          id: 'hsk3_2715',
+          hanzi: '达成共识',
+          pinyin: 'dáchéng gòngshí',
+          display_pinyin: 'dáchéng gòngshí',
+          pinyin_tone: 'da2cheng2 gong4shi2',
+          meaning_th: 'บรรลุฉันทามติ / เห็นพ้องต้องกัน',
+          meaning_en: 'reach a consensus',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 24,
+          mnemonic: 'ก้าวไปถึง (达成) ความรู้ความเข้าใจร่วมกัน (共识) = บรรลุข้อตกลง',
+          kid_mnemonic: 'ทุกคนยกมือเห็นด้วยพร้อมเพรียงกัน = 达成共识',
+          body_gesture: 'ยกสองมือขึ้นพยักหน้าแสดงความเห็นพ้อง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงสำนวน 互利共赢 (hùlìgòngyíng)',
+        description_th: 'พยางค์: hù (4), lì (4), gòng (4), yíng (2) — พยางค์ที่ 1-3 เป็นเสียง 4 หนักแน่นติดต่อกัน ก่อนจะตบท้ายด้วยเสียง 2 เหินขึ้นอย่างภาคภูมิ',
+        example: '本着互利共赢的原则 (ตามหลักการผลประโยชน์ร่วมกัน)',
+        fun_metaphor: 'เหมือนตอกเสาเข็มมั่นคงสามต้น แล้วชักธงฉลองชัยชนะขึ้นสู่ยอดเสา!',
+        reassurance: 'ออกเสียง yíng ให้ยาวและกังวาน จะสื่อถึงพลังบวกและความสำเร็จร่วมกัน'
+      },
+      grammar_bite: {
+        title: 'วลีเปิดพิธีการเจรจา: 本着互利共赢的原则 (ยึดตามหลักการผลประโยชน์ร่วมกัน)',
+        explanation_th: 'ใช้นำหน้าประโยคในเอกสารบันทึกความเข้าใจ (MOU) สัญญา หรือถ้อยแถลงสรุปการเจรจา',
+        patterns: [
+          {
+            formula: '本着 + [หลักการ] + 的原则，双方 + [ข้อตกลง]',
+            zh: '本着互惠互利的原则，双方终于达成了全面共识。',
+            pinyin: 'Běnzhe hùhuì hùlì de yuánzé, shuāngfāng zhōngyú dáchéng le quánmiàn gòngshí.',
+            th: 'ตามหลักการแห่งการเกื้อกูลและผลประโยชน์ร่วมกัน ทั้งสองฝ่ายได้บรรลุฉันทามติร่วมกันในที่สุด',
+            en: 'Based on principles of mutual benefit, both sides finally reached comprehensive consensus.'
+          },
+          {
+            formula: '为了顾全大局，我们愿意做出 + [สิ่งใด]',
+            zh: '为了顾全大局，我们愿意在交货期上做出适当让步。',
+            pinyin: 'Wèile gùquándàjú, wǒmen yuànyì zài jiāohuòqī shang zuòchū shìdàng ràngbù.',
+            th: 'เพื่อเห็นแก่ภาพรวมใหญ่ พวกเรายินดีผ่อนปรนเรื่องกำหนดส่งมอบสินค้าอย่างเหมาะสม',
+            en: 'To take the big picture into account, we are willing to make appropriate concessions on delivery dates.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '刘经理，今天的洽谈非常充实。在最后的价格上，两百元确实触及了我们的底线。',
+          pinyin: 'Liú jīnglǐ, jīntiān de qiàtán fēicháng chōngshí. Zài zuìhòu de jiàgé shang, liǎngbǎi yuán quèshí chùjí le wǒmen de dǐxiàn.',
+          th: 'ผู้จัดการหลิวครับ การเจรจาวันนี้เข้มข้นและมีประโยชน์มาก เรื่องราคาสุดท้าย 200 หยวนชนจุดยืนขั้นต่ำของเราแล้วจริงๆ ครับ',
+          en: 'Manager Liu, today discussion was very fruitful. On final price, 200 yuan touches our bottom line.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว 👨‍💼',
+          zh: '我理解贵方的考量。为了顾全大局，促成这笔长远合作，单价我们再让步五元！',
+          pinyin: 'Wǒ lǐjiě guìfāng de kǎoliàng. Wèile gùquándàjú, cùchéng zhè bǐ chángyuǎn hézuò, dānjià wǒmen zài ràngbù wǔ yuán!',
+          th: 'ผมเข้าใจข้อกังวลของทางท่านครับ เพื่อเห็นแก่ภาพรวมและสานต่อความร่วมมือระยะยาว ทางเรายอมลดราคาให้อีก 5 หยวนครับ!',
+          en: 'I understand your consideration. Taking the big picture into account for long-term ties, we concede another 5 yuan!'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย 🧑‍💼',
+          zh: '太感谢刘总的诚意了！本着互利共赢的原则，合同细节我们今天就可以敲定。',
+          pinyin: 'Tài gǎnxiè Liú zǒng de chéngyì le! Běnzhe hùlìgòngyíng de yuánzé, hétong xìjié wǒmen jīntiān jiù kěyǐ qiāodìng.',
+          th: 'ขอบพระคุณในความจริงใจของคุณหลิวเป็นอย่างยิ่งครับ! ตามหลักผลประโยชน์ร่วมกัน รายละเอียดสัญญาเราสรุปจบวันนี้ได้เลยครับ',
+          en: 'Thank you very much for your sincerity! On mutual benefit principles, we can finalize contract details today.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ผู้จัดการหลิว 👨‍💼',
+          zh: '好！祝贺我们达成共识，合作愉快，干杯！',
+          pinyin: 'Hǎo! Zhùhè wǒmen dáchéng gòngshí, hézuò yúkuài, gānbēi!',
+          th: 'ยอดเยี่ยมครับ! ยินดีด้วยที่เราบรรลุข้อตกลงร่วมกัน ขอให้ร่วมงานกันอย่างราบรื่น ชนแก้วครับ!',
+          en: 'Great! Congratulations on reaching consensus, pleasant cooperation, cheers!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '顾全大局' (gùquándàjú) หมายถึงอะไรในการทำธุรกิจ?",
+          options: [
+            'คำนึงถึงภาพรวมและเป้าหมายระยะยาวเป็นสำคัญ',
+            'ยกเลิกโครงการเพื่อรักษาเงินสด',
+            'มุ่งเน้นแต่ผลกำไรระยะสั้น',
+            'ไม่สนใจความคิดเห็นของคู่ค้า'
+          ],
+          correct_index: 0,
+          explanation_th: "'顾全大局' หมายถึง การเห็นแก่ภาพรวมใหญ่ ยอมเสียสละเรื่องเล็กน้อยเพื่อประโยชน์ระยะยาว",
+          encouragement: 'เข้าใจหลักการบริหารธุรกิจขั้นสูงได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อต้องการพูดว่า 'จุดยืนขั้นต่ำ / ขีดจำกัดที่ยอมรับได้' ภาษาจีนใช้คำว่าอะไร?",
+          options: [
+            '底线 (dǐxiàn)',
+            '地铁 (dìtiě)',
+            '地图 (dìtú)',
+            '地址 (dìzhǐ)'
+          ],
+          correct_index: 0,
+          explanation_th: "'底线' แปลว่า จุดยืนขั้นต่ำ หรือ Bottom Line ในการเจรจา",
+          encouragement: 'แยกแยะคำศัพท์หมวด 地/底 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ทั้งสองฝ่ายได้บรรลุฉันทามติร่วมกันในที่สุด"',
+          tokens: ['达成了全面共识', '双方终于', '本着互利共赢的原则'],
+          correct_sequence: ['本着互利共赢的原则', '双方终于', '达成了全面共识'],
+          pinyin: 'Běnzhe hùlìgòngyíng de yuánzé, shuāngfāng zhōngyú dáchéng le quánmiàn gòngshí',
+          meaning_th: 'ตามหลักการผลประโยชน์ร่วมกัน ทั้งสองฝ่ายได้บรรลุฉันทามติร่วมกันในที่สุด',
+          explanation_th: 'คำนำ (本着互利共赢的原则) + ประธาน (双方终于) + ผลลัพธ์ (达成了全面共识)',
+          encouragement: 'สำนวนภาษาทางการระดับทูตพาณิชย์สุดยอดมาก!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '共识' (ฉันทามติ) ตัว '识' มีหมวดนำใด?",
+          options: [
+            '讠 (หมวดคำพูด 言字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '心 (หมวดใจ 心字底)',
+            '目 (หมวดตา 目字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'识' (ความรู้/ความเข้าใจ) มีหมวดนำ '讠' (คำพูด) สื่อถึงการทำความเข้าใจผ่านภาษาและคำพูด",
+          encouragement: 'จำหมวดนำได้อย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'การเจรจากำลังจะจบลงด้วยดี คู่ค้าถามว่าคุณพร้อมจะลงนามในบันทึกข้อตกลงเบื้องต้น (MOU) วันนี้เลยหรือไม่ คุณควรกล่าวตอบรับอย่างไรให้สง่างาม?',
+        options: [
+          '本着互利共赢的原则，我们非常高兴能与贵公司达成共识，今天就可以签署备忘录！ (Běnzhe hùlìgòngyíng de yuánzé, wǒmen fēicháng gāoxìng néng yǔ guì gōngsī dáchéng gòngshí, jīntiān jiù kěyǐ qiānshǔ bèiwànglù!)',
+          '我不想签，我们明天再说。 (Wǒ bù xiǎng qiān, wǒmen míngtiān zàishuō.)',
+          '你刚才说什么？我没听懂。 (Nǐ gāngcái shuō shénme? Wǒ méi tīngdǒng.)',
+          '洗发水多少钱一瓶？ (Xǐfàshuǐ duōshao qián yì píng?)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '本着互利共赢的原则，我们非常高兴能与贵公司达成共识，今天就可以签署备忘录！' ตอบรับอย่างเป็นทางการและแสดงถึงความเป็นพันธมิตรที่แน่นแฟ้น",
+        encouragement: 'ยินดีด้วย! คุณปิดการเจรจาระดับพันธมิตรข้ามชาติได้อย่างงดงาม!'
+      }
+    },
+    {
+      lesson_id: 't3_u27_l04',
+      lesson_number: 4,
+      title: {
+        zh: 'Boss Challenge: 深圳供应商账期终极攻防',
+        th: 'ภารกิจบอส: ต่อรองเครดิตเทอมซัพพลายเออร์เซินเจิ้น',
+        en: 'Boss Challenge: Credit Term Battle in Shenzhen'
+      },
+      can_do: {
+        th: 'บูรณาการทักษะการเจรจาต่อรองทั้งหมด ขอขยายเครดิตเทอมจาก 30 เป็น 60 วันกับคู่ค้าโรงงานได้อย่างสัมฤทธิผล',
+        en: 'Synthesize all negotiation tactics to successfully extend credit terms from 30 to 60 days'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิตการเจรจาต่อรองสุดเข้มข้น ขยายเครดิตเทอม ควบคุมต้นทุน และปิดสัญญา Win-Win!',
+      vocabulary: [
+        {
+          id: 'hsk3_2716',
+          hanzi: '顺延',
+          pinyin: 'shùnyán',
+          display_pinyin: 'shùnyán',
+          pinyin_tone: 'shun4yan2',
+          meaning_th: 'เลื่อนออกไปตามลำดับ / ขยายเวลาต่อเนื่อง',
+          meaning_en: 'extend automatically / postpone in sequence',
+          radical: '页',
+          radical_name_th: 'หมวดหน้า (页字旁)',
+          stroke_count: 15,
+          mnemonic: 'ดำเนินต่อไปอย่างราบรื่น (顺) ยืดเวลาออกไป (延) = เลื่อนหรือขยายเวลา',
+          kid_mnemonic: 'ดึงแถบยางยืดปฏิทินยืดออกไปข้างหน้า = 顺延',
+          body_gesture: 'กวาดฝ่ามือเลื่อนไปข้างหน้าอย่างนุ่มนวล'
+        },
+        {
+          id: 'hsk3_2717',
+          hanzi: '授信',
+          pinyin: 'shòuxìn',
+          display_pinyin: 'shòuxìn',
+          pinyin_tone: 'shou4xin4',
+          meaning_th: 'การให้วงเงินสินเชื่อ',
+          meaning_en: 'grant credit line',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 20,
+          mnemonic: 'มอบให้ด้วยมือ (授) วงเงินความน่าเชื่อถือ (信) = อนุมัติวงเงินสินเชื่อ',
+          kid_mnemonic: 'เปิดวงเงินบัตรทองให้ใช้ซื้อของก่อนจ่ายทีหลัง = 授信',
+          body_gesture: 'ยื่นสองมือส่งบัตรเครดิตทองคำให้คู่ค้า'
+        },
+        {
+          id: 'hsk3_2718',
+          hanzi: '现金流',
+          pinyin: 'xiànjīnliú',
+          display_pinyin: 'xiànjīnliú',
+          pinyin_tone: 'xian4jin1liu2',
+          meaning_th: 'กระแสเงินสด',
+          meaning_en: 'cash flow',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำ (三点水)',
+          stroke_count: 26,
+          mnemonic: 'เงินสดที่มีอยู่จริง (现金) ไหลเวียนเหมือนสายน้ำ (流) = กระแสเงินสด',
+          kid_mnemonic: 'สายน้ำสีทองไหลเวียนหล่อเลี้ยงต้นไม้ในบริษัท = 现金流',
+          body_gesture: 'ขยับนิ้วมือพลิ้วไหวเหมือนสายน้ำไหลเวียน'
+        },
+        {
+          id: 'hsk3_2719',
+          hanzi: '长期合作',
+          pinyin: 'chángqī hézuò',
+          display_pinyin: 'chángqī hézuò',
+          pinyin_tone: 'chang2qi1 he2zuo4',
+          meaning_th: 'ความร่วมมือระยะยาว',
+          meaning_en: 'long-term cooperation',
+          radical: '长',
+          radical_name_th: 'หมวดขนาดยาว (长字旁)',
+          stroke_count: 23,
+          mnemonic: 'กาลเวลายืนยาว (长期) ร่วมมือกันด้วยดี (合作) = ร่วมมือระยะยาว',
+          kid_mnemonic: 'เพื่อนจับมือเดินเคียงข้างกันไปบนเส้นทางไกล = 长期合作',
+          body_gesture: 'กุมสองมือแนบอกแสดงความผูกพันระยะยาว'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียงคำว่า 顺延 (shùnyán) ให้เป็นธรรมชาติ',
+        description_th: 'คำว่า 顺 (shùn) เป็นเสียง 4 หนักแน่น ส่วน 延 (yán) เป็นเสียง 2 เหินขึ้นนุ่มนวล',
+        example: '合同期顺延一年 (ระยะเวลาสัญญาขยายออกไป 1 ปี)',
+        fun_metaphor: 'เหมือนก้าวลงบันไดก้าวหนึ่งแล้วกระโดดข้ามเนินไปข้างหน้า!',
+        reassurance: 'คำนี้พบบ่อยมากในสัญญาพาณิชย์ ออกเสียงให้คล่องแคล่วจะเพิ่มความมั่นใจ'
+      },
+      grammar_bite: {
+        title: 'การสรุปผลการต่อรองวงเงิน: 获得授信额度 / 缓解现金流压力',
+        explanation_th: 'ภาษาเจรจาระดับซีเนียร์ที่ใช้ชี้แจงเหตุผลทางการเงิน',
+        patterns: [
+          {
+            formula: '为了缓解双方的现金流压力，账期可顺延至 + [จำนวนวัน] + 天',
+            zh: '为了缓解双方的现金流压力，尾款账期可顺延至六十天。',
+            pinyin: 'Wèile huǎnjiě shuāngfāng de xiànjīnliú yālì, wěikuǎn zhàngqī kě shùnyán zhì liùshí tiān.',
+            th: 'เพื่อบรรเทาแรงกดดันด้านกระแสเงินสดของทั้งสองฝ่าย เครดิตเทอมเงินงวดสุดท้ายสามารถขยายเป็น 60 วัน',
+            en: 'To relieve cash flow pressure for both parties, final balance credit term can be extended to 60 days.'
+          },
+          {
+            formula: '基于长期合作的意愿，同意给予贵方 + [วงเงิน] + 授信',
+            zh: '基于长期合作的意愿，我们同意给予贵方五十万元的授信额度。',
+            pinyin: 'Jīyú chángqī hézuò de yìyuàn, wǒmen tóngyì gěiyǔ guìfāng wǔshíwàn yuán de shòuxìn édù.',
+            th: 'โดยยึดตามเจตนารมณ์ความร่วมมือระยะยาว ทางเราตกลงให้วงเงินสินเชื่อแก่ท่าน 500,000 หยวน',
+            en: 'Based on long-term cooperation willingness, we agree to grant your party a 500,000 yuan credit line.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (หัวหน้าฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '张总您好，我们双方已经合作了两次。这次的大订单，我们希望能把账期顺延至六十天。',
+          pinyin: 'Zhāng zǒng nín hǎo, wǒmen shuāngfāng yǐjīng hézuò le liǎng cì. Zhè cì de dà dìngdān, wǒmen xīwàng néng bǎ zhàngqī shùnyán zhì liùshí tiān.',
+          th: 'สวัสดีครับประธานจาง เราสองฝ่ายเคยร่วมงานกันมา 2 ครั้งแล้ว คำสั่งซื้อใหญ่รอบนี้เราหวังว่าจะขยายเครดิตเทอมเป็น 60 วันครับ',
+          en: 'Hello President Zhang, we have partnered twice. For this large order, we hope to extend credit terms to 60 days.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ประธานจาง (โรงงานเซินเจิ้น) 👨‍💼',
+          zh: '小宋啊，六十天账期确实超出常规了，原材料供应商催我们付款催得很紧。',
+          pinyin: 'Xiǎo Sòng a, liùshí tiān zhàngqī quèshí chāochū chángguī le, yuáncáiliào gōngyìngshāng cuī wǒmen fùkuǎn cuī de hěn jǐn.',
+          th: 'เสี่ยวซ่งเอ๊ย เครดิต 60 วันเกินธรรมเนียมปกติจริงๆ นะ ซัพพลายเออร์วัตถุดิบก็เร่งทวงเงินพวกเราเข้มงวดมาก',
+          en: 'Xiao Song, a 60-day credit term is really unconventional; raw material suppliers urge our payments very hard.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'สมชาย (หัวหน้าฝ่ายจัดซื้อ) 🧑‍💼',
+          zh: '张总，我们承诺未来一年的订单全部在贵厂下。这样贵方可以根据长期合作协议，向供应链金融申请专项授信。',
+          pinyin: 'Zhāng zǒng, wǒmen chéngnuò wèilái yì nián de dìngdān quánbù zài guì chǎng xià. Zhèyàng guìfāng kěyǐ gēnjù chángqī hézuò xiéyì, xiàng gōngyìngliàn jīnróng shēnqǐng zhuānxiàng shòuxìn.',
+          th: 'ประธานจางครับ เราสัญญาว่าจะสั่งออเดอร์ตลอดทั้งปีข้างหน้ากับโรงงานท่านทั้งหมด แบบนี้ทางท่านสามารถนำสัญญานี้ไปยื่นขอวงเงินสินเชื่อพิเศษได้ครับ',
+          en: 'President Zhang, we commit all orders for the coming year to your plant. You can apply for dedicated credit based on our agreement.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'ประธานจาง (โรงงานเซินเจิ้น) 👨‍💼',
+          zh: '好魄力！有这份年度大单做支撑，现金流就盘活了！六十天账期，我批了！',
+          pinyin: 'Hǎo pòlì! Yǒu zhè fèn niándù dàdān zuò zhīchēng, xiànjīnliú jiù pánhuó le! Liùshí tiān zhàngqī, wǒ pī le!',
+          th: 'ใจถึงมาก! มีออเดอร์ใหญ่รายปีค้ำประกัน กระแสเงินสดก็คล่องตัวขึ้นมาทันที! เครดิตเทอม 60 วัน ผมอนุมัติครับ!',
+          en: 'Great courage! Backed by this annual mega order, our cash flow revitalizes! 60-day term approved!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "คำว่า '现金流' (xiànjīnliú) มีความหมายตรงกับข้อใด?",
+          options: [
+            'กระแสเงินสด',
+            'อัตราแลกเปลี่ยนเงินตรา',
+            'ค่าธรรมเนียมบัตรเครดิต',
+            'เงินทอน'
+          ],
+          correct_index: 0,
+          explanation_th: "'现金流' คือ กระแสเงินสด หรือ Cash Flow ในการดำเนินธุรกิจ",
+          encouragement: 'จำคำศัพท์การเงินธุรกิจได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "เมื่อต้องการพูดว่า 'การให้วงเงินสินเชื่อ' ภาษาจีนใช้คำว่าอะไร?",
+          options: [
+            '授信 (shòuxìn)',
+            '退货 (tuìhuò)',
+            '免单 (miǎndān)',
+            '挂号 (guàhào)'
+          ],
+          correct_index: 0,
+          explanation_th: "'授信' คือ การอนุมัติหรือให้วงเงินสินเชื่อทางการค้าหรือจากธนาคาร",
+          encouragement: 'ยอดเยี่ยมมาก! ศัพท์เทคนิคการเงินเป๊ะมาก!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เครดิตเทอมสามารถขยายเป็นหกสิบวันได้"',
+          tokens: ['顺延至六十天', '账期可以', '为了缓解现金流压力'],
+          correct_sequence: ['为了缓解现金流压力', '账期可以', '顺延至六十天'],
+          pinyin: 'Wèile huǎnjiě xiànjīnliú yālì, zhàngqī kěyǐ shùnyán zhì liùshí tiān',
+          meaning_th: 'เพื่อบรรเทาแรงกดดันด้านกระแสเงินสด เครดิตเทอมสามารถขยายเป็นหกสิบวันได้',
+          explanation_th: 'เหตุผล (为了缓解现金流压力) + ประธาน (账期可以) + ภาคแสดง (顺延至六十天)',
+          encouragement: 'โครงสร้างประโยคเจรจาระดับสูงสมบูรณ์แบบ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "คำว่า '现金流' ตัว '流' (ไหล) มีหมวดนำใด?",
+          options: [
+            '氵 (หมวดน้ำ 三点水)',
+            '火 (หมวดไฟ 火字旁)',
+            '木 (หมวดไม้ 木字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'流' มีหมวดนำ '氵' (น้ำ) สื่อถึงการไหลเวียนเหมือนสายน้ำ",
+          encouragement: 'รากศัพท์แม่นยำมาก!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'คุณต้องการปิดดีลการเจรจากับเจ้าของโรงงานเซินเจิ้น โดยเน้นย้ำความสัมพันธ์แบบพันธมิตรระยะยาวและความพร้อมในการเซ็นสัญญารายปี ควรพูดว่าอย่างไร?',
+        options: [
+          '感谢张总的魄力！我们将立刻起草年度合作协议，确立六十天账期，携手共创双赢！ (Gǎnxiè Zhāng zǒng de pòlì! Wǒmen jiāng lìkè qǐcǎo niándù hézuò xiéyì, quèlì liùshí tiān zhàngqī, xiéshǒu gòng chuàng shuāngyíng!)',
+          '算了吧，我不想跟你谈了。 (Suàn le ba, wǒ bù xiǎng gēn nǐ tán le.)',
+          '请问这顿饭谁买单？ (Qǐngwèn zhè dùn fàn shéi mǎidān?)',
+          '附近有便利店吗？我想买水。 (Fùjìn yǒu biànlìdiàn ma? Wǒ xiǎng mǎi shuǐ.)'
+        ],
+        correct_index: 0,
+        explanation_th: "ประโยค '感谢张总的魄力！我们将立刻起草年度合作协议，确立六十天账期，携手共创双赢！' เด็ดเดี่ยว ทรงพลัง และตอกย้ำชัยชนะร่วมกันของทั้งสองฝ่าย",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่าน Boss Challenge ขยายเครดิตเทอมกับซัพพลายเออร์เซินเจิ้นสำเร็จ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t3_u27_master',
+        badge_name: 'ผู้เชี่ยวชาญการเจรจาการค้าระหว่างประเทศ 🤝🏆',
+        message_th: 'ยอดเยี่ยมไร้ที่ติ! คุณสำเร็จ Unit 27 พร้อมเจรจาราคา เครดิตเทอม และปิดดีลกับคู่ค้าชาวจีนได้อย่างเหนือชั้น!',
+        xp_reward: 300
+      }
+    }
+  ]
+};

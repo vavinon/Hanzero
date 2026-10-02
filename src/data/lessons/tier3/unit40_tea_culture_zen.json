@@ -1,0 +1,961 @@
+{
+  "unit_id": "tier3_u40",
+  "tier": 3,
+  "unit_number": 40,
+  "title": {
+    "zh": "中国茶道与禅意",
+    "th": "วิถีแห่งชาจีนและปรัชญาเซน",
+    "en": "Chinese Tea Culture & Zen"
+  },
+  "description": "ดื่มด่ำกับสุนทรียรสและภูมิปัญญาพันปีของวัฒนธรรมชาจีน: ศาสตร์แห่ง 6 ตระกูลชาและกระบวนการหมัก (六大茶类与发酵), พิธีชงชากังฟูและกาดินทรายม่วง (工夫茶艺与紫砂壶), ปรัชญา \"ชาและเซนเป็นหนึ่งเดียว\" สู่สัจธรรมชีวิต (茶禅一味与苦尽甘来), และมารยาทการผูกมิตรด้วยถ้วยชา (以茶会友与待客礼仪)",
+  "lessons": [
+    {
+      "lesson_id": "t3_u40_l01",
+      "lesson_number": 1,
+      "title": {
+        "zh": "六大茶类与采摘",
+        "th": "ชา 6 ตระกูลใหญ่และการคัดสรรยอดใบชา",
+        "en": "Six Tea Categories & Harvesting"
+      },
+      "can_do": {
+        "th": "แยกแยะชา 6 ตระกูลใหญ่ของจีน ระดับการหมักบ่ม และการคัดสรรยอดชา",
+        "en": "Distinguish six Chinese tea families, fermentation levels, and tender shoot harvesting"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องประเภทใบชาจีน การหมักบ่ม และชาหลงจิ่งกับผู่เอ๋อร์อย่างผู้เชี่ยวชาญ!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4001",
+          "hanzi": "发酵",
+          "pinyin": "fājiào",
+          "display_pinyin": "fājiào",
+          "pinyin_tone": "fa1jiao4",
+          "meaning_th": "การหมักบ่ม (ของใบชาหรืออาหาร)",
+          "meaning_en": "fermentation",
+          "radical": "酉",
+          "radical_name_th": "หมวดไหเหล้า (酉字旁)",
+          "stroke_count": 19,
+          "mnemonic": "เปิดปฏิกิริยา (发) ในไหหมักจนสุกหอม (酵) = การหมักบ่ม",
+          "kid_mnemonic": "ถังหมักใบชาที่ค่อยๆ เปลี่ยนใบชาสีเขียวให้กลายเป็นสีทองหอมกรุ่น = 发酵",
+          "body_gesture": "ทำมือสองข้างประคองไหหมักแล้วสูดดมกลิ่นหอม"
+        },
+        {
+          "id": "hsk3_4002",
+          "hanzi": "龙井",
+          "pinyin": "lóngjǐng",
+          "display_pinyin": "lóngjǐng",
+          "pinyin_tone": "long2jing3",
+          "meaning_th": "หลงจิ่ง (ยอดชาเขียวชื่อดังแห่งทะเลสาบซีหู หางโจว)",
+          "meaning_en": "Longjing tea / Dragon Well green tea",
+          "radical": "龙",
+          "radical_name_th": "หมวดมังกร (龙字旁)",
+          "stroke_count": 9,
+          "mnemonic": "มังกรเหินเวหา (龙) ทอดกายเหนือบ่อน้ำศักดิ์สิทธิ์ (井) = ชาหลงจิ่ง",
+          "kid_mnemonic": "ใบชาแบนเรียวสีเขียวมรกตที่คั่วบนกระทะเหล็กกลิ่นหอมฟุ้ง = 龙井",
+          "body_gesture": "ทำท่าวาดมังกรเลื้อยเบาๆ ในอากาศ"
+        },
+        {
+          "id": "hsk3_4003",
+          "hanzi": "普洱",
+          "pinyin": "pǔ’ěr",
+          "display_pinyin": "pǔ’ěr",
+          "pinyin_tone": "pu3er3",
+          "meaning_th": "ผู่เอ๋อร์ (ชาดำหมักเลื่องชื่อแห่งมณฑลยูนนาน)",
+          "meaning_en": "Pu-erh tea",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 18,
+          "mnemonic": "สายน้ำหล่อเลี้ยงกว้างใหญ่ (普) ชะล้างริมตลิ่ง (洱) = ชาผู่เอ๋อร์ยูนนาน",
+          "kid_mnemonic": "ก้อนชาผู่เอ๋อร์อัดแท่งทรงกลมคล้ายพระจันทร์เต็มดวงกลิ่นหอมลุ่มลึก = 普洱",
+          "body_gesture": "สองมือทำท่าประกบก้อนชากลมขึ้นชม"
+        },
+        {
+          "id": "hsk3_4004",
+          "hanzi": "乌龙",
+          "pinyin": "wūlóng",
+          "display_pinyin": "wūlóng",
+          "pinyin_tone": "wu1long2",
+          "meaning_th": "อูหลง (ชากึ่งหมักกลิ่นหอมละมุน)",
+          "meaning_en": "Oolong tea",
+          "radical": "鸟",
+          "radical_name_th": "หมวดนก (鸟字旁)",
+          "stroke_count": 9,
+          "mnemonic": "สีเข้มดั่งอีกาดำ (乌) ขดตัวดั่งมังกรพลิ้วไหว (龙) = ชาอูหลง",
+          "kid_mnemonic": "ใบชาขดเกลียวสีเข้มเมื่อโดนน้ำร้อนก็คลี่ออกดั่งมังกรตื่น = 乌龙",
+          "body_gesture": "ขยับนิ้วมือคลี่ออกช้าๆ สื่อถึงใบชาที่คลี่ตัวในน้ำร้อน"
+        },
+        {
+          "id": "hsk3_4005",
+          "hanzi": "采摘",
+          "pinyin": "cǎizhāi",
+          "display_pinyin": "cǎizhāi",
+          "pinyin_tone": "cai3zhai1",
+          "meaning_th": "การเก็บเกี่ยว / การเด็ดยอดใบชา",
+          "meaning_en": "to pluck / to pick tea leaves",
+          "radical": "爫",
+          "radical_name_th": "หมวดกรงเล็บมือด้านบน (爪字头)",
+          "stroke_count": 22,
+          "mnemonic": "สองมือคัดสรร (采) เด็ดยอดอ่อนออกจากกิ่งอย่างทะนุถนอม (摘) = เด็ดยอดชา",
+          "kid_mnemonic": "หญิงสาวสวมหมวกฟางสะพายตะกร้าสานกำลังเด็ดยอดชาสองใบหนึ่งยอด = 采摘",
+          "body_gesture": "ใช้นิ้วโป้งและนิ้วชี้ทำท่าเด็ดยอดชาเบาๆ ใส่ตะกร้า"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การผันเสียง 普洱 (pǔ’ěr) สองพยางค์เสียง 3 ติดกัน",
+        "description_th": "pǔ และ ěr ล้วนเป็นเสียง 3 ตามกฎ Tone Sandhi พยางค์แรกจะผันเป็นเสียง 2 กลายเป็น pú’ěr",
+        "example": "一饼陈年普洱 (yì bǐng chénnián pú’ěr: ชาผู่เอ๋อร์เก่าแก่หนึ่งก้อน)",
+        "fun_metaphor": "เหมือนแล่นเรือทวนคลื่น ฮึบ... แล้วทอดสมอลงน้ำลึก ฮืม...",
+        "reassurance": "การผันเสียง 3+3 -> 2+3 ช่วยให้เสียงพูดลื่นไหลไม่สะดุดคอ"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการจำแนกประเภท: 按...程度不同，划分为...",
+        "explanation_th": "ใช้ในการจำแนกหมวดหมู่ของผลิตผลหรือวิทยาการตามมาตรฐานทางวิทยาศาสตร์หรือประเพณี",
+        "patterns": [
+          {
+            "formula": "中国茶按照发酵程度的不同，主要划分为 + [ประเภท]",
+            "zh": "中国茶按照发酵程度的不同，主要划分为绿茶、红茶、乌龙茶等六大茶类。",
+            "pinyin": "Zhōngguó chá ànzhào fājiào chéngdù de bùtóng, zhǔyào huàfēn wéi lǜchá, hóngchá, wūlóngchá děng liù dà chálèi.",
+            "th": "ชาจีนแบ่งตามระดับการหมักบ่มที่แตกต่างกัน ออกเป็น 6 ตระกูลใหญ่ ได้แก่ ชาเขียว ชาแดง ชาอูหลง เป็นต้น",
+            "en": "Chinese tea, according to differing fermentation levels, is mainly divided into six categories including green, black, and oolong tea."
+          },
+          {
+            "formula": "讲究在清明前采摘嫩芽",
+            "zh": "特级西湖龙井讲究在清明节前采摘头春嫩芽。",
+            "pinyin": "Tèjí Xīhú Lóngjǐng jiǎngjiu zài Qīngmíngjié qián cǎizhāi tóuchūn nènyá.",
+            "th": "ชาซีหูหลงจิ่งเกรดพิเศษพิถีพิถันกับการเด็ดยอดอ่อนแรกของฤดูใบไม้ผลิก่อนเทศกาลเช็งเม้ง",
+            "en": "Premium West Lake Longjing emphasizes plucking first-spring tender shoots before the Qingming Festival."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (ผู้รักชา) 🧑‍💼",
+          "zh": "老板，我和几位外国同学来中国旅游，请问西湖龙井和普洱茶有什么根本区别吗？",
+          "pinyin": "Lǎobǎn, wǒ hé jǐ wèi wàiguó tóngxué lái Zhōngguó lǚyóu, qǐngwèn Xīhú Lóngjǐng hé Pǔ’ěr chá yǒu shénme gēnběn qūbié ma?",
+          "th": "เถ้าแก่ครับ ผมกับเพื่อนร่วมชั้นชาวต่างชาติหลายคนมาเที่ยวเมืองจีน รบกวนถามว่าซีหูหลงจิ่งกับชาผู่เอ๋อร์มีข้อแตกต่างสำคัญอย่างไรบ้างครับ?",
+          "en": "Boss, several foreign classmates and I came to China to travel; may I ask what the fundamental difference is between West Lake Longjing and Pu-erh tea?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เถ้าแก่ชา (ผู้เชี่ยวชาญใบชา) 👨‍🦳",
+          "zh": "区别很大！龙井是不发酵的绿茶，讲究清明前采摘，口感鲜爽清甜。",
+          "pinyin": "Qūbié hěn dà! Lóngjǐng shì bù fājiào de lǜchá, jiǎngjiu Qīngmíng qián cǎizhāi, kǒugǎn xiānshuǎng qīngtián.",
+          "th": "แตกต่างกันมากครับ! หลงจิ่งเป็นชาเขียวที่ไม่ผ่านการหมัก พิถีพิถันกับการเก็บก่อนเช็งเม้ง รสสัมผัสสดชื่นหวานใสครับ",
+          "en": "Very big difference! Longjing is unfermented green tea, harvested before Qingming, tasting fresh, brisk, and sweet."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (ผู้รักชา) 🧑‍💼",
+          "zh": "那普洱茶和著名的乌龙茶又是怎么分类的呢？",
+          "pinyin": "Nà Pǔ’ěr chá hé zhùmíng de wūlóngchá yòu shì zěnme fēnlèi de ne?",
+          "th": "แล้วชาผู่เอ๋อร์กับชาอูหลงอันเลื่องชื่อจัดอยู่ในหมวดหมู่อย่างไรหรือครับ?",
+          "en": "Then how are Pu-erh tea and famous Oolong tea categorized?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เถ้าแก่ชา (ผู้เชี่ยวชาญใบชา) 👨‍🦳",
+          "zh": "乌龙茶属于半发酵茶，香气馥郁；而普洱熟茶经过后发酵，越陈越香，汤色红浓醇厚。",
+          "pinyin": "Wūlóngchá shǔyú bàn fājiào chá, xiāngqì fùyù; ér Pǔ’ěr shúchá jīngguò hòufājiào, yuè chén yuè xiāng, tāngsè hóngnóng chúnhòu.",
+          "th": "ชาอูหลงจัดเป็นชากึ่งหมัก มีกลิ่นหอมกรุ่นอบอวล ส่วนชาผู่เอ๋อร์สุกผ่านการหมักบ่มต่อเนื่อง ยิ่งเก็บเก่ายิ่งหอม น้ำชาแดงเข้มข้นกลมกล่อมครับ",
+          "en": "Oolong is semi-fermented with a rich aroma; ripe Pu-erh undergoes post-fermentation, smelling better with age, with a deep red, mellow liquor."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (ผู้รักชา) 🧑‍💼",
+          "zh": "我打算在商店买一些优质茶叶作为礼物带回宾馆送给朋友，您有什么好的建议吗？",
+          "pinyin": "Wǒ dǎsuàn zài shāngdiàn mǎi yìxiē yōuzhì cháyè zuòwéi lǐwù dài huí bīnguǎn sòng gěi péngyou, nín yǒu shénme hǎo de jiànyì ma?",
+          "th": "ผมตั้งใจจะซื้อใบชาคุณภาพดีที่ร้านค้าเป็นของขวัญนำกลับไปโรงแรมมอบให้เพื่อน คุณมีคำแนะนำดีๆ บ้างไหมครับ?",
+          "en": "I plan to buy some quality tea at the shop as gifts to take back to the hotel for friends; what good suggestions do you have?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "เถ้าแก่ชา (ผู้เชี่ยวชาญใบชา) 👨‍🦳",
+          "zh": "如果朋友喜欢清香，我推荐明前龙井；如果注重身体健康和日常养生，陈年普洱绝对是极好的选择。",
+          "pinyin": "Rúguǒ péngyou xǐhuan qīngxiāng, wǒ tuījiàn Míngqián Lóngjǐng; rúguǒ zhùzhòng shēntǐ jiànkāng hé rìcháng yǎngshēng, chénnián Pǔ’ěr juéduì shì jí hǎo de xuǎnzé.",
+          "th": "หากเพื่อนชอบกลิ่นหอมสดชื่น ฉันแนะนำหลงจิ่งก่อนเช็งเม้ง หากให้ความสำคัญกับสุขภาพร่างกายและการดูแลสุขภาพประจำวัน ผู่เอ๋อร์เก่าแก่ย่อมเป็นตัวเลือกที่ดีเลิศอย่างยิ่งครับ",
+          "en": "If your friend likes fresh scent, I recommend pre-Qingming Longjing; if valuing physical health and daily wellness, aged Pu-erh is definitely an excellent choice."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "ชา '龙井' (Lóngjǐng) จัดอยู่ในตระกูลชาประเภทใด?",
+          "options": [
+            "ชาเขียวที่ไม่ผ่านการหมัก (Green Tea)",
+            "ชาดำหมักเข้มข้น",
+            "ชาดอกไม้ใส่น้ำตาล",
+            "ชาผลไม้เย็น"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'龙井' (หลงจิ่ง) เป็นยอดชาเขียวอันดับหนึ่งของจีน ซึ่งเป็นชาที่ไม่ผ่านการหมัก (不发酵茶)",
+          "encouragement": "ถูกต้องยอดเยี่ยม! รู้ลึกถึงศาสตร์ตระกูลชาจีน!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "ประโยค '越陈越香' มักใช้พรรณนาถึงคุณลักษณะของชาชนิดใด?",
+          "options": [
+            "普洱茶 (ชาผู่เอ๋อร์ ที่ยิ่งบ่มเก่ายิ่งหอมกลมกล่อม)",
+            "ชาเขียวสดที่ต้องดื่มทันที",
+            "ชานมไข่มุก",
+            "น้ำแข็งไส"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'越陈越香' (ยิ่งบ่มเก่ายิ่งหอม) เป็นเอกลักษณ์อันโดดเด่นของชาผู่เอ๋อร์ (普洱茶) ที่สะสมมูลค่าและความหอมตามกาลเวลา",
+          "encouragement": "แม่นยำมาก! เข้าใจสุนทรียภาพแห่งกาลเวลาของชาจีน!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ชาจีนแบ่งออกเป็น 6 ตระกูลใหญ่ตามระดับการหมักบ่มที่แตกต่างกัน\"",
+          "tokens": [
+            "按照发酵程度",
+            "中国茶",
+            "划分为六大茶类",
+            "主要"
+          ],
+          "correct_sequence": [
+            "中国茶",
+            "按照发酵程度",
+            "主要",
+            "划分为六大茶类"
+          ],
+          "pinyin": "Zhōngguó chá ànzhào fājiào chéngdù zhǔyào huàfēn wéi liù dà chálèi.",
+          "meaning_th": "ชาจีนแบ่งออกเป็น 6 ตระกูลใหญ่ตามระดับการหมักบ่มเป็นหลัก",
+          "explanation_th": "ประธาน (中国茶) + ส่วนขยายตามเกณฑ์ (按照发酵程度) + คำวิเศษณ์ (主要) + ภาคแสดง (划分为六大茶类)",
+          "encouragement": "ประกอบประโยคหมวดหมู่ชาได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '采摘' ตัว '采' (เด็ด/เก็บ) มีส่วนประกอบด้านบน '爫' ซึ่งสื่อถึงสิ่งใด?",
+          "options": [
+            "กรงเล็บมือหรือนิ้วมือที่เอื้อมออกไปเด็ดเก็บ (爪字头)",
+            "สายน้ำไหล",
+            "รังนกบนต้นไม้",
+            "ใบไม้ร่วง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'采' มี '爫' (กรงเล็บมือ) อยู่เหนือ '木' (ต้นไม้) สื่อถึงมือคนกำลังเอื้อมเด็ดผลไม้หรือยอดใบไม้ออกจากต้น",
+          "encouragement": "เข้าใจลึกซึ้งถึงรากศัพท์และสรีระท่าทางโบราณ!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u40_l02",
+      "lesson_number": 2,
+      "title": {
+        "zh": "功夫茶艺与器具",
+        "th": "พิธีชงชากังฟูและอุปกรณ์ประณีต",
+        "en": "Gongfu Tea Ceremony & Teaware"
+      },
+      "can_do": {
+        "th": "อธิบายขั้นตอนการชงชากังฟู กาดินเผาจื่อซา และรสสัมผัสชุ่มคอ (回甘)",
+        "en": "Explain Gongfu tea brewing steps, Yixing Zisha teapots, and lingering sweet aftertaste (Huigan)"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนาเรื่องอุปกรณ์ชงชากังฟูและสัมผัสสุนทรียรสแห่งชา!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4006",
+          "hanzi": "紫砂壶",
+          "pinyin": "zǐshāhú",
+          "display_pinyin": "zǐshāhú",
+          "pinyin_tone": "zi3sha1hu2",
+          "meaning_th": "กาดินเผาจื่อซา (กาดินทรายม่วงอี๋ซิง)",
+          "meaning_en": "purple clay teapot / Yixing clay pot",
+          "radical": "缶",
+          "radical_name_th": "หมวดหม้อดินเผา (缶字旁)",
+          "stroke_count": 31,
+          "mnemonic": "ดินทรายสีม่วงล้ำค่า (紫砂) ปั้นเผาเป็นกาชงชาโบราณ (壶) = กาดินจื่อซา",
+          "kid_mnemonic": "กาน้ำชาดินเผาสีน้ำตาลม่วงขัดมันวาวที่ยิ่งใช้ชงยิ่งซึมซับกลิ่นชา = 紫砂壶",
+          "body_gesture": "ทำมือข้างหนึ่งจับหูกา อีกข้างประคองฝากาชงชาอย่างประณีต"
+        },
+        {
+          "id": "hsk3_4007",
+          "hanzi": "冲泡",
+          "pinyin": "chōngpào",
+          "display_pinyin": "chōngpào",
+          "pinyin_tone": "chong1pao4",
+          "meaning_th": "การชงชา / รินน้ำร้อนลงบนใบชา",
+          "meaning_en": "to brew / to infuse tea",
+          "radical": "氵",
+          "radical_name_th": "หมวดน้ำ (三点水)",
+          "stroke_count": 14,
+          "mnemonic": "สายน้ำร้อนพวยพุ่งรินลงมา (冲) ปลุกใบชาให้พองตัวเกิดฟองละมุน (泡) = การชงชา",
+          "kid_mnemonic": "สายน้ำร้อนที่รินจากที่สูงลงสู่กาชงชาจนส่งเสียงซู่ซ่าหอมกรุ่น = 冲泡",
+          "body_gesture": "ยกมือขวาทำท่ารินน้ำร้อนลงสู่ถ้วยชาอย่างสง่างาม"
+        },
+        {
+          "id": "hsk3_4008",
+          "hanzi": "品茗",
+          "pinyin": "pǐnmíng",
+          "display_pinyin": "pǐnmíng",
+          "pinyin_tone": "pin3ming2",
+          "meaning_th": "การลิ้มรสจิบชาอย่างละเมียดละไม (คำหรูระดับวรรณกรรม)",
+          "meaning_en": "to savor tea / tea tasting",
+          "radical": "口",
+          "radical_name_th": "หมวดปาก (口字旁)",
+          "stroke_count": 17,
+          "mnemonic": "สามปากลิ้มรสอย่างถี่ถ้วน (品) ยอดชาชั้นเลิศ (茗) = จิบชิมชาอย่างมีรสนิยม",
+          "kid_mnemonic": "ยกจอกชาใบจิ๋วขึ้นจรดริมฝีปาก ค่อยๆ จิบทีละนิดแล้วหลับตายิ้ม = 品茗",
+          "body_gesture": "ใช้นิ้วโป้งกับนิ้วชี้จับจอกชาจิ๋วแตะริมฝีปาก"
+        },
+        {
+          "id": "hsk3_4009",
+          "hanzi": "回甘",
+          "pinyin": "huígān",
+          "display_pinyin": "huígān",
+          "pinyin_tone": "hui2gan1",
+          "meaning_th": "ความหวานชุ่มคอที่ย้อนกลับมาหลังรสขม (Aftertaste)",
+          "meaning_en": "sweet aftertaste in tea tasting",
+          "radical": "甘",
+          "radical_name_th": "หมวดหวาน (甘字旁)",
+          "stroke_count": 11,
+          "mnemonic": "หวนย้อนกลับคืนมา (回) สู่รสหวานละมุนชุ่มคอ (甘) = รสหวานชุ่มคอ",
+          "kid_mnemonic": "จิบน้ำชาที่ตอนแรกขมปร่า แต่วินาทีถัดมาในคอกลับหวานฉ่ำเหมือนน้ำผึ้ง = 回甘",
+          "body_gesture": "เอามือลูบลำคอแล้วสูดลมหายใจสัมผัสความหวานชุ่ม"
+        },
+        {
+          "id": "hsk3_4010",
+          "hanzi": "茶道",
+          "pinyin": "chádào",
+          "display_pinyin": "chádào",
+          "pinyin_tone": "cha2dao4",
+          "meaning_th": "พิธีชงชา / วิถีและปรัชญาแห่งชา",
+          "meaning_en": "tea ceremony / the Way of Tea",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 21,
+          "mnemonic": "ใบชาเขียวธรรมชาติ (茶) สู่มรรคาและสัจธรรมแห่งชีวิต (道) = วิถีแห่งชา",
+          "kid_mnemonic": "โต๊ะชงชาไม้หอมที่มีกาดินเผาและถ้วยกระเบื้องขาวจัดวางอย่างสงบงดงาม = 茶道",
+          "body_gesture": "สองมือค้อมคารวะหน้าโต๊ะชาอย่างสำรวม"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 紫砂壶 (zǐshāhú) 3 ระดับเสียง",
+        "description_th": "zǐ (เสียง 3), shā (เสียง 1), hú (เสียง 2) ให้กดเสียงต่ำที่ zǐ แล้วลากเสียงเรียบ shā และยกเสียงขึ้น hú",
+        "example": "宜兴紫砂壶 (Yíxīng zǐshāhú: กาดินจื่อซาแห่งเมืองอี๋ซิง)",
+        "fun_metaphor": "เหมือนกดแป้นเปียโน ต่ำ... สูง... แล้วขึ้นฮึบ!",
+        "reassurance": "คำนี้เป็นคำเฉพาะทางที่คนรักชาจีนทุกคนต้องรู้จัก"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างการบรรยายรสสัมผัส: 初尝微苦，细品之下回甘无穷",
+        "explanation_th": "ใช้ในการพรรณนาถึงสุนทรียรสของชาคุณภาพสูงที่เปลี่ยนผ่านจากความขมสู่ความหวานละมุน",
+        "patterns": [
+          {
+            "formula": "初尝 + [รสสัมผัสแรก], 细品之下 + [รสสัมผัสที่ตามมา]",
+            "zh": "这泡工夫茶初尝微苦，细品之下则回甘绵长、唇齿留香。",
+            "pinyin": "Zhè pào gōngfu chá chū cháng wēi kǔ, xì pǐn zhī xià zé huígān miáncháng, chúnchǐ liú xiāng.",
+            "th": "ชากังฟูกานี้จิบคำแรกสัมผัสขมบางเบา แต่เมื่อละเลียดลิ้มรสต่อกลับหวานชุ่มคอยาวนานและหอมอบอวลติดริมฝีปาก",
+            "en": "This Gongfu tea tastes slightly bitter at first, but upon fine savoring, the sweet aftertaste lingers endlessly."
+          },
+          {
+            "formula": "用紫砂壶冲泡，最能激发...",
+            "zh": "用宜兴紫砂壶冲泡乌龙茶，最能激发其深层的岩骨花香。",
+            "pinyin": "Yòng Yíxīng zǐshāhú chōngpào wūlóngchá, zuì néng jīfā qí shēncéng de yángǔ huāxiāng.",
+            "th": "การใช้กาดินจื่อซาแห่งอี๋ซิงชงชาอูหลง สามารถปลุกกลิ่นหอมของดอกไม้และแร่หินอันลุ่มลึกออกมาได้ดีที่สุด",
+            "en": "Brewing Oolong tea with an Yixing purple clay pot best awakens its deep floral and mineral notes."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมจิบชา) 👩‍💼",
+          "zh": "这把紫砂壶造型古朴雅致，请问泡茶有什么特别的讲究吗？",
+          "pinyin": "Zhè bǎ zǐshāhú zàoxíng gǔpǔ yǎzhì, qǐngwèn pào chá yǒu shénme tèbié de jiǎngjiu ma?",
+          "th": "กาดินเผาจื่อซาใบนี้รูปทรงโบราณเรียบหรูจังเลยค่ะ รบกวนถามว่าเวลาชงชามีข้อพิถีพิถันเป็นพิเศษอย่างไรบ้างคะ?",
+          "en": "This purple clay teapot has an elegant, classical shape; is there any special etiquette when brewing tea?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ครูชาหลี่ (มาสเตอร์ชงชา) 👨‍🏫",
+          "zh": "紫砂具有双重气孔结构，透气不透水，冲泡时能最好地保持茶汤的原汁原味。",
+          "pinyin": "Zǐshā jùyǒu shuāngchóng qìkǒng jiégòu, tòuqì bú tòushuǐ, chōngpào shí néng zuì hǎo de bǎochí chátāng de yuánzhīyuánwèi.",
+          "th": "ดินจื่อซามีโครงสร้างรูพรุนคู่ อากาศผ่านได้แต่น้ำไม่รั่วซึม เวลาชงจึงสามารถรักษารสดั้งเดิมแท้ๆ ของน้ำชาไว้ได้ดีที่สุดครับ",
+          "en": "Purple clay has a dual-pore structure, breathable yet watertight, preserving the tea's authentic flavor best during brewing."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมจิบชา) 👩‍💼",
+          "zh": "请品茗。入口时虽然感觉有一丝苦涩，但咽下后满口生津，回甘太奇妙了！",
+          "pinyin": "Qǐng pǐnmíng. Rùkǒu shí suīrán gǎnjué yǒu yì sī kǔsè, dàn yān xià hòu mǎnkǒu shēngjīn, huígān tài qímiào le!",
+          "th": "เชิญจิบชาค่ะ ตอนเข้าปากแม้จะรู้สึกขมฝาดเล็กน้อย แต่พอกลืนลงคอแล้วกลับชุ่มคอชื่นใจ รสหวานที่ย้อนกลับมามหัศจรรย์มากเลยค่ะ!",
+          "en": "Please savor the tea. Although slightly astringent upon entry, after swallowing it produces saliva; the sweet aftertaste is wonderful!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ครูชาหลี่ (มาสเตอร์ชงชา) 👨‍🏫",
+          "zh": "这就叫“回甘”。工夫茶艺讲究水温与心境，水沸茶香，方见茶道真意。",
+          "pinyin": "Zhè jiù jiào “huígān”. Gōngfu cháyì jiǎngjiu shuǐwēn yǔ xīnjìng, shuǐ fèi chá xiāng, fāng jiàn chádào zhēnyì.",
+          "th": "นี่แหละครับที่เรียกว่า \"หุยกัน\" (รสหวานชุ่มย้อนคืน) พิธีชงชากังฟูพิถีพิถันกับอุณหภูมิน้ำและสมาธิใจ น้ำเดือดกลิ่นชาฟุ้ง จึงจะเห็นเจตจำนงแท้จริงแห่งวิถีชาครับ",
+          "en": "This is called \"sweet aftertaste.\" Gongfu tea art values water temperature and state of mind; boiling water and tea aroma reveal the true essence of tea."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมจิบชา) 👩‍💼",
+          "zh": "平日里天天用电脑和手机工作，来到茶室放下手机，心情立刻变得非常舒服放松。",
+          "pinyin": "Píngrì lǐ tiāntiān yòng diànnǎo hé shǒujī gōngzuò, láidào cháshì fàngxià shǒujī, xīnqíng lìkè biàn de fēicháng shūfu fàngsōng.",
+          "th": "วันปกติใช้คอมพิวเตอร์และโทรศัพท์มือถือทำงานทุกวัน เมื่อมาถึงห้องชาวางโทรศัพท์ลง อารมณ์ก็สบายและผ่อนคลายขึ้นทันทีค่ะ",
+          "en": "Usually working with computers and mobile phones daily, putting down the phone in the tearoom immediately makes one feel comfortable and relaxed."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "ครูชาหลี่ (มาสเตอร์ชงชา) 👨‍🏫",
+          "zh": "回归自然，保护宁静的心灵环境，这正是茶道教给我们最重要的人生功课。",
+          "pinyin": "Huíguī zìrán, bǎohù níngjìng de xīnlíng huánjìng, zhè zhèng shì chádào jiào gěi wǒmen zuì zhòngyào de rénshēng gōngkè.",
+          "th": "การหวนคืนสู่ธรรมชาติ ปกป้องสิ่งแวดล้อมทางจิตใจอันเงียบสงบ นี่คือบทเรียนชีวิตที่สำคัญที่สุดที่วิถีชาสอนเราครับ",
+          "en": "Returning to nature and protecting a tranquil mental environment is precisely the most vital life lesson tea teaches us."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "คำว่า '回甘' (huígān) ในการชิมชาหมายถึงรสสัมผัสใด?",
+          "options": [
+            "รสหวานชุ่มคอที่ตามหลังมาอย่างยาวนานหลังจากกลืนชาที่ขมลงคอ",
+            "การเติมน้ำเชื่อมลงในถ้วยชา",
+            "รสเปรี้ยวจี๊ดของมะนาว",
+            "ความเผ็ดร้อนของขิง"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'回甘' หมายถึง รสหวานชุ่มคอที่หวนย้อนคืนมาในลำคอหลังจากกลืนน้ำชาลงไป ซึ่งเป็นสัญลักษณ์ของใบชาคุณภาพยอดเยี่ยม",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจรหัสสุนทรียรสของนักชิมชามืออาชีพ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "กาดินเผา '紫砂壶' (zǐshāhú) ที่มีชื่อเสียงที่สุดในประวัติศาสตร์จีนมาจากเมืองใด?",
+          "options": [
+            "宜兴 (เมืองอี๋ซิง มณฑลเจียงซู)",
+            "三亚 (เมืองซานย่า)",
+            "乌鲁木齐 (เมืองอุรุมชี)",
+            "哈尔滨 (เมืองฮาร์บิน)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'宜兴紫砂壶' (กาดินทรายม่วงอี๋ซิง) ได้รับการยกย่องเป็นราชาแห่งกาน้ำชาของโลก",
+          "encouragement": "แม่นยำมาก! รู้รอบลึกซึ้งเรื่องประวัติศาสตร์กาน้ำชาจีน!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ชากานี้แรกจิบมีรสขมบางเบา แต่เมื่อละเลียดชิมกลับมีรสหวานชุ่มคอยาวนาน\"",
+          "tokens": [
+            "初尝微苦",
+            "这泡茶",
+            "回甘绵长",
+            "细品之下"
+          ],
+          "correct_sequence": [
+            "这泡茶",
+            "初尝微苦",
+            "细品之下",
+            "回甘绵长"
+          ],
+          "pinyin": "Zhè pào chá chū cháng wēi kǔ, xì pǐn zhī xià huígān miáncháng.",
+          "meaning_th": "ชากานี้แรกจิบขมเล็กน้อย ละเลียดชิมต่อกลับหวานชุ่มคอยาวนาน",
+          "explanation_th": "ประธาน (这泡茶) + รสสัมผัสแรก (初尝微苦) + สภาวะพิจารณา (细品之下) + รสสัมผัสลึกซึ้ง (回甘绵长)",
+          "encouragement": "เรียงประโยคสุนทรียภาพแห่งการชิมชาได้อย่างงดงาม!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '品茗' ตัว '品' (ลิ้มรส/ประเมิน) ประกอบด้วยอักษร 口 (ปาก) กี่ตัว?",
+          "options": [
+            "3 ตัว (三口品 / สามปากร่วมวิจารณ์อย่างละเอียด)",
+            "1 ตัว",
+            "2 ตัว",
+            "4 ตัว"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'品' ประกอบด้วย '口' (ปาก) 3 ตัว สื่อถึงการจิบชิมหลายๆ ครั้งและการร่วมกันชื่นชมประเมินคุณค่า",
+          "encouragement": "เข้าใจลึกซึ้งถึงโครงสร้างสัญลักษณ์ของอักษรจีนโบราณ!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u40_l03",
+      "lesson_number": 3,
+      "title": {
+        "zh": "茶禅一味与人生哲理",
+        "th": "ชาและเซนเป็นหนึ่งเดียวกับปรัชญาชีวิต",
+        "en": "Zen Tea Oneness & Life Philosophy"
+      },
+      "can_do": {
+        "th": "อธิบายแนวคิด \"茶禅一味\", ความสงบแห่งจิตใจ, การรู้แจ้ง และใช้สำนวน 苦尽甘来",
+        "en": "Explain Zen-Tea oneness, inner tranquility, epiphany, and apply the idiom 苦尽甘来"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: ใช้สำนวน 苦尽甘来 ให้กำลังใจตนเองและผู้อื่นในการก้าวข้ามอุปสรรค!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4011",
+          "hanzi": "禅意",
+          "pinyin": "chányì",
+          "display_pinyin": "chányì",
+          "pinyin_tone": "chan2yi4",
+          "meaning_th": "จิตวิญญาณแห่งเซน / ความสงบรู้แจ้งอันลึกซึ้ง",
+          "meaning_en": "Zen spirit / meditative mood",
+          "radical": "礻",
+          "radical_name_th": "หมวดสิ่งศักดิ์สิทธิ์/จิตวิญญาณ (示字旁)",
+          "stroke_count": 27,
+          "mnemonic": "การเพ่งจิตรู้แจ้ง (禅) นำมาซึ่งความหมายลึกซึ้งภายในใจ (意) = จิตวิญญาณเซน",
+          "kid_mnemonic": "พระอาจารย์นั่งสมาธิใต้ต้นไผ่ที่มีใบไม้ร่วงหล่นลงมาอย่างสงบไร้กังวล = 禅意",
+          "body_gesture": "สองมือทำท่าสมาธิประกบนิ้วโป้งชิดกันวางบนตัก"
+        },
+        {
+          "id": "hsk3_4012",
+          "hanzi": "宁静",
+          "pinyin": "níngjìng",
+          "display_pinyin": "níngjìng",
+          "pinyin_tone": "ning2jing4",
+          "meaning_th": "ความเงียบสงบ / สงบนิ่งไร้ความว้าวุ่น",
+          "meaning_en": "tranquility / serenity",
+          "radical": "宀",
+          "radical_name_th": "หมวดหลังคา (宝盖头)",
+          "stroke_count": 19,
+          "mnemonic": "ใต้หลังคาเรือนสงบสุข (宁) ปราศจากเสียงรบกวนใดๆ (静) = เงียบสงบผาสุก",
+          "kid_mnemonic": "ผิวน้ำในสระบัวยามค่ำคืนที่สะท้อนแสงจันทร์นวลนิ่งสนิทไร้ระลอกคลื่น = 宁静",
+          "body_gesture": "กางสองมือออกช้าๆ คว่ำฝ่ามือลงสู่พื้นแสดงความสงบนิ่ง"
+        },
+        {
+          "id": "hsk3_4013",
+          "hanzi": "顿悟",
+          "pinyin": "dùnwù",
+          "display_pinyin": "dùnwù",
+          "pinyin_tone": "dun4wu4",
+          "meaning_th": "การรู้แจ้งเห็นจริงในพริบตา (Epiphany / Satori)",
+          "meaning_en": "sudden enlightenment / epiphany",
+          "radical": "忄",
+          "radical_name_th": "หมวดหัวใจแนวตั้ง (竖心旁)",
+          "stroke_count": 17,
+          "mnemonic": "ชั่วพริบตาหยุดนิ่ง (顿) หัวใจตื่นรู้แจ้งสัจธรรม (悟) = รู้แจ้งฉับพลัน",
+          "kid_mnemonic": "หลอดไฟสีทองสว่างวาบขึ้นเหนือศีรษะ ปิ๊ง! เข้าใจความจริงทุกอย่าง = 顿悟",
+          "body_gesture": "ดีดนิ้วเป๊าะแล้วผายมือออกยิ้มตื่นรู้"
+        },
+        {
+          "id": "hsk3_4014",
+          "hanzi": "苦尽甘来",
+          "pinyin": "kǔ jìn gān lái",
+          "display_pinyin": "kǔ jìn gān lái",
+          "pinyin_tone": "ku3 jin4 gan1 lai2",
+          "meaning_th": "เมื่อความขมหมดไป ความหวานก็เข้ามาเยือน / ผ่านพ้นความยากลำบากสู่ความสุขสมบูรณ์",
+          "meaning_en": "after bitterness comes sweetness / hard times make way for good times",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 31,
+          "mnemonic": "ความขมขื่น (苦) สิ้นสุดลงหมดสิ้น (尽) รสหวานชื่นใจ (甘) ย่อมเดินทางมาถึง (来) = ผ่านพ้นความทุกข์พบความสุข",
+          "kid_mnemonic": "ต้นกล้าที่ทนพายุหิมะอันเหน็บหนาว เมื่อหิมะละลายก็ผลิบานเป็นดอกไม้ทองคำ = 苦尽甘来",
+          "body_gesture": "สองมือทำท่าปาดหยาดเหงื่อที่หน้าผากแล้วผายมือรับแสงตะวันอบอุ่น"
+        },
+        {
+          "id": "hsk3_4015",
+          "hanzi": "心境",
+          "pinyin": "xīnjìng",
+          "display_pinyin": "xīnjìng",
+          "pinyin_tone": "xin1jing4",
+          "meaning_th": "สภาวะอารมณ์และสมาธิภายในจิตใจ",
+          "meaning_en": "state of mind / mental attitude",
+          "radical": "心",
+          "radical_name_th": "หมวดหัวใจ (心字旁)",
+          "stroke_count": 18,
+          "mnemonic": "ดวงใจที่บริสุทธิ์ (心) ท่ามกลางบรรยากาศแวดล้อม (境) = สภาวะจิตใจ",
+          "kid_mnemonic": "กระจกเงาใสที่สะท้อนท้องฟ้าครามและขุนเขาอย่างไม่บิดเบือน = 心境",
+          "body_gesture": "เอามือทาบอกเบาๆ หลับตาปรับลมหายใจเข้าออก"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียงสำนวน 苦尽甘来 (kǔ jìn gān lái)",
+        "description_th": "kǔ (เสียง 3), jìn (เสียง 4), gān (เสียง 1), lái (เสียง 2) เป็นจังหวะวรรณยุกต์ครบ 4 ระดับ ให้คุมจังหวะ ต่ำ-ตก-ราบ-ขึ้น อย่างไพเราะ",
+        "example": "人生正如这杯茶，苦尽甘来！",
+        "fun_metaphor": "เหมือนขับรถผ่านหุบเขา: ลงหุบต่ำ... ดิ่งลึก... ถนนเรียบ... แล้วพุ่งขึ้นสู่ยอดเขา!",
+        "reassurance": "สำนวน 4 ตัวอักษรนี้ให้พลังบวกแก่ผู้ฟังและเป็นที่รักของคนจีนในทุกยุคสมัย"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างปรัชญาเปรียบเทียบชีวิต: 人生如茶，唯有经历...，方能...",
+        "explanation_th": "ใช้ในการแบ่งปันข้อคิดชีวิตและให้กำลังใจอย่างสุขุมและลึกซึ้ง",
+        "patterns": [
+          {
+            "formula": "人生正如一杯茶，唯有经历 + [ความยากลำบาก], 方能 + 苦尽甘来",
+            "zh": "人生正如一杯茶，唯有经历苦涩的沉淀，方能迎来苦尽甘来的甘甜。",
+            "pinyin": "Rénshēng zhèngrú yì bēi chá, wéiyǒu jīnglì kǔsè de chéndiàn, fāng néng yínglái kǔjìngānlái de gāntián.",
+            "th": "ชีวิตเปรียบดั่งน้ำชาถ้วยหนึ่ง มีเพียงต้องผ่านการตกตะกอนแห่งความขมขื่น จึงจะต้อนรับความหอมหวานที่ย้อนคืนมา",
+            "en": "Life is like a cup of tea; only by enduring the settlement of bitterness can one usher in the sweetness of hard times turning to joy."
+          },
+          {
+            "formula": "在淡雅茶香中体会禅意",
+            "zh": "古人讲究“茶禅一味”，在淡雅的茶香中领悟内心的宁静与超脱。",
+            "pinyin": "Gǔrén jiǎngjiu “chá chán yí wèi”, zài dànyǎ de cháxiāng zhōng lǐngwù nèixīn de níngjìng yǔ chāotuō.",
+            "th": "คนโบราณพิถีพิถันกับ \"ชาและเซนเป็นหนึ่งเดียว\" ตระหนักรู้ถึงความสงบนิ่งและจิตใจที่ปล่อยวางท่ามกลางกลิ่นหอมบางเบาของใบชา",
+            "en": "Ancients valued \"Tea and Zen as one flavor,\" comprehending inner serenity and detachment amidst subtle tea fragrance."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมสนทนา) 👩‍💼",
+          "zh": "大师，古人为什么总把“茶”与“禅”联系在一起，提出“茶禅一味”呢？",
+          "pinyin": "Dàshī, gǔrén wèishénme zǒng bǎ “chá” yǔ “chán” liánxì zài yìqǐ, tíchū “chá chán yí wèi” ne?",
+          "th": "ท่านอาจารย์คะ ทำไมคนโบราณจึงมักเชื่อมโยง \"ชา\" เข้ากับ \"เซน\" จนเกิดแนวคิด \"ชาและเซนเป็นหนึ่งเดียว\" คะ?",
+          "en": "Master, why did ancients always associate \"tea\" with \"Zen,\" proposing \"Tea and Zen as one flavor\"?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์เซนจื่อคง 🧘‍♂️",
+          "zh": "茶能清心提神，禅能明心见性。泡茶时的专注与等待，正是一种修行的心境。",
+          "pinyin": "Chá néng qīngxīn tíshén, chán néng míngxīn jiànxìng. Pào chá shí de zhuānzhù yǔ děngdài, zhèng shì yì zhǒng xiūxíng de xīnjìng.",
+          "th": "ชาสามารถชำระใจให้ผ่องใสและตื่นรู้ เซนช่วยให้เห็นจิตเดิมแท้ ความแน่วแน่และการรอคอยระหว่างชงชา นั่นแหละคือสมาธิแห่งการฝึกจิตครับ",
+          "en": "Tea cleanses the mind and awakens the spirit, while Zen illuminates the mind to perceive true nature. Focus and patience while brewing tea represent a meditative state of cultivation."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมสนทนา) 👩‍💼",
+          "zh": "我懂了。就像这茶水初入口时的苦涩，咽下后却化作了满口回甘。",
+          "pinyin": "Wǒ dǒng le. Jiù xiàng zhè cháshuǐ chū rùkǒu shí de kǔsè, yān xià hòu què huàzuò le mǎnkǒu huígān.",
+          "th": "ดิฉันเข้าใจแล้วค่ะ เหมือนดั่งน้ำชานี้เมื่อแรกเข้าปากมีความขมฝาด แต่พอกลืนลงไปกลับแปรเปลี่ยนเป็นความหวานชุ่มคอเต็มปาก",
+          "en": "I see. Just like this tea being astringent upon first sip, yet turning into mouth-filling sweetness after swallowing."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์เซนจื่อคง 🧘‍♂️",
+          "zh": "善哉！世间坎坷正如杯中苦茶，只要坚守初心，终将苦尽甘来，顿悟生命的从容。",
+          "pinyin": "Shànzāi! Shìjiān kǎnkě zhèngrú bēizhōng kǔchá, zhǐyào jiānshǒu chūxīn, zhōng jiāng kǔjìngānlái, dùnwù shēngmìng de cóngróng.",
+          "th": "สาธุ! อุปสรรคในโลกเปรียบดั่งชาขมในถ้วย ขอเพียงยึดมั่นในปณิธานแรก ในที่สุดย่อมผ่านพ้นความลำบากสู่ความสุข และรู้แจ้งความสุขุมแห่งชีวิตครับ",
+          "en": "Well said! Worldly hardships are like bitter tea in a cup; as long as you uphold your original heart, bitterness will turn to sweetness, attaining life's calm wisdom."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "หลิน (ผู้ร่วมสนทนา) 👩‍💼",
+          "zh": "听了老师这番话，我深受启发，决定以后无论遇到什么问题，都要认真努力坚持下去。",
+          "pinyin": "Tīng le lǎoshī zhè fān huà, wǒ shēn shòu qǐfā, juédìng yǐhòu wúlùn yùdào shénme wèntí, dōu yào rènzhēn nǔlì jiānchí xiàqu.",
+          "th": "ฟังคำสอนของอาจารย์แล้ว ดิฉันได้รับแรงบันดาลใจอย่างลึกซึ้ง ตัดสินใจว่าต่อไปไม่ว่าจะพบเจอเรื่องใด ก็จะพยายามมุ่งมั่นตั้งใจอดทนต่อไปค่ะ",
+          "en": "Hearing your words, I am deeply inspired, deciding that no matter what problems I encounter, I will earnestly persist."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "อาจารย์เซนจื่อคง 🧘‍♂️",
+          "zh": "善哉！常怀感恩之心，多帮助身边的朋友与家人，生活中的一切经历都将成为你宝贵的精神财富。",
+          "pinyin": "Shànzāi! Cháng huái gǎn’ēn zhī xīn, duō bāngzhù shēnbiān de péngyou yǔ jiārén, shēnghuó zhōng de yíqiè jīnglì dōu jiāng chéngwéi nǐ bǎoguì de jīngshén cáifù.",
+          "th": "สาธุ! มีความกตัญญูเสมอ ช่วยเหลือเพื่อนและคนในครอบครัวรอบตัวให้มาก ทุกประสบการณ์ในชีวิตย่อมแปรเปลี่ยนเป็นทรัพย์สมบัติทางจิตใจอันล้ำค่าของคุณครับ",
+          "en": "Well said! Always harboring a grateful heart and helping friends and family around you, all experiences in life will become your precious spiritual wealth."
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "สำนวน '苦尽甘来' (kǔ jìn gān lái) มีความหมายตรงกับข้อใด?",
+          "options": [
+            "เมื่อความทุกข์ยากลำบากผ่านพ้นไป ความสุขและความสำเร็จย่อมเดินทางมาถึง",
+            "การดื่มน้ำชาที่ใส่น้ำตาลทรายมากเกินไป",
+            "การล้มเลิกความตั้งใจกลางคัน",
+            "การหลงทางในป่าใหญ่"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'苦尽甘来' หมายถึง ความยากลำบากขมขื่นได้สิ้นสุดลง และความสุขความหอมหวานได้เข้ามาแทนที่",
+          "encouragement": "ถูกต้องยอดเยี่ยม! เข้าใจปรัชญาชีวิตผ่านถ้วยชาจีนได้อย่างลึกซึ้ง!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "วลี '茶禅一味' (chá chán yí wèi) สื่อถึงแนวคิดใด?",
+          "options": [
+            "การชงและดื่มชาสามารถหลอมรวมเป็นวิถีแห่งการเจริญสติและการรู้แจ้งแห่งเซน",
+            "การนำใบชาไปต้มใส่ในแกงจืด",
+            "การดื่มชาเฉพาะในเวลาเที่ยงวัน",
+            "การห้ามพูดคุยระหว่างรับประทานอาหาร"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'茶禅一味' คือการเปรียบเทียบว่าการจิบชาและการฝึกสมาธิเซนมีแก่นแท้แห่งความสงบผาสุกเป็นเนื้อเดียวกัน",
+          "encouragement": "แม่นยำมาก! เข้าใจแก่นปรัชญาพุทธศาสนาและวิถีชาจีน!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"ชีวิตเปรียบดั่งถ้วยชา ผ่านพ้นความยากลำบากสู่ความสุข\"",
+          "tokens": [
+            "苦尽甘来",
+            "人生如茶",
+            "终将"
+          ],
+          "correct_sequence": [
+            "人生如茶",
+            "终将",
+            "苦尽甘来"
+          ],
+          "pinyin": "Rénshēng rú chá, zhōng jiāng kǔjìngānlái.",
+          "meaning_th": "ชีวิตเปรียบดั่งชา ในที่สุดย่อมผ่านพ้นความยากลำบากสู่ความสุข",
+          "explanation_th": "อุปมาหลัก (人生如茶) + คำวิเศษณ์บอกผลสุดท้าย (终将) + สุภาษิตเป้าหมาย (苦尽甘来)",
+          "encouragement": "ประกอบประโยคคติเตือนใจได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '苦尽甘来' ตัว '苦' (ขม/ยากลำบาก) มีหมวดนำใดอยู่ด้านบน?",
+          "options": [
+            "艹 (หมวดหญ้า/พืชสมุนไพร 草字头)",
+            "木 (หมวดไม้ 木字旁)",
+            "口 (หมวดปาก 口字旁)",
+            "十 (หมวดสิบ 十字头)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'苦' มีหมวด '艹' (พืชหญ้า) ด้านบน สื่อถึงสมุนไพรและพืชป่าที่มีรสขมฝาด",
+          "encouragement": "วิเคราะห์โครงสร้างอักษรธรรมชาติได้อย่างเฉียบคม!"
+        }
+      ]
+    },
+    {
+      "lesson_id": "t3_u40_l04",
+      "lesson_number": 4,
+      "title": {
+        "zh": "茶文化与待客之道",
+        "th": "วัฒนธรรมชาและมารยาทการต้อนรับขับสู้",
+        "en": "Tea Hospitality & Cultural Etiquette"
+      },
+      "can_do": {
+        "th": "อธิบายมารยาทการต้อนรับแขกด้วยชา (以茶会友), การรินชา และประวัติศาสตร์อันยาวนานของชาจีน",
+        "en": "Explain tea hospitality (bonding over tea), tea serving etiquette, and China's profound tea history"
+      },
+      "baby_step_goal": "เป้าหมายวันนี้: สนทนามารยาทบนโต๊ะชา และพิชิต Boss Challenge ทูตวัฒนธรรมชาระดับโลก!",
+      "vocabulary": [
+        {
+          "id": "hsk3_4016",
+          "hanzi": "以茶会友",
+          "pinyin": "yǐ chá huì yǒu",
+          "display_pinyin": "yǐ chá huì yǒu",
+          "pinyin_tone": "yi3 cha2 hui4 you3",
+          "meaning_th": "ผูกมิตรไมตรีด้วยถ้วยชา / พบปะสังสรรค์มิตรสหายผ่านวัฒนธรรมชา",
+          "meaning_en": "make friends through tea / bonding over tea",
+          "radical": "艹",
+          "radical_name_th": "หมวดหญ้า (草字头)",
+          "stroke_count": 24,
+          "mnemonic": "ใช้ใบชาชั้นเลิศ (以茶) เพื่อพบปะสังสรรค์ (会) กับสหายผู้รู้ใจ (友) = ผูกมิตรด้วยชา",
+          "kid_mnemonic": "เพื่อนสนิทสองคนนั่งจิบชาพูดคุยหัวเราะอบอุ่นใต้ศาลาแปดเหลี่ยม = 以茶会友",
+          "body_gesture": "สองมือทำท่ายกจอกชาขึ้นคารวะสหายตรงข้าม"
+        },
+        {
+          "id": "hsk3_4017",
+          "hanzi": "礼仪",
+          "pinyin": "lǐyí",
+          "display_pinyin": "lǐyí",
+          "pinyin_tone": "li3yi2",
+          "meaning_th": "มารยาท / ขนบธรรมเนียมพิธีการ",
+          "meaning_en": "etiquette / protocol",
+          "radical": "礻",
+          "radical_name_th": "หมวดสิ่งศักดิ์สิทธิ์ (示字旁)",
+          "stroke_count": 16,
+          "mnemonic": "เคารพจารีตธรรมเนียม (礼) ตามแบบแผนอันสง่างาม (仪) = มารยาทประเพณี",
+          "kid_mnemonic": "เจ้าภาพค้อมศีรษะ 45 องศาต้อนรับแขกผู้มาเยือนอย่างนอบน้อม = 礼仪",
+          "body_gesture": "สองมือประสานระดับอกค้อมตัวคารวะอย่างสุภาพ"
+        },
+        {
+          "id": "hsk3_4018",
+          "hanzi": "雅致",
+          "pinyin": "yǎzhì",
+          "display_pinyin": "yǎzhì",
+          "pinyin_tone": "ya3zhi4",
+          "meaning_th": "งดงามประณีต / เรียบหรูมีรสนิยมสูง",
+          "meaning_en": "refined / elegant and tasteful",
+          "radical": "隹",
+          "radical_name_th": "หมวดนกหางสั้น (隹字旁)",
+          "stroke_count": 22,
+          "mnemonic": "สง่างามสูงส่ง (雅) บรรลุถึงจุดสูงสุดแห่งรสนิยม (致) = ประณีตเรียบหรู",
+          "kid_mnemonic": "ห้องชงชาที่ประดับด้วยแจกันดอกเหมยและภาพอักษรพู่กันจีนอย่างลงตัว = 雅致",
+          "body_gesture": "ผายมือชี้ชมบรรยากาศห้องชาด้วยรอยยิ้มชื่นชม"
+        },
+        {
+          "id": "hsk3_4019",
+          "hanzi": "敬重",
+          "pinyin": "jìngzhòng",
+          "display_pinyin": "jìngzhòng",
+          "pinyin_tone": "jing4zhong4",
+          "meaning_th": "ความเคารพนับถือ / ให้เกียรติอย่างสูง",
+          "meaning_en": "to respect deeply / esteem",
+          "radical": "攵",
+          "radical_name_th": "หมวดเคาะเบาๆ (反文旁)",
+          "stroke_count": 21,
+          "mnemonic": "เคารพยำเกรง (敬) และให้ความสำคัญอย่างหนักแน่น (重) = เคารพยกย่อง",
+          "kid_mnemonic": "สองมือยกถ้วยน้ำชาอุ่นๆ คารวะมอบแด่ผู้อาวุโสด้วยความจริงใจ = 敬重",
+          "body_gesture": "สองมือยกถ้วยชายื่นออกไปข้างหน้าในระดับอกอย่างนอบน้อม"
+        },
+        {
+          "id": "hsk3_4020",
+          "hanzi": "悠久",
+          "pinyin": "yōujiǔ",
+          "display_pinyin": "yōujiǔ",
+          "pinyin_tone": "you1jiu3",
+          "meaning_th": "ยาวนานเนิ่นนาน / มีประวัติศาสตร์อันรุ่งโรจน์ยาวนาน",
+          "meaning_en": "long-standing / age-old",
+          "radical": "亻",
+          "radical_name_th": "หมวดคนยืน (单人旁)",
+          "stroke_count": 14,
+          "mnemonic": "ไกลโพ้นเนิ่นนาน (悠) สืบทอดมาหลายชั่วอายุคน (久) = ประวัติศาสตร์ยาวนาน",
+          "kid_mnemonic": "ต้นชาโบราณอายุหลายพันปีที่ยืนตระหง่านบนยอดเขาเมฆหมอก = 悠久",
+          "body_gesture": "วาดมือขวาเหยียดตรงออกไปข้างหน้าระยะไกลสื่อถึงกาลเวลาอันยาวนาน"
+        }
+      ],
+      "tone_rule": {
+        "rule_name": "การออกเสียง 悠久 (yōujiǔ) เสียง 1 ต่อด้วยเสียง 3",
+        "description_th": "yōu เป็นเสียง 1 สูงยาว ตามด้วย jiǔ เสียง 3 ทอดต่ำแล้วสะบัดเสียงขึ้นเล็กน้อย",
+        "example": "历史悠久 (lìshǐ yōujiǔ: ประวัติศาสตร์อันยาวนาน)",
+        "fun_metaphor": "เหมือนเสียงขลุ่ยผิวใสยาวลอยไปในสายลม แล้วสะท้อนกังวานในหุบเขา",
+        "reassurance": "คำว่า 历史悠久 เป็นสำนวนคู่ที่ใช้บ่อยที่สุดในการบรรยายวัฒนธรรมจีน"
+      },
+      "grammar_bite": {
+        "title": "โครงสร้างมารยาทการต้อนรับ: “茶倒七分满，留下三分是人情”",
+        "explanation_th": "สุภาษิตมารยาทบนโต๊ะชาจีนที่สอนว่าควรรินชาเพียง 7 ส่วน เหลือพื้นที่ 3 ส่วนไว้เพื่อมิตรภาพและความอบอุ่น",
+        "patterns": [
+          {
+            "formula": "民间常说“茶倒七分满”，体现了待客的...",
+            "zh": "茶道礼仪中常说“茶倒七分满”，体现了主人对客人的敬重与分寸感。",
+            "pinyin": "Chádào lǐyí zhōng cháng shuō “chá dào qī fēn mǎn”, tǐxiàn le zhǔrén duì kèrén de jìngzhòng yǔ fēncùngǎn.",
+            "th": "ในมารยาทพิธีชงชามักกล่าวว่า \"รินชาเพียงเจ็ดส่วนเต็ม\" สะท้อนถึงความเคารพและการรู้กาลเทศะที่เจ้าภาพมีต่อแขก",
+            "en": "In tea etiquette, it is often said \"pour tea seven-tenths full,\" reflecting the host's respect and sense of propriety toward guests."
+          },
+          {
+            "formula": "以茶会友，感受悠久灿烂的中华文化",
+            "zh": "我们欢聚一堂以茶会友，共同感受悠久灿烂的东方文明。",
+            "pinyin": "Wǒmen huānjù yìtáng yǐ chá huì yǒu, gòngtóng gǎnshòu yōujiǔ cànlàn de dōngfāng wénmíng.",
+            "th": "พวกเรามารวมตัวกันอย่างชื่นมื่นเพื่อผูกมิตรด้วยถ้วยชา ร่วมสัมผัสอารยธรรมตะวันออกอันรุ่งโรจน์และยาวนาน",
+            "en": "We gather happily to make friends through tea, collectively experiencing the age-old, splendid oriental civilization."
+          }
+        ]
+      },
+      "dialogue": [
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (แขกผู้มาเยือน) 🧑‍💼",
+          "zh": "张总，您这间茶室布置得太雅致了，古色古香，让人一进来就心平气和。",
+          "pinyin": "Zhāng zǒng, nín zhè jiān cháshì bùzhì de tài yǎzhì le, gǔsègǔxiāng, ràng rén yì jìnlái jiù xīnpíngqìhé.",
+          "th": "บอสจางครับ ห้องชงชาของคุณจัดได้ประณีตเรียบหรูมากเลยครับ กลิ่นอายโบราณอบอวล ทำให้ก้าวเข้ามาก็รู้สึกใจสงบสบายทันที",
+          "en": "President Zhang, your tearoom is decorated so elegantly with classical charm, instantly putting anyone who enters at peace."
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสจาง (เจ้าภาพ) 👨‍💼",
+          "zh": "欢迎光临！中国自古讲究“客来敬茶”，今天我们以茶会友，好好品味这泡武夷岩茶。",
+          "pinyin": "Huānyíng guānglín! Zhōngguó zìgǔ jiǎngjiu “kè lái jìng chá”, jīntiān wǒmen yǐ chá huì yǒu, hǎohǎo pǐnwèi zhè pào Wǔyí yánchá.",
+          "th": "ยินดีต้อนรับครับ! จีนแต่โบราณพิถีพิถันกับ \"แขกมาเยือนต้องคารวะด้วยชา\" วันนี้พวกเราผูกมิตรด้วยถ้วยชา ลิ้มรสชาหินอู่อี๋กานี้ด้วยกันครับ",
+          "en": "Welcome! Since antiquity China has valued \"honoring guests with tea\"; today let us bond over tea and savor this Wuyi rock tea."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (แขกผู้มาเยือน) 🧑‍💼",
+          "zh": "我注意到您倒茶时只倒了七分满，这里面有什么礼仪讲究吗？",
+          "pinyin": "Wǒ zhùyì dào nín dào chá shí zhǐ dào le qī fēn mǎn, zhè lǐmiàn yǒu shénme lǐyí jiǎngjiu ma?",
+          "th": "ผมสังเกตว่าตอนที่คุณรินชา รินเพียงแค่เจ็ดส่วนเต็ม ในนี้มีขนบธรรมเนียมมารยาทอย่างไรหรือครับ?",
+          "en": "I noticed you only poured the tea seven-tenths full, is there any etiquette reason behind this?"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสจาง (เจ้าภาพ) 👨‍💼",
+          "zh": "俗话说“茶满欺客”，倒七分既防烫手，更寓意着君子之交淡如水，留下三分是人情。",
+          "pinyin": "Súhuà shuō “chá mǎn qī kè”, dào qī fēn jì fáng tàngshǒu, gèng yùyì zhe jūnzǐ zhī jiāo dàn rú shuǐ, liú xià sān fēn shì rénqíng.",
+          "th": "สุภาษิตกล่าวว่า \"รินชาล้นถ้วยคือการดูหมิ่นแขก\" รินเจ็ดส่วนช่วยป้องกันน้ำร้อนลวกมือ และยิ่งสื่อถึงมิตรภาพของวิญญูชนที่บริสุทธิ์ดั่งน้ำ เหลือไว้สามส่วนคือความผูกพันน้ำใจไมตรีครับ",
+          "en": "As the saying goes, \"a full cup bullies the guest\"; seven-tenths prevents scalding while symbolizing that friendship between gentlemen is pure as water, leaving three-tenths for genuine affection."
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (แขกผู้มาเยือน) 🧑‍💼",
+          "zh": "今天不仅品尝到了极品好茶，更结识了这么多优秀真诚的新朋友，实在太满意了！",
+          "pinyin": "Jīntiān bùjǐn pǐncháng dào le jípǐn hǎochá, gèng jiéshí le zhème duō yōuxiù zhēnchéng de xīn péngyou, shízài tài mǎnyì le!",
+          "th": "วันนี้ไม่เพียงได้ลิ้มรสชาชั้นเลิศ ยังได้รู้จักเพื่อนใหม่ที่ยอดเยี่ยมและจริงใจมากขนาดนี้ พอใจและประทับใจมากจริงๆ ครับ!",
+          "en": "Today not only did I taste top-grade tea, but also met so many outstanding, sincere new friends; I am truly satisfied!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสจาง (เจ้าภาพ) 👨‍💼",
+          "zh": "茶逢知己千杯少，希望我们以后加强交流与合作，共同开创更加美好的未来！",
+          "pinyin": "Chá féng zhījǐ qiān bēi shǎo, xīwàng wǒmen yǐhòu jiāqiáng jiāoliú yǔ hézuò, gòngtóng kāichuàng gèngjiā měihǎo de wèilái!",
+          "th": "ดื่มชากับผู้รู้ใจพันจอกยังน้อยไป หวังว่าต่อไปพวกเราจะกระชับการแลกเปลี่ยนและร่วมมือกัน สร้างสรรค์อนาคตที่งดงามยิ่งขึ้นร่วมกันครับ!",
+          "en": "A thousand cups of tea are too few with a true confidant; hope we strengthen exchanges and cooperation in the future, creating an even brighter tomorrow together!"
+        },
+        {
+          "speaker": "A",
+          "speaker_name": "สมชาย (แขกผู้มาเยือน) 🧑‍💼",
+          "zh": "今天认识张总非常高兴，太谢谢您的热情招待了，明天见！",
+          "pinyin": "Jīntiān rènshi Zhāng zǒng fēicháng gāoxìng, tài xièxie nín de rèqíng zhāodài le, míngtiān jiàn!",
+          "th": "วันนี้ได้รู้จักบอสจางดีใจมากเลยครับ ขอบคุณอย่างยิ่งสำหรับการต้อนรับที่อบอุ่น แล้วพรุ่งนี้พบกันครับ!",
+          "en": "Very glad to meet President Zhang today, thank you so much for your warm hospitality, see you tomorrow!"
+        },
+        {
+          "speaker": "B",
+          "speaker_name": "บอสจาง (เจ้าภาพ) 👨‍💼",
+          "zh": "不客气，欢迎随时来茶室喝茶聊天，再见！",
+          "pinyin": "Bú kèqi, huānyíng suíshí lái cháshì hē chá liáotiān, zàijiàn!",
+          "th": "ด้วยความยินดีครับ ยินดีต้อนรับให้มาดื่มชาพูดคุยที่ห้องชาได้ตลอดเวลานะครับ ลาก่อนครับ!",
+          "en": "You are welcome, feel free to visit the tearoom anytime to drink tea and chat, goodbye!"
+        }
+      ],
+      "quizzes": [
+        {
+          "type": "listen_match",
+          "question_th": "ในธรรมเนียมชงชาจีน คำว่า '茶倒七分满' (รินชาเจ็ดส่วนเต็ม) มีเหตุผลเชิงมารยาทอย่างไร?",
+          "options": [
+            "เพื่อป้องกันน้ำร้อนลวกมือแขก และเหลือพื้นที่สามส่วนไว้เป็นสัญลักษณ์ของน้ำใจไมตรี (留下三分是人情)",
+            "เพราะเจ้าภาพต้องการประหยัดใบชา",
+            "เพราะน้ำร้อนในกาหมดพอดี",
+            "เพราะถ้วยชามีขนาดเล็กเกินไป"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'茶倒七分满' เป็นมารยาทสำคัญของจีน หากรินชาเต็มล้นถ้วยจะถือว่าไม่สุภาพและลวกมือแขก การริน 7 ส่วนจึงแสดงการให้เกียรติและน้ำใจไมตรี",
+          "encouragement": "ถูกต้องยอดเยี่ยม! รู้ลึกถึงมารยาทบนโต๊ะชาจีนโบราณ!"
+        },
+        {
+          "type": "flash_recall",
+          "question_th": "วลี '以茶会友' มีความหมายสอดคล้องกับข้อใด?",
+          "options": [
+            "การพบปะและผูกมิตรไมตรีอันบริสุทธิ์ผ่านการจิบชา (Bonding over tea)",
+            "การจัดแข่งดื่มชานำความเร็ว",
+            "การเปิดร้านขายใบชาแข่งกับเพื่อน",
+            "การบังคับให้เพื่อนดื่มชา"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'以茶会友' คือวิถีของวิญญูชนจีนที่ใช้ถ้วยชาเป็นสะพานเชื่อมสัมพันธ์ไมตรีที่สงบและบริสุทธิ์",
+          "encouragement": "แม่นยำมาก! เข้าใจวัฒนธรรมการเข้าสังคมของจีนชั้นสูง!"
+        },
+        {
+          "type": "sentence_scramble",
+          "question_th": "เรียงประโยค: \"พวกเราผูกมิตรด้วยถ้วยชา สัมผัสวัฒนธรรมจีนอันยาวนาน\"",
+          "tokens": [
+            "以茶会友",
+            "感受悠久的",
+            "我们欢聚一堂",
+            "茶文化"
+          ],
+          "correct_sequence": [
+            "我们欢聚一堂",
+            "以茶会友",
+            "感受悠久的",
+            "茶文化"
+          ],
+          "pinyin": "Wǒmen huānjù yìtáng yǐ chá huì yǒu, gǎnshòu yōujiǔ de chá wénhuà.",
+          "meaning_th": "พวกเรามารวมตัวกันผูกมิตรด้วยถ้วยชา สัมผัสวัฒนธรรมชาอันยาวนาน",
+          "explanation_th": "ประธานและสภาวะ (我们欢聚一堂) + วิธีการ (以茶会友) + ภาคแสดงและกรรม (感受悠久的茶文化)",
+          "encouragement": "เรียงประโยคต้อนรับมิตรสหายได้อย่างสมบูรณ์แบบ!"
+        },
+        {
+          "type": "radical_focus",
+          "question_th": "คำว่า '茶' (chá - ชา) มีโครงสร้างตัวอักษรประกอบด้วยองค์ประกอบธรรมชาติใด?",
+          "options": [
+            "艹 (ยอดหญ้า) + 人 (คน) + 木 (ต้นไม้) สื่อถึงมนุษย์ที่อยู่ร่วมกับธรรมชาติอย่างกลมกลืน",
+            "金 (ทองคำ) + 石 (หิน)",
+            "火 (ไฟ) + 水 (น้ำ)",
+            "日 (ดวงอาทิตย์) + 月 (ดวงจันทร์)"
+          ],
+          "correct_index": 0,
+          "explanation_th": "'茶' ประกอบด้วย '艹' (พืช) ด้านบน, '人' (คน) ตรงกลาง, และ '木' (ต้นไม้) ด้านล่าง สะท้อนปรัชญาที่มนุษย์อยู่ท่ามกลางพฤกษาธรรมชาติ",
+          "encouragement": "มองทะลุปรัชญาธรรมชาติในอักษรจีนได้อย่างลึกซึ้งเป็นเลิศ!"
+        }
+      ],
+      "boss_challenge": {
+        "scenario_th": "ในงานประชุมแลกเปลี่ยนวัฒนธรรมโลก (World Culture Forum) คุณได้รับเชิญให้สาธิตพิธีชงชาจีนและบรรยายปรัชญาตะวันออกต่อหน้าแขกผู้มีเกียรติจาก 50 ประเทศ คุณควรสรุปแก่นแท้ของวัฒนธรรมชาจีนอย่างไรให้ตราตรึงใจผู้ฟัง?",
+        "options": [
+          "中国茶道融合了自然之韵与生活哲学，以紫砂冲泡慢品回甘，以茶会友以礼相待；正如人生之路，唯有耐得住苦涩磨砺，终将迎来苦尽甘来的芬芳，这正是中华文明生生不息的智慧密码！ (Zhōngguó chádào rónghé le zìrán zhī yùn yǔ shēnghuó zhéxué, yǐ zǐshā chōngpào màn pǐn huígān, yǐ chá huì yǒu yǐ lǐ xiāngdài; zhèngrú rénshēng zhī lù, wéiyǒu nài de zhù kǔsè mólì, zhōng jiāng yínglái kǔjìngānlái de fēnfāng, zhè zhèng shì Zhōnghuá wénmíng shēngshēngbùxī de zhìhuì mìmǎ!)",
+          "中国茶太烫了，大家喝的时候要吹一吹，不小心烫伤我们概不负责。 (Zhōngguó chá tài tàng le, dàjiā hē de shíhou yào chuī yichuī, bù xiǎoxīn tàngshāng wǒmen gàibù fùzé.)",
+          "想要提神不如直接喝功能饮料，泡茶太浪费时间了。 (Xiǎng yào tíshén bùrú zhíjiē hē gōngnéng yǐnliào, pào chá tài làngfèi shíjiān le.)",
+          "请问茶歇提供的点心是免费随便吃吗？ (Qǐngwèn cháxiē tígōng de diǎnxin shì miǎnfèi suíbiàn chī ma?)"
+        ],
+        "correct_index": 0,
+        "explanation_th": "คำตอบ '中国茶道融合了自然之韵与生活哲学...这正是中华文明生生不息的智慧密码！' ร้อยเรียงทั้งกาดินจื่อซา, การชิมชาสัมผัส 回甘, มารยาท 以茶会友, สำนวน 苦尽甘来, และปรัชญาชีวิตตะวันออกได้อย่างสง่างามและสมเกียรติที่สุด",
+        "encouragement": "ยินดีด้วย! คุณพิชิต Boss Challenge ได้รับการยกย่องเป็นทูตวัฒนธรรมชาจีนระดับโลก!"
+      },
+      "cheer_trophy": {
+        "badge_id": "badge_t3_u40_master",
+        "badge_name": "ปรมาจารย์วิถีแห่งชาและเซนสัจธรรม 🍵🧘",
+        "message_th": "สุดยอดมาก! คุณได้พิชิตบทเรียนยูนิตที่ 40 สำเร็จอย่างงดงาม เชี่ยวชาญศัพท์ 6 ตระกูลชา พิธีชงชากังฟู มารยาทแห่งการต้อนรับ และปรัชญา苦尽甘来 ระดับ Master!",
+        "xp_reward": 300
+      }
+    }
+  ]
+}

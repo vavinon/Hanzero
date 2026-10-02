@@ -1,0 +1,923 @@
+/**
+ * scripts/tier2_batch_c/unit24.ts
+ * Tier 2 Unit 24: 观点与讨论 (Opinions, Polite Debate & Social Nuance)
+ * Fully compliant with Hanzero Schema, Tone Sandhi, Interleaving >= 20%, and Simplified Chinese 100%.
+ */
+
+export const unit24 = {
+  unit_id: 'tier2_u24',
+  tier: 2,
+  unit_number: 24,
+  title: {
+    zh: '观点与讨论',
+    th: 'แสดงความคิดเห็น & ถกเถียงสุภาพ',
+    en: 'Opinions & Discussion'
+  },
+  description: 'ยกระดับการสนทนาสู่ระดับความคิดเห็นและทัศนคติ แสดงความเห็นด้วยและเห็นต่างอย่างมีวาทศิลป์ ให้คำแนะนำเชิงสร้างสรรค์ ถกประเด็นจังหวะชีวิตและการทำงาน WFH vs เข้าออฟฟิศ และหาจุดร่วมฉันทามติ',
+  lessons: [
+    {
+      lesson_id: 't2_u24_l01',
+      lesson_number: 1,
+      title: {
+        zh: '表达赞同与反对',
+        th: 'แสดงความเห็นด้วย & คัดค้านอย่างสุภาพ',
+        en: 'Agreeing & Disagreeing Politely'
+      },
+      can_do: {
+        th: 'แสดงความคิดเห็น สนับสนุนหรือโต้แย้งอย่างสุภาพ และใช้โครงสร้างคู่เชื่อม 尽管...但是... (แม้ว่า...แต่...)',
+        en: 'Express personal opinions, agree or politely dispute viewpoints, and use 尽管...但是...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: ร่วมวงสนทนากับเพื่อนคนจีน พูดแสดงความเห็นได้ว่า "แม้ว่าวิธีนี้จะดี แต่ในความเป็นจริงอาจมีต้นทุนสูง" ได้อย่างนุ่มนวล!',
+      vocabulary: [
+        {
+          id: 'hsk2_2401',
+          hanzi: '观点',
+          pinyin: 'guāndiǎn',
+          display_pinyin: 'guāndiǎn',
+          pinyin_tone: 'guan1dian3',
+          meaning_th: 'มุมมอง / ความคิดเห็น / ทัศนะ',
+          meaning_en: 'viewpoint / perspective / opinion',
+          radical: '见',
+          radical_name_th: 'หมวดมองเห็น (见字旁)',
+          stroke_count: 15,
+          mnemonic: 'จุดพิกัดยืน (点) ที่บุคคลใช้สายตามองดูความเป็นไปของโลก (观) = มุมมองความคิดเห็น',
+          kid_mnemonic: 'ยืนมองยอดเขาคนละจุด เห็นภาพไม่เหมือนกัน นั่นคือมุมมอง = 观点',
+          body_gesture: 'เอานิ้วชี้ชี้แตะที่ขมับแสดงการใช้ความคิด'
+        },
+        {
+          id: 'hsk2_2402',
+          hanzi: '赞同',
+          pinyin: 'zàntóng',
+          display_pinyin: 'zàntóng',
+          pinyin_tone: 'zan4tong2',
+          meaning_th: 'เห็นด้วย / เห็นพ้องต้องกัน',
+          meaning_en: 'to agree with / to approve',
+          radical: '贝',
+          radical_name_th: 'หมวดเปลือกหอยเงินทอง (贝字底)',
+          stroke_count: 22,
+          mnemonic: 'เอ่ยคำชื่นชมสนับสนุน (赞) และมีความคิดเห็นเป็นไปในทิศทางเดียวกัน (同) = เห็นด้วย',
+          kid_mnemonic: 'พยักหน้า ยกนิ้วโป้ง ยิ้มเห็นด้วย 100% = 赞同',
+          body_gesture: 'ยกนิ้วโป้งทั้งสองข้างขึ้นมาพร้อมพยักหน้าเห็นด้วย'
+        },
+        {
+          id: 'hsk2_2403',
+          hanzi: '反对',
+          pinyin: 'fǎnduì',
+          display_pinyin: 'fǎnduì',
+          pinyin_tone: 'fan3dui4',
+          meaning_th: 'คัดค้าน / ไม่เห็นด้วย',
+          meaning_en: 'to oppose / to object',
+          radical: '又',
+          radical_name_th: 'หมวดมือขวา (又字旁)',
+          stroke_count: 9,
+          mnemonic: 'หันกลับทิศทางตรงกันข้าม (反) เพื่อเผชิญหน้าโต้แย้ง (对) = คัดค้าน',
+          kid_mnemonic: 'ส่ายหัวเบาๆ เสนอว่าน่าจะมีทางอื่นที่ดีกว่า = 反对',
+          body_gesture: 'คว่ำฝ่ามือสองข้างแล้วส่ายไปมาเบาๆ'
+        },
+        {
+          id: 'hsk2_2404',
+          hanzi: '实际上',
+          pinyin: 'shíjìshang',
+          display_pinyin: 'shíjìshang',
+          pinyin_tone: 'shi2ji4shang5',
+          meaning_th: 'ในความเป็นจริง / แท้จริงแล้ว',
+          meaning_en: 'in fact / actually / in reality',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาเรือน (宝盖头)',
+          stroke_count: 19,
+          mnemonic: 'ข้อเท็จจริงที่เป็นรูปธรรมจับต้องได้ (实际) บนโลกแห่งความเป็นจริง (上) = แท้จริงแล้ว',
+          kid_mnemonic: 'ดูเหมือนยาก แต่จริงๆ แล้วง่ายนิดเดียว = 实际上',
+          body_gesture: 'ผายมือข้างหนึ่งออกมาระดับอกอธิบายความจริง'
+        },
+        {
+          id: 'hsk2_2405',
+          hanzi: '道理',
+          pinyin: 'dàoli',
+          display_pinyin: 'dàoli',
+          pinyin_tone: 'dao4li3',
+          meaning_th: 'เหตุผล / ความสมเหตุสมผล / สัจธรรม',
+          meaning_en: 'reason / sense / logic',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 23,
+          mnemonic: 'หลักเส้นทางที่ถูกต้องชอบธรรม (道) และการสะสางปัญหาอย่างมีเหตุผล (理) = เหตุผล',
+          kid_mnemonic: 'ฟังแล้วรู้สึกว่า "มีเหตุผลมาก สมเหตุสมผลจริงๆ!" = 道理',
+          body_gesture: 'กำหมัดเคาะฝ่ามืออีกข้างเบาๆ สื่อถึงความสมเหตุสมผล'
+        },
+        {
+          id: 'hsk2_2406',
+          hanzi: '考虑',
+          pinyin: 'kǎolǜ',
+          display_pinyin: 'kǎolǜ',
+          pinyin_tone: 'kao3lv4',
+          meaning_th: 'พิจารณา / ไตร่ตรองรอบคอบ',
+          meaning_en: 'to consider / to think over',
+          radical: '耂',
+          radical_name_th: 'หมวดคนแก่ชรา (老字头)',
+          stroke_count: 17,
+          mnemonic: 'ตรวจสอบใคร่ครวญ (考) ด้วยความสุขุมรอบคอบดั่งผู้เฒ่า (虑) = พิจารณาไตร่ตรอง',
+          kid_mnemonic: 'เอามือแตะคาง เอียงคอครุ่นคิดอย่างรอบคอบ = 考虑',
+          body_gesture: 'เอานิ้วโป้งและนิ้วชี้จับคางเอียงคอคิด'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์คู่เชื่อมแย้ง: 尽管...但是... (แม้ว่า...แต่...)',
+        description_th: 'ใช้ยอมรับข้อเท็จจริงในประโยคแรก (尽管 = แม้ว่า) แล้วหักมุมด้วยข้อเท็จจริงหรือมุมมองอื่นในประโยคหลัง (但是 = แต่)',
+        example: '尽管方案很好，但是成本太高了 (Jǐnguǎn fāng\'àn hěn hǎo, dànshì chéngběn tài gāo le)',
+        fun_metaphor: 'ยอมรับข้อดีของเขาก่อน แล้วค่อยบอกข้อจำกัดอย่างละมุนละม่อม!',
+        reassurance: 'คำว่า 尽管 ในภาษาจีนให้ความรู้สึกเป็นทางการและเป็นเหตุเป็นผลมากกว่า 虽然'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เห็นด้วยและเห็นแย้ง: 尽管...但是... / 我非常赞同...',
+        explanation_th: 'ใช้เพื่อแสดงมารยาทในการประชุมและการถกเถียงเชิงวิชาการ',
+        patterns: [
+          {
+            formula: '我非常赞同你的观点 + 这话很有道理',
+            zh: '我非常赞同你的观点，这话确实很有道理。',
+            pinyin: 'Wǒ fēicháng zàntóng nǐ de guāndiǎn, zhè huà quèshí hěn yǒu dàoli.',
+            th: 'ผมเห็นด้วยกับมุมมองของคุณเป็นอย่างยิ่งครับ คำพูดนี้มีเหตุผลมากจริงๆ',
+            en: 'I completely agree with your viewpoint, that makes a lot of sense.'
+          },
+          {
+            formula: '尽管 + [ข้อดี] + 但是实际上 + [ข้อจำกัด]',
+            zh: '尽管这个想法很新颖，但是实际上执行起来很有难度。',
+            pinyin: 'Jǐnguǎn zhège xiǎngfǎ hěn xīnyǐng, dànshì shíjìshang zhíxíng qǐlái hěn yǒu nándù.',
+            th: 'แม้ว่าไอเดียนี้จะแปลกใหม่มาก แต่ในความเป็นจริงแล้วตอนนำไปปฏิบัติค่อนข้างยากครับ',
+            en: 'Although this idea is novel, in reality execution will be very difficult.'
+          },
+          {
+            formula: '建议大家 + 再深入考虑一下 + [หัวข้อ]',
+            zh: '建议大家再深入考虑一下客户的真实反馈。',
+            pinyin: 'Jiànyì dàjiā zài shēnrù kǎolǜ yíxià kèhù de zhēnshí fǎnkuì.',
+            th: 'ขอเสนอแนะให้ทุกคนลองพิจารณาความคิดเห็นที่แท้จริงของลูกค้าให้ลึกซึ้งยิ่งขึ้นครับ',
+            en: 'I suggest everyone consider the clients real feedback more deeply.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '小柴，关于这次产品的包装设计，有人建议换成全环保纸袋，你怎么看？',
+          pinyin: 'Xiǎo Chái, guānyú zhè cì chǎnpǐn de bāozhuāng shèjì, yǒurén jiànyì huàn chéng quán huánbǎo zhǐdài, nǐ zěnme kàn?',
+          th: 'เสี่ยวชาย เรื่องการออกแบบบรรจุภัณฑ์ของผลิตภัณฑ์รอบนี้ มีคนเสนอให้เปลี่ยนเป็นถุงกระดาษรักษ์โลกทั้งหมด นายมองว่าอย่างไร?',
+          en: 'Xiao Chai, regarding the product packaging design, someone suggested switching to eco-friendly paper bags. What do you think?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '尽管环保理念非常棒，我也很赞同，但是实际上纸袋在雨季运输中容易破损，我们必须慎重考虑。',
+          pinyin: 'Jǐnguǎn huánbǎo lǐniàn fēicháng bàng, wǒ yě hěn zàntóng, dànshì shíjìshang zhǐdài zài yǔjì yùnshū zhōng róngyì pòsǔn, wǒmen bìxū shènzhòng kǎolǜ.',
+          th: 'แม้ว่าแนวคิดรักษ์โลกจะยอดเยี่ยมมากและผมก็เห็นด้วยอย่างยิ่ง แต่ในความเป็นจริงถุงกระดาษอาจขาดชำรุดได้ง่ายระหว่างขนส่งในฤดูฝน พวกเราจำเป็นต้องพิจารณาอย่างรอบคอบครับ',
+          en: 'Although the green concept is wonderful and I strongly agree, in reality paper bags tear easily in rainy season transit; we must consider carefully.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลี่หมิง 🧑',
+          zh: '你说得太有道理了！我刚才还真没考虑到下雨天防水的问题。',
+          pinyin: 'Nǐ shuō de tài yǒu dàoli le! Wǒ gāngcái hái zhēn méi kǎolǜ dào xiàyǔtiān fángshuǐ de wèntí.',
+          th: 'นายพูดมีเหตุผลมากเลย! เมื่อกี้ฉันยังไม่ได้คำนึงถึงปัญหาการกันน้ำในวันฝนตกเลยจริงๆ',
+          en: 'What you said makes so much sense! I really had not considered waterproofing on rainy days just now.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '所以我不反对环保，而是建议采用防水涂层的环保材料，这样两全其美。',
+          pinyin: 'Suǒyǐ wǒ bù fǎnduì huánbǎo, érshì jiànyì cǎiyòng fángshuǐ túcéng de huánbǎo cáiliào, zhèyàng liǎngquán-qíměi.',
+          th: 'ดังนั้นผมไม่ได้คัดค้านการรักษ์โลกครับ แต่ขอเสนอแนะให้ใช้วัสดุรีไซเคิลที่มีชั้นเคลือบกันน้ำ แบบนี้จะลงตัวทั้งสองด้านครับ',
+          en: 'So I do not oppose eco-friendliness, but suggest waterproof-coated green materials, achieving the best of both worlds.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "เมื่อต้องการบอกว่า 'คำพูดนี้มีเหตุผลมาก' ในภาษาจีนพูดว่าอย่างไร?",
+          options: [
+            '很有道理 (hěn yǒu dàoli)',
+            '太难吃了 (tài nánchī le)',
+            '退还差价 (tuìhuán chājià)',
+            '请勿拍照 (qǐngwù pāizhào)'
+          ],
+          correct_index: 0,
+          explanation_th: "'很有道理' (hěn yǒu dàoli) แปลว่า มีเหตุผลมาก / สมเหตุสมผลมาก",
+          encouragement: 'จำคำชมการแสดงความคิดเห็นได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '观' ในคำว่า '观点' (มุมมองความคิดเห็น) มีหมวดนำใด?",
+          options: [
+            '见 (หมวดมองเห็น 见字旁)',
+            '口 (หมวดปาก 口字旁)',
+            '手 (หมวดมือ 手字旁)',
+            '心 (หมวดหัวใจ 心字底)'
+          ],
+          correct_index: 0,
+          explanation_th: "'观' ใช้หมวดนำ '见' สื่อถึงการมองเห็น การสังเกต หรือทัศนะ",
+          encouragement: 'จำรากศัพท์หมวดมองเห็น 见 ได้เฉียบคม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "แม้ว่าไอเดียจะดี แต่ในความเป็นจริงทำได้ยาก"',
+          tokens: ['但是实际上很难执行', '尽管想法很好'],
+          correct_sequence: ['尽管想法很好', '但是实际上很难执行'],
+          pinyin: 'Jǐnguǎn xiǎngfǎ hěn hǎo, dànshì shíjìshang hěn nán zhíxíng',
+          meaning_th: 'แม้ว่าไอเดียจะดี แต่ในความเป็นจริงทำได้ยาก',
+          explanation_th: 'ประโยคยอมรับ (尽管想法很好) + ประโยคหักมุม (但是实际上很难执行)',
+          encouragement: 'ต่อบล็อกเลโก้ประโยค 尽管...但是... ได้เนียนกริบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '赞同' (zàntóng) และ '反对' (fǎnduì) มีความสัมพันธ์กันอย่างไร?",
+          options: [
+            'เป็นคำตรงข้ามกัน (เห็นด้วย vs คัดค้าน)',
+            'เป็นคำที่มีความหมายเหมือนกัน',
+            'เป็นชื่อสถานที่ท่องเที่ยว',
+            'เป็นคำบอกเวลา'
+          ],
+          correct_index: 0,
+          explanation_th: "'赞同' (เห็นด้วย) และ '反对' (คัดค้าน) เป็นคู่คำตรงข้ามกันในภาษาจีน",
+          encouragement: 'จำคู่คำตรงข้ามในการอภิปรายได้อย่างยอดเยี่ยม!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u24_l02',
+      lesson_number: 2,
+      title: {
+        zh: '委婉表达与建议',
+        th: 'การแสดงออกอย่างนุ่มนวล & ข้อเสนอแนะ',
+        en: 'Diplomatic Suggestions & Nuance'
+      },
+      can_do: {
+        th: 'แสดงข้อเสนอแนะอย่างสุภาพนุ่มนวลโดยใช้สำนวน 对我来说... (สำหรับฉันแล้ว...) และ 不妨... (ลองดูสักหน่อย)',
+        en: 'Express polite suggestions diplomatically using 对我来说... and 不妨...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: เสนอมุมมองต่อหัวหน้างานได้ว่า "สำหรับฉันแล้ว เราลองมองจากมุมของลูกค้าดูหน่อยดีไหม" ได้อย่างน่าประทับใจ!',
+      vocabulary: [
+        {
+          id: 'hsk2_2407',
+          hanzi: '建议',
+          pinyin: 'jiànyì',
+          display_pinyin: 'jiànyì',
+          pinyin_tone: 'jian4yi4',
+          meaning_th: 'ข้อเสนอแนะ / แนะนำเชิงสร้างสรรค์',
+          meaning_en: 'suggestion / recommendation / to suggest',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 16,
+          mnemonic: 'เอ่ยถ้อยคำชี้แนะ (讠) เพื่อสร้างสรรค์สิ่งใหม่ (建) ที่เกิดประโยชน์ (议) = ข้อเสนอแนะ',
+          kid_mnemonic: 'ยกมือในที่ประชุมเสนอทางออกที่สร้างสรรค์ = 建议',
+          body_gesture: 'ยกมือหนึ่งข้างขึ้นเบาๆ ระดับอกเหมือนขอเสนอความคิดเห็น'
+        },
+        {
+          id: 'hsk2_2408',
+          hanzi: '不妨',
+          pinyin: 'bùfáng',
+          display_pinyin: 'bùfáng',
+          pinyin_tone: 'bu4fang2',
+          meaning_th: 'ลองดูสักหน่อย / ไม่เสียหายที่จะลอง',
+          meaning_en: 'might as well / no harm in trying',
+          radical: '一',
+          radical_name_th: 'หมวดขีดหนึ่ง (一字旁)',
+          stroke_count: 11,
+          mnemonic: 'ไม่มีข้อกีดขวางหรืออุปสรรคใดๆ (不 + 妨) สามารถลองทำดูได้อย่างสบายใจ = ลองดูสักหน่อย',
+          kid_mnemonic: 'ชวนเพื่อนลองชิมขนมรสใหม่ ไม่เสียหายที่จะลองดู = 不妨',
+          body_gesture: 'ผายสองมือออกข้างหน้าพร้อมเอียงคอยิ้มชวนลอง'
+        },
+        {
+          id: 'hsk2_2409',
+          hanzi: '角度',
+          pinyin: 'jiǎodù',
+          display_pinyin: 'jiǎodù',
+          pinyin_tone: 'jiao3du4',
+          meaning_th: 'มุมมอง / แง่มุม / องศา',
+          meaning_en: 'angle / point of view',
+          radical: '角',
+          radical_name_th: 'หมวดเขาสัตว์ (角字旁)',
+          stroke_count: 16,
+          mnemonic: 'วัดขนาดองศา (度) จากมุมเหลี่ยมสายตาที่ทอดมอง (角) = มุมมอง',
+          kid_mnemonic: 'หมุนกล้องเปลี่ยนมุมถ่ายรูปให้สวยขึ้น = 角度',
+          body_gesture: 'ทำสองมือนิ้วชี้กับนิ้วโป้งชนกันเป็นกรอบมุมมอง'
+        },
+        {
+          id: 'hsk2_2410',
+          hanzi: '态度',
+          pinyin: 'tàidu',
+          display_pinyin: 'tàidu',
+          pinyin_tone: 'tai4du5',
+          meaning_th: 'ทัศนคติ / ท่าที / การวางตัว',
+          meaning_en: 'attitude / stance',
+          radical: '心',
+          radical_name_th: 'หมวดหัวใจ (心字底)',
+          stroke_count: 17,
+          mnemonic: 'สภาวะกิริยาที่แสดงออก (态) จากมาตรฐานของจิตใจ (度) = ทัศนคติ / ท่าที',
+          kid_mnemonic: 'ทัศนคติเชิงบวก ยิ้มแย้มจริงใจต่อทุกคน = 态度',
+          body_gesture: 'เอามือทาบอกตรงหัวใจแล้วส่งยิ้มอบอุ่น'
+        },
+        {
+          id: 'hsk2_2411',
+          hanzi: '方案',
+          pinyin: 'fāng\'àn',
+          display_pinyin: 'fāng\'àn',
+          pinyin_tone: 'fang1an4',
+          meaning_th: 'แผนงาน / โครงร่างข้อเสนอ / โซลูชัน',
+          meaning_en: 'plan / proposal / scheme',
+          radical: '方',
+          radical_name_th: 'หมวดสี่เหลี่ยม (方字旁)',
+          stroke_count: 14,
+          mnemonic: 'ทิศทางแนวทางที่ถูกต้อง (方) บันทึกไว้บนโต๊ะร่างเอกสาร (案) = แผนงาน / โซลูชัน',
+          kid_mnemonic: 'พิมพ์แผนการตลาดเย็บเล่มนำเสนอหัวหน้า = 方案',
+          body_gesture: 'ทำท่าวางเอกสารแผนงานลงบนโต๊ะประชุม'
+        },
+        {
+          id: 'hsk2_2412',
+          hanzi: '优势',
+          pinyin: 'yōushì',
+          display_pinyin: 'yōushì',
+          pinyin_tone: 'you1shi4',
+          meaning_th: 'ข้อได้เปรียบ / จุดแข็ง / ความเหนือกว่า',
+          meaning_en: 'advantage / strength / edge',
+          radical: '亻',
+          radical_name_th: 'หมวดคน (单人旁)',
+          stroke_count: 17,
+          mnemonic: 'บุคคลที่มีความยอดเยี่ยมโดดเด่น (优) ก่อเกิดเป็นพลังอำนาจและอิทธิพล (势) = ข้อได้เปรียบ',
+          kid_mnemonic: 'เราพูดได้ 3 ภาษา นี่คือจุดแข็งที่ไม่มีใครเหมือน = 优势',
+          body_gesture: 'กำมือชูขึ้นระดับอกแสดงความมั่นใจในจุดแข็ง'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์เสนอแนะอย่างสุภาพ: 不妨 + [กริยา]',
+        description_th: 'คำว่า 不妨 (bùfáng) คำว่า 不 ตามด้วยเสียง 2 (fáng) จึงอ่านเป็น bùfáng ใช้ในการแนะนำอย่างนุ่มนวลแปลว่า "ลองดูสักหน่อยไม่เสียหาย"',
+        example: '不妨换个角度考虑这个问题 (Bùfáng huàn ge jiǎodù kǎolǜ zhège wèntí)',
+        fun_metaphor: 'คำว่า 不妨 สุภาพกว่าคำสั่งว่า "ต้องทำ" มาก เพราะเปิดพื้นที่ให้ผู้ฟังตัดสินใจ!',
+        reassurance: 'เมื่อคุยกับผู้ใหญ่หรือลูกค้าในจีน คำว่า 不妨 จะฟังดูนุ่มนวลและน่าประทับใจมาก'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้เสนอมุมมอง: 对我来说... / 不妨换个角度...',
+        explanation_th: 'ใช้เปิดประเด็นแบบถ่อมตน ไม่เอาความคิดของตัวเองเป็นศูนย์กลาง',
+        patterns: [
+          {
+            formula: '对我来说 + [ความคิดเห็นส่วนบุคคล]',
+            zh: '对我来说，产品的稳定性和售后服务更重要。',
+            pinyin: 'Duì wǒ láishuō, chǎnpǐn de wěndìngxìng hé shòuhòu fúwù gèng zhòngyào.',
+            th: 'สำหรับผมแล้ว ความเสถียรของผลิตภัณฑ์และบริการหลังการขายสำคัญยิ่งกว่าครับ',
+            en: 'For me, product stability and after-sales service are even more important.'
+          },
+          {
+            formula: '我们不妨换个角度 + [กริยา]',
+            zh: '我们不妨换个角度，从年轻用户的心理去考虑方案。',
+            pinyin: 'Wǒmen bùfáng huàn ge jiǎodù, cóng niánqīng yònghù de xīnlǐ qù kǎolǜ fāng\'àn.',
+            th: 'พวกเราลองเปลี่ยนมุมมอง คิดแผนงานจากจิตวิทยาของกลุ่มผู้ใช้รุ่นใหม่ดูสักหน่อยไหมครับ',
+            en: 'We might as well change angles and consider the proposal from young users mindset.'
+          },
+          {
+            formula: '这个方案最大的优势在于 + [จุดแข็ง]',
+            zh: '这个新方案最大的优势在于能节省30%的时间。',
+            pinyin: 'Zhège xīn fāng\'àn zuì dà de yōushì zàiyú néng jiéshěng bǎifēnzhī sānshí de shíjiān.',
+            th: 'จุดแข็งที่สุดของแผนงานใหม่นี้อยู่ที่สามารถประหยัดเวลาได้ถึง 30% ครับ',
+            en: 'The biggest advantage of this new plan is saving 30% of time.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'เฉินจิ้ง 👩‍💼',
+          zh: '大家对新版本的APP界面还有什么修改建议吗？',
+          pinyin: 'Dàjiā duì xīn bǎnběn de APP jièmiàn hái yǒu shénme xiūgǎi jiànyì ma?',
+          th: 'ทุกคนยังมีข้อเสนอแนะในการปรับแก้หน้าตาแอปเวอร์ชันใหม่ไหมคะ?',
+          en: 'Does anyone have further modification suggestions for the new app interface?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '对我来说，目前的按键排版稍微有点儿复杂。我们不妨换个角度，从老年用户的角度考虑一下。',
+          pinyin: 'Duì wǒ láishuō, mùqián de ànjiàn páibǎn shāowēi yǒudiǎnr fùzá. Wǒmen bùfáng huàn ge jiǎodù, cóng lǎonián yònghù de jiǎodù kǎolǜ yíxià.',
+          th: 'สำหรับผมแล้ว การจัดวางปุ่มในปัจจุบันซับซ้อนไปนิดหน่อยครับ พวกเราลองเปลี่ยนมุมมอง พิจารณาจากแง่มุมของผู้สูงอายุดูสักหน่อยไหมครับ',
+          en: 'For me, the current button layout is a bit too complex. We might as well consider it from elderly users angle.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'เฉินจิ้ง 👩‍💼',
+          zh: '这个建议非常贴心！那具体有什么改进方案吗？',
+          pinyin: 'Zhège jiànyì fēicháng tiēxīn! Nà jùtǐ yǒu shénme gǎijìn fāng\'àn ma?',
+          th: 'ข้อเสนอแนะนี้ใส่ใจผู้ใช้ดีมากเลยค่ะ! แล้วมีข้อเสนอแนวทางปรับปรุงที่เป็นรูปธรรมไหมคะ?',
+          en: 'This suggestion is very thoughtful! Are there specific improvement plans?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我们可以增加“简易模式”，把字体和图标放大。这个方案的优势在于照顾了所有用户群体的体验。',
+          pinyin: 'Wǒmen kěyǐ zēngjiā "jiǎnyì móshì", bǎ zìtǐ hé túbiāo fàngdà. Zhège fāng\'àn de yōushì zàiyú zhàogù le suǒyǒu yònghù qúntǐ de tǐyàn.',
+          th: 'พวกเราสามารถเพิ่ม "โหมดเข้าใจง่าย" ขยายฟอนต์และไอคอนให้ใหญ่ขึ้น จุดแข็งของแผนนี้คือการดูแลประสบการณ์ของผู้ใช้งานทุกกลุ่มครับ',
+          en: 'We can add an "Easy Mode", enlarging fonts and icons. The advantage of this plan is taking care of all user groups experience.'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "สำนวน '不妨' (bùfáng) ในการให้คำแนะนำมีความหมายตรงกับข้อใด?",
+          options: [
+            'ลองดูสักหน่อย / ไม่เสียหายที่จะลอง',
+            'ห้ามทำเด็ดขาด',
+            'ต้องจ่ายเงินเพิ่ม',
+            'รถไฟกำลังจะออก'
+          ],
+          correct_index: 0,
+          explanation_th: "'不妨' แปลว่า ลองดูสักหน่อย / ไม่เสียหายที่จะลอง เป็นการเสนอแนะอย่างสุภาพ",
+          encouragement: 'จำสำนวนสุภาพในการทำงานได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '态' ในคำว่า '态度' (ทัศนคติ) มีหมวดนำใดที่ด้านล่าง?",
+          options: [
+            '心 (หมวดหัวใจ 心字底)',
+            '口 (หมวดปาก 口字旁)',
+            '日 (หมวดดวงอาทิตย์ 日字旁)',
+            '月 (หมวดเนื้อหนัง 月字旁)'
+          ],
+          correct_index: 0,
+          explanation_th: "'态' มีหมวดนำ '心' (หัวใจ) อยู่ด้านล่าง สื่อถึงทัศนคติหรืออารมณ์ที่สะท้อนจากใจ",
+          encouragement: 'สังเกตรากศัพท์หมวดหัวใจ 心 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราลองเปลี่ยนมุมมองพิจารณาดูสักหน่อย"',
+          tokens: ['考虑一下', '不妨换个角度', '我们'],
+          correct_sequence: ['我们', '不妨换个角度', '考虑一下'],
+          pinyin: 'Wǒmen bùfáng huàn ge jiǎodù kǎolǜ yíxià',
+          meaning_th: 'พวกเราลองเปลี่ยนมุมมองพิจารณาดูสักหน่อย',
+          explanation_th: 'ประธาน (我们) + ข้อเสนอแนะนุ่มนวล (不妨换个角度) + กริยา (考虑一下)',
+          encouragement: 'ต่อบล็อกสำนวนการนำเสนอความคิดได้อย่างเป็นธรรมชาติ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '优势' (yōushì) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ข้อได้เปรียบ / จุดแข็ง',
+            'ข้อบกพร่อง / จุดอ่อน',
+            'ราคาสินค้า',
+            'สภาพอากาศหนาวเย็น'
+          ],
+          correct_index: 0,
+          explanation_th: "'优势' แปลว่า จุดแข็ง ข้อได้เปรียบ หรือความเหนือกว่า",
+          encouragement: 'จำศัพท์คำสำคัญทางธุรกิจได้อย่างแม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u24_l03',
+      lesson_number: 3,
+      title: {
+        zh: '探讨生活节奏与热点',
+        th: 'จังหวะชีวิต & ประเด็นสังคม',
+        en: 'Life Pace, Balance & Social Topics'
+      },
+      can_do: {
+        th: 'ร่วมถกประเด็นสังคมและจังหวะชีวิตคนเมือง เช่น การทำงานล่วงเวลา (加班) สมดุลชีวิต และใช้โครงสร้าง 一方面...另一方面...',
+        en: 'Discuss social topics and city life pace like overtime and work-life balance using 一方面...另一方面...'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: คุยเรื่องการทำงานในเมืองใหญ่ของจีนได้ว่า "ด้านหนึ่งก็เพิ่มรายได้ แต่อีกด้านหนึ่งก็ต้องรักษาสมดุลชีวิตและสุขภาพ" ได้อย่างลึกซึ้ง!',
+      vocabulary: [
+        {
+          id: 'hsk2_2413',
+          hanzi: '生活节奏',
+          pinyin: 'shēnghuó jiézòu',
+          display_pinyin: 'shēnghuó jiézòu',
+          pinyin_tone: 'sheng1huo2 jie2zou4',
+          meaning_th: 'จังหวะการใช้ชีวิต / ความเร็วของวิถีชีวิต',
+          meaning_en: 'pace of life / life tempo',
+          radical: '竹',
+          radical_name_th: 'หมวดไผ่ (竹字头)',
+          stroke_count: 28,
+          mnemonic: 'จังหวะเคาะกระบอกไม้ไผ่เป็นท่วงทำนองดนตรี (节奏) สื่อถึงความเร็วในการใช้ชีวิต (生活) = จังหวะชีวิต',
+          kid_mnemonic: 'คนในปักกิ่งและเซี่ยงไฮ้เดินก้าวเท้าฉับๆ รีบเร่ง = 生活节奏',
+          body_gesture: 'เคาะมือซ้ายขวาเป็นจังหวะเพลงเร็ว'
+        },
+        {
+          id: 'hsk2_2414',
+          hanzi: '平衡',
+          pinyin: 'pínghéng',
+          display_pinyin: 'pínghéng',
+          pinyin_tone: 'ping2heng2',
+          meaning_th: 'ความสมดุล / ปรับให้สมดุล',
+          meaning_en: 'balance / equilibrium / to balance',
+          radical: '行',
+          radical_name_th: 'หมวดการเดินทาง (行字旁)',
+          stroke_count: 21,
+          mnemonic: 'คานหาบสองข้างเสมอกันบนผืนแผ่นดินราบเรียบ (平) ทำให้ก้าวเดินได้อย่างมั่นคง (衡) = ความสมดุล',
+          kid_mnemonic: 'ตาชั่งสองข้างน้ำหนักเท่ากันเป๊ะ ไม่เอียงไปข้างใด = 平衡',
+          body_gesture: 'กางสองแขนขนานกับพื้นทำตัวตรงเป็นตาชั่งที่สมดุล'
+        },
+        {
+          id: 'hsk2_2415',
+          hanzi: '加班',
+          pinyin: 'jiābān',
+          display_pinyin: 'jiābān',
+          pinyin_tone: 'jia1ban1',
+          meaning_th: 'ทำงานล่วงเวลา (OT)',
+          meaning_en: 'to work overtime',
+          radical: '力',
+          radical_name_th: 'หมวดพลังแรง (力字旁)',
+          stroke_count: 15,
+          mnemonic: 'เพิ่มแรงกายและความพยายาม (加) นอกเหนือกะเวลาทำงานปกติ (班) = ทำงานล่วงเวลา',
+          kid_mnemonic: 'ทุ่มสองทุ่ม ออฟฟิศยังเปิดไฟสว่างนั่งทำงาน = 加班',
+          body_gesture: 'เอามือบีบนวดต้นคอแก้เมื่อยล้าจากการนั่งทำงานนาน'
+        },
+        {
+          id: 'hsk2_2416',
+          hanzi: '效率',
+          pinyin: 'xiàolǜ',
+          display_pinyin: 'xiàolǜ',
+          pinyin_tone: 'xiao4lv4',
+          meaning_th: 'ประสิทธิภาพ / ประสิทธิผล',
+          meaning_en: 'efficiency / productivity',
+          radical: '攵',
+          radical_name_th: 'หมวดเคาะตี (反文旁)',
+          stroke_count: 21,
+          mnemonic: 'ผลลัพธ์ที่เกิดขึ้นจริงจากการลงมือทำ (效) เทียบตามอัตราส่วนเวลา (率) = ประสิทธิภาพ',
+          kid_mnemonic: 'ทำงานเสร็จไวและถูกต้อง สมบูรณ์แบบ 100% = 效率',
+          body_gesture: 'ชูสองนิ้วเป็นสัญลักษณ์ความรวดเร็วและแม่นยำ'
+        },
+        {
+          id: 'hsk2_2417',
+          hanzi: '压力',
+          pinyin: 'yālì',
+          display_pinyin: 'yālì',
+          pinyin_tone: 'ya1li4',
+          meaning_th: 'ความกดดัน / ความเครียด',
+          meaning_en: 'pressure / stress',
+          radical: '厂',
+          radical_name_th: 'หมวดหน้าผา (厂字旁)',
+          stroke_count: 8,
+          mnemonic: 'พลังแรงโน้มถ่วงกดทับ (力) ดั่งก้อนหินบนหน้าผา (压) = ความกดดัน',
+          kid_mnemonic: 'แบกของหนัก หรือใกล้สอบ ทำหน้าตึงเครียด = 压力',
+          body_gesture: 'สองมือกุมขมับทำหน้าอึดอัดกับความกดดัน'
+        },
+        {
+          id: 'hsk2_2418',
+          hanzi: '适应',
+          pinyin: 'shìyìng',
+          display_pinyin: 'shìyìng',
+          pinyin_tone: 'shi4ying4',
+          meaning_th: 'ปรับตัวให้เข้ากับ / ปรับตัว',
+          meaning_en: 'to adapt / to get used to',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 16,
+          mnemonic: 'ก้าวเดินไปข้างหน้าอย่างเหมาะสม (适) และตอบสนองต่อสิ่งแวดล้อมใหม่ (应) = ปรับตัว',
+          kid_mnemonic: 'ย้ายมาอยู่เมืองใหม่ ปรับตัวทานอาหารและพูดภาษาจีนได้คล่อง = 适应',
+          body_gesture: 'พยักหน้ายิ้มกว้างกอดอกอย่างผ่อนคลาย'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'ไวยากรณ์สองมุมมอง: 一方面...另一方面... (ด้านหนึ่ง... อีกด้านหนึ่ง...)',
+        description_th: 'ใช้ชี้แจงสองแง่มุมของสถานการณ์เดียวกัน โดยทั้งสองแง่มุมมีความสำคัญหรือต้องพิจารณาควบคู่กัน',
+        example: '一方面要提高工作效率，另一方面也要保证身心健康 (Yì fāngmiàn yào tígāo gōngzuò xiàolǜ, lìng yì fāngmiàn yě yào bǎozhèng shēnxīn jiànkāng)',
+        fun_metaphor: 'มองสองด้านเหมือนเหรียญสองด้าน ทำให้การวิเคราะห์รอบด้านและคมคาย!',
+        reassurance: 'โครงสร้างนี้เป็นระดับ HSK 4 ที่ได้รับความนิยมสูงสุดในการเขียนและพูดอภิปราย'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้สองด้าน: 一方面 + [มุมมอง 1] + 另一方面 + [มุมมอง 2]',
+        explanation_th: 'ใช้ในการวิเคราะห์ข้อดี-ข้อเสีย หรือความสมดุลของการดำเนินชีวิต',
+        patterns: [
+          {
+            formula: '大城市的生活节奏很快 + 压力很大',
+            zh: '北上广深的生活节奏特别快，年轻人的压力往往很大。',
+            pinyin: 'Běi-Shàng-Guǎng-Shēn de shēnghuó jiézòu tèbié kuài, niánqīngrén de yālì wǎngwǎng hěn dà.',
+            th: 'จังหวะชีวิตในปักกิ่ง เซี่ยงไฮ้ กว่างโจว เซินเจิ้นเร็วเป็นพิเศษ คนรุ่นใหม่มักมีความกดดันสูงครับ',
+            en: 'The pace of life in tier-1 cities is very fast, and young people often face high pressure.'
+          },
+          {
+            formula: '我们一方面要努力工作 + 另一方面要学会平衡生活',
+            zh: '我们一方面要提高效率减少加班，另一方面要学会平衡工作与生活。',
+            pinyin: 'Wǒmen yì fāngmiàn yào tígāo xiàolǜ jiǎnshǎo jiābān, lìng yì fāngmiàn yào xuéhuì pínghéng gōngzuò yǔ shēnghuó.',
+            th: 'ด้านหนึ่งพวกเราต้องเพิ่มประสิทธิภาพลดการทำงานล่วงเวลา แต่อีกด้านหนึ่งก็ต้องเรียนรู้การรักษาสมดุลระหว่างงานกับชีวิตครับ',
+            en: 'On one hand we should improve efficiency to reduce overtime, on the other hand learn to balance work and life.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'หลิวหมิ่น 👩‍💼',
+          zh: '小柴，你在北京生活三个月了，适应这里的生活节奏了吗？',
+          pinyin: 'Xiǎo Chái, nǐ zài Běijīng shēnghuó sān ge yuè le, shìyìng zhèlǐ de shēnghuó jiézòu le ma?',
+          th: 'เสี่ยวชาย นายใช้ชีวิตในปักกิ่งมา 3 เดือนแล้ว ปรับตัวเข้ากับจังหวะชีวิตที่นี่ได้หรือยัง?',
+          en: 'Xiao Chai, you have lived in Beijing for 3 months, have you adapted to the pace of life here?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '刚来时觉得大家走路、吃饭、坐地铁都特别快，压力确实不小，但现在我已经完全适应了。',
+          pinyin: 'Gāng lái shí juéde dàjiā zǒulù, chīfàn, zuò dìtiě dōu tèbié kuài, yālì quèshí bù xiǎo, dàn xiànzài wǒ yǐjīng wánquán shìyìng le.',
+          th: 'ตอนมาใหม่ๆ รู้สึกว่าทุกคนเดิน ทานข้าว ขึ้นรถไฟใต้ดินเร็วเป็นพิเศษ ความกดดันไม่น้อยเลยครับ แต่ตอนนี้ผมปรับตัวได้เต็มที่แล้วครับ',
+          en: 'When I first arrived, I felt everyone walked, ate, and took the metro so fast, pressure was real, but now I have adapted completely.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'หลิวหมิ่น 👩‍💼',
+          zh: '平时工作经常加班吗？你是怎么平衡工作和生活的呢？',
+          pinyin: 'Píngshí gōngzuò jīngcháng jiābān ma? Nǐ shì zěnme pínghéng gōngzuò hé shēnghuó de ne?',
+          th: 'วันทำงานปกติทำโอทีบ่อยไหม? นายมีวิธีรักษาสมดุลชีวิตกับการทำงานอย่างไรเหรอ?',
+          en: 'Do you often work overtime? How do you balance work and personal life?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我注重工作效率，上班时集中精力，下班后就去健身房或者跟朋友打羽毛球。一方面努力工作，另一方面也要享受健康生活！',
+          pinyin: 'Wǒ zhùzhòng gōngzuò xiàolǜ, shàngbān shí jízhōng jīnglì, xiàbān hòu jiù qù jiànshēnfáng huòzhě gēn péngyou dǎ yǔmáoqiú. Yì fāngmiàn nǔlì gōngzuò, lìng yì fāngmiàn yě yào xiǎngshòu jiànkāng shēnghuó!',
+          th: 'ผมเน้นประสิทธิภาพในการทำงานครับ ตอนทำงานจะจดจ่อเต็มที่ เลิกงานก็ไปฟิตเนสหรือนัดเพื่อนตีแบดมินตัน ด้านหนึ่งตั้งใจทำงาน อีกด้านหนึ่งก็ต้องเพลิดเพลินกับชีวิตสุขภาพดีครับ!',
+          en: 'I focus on efficiency, concentrating during work hours, and going to the gym or playing badminton after work. Work hard on one hand, enjoy healthy life on the other!'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'listen_match',
+          question_th: "โครงสร้าง '一方面...另一方面...' มีความหมายตรงกับข้อใด?",
+          options: [
+            'ด้านหนึ่งก็... อีกด้านหนึ่งก็...',
+            'เพราะว่า... จึง...',
+            'ถ้าหากว่า... ก็คง...',
+            'ยิ่ง... ก็ยิ่ง...'
+          ],
+          correct_index: 0,
+          explanation_th: "'一方面...另一方面...' แปลว่า ด้านหนึ่งก็... อีกด้านหนึ่งก็... ใช้มองประเด็นสองมิติควบคู่กัน",
+          encouragement: 'จำโครงสร้างไวยากรณ์คู่เชื่อมระดับสูงได้แม่นยำ!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '平' ในคำว่า '平衡' (ความสมดุล) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'ความราบเรียบ / เสมอกัน',
+            'ความสูงชันของภูเขา',
+            'ความลึกของมหาสมุทร',
+            'ความมืดมิด'
+          ],
+          correct_index: 0,
+          explanation_th: "'平' สื่อถึงความราบเรียบ เสมอภาค หรือความสมดุล",
+          encouragement: 'จำความหมายรากศัพท์ 平 ได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ด้านหนึ่งตั้งใจทำงาน อีกด้านหนึ่งรักษาสมดุลชีวิต"',
+          tokens: ['另一方面平衡生活', '一方面努力工作'],
+          correct_sequence: ['一方面努力工作', '另一方面平衡生活'],
+          pinyin: 'Yì fāngmiàn nǔlì gōngzuò, lìng yì fāngmiàn pínghéng shēnghuó',
+          meaning_th: 'ด้านหนึ่งตั้งใจทำงาน อีกด้านหนึ่งรักษาสมดุลชีวิต',
+          explanation_th: 'มิติที่ 1 (一方面努力工作) + มิติที่ 2 (另一方面平衡生活)',
+          encouragement: 'ต่อบล็อกประโยคสมดุลชีวิตได้อย่างสมบูรณ์แบบ!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '效率' (xiàolǜ) มีความหมายตรงกับข้อใด?",
+          options: [
+            'ประสิทธิภาพ / ประสิทธิผล',
+            'การยกเลิกสัญญา',
+            'การซื้อของลดราคา',
+            'การลาพักร้อน'
+          ],
+          correct_index: 0,
+          explanation_th: "'效率' แปลว่า ประสิทธิภาพ หรืออัตราความรวดเร็วและคุณภาพของผลงาน",
+          encouragement: 'จำศัพท์หลักในการทำงานยุคใหม่ได้อย่างแม่นยำ!'
+        }
+      ]
+    },
+    {
+      lesson_id: 't2_u24_l04',
+      lesson_number: 4,
+      title: {
+        zh: '职场模式辩论挑战',
+        th: 'ถกอภิปรายรูปแบบการทำงาน & บรรลุฉันทามติ',
+        en: 'Workplace Debate & Consensus Boss Challenge'
+      },
+      can_do: {
+        th: 'ร่วมถกอภิปรายประเด็นการทำงาน WFH vs เข้าออฟฟิศ สรุปความคิดเห็น และผ่านด่าน Boss Challenge การแสดงทัศนะและฉันทามติ',
+        en: 'Debate WFH vs Office models, summarize viewpoints, and conquer the Debate & Consensus Boss Challenge'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: พิชิต Boss Challenge ถกประเด็นรูปแบบการทำงานแบบผสมผสาน (Hybrid) และกล่าวสรุปบรรลุฉันทามติได้อย่างสง่างาม!',
+      vocabulary: [
+        {
+          id: 'hsk2_2419',
+          hanzi: '讨论',
+          pinyin: 'tǎolùn',
+          display_pinyin: 'tǎolùn',
+          pinyin_tone: 'tao3lun4',
+          meaning_th: 'อภิปราย / ถกเถียงแลกเปลี่ยนความคิดเห็น',
+          meaning_en: 'to discuss / discussion',
+          radical: '讠',
+          radical_name_th: 'หมวดคำพูด (言字旁)',
+          stroke_count: 11,
+          mnemonic: 'เอ่ยถ้อยคำตรวจสอบเจาะลึก (讨) และจัดเรียงเหตุผลวิพากษ์ (论) = อภิปรายถกเถียง',
+          kid_mnemonic: 'ทุกคนนั่งแลกเปลี่ยนความคิดเห็นอย่างสร้างสรรค์ = 讨论',
+          body_gesture: 'สองมือทำท่าสลับผายออกไปมาระหว่างสองฝ่าย'
+        },
+        {
+          id: 'hsk2_2420',
+          hanzi: '灵活性',
+          pinyin: 'línghuóxìng',
+          display_pinyin: 'línghuóxìng',
+          pinyin_tone: 'ling2huo2xing4',
+          meaning_th: 'ความยืดหยุ่น / ความคล่องตัว',
+          meaning_en: 'flexibility / versatility',
+          radical: '火',
+          radical_name_th: 'หมวดไฟ (火字旁)',
+          stroke_count: 24,
+          mnemonic: 'ความคล่องแคล่วว่องไวราวกับประกายไฟ (灵) ที่มีชีวิตชีวา (活) และปรับเปลี่ยนคุณสมบัติได้ (性) = ความยืดหยุ่น',
+          kid_mnemonic: 'สามารถปรับเปลี่ยนเวลาและสถานที่ทำงานได้ตามความเหมาะสม = 灵活性',
+          body_gesture: 'สะบัดข้อมือสองข้างอย่างพริ้วไหวแสดงความยืดหยุ่น'
+        },
+        {
+          id: 'hsk2_2421',
+          hanzi: '面对面',
+          pinyin: 'miànduìmiàn',
+          display_pinyin: 'miànduìmiàn',
+          pinyin_tone: 'mian4dui4mian4',
+          meaning_th: 'พบปะต่อหน้า / เผชิญหน้าแบบตัวต่อตัว',
+          meaning_en: 'face-to-face',
+          radical: '面',
+          radical_name_th: 'หมวดใบหน้า (面字旁)',
+          stroke_count: 23,
+          mnemonic: 'ใบหน้าของสองบุคคล (面) หันเข้าเผชิญหน้ากันโดยตรง (对) = พบปะต่อหน้า',
+          kid_mnemonic: 'นั่งคุยกันต่อหน้า ยิ้มและสบตากันอย่างอบอุ่น = 面对面',
+          body_gesture: 'สองมือชี้ที่ใบหน้าตนเองแล้วชี้ไปที่อีกฝ่าย'
+        },
+        {
+          id: 'hsk2_2422',
+          hanzi: '总结',
+          pinyin: 'zǒngjié',
+          display_pinyin: 'zǒngjié',
+          pinyin_tone: 'zong3jie2',
+          meaning_th: 'สรุปภาพรวม / ประมวลผล',
+          meaning_en: 'to summarize / summary',
+          radical: '纟',
+          radical_name_th: 'หมวดเส้นไหม (绞丝旁)',
+          stroke_count: 21,
+          mnemonic: 'รวบรวมเส้นไหมทุกเส้นเข้าด้วยกันทั้งหมด (总) แล้วผูกเป็นปมจุดจบที่สมบูรณ์ (结) = สรุปภาพรวม',
+          kid_mnemonic: 'เขียนสรุปประเด็นหลัก 3 ข้อในหน้าสุดท้ายของการประชุม = 总结',
+          body_gesture: 'กำสองมือรวบเข้าหากันระดับอกแสดงการรวบรวมสรุป'
+        },
+        {
+          id: 'hsk2_2423',
+          hanzi: '达成',
+          pinyin: 'dáchéng',
+          display_pinyin: 'dáchéng',
+          pinyin_tone: 'da2cheng2',
+          meaning_th: 'บรรลุ (ข้อตกลง / เป้าหมาย)',
+          meaning_en: 'to reach (agreement) / to achieve',
+          radical: '辶',
+          radical_name_th: 'หมวดก้าวเดิน (走之底)',
+          stroke_count: 12,
+          mnemonic: 'ก้าวเดินไปถึงจุดหมาย (达) จนประสบผลสำเร็จสมบูรณ์ (成) = บรรลุข้อตกลง',
+          kid_mnemonic: 'จับมือแสดงความยินดี บรรลุข้อตกลงร่วมกัน = 达成',
+          body_gesture: 'ยื่นมือออกไปข้างหน้าทำท่าจับมือเช็กแฮนด์'
+        },
+        {
+          id: 'hsk2_2424',
+          hanzi: '共识',
+          pinyin: 'gòngshí',
+          display_pinyin: 'gòngshí',
+          pinyin_tone: 'gong4shi2',
+          meaning_th: 'ฉันทามติ / ข้อตกลงร่วมกัน / ความเห็นพ้อง',
+          meaning_en: 'consensus / common understanding',
+          radical: '八',
+          radical_name_th: 'หมวดเลขแปด (八字头)',
+          stroke_count: 13,
+          mnemonic: 'ความรู้ความเข้าใจ (识) ที่ทุกคนในชุมชนมีร่วมกันอย่างเป็นเอกภาพ (共) = ฉันทามติ',
+          kid_mnemonic: 'ทุกคนยกมือเห็นชอบอย่างพร้อมเพรียง = 共识',
+          body_gesture: 'ยกมือหนึ่งข้างขึ้นสนับสนุนฉันทามติ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'Tone Sandhi: 总结 (zǒngjié) และ 达成共识 (dáchéng gòngshí)',
+        description_th: 'คำว่า 总 (3) + 结 (2) คำว่า 总 คงรูป Half-3rd tone ไม่ผันเป็นเสียงสอง ส่วนสำนวน 达成共识 (2+2+4+2) ออกเสียงคู่สองตัวหน้าไหลลื่น เป็นวลีขั้นสูงในการสรุปข้อตกลง',
+        example: '最后我们达成了高度共识 (Zuìhòu wǒmen dáchéng le gāodù gòngshí)',
+        fun_metaphor: 'เมื่อการถกเถียงจบลงด้วย "达成共识" นั่นคือชัยชนะของทุกฝ่าย!',
+        reassurance: 'คำว่า 共识 สะท้อนถึงวุฒิภาวะและความเป็นผู้นำอย่างแท้จริง'
+      },
+      grammar_bite: {
+        title: 'สูตรเลโก้สรุปฉันทามติ: 经过充分讨论...大家一致达成共识...',
+        explanation_th: 'ใช้ในการกล่าวสรุปปิดการประชุมหรือการอภิปรายอย่างมืออาชีพ',
+        patterns: [
+          {
+            formula: '经过大家充分讨论 + 我们在 + [เรื่อง] + 上达成了共识',
+            zh: '经过大家充分讨论，我们在工作模式上达成了共识。',
+            pinyin: 'Jīngguò dàjiā chōngfèn tǎolùn, wǒmen zài gōngzuò móshì shàng dáchéng le gòngshí.',
+            th: 'หลังผ่านการอภิปรายอย่างทั่วถึงของทุกคน พวกเราได้บรรลุฉันทามติในเรื่องรูปแบบการทำงานแล้วครับ',
+            en: 'After thorough discussion, we reached a consensus on the work model.'
+          },
+          {
+            formula: '远程办公有灵活性 + 但是面对面沟通 + [ข้อดี]',
+            zh: '居家办公具有很高的灵活性，但是面对面沟通更容易建立信任。',
+            pinyin: 'Jūjiā bàngōng jùyǒu hěn gāo de línghuóxìng, dànshì miànduìmiàn gōutōng gèng róngyì jiànlì xìnrèn.',
+            th: 'การทำงานที่บ้านมีความยืดหยุ่นสูง แต่การสื่อสารต่อหน้าช่วยสร้างความไว้วางใจได้ง่ายกว่าครับ',
+            en: 'Working from home offers high flexibility, but face-to-face communication builds trust more easily.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: 'A',
+          speaker_name: 'ประธานที่ประชุม 👨‍💼',
+          zh: '各位同事，关于未来团队采用“全员居家办公”还是“回到办公室”，请小柴做最后的观点总结。',
+          pinyin: 'Gèwèi tóngshì, guānyú wèilái tuánduì cǎiyòng "quányuán jūjiā bàngōng" háishì "huídào bàngōngshì", qǐng Xiǎo Chái zuò zuìhòu de guāndiǎn zǒngjié.',
+          th: 'เพื่อนร่วมงานทุกท่าน เรื่องที่ว่าในอนาคตทีมจะใช้ "การทำงานจากบ้าน 100%" หรือ "กลับเข้าออฟฟิศ" ขอเชิญเสี่ยวชายช่วยสรุปภาพรวมความคิดเห็นสุดท้ายครับ',
+          en: 'Colleagues, regarding whether our team should adopt full remote work or return to the office, please have Xiao Chai make the final summary.'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '好的！居家办公最大的优势在于节省通勤时间，灵活性高；而办公室面对面交流，团队协作效率更高。',
+          pinyin: 'Hǎo de! Jūjiā bàngōng zuì dà de yōushì zàiyú jiéshěng tōngqín shíjiān, línghuóxìng gāo; ér bàngōngshì miànduìmiàn jiāoliú, tuánduì xiézuò xiàolǜ gèng gāo.',
+          th: 'ได้ครับ! การทำงานจากบ้านมีจุดแข็งที่สุดคือประหยัดเวลาเดินทางและยืดหยุ่นสูง ส่วนการพบปะต่อหน้าในออฟฟิศ ประสิทธิภาพการร่วมมือกันจะสูงกว่าครับ',
+          en: 'Alright! The biggest advantage of WFH is saving commute time and high flexibility; whereas office face-to-face communication boosts team collaboration efficiency.'
+        },
+        {
+          speaker: 'A',
+          speaker_name: 'ประธานที่ประชุม 👨‍💼',
+          zh: '那综合双方的观点，你的建议方案是什么？',
+          pinyin: 'Nà zōnghé shuāngfāng de guāndiǎn, nǐ de jiànyì fāng\'àn shì shénme?',
+          th: 'ถ้างั้นเมื่อบูรณาการความคิดเห็นของทั้งสองฝ่ายแล้ว ข้อเสนอแนะของคุณคืออะไรครับ?',
+          en: 'Integrating both sides viewpoints, what is your recommended solution?'
+        },
+        {
+          speaker: 'B',
+          speaker_name: 'สมชาย 🧒',
+          zh: '我建议采用“混合办公模式”：每周两天居家，三天到公司。这样既保留了灵活性，又保证了协作，大家是否赞同？',
+          pinyin: 'Wǒ jiànyì cǎiyòng "hùnhé bàngōng móshì": Měi zhōu liǎng tiān jūjiā, sān tiān dào gōngsī. Zhèyàng jì bǎoliú le línghuóxìng, yòu bǎozhèng le xiézuò, dàjiā shìfǒu zàntóng?',
+          th: 'ผมขอเสนอแนะให้ใช้ "รูปแบบการทำงานแบบผสมผสาน (Hybrid)": สัปดาห์ละ 2 วันทำงานที่บ้าน 3 วันเข้าออฟฟิศ แบบนี้จะรักษาความยืดหยุ่นไว้ได้และรับประกันการทำงานร่วมกัน ทุกคนเห็นด้วยไหมครับ?',
+          en: 'I suggest a "Hybrid Work Model": 2 days remote, 3 days in office per week. This preserves flexibility and ensures collaboration. Does everyone agree?'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'meaning_match',
+          question_th: "วลี '达成共识' (dáchéng gòngshí) ในการประชุมหมายถึงอะไร?",
+          options: [
+            'บรรลุฉันทามติ / เห็นพ้องต้องกันทุกฝ่าย',
+            'เลิกการประชุมโดยไม่มีข้อสรุป',
+            'ทะเลาะวิวาทและแยกย้าย',
+            'สั่งอาหารมารับประทานระหว่างประชุม'
+          ],
+          correct_index: 0,
+          explanation_th: "'达成共识' (dáchéng gòngshí) แปลว่า บรรลุฉันทามติ หรือตกลงเห็นพ้องร่วมกัน",
+          encouragement: 'จำคำศัพท์การตัดสินใจระดับบริหารได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: "ตัวอักษร '面' ในคำว่า '面对面' (เผชิญหน้าต่อหน้า) มีความหมายดั้งเดิมเกี่ยวกับสิ่งใด?",
+          options: [
+            'ใบหน้า / ด้านหน้า',
+            'ก๋วยเตี๋ยวชามใหญ่',
+            'ท้องฟ้ายามค่ำคืน',
+            'สายน้ำไหล'
+          ],
+          correct_index: 0,
+          explanation_th: "'面' หมวดใบหน้า สื่อถึงการหันหน้าหรือเผชิญหน้ากันต่อหน้า",
+          encouragement: 'จำรากศัพท์หมวดใบหน้า 面 ได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "พวกเราบรรลุฉันทามติในเรื่องรูปแบบการทำงานแล้ว"',
+          tokens: ['在工作模式上', '达成了共识', '我们'],
+          correct_sequence: ['我们', '在工作模式上', '达成了共识'],
+          pinyin: 'Wǒmen zài gōngzuò móshì shàng dáchéng le gòngshí',
+          meaning_th: 'พวกเราบรรลุฉันทามติในเรื่องรูปแบบการทำงานแล้ว',
+          explanation_th: 'ประธาน (我们) + ขอบเขตหัวข้อ (在工作模式上) + กริยาผลลัพธ์ (达成了共识)',
+          encouragement: 'ต่อบล็อกประโยคฉันทามติได้อย่างคล่องแคล่ว!'
+        },
+        {
+          type: 'flash_recall',
+          question_th: "คำว่า '总结' (zǒngjié) มีความหมายตรงกับข้อใด?",
+          options: [
+            'สรุปภาพรวม / ประมวลผล',
+            'เริ่มต้นโครงการใหม่',
+            'พักผ่อนประจำปี',
+            'ยกเลิกการเดินทาง'
+          ],
+          correct_index: 0,
+          explanation_th: "'总结' แปลว่า การสรุปภาพรวมหรือประมวลผลข้อคิดเห็น",
+          encouragement: 'จำศัพท์ทักษะการสรุปงานได้อย่างยอดเยี่ยม!'
+        }
+      ],
+      boss_challenge: {
+        scenario_th: 'ในการประชุมประจำไตรมาสของบริษัท ที่ประชุมกำลังถกเถียงอย่างเคร่งเครียดระหว่างฝ่ายที่อยากให้ WFH 100% กับฝ่ายที่อยากให้กลับเข้าออฟฟิศ 100% ในฐานะที่คุณเป็นตัวแทนทีม คุณได้รับมอบหมายให้แสดงความคิดเห็นเพื่อหาทางออก คุณต้องการนำเสนอแนวทาง "Hybrid Work (混合办公)" ที่สัปดาห์ละ 2 วัน WFH และ 3 วันเข้าออฟฟิศ โดยระบุข้อดีเรื่องความยืดหยุ่น (灵活性) ควบคู่กับประสิทธิภาพการสื่อสารต่อหน้า (面对面沟通) และเชิญชวนทุกคนบรรลุฉันทามติร่วมกัน (达成共识) คุณควรกล่าวอย่างไร?',
+        options: [
+          '各位同事，我认为居家办公有很高的灵活性，而办公室面对面沟通更能保证协作效率。因此我建议采用每周两天居家、三天到公司的混合办公方案，既保证效率又保留灵活性，希望能与大家达成共识！ (Gèwèi tóngshì, wǒ rènwéi jūjiā bàngōng yǒu hěn gāo de línghuóxìng, ér bàngōngshì miànduìmiàn gōutōng gèng néng bǎozhèng xiézuò xiàolǜ. Yīncǐ wǒ jiànyì cǎiyòng měi zhōu liǎng tiān jūjiā, sān tiān dào gōngsī de hùnhé bàngōng fāng\'àn, jì bǎozhèng xiàolǜ yòu bǎoliú línghuóxìng, xīwàng néng yǔ dàjiā dáchéng gòngshí!)',
+          '我不想开会，开会太无聊了，我们现在就去吃饭吧！ (Wǒ bù xiǎng kāihuì, kāihuì tài wúliáo le, wǒmen xiànzài jiù qù chīfàn ba!)',
+          '你们吵什么吵，谁不去办公室谁就辞职！ (Nǐmen chǎo shénme chǎo, shéi bú qù bàngōngshì shéi jiù cízhí!)',
+          '服务员，给我再加一份爆米花，这部电影真好看！ (Fúwùyuán, gěi wǒ zài jiā yí fèn bàomǐhuā, zhè bù diànyǐng zhēn hǎokàn!)'
+        ],
+        correct_index: 0,
+        explanation_th: "ตัวเลือกแรกสมบูรณ์แบบที่สุดในการเป็นผู้นำและนักเจรจา: กล่าวทักทายที่ประชุมอย่างสุภาพ วิเคราะห์ข้อดีของ WFH เรื่องความยืดหยุ่น (灵活性) วิเคราะห์ข้อดีของออฟฟิศเรื่องการสื่อสารต่อหน้า (面对面沟通保证效率) เสนอทางออก Hybrid 2+3 และเชิญชวนบรรลุฉันทามติร่วมกัน (达成共识)",
+        encouragement: 'ยินดีด้วยอย่างยิ่ง! คุณผ่านด่าน Boss Challenge การแสดงทัศนะและเจรจาฉันทามติ สื่อสารอย่างมีวาทศิลป์ระดับมืออาชีพ 100%!'
+      },
+      cheer_trophy: {
+        badge_id: 'badge_t2_u24_master',
+        badge_name: 'นักเจรจาและผู้นำฉันทามติขั้นเทพ 🤝💡🎙️',
+        message_th: 'สุดยอดมาก! คุณสำเร็จ Unit 24 แล้ว พร้อมแสดงความคิดเห็น เสนอมุมมองเชิงสร้างสรรค์ ถกเถียงอย่างสุภาพ และนำพาทีมบรรลุฉันทามติได้อย่างงดงาม!',
+        xp_reward: 200
+      }
+    }
+  ]
+};

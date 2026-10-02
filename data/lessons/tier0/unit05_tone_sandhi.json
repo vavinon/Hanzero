@@ -70,8 +70,8 @@
         "en": "Tone Changes of 不 and 一"
       },
       "can_do": {
-        "th": "เปลี่ยนเสียง '不' (bù) เป็น 'bú' เมื่ออยู่หน้าเสียง 4 เช่น 不客气, 不是",
-        "en": "Change bù to bú in front of 4th tones"
+        "th": "เปลี่ยนเสียง '不' (bù) และ '一' (yī) ได้อย่างถูกต้องตามบริบทเสียงวรรณยุกต์ที่ตามหลัง",
+        "en": "Change tone of 不 (bù) and 一 (yī) naturally according to following tones"
       },
       "baby_step_goal": "จำง่ายๆ: เสียง 4 ชนเสียง 4 ไม่ได้! ตัวหน้าต้องหลบขึ้นฟ้าเป็นเสียง 2 ทันที!",
       "tone_rules": [
@@ -95,6 +95,48 @@
               "meaning_th": "ไม่เป็นไร"
             }
           ]
+        },
+        {
+          "name": "一 (yī) + เสียง 4 ➔ yí + เสียง 4",
+          "explanation_th": "คำว่า 一 เมื่ออยู่หน้าคำที่เป็นเสียง 4 จะผันขึ้นเป็นเสียง 2 ทันที",
+          "examples": [
+            {
+              "written": "一共 (yī gòng)",
+              "spoken": "yí gòng",
+              "meaning_th": "รวมทั้งหมด"
+            },
+            {
+              "written": "一样 (yī yàng)",
+              "spoken": "yí yàng",
+              "meaning_th": "เหมือนกัน"
+            },
+            {
+              "written": "一个 (yī gè)",
+              "spoken": "yí gè",
+              "meaning_th": "หนึ่งอัน/หนึ่งคน"
+            }
+          ]
+        },
+        {
+          "name": "一 (yī) + เสียง 1, 2, 3 ➔ yì + เสียง 1, 2, 3",
+          "explanation_th": "คำว่า 一 เมื่ออยู่หน้าคำที่เป็นเสียง 1, 2 หรือ 3 จะผันลงหนักเป็นเสียง 4",
+          "examples": [
+            {
+              "written": "一天 (yī tiān)",
+              "spoken": "yì tiān",
+              "meaning_th": "หนึ่งวัน"
+            },
+            {
+              "written": "一起 (yī qǐ)",
+              "spoken": "yì qǐ",
+              "meaning_th": "ด้วยกัน"
+            },
+            {
+              "written": "一年 (yī nián)",
+              "spoken": "yì nián",
+              "meaning_th": "หนึ่งปี"
+            }
+          ]
         }
       ],
       "quizzes": [
@@ -110,6 +152,19 @@
           "correct_index": 1,
           "explanation_th": "เมื่ออยู่หน้าเสียง 4 (shì) ตัว 不 จะผันเป็นเสียง 2 ออกเสียงว่า 'bú shì'",
           "encouragement": "ถูกเผงเลย! แปลงร่างคล่องแคล่วมาก!"
+        },
+        {
+          "type": "listen_match",
+          "question_th": "เมื่อพูดคำว่า '一共' (ทั้งหมด) คำว่า '一' จะออกเสียงวรรณยุกต์ใด?",
+          "options": [
+            "เสียง 1 (yī)",
+            "เสียง 2 (yí)",
+            "เสียง 3 (yǐ)",
+            "เสียง 4 (yì)"
+          ],
+          "correct_index": 1,
+          "explanation_th": "เมื่อ '一' อยู่หน้าเสียง 4 (gòng) จะผันขึ้นเป็นเสียง 2 ออกเสียงว่า 'yí gòng'",
+          "encouragement": "สุดยอดมาก! กฎของ '一' จำได้แม่นยำแล้ว!"
         }
       ],
       "cheer_trophy": {

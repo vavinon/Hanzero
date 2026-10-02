@@ -12,24 +12,24 @@ gantt
     dateFormat  YYYY-MM-DD
     section Phase 1: Foundations
     Curriculum & Pinyin Master Plan :done, p0, 2026-09-14, 1d
-    Web Foundation, PWA, CJK Font & Audio Resilience :active, p1, 2026-09-15, 2d
+    Web Foundation, PWA, CJK Font & Audio Resilience :done, p1, 2026-09-15, 2d
     section Phase 2: Vertical Slice
-    Unit 1 Golden Template (Vocab, Dialogue, Quiz) :p2, after p1, 3d
-    Silent Mode, Accessible Tones & Pinyin Fading :p3, after p2, 2d
+    Unit 1 Golden Template (Vocab, Dialogue, Quiz) :done, p2, after p1, 3d
+    Silent Mode, Accessible Tones & Pinyin Fading :done, p3, after p2, 2d
     section Phase 3: Gamification
-    Quest Map & Safe Practice Zone :p4, after p3, 3d
-    SM-2 SRS with Daily Cap & IndexedDB Mirror :p5, after p4, 3d
+    Quest Map & Safe Practice Zone :done, p4, after p3, 3d
+    SM-2 SRS with Daily Cap & IndexedDB Mirror :done, p5, after p4, 3d
     section Phase 4: Tier 0 Mastery
-    Welcome Onboarding & Placement Flow :p6, after p5, 2d
-    Panda Tone Coaster, Echo Mic & Shareable Passport :p7, after p6, 4d
+    Welcome Onboarding & Placement Flow :done, p6, after p5, 2d
+    Bunny Tone Coaster, Echo Mic & Shareable Passport :done, p7, after p6, 4d
     section Phase 5: Production Rollout
-    Tier 1 Expansion (Units 2-10) & Pinyin Fading :p8, after p7, 5d
-    Zero-Knowledge Alpha Playtest & Production Launch :p9, after p8, 2d
+    Tier 1 Expansion (Units 2-10) & Pinyin Fading :done, p8, 2026-09-21, 5d
+    Zero-Knowledge Alpha Playtest & Production Launch :done, p9, after p8, 2d
     section Phase 6: Authoring Studio
-    Web-based Lesson Builder & Pedagogical Linters :p10, after p9, 4d
-    Git Hand-off & 1-Click GitHub PR Engine :p11, after p10, 2d
+    Web-based Lesson Builder & Pedagogical Linters :done, p10, after p9, 4d
+    Git Hand-off & 1-Click GitHub PR Engine :done, p11, after p10, 2d
     section Phase 7: Tier 2 Traveler
-    Branching Dialogues & Grammar Slot Sandboxes :p12, after p11, 4d
+    Branching Dialogues & Grammar Slot Sandboxes :active, p12, after p11, 4d
     Units 11-25 Rollout & HSR Metro Quest Map :p13, after p12, 6d
     section Phase 8: Tier 3-4 Immersion
     Smart Immersion Reader & Intl.Segmenter :p14, after p13, 5d
@@ -37,15 +37,16 @@ gantt
 ```
 
 > 📋 **แผนปฏิบัติการและเกณฑ์การตรวจรับงานอย่างละเอียด (Actionable Execution Plans):**  
-> ติดตาม Checklist รายวันและ Quality Gates ได้ใน [docs/plan/](file:///c:/DevProjects/hanzero/hanzero/docs/plan/README.md) โดยแบ่งออกเป็น 8 เฟสการส่งมอบ
+> ติดตาม Checklist รายวันและ Quality Gates ได้ใน [docs/plan/](../plan/README.md) โดยแบ่งออกเป็น 8 เฟสการส่งมอบ
 
 ---
 
 ## 📌 รายละเอียดของแต่ละระยะ
 
 ### 🏁 Phase 1: Web Foundation, Design System, PWA & Resilience Engines
+> **สถานะ:** `DONE` ✅ | [phase_01_web_foundation_engines.md](../plan/phase_01_web_foundation_engines.md)
+
 **เป้าหมาย:** สร้างรากฐาน Web Application ที่รวดเร็ว ลื่นไหล สไตล์ Modern Oriental พร้อมติดตั้ง PWA เพื่อป้องกัน Safari ล้างข้อมูล, วางกลยุทธ์ Font Subsetting ป้องกันเว็บหน่วง และระบบเสียงสองประสานที่มี Static Audio Pack สำรองสำหรับ Tier 0
-* [phase_01_web_foundation_engines.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_01_web_foundation_engines.md)
 * Scaffolding: Vite + React + TypeScript + Vitest + ESLint
 * **PWA & Storage Mirror:** ติดตั้ง `vite-plugin-pwa` พร้อม IndexedDB Secondary Mirror รับมือ Safari 7-day inactivity wipe
 * **CJK Font Subsetting Strategy:** ควบคุมขนาดฟอนต์ `LXGW WenKai` / `Noto Sans SC` ไม่เกิน 300–500 KB ป้องกัน FOIT/FOUT
@@ -56,8 +57,9 @@ gantt
 ---
 
 ### 💻 Phase 2: Unit 1 Complete Lesson Experience (Vertical Slice)
+> **สถานะ:** `DONE` ✅ | [phase_02_unit1_lesson_experience.md](../plan/phase_02_unit1_lesson_experience.md)
+
 **เป้าหมาย:** สร้างบทเรียนแรก Unit 1 เพื่อเป็น **Engineering Vertical Slice & UX Golden Template** ทดสอบการผสานชิ้นส่วน Flashcard, Dialogue, Grammar และ Quiz พร้อมระบบค่อยๆ ซ่อนพินอิน (Progressive Pinyin Fading)
-* [phase_02_unit1_lesson_experience.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_02_unit1_lesson_experience.md)
 * บัตรคำศัพท์ 3 ภาษา พร้อมปุ่ม Stroke Zoom Modal ขยายดูเส้นขีดในตาราง 120px
 * เครื่องเล่นบทสนทนา Interactive Dialogue Player แชตสไตล์โมเดิร์น
 * **Progressive Pinyin Fading:** ระบบสลับซ่อนพินอินหรือแตะเพื่อแอบดู เพื่อฝึกอ่านตัวอักษรจีนจริง
@@ -67,8 +69,9 @@ gantt
 ---
 
 ### 🎮 Phase 3: Gamification, Safe Practice Zone, Daily Goals & SRS Persistence
+> **สถานะ:** `DONE` ✅ | [phase_03_gamification_srs.md](../plan/phase_03_gamification_srs.md)
+
 **เป้าหมาย:** สร้างแรงจูงใจให้ผู้เรียนกลับมาเรียนทุกวัน กำหนดเป้าหมายรายวัน และทบทวนอย่างมีประสิทธิภาพโดยป้องกันอาการ "การบ้านทับถม (SRS Bankruptcy)"
-* [phase_03_gamification_srs.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_03_gamification_srs.md)
 * แผนที่เส้นทางการเรียนรู้ Quest Map สลับดูได้ทั้ง Tier 0 และ Tier 1
 * **Safe Practice Zone:** ปิดการหักหัวใจในโหมดฝึกฟังพินอินและ SRS Flashcards เพื่อถนอมผู้เรียนมือใหม่
 * ระบบฟื้นฟูหัวใจ Practice-to-Earn (ฝึกคำศัพท์ถูก 5 คำ = 1 หัวใจ)
@@ -81,11 +84,12 @@ gantt
 ---
 
 ### 🌱 Phase 4: Tier 0 Pinyin Mastery, Echo Mic & Onboarding Flow
+> **สถานะ:** `DONE` ✅ | [phase_04_tier0_pinyin_mastery.md](../plan/phase_04_tier0_pinyin_mastery.md)
+
 **เป้าหมาย:** เปิดประตูต้อนรับผู้เรียนเริ่มต้นจากศูนย์เด็ดขาด ด้วยเส้นทาง Onboarding ที่เข้าใจง่าย ระบบเทียบเสียงพูดตนเอง และการ์ดแชร์ความสำเร็จ
-* [phase_04_tier0_pinyin_mastery.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_04_tier0_pinyin_mastery.md)
 * หน้าต่างต้อนรับ `WelcomeModal.tsx` นำทางเลือกระหว่าง "เริ่มจาก 0" กับ "ข้ามไปบทสนทนา"
 * บรรจุบทเรียน Tier 0 ทั้ง 6 Units (รวมสระผสมและสระนาสิก) พร้อมระบบภาพช่วยจำรูปปากและ Static Audio Pack
-* มินิเกม Panda Tone Coaster ฝึกลากเส้นวรรณยุกต์ 4 เสียง (Safe Zone ไม่หักหัวใจ)
+* มินิเกม Bunny Tone Coaster ฝึกลากเส้นวรรณยุกต์ 4 เสียง (Safe Zone ไม่หักหัวใจ)
 * **Client-side Echo Mic (Shadowing):** บันทึกเสียงผู้เรียน 2 วินาทีแล้วเล่นเทียบเสียง Native ทันที
 * บอร์ดเปรียบเทียบเสียงคู่ก้ำกึ่ง (Minimal Pairs)
 * ด่านทดสอบ Boss Quest ปลดล็อกพร้อม **"Hanzero Passport Card"** บันทึกเป็นรูปแชร์ลง Social Media ได้ทันที
@@ -93,8 +97,9 @@ gantt
 ---
 
 ### 🌿 Phase 5: Tier 1 Expansion, Alpha Playtest & Production Launch
+> **สถานะ:** `DONE` ✅ | [phase_05_tier1_content_rollout.md](../plan/phase_05_tier1_content_rollout.md)
+
 **เป้าหมาย:** ขยายเนื้อหา Tier 1 ครบถ้วนทั้ง 10 Units (40 บทย่อย) ดำเนินการทดสอบกับผู้เรียนจริง (Zero-Knowledge Alpha Playtest) และเปิดตัวสู่ผู้ใช้จริง
-* [phase_05_tier1_content_rollout.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_05_tier1_content_rollout.md)
 * ปล่อยเนื้อหา Batch A, B, C ตามลำดับ พร้อมกฎ Interleaving 20%
 * สคริปต์ตรวจความถูกต้องของเนื้อหาอัตโนมัติ (`validateCurriculum.ts`)
 * **Zero-Knowledge Alpha Playtest:** ทดสอบการใช้งานจริงกับกลุ่มผู้ใช้คนไทยที่ไม่มีพื้นฐานภาษาจีน เพื่อเก็บ Feedback ปรับปรุง UX
@@ -105,8 +110,10 @@ gantt
 ---
 
 ### 🛠️ Phase 6: Content Authoring Studio & Community Contribution
+> **สถานะ:** `DONE` ✅ | [phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
+
 **เป้าหมาย:** สร้างเครื่องมือจัดการและผลิตเนื้อหาผ่าน Web GUI แบบ Zero-Backend เพื่อปลดล็อกคอขวดของทีม พัฒนาระบบ Linter ตรวจจับความผิดพลาดทางภาษาศาสตร์ และเชื่อมต่อ GitHub Pull Request
-* [phase_06_content_authoring_studio.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_06_content_authoring_studio.md)
+* [phase_06_content_authoring_studio.md](../plan/phase_06_content_authoring_studio.md)
 * **Visual Lesson Studio GUI (`/studio`):** หน้าต่างสร้างการ์ดคำศัพท์ บทสนทนา และควิซแบบเห็นตัวอย่างทันที (Live Phone Preview) รองรับการสร้างเนื้อหา 3 ภาษา (中-泰-英)
 * **Pedagogical Linters (เครื่องยนต์ตรวจจับความถูกต้องทางภาษาศาสตร์):**
   * **Auto Pinyin Tone Placer:** แปลงตัวเลขพินอินเป็นสัญลักษณ์วรรณยุกต์มาตรฐานตามตำแหน่งสระสากล (`ni3hao3` ➔ `nǐhǎo`)
@@ -119,8 +126,10 @@ gantt
 ---
 
 ### 🎋 Phase 7: Tier 2 Traveler Rollout & HSK 3-4 Quest Map
+> **สถานะ:** `DONE` ✅ | [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
+
 **เป้าหมาย:** ยกระดับสู่การใช้ชีวิตจริงและการท่องเที่ยวในจีน (15 Units / 60 บทเรียน) พร้อมรองรับไวยากรณ์ขั้นกลางที่ซับซ้อนและการจำลองบทสนทนาแตกกิ่ง
-* [phase_07_tier2_traveler_quest.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_07_tier2_traveler_quest.md)
+* [phase_07_tier2_traveler_quest.md](../plan/phase_07_tier2_traveler_quest.md)
 * **Branching Dialogues (`InteractiveScenarioPlayer.tsx`):** บทสนทนาแตกกิ่งกับ NPC พร้อมแถบความพึงพอใจและมารยาททางสังคม (Patience Bar) และเกร็ดวัฒนธรรม
 * **Grammar Slot Sandboxes (`GrammarSlotBuilder.tsx`):** วิดเจ็ตลากวางบล็อกประโยคโครงสร้างซับซ้อน:
   * ประโยค 把 (Ba-construction): $[S] + 把 + [O] + [V] + [Result/Direction]$
@@ -134,8 +143,9 @@ gantt
 ---
 
 ### 🐉 Phase 8: Tier 3-4 Advanced Immersion & Fluency Tools
+> **สถานะ:** `READY_FOR_EXECUTION` 🚀 | [phase_08_tier3_4_advanced_immersion.md](../plan/phase_08_tier3_4_advanced_immersion.md)
 **เป้าหมาย:** เสริมสร้างความคล่องตัวระดับมืออาชีพ วัฒนธรรม วรรณกรรม และการทำงาน (Units 26–57) พร้อมเครื่องมือช่วยเสพสื่อจีนจริง
-* [phase_08_tier3_4_advanced_immersion.md](file:///c:/DevProjects/hanzero/hanzero/docs/plan/phase_08_tier3_4_advanced_immersion.md)
+* [phase_08_tier3_4_advanced_immersion.md](../plan/phase_08_tier3_4_advanced_immersion.md)
 * **Smart Immersion Reader:** เครื่องมืออ่านบทความจีนพร้อมระบบตัดคำ Client-side ด้วย `Intl.Segmenter` และปุ่มกดเซฟคำศัพท์เข้า SRS
 * **Idiom (成语) Dilemma Engine:** เรียนรู้ที่มาสุภาษิตจีนผ่านมินิสตอรี่ และแบบฝึกหัดแก้ปัญหาทางธุรกิจ
 * **Native Speed Audio Ladder:** ระบบฝึกฟังความเร็ว 0.8x ➔ 1.0x ➔ 1.25x ผสมเสียงบรรยากาศจำลอง พร้อมโหมด Commute Podcast

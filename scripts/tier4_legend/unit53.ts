@@ -1,0 +1,900 @@
+/**
+ * scripts/tier4_legend/unit53.ts
+ * Unit 53: 中国近现代文学选读 (Modern Chinese Literature)
+ * Tier 4 Legend - Unit 8 (L-08)
+ * Strict typing, zero 'any', simplified Chinese only, tone sandhi compliant, interleaving >= 20%.
+ */
+
+export const unit53Data = {
+  unit_id: 'tier4_u53',
+  tier: 4,
+  unit_number: 53,
+  title: {
+    zh: '中国近现代文学选读',
+    th: 'วรรณคดีจีนสมัยใหม่และร่วมสมัยคัดสรร',
+    en: 'Selected Readings in Modern & Contemporary Chinese Literature'
+  },
+  description: 'ศึกษาผลงานชิ้นเอกของปรมาจารย์วรรณกรรมจีนสมัยใหม่ เช่น หลู่ซวิ่น เหลาเส่อ ปาจิน เหมาตุ้น พร้อมวิเคราะห์จิตวิญญาณแห่งการตื่นรู้ คุณค่าความเป็นมนุษย์ และการสะท้อนยุคสมัย',
+  lessons: [
+    {
+      lesson_id: 't4_u53_l01',
+      lesson_number: 1,
+      title: {
+        zh: '呐喊与觉醒：鲁迅的批判精神',
+        th: 'เสียงกู่ก้องและการตื่นรู้: จิตวิญญาณแห่งการวิพากษ์ของหลู่ซวิ่น (鲁迅)',
+        en: 'A Call to Arms: Lu Xun & The Spirit of Social Critique'
+      },
+      can_do: {
+        th: 'อธิบายวรรณคดีของหลู่ซวิ่น และใช้คำศัพท์ เช่น 觉醒, 呐喊, 批判, 针砭时弊, 骨气 ในการวิเคราะห์ประเด็นสังคมได้อย่างลึกซึ้ง',
+        en: 'Analyze Lu Xun\'s works and master terms: Awakening, Call to Arms, Critique, Social Diagnosis, and Moral Backbone'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำคำว่า 觉醒, 批判 และสำนวน 针砭时弊 ไปใช้เขียนบทวิจารณ์วรรณกรรม!',
+      vocabulary: [
+        {
+          id: 'hsk4_5301',
+          hanzi: '觉醒',
+          pinyin: 'juéxǐng',
+          display_pinyin: 'juéxǐng',
+          pinyin_tone: 'jue2xing3',
+          meaning_th: 'การตื่นรู้ / การรู้แจ้งเห็นจริง (Awakening)',
+          meaning_en: 'awakening / awaken to the truth',
+          radical: '见',
+          radical_name_th: 'หมวดมองเห็น (见字旁)',
+          stroke_count: 21,
+          mnemonic: 'มองเห็นความจริงแจ้งประจักษ์ (觉) ตื่นขึ้นจากความมืดมน (醒) = ตื่นรู้',
+          kid_mnemonic: 'ลืมตาตื่นขึ้นมาพบแสงอรุณยามเช้าอันสว่างไสว = 觉醒',
+          body_gesture: 'ยกสองมือแตะขมับแล้วกางออกพร้อมสูดหายใจลึกแสดงการตื่นรู้'
+        },
+        {
+          id: 'hsk4_5302',
+          hanzi: '呐喊',
+          pinyin: 'nàhǎn',
+          display_pinyin: 'nàhǎn',
+          pinyin_tone: 'na4han3',
+          meaning_th: 'การตะโกนกู่ก้องปลุกใจ (ชื่อผลงานรวมเรื่องสั้นชิ้นเอกของหลู่ซวิ่น)',
+          meaning_en: 'outcry / shout / call to arms (famous work of Lu Xun)',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 16,
+          mnemonic: 'เปล่งเสียงจากริมฝีปาก (呐) ตะโกนกู่ก้องด้วยความกล้าหาญ (喊) = กู่ร้องตะโกนปลุกใจ',
+          kid_mnemonic: 'ชูกำปั้นตะโกนกู่ก้องเสียงดังบนยอดเขา = 呐喊',
+          body_gesture: 'ป้องสองมือรอบปากทำท่าตะโกนกู่ก้องสุดเสียง'
+        },
+        {
+          id: 'hsk4_5303',
+          hanzi: '批判',
+          pinyin: 'pīpàn',
+          display_pinyin: 'pīpàn',
+          pinyin_tone: 'pi1pan4',
+          meaning_th: 'การวิพากษ์วิจารณ์อย่างสร้างสรรค์และลึกซึ้ง (Critique / Criticism)',
+          meaning_en: 'critique / criticize / critical thinking',
+          radical: '扌',
+          radical_name_th: 'หมวดมือ (提手旁)',
+          stroke_count: 14,
+          mnemonic: 'ใช้มือชี้จุดบกพร่อง (批) แยกแยะตัดสินอย่างเที่ยงธรรม (判) = วิพากษ์วิจารณ์',
+          kid_mnemonic: 'คุณครูขีดเส้นใต้ประเด็นสำคัญในรายงานเพื่อช่วยแนะนำให้แก้ไข = 批判',
+          body_gesture: 'ใช้นิ้วชี้มือขวาเคาะเบาๆ ลงบนฝ่ามือซ้ายแสดงการวิเคราะห์แยกแยะ'
+        },
+        {
+          id: 'hsk4_5304',
+          hanzi: '针砭时弊',
+          pinyin: 'zhēnbiānshíbì',
+          display_pinyin: 'zhēnbiānshíbì',
+          pinyin_tone: 'zhen1bian1shi2bi4',
+          meaning_th: 'ชี้ตรงจุดเพื่อเยียวยาปัญหาสังคม (เปรียบดั่งการฝังเข็มรักษาโรคร้ายแห่งยุคสมัย)',
+          meaning_en: 'point out the defects of the times / criticize current social ills',
+          radical: '钅',
+          radical_name_th: 'หมวดทองคำโลหะ (金字旁)',
+          stroke_count: 36,
+          mnemonic: 'เข็มโลหะแหลมคม (针) แทงลงตรงจุดโรคร้าย (砭) ของกาลเวลาและสังคม (时弊) = ชี้จุดโรคสังคม',
+          kid_mnemonic: 'หมอฝังเข็มแทงเข็มรักษาคนไข้ให้หายปวดเมื่อย = 针砭时弊',
+          body_gesture: 'ใช้นิ้วชี้และนิ้วโป้งจับเข็มจิ้มลงไปอย่างแม่นยำ'
+        },
+        {
+          id: 'hsk4_5305',
+          hanzi: '骨气',
+          pinyin: 'gǔqì',
+          display_pinyin: 'gǔqì',
+          pinyin_tone: 'gu3qi4',
+          meaning_th: 'กระดูกสันหลังแห่งศักดิ์ศรี / ความทรนงไม่ยอมก้มหัวให้อำนาจอยุติธรรม (Moral integrity)',
+          meaning_en: 'moral integrity / backbone / unyielding character',
+          radical: '骨',
+          radical_name_th: 'หมวดกระดูก (骨字旁)',
+          stroke_count: 13,
+          mnemonic: 'โครงกระดูกที่ตั้งตรงแข็งแกร่ง (骨) หลอมรวมกับพลังชีวิตอันบริสุทธิ์ (气) = ศักดิ์ศรีความทรนง',
+          kid_mnemonic: 'ต้นไผ่ลำต้นตรงไม่ยอมหักโค่นแม้ลมหนาวพัดกระหน่ำ = 骨气',
+          body_gesture: 'ยืนตัวตรงอกผายไหล่ผึ่งแสดงความทรนงในศักดิ์ศรี'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 针砭时弊 (zhēnbiānshíbì)',
+        description_th: 'zhēn (เสียง 1) biān (เสียง 1) shí (เสียง 2) bì (เสียง 4)',
+        example: '以锋利的笔触针砭时弊 (Yǐ fēnglì de bǐchù zhēnbiān shíbì)',
+        fun_metaphor: 'คำว่า 砭 อ่านว่า biān (เสียง 1) หมายถึง หินฝังเข็มโบราณ',
+        reassurance: 'สำนวน 4 ตัวอักษรระดับสูงที่มักใช้ชมเชยนักเขียนและสื่อมวลชนน้ำดี'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการวิจารณ์วรรณกรรม: 以犀利的笔触……，深刻针砭时弊',
+        formula: '鲁迅先生以犀利的笔锋呐喊唤醒民众，深刻针砭时弊，展现了坚定的民族骨气',
+        explanation_th: 'ใช้ในการเขียนบทวิจารณ์วรรณคดีและวิเคราะห์เจตนารมณ์ของนักเขียน',
+        patterns: [
+          {
+            formula: '发出时代呐喊，唤醒社会大众。',
+            zh: '《狂人日记》与《呐喊》不仅奠定了现代白话文学的基石，更为风雨如晦的中国点燃了思想觉醒的火炬。',
+            pinyin: '"Kuángrén Rìjì" yǔ "Nàhǎn" bùjǐn diàndìng le xiàndài báihuà wénxué de jīshí, gèng wèi fēngyǔrúhuì de Zhōngguó diǎnrán le sīxiǎng juéxǐng de huǒjù.',
+            th: '《บันทึกประจำวันของคนบ้า》 และ 《เสียงกู่ก้อง》 มิเพียงวางรากฐานให้แก่วรรณกรรมภาษาพูดสมัยใหม่ แต่ยังจุดคบเพลิงแห่งการตื่นรู้ทางความคิดให้แก่ประเทศจีนในยุคมืดมน',
+            en: '"A Madman\'s Diary" and "Call to Arms" not only laid the cornerstone of modern vernacular literature, but also ignited the torch of intellectual awakening for China in turbulent times.'
+          },
+          {
+            formula: '深刻针砭时弊，挺起精神脊梁。',
+            zh: '鲁迅的杂文如同一柄解剖社会的投枪与匕首，无情针砭时弊，彰显了中国知识分子挺拔的骨气。',
+            pinyin: 'Lǔ Xùn de záwén rútóng yībǐng jiěpōu shèhuì de tóuqiāng yǔ bǐshǒu, wúqíng zhēnbiān shíbì, zhāngxiǎn le Zhōngguó zhīshifènzǐ tǐngbá de gǔqì.',
+            th: 'ความเรียงปกิณกะของหลู่ซวิ่นเปรียบเสมือนหอกและกริชที่ชำแหละสังคม ชี้ตรงจุดโรคร้ายแห่งยุคสมัยอย่างไม่ปรานี สะท้อนถึงกระดูกสันหลังแห่งศักดิ์ศรีอันสง่างามของปัญญาชนจีน',
+            en: 'Lu Xun\'s essays were like javelins and daggers dissecting society, relentlessly diagnosing social ills and demonstrating the unyielding backbone of Chinese intellectuals.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '文学评论家 (Literary Critic) 🖋️',
+          zh: '各位读者，谈及中国现代文学的开山宗师，鲁迅先生始终是一座不可逾越的思想丰碑。',
+          pinyin: 'Gèwèi dúzhě, tánjí Zhōngguó xiàndài wénxué de kāishān zōngshī, Lǔ Xùn xiānsheng shǐzhōng shì yī zuò bùkě yúyuè de sīxiǎng fēngbēi.',
+          th: 'ผู้อ่านทุกท่านครับ เมื่อเอ่ยถึงปรมาจารย์ผู้บุกเบิกวรรณกรรมจีนสมัยใหม่ ท่านหลู่ซวิ่นคือหลักศิลาจารึกทางความคิดอันยิ่งใหญ่ที่ไม่มีผู้ใดข้ามผ่านได้ครับ',
+          en: 'Readers, speaking of the founding master of modern Chinese literature, Mr. Lu Xun has always been an insurmountable ideological monument.',
+          audio_trigger: 't4_u53_l01_d01'
+        },
+        {
+          speaker: '青年作家 (Young Writer) 📖',
+          zh: '是的，他的名句“横眉冷对千夫指，俯首甘为孺子牛”，生动诠释了什么叫作真正的文人骨气与赤子之心。',
+          pinyin: 'Shì de, tā de míngjù "Héngméi lěngduì qiānfūzhǐ, fǔshǒu gānwéi rúzǐniú", shēngdòng quánshì le shénme jiàozuò zhēnzhèng de wénrén gǔqì yǔ chìzǐ zhī xīn.',
+          th: 'ใช่ครับ วรรคทองของท่านที่ว่า "คิ้วขมวดเย็นชากราดมองคำสบประมาทของคนนับพัน ก้มหัวยอมเป็นวัวรับใช้ผู้บริสุทธิ์ด้วยความเต็มใจ" อธิบายความหมายของศักดิ์ศรีกวีและหัวใจบริสุทธิ์ได้อย่างมีชีวิตชีวาครับ',
+          en: 'Yes, his famous couplet "Fierce-browed, I coolly defy a thousand pointing fingers; head bowed, like a willing ox I serve the children" vividly interprets true literary integrity and devotion.',
+          audio_trigger: 't4_u53_l01_d02'
+        },
+        {
+          speaker: '文学评论家 (Literary Critic) 🖋️',
+          zh: '在风雨如晦的旧中国，他弃医从文，毅然以笔为旗，通过《呐喊》与《彷徨》呼唤大众灵魂的觉醒。',
+          pinyin: 'Zài fēngyǔrúhuì de jiù Zhōngguó, tā qì yī cóng wén, yìrán yǐ bǐ wéi qí, tōngguò "Nàhǎn" yǔ "Pánghuáng" hūhuàn dàzhòng línghún de juéxǐng.',
+          th: 'ในแผ่นดินจีนยุคเก่าที่มืดมน ท่านละทิ้งวิชาแพทย์หันมาจับปากกา นำพู่กันมาเป็นธงรบ เรียกร้องการตื่นรู้ของจิตวิญญาณมหาชนผ่านผลงาน 《เสียงกู่ก้อง》 และ 《ลังเลเคว้งคว้าง》',
+          en: 'In dark old China, he abandoned medicine for literature, resolutely using his pen as a banner to call for the awakening of the public\'s soul through "Call to Arms" and "Wandering".',
+          audio_trigger: 't4_u53_l01_d03'
+        },
+        {
+          speaker: '青年作家 (Young Writer) 📖',
+          zh: '今天我们重温经典，不仅要学习他针砭时弊的锐利目光，更要继承他忧国忧民、实事求是的求索精神！',
+          pinyin: 'Jīntiān wǒmen chóngwēn jīngdiǎn, bùjǐn yào xuéxí tā zhēnbiān shíbì de ruìlì mùguāng, gèng yào jìchéng tā yōuguóyōumín, shíshìqiúshì de qiúsuǒ jīngshén!',
+          th: 'วันนี้พวกเราทบทวนวรรณกรรมคลาสสิก มิเพียงเพื่อเรียนรู้สายตาอันแหลมคมในการชี้จุดวิกฤตสังคมของท่านเท่านั้น แต่ยังเพื่อสืบทอดจิตวิญญาณแห่งการรักชาติห่วงราษฎรและการยึดมั่นในความจริงครับ!',
+          en: 'Revisiting classics today, we should not only learn his sharp gaze in diagnosing social ills, but even more inherit his spirit of patriotism, public concern, and seeking truth from facts!',
+          audio_trigger: 't4_u53_l01_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ผลงานรวมเรื่องสั้นเล่มแรกของ หลู่ซวิ่น (鲁迅) ที่ใช้ภาษาพูดสมัยใหม่ (白话文) มีชื่อว่าอะไร?',
+          options: [
+            '呐喊 (Nàhǎn - เสียงกู่ก้อง)',
+            '朝花夕拾 (Zhāohuāxīshí - ดอกไม้ยามเช้าเก็บยามเย็น)',
+            '野草 (Yěcǎo - หญ้าป่า)',
+            '坟 (Fén - สุสาน)'
+          ],
+          correct_index: 0,
+          explanation_th: '《呐喊》 (Call to Arms) ตีพิมพ์ในปี 1923 เป็นรวมเรื่องสั้นชิ้นเอกของหลู่ซวิ่นที่มีเรื่องดังเช่น "狂人日记" และ "阿Q正传"',
+          encouragement: 'ยอดเยี่ยมมาก! รู้จักหมุดหมายสำคัญของประวัติวรรณคดีจีน!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ชี้ตรงจุดโรคสังคม ปลุกการตื่นรู้ของมวลชน"',
+          tokens: ['唤醒大众觉醒', '深刻针砭时弊'],
+          correct_sequence: ['深刻针砭时弊', '唤醒大众觉醒'],
+          pinyin: 'Shēnkè zhēnbiān shíbì, huànxǐng dàzhòng juéxǐng.',
+          meaning_th: 'ชี้ตรงจุดโรคสังคม ปลุกการตื่นรู้ของมวลชน',
+          explanation_th: 'การวิพากษ์ (深刻针砭时弊) + ผลลัพธ์การตื่นรู้ (唤醒大众觉醒)',
+          encouragement: 'จัดประโยควิจารณ์วรรณกรรมได้อย่างเฉียบคม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "骨" (gǔ - กระดูก) ใน "骨气" สื่อถึงคุณลักษณะทางจิตใจแบบใดในวัฒนธรรมจีน?',
+          options: [
+            'ความเข้มแข็งทรนง ไม่ยอมก้มหัวให้ความอยุติธรรม มีจุดยืนแห่งศักดิ์ศรีที่มั่นคง',
+            'ความอ่อนแอขี้ขลาด',
+            'ความเฉื่อยชาไม่สนใจใคร',
+            'ความอยากร่ำรวย'
+          ],
+          correct_index: 0,
+          explanation_th: '"骨气" คือ กระดูกสันหลังแห่งศักดิ์ศรีและความซื่อตรง ไม่ยอมสยบต่ออำนาจมืดหรือเงินตรา',
+          encouragement: 'เข้าใจแก่นจิตวิญญาณแห่งศักดิ์ศรีอย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'วรรคทอง "横眉冷对千夫指，俯首甘为孺子牛" สื่อถึงท่าทีและอุดมการณ์ใดของหลู่ซวิ่น?',
+          options: [
+            'ความเด็ดเดี่ยวไม่ยอมก้มหัวให้ศัตรู แต่อุทิศตนรับใช้ประชาชนและคนรุ่นใหม่อย่างเต็มใจ',
+            'การชอบเลี้ยงวัวในชนบท',
+            'การกลัวคนชี้หน้าด่า',
+            'การไม่อยากทำงานหนัก'
+          ],
+          correct_index: 0,
+          explanation_th: 'เป็นบทกวีสะท้อนจุดยืนของหลู่ซวิ่น: ต่อหน้าอิทธิพลมืดท่านไม่ยอมถอย แต่ต่อหน้าประชาชนและคนรุ่นใหม่ท่านยอมก้มกายรับใช้ด้วยความรัก',
+          encouragement: 'เข้าใจบทกวีอันเป็นอมตะของหลู่ซวิ่นได้อย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในบทความวิจารณ์วรรณกรรมเนื่องในวาระรำลึกหลู่ซวิ่น ประโยคใดสรุปคุณูปการและจิตวิญญาณของท่านได้อย่างสมบูรณ์แบบที่สุด?',
+        options: [
+          '鲁迅先生以笔为刃，在风雨如晦的时代发出惊天动地的历史呐喊，深刻针砭时弊，挺立起中华民族不屈的精神骨气！',
+          '诗仙李白豪迈浪漫，乘风破浪直挂云帆济沧海。',
+          '诗圣杜甫忧国忧民沉郁顿挫，立下会当凌绝顶之志，润物细无声。',
+          '苏轼豁达淡然面对风雨，千里共婵娟，王安石不畏浮云最高层。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "以笔为刃", "历史呐喊", "针砭时弊" และ "精神骨气" ได้อย่างทรงพลัง ซาบซึ้ง และสมเกียรติมหาบุรุษแห่งวรรณกรรม'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้นำจิตวิญญาณแห่งการตื่นรู้ (Pioneer of Ideological Awakening)',
+        message_th: 'ยินดีด้วย! คุณเข้าใจวรรณกรรมของหลู่ซวิ่น และคำว่า 觉醒, 呐喊, 批判, 骨气 พร้อมร่วมสืบทอดจิตวิญญาณแห่งการแสวงหาความจริง!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u53_l02',
+      lesson_number: 2,
+      title: {
+        zh: '市井温情：老舍笔下的京味与平民命运',
+        th: 'ไออุ่นแห่งวิถีชาวบ้าน: กลิ่นอายเป่ยผิง (京味) และชะตากรรมสามัญชนของเหลาเส่อ (老舍)',
+        en: 'Beijing Flavor: Lao She & Common People\'s Destiny'
+      },
+      can_do: {
+        th: 'อธิบายวรรณคดีของเหลาเส่อ เช่น 骆驼祥子, 茶馆 และใช้คำศัพท์ เช่น 京味, 市井, 幽默, 苍凉 ในการวิเคราะห์วรรณกรรมสะท้อนชีวิตได้',
+        en: 'Analyze Lao She\'s realism and master vocabulary: Beijing Flavor, Commoner Life, Humor, and Bleak Pathos'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำคำว่า 京味, 市井 และ 苍凉 ไปใช้วิเคราะห์ผลงาน 《骆驼祥子》 และ 《茶馆》!',
+      vocabulary: [
+        {
+          id: 'hsk4_5306',
+          hanzi: '京味',
+          pinyin: 'jīngwèi',
+          display_pinyin: 'jīngwèi',
+          pinyin_tone: 'jing1wei4',
+          meaning_th: 'กลิ่นอายแบบปักกิ่งดั้งเดิม (ทั้งภาษา สำเนียง วัฒนธรรมตรอกซอกซอยหูท่ง)',
+          meaning_en: 'Beijing flavor / Beijing regional culture and dialect style',
+          radical: '亠',
+          radical_name_th: 'หมวดหัวหมวก (点横头)',
+          stroke_count: 16,
+          mnemonic: 'เมืองหลวงปักกิ่ง (京) อบอวลไปด้วยรสสัมผัสและกลิ่นอายวัฒนธรรม (味) = กลิ่นอายปักกิ่ง',
+          kid_mnemonic: 'เดินในตรอกหูท่งได้ยินเสียงคนขายน้ำเต้าเคลือบน้ำตาลและสำเนียงปักกิ่งไพเราะ = 京味',
+          body_gesture: 'ยกถ้วยน้ำชาขึ้นจิบเบาๆ พร้อมรอยยิ้มอารมณ์ดีแบบชาวปักกิ่ง'
+        },
+        {
+          id: 'hsk4_5307',
+          hanzi: '市井',
+          pinyin: 'shìjǐng',
+          display_pinyin: 'shìjǐng',
+          pinyin_tone: 'shi4jing3',
+          meaning_th: 'วิถีชีวิตชาวบ้านในตลาด / ย่านชุมชนคนธรรมดา (Common people / Street life)',
+          meaning_en: 'marketplace / street life / common folks / townspeople',
+          radical: '巾',
+          radical_name_th: 'หมวดผ้า (巾字底)',
+          stroke_count: 9,
+          mnemonic: 'ตลาดค้าขายสินค้า (市) รอบบ่อน้ำชุมชนที่ชาวบ้านมาตักน้ำคุยกัน (井) = วิถีชาวบ้าน',
+          kid_mnemonic: 'เด็กๆ วิ่งเล่นรอบบ่อน้ำในตลาดที่มีคนขายของครึกครื้น = 市井',
+          body_gesture: 'สองมือผายออกด้านหน้าแสดงภาพตลาดที่มีผู้คนเดินขวักไขว่'
+        },
+        {
+          id: 'hsk4_5308',
+          hanzi: '幽默',
+          pinyin: 'yōumò',
+          display_pinyin: 'yōumò',
+          pinyin_tone: 'you1mo4',
+          meaning_th: 'อารมณ์ขัน / มุกตลกที่แฝงข้อคิด (Humor / แปลทับศัพท์โดย หลินอวี่ถัง)',
+          meaning_en: 'humor / humorous',
+          radical: '幺',
+          radical_name_th: 'หมวดเส้นด้ายเล็ก (幺字底)',
+          stroke_count: 23,
+          mnemonic: 'ลึกซึ้งเงียบสงบ (幽) นิ่งเงียบไร้เสียงแต่อมยิ้ม (默) = อารมณ์ขันอันลึกซึ้ง',
+          kid_mnemonic: 'เล่าเรื่องตลกให้เพื่อนฟังแล้วทุกคนหัวเราะคิกคักด้วยความสุข = 幽默',
+          body_gesture: 'เอามือปิดปากแล้วยิ้มตาหยีอย่างมีอารมณ์ขัน'
+        },
+        {
+          id: 'hsk4_5309',
+          hanzi: '苍凉',
+          pinyin: 'cāngliáng',
+          display_pinyin: 'cāngliáng',
+          pinyin_tone: 'cang1liang2',
+          meaning_th: 'เวิ้งว้างเศร้าสลด / ความเปล่าเปลี่ยวสะเทือนใจในชะตากรรม (Bleak / Desolate pathos)',
+          meaning_en: 'bleak / desolate / desolate pathos of destiny',
+          radical: '艹',
+          radical_name_th: 'หมวดหญ้า (草字头)',
+          stroke_count: 20,
+          mnemonic: 'ผืนฟ้าสีเทาซีด (苍) สายลมหนาวเย็นยะเยือก (凉) = เวิ้งว้างสะเทือนใจ',
+          kid_mnemonic: 'ยืนมองใบไม้แห้งปลิวตามลมหนาวในฤดูใบไม้ร่วง = 苍凉',
+          body_gesture: 'กระชับเสื้อหนาวเข้าหาตัวพร้อมทอดสายตามองความเวิ้งว้าง'
+        },
+        {
+          id: 'hsk4_5310',
+          hanzi: '骆驼祥子',
+          pinyin: 'Luòtuo Xiángzi',
+          display_pinyin: 'Luòtuo Xiángzi',
+          pinyin_tone: 'luo4tuo0 xiang2zi0',
+          meaning_th: 'ริกชอว์บอย / เสียงจื่อ อูฐหนุ่ม (นวนิยายชิ้นเอกของเหลาเส่อ)',
+          meaning_en: 'Camel Xiangzi / Rickshaw Boy (masterpiece by Lao She)',
+          radical: '马',
+          radical_name_th: 'หมวดม้า (马字旁)',
+          stroke_count: 31,
+          mnemonic: 'อูฐผู้บึกบึนอดทน (骆驼) นามเสียงจื่อผู้แสวงหาโชคลาภความสุข (祥子) = นวนิยายเสียงจื่อ',
+          kid_mnemonic: 'หนุ่มลากรถลากคันสีดำวิ่งเหยาะๆ บนถนนหินปักกิ่งอย่างขยันขันแข็ง = 骆驼祥子',
+          body_gesture: 'ทำสองมือจับคันจับรถลากก้าววิ่งไปข้างหน้าอย่างมุ่งมั่น'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 骆驼祥子 (Luòtuoxiángzi)',
+        description_th: 'luò (เสียง 4) tuo (เสียงเบา) xiáng (เสียง 2) zi (เสียงเบา)',
+        example: '老舍的长篇小说《骆驼祥子》 (Lǎo Shě de chángpiān xiǎoshuō "Luòtuo Xiángzi")',
+        fun_metaphor: 'คำว่า tuo และ zi ออกเสียงเบา (轻声) ให้ความรู้สึกเป็นกันเองแบบปักกิ่งแท้',
+        reassurance: 'หนังสือวรรณคดีบังคับอ่านของนักเรียนจีนทั่วประเทศ'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการวิเคราะห์ลีลาภาษา: 融……于幽默之中，尽显苍凉之感',
+        formula: '老舍先生以地道纯正的京味语言描写市井生活，在幽默之中饱含悲悯与苍凉',
+        explanation_th: 'ใช้ในการวิเคราะห์สไตล์การเขียน "หัวเราะเคล้าน้ำตา" ของเหลาเส่อ',
+        patterns: [
+          {
+            formula: '地道京味语言，再现市井生活。',
+            zh: '老舍被誉为“人民艺术家”，他的话剧《茶馆》以浓郁的京味风情展现了半个多世纪的风云变迁。',
+            pinyin: 'Lǎo Shě bèi yùwéi "Rénmín Yìshùjiā", tā de huàjù "Cháguǎn" yǐ nóngyù de jīngwèi fēngqíng zhǎnxiàn le bàn gè duō shìjì de fēngyún biànqiān.',
+            th: 'เหลาเส่อได้รับการยกย่องเป็น "ศิลปินของประชาชน" ละครเวที 《โรงน้ำชา》 ของท่านถ่ายทอดความผันผวนครึ่งศตวรรษผ่านกลิ่นอายปักกิ่งอันเข้มข้น',
+            en: 'Lao She is honored as the "People\'s Artist"; his play "Teahouse" demonstrated more than half a century of turbulent changes through rich Beijing flavor.'
+          },
+          {
+            formula: '笑中带泪，抒发苍凉叹息。',
+            zh: '《骆驼祥子》揭示了底层小人物无论怎样脚踏实地努力奋斗，也无法摆脱被旧社会吞噬的苍凉宿命。',
+            pinyin: '"Luòtuo Xiángzi" jiēshì le dǐcéng xiǎorénwù wúlùn zěnyàng jiǎotàshídì nǔlì fèndòu, yě wúfǎ bǎituō bèi jiù shèhuì tūnshì de cāngliáng sùmìng.',
+            th: '《เสียงจื่อ อูฐหนุ่ม》 เปิดเผยให้เห็นว่า สามัญชนตัวเล็กๆ ในชั้นล่างสุดของสังคม ไม่ว่าจะบากบั่นก้มหน้าก้าวเดินอย่างมั่นคงเพียงใด ก็ไม่อาจหลุดพ้นจากโชคชะตาอันเวิ้งว้างที่ถูกสังคมเก่ากลืนกิน',
+            en: '"Camel Xiangzi" revealed that no matter how hard grassroots commoners strove down-to-earth, they could not escape the bleak fate of being swallowed by the old society.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '戏剧导演 (Theater Director) 🎭',
+          zh: '各位演员，今天我们排演老舍先生的话剧《茶馆》，大家一定要抓准老北京的市井烟火气与独特的京味儿幽默。',
+          pinyin: 'Gèwèi yǎnyuán, jīntiān wǒmen pǎiyǎn Lǎo Shě xiānsheng de huàjù "Cháguǎn", dàjiā yīdīng yào zhuā zhǔn lǎo Běijīng de shìjǐng yānhuǒqì yǔ dútè de jīngwèir yōumò.',
+          th: 'นักแสดงทุกท่าน วันนี้เราซ้อมละครเวทีเรื่อง 《โรงน้ำชา》 ของท่านเหลาเส่อ ทุกคนต้องจับกลิ่นอายควันไฟแห่งวิถีชาวบ้านปักกิ่งโบราณและอารมณ์ขันแบบปักกิ่งแท้ๆ ให้แม่นยำนะครับ',
+          en: 'Actors, today we rehearse Mr. Lao She\'s play "Teahouse"; everyone must accurately capture the earthly vitality of old Beijing and unique Beijing-style humor.',
+          audio_trigger: 't4_u53_l02_d01'
+        },
+        {
+          speaker: '青年演员 (Young Actor) 🎬',
+          zh: '导演，王利发掌柜的那种在乱世中勉强求生、苦中作乐的幽默感，演起来既让人发笑，又让人感到一种莫名的苍凉。',
+          pinyin: 'Dǎoyǎn, Wáng Lìfā zhǎngguì de nà zhǒng zài luànshì zhōng miǎnqiǎng qiúshēng, kǔzhōngzuòlè de yōumògǎn, yǎn qǐlái jì ràng rén fāxiào, yòu ràng rén gǎndào yī zhǒng mòmíng de cāngliáng.',
+          th: 'ผู้กำกับครับ อารมณ์ขันแบบหัวเราะทั้งน้ำตาของเถ้าแก่หวังลี่ฟาที่ดิ้นรนเอาชีวิตรอดในยุคกลียุค เวลาแสดงออกมาแล้วทำให้คนดูหัวเราะแต่ก็สัมผัสได้ถึงความเวิ้งว้างเศร้าสะเทือนใจอย่างบอกไม่ถูกครับ',
+          en: 'Director, Manager Wang Lifa\'s humor of finding joy amid sorrow to barely survive in chaotic times makes people laugh yet feel an inexplicable desolation.',
+          audio_trigger: 't4_u53_l02_d02'
+        },
+        {
+          speaker: '戏剧导演 (Theater Director) 🎭',
+          zh: '你说到点子上了！老舍文学的精髓就在于“哀而不伤，含泪微笑”。他对底层百姓的命运怀有最深沉的仁爱与悲悯。',
+          pinyin: 'Nǐ shuō dào diǎnzi shang le! Lǎo Shě wénxué de jīngsuǐ jiù zàiyú "āi ér bù shāng, hán lèi wēixiào". Tā duì dǐcéng bǎixìng de mìngyùn huáiyǒu zuì shēnchén de rén\'ài yǔ bēimǐn.',
+          th: 'คุณพูดตรงหัวใจสำคัญเลย! แก่นแท้ของวรรณกรรมเหลาเส่ออยู่ที่ "เศร้าแต่ไม่ฟูมฟาย ยิ้มเยือนทั้งน้ำตา" ท่านมีความเมตตารักใคร่และความการุณย์อย่างลึกซึ้งที่สุดต่อชะตากรรมของคนระดับล่าง',
+          en: 'You hit the nail on the head! The essence of Lao She\'s literature lies in "mourning without injury, smiling through tears." He possessed the deepest benevolence and compassion for common folks\' destinies.',
+          audio_trigger: 't4_u53_l02_d03'
+        },
+        {
+          speaker: '青年演员 (Young Actor) 🎬',
+          zh: '正如祥子想凭自己的诚实劳动买一辆洋车却三起三落，这种平民史诗跨越时空，永远引发人们深刻的共鸣！',
+          pinyin: 'Zhèngrú Xiángzi xiǎng píng zìjǐ de chéngshí láodòng mǎi yī liàng yángchē què sān qǐ sān luò, zhè zhǒng píngmín shǐshī kuàyuè shíkōng, yǒngyuǎn yǐnfā rénmen shēnkè de gòngmíng!',
+          th: 'ดั่งเช่นเสียงจื่อที่อยากซื้อรถลากด้วยหยาดเหงื่อแรงงานที่ซื่อสัตย์แต่ต้องล้มลุกคลุกคลานถึงสามครา มหากาพย์สามัญชนเช่นนี้ก้าวข้ามกาลเวลาและจุดประกายความรู้สึกร่วมในใจคนได้เสมอครับ!',
+          en: 'Just as Xiangzi wished to buy a rickshaw through honest labor yet suffered three rises and falls; such a commoner epic spans time and space, forever evoking deep resonance!',
+          audio_trigger: 't4_u53_l02_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'นักเขียนผู้ได้รับการยกย่องเป็น "ศิลปินของประชาชน" (人民艺术家) และเชี่ยวชาญการเขียนด้วยภาษา "京味" (กลิ่นอายปักกิ่ง) คือใคร?',
+          options: [
+            '老舍 (เหลาเส่อ)',
+            '鲁迅 (หลู่ซวิ่น)',
+            '茅盾 (เหมาตุ้น)',
+            '巴金 (ปาจิน)'
+          ],
+          correct_index: 0,
+          explanation_th: 'เหลาเส่อ (老舍) คือเจ้าของบทประพันธ์อมตะ 《骆驼祥子》 และ 《茶馆》 ผู้ได้รับฉายาว่า "人民艺术家"',
+          encouragement: 'ยอดเยี่ยมมาก! มีความรู้ความเข้าใจในวรรณคดีจีนอย่างลึกซึ้ง!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "ภาษาปักกิ่งแท้ดั้งเดิม ถ่ายทอดภาพวิถีชีวิตชาวบ้าน"',
+          tokens: ['再现市井生活', '地道京味语言'],
+          correct_sequence: ['地道京味语言', '再现市井生活'],
+          pinyin: 'Dìdao jīngwèi yǔyán, zàixiàn shìjǐng shēnghuó.',
+          meaning_th: 'ภาษาปักกิ่งแท้ดั้งเดิม ถ่ายทอดภาพวิถีชีวิตชาวบ้าน',
+          explanation_th: 'เอกลักษณ์ทางภาษา (地道京味语言) + เนื้อหาที่สะท้อน (再现市井生活)',
+          encouragement: 'จัดประโยควิจารณ์วรรณกรรมคลาสสิกได้อย่างยอดเยี่ยม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "井" (jǐng - บ่อน้ำ) ใน "市井" มีที่มาจากชีวิตชุมชนโบราณอย่างไร?',
+          options: [
+            'บ่อน้ำสาธารณะกลางหมู่บ้านที่ผู้คนมาชุมนุมตักน้ำ ค้าขาย และพูดคุยแลกเปลี่ยนข่าวสาร',
+            'บ่อน้ำมันดิบ',
+            'บ่อเลี้ยงปลาทอง',
+            'หลุมดักสัตว์ป่า'
+          ],
+          correct_index: 0,
+          explanation_th: '"市井" มาจากบ่อน้ำกลางเมืองโบราณ ซึ่งเป็นศูนย์กลางการพบปะค้าขายของชาวบ้านร้านตลาด',
+          encouragement: 'จำประวัติศาสตร์วิถีชีวิตชาวบ้านได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'ตัวละครเอก "祥子" (เสียงจื่อ) ในนวนิยายเรื่อง 《骆驼祥子》 มีอาชีพอะไรในกรุงปักกิ่งยุคเก่า?',
+          options: [
+            '人力车夫 (rénlìchēfū - คนลากรถลาก / Rickshaw puller)',
+            '茶馆掌柜 (เถ้าแก่โรงน้ำชา)',
+            '大学教授 (ศาสตราจารย์มหาวิทยาลัย)',
+            '外交官 (นักการทูต)'
+          ],
+          correct_index: 0,
+          explanation_th: 'เสียงจื่อเป็น "人力车夫" (คนลากรถลาก) หนุ่มผู้ซื่อสัตย์แข็งแรงที่ใฝ่ฝันจะมีรถลากเป็นของตนเอง',
+          encouragement: 'เข้าใจเรื่องราวและตัวละครในวรรณกรรมชิ้นเอกได้อย่างถ่องแท้!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในบทวิจารณ์วรรณกรรมละครเวทีเรื่อง 《茶馆》 ข้อความใดสรุปคุณค่าทางศิลปะของเหลาเส่อได้อย่างลึกซึ้งและกินใจที่สุด?',
+        options: [
+          '老舍先生以纯正浓郁的京味幽默描摹市井苍生，在笑中带泪的茶馆风云里，寄托了对底层命运最深沉的悲悯与时代叹息。',
+          '国家加强宏观调控，坚持稳中求进，有效应对通胀与利率风险。',
+          '央行精准实施货币政策，强化逆周期调节，保持市场流动性合理充裕。',
+          '加快产业优化升级与供给侧改革，提升实体经济产品附加值与新动能。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "京味幽默", "描摹市井苍生", "笑中带泪" และ "最深沉的悲悯" ได้อย่างสมบูรณ์แบบ ไพเราะ และเฉียบคมตามมาตรฐานบทวิจารณ์ชั้นครู'
+      },
+      cheer_trophy: {
+        badge_name: 'ผู้หยั่งรู้มนต์เสน่ห์แห่งเป่ยผิง (Master of Beijing Literary Charm)',
+        message_th: 'ยินดีด้วย! คุณเข้าใจวรรณกรรมของเหลาเส่อ และคำว่า 京味, 市井, 幽默, 苍凉 พร้อมสัมผัสไออุ่นและชะตากรรมของมนุษย์อย่างลึกซึ้ง!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u53_l03',
+      lesson_number: 3,
+      title: {
+        zh: '时代巨澜：茅盾与巴金的家族史诗',
+        th: 'มรสุมคลื่นยักษ์แห่งยุคสมัย: มหากาพย์วงศ์ตระกูลของเหมาตุ้น (茅盾) และปาจิน (巴金)',
+        en: 'Turbulent Times: Mao Dun & Ba Jin\'s Family Epics'
+      },
+      can_do: {
+        th: 'อธิบายมหากาพย์วรรณกรรมของเหมาตุ้น (子夜) และปาจิน (家) โดยใช้คำศัพท์ เช่น 巨澜, 激流, 宿命, 沉浮, 时代缩影 ได้อย่างคล่องแคล่ว',
+        en: 'Analyze epic family novels of Mao Dun and Ba Jin using terms: Giant Waves, Torrent, Destiny, Ups and Downs, and Epitome'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำคำว่า 巨澜, 沉浮 และ 时代缩影 ไปใช้วิเคราะห์การเปลี่ยนแปลงของสังคม!',
+      vocabulary: [
+        {
+          id: 'hsk4_5311',
+          hanzi: '巨澜',
+          pinyin: 'jùlán',
+          display_pinyin: 'jùlán',
+          pinyin_tone: 'ju4lan2',
+          meaning_th: 'คลื่นยักษ์ / คลื่นลมมรสุมแห่งการเปลี่ยนแปลงครั้งใหญ่ของยุคสมัย',
+          meaning_en: 'huge waves / turbulent billows / monumental historical tides',
+          radical: '工',
+          radical_name_th: 'หมวดช่างฝีมือ (工字旁)',
+          stroke_count: 16,
+          mnemonic: 'ยิ่งใหญ่ไพศาล (巨) คลื่นน้ำลูกยักษ์ในมหาสมุทร (澜) = คลื่นยักษ์แห่งประวัติศาสตร์',
+          kid_mnemonic: 'คลื่นทะเลยักษ์สีน้ำเงินซัดขึ้นฝั่งอย่างน่าเกรงขาม = 巨澜',
+          body_gesture: 'ยกสองแขนขึ้นสูงวาดเป็นลูกคลื่นยักษ์ถาโถมลงมา'
+        },
+        {
+          id: 'hsk4_5312',
+          hanzi: '激流',
+          pinyin: 'jīliú',
+          display_pinyin: 'jīliú',
+          pinyin_tone: 'ji1liu2',
+          meaning_th: 'กระแสน้ำเชี่ยวกราก (ชื่อชุดไตรภาค 《激流三部曲》: 家、春、秋 ของปาจิน)',
+          meaning_en: 'torrent / rapid flow / torrential current',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำสามหยด (三点水)',
+          stroke_count: 25,
+          mnemonic: 'สายน้ำเชี่ยวซัดกระแทกแก่งหิน (激) ไหลบ่าไม่ขาดสาย (流) = กระแสน้ำเชี่ยวกราก',
+          kid_mnemonic: 'แก่งน้ำตกที่น้ำไหลแรงพุ่งซัดโขดหินกระจาย = 激流',
+          body_gesture: 'สองมือทำท่าคลื่นน้ำไหลพุ่งไปข้างหน้าอย่างรวดเร็วและรุนแรง'
+        },
+        {
+          id: 'hsk4_5313',
+          hanzi: '沉浮',
+          pinyin: 'chénfú',
+          display_pinyin: 'chénfú',
+          pinyin_tone: 'chen2fu2',
+          meaning_th: 'การลุ่มๆ ดอนๆ / ความผันผวนขึ้นลงของชีวิตหรือยุคสมัย (Ups and downs / Ebb and flow)',
+          meaning_en: 'ups and downs / rise and fall / ebb and flow',
+          radical: '氵',
+          radical_name_th: 'หมวดน้ำสามหยด (三点水)',
+          stroke_count: 17,
+          mnemonic: 'จมลงสู่ก้นบึ้ง (沉) ลอยขึ้นสู่ผิวน้ำ (浮) = ลุ่มๆ ดอนๆ ขึ้นๆ ลงๆ',
+          kid_mnemonic: 'ลูกบอลลอยขึ้นและจมลงในสระว่ายน้ำตามระลอกคลื่น = 沉浮',
+          body_gesture: 'มือขวาเคลื่อนขึ้นและลงสลับกันเป็นจังหวะคลื่น'
+        },
+        {
+          id: 'hsk4_5314',
+          hanzi: '宿命',
+          pinyin: 'sùmìng',
+          display_pinyin: 'sùmìng',
+          pinyin_tone: 'su4ming4',
+          meaning_th: 'โชคชะตาที่ลิขิตไว้ / กรรมเก่าหรือชะตากรรมที่หลีกเลี่ยงไม่ได้ (Destiny / Fatalism)',
+          meaning_en: 'destiny / fate / karma / fatalism',
+          radical: '宀',
+          radical_name_th: 'หมวดหลังคาเรือน (宝盖头)',
+          stroke_count: 19,
+          mnemonic: 'พำนักหลับนอนค้างแรม (宿) ภายใต้ลิขิตแห่งชีวิต (命) = ชะตากรรมที่กำหนดไว้',
+          kid_mnemonic: 'แผนที่ดวงดาวโบราณที่ทำนายการเดินทางของชีวิต = 宿命',
+          body_gesture: 'หงายสองฝ่ามือมองดูเส้นลายมือแห่งโชคชะตา'
+        },
+        {
+          id: 'hsk4_5315',
+          hanzi: '时代缩影',
+          pinyin: 'shídàisuōyǐng',
+          display_pinyin: 'shídàisuōyǐng',
+          pinyin_tone: 'shi2dai4suo1ying3',
+          meaning_th: 'ภาพสะท้อนย่อส่วนของยุคสมัย (Microcosm of the era / Epitome)',
+          meaning_en: 'microcosm of the era / miniature reflection of the times',
+          radical: '日',
+          radical_name_th: 'หมวดดวงอาทิตย์ (日字旁)',
+          stroke_count: 42,
+          mnemonic: 'ยุคสมัยกาลเวลา (时代) ย่อส่วนภาพเงาสะท้อน (缩影) = ภาพสะท้อนย่อส่วนยุคสมัย',
+          kid_mnemonic: 'ส่องกล้องสลับลายเห็นภาพย่อส่วนของเมืองทั้งเมือง = 时代缩影',
+          body_gesture: 'สองมือทำนิ้วชี้และนิ้วโป้งประกบกันเป็นกรอบภาพถ่ายย่อส่วน'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 时代缩影 (shídàisuōyǐng)',
+        description_th: 'shí (เสียง 2) dài (เสียง 4) suō (เสียง 1) yǐng (เสียง 3)',
+        example: '这部小说堪称旧中国社会的时代缩影 (Zhè bù xiǎoshuō kānchēng jiù Zhōngguó shèhuì de shídài suōyǐng)',
+        fun_metaphor: 'คำว่า 缩 (suō) อ่านเสียง 1 แปลว่า หดหรือย่อส่วน',
+        reassurance: 'วลีเด็ดที่ใช้สรุปคุณค่าของวรรณกรรมระดับมหากาพย์'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการวิเคราะห์มหากาพย์: 展现……时代巨澜，堪称时代的缩影',
+        formula: '小说生动展现了二十世纪初中国社会的时代巨澜与家族沉浮，堪称一部波澜壮阔的时代缩影',
+        explanation_th: 'ใช้ในการวิเคราะห์นวนิยายขนาดยาวและบทละครเชิงประวัติศาสตร์',
+        patterns: [
+          {
+            formula: '卷入时代巨澜，见证家族沉浮。',
+            zh: '巴金的《激流三部曲》以觉慧等青年反抗封建礼教为线索，生动再现了一个封建大家族的衰亡沉浮。',
+            pinyin: 'Bā Jīn de "Jīliú Sānbùqǔ" yǐ Juéhuì děng qīngnián fǎnkàng fēngjiàn lǐjiào wéi xiànsuǒ, shēngdòng zàixiàn le yī gè fēngjiàn dàjiāzú de shuāiwáng chénfú.',
+            th: 'ไตรภาค 《กระแสน้ำเชี่ยว》 ของปาจิน ใช้การต่อต้านจารีตศักดินาของเยาวชนอย่างเจวี๋ยฮุ่ยเป็นแกนหลัก ถ่ายทอดการเสื่อมสลายและความผันผวนของตระกูลใหญ่ในระบบศักดินาอย่างสมจริง',
+            en: 'Ba Jin\'s "Torrent Trilogy", taking youth rebellion against feudal ethics like Juehui as a clue, vividly recreated the decline, rise, and fall of a feudal grand family.'
+          },
+          {
+            formula: '透视商业风云，呈现时代缩影。',
+            zh: '茅盾的长篇巨著《子夜》通过民族资本家吴荪甫的商战悲剧，成为三十年代旧上海经济社会的生动缩影。',
+            pinyin: 'Máo Dùn de chángpiān jùzhù "Zǐyè" tōngguò mínzú zīběnjiā Wú Sūnfǔ de shāngzhàn bēijù, chéngwéi sānshí niándài jiù Shànghǎi jīngjì shèhuì de shēngdòng suōyǐng.',
+            th: 'มหากาพย์ 《เที่ยงคืน》 ของเหมาตุ้น สะท้อนโศกนาฏกรรมสงครามการค้าของนายทุนประชาชาตินามอู๋ซุนฝู่ กลายเป็นภาพสะท้อนย่อส่วนอันมีชีวิตชีวาของเศรษฐกิจและสังคมเซี่ยงไฮ้ในยุคทศวรรษ 1930',
+            en: 'Mao Dun\'s epic masterpiece "Midnight", through national capitalist Wu Sunfu\'s commercial tragedy, became a vivid microcosm of old Shanghai\'s economic society in the 1930s.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '现当代文学博导 (Professor of Literature) 📚',
+          zh: '同学们，如果说鲁迅善于用匕首般的短篇解剖灵魂，那么茅盾与巴金则擅长驾驭长篇巨著描摹时代巨澜。',
+          pinyin: 'Tóngxuémen, rúguǒ shuō Lǔ Xùn shànyú yòng bǐshǒu bān de duǎnpiān jiěpōu línghún, nàme Máo Dùn yǔ Bā Jīn zé shàncháng jiàyù chángpiān jùzhù miáomó shídài jùlán.',
+          th: 'นักศึกษาทุกท่าน หากหลู่ซวิ่นเชี่ยวชาญการใช้เรื่องสั้นดั่งกริชชำแหละจิตวิญญาณ เหมาตุ้นและปาจินก็เชี่ยวชาญการขับเคลื่อนมหากาพย์ขนาดยาวเพื่อวาดภาพคลื่นยักษ์แห่งยุคสมัยครับ',
+          en: 'Students, if Lu Xun excelled at dissecting souls with dagger-like short stories, Mao Dun and Ba Jin were masters at wielding long epics to portray gigantic tides of the era.',
+          audio_trigger: 't4_u53_l03_d01'
+        },
+        {
+          speaker: '博士生 (PhD Student) 🖋️',
+          zh: '老师，巴金在《家》的序言中写道：“我不是一个文学家，我只是一个在生活的大风暴中呼号的战士”。',
+          pinyin: 'Lǎoshī, Bā Jīn zài "Jiā" de xùyán zhōng xiědào: "Wǒ búshì yī gè wénxuéjiā, wǒ zhǐshì yī gè zài shēnghuó de dà fēngbào zhōng hūhào de zhànshì".',
+          th: 'อาจารย์ครับ ปาจินเขียนไว้ในคำนำของเรื่อง 《บ้าน》 ว่า "ข้าพเจ้ามิใช่นักวรรณคดี ข้าพเจ้าเป็นเพียงนักรบที่กู่ร้องท่ามกลางพายุใหญ่แห่งชีวิตเท่านั้น"',
+          en: 'Professor, Ba Jin wrote in the preface of "Family": "I am not a man of letters; I am merely a warrior shouting in the great storm of life."',
+          audio_trigger: 't4_u53_l03_d02'
+        },
+        {
+          speaker: '现当代文学博导 (Professor of Literature) 📚',
+          zh: '正是这种毫无保留的热血与真诚，让他的文字如同奔腾的激流，冲垮了封建礼教的枷锁，激励了无数青年前仆后继。',
+          pinyin: 'Zhèng shì zhè zhǒng háowú bǎoliú de rèxuè yǔ zhēnchéng, ràng tā de wénzì rútóng bēnténg de jīliú, chōngkuǎ le fēngjiàn lǐjiào de jiāsuǒ, jīlì le wúshù qīngnián qiánpūhòujì.',
+          th: 'เลือดร้อนและความจริงใจที่ไร้การปิดบังเช่นนี้เอง ทำให้ตัวอักษรของท่านดั่งกระแสน้ำเชี่ยวกรากที่โถมซัดทลายโซ่ตรวนแห่งจารีตศักดินา และปลุกเร้าคนรุ่นใหม่นับไม่ถ้วนให้ก้าวไปข้างหน้าอย่างไม่หวาดหวั่น',
+          en: 'It is precisely this unreserved passion and sincerity that made his words like a surging torrent, washing away the shackles of feudal ethics and inspiring countless youth to advance wave upon wave.',
+          audio_trigger: 't4_u53_l03_d03'
+        },
+        {
+          speaker: '博士生 (PhD Student) 🖋️',
+          zh: '个人命运与国家命运的交织沉浮，正是现代文学最震撼人心的力量所在！',
+          pinyin: 'Gèrén mìngyùn yǔ guójiā mìngyùn de jiāozhī chénfú, zhèng shì xiàndài wénxué zuì zhènhàn rénxīn de lìliang suǒzài!',
+          th: 'ความผันผวนที่สอดประสานกันระหว่างชะตากรรมส่วนบุคคลกับชะตากรรมของประเทศชาติ คือพลังที่สะเทือนหัวใจผู้คนที่สุดในวรรณกรรมสมัยใหม่ครับ!',
+          en: 'The intertwined rise and fall of individual destiny and national destiny is precisely where the most awe-inspiring power of modern literature lies!',
+          audio_trigger: 't4_u53_l03_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'ผลงานไตรภาค 《激流三部曲》 (The Torrent Trilogy) ของ ปาจิน (巴金) ประกอบด้วยนวนิยายสามเรื่องใด?',
+          options: [
+            '《家》、《春》、《秋》 (บ้าน, ฤดูใบไม้ผลิ, ฤดูใบไม้ร่วง)',
+            '《雾》、《雨》、《电》 (หมอก, ฝน, สายฟ้า)',
+            '《子夜》、《林家铺子》、《春蚕》 (เที่ยงคืน, ร้านตระกูลหลิน, ตัวไหมฤดูใบไม้ผลิ)',
+            '《狂人日记》、《阿Q正传》、《彷徨》 (คนบ้า, อาคิว, ลังเล)'
+          ],
+          correct_index: 0,
+          explanation_th: '《激流三部曲》 ของปาจิน ประกอบด้วยนวนิยายอมตะสามภาค ได้แก่ 《家》(Home/Family), 《春》(Spring), 《秋》(Autumn)',
+          encouragement: 'ยอดเยี่ยมมาก! จดจำมหากาพย์วรรณคดีชิ้นเอกได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "เผชิญคลื่นยักษ์แห่งยุคสมัย บันทึกความผันผวนของครอบครัว"',
+          tokens: ['记录家族沉浮', '面对时代巨澜'],
+          correct_sequence: ['面对时代巨澜', '记录家族沉浮'],
+          pinyin: 'Miànduì shídài jùlán, jìlù jiāzú chénfú.',
+          meaning_th: 'เผชิญคลื่นยักษ์แห่งยุคสมัย บันทึกความผันผวนของครอบครัว',
+          explanation_th: 'ฉากทัศน์ประวัติศาสตร์ (面对时代巨澜) + เนื้อหาวงศ์ตระกูล (记录家族沉浮)',
+          encouragement: 'จัดประโยควิจารณ์มหากาพย์ได้อย่างสง่างาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "澜" (lán - คลื่นยักษ์) ใน "巨澜" มีหมวดนำ "氵" (น้ำ) สื่อถึงอะไร?',
+          options: [
+            'คลื่นน้ำขนาดมหึมาในมหาสมุทรที่ถาโถมซัดสาดอย่างรุนแรง',
+            'หยดน้ำค้างบนใบหญ้า',
+            'น้ำแข็งในแก้ว',
+            'สระบัวเงียบสงบ'
+          ],
+          correct_index: 0,
+          explanation_th: '"氵" คือระลอกคลื่นยักษ์ในมหาสมุทร เปรียบดั่งกระแสธารแห่งการปฏิวัติและความเปลี่ยนแปลงทางสังคม (巨澜)',
+          encouragement: 'เข้าใจมโนทัศน์คลื่นยักษ์ได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'นวนิยายเรื่อง 《子夜》 (Midnight) ของ เหมาตุ้น (茅盾) มีฉากหลังของเรื่องอยู่ที่เมืองใด?',
+          options: [
+            '上海 (เซี่ยงไฮ้)',
+            '北京 (ปักกิ่ง)',
+            '广州 (กวางโจว)',
+            '成都 (เฉิงตู)'
+          ],
+          correct_index: 0,
+          explanation_th: '《子夜》 มีฉากหลังอยู่ที่นครเซี่ยงไฮ้ในยุคทศวรรษ 1930 สะท้อนการปะทะกันในตลาดหุ้นและสงครามธุรกิจ',
+          encouragement: 'มีความรู้ฉากทัศน์วรรณคดีจีนอย่างแม่นยำ!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในบทความวิชาการว่าด้วยวิวัฒนาการนวนิยายจีนสมัยใหม่ ประโยคใดวิเคราะห์ความเชื่อมโยงระหว่างตัวละครกับประวัติศาสตร์ได้อย่างสมบูรณ์แบบที่สุด?',
+        options: [
+          '二十世纪初的中国文学大师们以笔触直面时代巨澜，在个人命运与家族沉浮的激烈激流中，留下了永载史册的时代缩影。',
+          '白皮书强调中国经济韧性强、潜力大，总体呈现稳中向好态势。',
+          '严格保护知识产权，坚决打击恶意侵权，加快专利与商标确权。',
+          '诉讼代理人在法庭上对证据严格质证，依据适用法律取得全面胜诉。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "时代巨澜", "家族沉浮", "激烈激流" และ "时代缩影" ได้อย่างสละสลวย สมบูรณ์แบบตามมาตรฐานงานวิชาการระดับปริญญาเอก'
+      },
+      cheer_trophy: {
+        badge_name: 'นักวิจัยมหากาพย์วรรณกรรม (Epic Literature Researcher)',
+        message_th: 'ยินดีด้วย! คุณเข้าใจวรรณกรรมของเหมาตุ้นและปาจิน และคำว่า 巨澜, 激流, 沉浮, 时代缩影 พร้อมวิเคราะห์คลื่นลมประวัติศาสตร์ได้อย่างลึกซึ้ง!',
+        xp_reward: 120
+      }
+    },
+    {
+      lesson_id: 't4_u53_l04',
+      lesson_number: 4,
+      title: {
+        zh: '人文关怀：现代文学的永恒共鸣',
+        th: 'ความเอื้ออาทรต่อมนุษยชาติ: เสียงสะท้อนนิรันดร์แห่งวรรณกรรมสมัยใหม่',
+        en: 'Humanitarian Care: Modern Literature\'s Eternal Resonance'
+      },
+      can_do: {
+        th: 'สรุปคุณค่าทางปรัชญาและจิตวิญญาณมนุษยธรรมของวรรณกรรมจีนสมัยใหม่ โดยใช้คำศัพท์ เช่น 关怀, 共鸣, 脊梁, 启蒙, 历久弥新 ได้อย่างเชี่ยวชาญ',
+        en: 'Synthesize humanitarian values of modern literature using terms: Compassion, Resonance, Backbone, Enlightenment, and Timeless'
+      },
+      baby_step_goal: 'เป้าหมายวันนี้: นำสำนวน 历久弥新 และคำว่า 脊梁 ไปใช้ในการสรุปแก่นแท้ของวรรณกรรมระดับโลก!',
+      vocabulary: [
+        {
+          id: 'hsk4_5316',
+          hanzi: '关怀',
+          pinyin: 'guānhuái',
+          display_pinyin: 'guānhuái',
+          pinyin_tone: 'guan1huai2',
+          meaning_th: 'ความห่วงหาอาทร / ความเอื้ออาทรต่อเพื่อนมนุษย์ (Humanitarian care)',
+          meaning_en: 'care / solicitude / humanitarian concern',
+          radical: '门',
+          radical_name_th: 'หมวดประตู (门字框)',
+          stroke_count: 13,
+          mnemonic: 'เปิดประตูเชื่อมใจ (关) โอบกอดไว้แนบอกด้วยความรัก (怀) = ความห่วงหาอาทร',
+          kid_mnemonic: 'คุณแม่สวมกอดลูกด้วยรอยยิ้มอันอบอุ่นยามอากาศหนาว = 关怀',
+          body_gesture: 'กอดอกตัวเองเบาๆ ด้วยความอบอุ่นและเมตตา'
+        },
+        {
+          id: 'hsk4_5317',
+          hanzi: '共鸣',
+          pinyin: 'gòngmíng',
+          display_pinyin: 'gòngmíng',
+          pinyin_tone: 'gong4ming2',
+          meaning_th: 'เสียงสะท้อนพ้องใจ / ความรู้สึกร่วมที่จุดประกายในดวงใจผู้อ่าน (Resonance / Empathy)',
+          meaning_en: 'resonance / sympathetic chord / empathy',
+          radical: '八',
+          radical_name_th: 'หมวดแปด (八字底)',
+          stroke_count: 20,
+          mnemonic: 'ร่วมกันแบ่งปัน (共) เสียงร้องก้องกังวานของนก (鸣) = สะท้อนพ้องใจร่วมกัน',
+          kid_mnemonic: 'ดีดสายกู่เจิงเส้นหนึ่งแล้วสายกู่เจิงอีกตัวที่อยู่ข้างๆ ก็สั่นสะเทือนตาม = 共鸣',
+          body_gesture: 'สองมือทำท่าแตะที่หน้าอกแล้วผายออกข้างหน้าช้าๆ'
+        },
+        {
+          id: 'hsk4_5318',
+          hanzi: '脊梁',
+          pinyin: 'jǐliang',
+          display_pinyin: 'jǐliang',
+          pinyin_tone: 'ji3liang0',
+          meaning_th: 'กระดูกสันหลัง / แกนกลางแห่งความเข้มแข็งของชนชาติ (Spine / Backbone of a nation)',
+          meaning_en: 'spine / backbone / pillar of strength',
+          radical: '月',
+          radical_name_th: 'หมวดเนื้อร่างกาย (月字底)',
+          stroke_count: 21,
+          mnemonic: 'กระดูกสันหลังของเรือนกาย (脊) ขื่อแปคานรับน้ำหนักของหลังคาบ้าน (梁) = กระดูกสันหลังของชาติ',
+          kid_mnemonic: 'เสาหินขนาดใหญ่ค้ำยันหลังคาปราสาทไม่ให้พังถล่มลงมา = 脊梁',
+          body_gesture: 'เอามือแตะที่แผ่นหลังแล้วยืดหลังตรงอย่างสง่าผ่าเผย'
+        },
+        {
+          id: 'hsk4_5319',
+          hanzi: '启蒙',
+          pinyin: 'qǐméng',
+          display_pinyin: 'qǐméng',
+          pinyin_tone: 'qi3meng2',
+          meaning_th: 'การเบิกเนตรปัญญา / การตื่นรู้ทางปัญญา (Enlightenment / Initiation)',
+          meaning_en: 'enlightenment / initiate / open up wisdom',
+          radical: '口',
+          radical_name_th: 'หมวดปาก (口字旁)',
+          stroke_count: 20,
+          mnemonic: 'เปิดปากสอนสั่งเปิดทาง (启) ขจัดความมืดมัวไม่รู้เดียงสา (蒙) = เปิดประตูปัญญา',
+          kid_mnemonic: 'จุดเทียนเล่มแรกในห้องมืดเพื่อส่องทางให้ทุกคนมองเห็น = 启蒙',
+          body_gesture: 'กำมือขวาไว้ที่หน้าอกแล้วค่อยๆ คลายมือออกดั่งดอกไม้ผลิบานแห่งปัญญา'
+        },
+        {
+          id: 'hsk4_5320',
+          hanzi: '历久弥新',
+          pinyin: 'lìjiǔmíxīn',
+          display_pinyin: 'lìjiǔmíxīn',
+          pinyin_tone: 'li4jiu3mi2xin1',
+          meaning_th: 'ยิ่งผ่านกาลเวลายาวนาน ก็ยิ่งทวีความสดใหม่ทรงคุณค่า (Timeless / Ever-fresh)',
+          meaning_en: 'remain fresh over time / timeless / the older, the more valuable',
+          radical: '厂',
+          radical_name_th: 'หมวดเพิงผา (厂字旁)',
+          stroke_count: 29,
+          mnemonic: 'ผ่านกาลเวลาอันยาวนาน (历久) ยิ่งทวีคูณ (弥) ความสดใหม่และงดงาม (新) = ยิ่งนานยิ่งทรงคุณค่า',
+          kid_mnemonic: 'ภาพวาดโบราณพันปีที่สียังสดใสเหมือนเพิ่งวาดเสร็จเมื่อวาน = 历久弥新',
+          body_gesture: 'สองมือทำท่าประคองคัมภีร์โบราณที่ส่องแสงระยิบระยับ'
+        }
+      ],
+      tone_rule: {
+        rule_name: 'การออกเสียง 历久弥新 (lìjiǔmíxīn)',
+        description_th: 'lì (เสียง 4) jiǔ (เสียง 3) mí (เสียง 2) xīn (เสียง 1)',
+        example: '优秀经典作品历久弥新 (Yōuxiù jīngdiǎn zuòpǐn lìjiǔmíxīn)',
+        fun_metaphor: 'คำว่า 弥 (mí) หมายถึง ยิ่งทวีขึ้น หรือ ยิ่งแพร่หลาย',
+        reassurance: 'สำนวน 4 ตัวอักษรระดับปรมาจารย์ที่ใช้อธิบายมรดกทางวัฒนธรรมอันไร้กาลเวลา'
+      },
+      grammar_bite: {
+        title: 'โครงสร้างการสดุดีมรดกวรรณกรรม: 饱含……关怀，历久弥新，永远挺起民族脊梁',
+        formula: '这些经典名篇饱含深厚的人文关怀，历久弥新，永远挺起中华民族不屈的精神脊梁',
+        explanation_th: 'ใช้ในการกล่าวปิดการสัมมนาวรรณกรรมระดับนานาชาติและบทความสรุปประเมินคุณค่า',
+        patterns: [
+          {
+            formula: '体现人文关怀，引发心灵共鸣。',
+            zh: '优秀的文学经典之所以能够跨越国界与世纪，正因为其深邃的人文关怀能够引发全人类的心灵共鸣。',
+            pinyin: 'Yōuxiù de wénxué jīngdiǎn zhīsuǒyǐ nénggòu kuàyuè guójiè yǔ shìjì, zhèng yīnwèi qí shēnsuì de rénwén guānhuái nénggòu yǐnfā quán rénlèi de xīnlíng gòngmíng.',
+            th: 'เหตุผลที่วรรณกรรมคลาสสิกอันยอดเยี่ยมสามารถก้าวข้ามพรมแดนและศตวรรษได้ ก็เพราะความเอื้ออาทรต่อมนุษย์อันลึกซึ้งสามารถจุดประกายความรู้สึกร่วมในดวงใจของมนุษยชาติทุกคน',
+            en: 'Why outstanding literary classics transcend borders and centuries is precisely because their profound humanitarian concern evokes universal resonance in human hearts.'
+          },
+          {
+            formula: '经典历久弥新，铸就民族脊梁。',
+            zh: '近代以来的思想启蒙先驱们用生命铸就了民族脊梁，他们的文学光辉历久弥新，指引着我们前行的方向。',
+            pinyin: 'Jìndài yǐlái de sīxiǎng qǐméng xiānqūmen yòng shēngmìng zhùjiù le mínzú jǐliang, tāmen de wénxué guānghuī lìjiǔmíxīn, zhǐyǐn zhe wǒmen qiánxíng de fāngxiàng.',
+            th: 'เหล่าผู้บุกเบิกการตื่นรู้ทางปัญญาในยุคสมัยใหม่ได้ใช้ชีวิตหลอมสร้างกระดูกสันหลังของชนชาติ แสงสว่างแห่งวรรณกรรมของท่านยิ่งนานวันยิ่งสดใหม่และทรงคุณค่า ชี้ทิศทางให้พวกเราก้าวไปข้างหน้า',
+            en: 'Pioneers of intellectual enlightenment in modern times forged the national backbone with their lives; their literary brilliance remains ever-fresh, guiding our way forward.'
+          }
+        ]
+      },
+      dialogue: [
+        {
+          speaker: '文学院院长 (Dean of Arts) 🏛️',
+          zh: '各位学者，当我们回顾中国近现代文学的百年历程，最让人肃然起敬的，是先驱们始终不渝的人文关怀。',
+          pinyin: 'Gèwèi xuézhě, dāng wǒmen huígù Zhōngguó jìnxiàndài wénxué de bǎinián lìchéng, zuì ràng rén sùrán qǐjìng de, shì xiānqūmen shǐzhōng bùyú de rénwén guānhuái.',
+          th: 'ท่านนักวิชาการทุกท่าน เมื่อเรามองย้อนกลับไปในประวัติศาสตร์หนึ่งศตวรรษของวรรณคดีจีนสมัยใหม่ สิ่งที่ทำให้เราต้องคารวะด้วยความเคารพสูงสุด คือความเอื้ออาทรต่อเพื่อนมนุษย์ที่ไม่เคยแปรเปลี่ยนของเหล่าผู้บุกเบิกครับ',
+          en: 'Scholars, looking back at the century-long journey of modern Chinese literature, what commands our deepest reverence is the pioneers\' unwavering humanitarian care.',
+          audio_trigger: 't4_u53_l04_d01'
+        },
+        {
+          speaker: '国际比较文学教授 (Prof. of Comp. Lit.) 🌍',
+          zh: '是的！从思想启蒙到民族抗争，文学绝非象牙塔里的消遣，而是挺立起整个民族不屈精神的钢铁脊梁。',
+          pinyin: 'Shì de! Cóng sīxiǎng qǐméng dào mínzú kàngzhēng, wénxué juéfēi xiàngyátǎ lǐ de xiāokiǎn, ér shì tǐnglì qǐ zhěnggè mínzú bùqū jīngshén de gāngtiě jǐliang.',
+          th: 'ใช่ครับ! นับตั้งแต่การเบิกเนตรทางปัญญาไปจนถึงการต่อสู้เพื่อชาติ วรรณกรรมมิใช่สิ่งบันเทิงใจในหอคอยงาช้าง แต่คือกระดูกสันหลังเหล็กกล้าที่ค้ำยันจิตวิญญาณอันไม่ยอมจำนนของชนชาติทั้งมวล',
+          en: 'Yes! From enlightenment to national struggle, literature was never an ivory-tower diversion, but the steel backbone upholding the nation\'s unyielding spirit.',
+          audio_trigger: 't4_u53_l04_d02'
+        },
+        {
+          speaker: '文学院院长 (Dean of Arts) 🏛️',
+          zh: '鲁迅的呐喊、老舍的茶馆、巴金的家、茅盾的子夜，这些伟大的经典跨越百年沧桑，依然历久弥新。',
+          pinyin: 'Lǔ Xùn de Nàhǎn, Lǎo Shě de Cháguǎn, Bā Jīn de Jiā, Máo Dùn de Zǐyè, zhèxiē wěidà de jīngdiǎn kuàyuè bǎinián cāngsāng, yīrán lìjiǔmíxīn.',
+          th: 'เสียงกู่ก้องของหลู่ซวิ่น โรงน้ำชาของเหลาเส่อ บ้านของปาจิน และเที่ยงคืนของเหมาตุ้น มหากาพย์อันยิ่งใหญ่เหล่านี้ก้าวข้ามกาลเวลาร้อยปี แต่ยังคงสดใหม่และทรงคุณค่าไม่เสื่อมคลาย',
+          en: 'Lu Xun\'s Call to Arms, Lao She\'s Teahouse, Ba Jin\'s Family, Mao Dun\'s Midnight — these great classics span a century of vicissitudes, remaining timeless and ever-fresh.',
+          audio_trigger: 't4_u53_l04_d03'
+        },
+        {
+          speaker: '国际比较文学教授 (Prof. of Comp. Lit.) 🌍',
+          zh: '它们所传递的对真善美的追求与对人类命运的思考，将永远在世界文明的星空下引发深切的共鸣！',
+          pinyin: 'Tāmen suǒ chuándì de duì zhēnshànměi de zhuīqiú yǔ duì rénlèi mìngyùn de sīkǎo, jiāng yǒngyuǎn zài shìjiè wénmíng de xīngkōng xià yǐnfā shēnqiè de gòngmíng!',
+          th: 'การแสวงหาความจริง ความดี ความงาม และการขบคิดเกี่ยวกับชะตากรรมของมวลมนุษยชาติที่วรรณกรรมเหล่านี้ถ่ายทอด จะจุดประกายความรู้สึกร่วมอันลึกซึ้งใต้ฟากฟ้าแห่งอารยธรรมโลกตลอดกาลครับ!',
+          en: 'The pursuit of truth, goodness, and beauty and reflection on human destiny conveyed by them will forever evoke deep resonance under the starry sky of world civilization!',
+          audio_trigger: 't4_u53_l04_d04'
+        }
+      ],
+      quizzes: [
+        {
+          type: 'multiple_choice',
+          question_th: 'สำนวน "历久弥新" (lìjiǔmíxīn) มีความหมายตรงกับคำภาษาอังกฤษว่าอะไร?',
+          options: [
+            'Timeless / Ever-fresh with the passage of time (ยิ่งเวลาผ่านไปนาน ยิ่งมีคุณค่าและสดใหม่)',
+            'Quickly outdated (ล้าสมัยอย่างรวดเร็ว)',
+            'Temporarily useful (มีประโยชน์ชั่วคราว)',
+            'Easily forgotten (ถูกลืมได้ง่าย)'
+          ],
+          correct_index: 0,
+          explanation_th: '"历久弥新" คือ วรรณกรรมหรือสัจธรรมที่แม้เวลาจะผ่านไปนานเพียงใด ก็ยังทรงคุณค่า สดใหม่ และประยุกต์ใช้ได้เสมอ',
+          encouragement: 'ยอดเยี่ยมมาก! เข้าใจสำนวนชั้นสูงได้อย่างแม่นยำ!'
+        },
+        {
+          type: 'sentence_scramble',
+          question_th: 'เรียงประโยค: "วรรณกรรมคลาสสิกทรงคุณค่าเหนือกาลเวลา จุดประกายความรู้สึกร่วมในใจมนุษย์"',
+          tokens: ['引发心灵共鸣', '文学经典历久弥新'],
+          correct_sequence: ['文学经典历久弥新', '引发心灵共鸣'],
+          pinyin: 'Wénxué jīngdiǎn lìjiǔmíxīn, yǐnfā xīnlíng gòngmíng.',
+          meaning_th: 'วรรณกรรมคลาสสิกทรงคุณค่าเหนือกาลเวลา จุดประกายความรู้สึกร่วมในใจมนุษย์',
+          explanation_th: 'คุณค่าไร้กาลเวลา (文学经典历久弥新) + ผลลัพธ์ต่อผู้อ่าน (引发心灵共鸣)',
+          encouragement: 'จัดประโยคบทสรุปวรรณกรรมได้อย่างงดงาม!'
+        },
+        {
+          type: 'radical_focus',
+          question_th: 'คำว่า "鸣" (míng - ร้อง/ส่งเสียง) ใน "共鸣" ประกอบด้วย "口" (ปาก) และ "鸟" (นก) สื่อถึงอะไร?',
+          options: [
+            'เสียงนกร้องตอบรับประสานเสียงกันอย่างไพเราะ สื่อถึงจิตใจที่สื่อถึงกันและเข้าใจกันอย่างลึกซึ้ง',
+            'นกกำลังบินหนีเสือ',
+            'การกินอาหารของนก',
+            'การสร้างรังนก'
+          ],
+          correct_index: 0,
+          explanation_th: '"口" (ปาก) + "鸟" (นก) = นกส่งเสียงร้องขับขาน เมื่อนกตัวหนึ่งร้อง อีกตัวก็ร้องรับ สื่อถึง "共鸣" (ความรู้สึกร่วมที่สอดประสาน)',
+          encouragement: 'เข้าใจรากศัพท์เสียงสะท้อนแห่งหัวใจได้อย่างลึกซึ้ง!'
+        },
+        {
+          type: 'multiple_choice',
+          question_th: 'คำว่า "民族脊梁" (Mínzú jǐliang - กระดูกสันหลังของชนชาติ) ในสุนทรพจน์ของหลู่ซวิ่น หมายถึงใคร?',
+          options: [
+            'ผู้คนที่ก้มหน้าก้มตาทำงานหนักเพื่อชาติ ผู้เสียสละเพื่อราษฎร และผู้กล้ายืนหยัดเพื่อความจริงโดยไม่หวั่นเกรงอันตราย',
+            'พ่อค้าวาณิชที่เห็นแก่เงินเพียงอย่างเดียว',
+            'ขุนนางที่คอยประจบสอพลอผู้มีอำนาจ',
+            'คนที่ยอมจำนนต่อศัตรู'
+          ],
+          correct_index: 0,
+          explanation_th: 'หลู่ซวิ่นกล่าวว่า "เรามีผู้คนที่ก้มหน้าทำงานหนัก มีผู้ที่ทุ่มเทเสียสละเพื่อส่วนรวม... คนเหล่านี้แหละคือกระดูกสันหลังของประเทศจีน (中国的脊梁)"',
+          encouragement: 'เข้าใจปรัชญาความเสียสละของมหาบุรุษได้อย่างลึกซึ้งกินใจ!'
+        }
+      ],
+      boss_challenge: {
+        question: 'ในปาฐกถาปิดการประชุมสภาวรรณกรรมโลก ประโยคใดสดุดีคุณค่าของวรรณคดีจีนสมัยใหม่ได้อย่างทรงเกียรติและสง่างามที่สุด?',
+        options: [
+          '中国近现代文学大师们以深邃的人文关怀挺拔起民族的精神脊梁，其思想启蒙的光辉历久弥新，必将在人类文明的长河中激荡起永恒的心灵共鸣！',
+          '将争议提交商事仲裁，积极斡旋协调，督促双方诚信履约并达成和解。',
+          '完善跨国企业合规审查体系，依法申请司法禁令与赔偿救济，防患未然。',
+          '登高望远不畏浮云，知己知彼百战不殆，和而不同互利共赢。'
+        ],
+        correct_index: 0,
+        explanation_th: 'ประโยคแรกผสาน "人文关怀", "民族的精神脊梁", "启蒙的光辉历久弥新" และ "永恒的心灵共鸣" ได้อย่างสมบูรณ์แบบ ไพเราะ และทรงเกียรติยศสูงสุด'
+      },
+      cheer_trophy: {
+        badge_name: 'ปราชญ์วรรณกรรมร่วมสมัยระดับตำนาน (Legendary Scholar of Contemporary Letters)',
+        message_th: 'ขอแสดงความยินดีด้วยอย่างยิ่ง! คุณได้พิชิตหน่วยเรียนวรรณคดีจีนสมัยใหม่และร่วมสมัยคัดสรรครบถ้วน ก้าวสู่จุดสูงสุดแห่งสุนทรียศาสตร์และการหยั่งรู้จิตวิญญาณมนุษยชาติ!',
+        xp_reward: 150
+      }
+    }
+  ]
+};

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)" />
+  <circle cx="256" cy="256" r="210" fill="#ECFDF5" opacity="0.15" />
+  <text x="50%" y="62%" font-size="260" text-anchor="middle" dominant-baseline="middle">🐰</text>
+  <text x="50%" y="88%" font-size="48" font-weight="bold" fill="#FDFBF7" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">Hanzero</text>
+</svg>
