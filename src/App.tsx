@@ -5,6 +5,10 @@ import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine'
 import { checkStorageHealth, StorageDiagnostics, loadStrokeCache } from './engines/storage';
 import { SRSGrade } from './types/srs';
 
+const DesktopSidebar = React.lazy(() =>
+  import('./components/layout/DesktopSidebar').then((m) => ({ default: m.DesktopSidebar }))
+);
+
 const DevStorageDrawer = React.lazy(() =>
   import('./components/layout/DevStorageDrawer').then((m) => ({ default: m.DevStorageDrawer }))
 );
@@ -196,58 +200,76 @@ export const App: React.FC = () => {
 
   return (
     <div
+      className="app-shell-desktop"
       style={{
         minHeight: '100vh',
         backgroundColor: 'var(--bg-rice-paper)',
         color: 'var(--text-ink-primary)',
-        display: 'flex',
-        flexDirection: 'column',
+        width: '100%',
       }}
     >
-      {/* In-App Browser Warning Alert */}
-      {showInAppAlert && (
-        <div
-          style={{
-            backgroundColor: '#FEF3C7',
-            borderBottom: '1px solid #F59E0B',
-            padding: '10px 16px',
-            fontSize: '12px',
-            color: '#92400E',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <span>⚠️ แนะนำให้เปิดด้วยเบราว์เซอร์ปกติ (Safari / Chrome) เพื่อการออกเสียงและบันทึกข้อมูลที่สมบูรณ์ 100%</span>
-          <button
-            onClick={() => setShowInAppAlert(false)}
-            style={{ border: 'none', background: 'transparent', cursor: 'pointer', fontWeight: 700 }}
-          >
-            ✕
-          </button>
-        </div>
-      )}
-
-      {/* Main Top HeaderBar */}
-      <HeaderBar
-        progress={userState.progress}
-        preferences={userState.preferences}
-        practiceCorrectCount={practiceCorrectCount}
-        onToggleSilentMode={() => updatePreferences({ silent_mode: !userState.preferences.silent_mode })}
-        onOpenDevDrawer={() => setShowDevDrawer(!showDevDrawer)}
-        onOpenReviewDeck={() => setCurrentView('review')}
-        dueCardsCount={srsQueueStatus.total_due_count}
-      />
-
-      {/* View 1: Quest Map */}
-      {currentView === 'map' && (
-        <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <QuestMap
-            progress={userState.progress}
-            onSelectLesson={handleSelectLesson}
-            onOpenReviewDeck={() => setCurrentView('review')}
+      {/* Persistent Left Navigation Sidebar (Desktop >= 1024px) */}
+      <div className="desktop-only-sidebar">
+        <React.Suspense fallback={null}>
+          <DesktopSidebar
+            currentView={currentView}
+            onNavigate={(view) => {
+              setCurrentView(view);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             dueCardsCount={srsQueueStatus.total_due_count}
             onOpenPassport={() => setShowPassportModal(true)}
+            onOpenTestPanel={() => setShowTestPanel(true)}
+          />
+        </React.Suspense>
+      </div>
+
+      {/* Main Workspace Area */}
+      <div className="app-main-workspace">
+        {/* In-App Browser Warning Alert */}
+        {showInAppAlert && (
+          <div
+            style={{
+              backgroundColor: '#FEF3C7',
+              borderBottom: '1px solid #F59E0B',
+              padding: '10px 16px',
+              fontSize: '12px',
+              color: '#92400E',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <span>⚠️ แนะนำให้เปิดด้วยเบราว์เซอร์ปกติ (Safari / Chrome) เพื่อการออกเสียงและบันทึกข้อมูลที่สมบูรณ์ 100%</span>
+            <button
+              onClick={() => setShowInAppAlert(false)}
+              style={{ border: 'none', background: 'transparent', cursor: 'pointer', fontWeight: 700 }}
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
+        {/* Main Top HeaderBar */}
+        <HeaderBar
+          progress={userState.progress}
+          preferences={userState.preferences}
+          practiceCorrectCount={practiceCorrectCount}
+          onToggleSilentMode={() => updatePreferences({ silent_mode: !userState.preferences.silent_mode })}
+          onOpenDevDrawer={() => setShowDevDrawer(!showDevDrawer)}
+          onOpenReviewDeck={() => setCurrentView('review')}
+          dueCardsCount={srsQueueStatus.total_due_count}
+        />
+
+        {/* View 1: Quest Map */}
+        {currentView === 'map' && (
+          <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+            <QuestMap
+              progress={userState.progress}
+              onSelectLesson={handleSelectLesson}
+              onOpenReviewDeck={() => setCurrentView('review')}
+              dueCardsCount={srsQueueStatus.total_due_count}
+              onOpenPassport={() => setShowPassportModal(true)}
             onSelectTier={updateTier}
             onOpenImmersionHub={() => setCurrentView('immersion')}
           />
@@ -556,6 +578,7 @@ export const App: React.FC = () => {
           <EngineTestPanel onClose={() => setShowTestPanel(false)} />
         </React.Suspense>
       )}
+      </div>
     </div>
   );
 };

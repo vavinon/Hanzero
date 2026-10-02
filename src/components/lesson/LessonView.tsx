@@ -149,16 +149,8 @@ export const LessonView: React.FC<LessonViewProps> = ({
 
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100%',
-        maxWidth: '520px',
-        margin: '0 auto',
-        padding: '12px 12px 100px 12px',
-        gap: '14px',
-      }}
+      className="lesson-view-responsive-container"
+      data-testid="lesson-view-container"
     >
       {/* Top Header Bar with Back Button */}
       <div
