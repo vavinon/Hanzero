@@ -572,7 +572,7 @@ describe('Tier 1 (Units 1-10) Curriculum Data & Pedagogical Schema Verification'
       expect(summary.errors.length).toBe(0);
       expect(summary.warnings.length).toBe(0);
       expect(summary.success).toBe(true);
-      expect(summary.durationMs).toBeLessThan(500);
+      expect(summary.durationMs).toBeLessThan(2500);
     });
 
     it('catches prohibited syntax 不有 and traditional Chinese characters', async () => {

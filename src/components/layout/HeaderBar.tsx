@@ -78,7 +78,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
         alignItems: 'center',
         justifyContent: 'space-between',
         width: '100%',
-        maxWidth: '520px',
+        maxWidth: 'var(--container-portal, 1280px)',
         margin: '0 auto',
       }}
     >

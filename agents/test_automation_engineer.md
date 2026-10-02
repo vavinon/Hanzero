@@ -46,14 +46,18 @@ graph TD
 - [ ] ทดสอบ Journey 2: ผู้ใช้เลือกข้ามไป Tier 1 $\rightarrow$ เล่นควิซ $\rightarrow$ เมื่อตอบผิดหัวใจลดลงถูกต้อง และแสดงหน้าต่างเตือนเมื่อหัวใจหมด
 - [ ] ทดสอบ Journey 3: วงจรทบทวน SRS (Flashcard Flip $\rightarrow$ Rate Ease Factor $\rightarrow$ ซิงก์ลง Storage)
 - [ ] ทดสอบ Journey 4: จำลองเบราว์เซอร์ไม่มีเสียงจีน $\rightarrow$ กล่องข้อความแจ้งเตือน Voice Health ปรากฏขึ้น
-- [ ] ทดสอบ Journey 5: Responsive Viewport กว้าง 320px เลย์เอาต์ไม่ล้น วรรณยุกต์พินอินไม่หลุดเฟรม
+- [ ] ทดสอบ Journey 5: Responsive Multi-Viewport Matrix:
+  * Desktop (1280x720 / 1440x900): แสดง Left Navigation Sidebar และ Dual-Pane Learning Workspace
+  * Mobile (320px–390px): เลย์เอาต์ไม่ล้น (`scrollWidth === clientWidth`), วรรณยุกต์พินอินไม่หลุดเฟรม, ปุ่มกด $\ge 44\text{px}$
+- [ ] ป้องกัน Strict Mode Violations: ระบุ `data-testid` ให้เป็นเอกลักษณ์ ไม่ทับซ้อนกันระหว่าง Desktop Sidebar และ Mobile Header
 
 ### 4. CI/CD Automated Quality Gate (GitHub Actions)
-- [ ] สคริปต์ `.github/workflows/deploy.yml` รัน 4 ขั้นตอนเรียงตามลำดับ:
-  1. `TypeCheck` (`tsc --noEmit`)
-  2. `Curriculum Lint` (`npm run validate:curriculum`)
-  3. `Unit Tests` (`npm test -- --run`)
-  4. `E2E Tests` (`npx playwright test`)
+- [ ] สคริปต์ `.github/workflows/deploy.yml` รัน 5 ขั้นตอนเรียงตามลำดับ:
+  1. `Stage 1 - TypeScript Strict TypeCheck` (`npx tsc --noEmit`)
+  2. `Stage 2 - Curriculum Schema & Pedagogical Linter` (`npm run validate:curriculum -- --strict`)
+  3. `Stage 3 - Vitest Engine & Unit Test Suite` (`npm test -- --run`)
+  4. `Stage 4 - Playwright E2E Test Suite` (`npx playwright test` Multi-Viewport)
+  5. `Stage 5 - Bundle Performance Budget Audit` (`npm run audit:bundle` JS $\le 100\text{KB}$, CSS $\le 20\text{KB}$)
 - [ ] บล็อกการ Deploy ขึ้น GitHub Pages โดยเด็ดขาดหากขั้นตอนใดขั้นตอนหนึ่งล้มเหลว
 
 ---

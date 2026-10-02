@@ -44,9 +44,12 @@
   --size-pinyin-body: 1.35rem;       /* 21.6px */
   --line-height-pinyin: 1.6;
 
-  /* Mobile Hitbox & Layout */
+  /* Layout & Responsive Tokens */
   --touch-target-min: 48px;          /* มาตรฐานนิ้วมือถือแตะสะดวกสูงสุด */
-  --max-app-width: 440px;            /* Centered Slate สไตล์ Mobile-First */
+  --max-app-width: 440px;            /* Mobile max-width fallback */
+  --sidebar-desktop-width: 256px;    /* Left Sticky Nav on Desktop >= 1024px */
+  --container-study: 1120px;         /* Split-screen study container */
+  --container-portal: 1280px;        /* Wide portal & immersion hub */
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -73,19 +76,93 @@ body {
   color: var(--text-ink-primary);
   line-height: 1.5;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
 }
 
 #root {
   width: 100%;
-  max-width: var(--max-app-width);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-rice-paper);
-  box-shadow: 0 0 50px rgba(44, 34, 20, 0.04);
   position: relative;
+}
+
+/* On mobile/narrow screens, keep optimal reading width if centered */
+@media (max-width: 1023px) {
+  #root {
+    max-width: 100%;
+  }
+  .desktop-only-sidebar {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-shell-desktop {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .app-main-workspace {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .quest-map-responsive-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 32px;
+    width: 100%;
+    max-width: var(--container-portal, 1280px);
+    margin: 0 auto;
+    align-items: start;
+    padding: 24px 24px 80px 24px;
+  }
+  .desktop-companion-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: sticky;
+    top: 80px;
+  }
+  .lesson-view-responsive-container {
+    width: 100%;
+    max-width: var(--container-study, 1120px);
+    margin: 0 auto;
+    padding: 20px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .quest-map-responsive-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 16px 12px 100px 12px;
+    gap: 18px;
+  }
+  .desktop-companion-panel {
+    display: none !important;
+  }
+  .lesson-view-responsive-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 12px 12px 100px 12px;
+    gap: 14px;
+  }
 }
 
 /* Buttons & Touch Accessibility */

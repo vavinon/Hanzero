@@ -8,7 +8,6 @@ import React, { useState } from 'react';
 import { Lock, Star, Crown, Play, CheckCircle2 } from 'lucide-react';
 import { ProgressState } from '../../engines/storage/types';
 import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
-import { tier0Units } from '../../data/lessons/tier0';
 
 const HsrQuestMap = React.lazy(() =>
   import('./HsrQuestMap').then((m) => ({ default: m.HsrQuestMap }))
@@ -35,22 +34,68 @@ interface MapNode {
   icon?: string;
 }
 
-const tier0UnitIcons = ['👄', '👅', '🎢', '⚡', '🎵', '🏆'];
-
-const tier0Nodes: MapNode[] = tier0Units.map((unit, idx) => {
-  const lesson = unit.lessons[0];
-  const isBoss = idx === 5;
-  return {
-    lessonId: lesson.lesson_id,
-    lessonNumber: `0.${idx + 1}`,
-    titleTh: unit.title.th,
-    titleCn: unit.title.zh,
-    isBoss,
-    xpReward: isBoss ? 150 : 25 + idx * 5,
-    unitId: unit.unit_id,
-    icon: tier0UnitIcons[idx],
-  };
-});
+const tier0Nodes: MapNode[] = [
+  {
+    lessonId: 't0_u01_l01',
+    lessonNumber: '0.1',
+    titleTh: 'ริมฝีปาก & ปลายลิ้น',
+    titleCn: '唇齿与舌尖音',
+    isBoss: false,
+    xpReward: 25,
+    unitId: 'tier0_u01',
+    icon: '👄',
+  },
+  {
+    lessonId: 't0_u02_l01',
+    lessonNumber: '0.2',
+    titleTh: 'โคนลิ้น & ลิ้นแตะเพดาน',
+    titleCn: '舌根与舌面前音',
+    isBoss: false,
+    xpReward: 30,
+    unitId: 'tier0_u02',
+    icon: '👅',
+  },
+  {
+    lessonId: 't0_u03_l01',
+    lessonNumber: '0.3',
+    titleTh: 'รถไฟเหาะ 4 วรรณยุกต์',
+    titleCn: '四声过山车',
+    isBoss: false,
+    xpReward: 35,
+    unitId: 'tier0_u03',
+    icon: '🎢',
+  },
+  {
+    lessonId: 't0_u04_l01',
+    lessonNumber: '0.4',
+    titleTh: 'ลิ้นม้วน VS ลิ้นแบน',
+    titleCn: '平翘舌音大决斗',
+    isBoss: false,
+    xpReward: 40,
+    unitId: 'tier0_u04',
+    icon: '⚡',
+  },
+  {
+    lessonId: 't0_u05_l01',
+    lessonNumber: '0.5',
+    titleTh: 'สระผสม & นาสิกกลิ่นผลไม้',
+    titleCn: '复韵母与鼻韵母',
+    isBoss: false,
+    xpReward: 45,
+    unitId: 'tier0_u05',
+    icon: '🎵',
+  },
+  {
+    lessonId: 't0_u06_l01',
+    lessonNumber: '0.6',
+    titleTh: '8 เส้นขีด & รากศัพท์มหัศจรรย์',
+    titleCn: '永字八法与字根',
+    isBoss: true,
+    xpReward: 150,
+    unitId: 'tier0_u06',
+    icon: '🏆',
+  },
+];
 
 const unit01Nodes: MapNode[] = [
   {
@@ -115,19 +160,18 @@ export const QuestMap: React.FC<QuestMapProps> = ({
   const completedSet = new Set(progress.completed_lessons);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width: '100%',
-        maxWidth: '520px',
-        margin: '0 auto',
-        padding: '16px 12px 100px 12px',
-        gap: '18px',
-      }}
-    >
-      {/* Tier Switcher Pills */}
+    <div className="quest-map-responsive-grid" data-testid="quest-map-container">
+      {/* Primary Column: Winding Quest Path */}
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '18px',
+        }}
+      >
+        {/* Tier Switcher Pills */}
       <div
         style={{
           display: 'flex',
@@ -842,6 +886,128 @@ export const QuestMap: React.FC<QuestMapProps> = ({
           />
         </React.Suspense>
       )}
+      </div>
+
+      {/* Secondary Column: Desktop Companion Dashboard (Sticky Right) */}
+      <aside className="desktop-companion-panel" data-testid="desktop-companion-dashboard">
+        {/* Daily Quests Card */}
+        <div
+          style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: 'var(--radius-md, 16px)',
+            border: '1.5px solid var(--border-card, #E2DBD0)',
+            padding: '18px 20px',
+            boxShadow: 'var(--shadow-card, 0 8px 28px -4px rgba(44, 34, 20, 0.05))',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+            <div style={{ fontWeight: 800, fontSize: '15px', color: 'var(--text-ink-primary, #1C1E21)', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>🎯</span>
+              <span>ภารกิจประจำวัน</span>
+            </div>
+            <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--color-jade-deep, #047857)' }}>
+              +{progress.streak.count > 0 ? 50 : 25} XP
+            </span>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <CheckCircle2 size={18} color="var(--color-jade-primary, #059669)" />
+              <div style={{ fontSize: '13px', color: 'var(--text-ink-primary, #1C1E21)' }}>
+                เรียนบทเรียนอย่างน้อย 1 บท ({progress.completed_lessons.length > 0 ? '1/1' : '0/1'})
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <CheckCircle2 size={18} color={dueCardsCount === 0 ? 'var(--color-jade-primary, #059669)' : 'var(--text-ink-muted, #9CA3AF)'} />
+              <div style={{ fontSize: '13px', color: 'var(--text-ink-primary, #1C1E21)' }}>
+                ทบทวนคลังคำศัพท์ SRS ให้ครบ
+              </div>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <CheckCircle2 size={18} color="var(--text-ink-muted, #9CA3AF)" />
+              <div style={{ fontSize: '13px', color: 'var(--text-ink-primary, #1C1E21)' }}>
+                ฝึกเขียนตัวอักษรจีน 5 ตัว
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* SRS Spaced Repetition Quick Widget */}
+        <div
+          style={{
+            backgroundColor: '#FFFFFF',
+            borderRadius: 'var(--radius-md, 16px)',
+            border: '1.5px solid var(--border-card, #E2DBD0)',
+            padding: '18px 20px',
+            boxShadow: 'var(--shadow-card, 0 8px 28px -4px rgba(44, 34, 20, 0.05))',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+            <div
+              style={{
+                width: '36px',
+                height: '36px',
+                borderRadius: 'var(--radius-sm, 10px)',
+                backgroundColor: 'rgba(16, 185, 129, 0.12)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px',
+              }}
+            >
+              🎴
+            </div>
+            <div>
+              <div style={{ fontWeight: 800, fontSize: '14px', color: 'var(--text-ink-primary, #1C1E21)' }}>
+                ระบบทบทวนระยะห่าง SRS
+              </div>
+              <div style={{ fontSize: '11px', color: 'var(--text-ink-secondary, #525866)' }}>
+                อัลกอริทึม SM-2 ป้องกันการลืม
+              </div>
+            </div>
+          </div>
+          <p style={{ fontSize: '12px', color: 'var(--text-ink-secondary, #525866)', lineHeight: 1.5, marginBottom: '14px' }}>
+            {dueCardsCount > 0
+              ? `มีคำศัพท์ถึงกำหนดทบทวน ${dueCardsCount} คำ ทบทวนตอนนี้เพื่อรักษาความจำระยะยาว!`
+              : 'ยอดเยี่ยมมาก! ไม่มีคำศัพท์ค้างทบทวนในระบบแล้ว'}
+          </p>
+          <button
+            onClick={onOpenReviewDeck}
+            className="btn-tactile-primary"
+            style={{ width: '100%', minHeight: '44px', fontSize: '13px', padding: '8px 16px' }}
+          >
+            {dueCardsCount > 0 ? `เริ่มทบทวน (${dueCardsCount} คำ)` : 'เปิดคลังทบทวนการ์ด'}
+          </button>
+        </div>
+
+        {/* Learning Statistics Summary */}
+        <div
+          style={{
+            backgroundColor: 'var(--bg-card-subtle, #F5F1EA)',
+            borderRadius: 'var(--radius-md, 16px)',
+            padding: '16px 20px',
+            border: '1px solid var(--border-subtle, #EAE5DE)',
+          }}
+        >
+          <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-ink-secondary, #525866)', marginBottom: '8px' }}>
+            สถิติการเรียนรู้ปัจจุบัน
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+            <div>
+              <div style={{ fontSize: '20px', fontWeight: 800, color: 'var(--color-jade-deep, #047857)' }}>
+                {progress.completed_lessons.length}
+              </div>
+              <div style={{ fontSize: '11px', color: 'var(--text-ink-muted, #9CA3AF)' }}>บทเรียนที่ผ่านแล้ว</div>
+            </div>
+            <div>
+              <div style={{ fontSize: '20px', fontWeight: 800, color: '#B45309' }}>
+                {progress.xp}
+              </div>
+              <div style={{ fontSize: '11px', color: 'var(--text-ink-muted, #9CA3AF)' }}>ค่าประสบการณ์ XP</div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
   );
 };

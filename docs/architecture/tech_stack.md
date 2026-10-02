@@ -72,13 +72,20 @@ graph TD
   * **Linter & Formatter:** ESLint + Prettier เพื่อความเป็นระเบียบและมาตรฐานโค้ด
   * **Test Runner:** Vitest สำหรับ Automated Unit Testing (Pure Engines ใน `src/engines/`)
 * **Design & Styling (Vanilla CSS Tokens):**
-  * **Design System:** สุนทรียศาสตร์เอเชียร่วมสมัย (**Modern Oriental Minimalist / Warm Ochre, Jade Green & Imperial Vermilion**)
+  * **Design System & Layout Architecture:** 
+    - สุนทรียศาสตร์เอเชียร่วมสมัย (**Modern Oriental Minimalist / Warm Ochre, Jade Green & Imperial Vermilion**)
+    - **Full Responsive Web Platform (Adaptive Multi-Screen Grid):**
+      * Desktop (>=1024px): Persistent Left Navigation Sidebar (256px), Top Utility HUD (Breadcrumbs & Gamification Stats), และ Zen Dual-Pane Master-Detail Workspace
+      * Tablet (768px-1023px): Flexible Icon-Rail Navigation
+      * Mobile (<=767px): Thumb-friendly bottom dock navigation พร้อม Accessible Touch Targets >= 44x44px
+    - ปลดล็อกข้อจำกัดเดิมที่เป็น Centered 440px Slate สู่ Fluid Container Max-bounds (1120px-1280px สำหรับการเรียนรู้)
   * **Font Subsetting Strategy (แก้ปัญหาฟอนต์ CJK ยักษ์):**
     * ภาษาไทย: `Prompt` หรือ `Noto Sans Thai`
     * อักษรจีน: `LXGW WenKai` / `Noto Sans SC` โดยใช้กลยุทธ์ **Google Fonts Dynamic Slice** หรือตัด Font Subset เฉพาะหมวดตัวอักษร HSK 1–3 เพื่อคุมขนาดไฟล์ไม่เกิน 300–500 KB ป้องกันหน้ากระพริบ (FOIT/FOUT)
     * ภาษาอังกฤษ/ตัวเลข: `Inter` หรือ `Outfit`
   * **Hanzi Legibility & Accessibility Standard:** 
     * กำหนดขนาดตัวอักษรจีนขั้นต่ำ `>= 36px` ใน Flashcard และ `>= 28px` ใน Quiz พร้อมปุ่ม Zoom Modal (120px)
+    * **HanziWriter Desktop Canvas Standard:** กำหนดขนาดแคนวาส 280px (ช่วง 260px-320px) บน Desktop วางในการ์ดกระดาษข้าว เพื่อรักษา 60fps และความแม่นยำทางสรีรวิทยาการลากเส้น
     * **Color-Blind Friendly Tone Design:** ระบบแสดง 4 วรรณยุกต์ต้องใช้เครื่องหมายกำกับเสียง (Contour marks: ¯ ˊ ˇ ˋ) หรือตัวเลขควบคู่กับสีเสมอ ไม่พึ่งพาเฉพาะสีเขียว/แดง
   * **Theme & Commute Mode:** รองรับ Dark/Light Mode และสวิตช์เปิด/ปิด Silent Mode สำหรับเรียนขณะเดินทาง
   * **60fps Mobile Performance:** บังคับใช้ GPU Layer สำหรับ Card Flip และการเปลี่ยนหน้า (`will-change: transform, opacity`, `transform: translateZ(0)`) ลด Main-thread layout thrashing

@@ -10,3 +10,4 @@ export * from './DailyCompletionModal';
 export * from './VoiceHealthModal';
 export * from './WelcomeModal';
 export * from './MilestonePassportModal';
+export * from './DesktopSidebar';
