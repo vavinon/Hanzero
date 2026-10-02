@@ -9,10 +9,10 @@
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Vitest](https://img.shields.io/badge/Tests-1176_Passed-6E9F18?logo=vitest&logoColor=white)](https://vitest.dev/)
 [![Playwright](https://img.shields.io/badge/Playwright_E2E-42_Passed-45BA4B?logo=playwright&logoColor=white)](https://playwright.dev/)
-[![Bundle Budget](https://img.shields.io/badge/Student_JS-99.8_KB-success)](https://github.com/)
+[![Bundle Budget](https://img.shields.io/badge/Student_JS-86.75_KB-success)](https://vavinon.github.io/Hanzero/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[🌐 ทดลองใช้งาน (Live Demo)](#) • [📖 เอกสารสถาปัตยกรรม (Docs)](./docs/README.md) • [🗺️ แผนแม่บท 8 เฟส](./docs/plan/README.md) • [🛠️ Content Studio](#-สตูดิโอสร้างบทเรียน-in-browser-content-authoring-studio)
+[🌐 ทดลองใช้งาน (Live Demo)](https://vavinon.github.io/Hanzero/) • [📖 เอกสารสถาปัตยกรรม (Docs)](./docs/README.md) • [🗺️ แผนแม่บท 8 เฟส](./docs/plan/README.md) • [🛠️ Content Studio](https://vavinon.github.io/Hanzero/?view=studio)
 
 </div>
 
@@ -176,8 +176,10 @@ npm run dev
 ```
 เปิดเบราว์เซอร์ไปที่ `http://localhost:5173/`
 
-### การเข้าสู่ Content Authoring Studio
-เปิด URL: `http://localhost:5173/?view=studio` หรือคลิกปุ่ม **"🛠️ Open Authoring Studio"** ในแผง Developer Storage Drawer ด้านล่างของหน้าจอ
+### 🌐 การเข้าใช้งานหน้าเว็บจริง (Production Deployment)
+- **เว็บแอปพลิเคชันหลัก (Hanzero Web App):** [https://vavinon.github.io/Hanzero/](https://vavinon.github.io/Hanzero/)
+- **สตูดิโอแต่งเนื้อหา (Content Authoring Studio):** [https://vavinon.github.io/Hanzero/?view=studio](https://vavinon.github.io/Hanzero/?view=studio)
+- รองรับทั้งการเข้าใช้งานผ่านคอมพิวเตอร์ (Desktop Responsive พร้อม Left Sidebar นำทาง) และโทรศัพท์มือถือ (Mobile-First Touch Ergonomics)
 
 ---
 
