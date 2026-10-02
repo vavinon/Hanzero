@@ -231,7 +231,8 @@ export const ImmersionArticleReader: React.FC<ImmersionArticleReaderProps> = ({
   return (
     <div
       style={{
-        maxWidth: 'var(--max-app-width, 440px)',
+        maxWidth: 'var(--container-reader, 840px)',
+        width: '100%',
         margin: '0 auto',
         minHeight: '100vh',
         backgroundColor: 'var(--bg-rice-paper, #FBF9F5)',
@@ -848,7 +849,7 @@ export const ImmersionArticleReader: React.FC<ImmersionArticleReaderProps> = ({
               left: 0,
               right: 0,
               margin: '0 auto',
-              maxWidth: 'var(--max-app-width, 440px)',
+              maxWidth: '640px',
               backgroundColor: '#FFFFFF',
               borderTopLeftRadius: '24px',
               borderTopRightRadius: '24px',

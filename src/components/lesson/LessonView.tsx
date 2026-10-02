@@ -120,16 +120,23 @@ export const LessonView: React.FC<LessonViewProps> = ({
   const [activeTab, setActiveTab] = useState<'vocab' | 'stroke' | 'dialogue' | 'grammar' | 'quiz'>('vocab');
   const [vocabIndex, setVocabIndex] = useState<number>(0);
   const [strokeChar, setStrokeChar] = useState<string>('你');
-  const [canvasSize, setCanvasSize] = useState<number>(() =>
-    typeof window !== 'undefined' ? Math.min(270, Math.max(220, window.innerWidth - 64)) : 270
+  const [isDesktop, setIsDesktop] = useState<boolean>(() =>
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : false
   );
+  const [canvasSize, setCanvasSize] = useState<number>(() => {
+    if (typeof window === 'undefined') return 270;
+    if (window.innerWidth >= 1024) return 280;
+    return Math.min(270, Math.max(220, window.innerWidth - 64));
+  });
 
   const currentVocab = vocabList[vocabIndex] || vocabList[0];
   const isPlayingRef = useRef<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setCanvasSize(Math.min(270, Math.max(220, window.innerWidth - 64)));
+      const desktop = window.innerWidth >= 1024;
+      setIsDesktop(desktop);
+      setCanvasSize(desktop ? 280 : Math.min(270, Math.max(220, window.innerWidth - 64)));
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -237,39 +244,151 @@ export const LessonView: React.FC<LessonViewProps> = ({
         })}
       </nav>
 
-      {/* Tab 1: VocabCard */}
+      {/* Tab 1: VocabCard (Zen Split-Pane Studio on Desktop) */}
       {activeTab === 'vocab' && (
-        <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
-          {/* Word Pills Selector */}
-          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', padding: '2px 0' }}>
-            {vocabList.map((item, idx) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => {
-                  playClick();
-                  setVocabIndex(idx);
-                }}
+        isDesktop ? (
+          <main className="lesson-split-studio" style={{ width: '100%' }}>
+            {/* Left Workspace: Word Selector + VocabCard */}
+            <div className="lesson-split-left-pane">
+              <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', padding: '2px 0', flexWrap: 'wrap' }}>
+                {vocabList.map((item, idx) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => {
+                      playClick();
+                      setVocabIndex(idx);
+                      if (item.hanzi) {
+                        const firstChar = Array.from(item.hanzi)[0];
+                        if (firstChar) setStrokeChar(firstChar);
+                      }
+                    }}
+                    style={{
+                      padding: '8px 16px',
+                      minHeight: '44px',
+                      borderRadius: 'var(--radius-full)',
+                      border: '1.5px solid',
+                      borderColor: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
+                      backgroundColor: vocabIndex === idx ? 'var(--color-jade-surface)' : '#FFFFFF',
+                      color: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                      fontWeight: 700,
+                      fontSize: '14px',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {item.hanzi}
+                  </button>
+                ))}
+              </div>
+
+              <VocabCard key={currentVocab.id} vocab={currentVocab} />
+            </div>
+
+            {/* Right Workspace: 280px Handwriting Canvas & Quick Stroke Studio */}
+            <div className="lesson-split-right-pane">
+              <div
                 style={{
-                  padding: '6px 14px',
-                  minHeight: '44px',
-                  borderRadius: 'var(--radius-full)',
-                  border: '1.5px solid',
-                  borderColor: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
-                  backgroundColor: vocabIndex === idx ? 'var(--color-jade-surface)' : '#FFFFFF',
-                  color: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
-                  fontWeight: 700,
-                  fontSize: '13px',
-                  cursor: 'pointer',
+                  backgroundColor: 'var(--bg-card)',
+                  borderRadius: 'var(--radius-lg)',
+                  padding: '24px 20px',
+                  boxShadow: 'var(--shadow-card)',
+                  border: '1.5px solid var(--border-card)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '16px',
+                  width: '100%',
+                  boxSizing: 'border-box',
                 }}
               >
-                {item.hanzi}
-              </button>
-            ))}
-          </div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <PenTool size={18} color="var(--color-jade-primary)" />
+                    <span style={{ fontSize: '14px', fontWeight: 800, color: 'var(--text-ink-primary)' }}>
+                      สตูดิโอคัดลายมือ (280px Canvas)
+                    </span>
+                  </div>
+                  <span style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
+                    ฝึกเขียนตัวอักษร
+                  </span>
+                </div>
 
-          <VocabCard key={currentVocab.id} vocab={currentVocab} />
-        </main>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                  {Array.from(currentVocab.hanzi).map((char) => (
+                    <button
+                      key={char}
+                      type="button"
+                      onClick={() => {
+                        playClick();
+                        setStrokeChar(char);
+                      }}
+                      style={{
+                        padding: '6px 14px',
+                        minHeight: '40px',
+                        borderRadius: 'var(--radius-full)',
+                        border: '1.5px solid',
+                        borderColor: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
+                        backgroundColor: strokeChar === char ? 'var(--color-jade-surface)' : '#FFFFFF',
+                        color: strokeChar === char ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                        fontWeight: 700,
+                        fontSize: '13px',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      {char}
+                    </button>
+                  ))}
+                </div>
+
+                <React.Suspense fallback={<HanziWriterSkeleton size={280} />}>
+                  <HanziWriterBox
+                    character={strokeChar || Array.from(currentVocab.hanzi)[0] || '你'}
+                    size={280}
+                    onComplete={() => {
+                      if (isPlayingRef.current) return;
+                      isPlayingRef.current = true;
+                      setTimeout(() => {
+                        isPlayingRef.current = false;
+                      }, 1000);
+                    }}
+                  />
+                </React.Suspense>
+              </div>
+            </div>
+          </main>
+        ) : (
+          <main style={{ display: 'flex', flexDirection: 'column', gap: '12px', width: '100%' }}>
+            {/* Word Pills Selector */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', padding: '2px 0' }}>
+              {vocabList.map((item, idx) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => {
+                    playClick();
+                    setVocabIndex(idx);
+                  }}
+                  style={{
+                    padding: '6px 14px',
+                    minHeight: '44px',
+                    borderRadius: 'var(--radius-full)',
+                    border: '1.5px solid',
+                    borderColor: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--border-subtle)',
+                    backgroundColor: vocabIndex === idx ? 'var(--color-jade-surface)' : '#FFFFFF',
+                    color: vocabIndex === idx ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                    fontWeight: 700,
+                    fontSize: '13px',
+                    cursor: 'pointer',
+                  }}
+                >
+                  {item.hanzi}
+                </button>
+              ))}
+            </div>
+
+            <VocabCard key={currentVocab.id} vocab={currentVocab} />
+          </main>
+        )
       )}
 
       {/* Tab 2: Hanzi Stroke Practice */}

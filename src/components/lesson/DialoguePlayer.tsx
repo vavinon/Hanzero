@@ -382,7 +382,7 @@ export const DialoguePlayer: React.FC<DialoguePlayerProps> = ({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        maxWidth: '440px',
+        maxWidth: '720px',
         margin: '0 auto',
         boxSizing: 'border-box',
         gap: '14px',

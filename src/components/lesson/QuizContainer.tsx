@@ -795,7 +795,7 @@ export const QuizContainer: React.FC<QuizContainerProps> = ({
           <div
             role="radiogroup"
             aria-label="ตัวเลือกคำตอบ"
-            style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}
+            className="quiz-options-grid"
           >
             {displayOptions.map((item, idx) => {
               const isSelected = selectedOption === idx;

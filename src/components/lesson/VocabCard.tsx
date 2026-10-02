@@ -507,7 +507,7 @@ export const VocabCard: React.FC<VocabCardProps> = ({
       className={`vocab-card-container ${className}`}
       style={{
         width: '100%',
-        maxWidth: '440px',
+        maxWidth: '680px',
         margin: '0 auto',
         ...style,
       }}

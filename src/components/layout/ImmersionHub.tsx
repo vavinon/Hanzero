@@ -160,140 +160,245 @@ export const ImmersionHub: React.FC<ImmersionHubProps> = ({
       </header>
 
       {/* Main Dynamic Workspace Area */}
-      <main className="flex-1 max-w-5xl w-full mx-auto px-3 sm:px-4 py-5">
+      <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Tab 1: Overview Dashboard */}
         {activeTab === 'overview' && (
-          <div className="flex flex-col gap-6" data-testid="hub-overview-content">
-            {/* Scholar Hero Greeting */}
-            <div className="p-5 sm:p-7 rounded-3xl bg-linear-to-r from-emerald-900 via-teal-900 to-slate-900 text-white shadow-lg relative overflow-hidden">
-              <div className="max-w-xl flex flex-col gap-2 relative z-10">
-                <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-300 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-500/30 w-fit">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  ยินดีต้อนรับสู่แดนปัญญาชน Hanzero Immersion
+          <div className="flex flex-col gap-8" data-testid="hub-overview-content">
+            {/* Imperial Scholar Hero Greeting (Modern Oriental Aesthetic) */}
+            <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-slate-950 via-emerald-950 to-stone-900 border border-amber-900/40 p-6 sm:p-10 text-white shadow-xl">
+              {/* Imperial Seal Stamp (ตราประทับราชสำนักฮั่นหลิน) */}
+              <div className="absolute right-4 sm:right-10 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none select-none">
+                <div
+                  style={{
+                    border: '3px solid rgba(220, 38, 38, 0.45)',
+                    backgroundColor: 'rgba(185, 28, 28, 0.12)',
+                    boxShadow: 'inset 0 0 20px rgba(220, 38, 38, 0.25)',
+                    writingMode: 'vertical-rl',
+                    fontFamily: 'var(--font-hanzi-hero, serif)',
+                  }}
+                  className="rounded-2xl p-4 sm:p-6 text-red-400/80 font-serif font-black tracking-widest text-2xl sm:text-4xl uppercase"
+                >
+                  翰林院印
                 </div>
-                <h1 className="text-2xl sm:text-3xl font-serif font-bold tracking-wide">
-                  ก้าวข้ามการเอาตัวรอด สู่ภาษาจีนขั้นสูงระดับมืออาชีพ
-                </h1>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  ฝึกฝนทักษะการอ่านบทความวิเคราะห์เจาะลึก, ถอดรหัสสำนวนโบราณ 4 ตัวอักษร,
-                  เปิดฟังพอดแคสต์สำเนียงสมจริง 0.75x–1.5x, และซ้อมพูดนำเสนอพร้อมระบบวัดคลื่นเสียง
-                </p>
               </div>
-              <div className="absolute right-4 bottom-2 text-7xl sm:text-8xl opacity-15 select-none font-serif">
-                龍
+
+              <div className="max-w-2xl flex flex-col gap-3 relative z-10">
+                <div className="inline-flex items-center gap-2 text-xs font-bold text-amber-300 bg-amber-950/70 border border-amber-600/40 px-3 py-1 rounded-full w-fit shadow-xs">
+                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  <span>หอวิชาการฮั่นหลิน · Imperial Scholar Academy (Tier 3 & 4)</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl font-serif font-extrabold tracking-wide leading-tight text-stone-100">
+                  เริ่มจาก 0 สู่ปัญญาชนจีนระดับมืออาชีพ
+                </h1>
+                <p className="text-xs sm:text-sm text-stone-300 leading-relaxed max-w-xl">
+                  ยินดีต้อนรับสู่หอเกียรติยศชั้นสูง ที่ซึ่งภาษาจีนไม่ได้มีไว้เพียงเพื่อเอาตัวรอด 
+                  แต่เพื่อซึมซับแก่นแท้แห่งวรรณกรรม ธุรกิจ สุภาษิต และสำเนียงธรรมชาติอย่างสง่างาม
+                </p>
+
+                {/* Academy Quick Stats Bar */}
+                <div className="flex flex-wrap items-center gap-3 pt-3 text-xs">
+                  <span className="px-3 py-1 rounded-xl bg-white/10 backdrop-blur-xs border border-white/15 text-emerald-300 font-semibold flex items-center gap-1.5">
+                    📜 คลังบทความ HSK 5–9
+                  </span>
+                  <span className="px-3 py-1 rounded-xl bg-white/10 backdrop-blur-xs border border-white/15 text-amber-300 font-semibold flex items-center gap-1.5">
+                    🏯 成语 Lore ม้วนคัมภีร์ & วิกฤต
+                  </span>
+                  <span className="px-3 py-1 rounded-xl bg-white/10 backdrop-blur-xs border border-white/15 text-teal-300 font-semibold flex items-center gap-1.5">
+                    🎙️ ห้องแล็บคลื่นเสียง 60fps
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* 4 Quest Portals Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {/* Card 1: Smart Immersion Reader */}
+            {/* Section Heading */}
+            <div className="flex items-center justify-between border-b border-stone-200/90 pb-3">
+              <div>
+                <h2 className="text-xl font-serif font-bold text-slate-900 tracking-wide flex items-center gap-2">
+                  <span>🏛️</span>
+                  <span>4 ปีกวิชาการแห่งฮั่นหลิน (Grand Scholar Portals)</span>
+                </h2>
+                <p className="text-xs text-slate-500 mt-1">
+                  เลือกโซนการเรียนรู้ที่ต้องการศึกษาเพื่อเปิดประสบการณ์แบบเต็มผืนจอ
+                </p>
+              </div>
+            </div>
+
+            {/* Grand Gallery Grid (2 คอลัมน์ขนาดใหญ่พร้อม Badge & Preview ชัดเจน) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Portal 1: Smart Immersion Reader */}
               <div
                 onClick={() => handleTabChange('reader')}
-                className="p-5 rounded-2xl bg-white border border-stone-200 hover:border-emerald-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group min-h-[160px]"
+                className="p-6 rounded-3xl bg-white border-2 border-stone-200 hover:border-emerald-600 hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col justify-between group relative overflow-hidden"
                 data-testid="quest-card-reader"
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
-                    <span className="p-2.5 rounded-xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                      <BookOpen className="w-5 h-5" />
+                    <span className="p-3 rounded-2xl bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-200 shadow-xs">
+                      <BookOpen className="w-6 h-6" />
                     </span>
-                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
-                      Intl.Segmenter
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300">
+                        HSK 5 · 4 นาที
+                      </span>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">
+                        Intl.Segmenter
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-base font-bold text-slate-800 group-hover:text-emerald-700 transition-colors">
-                    คลังบทความ Smart Immersion Reader
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    อ่านบทความจีนร่วมสมัยพร้อมระบบตัดคำอัจฉริยะ, ไฮไลต์สี HSK Heatmap, แตะดูคำแปล และกดบันทึกเข้า SRS
-                  </p>
+
+                  <div>
+                    <h3 className="text-lg font-serif font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                      📜 คลังบทความอรรถรสจริง (Smart Immersion Reader)
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mt-1">
+                      อ่านบทความเจรจาการค้าระหว่างประเทศ, สัญญาจัดซื้อ, และสารคดีวัฒนธรรม พร้อมระบบตัดคำอัจฉริยะ แตะดูคำแปล และส่งตรงเข้าคลัง SRS
+                    </p>
+                  </div>
+
+                  {/* Micro Preview Snip */}
+                  <div className="p-3 rounded-xl bg-stone-50 border border-stone-200/80 text-[11px] text-stone-600 line-clamp-2 italic font-serif">
+                    &ldquo;在跨国商务谈判中，双方本着互利共赢的原则开展合作，是促成签约的关键基石...&rdquo;
+                  </div>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-emerald-700">
-                  <span>เปิดอ่านบทความ</span>
+
+                <div className="flex items-center justify-between pt-4 mt-3 border-t border-stone-100 text-xs font-bold text-emerald-700 group-hover:text-emerald-800">
+                  <span className="flex items-center gap-1">
+                    เข้าสู่ห้องอ่านบทความวิเคราะห์
+                  </span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 
-              {/* Card 2: Idiom Lore & Dilemma Engine */}
+              {/* Portal 2: 成语 Lore & Dilemma Simulator */}
               <div
                 onClick={() => handleTabChange('idiom')}
-                className="p-5 rounded-2xl bg-white border border-stone-200 hover:border-amber-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group min-h-[160px]"
+                className="p-6 rounded-3xl bg-white border-2 border-stone-200 hover:border-amber-600 hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col justify-between group relative overflow-hidden"
                 data-testid="quest-card-idiom"
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
-                    <span className="p-2.5 rounded-xl bg-amber-50 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition-colors">
-                      <Scroll className="w-5 h-5" />
+                    <span className="p-3 rounded-2xl bg-amber-50 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-200 shadow-xs">
+                      <Scroll className="w-6 h-6" />
                     </span>
-                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
-                      Visual Novel Sim
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
+                        Visual Novel Lore
+                      </span>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">
+                        15+ สำนวนเอก
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-base font-bold text-slate-800 group-hover:text-amber-700 transition-colors">
-                    หอเกียรติยศสำนวนจีน 成语 Lore
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    เรียนรู้ที่มาสำนวนจีน 4 ตัวอักษรผ่านม้วนคัมภีร์โบราณ และทดสอบการตัดสินใจในสถานการณ์วิกฤตจำลอง
-                  </p>
+
+                  <div>
+                    <h3 className="text-lg font-serif font-bold text-slate-900 group-hover:text-amber-700 transition-colors">
+                      🏯 ปรัชญาและสำนวนจีนสุภาษิต (成语 Lore & Dilemma)
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mt-1">
+                      เจาะลึกที่มาสำนวน 4 ตัวอักษรผ่านภาพม้วนคัมภีร์โบราณ พร้อมจำลองสถานการณ์วิกฤตทางธุรกิจและการตัดสินใจเชิงกลยุทธ์
+                    </p>
+                  </div>
+
+                  {/* Micro Preview Snip */}
+                  <div className="p-3 rounded-xl bg-amber-50/60 border border-amber-200/80 text-[11px] text-amber-900 line-clamp-2 font-serif">
+                    ⚖️ <strong>กรณีจำลอง:</strong> ซัพพลายเออร์ส่งสินค้าช้า 10 วัน คุณจะใช้วิธี &quot;破釜沉舟&quot; หรือ &quot;居安思危&quot;?
+                  </div>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-amber-700">
-                  <span>เข้าสู่หอสำนวน</span>
+
+                <div className="flex items-center justify-between pt-4 mt-3 border-t border-stone-100 text-xs font-bold text-amber-700 group-hover:text-amber-800">
+                  <span className="flex items-center gap-1">
+                    เปิดม้วนคัมภีร์สำนวนจีน
+                  </span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 
-              {/* Card 3: Native Speed Podcast Ladder */}
+              {/* Portal 3: Commute Podcast & Native Speed Ladder */}
               <div
                 onClick={() => handleTabChange('podcast')}
-                className="p-5 rounded-2xl bg-white border border-stone-200 hover:border-teal-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group min-h-[160px]"
+                className="p-6 rounded-3xl bg-white border-2 border-stone-200 hover:border-teal-600 hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col justify-between group relative overflow-hidden"
                 data-testid="quest-card-podcast"
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
-                    <span className="p-2.5 rounded-xl bg-teal-50 text-teal-700 group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                      <Headphones className="w-5 h-5" />
+                    <span className="p-3 rounded-2xl bg-teal-50 text-teal-700 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-200 shadow-xs">
+                      <Headphones className="w-6 h-6" />
                     </span>
-                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-800">
-                      0.75x – 1.5x
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-teal-100 text-teal-900 border border-teal-300">
+                        0.75x · 1.0x · 1.5x
+                      </span>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">
+                        Ambient Sound
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-base font-bold text-slate-800 group-hover:text-teal-700 transition-colors">
-                    สถานีพอดแคสต์ & บันไดเสียงธรรมชาติ
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    ฝึกฟังบทสนทนาความเร็วสมจริง พร้อมเสียงบรรยากาศจำลอง (รถไฟใต้ดิน, คาเฟ่, ออฟฟิศ) และไฮไลต์คาราโอเกะ
-                  </p>
+
+                  <div>
+                    <h3 className="text-lg font-serif font-bold text-slate-900 group-hover:text-teal-700 transition-colors">
+                      🎙️ ห้องแล็บฝึกฟังความเร็วธรรมชาติ (Commute Podcast)
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mt-1">
+                      ไต่ระดับบันไดความเร็วเสียงเพื่อความคุ้นชินสำเนียงคนจีนจริง พร้อมแทร็กจำลองบรรยากาศรอบตัว (รถไฟฟ้า, คาเฟ่, ประชุมงาน)
+                    </p>
+                  </div>
+
+                  {/* Micro Preview Snip */}
+                  <div className="p-3 rounded-xl bg-teal-50/50 border border-teal-200/80 text-[11px] text-teal-900 flex items-center justify-between">
+                    <span>🎵 กำลังสตรีม: บทสนทนาการทำงานประจำวัน</span>
+                    <span className="font-mono font-bold text-teal-700">1.25x Active</span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-teal-700">
-                  <span>เปิดฟังพอดแคสต์</span>
+
+                <div className="flex items-center justify-between pt-4 mt-3 border-t border-stone-100 text-xs font-bold text-teal-700 group-hover:text-teal-800">
+                  <span className="flex items-center gap-1">
+                    เข้าสู่สถานีพอดแคสต์
+                  </span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
 
-              {/* Card 4: Voice Pitching & Shadowing 2.0 */}
+              {/* Portal 4: Voice Pitching & Shadowing 2.0 Studio */}
               <div
                 onClick={() => handleTabChange('voice')}
-                className="p-5 rounded-2xl bg-white border border-stone-200 hover:border-purple-500 hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group min-h-[160px]"
+                className="p-6 rounded-3xl bg-white border-2 border-stone-200 hover:border-purple-600 hover:shadow-xl transition-all duration-200 cursor-pointer flex flex-col justify-between group relative overflow-hidden"
                 data-testid="quest-card-voice"
               >
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <div className="flex items-center justify-between">
-                    <span className="p-2.5 rounded-xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                      <Mic className="w-5 h-5" />
+                    <span className="p-3 rounded-2xl bg-purple-50 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-200 shadow-xs">
+                      <Mic className="w-6 h-6" />
                     </span>
-                    <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-purple-100 text-purple-800">
-                      Canvas 60fps
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-purple-100 text-purple-900 border border-purple-300">
+                        Canvas 60fps
+                      </span>
+                      <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-stone-100 text-stone-700">
+                        Dual Waveform
+                      </span>
+                    </div>
                   </div>
-                  <h3 className="text-base font-bold text-slate-800 group-hover:text-purple-700 transition-colors">
-                    สตูดิโอฝึกพูดนำเสนอ & จำลองวิกฤต 2.0
-                  </h3>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    ฝึกซ้อมนำเสนอต่อเนื่อง 15–30 วิ พร้อมตรวจจับคลื่นเสียงสดบน Canvas และฟังก์ชันฟังเทียบเสียงผู้เรียนกับต้นแบบ
-                  </p>
+
+                  <div>
+                    <h3 className="text-lg font-serif font-bold text-slate-900 group-hover:text-purple-700 transition-colors">
+                      🗣️ เวทีฝึกออกเสียงสด (Voice Lab & Tone Matcher)
+                    </h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mt-1">
+                      ฝึกซ้อมนำเสนอยาว 15–30 วินาที ตรวจจับคลื่นเสียงความถี่สด และเทียบการผันเสียงวรรณยุกต์ (Tone Sandhi) อย่างแม่นยำ
+                    </p>
+                  </div>
+
+                  {/* Micro Preview Snip */}
+                  <div className="p-3 rounded-xl bg-purple-50/50 border border-purple-200/80 text-[11px] text-purple-900 flex items-center justify-between">
+                    <span>📊 ระบบวิเคราะห์ Pitch Waveform ความแม่นยำสูง</span>
+                    <span className="font-semibold text-purple-700">พร้อมอัดเสียง</span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-between pt-3 border-t border-stone-100 text-xs font-semibold text-purple-700">
-                  <span>เข้าห้องอัดเสียง</span>
+
+                <div className="flex items-center justify-between pt-4 mt-3 border-t border-stone-100 text-xs font-bold text-purple-700 group-hover:text-purple-800">
+                  <span className="flex items-center gap-1">
+                    เข้าสู่สตูดิโอฝึกพูดสด
+                  </span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
