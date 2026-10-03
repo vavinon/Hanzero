@@ -16,12 +16,13 @@ import {
   Palette,
   FlaskConical,
   Award,
+  Library,
 } from 'lucide-react';
 import bunnyImg from '../../assets/brand/mascot_bunny.jpg';
 
 export interface DesktopSidebarProps {
-  currentView: 'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion';
-  onNavigate: (view: 'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion') => void;
+  currentView: 'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion' | 'vocab';
+  onNavigate: (view: 'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion' | 'vocab') => void;
   dueCardsCount?: number;
   onOpenPassport?: () => void;
   onOpenTestPanel?: () => void;
@@ -36,9 +37,16 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
 }) => {
   const navItems = [
     {
+      id: 'vocab' as const,
+      label: 'คลังคำศัพท์ HSK 3.0',
+      sublabel: 'ค้นหา & ฟังเสียง ระดับ 1-9',
+      icon: Library,
+      testId: 'nav-item-vocab',
+    },
+    {
       id: 'map' as const,
-      label: 'แผนที่การเรียนรู้',
-      sublabel: 'Quest Map (T0 - T2)',
+      label: 'สารบัญบทเรียน',
+      sublabel: 'Course Curriculum (T0 - T2)',
       icon: Compass,
       testId: 'nav-item-map',
     },

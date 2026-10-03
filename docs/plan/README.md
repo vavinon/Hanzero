@@ -1,57 +1,63 @@
-# 📋 Hanzero Execution & Verification Roadmap
+# 🗺️ Hanzero Realignment & Rebuilding Master Plan (`docs/plan/README.md`)
 
-ศูนย์รวมแผนปฏิบัติการ (Actionable Execution Plans) และเกณฑ์การตรวจรับงาน (Quality Gates & Verification Checklists) สำหรับการพัฒนาแพลตฟอร์ม **Hanzero (ฮั่นซีโร่)** ตามมาตรฐานการกำกับดูแลของ Senior Product Manager
-
----
-
-## 🎯 ปรัชญาการพัฒนาและการตรวจรับงาน (Core Principles)
-1. **Bite-Sized Slicing:** แบ่งงานเป็นหน่วยเล็กและเป็นอิสระต่อกัน เพื่อให้ตรวจสอบได้จริงในทุกขั้นตอน
-2. **Quality Gate Before Next Phase:** แต่ละ Phase มีเกณฑ์การตรวจรับ (Acceptance Criteria) ที่ชัดเจน ต้องผ่านการทดสอบก่อนจึงจะข้ามไปเฟสถัดไป
-3. **Engineering Vertical Slice First:** สร้าง Phase 2 (Unit 1) เพื่อเป็นแม่แบบทดสอบความสมบูรณ์ของคอมโพเนนต์ (Golden Template) ก่อนผสาน Onboarding และขยายเนื้อหาทั้งหมด
-4. **Pedagogical Protection (Safe Practice Zone):** ในระดับปูพื้นฐาน Tier 0 ไม่มีการตัดหัวใจ เพื่อไม่ให้ผู้เรียนท้อถอยจากการฝึกฟังวรรณยุกต์
-5. **Zero-Cost Constraint & Resilience:** ทุกระบบทำงาน 100% บน Client-side ฟรีตลอดชีพ พร้อมระบบรับมือเสียงขาดหายบน Safari/Android (Static Audio Fallback Pack)
-6. **Anti-Churn & Daily Habit Design:** ป้องกันอาการหมดไฟด้วย Daily Review Cap (สูงสุด 20 คำ/วัน) และ PWA ป้องกันข้อมูลหายบน Safari
+เอกสารฉบับนี้คือ **แผนแม่บทฉบับปรับทัพใหม่ (Realignment Blueprint)** สำหรับ Hanzero เพื่อดึงทิศทางของแพลตฟอร์มกลับมาสู่ **"เว็บเรียนภาษาจีนที่สอนเข้าใจง่าย ได้ผลจริง และมีคลังคำศัพท์ HSK 3.0 ครบถ้วน"** แทนระบบเกมแฟนตาซีเดิม
 
 ---
 
-## 🗺️ แผนผัง 8 เฟสการพัฒนา (The 8 Execution Phases)
+## 🏗️ แผนการพัฒนา 4 เฟสหลัก (Streamlined 4-Phase Roadmap)
 
 ```mermaid
 graph LR
-    P1["⚙️ Phase 1<br/>Foundations & Engines"] --> P2["📖 Phase 2<br/>Vertical Slice (Unit 1)"]
-    P2 --> P3["🎮 Phase 3<br/>Gamification & SRS"]
-    P3 --> P4["🌱 Phase 4<br/>Tier 0 Pinyin Mastery"]
-    P4 --> P5["🌿 Phase 5<br/>Tier 1 Rollout & Launch"]
-    P5 --> P6["🛠️ Phase 6<br/>Content Authoring Studio"]
-    P6 --> P7["🎋 Phase 7<br/>Tier 2 Traveler Quest"]
-    P7 --> P8["🐉 Phase 8<br/>Tier 3-4 Advanced Immersion"]
+    P1["📦 Phase 1: HSK 3.0 Vocab Library<br/>(คลังคำศัพท์ ค้นหา ฟังเสียง กรองตามระดับ)"] --> P2["📑 Phase 2: Open Course Directory<br/>(สารบัญหลักสูตรเปิดกว้าง เลือกเรียนได้อิสระ)"]
+    P2 --> P3["📖 Phase 3: Guided Step-by-Step Lesson<br/>(ระบบสอนทีละคำ เข้าใจง่าย จำได้จริง)"]
+    P3 --> P4["🎴 Phase 4: Integrated SRS & Mini-game Drills<br/>(ระบบทบทวนศัพท์ และมินิเกมฝึกความจำ)"]
 ```
 
 ---
 
-## 📂 สารบัญเอกสารแผนงานรายเฟส
+## 📌 รายละเอียดของแต่ละเฟส
 
-| เฟส | เอกสารแผนงาน | ขอบเขตงานหลัก | สถานะ | การตรวจสอบ & ส่งมอบ |
-| :---: | :--- | :--- | :---: | :--- |
-| **Phase 1** | [phase_01_web_foundation_engines.md](./phase_01_web_foundation_engines.md) | Scaffolding, PWA (`vite-plugin-pwa`), CJK Font Subsetting, Hanzi Legibility (>=36px), Accessible Tones, Audio Resilience & Static Audio Fallback Pack (~2MB), Canvas ล้าง Memory | `DONE` ✅ | แผงทดสอบ `EngineTestPanel` แสดงสถานะเสียงจีน, ทดสอบปลดล็อกเสียง iOS และทดสอบ Static Audio สำเร็จ |
-| **Phase 2** | [phase_02_unit1_lesson_experience.md](./phase_02_unit1_lesson_experience.md) | **Engineering Vertical Slice:** บทเรียน Unit 1 (4 Lessons), การ์ดคำ 3 ภาษา + ปุ่มขยายเส้นขีด, **Progressive Pinyin Fading**, Dialogue, Silent Mode Quiz | `DONE` ✅ | เรียนและทดสอบจบ Unit 1 สลับโหมดเงียบและสลับซ่อนพินอินได้ราบรื่น ตรวจสอบภาษา 100% |
-| **Phase 3** | [phase_03_gamification_srs.md](./phase_03_gamification_srs.md) | แผนที่ Quest Map, แดชบอร์ดหัวใจ + **Safe Practice Zone**, SM-2 SRS พร้อม **Daily Cap (20 คำ) & Backlog Triage**, IndexedDB Mirror & JSON Backup | `DONE` ✅ | ตอบผิดใน Tier 0 ไม่เสียหัวใจ, การ์ดไม่ล้นเกิน 20 คำ/วัน, สำรอง/กู้คืนข้อมูลและปลอดภัยจาก Safari Purge |
-| **Phase 4** | [phase_04_tier0_pinyin_mastery.md](./phase_04_tier0_pinyin_mastery.md) | **First-Run Onboarding & Voice Health:** ตรวจสุขภาพเสียง OS (Zero-MP3 Architecture), ปูพื้นฐานเสียงครบถ้วน 6 Units (Tier 0 รวมสระผสมและสระนาสิก), Bunny Tone Coaster, **Client-side Echo Mic (Shadowing)**, **Shareable Passport Card** | `DONE` ✅ | ผู้เรียนเข้า Onboarding ถูกต้อง, ตรวจจับชุดเสียง OS แนะนำติดตั้งได้ตรงรุ่น, แยก 4 วรรณยุกต์ได้แม่นยำ, อัดฟังเทียบเสียงตนเองได้ และแชร์รูปความสำเร็จได้ |
-| **Phase 5** | [phase_05_tier1_content_rollout.md](./phase_05_tier1_content_rollout.md) | ปล่อยเนื้อหา Tier 1 ครบ 10 Units (40 บทย่อย), กฎ Interleaving 20%, **Zero-Knowledge Alpha Playtest**, CI/CD GitHub Pages & Product KPIs | `DONE` ✅ | Schema Validation ผ่าน 100%, ผู้ใช้ทดสอบ Alpha ผ่านเกณฑ์ (SUS 86.25), Deploy อัตโนมัติบน GitHub Pages สำเร็จ |
-| **Phase 6** | [phase_06_content_authoring_studio.md](./phase_06_content_authoring_studio.md) | **Content Authoring Studio:** Web GUI สร้างบทเรียน/ควิซ, Auto Pinyin/Tone Linting, Stroke Validator, Live Mobile Preview, Export & 1-Click GitHub PR | `DONE` ✅ | สร้าง Unit ใหม่และส่งออก JSON ผ่านการตรวจ Linter 100% พร้อม Playwright E2E 15 Scenarios และ Zero-Token Git Hand-off |
-| **Phase 7** | [phase_07_tier2_traveler_quest.md](./phase_07_tier2_traveler_quest.md) | **Tier 2 Content Rollout (Units 11-25):** เอาตัวรอดในยุคดิจิทัล (สแกนจ่าย, รถไฟ, สั่งเดลิเวอรี่), Branching Dialogues, Grammar Slot Sandboxes (把/被), HSR Metro Map | `DONE` ✅ | Units 11–25 ครบ 15 หน่วย, Branching Scenario & Grammar Slot Builder, HsrQuestMap 4 มหานครพร้อมตั๋วประทับตราดิจิทัล และ Playwright E2E ผ่าน 100% |
-| **Phase 8** | [phase_08_tier3_4_advanced_immersion.md](./phase_08_tier3_4_advanced_immersion.md) | **Tier 3-4 Advanced Immersion (Units 26-57):** เจรจาธุรกิจ, Smart Immersion Reader (`Intl.Segmenter`), 成语 Lore & Dilemma Engine, Native Speed Audio Ladder (0.75x–1.5x), Voice Pitching 2.0 & Immersion Hub | `DONE` ✅ | Units 26–57 ครบ 32 หน่วย (HSK 5-9), Immersion Hub 4 นวัตกรรม, Voice Pitching 2.0 บน Canvas 60fps, Playwright E2E ผ่าน 100% และ Vitest 1,176/1,176 ผ่านสมบูรณ์ |
+### 📦 Phase 1: คลังคำศัพท์ HSK 3.0 & Search Explorer (`/vocab`)
+* **เป้าหมาย:** สร้างหน้าแรกที่ผู้เรียนภาษาจีนทุกคนต้องมี — หน้าพจนานุกรม/คลังคำศัพท์ที่เปิดดูและค้นหาได้อิสระ
+* **งานที่ต้องทำ:**
+  1. สร้าง UI Component `VocabLibraryView`:
+     - Search Bar (พิมพ์ไทย, พินอิน, จีน)
+     - Level Tabs: ทั้งหมด, HSK 1, HSK 2, เอาชีวิตรอดในจีน
+     - Category Tags: อาหาร, ทักทาย, ตัวเลข, การเดินทาง ฯลฯ
+  2. การ์ดแสดงผลคำศัพท์: ตัวอักษรจีนใหญ่คมชัด, พินอิน, ปุ่มฟังเสียง TTS ปกติ/ช้า, คำแปล, ตัวอย่างประโยค
+  3. ปุ่มเชื่อมโยง "คัดลายมือ (HanziWriter)" และ "เพิ่มเข้าคลังทบทวน (Add to SRS)"
+  4. เพิ่มเมนู "📚 คลังคำศัพท์" บน Navigation Sidebar
 
 ---
 
-## 🛡️ เกณฑ์การตรวจรับคุณภาพรวม (General Quality Assurance Gate)
+### 📑 Phase 2: สารบัญบทเรียนเปิดกว้าง (Open Course Directory / Home)
+* **เป้าหมาย:** ปรับหน้าแรกของเว็บจาก Quest Map RPG เดิม ให้กลายเป็นสารบัญบทเรียน (Course Catalog) ที่จัดระเบียบชัดเจน
+* **งานที่ต้องทำ:**
+  1. ปรับ `QuestMap` หรือสร้าง `CourseDirectoryView`:
+     - จัดกลุ่มตามแทร็ก:
+       - 🌱 **Tier 0: ปูพื้นฐานพินอิน & เสียง** (6 บทเรียน)
+       - 🌿 **Tier 1: เอาตัวรอดในชีวิตประจำวัน** (10 บทเรียน)
+       - 🎋 **Tier 2: ท่องเที่ยว & ชีวิตในจีน** (บทเรียนขั้นต่อยอด)
+  2. **ปลดล็อกทุกบทเรียน:** ผู้เรียนสามารถกดเข้าเรียนบทใดก็ได้ตามความสนใจทันที
+  3. แสดงการ์ดบทเรียนที่บอกชัดเจนว่า: *"บทนี้เรียนศัพท์อะไรบ้าง"* พร้อมจำนวนคำศัพท์
 
-ก่อนจะขยับข้ามเฟส ทีมพัฒนาต้องยืนยันว่า:
-- [x] **Zero Console Errors:** ไม่มีข้อผิดพลาดสีแดงหรือ Memory Leak บน Browser Console
-- [x] **Audio Resilience & Static Fallback:** ทดสอบทั้งกรณีมีและไม่มีเสียง `zh-CN` ในเครื่อง โดย Tier 0 มีระบบสังเคราะห์ Sine Wave Tone Contour และ Static Fallback เล่นได้ 100% แม้ออฟไลน์
-- [x] **Hanzi Legibility & Accessibility:** ขนาดตัวอักษรจีนขั้นต่ำไม่ต่ำกว่า 28px ในแบบฝึกหัด และ 36px ในบัตรคำ พร้อมปุ่ม Zoom และมีสัญลักษณ์/ตัวเลขกำกับวรรณยุกต์รองรับผู้มีภาวะตาบอดสี
-- [x] **Safe Practice Zone Active:** ไม่มีการหักหัวใจในหมวดฝึกฟังเสียงและ Tier 0
-- [x] **Performance 60fps & Font Fast Load:** ฟอนต์ภาษาจีนผ่านการทำ Subsetting และโหลดเร็ว Bundle CSS < 20 KB
-- [x] **Data Persistence & Safari Protection:** ข้อมูลผู้เรียนซิงก์คู่ขนาน LocalStorage + IndexedDB ไม่สูญหายเมื่อหยุดเล่นเกิน 7 วัน และรองรับการติดตั้งแบบ PWA
-- [x] **Pedagogical Accuracy:** ยึดตามหลักสูตรใน [docs/curriculum/](../curriculum) และสเปกใน [docs/prd/02_feature_specs.md](../prd/02_feature_specs.md) เสมอ
+---
 
+### 📖 Phase 3: ระบบการสอนแบบเป็นสเต็ป (Step-by-Step Guided Lesson Engine)
+* **เป้าหมาย:** รื้อหน้า `LessonView` จาก 5 แท็บที่เคว้ง ให้กลายเป็น Guided Stepper ที่พาผู้เรียนเรียนจริง
+* **งานที่ต้องทำ:**
+  1. สร้าง Stepper Navigation:
+     - **Step 1 (คำศัพท์ทีละคำ):** โชว์ทีละคำพร้อมเสียง พินอิน ภาพจำ และปุ่มคัดลายมือ
+     - **Step 2 (ประโยคบริบท):** ฟังบทสนทนาที่ใช้คำศัพท์นั้น
+     - **Step 3 (มินิเกมฝึกความจำ):** มินิเกมสั้น 3-4 ข้อ (จับคู่, เรียงประโยค) ไม่มีการตัดหัวใจ
+     - **Step 4 (สรุปคำศัพท์วันนี้):** หน้าสรุปคำศัพท์ที่ได้เรียนวันนี้ทั้งหมด
+  2. ซิงค์คำศัพท์ที่เรียนผ่านเข้าสู่ SRS Database อัตโนมัติ
+
+---
+
+### 🎴 Phase 4: ระบบทบทวน SRS & ล้างโค้ดส่วนเกิน (Clean & Polish)
+* **เป้าหมาย:** ปรับปรุงระบบทบทวน SRS ให้เชื่อมโยงกับคลังคำศัพท์ และถอดโค้ดส่วนเกินของระบบเกมเดิมออก
+* **งานที่ต้องทำ:**
+  1. ปรับปรุงหน้า `ReviewDeck` ให้แสดงผลสวยงาม สอดคล้องกับคลังคำศัพท์
+  2. ตัดการทำงานของระบบตัดหัวใจ (Heart Deduction) และระบบล็อกบทเรียน
+  3. ทำการตรวจสอบ Build และ TypeScript ให้คลีน 100% พร้อม Deploy สู่ GitHub Pages

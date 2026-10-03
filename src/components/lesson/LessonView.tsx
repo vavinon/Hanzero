@@ -479,7 +479,7 @@ export const LessonView: React.FC<LessonViewProps> = ({
             bossChallenge={boss}
             cheerTrophy={trophy}
             initialHearts={currentHearts ?? 5}
-            isSafeZone={isTier0 || unit01Data.tier === 0}
+            isSafeZone={true}
             onComplete={handleQuizComplete}
             onHeartLost={onHeartLost}
           />

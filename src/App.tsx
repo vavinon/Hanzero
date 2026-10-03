@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HeaderBar, QuestMap } from './components/layout';
+import { HeaderBar } from './components/layout';
 import { useUserState } from './hooks/useUserState';
 import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine';
 import { checkStorageHealth, StorageDiagnostics, loadStrokeCache } from './engines/storage';
@@ -61,6 +61,14 @@ const ImmersionHub = React.lazy(() =>
   import('./components/layout/ImmersionHub').then((m) => ({ default: m.ImmersionHub }))
 );
 
+const VocabLibraryView = React.lazy(() =>
+  import('./components/vocab/VocabLibraryView').then((m) => ({ default: m.VocabLibraryView }))
+);
+
+const CourseDirectoryView = React.lazy(() =>
+  import('./components/directory/CourseDirectoryView').then((m) => ({ default: m.CourseDirectoryView }))
+);
+
 const LessonViewSkeleton: React.FC = () => (
   <div style={{ textAlign: 'center', padding: '60px 20px', color: 'var(--text-ink-secondary)' }}>
     <div style={{ fontSize: '32px', marginBottom: '12px' }}>📖🐰</div>
@@ -78,16 +86,18 @@ export const App: React.FC = () => {
     completeLesson,
     recordCardReview,
     updatePreferences,
-    updateTier,
     completeOnboarding,
     refreshQueue,
     deductHeart,
   } = useUserState();
 
-  // Router View: 'map' (Quest Path) | 'lesson' (Study Tabs) | 'review' (SRS Deck) | 'studio' (Content Studio) | 'reader' (Smart Reader) | 'idiom' (Idiom Lore & Dilemma) | 'podcast' (Commute Podcast) | 'immersion' (Imperial Scholar Hub)
-  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion'>(() => {
+  // Router View: 'vocab' (HSK 3.0 Library) | 'map' (Course Directory) | 'lesson' (Study) | 'review' (SRS Deck) | etc.
+  const [currentView, setCurrentView] = useState<'map' | 'lesson' | 'review' | 'studio' | 'reader' | 'idiom' | 'podcast' | 'immersion' | 'vocab'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
+      if (params.get('view') === 'vocab' || params.get('vocab') === '1') {
+        return 'vocab';
+      }
       if (params.get('view') === 'studio' || params.get('studio') === '1') {
         return 'studio';
       }
@@ -107,7 +117,7 @@ export const App: React.FC = () => {
         return 'immersion';
       }
     }
-    return 'map';
+    return 'vocab'; // Start with HSK 3.0 Vocab Library or Course Directory
   });
   const [activeLessonId, setActiveLessonId] = useState<string>('t1_u01_l01');
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
@@ -261,20 +271,54 @@ export const App: React.FC = () => {
           dueCardsCount={srsQueueStatus.total_due_count}
         />
 
-        {/* View 1: Quest Map */}
+        {/* View 0: HSK 3.0 Master Vocabulary Library */}
+        {currentView === 'vocab' && (
+          <main style={{ flex: 1, width: '100%' }}>
+            <React.Suspense
+              fallback={
+                <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                  กำลังเปิดคลังคำศัพท์ HSK 3.0... 📚🐰
+                </div>
+              }
+            >
+              <VocabLibraryView
+                onBackToDirectory={() => setCurrentView('map')}
+                onAddVocabToSrs={async (word) => {
+                  await addVocabToSrs([
+                    {
+                      word_id: word.id,
+                      hanzi: word.hanzi,
+                      pinyin: word.pinyin,
+                      meaning_th: word.meaning_th,
+                      meaning_en: word.meaning_en,
+                      mnemonic: word.mnemonic_th,
+                    },
+                  ]);
+                }}
+                existingSrsHanzis={srsCards.map((c) => c.hanzi)}
+              />
+            </React.Suspense>
+          </main>
+        )}
+
+        {/* View 1: Open Course Directory */}
         {currentView === 'map' && (
           <main style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-            <QuestMap
-              progress={userState.progress}
-              onSelectLesson={handleSelectLesson}
-              onOpenReviewDeck={() => setCurrentView('review')}
-              dueCardsCount={srsQueueStatus.total_due_count}
-              onOpenPassport={() => setShowPassportModal(true)}
-            onSelectTier={updateTier}
-            onOpenImmersionHub={() => setCurrentView('immersion')}
-          />
-        </main>
-      )}
+            <React.Suspense
+              fallback={
+                <div style={{ textAlign: 'center', padding: '60px', color: 'var(--text-ink-secondary)' }}>
+                  กำลังเปิดสารบัญบทเรียน... 📑🐰
+                </div>
+              }
+            >
+              <CourseDirectoryView
+                onSelectLesson={handleSelectLesson}
+                completedLessons={userState.progress.completed_lessons}
+                onOpenVocabLibrary={() => setCurrentView('vocab')}
+              />
+            </React.Suspense>
+          </main>
+        )}
 
       {/* View 2: Unit 1 Lesson View */}
       {currentView === 'lesson' && (
