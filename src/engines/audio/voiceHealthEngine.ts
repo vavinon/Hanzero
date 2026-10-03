@@ -252,14 +252,14 @@ export async function inspectVoiceHealth(): Promise<VoiceHealthState> {
   };
 }
 
-let lastSamplePlayTime = 0;
+let lastSamplePlayTime = -1000;
 const SAMPLE_DEBOUNCE_MS = 250;
 
 /**
  * Resets internal state for unit testing.
  */
 export function _resetVoiceHealthEngineForTesting(): void {
-  lastSamplePlayTime = 0;
+  lastSamplePlayTime = -1000;
 }
 
 /**
