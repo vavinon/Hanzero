@@ -8,7 +8,7 @@
  * Adheres strictly to AGENTS.md §4.2 and docs/architecture/zero_mp3_audio_health_blueprint.md.
  */
 
-import { speak, playToneContour } from './audioEngine';
+import * as audioEngine from './audioEngine';
 
 export type VoiceHealthGrade = 'optimal' | 'good' | 'fallback' | 'unsupported';
 export type ClientOS = 'windows' | 'mac' | 'ios' | 'android' | 'other';
@@ -275,12 +275,12 @@ export async function playSamplePhrase(phrase = DEFAULT_SAMPLE_PHRASE): Promise<
 
   try {
     let hadError = false;
-    await speak(phrase, {
+    await audioEngine.speak(phrase, {
       rate: 0.85,
       pitch: 1.0,
       onError: () => {
         hadError = true;
-        playToneContour(1, 0.25);
+        audioEngine.playToneContour(1, 0.25);
       },
     });
     if (hadError) {
@@ -288,7 +288,7 @@ export async function playSamplePhrase(phrase = DEFAULT_SAMPLE_PHRASE): Promise<
     }
     return true;
   } catch {
-    playToneContour(1, 0.25);
+    audioEngine.playToneContour(1, 0.25);
     return false;
   }
 }
