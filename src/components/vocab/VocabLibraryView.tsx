@@ -5,8 +5,8 @@
  * audio pronunciation playback (Normal/Slow), and adding to SRS.
  */
 
-import React, { useState, useMemo } from 'react';
-import { Search, Volume2, BookPlus, Sparkles, Filter, X, ArrowLeft, Check } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Search, Volume2, BookPlus, Sparkles, Filter, X, ArrowLeft, Check, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { HSKWord, HSKLevel, VocabCategory, queryHskWords, getHskLevelCounts, allHskWords } from '../../data/hsk';
 import { speak } from '../../engines/audio/audioEngine';
 
@@ -15,6 +15,8 @@ export interface VocabLibraryViewProps {
   onAddVocabToSrs?: (word: HSKWord) => void;
   existingSrsHanzis?: string[];
 }
+
+const ITEMS_PER_PAGE = 30;
 
 const CATEGORY_LABELS: Record<VocabCategory, string> = {
   greetings: '👋 ทักทาย & สุภาพ',
@@ -39,10 +41,16 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
   const [selectedLevel, setSelectedLevel] = useState<HSKLevel | 'all'>('all');
   const [selectedCategory, setSelectedCategory] = useState<VocabCategory | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const [slowAudioMap, setSlowAudioMap] = useState<Record<string, boolean>>({});
   const [savedStatusMap, setSavedStatusMap] = useState<Record<string, boolean>>({});
 
   const levelCounts = useMemo(() => getHskLevelCounts(), []);
+
+  // Reset to page 1 whenever search or filter criteria change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedLevel, selectedCategory, searchQuery]);
 
   const filteredWords = useMemo(() => {
     return queryHskWords({
@@ -51,6 +59,18 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
       searchQuery,
     });
   }, [selectedLevel, selectedCategory, searchQuery]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredWords.length / ITEMS_PER_PAGE));
+  const paginatedWords = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredWords.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredWords, currentPage]);
+
+  const handlePageChange = (newPage: number) => {
+    const targetPage = Math.max(1, Math.min(newPage, totalPages));
+    setCurrentPage(targetPage);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const handlePlayAudio = (hanzi: string, wordId: string) => {
     const isSlow = slowAudioMap[wordId] || false;
@@ -113,77 +133,98 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
         </div>
       </div>
 
-      {/* Universal Search Bar */}
+      {/* Sticky Filter Header Container */}
       <div
         style={{
-          position: 'relative',
+          position: 'sticky',
+          top: 0,
+          zIndex: 30,
+          backgroundColor: 'rgba(255, 255, 255, 0.94)',
+          backdropFilter: 'blur(10px)',
+          WebkitBackdropFilter: 'blur(10px)',
+          paddingTop: '8px',
+          paddingBottom: '12px',
+          margin: '0 -16px',
+          paddingLeft: '16px',
+          paddingRight: '16px',
           display: 'flex',
-          alignItems: 'center',
-          width: '100%',
+          flexDirection: 'column',
+          gap: '12px',
+          borderBottom: '1px solid rgba(0,0,0,0.06)',
+          boxShadow: '0 4px 12px -2px rgba(0,0,0,0.04)',
         }}
       >
-        <Search
-          size={20}
-          color="var(--text-ink-muted)"
-          style={{ position: 'absolute', left: '16px', pointerEvents: 'none' }}
-        />
-        <input
-          type="text"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="ค้นหาด้วยคำแปลไทย (เช่น รัก, ชานม), พินอิน (ai, cha) หรืออักษรจีน (爱, 茶)..."
+        {/* Universal Search Bar */}
+        <div
           style={{
+            position: 'relative',
+            display: 'flex',
+            alignItems: 'center',
             width: '100%',
-            minHeight: '52px',
-            padding: '12px 44px 12px 48px',
-            fontSize: '15px',
-            borderRadius: 'var(--radius-lg, 16px)',
-            border: '2px solid var(--border-subtle, #EAE5DE)',
-            backgroundColor: '#FFFFFF',
-            color: 'var(--text-ink-primary)',
-            outline: 'none',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.03)',
-            transition: 'border-color 0.2s',
           }}
-        />
-        {searchQuery && (
-          <button
-            onClick={() => setSearchQuery('')}
+        >
+          <Search
+            size={20}
+            color="var(--text-ink-muted)"
+            style={{ position: 'absolute', left: '16px', pointerEvents: 'none' }}
+          />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="ค้นหาด้วยคำแปลไทย (เช่น รัก, ชานม), พินอิน (ai, cha) หรืออักษรจีน (爱, 茶)..."
             style={{
-              position: 'absolute',
-              right: '12px',
-              border: 'none',
-              background: 'transparent',
-              cursor: 'pointer',
-              color: 'var(--text-ink-muted)',
-              padding: '6px',
+              width: '100%',
+              minHeight: '48px',
+              padding: '10px 44px 10px 48px',
+              fontSize: '15px',
+              borderRadius: 'var(--radius-lg, 16px)',
+              border: '2px solid var(--border-subtle, #EAE5DE)',
+              backgroundColor: '#FFFFFF',
+              color: 'var(--text-ink-primary)',
+              outline: 'none',
+              boxShadow: '0 2px 6px rgba(0,0,0,0.03)',
+              transition: 'border-color 0.2s',
             }}
-          >
-            <X size={18} />
-          </button>
-        )}
-      </div>
-
-      {/* HSK Level Filter Tabs (1-9) */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-        <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-ink-secondary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <Filter size={14} />
-          <span>เลือกระดับ HSK 3.0:</span>
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              style={{
+                position: 'absolute',
+                right: '12px',
+                border: 'none',
+                background: 'transparent',
+                cursor: 'pointer',
+                color: 'var(--text-ink-muted)',
+                padding: '6px',
+              }}
+            >
+              <X size={18} />
+            </button>
+          )}
         </div>
-        <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
+
+        {/* HSK Level Filter Tabs (1-9) */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', overflowX: 'auto', paddingBottom: '2px' }}>
+          <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-ink-secondary)', display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
+            <Filter size={14} />
+            <span>ระดับ:</span>
+          </div>
           <button
             onClick={() => setSelectedLevel('all')}
             style={{
-              padding: '8px 16px',
-              minHeight: '40px',
+              padding: '6px 14px',
+              minHeight: '36px',
               borderRadius: 'var(--radius-full)',
               border: selectedLevel === 'all' ? '1.5px solid var(--color-jade-primary)' : '1px solid var(--border-subtle)',
               backgroundColor: selectedLevel === 'all' ? 'var(--color-jade-surface)' : '#FFFFFF',
               color: selectedLevel === 'all' ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
               fontWeight: 700,
-              fontSize: '13px',
+              fontSize: '12px',
               cursor: 'pointer',
               whiteSpace: 'nowrap',
+              flexShrink: 0,
             }}
           >
             ทั้งหมด ({allHskWords.length})
@@ -193,66 +234,84 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
               key={lvl}
               onClick={() => setSelectedLevel(lvl)}
               style={{
-                padding: '8px 16px',
-                minHeight: '40px',
+                padding: '6px 14px',
+                minHeight: '36px',
                 borderRadius: 'var(--radius-full)',
                 border: selectedLevel === lvl ? '1.5px solid var(--color-jade-primary)' : '1px solid var(--border-subtle)',
                 backgroundColor: selectedLevel === lvl ? 'var(--color-jade-surface)' : '#FFFFFF',
                 color: selectedLevel === lvl ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
                 fontWeight: 700,
-                fontSize: '13px',
+                fontSize: '12px',
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}
             >
               HSK {lvl} {levelCounts[lvl] > 0 ? `(${levelCounts[lvl]})` : ''}
             </button>
           ))}
         </div>
-      </div>
 
-      {/* Categories Filter Pills */}
-      <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', flexWrap: 'wrap' }}>
-        <button
-          onClick={() => setSelectedCategory('all')}
-          style={{
-            padding: '6px 12px',
-            minHeight: '36px',
-            borderRadius: 'var(--radius-sm)',
-            border: selectedCategory === 'all' ? '1px solid var(--color-jade-primary)' : '1px solid #E5E7EB',
-            backgroundColor: selectedCategory === 'all' ? 'var(--color-jade-surface)' : '#FAFAFA',
-            color: selectedCategory === 'all' ? 'var(--color-jade-deep)' : '#6B7280',
-            fontWeight: 600,
-            fontSize: '12px',
-            cursor: 'pointer',
-          }}
-        >
-          หมวดทั้งหมด
-        </button>
-        {(Object.keys(CATEGORY_LABELS) as VocabCategory[]).map((cat) => (
+        {/* Categories Filter Pills */}
+        <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '2px' }}>
           <button
-            key={cat}
-            onClick={() => setSelectedCategory(cat)}
+            onClick={() => setSelectedCategory('all')}
             style={{
-              padding: '6px 12px',
-              minHeight: '36px',
+              padding: '5px 12px',
+              minHeight: '32px',
               borderRadius: 'var(--radius-sm)',
-              border: selectedCategory === cat ? '1px solid var(--color-jade-primary)' : '1px solid #E5E7EB',
-              backgroundColor: selectedCategory === cat ? 'var(--color-jade-surface)' : '#FAFAFA',
-              color: selectedCategory === cat ? 'var(--color-jade-deep)' : '#6B7280',
+              border: selectedCategory === 'all' ? '1px solid var(--color-jade-primary)' : '1px solid #E5E7EB',
+              backgroundColor: selectedCategory === 'all' ? 'var(--color-jade-surface)' : '#FAFAFA',
+              color: selectedCategory === 'all' ? 'var(--color-jade-deep)' : '#6B7280',
               fontWeight: 600,
               fontSize: '12px',
               cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              flexShrink: 0,
             }}
           >
-            {CATEGORY_LABELS[cat]}
+            หมวดทั้งหมด
           </button>
-        ))}
+          {(Object.keys(CATEGORY_LABELS) as VocabCategory[]).map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              style={{
+                padding: '5px 12px',
+                minHeight: '32px',
+                borderRadius: 'var(--radius-sm)',
+                border: selectedCategory === cat ? '1px solid var(--color-jade-primary)' : '1px solid #E5E7EB',
+                backgroundColor: selectedCategory === cat ? 'var(--color-jade-surface)' : '#FAFAFA',
+                color: selectedCategory === cat ? 'var(--color-jade-deep)' : '#6B7280',
+                fontWeight: 600,
+                fontSize: '12px',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+              }}
+            >
+              {CATEGORY_LABELS[cat]}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Search Results Summary */}
-      <div style={{ fontSize: '13px', color: 'var(--text-ink-secondary)', fontWeight: 500 }}>
-        พบคำศัพท์ทั้งหมด <strong style={{ color: 'var(--color-jade-dark)' }}>{filteredWords.length}</strong> คำ
+      {/* Search Results Summary & Page Indicator */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+        <div style={{ fontSize: '13px', color: 'var(--text-ink-secondary)', fontWeight: 500 }}>
+          พบคำศัพท์ทั้งหมด <strong style={{ color: 'var(--color-jade-dark)' }}>{filteredWords.length}</strong> คำ
+          {filteredWords.length > ITEMS_PER_PAGE && (
+            <span style={{ marginLeft: '8px', color: 'var(--text-ink-muted)' }}>
+              (แสดงคำที่ {(currentPage - 1) * ITEMS_PER_PAGE + 1} - {Math.min(currentPage * ITEMS_PER_PAGE, filteredWords.length)})
+            </span>
+          )}
+        </div>
+
+        {totalPages > 1 && (
+          <div style={{ fontSize: '12px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
+            หน้า {currentPage} / {totalPages}
+          </div>
+        )}
       </div>
 
       {/* Word Cards Grid */}
@@ -270,7 +329,7 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
             gap: '16px',
           }}
         >
-          {filteredWords.map((word) => {
+          {paginatedWords.map((word) => {
             const isSaved = savedStatusMap[word.id] || existingSrsHanzis.includes(word.hanzi);
             const isSlow = slowAudioMap[word.id] || false;
 
@@ -434,6 +493,154 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* Pagination Bar */}
+      {totalPages > 1 && (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+            paddingTop: '20px',
+            paddingBottom: '20px',
+            flexWrap: 'wrap',
+          }}
+        >
+          <button
+            onClick={() => handlePageChange(1)}
+            disabled={currentPage === 1}
+            title="หน้าแรก"
+            style={{
+              padding: '8px 12px',
+              minHeight: '40px',
+              borderRadius: 'var(--radius-sm, 8px)',
+              border: '1px solid var(--border-subtle, #EAE5DE)',
+              backgroundColor: '#FFFFFF',
+              color: currentPage === 1 ? 'var(--text-ink-muted)' : 'var(--text-ink-primary)',
+              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '13px',
+              fontWeight: 600,
+              opacity: currentPage === 1 ? 0.5 : 1,
+            }}
+          >
+            <ChevronsLeft size={16} />
+            <span style={{ display: 'inline' }}>หน้าแรก</span>
+          </button>
+
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            title="หน้าก่อนหน้า"
+            style={{
+              padding: '8px 12px',
+              minHeight: '40px',
+              borderRadius: 'var(--radius-sm, 8px)',
+              border: '1px solid var(--border-subtle, #EAE5DE)',
+              backgroundColor: '#FFFFFF',
+              color: currentPage === 1 ? 'var(--text-ink-muted)' : 'var(--text-ink-primary)',
+              cursor: currentPage === 1 ? 'not-allowed' : 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '13px',
+              fontWeight: 600,
+              opacity: currentPage === 1 ? 0.5 : 1,
+            }}
+          >
+            <ChevronLeft size={16} />
+            <span>ก่อนหน้า</span>
+          </button>
+
+          {/* Quick Page Jump Buttons */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            {Array.from({ length: totalPages }, (_, i) => i + 1)
+              .filter((p) => p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2)
+              .map((p, idx, arr) => {
+                const prev = arr[idx - 1];
+                const showEllipsis = prev && p - prev > 1;
+                return (
+                  <React.Fragment key={p}>
+                    {showEllipsis && (
+                      <span style={{ padding: '0 4px', color: 'var(--text-ink-muted)', fontSize: '13px' }}>...</span>
+                    )}
+                    <button
+                      onClick={() => handlePageChange(p)}
+                      style={{
+                        minWidth: '38px',
+                        height: '38px',
+                        padding: '0 8px',
+                        borderRadius: 'var(--radius-sm, 8px)',
+                        border: currentPage === p ? '1.5px solid var(--color-jade-primary)' : '1px solid var(--border-subtle, #EAE5DE)',
+                        backgroundColor: currentPage === p ? 'var(--color-jade-surface)' : '#FFFFFF',
+                        color: currentPage === p ? 'var(--color-jade-primary)' : 'var(--text-ink-secondary)',
+                        fontWeight: currentPage === p ? 800 : 600,
+                        fontSize: '13px',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      {p}
+                    </button>
+                  </React.Fragment>
+                );
+              })}
+          </div>
+
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            title="หน้าถัดไป"
+            style={{
+              padding: '8px 12px',
+              minHeight: '40px',
+              borderRadius: 'var(--radius-sm, 8px)',
+              border: '1px solid var(--border-subtle, #EAE5DE)',
+              backgroundColor: '#FFFFFF',
+              color: currentPage === totalPages ? 'var(--text-ink-muted)' : 'var(--text-ink-primary)',
+              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '13px',
+              fontWeight: 600,
+              opacity: currentPage === totalPages ? 0.5 : 1,
+            }}
+          >
+            <span>ถัดไป</span>
+            <ChevronRight size={16} />
+          </button>
+
+          <button
+            onClick={() => handlePageChange(totalPages)}
+            disabled={currentPage === totalPages}
+            title="หน้าสุดท้าย"
+            style={{
+              padding: '8px 12px',
+              minHeight: '40px',
+              borderRadius: 'var(--radius-sm, 8px)',
+              border: '1px solid var(--border-subtle, #EAE5DE)',
+              backgroundColor: '#FFFFFF',
+              color: currentPage === totalPages ? 'var(--text-ink-muted)' : 'var(--text-ink-primary)',
+              cursor: currentPage === totalPages ? 'not-allowed' : 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              fontSize: '13px',
+              fontWeight: 600,
+              opacity: currentPage === totalPages ? 0.5 : 1,
+            }}
+          >
+            <span>หน้าสุดท้าย</span>
+            <ChevronsRight size={16} />
+          </button>
         </div>
       )}
     </div>
