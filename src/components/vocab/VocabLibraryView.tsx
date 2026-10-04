@@ -122,7 +122,7 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
               📚 คลังคำศัพท์ HSK 3.0
             </h1>
             <p style={{ margin: '4px 0 0 0', fontSize: '13px', color: 'var(--text-ink-secondary)' }}>
-              ค้นหาและฟังเสียงคำศัพท์มาตรฐาน HSK ระดับ 1 ถึง 9 ครบทุกหมวดหมู่
+              ค้นหาและฟังเสียงคำศัพท์มาตรฐาน HSK ระดับ 1 ถึง 6 ครบทุกหมวดหมู่
             </p>
           </div>
         </div>
