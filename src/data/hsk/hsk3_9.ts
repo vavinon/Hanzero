@@ -1,24 +1,6 @@
 import { HSKWord } from './types';
 
-export const hsk4To9SeedWords: HSKWord[] = [
-  // HSK 4
-  {
-    id: 'hsk4_0001',
-    level: 4,
-    hanzi: '抱歉',
-    pinyin: 'bàoqiàn',
-    meaning_th: 'ขออภัย, เสียใจด้วย',
-    meaning_en: 'sorry, to feel apologetic',
-    category: 'greetings',
-    part_of_speech: 'คำคุณศัพท์/คำสุภาพ',
-    example: {
-      zh: '非常抱歉，让您久等了。',
-      pinyin: 'Fēicháng bàoqiàn, ràng nín jiǔ děng le.',
-      th: 'ขออภัยเป็นอย่างยิ่งที่ทำให้ท่านต้องรอนาน',
-      en: 'I am so sorry to have kept you waiting.',
-    },
-    mnemonic_th: 'โอบกอด (抱) ความรู้สึกผิดติดค้างไว้ในใจ (歉)',
-  },
+export const hsk5To9SeedWords: HSKWord[] = [
   // HSK 5
   {
     id: 'hsk5_0001',
