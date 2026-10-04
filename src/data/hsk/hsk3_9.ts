@@ -1,41 +1,6 @@
 import { HSKWord } from './types';
 
-export const hsk3To9SeedWords: HSKWord[] = [
-  // HSK 3
-  {
-    id: 'hsk3_0001',
-    level: 3,
-    hanzi: '阿姨',
-    pinyin: 'āyí',
-    meaning_th: 'คุณน้า, ป้า, คุณแม่บ้าน',
-    meaning_en: 'aunt, helper',
-    category: 'family_people',
-    part_of_speech: 'คำนาม',
-    example: {
-      zh: '阿姨好！',
-      pinyin: 'Āyí hǎo!',
-      th: 'สวัสดีครับ/ค่ะคุณน้า!',
-      en: 'Hello Auntie!',
-    },
-    mnemonic_th: 'คำเรียกผู้หญิงอาวุโสด้วยความเคารพ',
-  },
-  {
-    id: 'hsk3_0002',
-    level: 3,
-    hanzi: '保证',
-    pinyin: 'bǎozhèng',
-    meaning_th: 'รับรอง, รับประกัน',
-    meaning_en: 'to guarantee, ensure',
-    category: 'work_business',
-    part_of_speech: 'คำกริยา',
-    example: {
-      zh: '我保证明天一定送到。',
-      pinyin: 'Wǒ bǎozhèng míngtiān yídìng sòngdào.',
-      th: 'ฉันรับประกันว่าพรุ่งนี้ส่งถึงแน่นอน',
-      en: 'I guarantee it will be delivered tomorrow.',
-    },
-    mnemonic_th: 'มีคน (亻) คอยปกป้อง (保) และมีหลักฐานรับรอง (证)',
-  },
+export const hsk4To9SeedWords: HSKWord[] = [
   // HSK 4
   {
     id: 'hsk4_0001',

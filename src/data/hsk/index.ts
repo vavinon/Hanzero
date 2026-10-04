@@ -7,13 +7,15 @@
 import { HSKWord, HSKFilterOptions } from './types';
 import { hsk1Words } from './hsk1';
 import { hsk2Words } from './hsk2';
-import { hsk3To9SeedWords } from './hsk3_9';
+import { hsk3Words } from './hsk3';
+import { hsk4To9SeedWords } from './hsk3_9';
 
 // Master repository containing all levels
 export const allHskWords: HSKWord[] = [
   ...hsk1Words,
   ...hsk2Words,
-  ...hsk3To9SeedWords,
+  ...hsk3Words,
+  ...hsk4To9SeedWords,
 ];
 
 export * from './types';
