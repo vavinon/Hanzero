@@ -39,7 +39,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
     {
       id: 'vocab' as const,
       label: 'คลังคำศัพท์ HSK 3.0',
-      sublabel: 'ค้นหา & ฟังเสียง ระดับ 1-9',
+      sublabel: 'ค้นหา & ฟังเสียง ระดับ 1-6',
       icon: Library,
       testId: 'nav-item-vocab',
     },

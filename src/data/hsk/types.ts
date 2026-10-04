@@ -1,6 +1,6 @@
 /**
  * src/data/hsk/types.ts
- * Strict TypeScript types for HSK 3.0 (Levels 1-9) Vocabulary Repository.
+ * Strict TypeScript types for HSK 3.0 (Levels 1-6) Vocabulary Repository.
  * Adheres strictly to AGENTS.md §4.2: Strict Typing, Zero 'any'.
  */
 
