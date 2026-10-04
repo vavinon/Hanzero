@@ -117,6 +117,9 @@ export default defineConfig({
           if (id.includes('src/data/hsk/hsk5')) {
             return 'hsk-5-data';
           }
+          if (id.includes('src/data/hsk/hsk6')) {
+            return 'hsk-6-data';
+          }
         }
       }
     }

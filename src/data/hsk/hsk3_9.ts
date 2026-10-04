@@ -1,24 +1,6 @@
 import { HSKWord } from './types';
 
-export const hsk6To9SeedWords: HSKWord[] = [
-  // HSK 6
-  {
-    id: 'hsk6_0001',
-    level: 6,
-    hanzi: '昂贵',
-    pinyin: 'ángguì',
-    meaning_th: 'ราคาแพงลิบลิ่ว',
-    meaning_en: 'expensive, costly',
-    category: 'shopping',
-    part_of_speech: 'คำคุณศัพท์',
-    example: {
-      zh: '这里的房租非常昂贵。',
-      pinyin: 'Zhèlǐ de fángzū fēicháng ángguì.',
-      th: 'ค่าเช่าห้องที่นี่แพงลิบลิ่วมาก',
-      en: 'The rent here is very expensive.',
-    },
-    mnemonic_th: 'ศีรษะเชิดสูงขึ้นคู่กับสิ่งของล้ำค่า (贵)',
-  },
+export const hsk7To9SeedWords: HSKWord[] = [
   // HSK 7-9 (Advanced / Higher Education / Professional)
   {
     id: 'hsk7_0001',
