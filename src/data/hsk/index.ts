@@ -9,7 +9,8 @@ import { hsk1Words } from './hsk1';
 import { hsk2Words } from './hsk2';
 import { hsk3Words } from './hsk3';
 import { hsk4Words } from './hsk4';
-import { hsk5To9SeedWords } from './hsk3_9';
+import { hsk5Words } from './hsk5';
+import { hsk6To9SeedWords } from './hsk3_9';
 
 // Master repository containing all levels
 export const allHskWords: HSKWord[] = [
@@ -17,7 +18,8 @@ export const allHskWords: HSKWord[] = [
   ...hsk2Words,
   ...hsk3Words,
   ...hsk4Words,
-  ...hsk5To9SeedWords,
+  ...hsk5Words,
+  ...hsk6To9SeedWords,
 ];
 
 export * from './types';

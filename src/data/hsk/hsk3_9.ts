@@ -1,24 +1,6 @@
 import { HSKWord } from './types';
 
-export const hsk5To9SeedWords: HSKWord[] = [
-  // HSK 5
-  {
-    id: 'hsk5_0001',
-    level: 5,
-    hanzi: '把握',
-    pinyin: 'bǎwò',
-    meaning_th: 'จับกุม, คว้าโอกาส, ความมั่นใจ',
-    meaning_en: 'to grasp, hold, assurance',
-    category: 'work_business',
-    part_of_speech: 'คำกริยา/คำนาม',
-    example: {
-      zh: '我们要把握住这次机会。',
-      pinyin: 'Wǒmen yào bǎwò zhù zhè cì jīhuì.',
-      th: 'พวกเราต้องคว้าโอกาสครั้งนี้ไว้ให้ได้',
-      en: 'We must seize this opportunity.',
-    },
-    mnemonic_th: 'ใช้มือทั้งสองข้าง (扌) กุมความสำเร็จไว้แน่น',
-  },
+export const hsk6To9SeedWords: HSKWord[] = [
   // HSK 6
   {
     id: 'hsk6_0001',

@@ -102,6 +102,21 @@ export default defineConfig({
           if (id.includes('node_modules/idb-keyval/')) {
             return 'storage-vendor';
           }
+          if (id.includes('src/data/hsk/hsk1')) {
+            return 'hsk-1-data';
+          }
+          if (id.includes('src/data/hsk/hsk2')) {
+            return 'hsk-2-data';
+          }
+          if (id.includes('src/data/hsk/hsk3')) {
+            return 'hsk-3-data';
+          }
+          if (id.includes('src/data/hsk/hsk4')) {
+            return 'hsk-4-data';
+          }
+          if (id.includes('src/data/hsk/hsk5')) {
+            return 'hsk-5-data';
+          }
         }
       }
     }
