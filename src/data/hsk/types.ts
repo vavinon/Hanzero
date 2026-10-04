@@ -4,7 +4,7 @@
  * Adheres strictly to AGENTS.md §4.2: Strict Typing, Zero 'any'.
  */
 
-export type HSKLevel = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+export type HSKLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 export type VocabCategory =
   | 'greetings'      // ทักทาย & สุภาพ

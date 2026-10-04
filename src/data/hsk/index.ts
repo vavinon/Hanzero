@@ -11,9 +11,8 @@ import { hsk3Words } from './hsk3';
 import { hsk4Words } from './hsk4';
 import { hsk5Words } from './hsk5';
 import { hsk6Words } from './hsk6';
-import { hsk7To9SeedWords } from './hsk3_9';
 
-// Master repository containing all levels
+// Master repository containing all levels (HSK 1-6)
 export const allHskWords: HSKWord[] = [
   ...hsk1Words,
   ...hsk2Words,
@@ -21,7 +20,6 @@ export const allHskWords: HSKWord[] = [
   ...hsk4Words,
   ...hsk5Words,
   ...hsk6Words,
-  ...hsk7To9SeedWords,
 ];
 
 export * from './types';
@@ -61,11 +59,11 @@ export function queryHskWords(options: HSKFilterOptions): HSKWord[] {
 }
 
 /**
- * Get word statistics grouped by HSK Level (1-9).
+ * Get word statistics grouped by HSK Level (1-6).
  */
 export function getHskLevelCounts(): Record<number, number> {
   const counts: Record<number, number> = {};
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= 6; i++) {
     counts[i] = 0;
   }
   for (const word of allHskWords) {

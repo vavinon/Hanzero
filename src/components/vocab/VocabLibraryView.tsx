@@ -205,7 +205,7 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
           )}
         </div>
 
-        {/* HSK Level Filter Tabs (1-9) */}
+        {/* HSK Level Filter Tabs (1-6) */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', overflowX: 'auto', paddingBottom: '2px' }}>
           <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-ink-secondary)', display: 'flex', alignItems: 'center', gap: '4px', flexShrink: 0 }}>
             <Filter size={14} />
@@ -229,7 +229,7 @@ export const VocabLibraryView: React.FC<VocabLibraryViewProps> = ({
           >
             ทั้งหมด ({allHskWords.length})
           </button>
-          {([1, 2, 3, 4, 5, 6, 7, 8, 9] as HSKLevel[]).map((lvl) => (
+          {([1, 2, 3, 4, 5, 6] as HSKLevel[]).map((lvl) => (
             <button
               key={lvl}
               onClick={() => setSelectedLevel(lvl)}
