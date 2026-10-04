@@ -1,7 +1,7 @@
 /**
  * src/components/vocab/VocabLibraryView.tsx
  * HSK 3.0 Master Vocabulary Library & Universal Search Explorer.
- * Allows instant search, filter by Level (HSK 1-9), category tagging,
+ * Allows instant search, filter by Level (HSK 1-6), category tagging,
  * audio pronunciation playback (Normal/Slow), and adding to SRS.
  */
 

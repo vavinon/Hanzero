@@ -1,7 +1,7 @@
 /**
  * src/data/hsk/index.ts
  * Master HSK 3.0 Vocabulary Repository & Query Engine.
- * Supports filtering by HSK Level (1-9), Category, and instant multi-field search.
+ * Supports filtering by HSK Level (1-6), Category, and instant multi-field search.
  */
 
 import { HSKWord, HSKFilterOptions } from './types';
