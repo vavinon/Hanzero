@@ -25,7 +25,7 @@ const GRAY = '\x1b[90m';
 const ENTRY_CSS_BUDGET_BYTES = 20 * 1024;    // 20 KB (AGENTS.md §5.3)
 const ENTRY_JS_BUDGET_BYTES = 100 * 1024;    // 100 KB (AGENTS.md §5.3)
 const CHUNK_MAX_BUDGET_BYTES = 250 * 1024;   // 250 KB max per lazy chunk
-const TOTAL_JS_BUDGET_BYTES = 1250 * 1024;   // 1250 KB total across full HSK 3.0 repository (4,200+ words) & 40+ units
+const TOTAL_JS_BUDGET_BYTES = 1800 * 1024;   // 1800 KB total across full HSK 3.0 repository (5,300+ words) & 63 units (T0 to T4)
 
 interface AssetStats {
   name: string;

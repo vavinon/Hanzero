@@ -1,0 +1,5348 @@
+[
+  {
+    "unitId": "tier0_u01",
+    "unitNumber": "0.1",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "唇齿与舌尖音",
+      "th": "ริมฝีปาก & ปลายลิ้น",
+      "en": "Lips & Tongue Tip Phonics"
+    },
+    "description": "ก้าวแรกของระบบเสียงพินอิน! ฝึกพยัญชนะริมฝีปาก (b, p, m, f) และปลายลิ้น (d, t, n, l) สระเดี่ยว a, o, e และ 2 เส้นขีดแรกในชีวิต 横 และ 竖",
+    "category": "pinyin",
+    "icon": "👄",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u01_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u01",
+        "tier": 0,
+        "title": {
+          "zh": "唇齿与舌尖音探索",
+          "th": "สัมผัสเสียงริมฝีปากและปลายลิ้น",
+          "en": "Exploring Lips and Tongue Tip Sounds"
+        },
+        "canDo": {
+          "th": "ออกเสียงพยัญชนะริมฝีปากและปลายลิ้นได้ถูกต้อง แยกความต่างระหว่างเสียงไม่พ่นลม (b, d) กับเสียงพ่นลม (p, t) ได้แม่นยำ และพูดคำแรกในชีวิต 4 คำ",
+          "en": "Pronounce lip and tongue tip initials accurately, distinguish unaspirated vs aspirated pairs (b/p, d/t), and speak your first 4 real words"
+        },
+        "isBoss": false,
+        "vocabCount": 4,
+        "icon": "👄"
+      }
+    ]
+  },
+  {
+    "unitId": "tier0_u02",
+    "unitNumber": "0.2",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "舌根与舌面前音",
+      "th": "โคนลิ้น & ลมพ่น",
+      "en": "Tongue Root & Smile Sounds"
+    },
+    "description": "เจาะลึกพยัญชนะโคนลิ้น (g, k, h) และพยัญชนะฉีกยิ้ม (j, q, x) ปราบเซียนสระเดี่ยวปากจู๋ ü พร้อมเส้นขีด 撇, 捺 และ 2 หมวดนำยอดฮิต 亻และ 女",
+    "category": "pinyin",
+    "icon": "👅",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u02_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u02",
+        "tier": 0,
+        "title": {
+          "zh": "舌根与舌面音探索",
+          "th": "สัมผัสเสียงโคนลิ้นและสระปากจู๋",
+          "en": "Exploring Tongue Root Sounds & Smile Finals"
+        },
+        "canDo": {
+          "th": "ออกเสียงพยัญชนะฉีกยิ้ม (j, q, x) และสระอวีปากจู๋ (ü) ได้อย่างถูกต้อง รู้จักเส้นขีด 撇 และ 捺 และพูดคำทักทายแรก '你好'",
+          "en": "Master smile initials (j, q, x) and rounded final (ü), identify pie and na strokes, and say your first greetings 'nǐ' and 'hǎo'"
+        },
+        "isBoss": false,
+        "vocabCount": 4,
+        "icon": "👅"
+      }
+    ]
+  },
+  {
+    "unitId": "tier0_u03",
+    "unitNumber": "0.3",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "四声过山车与变调",
+      "th": "4 วรรณยุกต์ & รถไฟเหาะ",
+      "en": "The 4 Tones & Sandhi Coaster"
+    },
+    "description": "พิชิต 4 วรรณยุกต์และเสียงเบาด้วยระบบ Tone Coaster ฝึกกฎการผันเสียง 3 ชน 3 (你好: nǐ hǎo ➔ ní hǎo) และกฎเสียงสามครึ่งเสียง พร้อมเส้นขีด 提, 点 และหมวดนำ 口, 子",
+    "category": "pinyin",
+    "icon": "🎢",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u03_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u03",
+        "tier": 0,
+        "title": {
+          "zh": "四声音调与声调之变",
+          "th": "ตะลุยรางรถไฟ 4 วรรณยุกต์และกฎผันเสียง",
+          "en": "Riding the 4 Tones & Sandhi Rules"
+        },
+        "canDo": {
+          "th": "แยกความต่างของ 4 วรรณยุกต์จีน (55, 35, 214, 51) และเสียงเบาได้ ผันเสียง 3+3 ในคำว่า '你好' เป็นเสียง 2+3 ได้อย่างคล่องปาก และเข้าใจเสียงสามครึ่งเสียง",
+          "en": "Distinguish the 4 Mandarin tones and neutral tone, apply the 3+3 tone sandhi rule on 'nǐ hǎo' smoothly, and pronounce half-third tones naturally"
+        },
+        "isBoss": false,
+        "vocabCount": 3,
+        "icon": "🎢"
+      }
+    ]
+  },
+  {
+    "unitId": "tier0_u04",
+    "unitNumber": "0.4",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "平翘舌音对决",
+      "th": "ลิ้นม้วน vs ลิ้นแบน",
+      "en": "Retroflex vs Flat Tongue Showdown"
+    },
+    "description": "ศึกตัดสินคู่เสียงปราบเซียน! ลิ้นม้วนห่อ (zh, ch, sh, r) ปะทะ ลิ้นแบนชิดฟัน (z, c, s) พร้อมเส้นขีด 折, 钩 และหมวดนำธาตุ 氵(น้ำ) และ 木 (ไม้)",
+    "category": "pinyin",
+    "icon": "⚡",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u04_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u04",
+        "tier": 0,
+        "title": {
+          "zh": "翘舌与平舌音对决",
+          "th": "ประลองลิ้นม้วนและลิ้นแบนชิดฟัน",
+          "en": "Clash of Retroflex & Flat Tongue Sounds"
+        },
+        "canDo": {
+          "th": "แยกความต่างระหว่างเสียงม้วนลิ้น (zh, ch, sh, r) กับเสียงลิ้นแบนชิดฟัน (z, c, s) ได้ 100% รู้จักเส้นขีด 折 และ 钩 และพูด 5 คำสำคัญในชีวิต",
+          "en": "Distinguish retroflex (zh, ch, sh, r) from flat tongue (z, c, s) initials with 100% clarity, master zhe and gou strokes, and speak 5 essential words"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "⚡"
+      }
+    ]
+  },
+  {
+    "unitId": "tier0_u05",
+    "unitNumber": "0.5",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "复韵母与鼻韵母",
+      "th": "สระผสม & สระนาสิก",
+      "en": "Compound & Nasal Finals"
+    },
+    "description": "ก้าวสู่ความลื่นไหลระดับสูง! สระผสมลดรูป (iu, ui, un) และสระขึ้นจมูก/นาสิก (an, en, ang, eng, ong) พร้อม 4 หมวดนำวิถีชีวิต 饣, 辶, 宀, 门",
+    "category": "pinyin",
+    "icon": "🎵",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u05_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u05",
+        "tier": 0,
+        "title": {
+          "zh": "复韵母与鼻音韵母探索",
+          "th": "สัมผัสสระผสมและสระนาสิกขึ้นจมูก",
+          "en": "Exploring Compound Finals & Nasal Echoes"
+        },
+        "canDo": {
+          "th": "ออกเสียงสระผสมลดรูปและสระขึ้นจมูกได้ถูกต้อง รู้จักกฎการสะกดพินอินที่ลดรูป (iu, ui, un) และพูด 4 คำสำคัญในชีวิตประจำวัน",
+          "en": "Pronounce compound and nasal finals clearly, understand spelling reduction rules (iu, ui, un), and master 4 essential everyday vocabulary words"
+        },
+        "isBoss": false,
+        "vocabCount": 4,
+        "icon": "🎵"
+      }
+    ]
+  },
+  {
+    "unitId": "tier0_u06",
+    "unitNumber": "0.6",
+    "tier": 0,
+    "tierLabel": "Tier 0: ปูพื้นฐานพินอิน",
+    "title": {
+      "zh": "笔画笔顺与汉字拼图",
+      "th": "ลำดับขีด & ประกอบร่างอักษรจีน",
+      "en": "Stroke Rules & Radical Assembly"
+    },
+    "description": "บทสรุปความยิ่งใหญ่ของ Tier 0! 8 เส้นขีดพื้นฐาน 7 กฎทองลำดับขีด และการประกอบเลโก้อักษรจีนจาก 6 หมวดนำตั้งต้น พร้อม Grand Boss Quest ชิงบัตรผ่านเกียรติยศเข้าสู่ Tier 1",
+    "category": "pinyin",
+    "icon": "🏆",
+    "hskLevel": "Pre-HSK",
+    "totalLessons": 1,
+    "lessons": [
+      {
+        "lessonId": "t0_u06_l01",
+        "lessonNumber": 1,
+        "unitId": "tier0_u06",
+        "tier": 0,
+        "title": {
+          "zh": "汉字密码大通关",
+          "th": "ไขรหัสลับน้องกระต่ายทู่ทู่",
+          "en": "Tutu Bunny's Hanzi Secret Cipher"
+        },
+        "canDo": {
+          "th": "เข้าใจและปฏิบัติตาม 7 กฎทองลำดับขีดได้ เขียนและประกอบร่างอักษรจีนสำคัญ 5 ตัวแรกในชีวิตได้อย่างถูกต้อง 100% พร้อมปลดล็อกบัตรเกียรติยศก้าวสู่ Tier 1",
+          "en": "Master the 7 golden stroke order rules, assemble and write your first 5 core characters accurately, and unlock the Tier 0 graduation passport"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🏆"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u01",
+    "unitNumber": 1,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "初次见面与道谢",
+      "th": "ทักทาย & รู้จักกัน",
+      "en": "First Greetings & Identity"
+    },
+    "description": "เริ่มต้นก้าวแรกอย่างอบอุ่น! ฝึกพูด 'สวัสดี-ขอบคุณ-ไม่เป็นไร-บ๊ายบาย' แนะนำชื่อ และถามสัญชาติ คล่องปาก สบายใจ ไม่มีเกร็ง",
+    "category": "survival",
+    "icon": "👋",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u01_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u01",
+        "tier": 1,
+        "title": {
+          "zh": "你好与谢谢",
+          "th": "สวัสดี & ขอบคุณ",
+          "en": "Hello & Thank You"
+        },
+        "canDo": {
+          "th": "ทักทาย กล่าวขอบคุณ ตอบรับไม่เป็นไร และบอกลาคนจีนในชีวิตประจำวันได้อย่างมั่นใจและเป็นธรรมชาติ",
+          "en": "Greet, say thank you, reply you're welcome, and say goodbye naturally in everyday situations"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👋"
+      },
+      {
+        "lessonId": "t1_u01_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u01",
+        "tier": 1,
+        "title": {
+          "zh": "我叫什么名字",
+          "th": "ฉันคือ... คุณชื่ออะไร?",
+          "en": "What Is Your Name?"
+        },
+        "canDo": {
+          "th": "บอกชื่อตนเอง และถามชื่อคู่สนทนาได้อย่างสุภาพและเป็นมิตร",
+          "en": "Introduce your own name and politely ask others for their name"
+        },
+        "isBoss": false,
+        "vocabCount": 4,
+        "icon": "👋"
+      },
+      {
+        "lessonId": "t1_u01_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u01",
+        "tier": 1,
+        "title": {
+          "zh": "你是哪国人",
+          "th": "คนชาติไหน?",
+          "en": "Which Country Are You From?"
+        },
+        "canDo": {
+          "th": "ถามและบอกสัญชาติ บอกว่าตนเองเป็นคนไทย หรือปฏิเสธว่าไม่ใช่คนจีนได้อย่างถูกต้อง",
+          "en": "Ask and state nationalities, expressing that you are Thai or not Chinese"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "👋"
+      },
+      {
+        "lessonId": "t1_u01_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u01",
+        "tier": 1,
+        "title": {
+          "zh": "职场初见大通关",
+          "th": "บอสชาเลนจ์: แนะนำตัวในที่ทำงานจริง",
+          "en": "Boss Challenge: First Day at Office"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะทั้งหมดใน Unit 1 ทักทาย ถามชื่อ แนะนำตนเอง บอกสัญชาติ และกล่าวลาได้อย่างคล่องแคล่วเป็นมืออาชีพ",
+          "en": "Integrate all Unit 1 skills to greet, ask names, introduce yourself, state nationality, and bid farewell professionally"
+        },
+        "isBoss": true,
+        "vocabCount": 3,
+        "icon": "👋"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u02",
+    "unitNumber": 2,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "数字、日历与时间",
+      "th": "ตัวเลข วันที่ & เวลา",
+      "en": "Numbers, Calendar & Time"
+    },
+    "description": "นับเลข 0-10 พร้อมภาษามือจีนมือเดียว ถามวันในสัปดาห์ อ่านปฏิทิน นัดหมายเวลาตามกฎลำดับเวลาจีน คล่องแคล่ว มั่นใจ ไร้สะดุด",
+    "category": "survival",
+    "icon": "🔢",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u02_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u02",
+        "tier": 1,
+        "title": {
+          "zh": "零到十与数字手势",
+          "th": "นับเลข 0-10 & ภาษามือจีน",
+          "en": "Counting 0-10 & Hand Gestures"
+        },
+        "canDo": {
+          "th": "นับเลข 0-10 ทำภาษามือจีนมือเดียวได้ถูกต้อง และเข้าใจความต่างระหว่าง 二 กับ 两",
+          "en": "Count numbers 0-10, use Chinese single-hand number gestures, and understand 二 vs 两"
+        },
+        "isBoss": false,
+        "vocabCount": 12,
+        "icon": "🔢"
+      },
+      {
+        "lessonId": "t1_u02_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u02",
+        "tier": 1,
+        "title": {
+          "zh": "今天明天星期几",
+          "th": "วันนี้ พรุ่งนี้ วันอะไร?",
+          "en": "Days of the Week & Dates"
+        },
+        "canDo": {
+          "th": "ถามและบอกวันในสัปดาห์ (จันทร์-อาทิตย์) วันที่ และเดือน พร้อมหลีกเลี่ยงกับดัก 星期两",
+          "en": "Ask and state days of the week, dates, and months while avoiding the 星期两 trap"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "🔢"
+      },
+      {
+        "lessonId": "t1_u02_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u02",
+        "tier": 1,
+        "title": {
+          "zh": "现在几点与时间顺序",
+          "th": "กี่โมงแล้ว & เวลานัดหมาย",
+          "en": "Telling Time & Word Order"
+        },
+        "canDo": {
+          "th": "ถามและบอกเวลาเป็นนาฬิกาและนาที ออกเสียง Sandhi 两点 และเรียงประโยคตามกฎลำดับเวลาจีน",
+          "en": "Tell the time, pronounce 两点 with 3+3 Sandhi, and arrange sentences with time order"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🔢"
+      },
+      {
+        "lessonId": "t1_u02_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u02",
+        "tier": 1,
+        "title": {
+          "zh": "约朋友吃饭大通关",
+          "th": "Boss Challenge: นัดกินข้าวกับเพื่อน",
+          "en": "Boss Challenge: Dinner Appointment"
+        },
+        "canDo": {
+          "th": "บูรณาการคำศัพท์ Unit 1 และ Unit 2 เพื่อนัดหมายวัน เวลา และทักทายคนจีนได้อย่างคล่องแคล่ว",
+          "en": "Integrate Unit 1 & 2 vocabulary to schedule lunch appointments and greet friends naturally"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "🔢"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u03",
+    "unitNumber": 3,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "餐饮点餐与美食",
+      "th": "สั่งอาหาร & เครื่องดื่ม",
+      "en": "Food & Street Bites"
+    },
+    "description": "สั่งบะหมี่ ข้าวสวย เกี๊ยว ซาลาเปา ชานม กาแฟ บอกระดับความเผ็ด และสั่งอาหารในร้านสตรีทฟู้ดจีนได้อย่างมั่นใจ ไร้กังวล",
+    "category": "survival",
+    "icon": "🍜",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u03_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u03",
+        "tier": 1,
+        "title": {
+          "zh": "吃米饭还是面条",
+          "th": "กินอะไรดี?",
+          "en": "What to Eat: Rice or Noodles"
+        },
+        "canDo": {
+          "th": "สั่งอาหารจานหลัก (ข้าว บะหมี่ เกี๊ยว ซาลาเปา) และบอกสิ่งที่ตนเองทานหรือไม่ทานได้",
+          "en": "Order main dishes (rice, noodles, dumplings, buns) and express food preferences"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🍜"
+      },
+      {
+        "lessonId": "t1_u03_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u03",
+        "tier": 1,
+        "title": {
+          "zh": "喝水与茶",
+          "th": "ดื่มอะไรดี & ลักษณนามแรกพบ",
+          "en": "Drinks & Measure Word 杯"
+        },
+        "canDo": {
+          "th": "สั่งเครื่องดื่ม (น้ำเปล่า ชา กาแฟ น้ำอัดลม) พร้อมระบุจำนวนด้วยลักษณนาม 杯 (แก้ว) ได้ถูกต้อง",
+          "en": "Order drinks using measure word 杯 (cup/glass) with accurate counting"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🍜"
+      },
+      {
+        "lessonId": "t1_u03_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u03",
+        "tier": 1,
+        "title": {
+          "zh": "好吃与不辣",
+          "th": "อร่อยมาก / เผ็ดไหม?",
+          "en": "Taste: Delicious & Spicy"
+        },
+        "canDo": {
+          "th": "บอกรสชาติอาหาร ชมว่าอร่อย ระบุระดับความเผ็ด และออกเสียง Tone Sandhi 不辣 (bú là) ได้อย่างถูกต้อง",
+          "en": "Express taste, compliment food and drinks, ask about spiciness, and pronounce 不辣 (bú là) correctly"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🍜"
+      },
+      {
+        "lessonId": "t1_u03_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u03",
+        "tier": 1,
+        "title": {
+          "zh": "北京小吃店点餐通关",
+          "th": "Boss Challenge: สั่งสตรีทฟู้ดปักกิ่ง",
+          "en": "Boss Challenge: Street Food Ordering"
+        },
+        "canDo": {
+          "th": "สั่งอาหารจานหลัก เครื่องดื่ม กำชับเรื่องความเผ็ด และสนทนากับพนักงานได้อย่างมั่นใจ 100%",
+          "en": "Order full meals, specify drinks and spice level, and interact with servers smoothly"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "🍜"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u04",
+    "unitNumber": 4,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "购物与砍价技巧",
+      "th": "ช็อปปิ้ง & ถามราคา",
+      "en": "Shopping & Asking Price"
+    },
+    "description": "ถามราคาสินค้า ต่อรองราคาอย่างสุภาพ ชี้เลือกสิ่งของใกล้-ไกล แยกแยะ 要 กับ 想 และชำระเงินได้อย่างมั่นใจทุกตลาดในจีน",
+    "category": "survival",
+    "icon": "🛍️",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u04_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u04",
+        "tier": 1,
+        "title": {
+          "zh": "这个多少钱",
+          "th": "อันนี้เท่าไหร่?",
+          "en": "How Much Is This?"
+        },
+        "canDo": {
+          "th": "ถามราคาสินค้า ชี้ระบุสิ่งของใกล้-ไกล (อันนี้/อันนั้น) และเข้าใจหน่วยเงิน 块",
+          "en": "Ask prices of items, indicate proximity (this/that), and understand colloquial currency 块"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "🛍️"
+      },
+      {
+        "lessonId": "t1_u04_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u04",
+        "tier": 1,
+        "title": {
+          "zh": "太贵了便宜一点儿",
+          "th": "แพงไปหน่อย ลดได้ไหม?",
+          "en": "Bargaining & Politeness"
+        },
+        "canDo": {
+          "th": "ต่อรองราคาอย่างสุภาพ ออกเสียง Sandhi 可以 (kéyǐ) และใช้คำลงท้าย 吧 เพื่อความนุ่มนวล",
+          "en": "Negotiate prices politely, pronounce 可以 (kéyǐ) with 3+3 Sandhi, and use particle 吧"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🛍️"
+      },
+      {
+        "lessonId": "t1_u04_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u04",
+        "tier": 1,
+        "title": {
+          "zh": "要这个不要那个",
+          "th": "เอาอันนี้ ไม่เอาอันนั้น",
+          "en": "Making Decisions & Totals"
+        },
+        "canDo": {
+          "th": "ตัดสินใจเลือกซื้อ แยกแยะ 要 (จะเอา) กับ 想 (แค่อยากได้) สรุปจำนวนเงิน และจ่ายเงินได้อย่างมั่นใจ",
+          "en": "Express purchasing decisions, distinguish 要 vs 想, ask total amount, and hand over money"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🛍️"
+      },
+      {
+        "lessonId": "t1_u04_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u04",
+        "tier": 1,
+        "title": {
+          "zh": "城隍庙淘纪念品通关",
+          "th": "Boss Challenge: ต่อราคาของฝากเฉินหวงเมี่ยว",
+          "en": "Boss Challenge: Souvenir Bargaining"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะการถามราคา ต่อรองราคา สรุปยอด และจ่ายเงินในสถานการณ์ช็อปปิ้งจริงได้อย่างราบรื่น",
+          "en": "Integrate bargaining, total calculation, and payment in real-world shopping scenarios"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "🛍️"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u05",
+    "unitNumber": 5,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "问路与市内交通",
+      "th": "การเดินทาง & ทิศทาง",
+      "en": "Directions & Transit"
+    },
+    "description": "อยู่ที่ไหน เลี้ยวซ้าย เลี้ยวขวา ตรงไป นั่งรถไฟใต้ดิน และบอกคนขับแท็กซี่อย่างมั่นใจ",
+    "category": "survival",
+    "icon": "🚇",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u05_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u05",
+        "tier": 1,
+        "title": {
+          "zh": "洗手间在哪儿与这里那里",
+          "th": "อยู่ที่ไหน? & ห้องน้ำอยู่ที่นี่",
+          "en": "Where is it? & Restroom is Here"
+        },
+        "canDo": {
+          "th": "ถามหาตำแหน่งสถานที่สำคัญ เช่น ห้องน้ำ และบอกตำแหน่งที่นี่/ที่นั่นได้ถูกต้อง",
+          "en": "Ask for locations like restrooms and specify here or there correctly"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🚇"
+      },
+      {
+        "lessonId": "t1_u05_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u05",
+        "tier": 1,
+        "title": {
+          "zh": "怎么走：向左向右",
+          "th": "ไปอย่างไร เลี้ยวซ้ายเลี้ยวขวา",
+          "en": "How to Get There: Left & Right"
+        },
+        "canDo": {
+          "th": "ถามเส้นทางเดินไปยังสถานที่ต่างๆ เข้าใจคำบอกทิศทางตรงไป เลี้ยวซ้าย เลี้ยวขวา",
+          "en": "Ask how to get to places and comprehend directions like straight, turn left, turn right"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "🚇"
+      },
+      {
+        "lessonId": "t1_u05_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u05",
+        "tier": 1,
+        "title": {
+          "zh": "坐地铁与打车",
+          "th": "รถไฟใต้ดิน & แท็กซี่",
+          "en": "Subway & Taxi"
+        },
+        "canDo": {
+          "th": "สื่อสารการเดินทางด้วยรถไฟใต้ดิน เรียกรถแท็กซี่ และบอกให้คนขับไปส่งยังจุดหมาย",
+          "en": "Communicate transit by subway, hail taxis, and direct drivers to destinations"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚇"
+      },
+      {
+        "lessonId": "t1_u05_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u05",
+        "tier": 1,
+        "title": {
+          "zh": "师傅，去北京南站通关",
+          "th": "Boss Challenge: ขึ้นแท็กซี่ไปสถานีรถไฟความเร็วสูง",
+          "en": "Boss Challenge: Taxi to Beijing South Railway Station"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะการเดินทาง ถามราคา ทิศทาง และบอกจุดลงรถกับคนขับแท็กซี่ได้ครบวงจร",
+          "en": "Integrate transit, pricing, directions, and destination communication with taxi drivers"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "🚇"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u06",
+    "unitNumber": 6,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "家人与朋友圈子",
+      "th": "ครอบครัว & คนรอบตัว",
+      "en": "Family & Friends"
+    },
+    "description": "แนะนำคุณพ่อ คุณแม่ พี่น้อง เพื่อนสนิท และเล่าเรื่องครอบครัวให้คนจีนฟังอย่างอบอุ่น",
+    "category": "survival",
+    "icon": "👨‍👩‍👧",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u06_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u06",
+        "tier": 1,
+        "title": {
+          "zh": "爸爸妈妈与兄弟姐妹",
+          "th": "พ่อ แม่ พี่ น้อง",
+          "en": "Dad, Mom & Siblings"
+        },
+        "canDo": {
+          "th": "เรียกและแนะนำคนในครอบครัว พ่อ แม่ พี่ชาย พี่สาว น้องชาย น้องสาว ได้อย่างถูกต้อง",
+          "en": "Address and introduce family members: dad, mom, brothers, and sisters"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "👨‍👩‍👧"
+      },
+      {
+        "lessonId": "t1_u06_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u06",
+        "tier": 1,
+        "title": {
+          "zh": "你家有几口人",
+          "th": "บ้านคุณมีกี่คน?",
+          "en": "How Many in Your Family?"
+        },
+        "canDo": {
+          "th": "ถามจำนวนสมาชิกในครอบครัว บอกจำนวนคนด้วยลักษณนาม 口 และใช้ 没有 ได้อย่างถูกต้อง",
+          "en": "Ask family size, count members using measure word 口, and negate with 没有"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👨‍👩‍👧"
+      },
+      {
+        "lessonId": "t1_u06_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u06",
+        "tier": 1,
+        "title": {
+          "zh": "朋友、同学与同事",
+          "th": "เพื่อน เพื่อนร่วมชั้น & เพื่อนร่วมงาน",
+          "en": "Friends, Classmates & Colleagues"
+        },
+        "canDo": {
+          "th": "แนะนำเพื่อน เพื่อนร่วมชั้น เพื่อนร่วมงาน และพูดแสดงความยินดีที่ได้รู้จักอย่างเป็นธรรมชาติ",
+          "en": "Introduce friends, classmates, colleagues, and express pleasure in meeting them"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "👨‍👩‍👧"
+      },
+      {
+        "lessonId": "t1_u06_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u06",
+        "tier": 1,
+        "title": {
+          "zh": "向中国房东介绍家人通关",
+          "th": "Boss Challenge: แนะนำครอบครัวให้โฮสต์จีนฟัง",
+          "en": "Boss Challenge: Introduce Family to Chinese Host"
+        },
+        "canDo": {
+          "th": "บูรณาการคำศัพท์ครอบครัว ตัวเลข สัญชาติ เล่าภาพถ่ายครอบครัวให้เจ้าของบ้านชาวจีนฟังอย่างคล่องแคล่ว",
+          "en": "Integrate family terms, numbers, and nationality to narrate family photos to a Chinese host"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "👨‍👩‍👧"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u07",
+    "unitNumber": 7,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "日常作息与休闲",
+      "th": "กิจวัตรประจำวัน & งานอดิเรก",
+      "en": "Daily Life & Free Time"
+    },
+    "description": "ตื่นนอน ไปทำงาน ฟังเพลง ดูซีรีส์ เล่นโทรศัพท์ และชวนเพื่อนไปเที่ยววันหยุดสุดสัปดาห์",
+    "category": "survival",
+    "icon": "⏰",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u07_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u07",
+        "tier": 1,
+        "title": {
+          "zh": "每天的作息时间",
+          "th": "ตื่นนอน ทำงาน เข้านอน",
+          "en": "Daily Routines & Sleep"
+        },
+        "canDo": {
+          "th": "บอกกิจวัตรประจำวัน เวลาตื่นนอน เวลาเข้างาน-เลิกงาน และเวลานอนได้อย่างถูกต้องตามลำดับเวลาจีน",
+          "en": "State daily routines: wake up, work hours, and bedtime using Chinese time-order"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "⏰"
+      },
+      {
+        "lessonId": "t1_u07_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u07",
+        "tier": 1,
+        "title": {
+          "zh": "业余爱好与玩手机",
+          "th": "ชอบทำอะไรยามว่าง?",
+          "en": "Hobbies & Playing on Phone"
+        },
+        "canDo": {
+          "th": "บอกความชอบ งานอดิเรก ดูหนัง ฟังเพลง อ่านหนังสือ และใช้รูปประโยคคำถาม A-不-A ได้อย่างถูกต้อง",
+          "en": "Express hobbies: movies, music, reading, and form A-not-A question structures"
+        },
+        "isBoss": false,
+        "vocabCount": 8,
+        "icon": "⏰"
+      },
+      {
+        "lessonId": "t1_u07_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u07",
+        "tier": 1,
+        "title": {
+          "zh": "周末跟朋友一起",
+          "th": "วันหยุดสุดสัปดาห์ไปไหนด้วยกัน?",
+          "en": "Weekends Together with Friends"
+        },
+        "canDo": {
+          "th": "ชวนเพื่อนทำกิจกรรมด้วยกันในวันหยุดสุดสัปดาห์ ใช้ 跟...一起 ได้อย่างถูกต้องตามหลักภาษา",
+          "en": "Invite friends for weekend activities and use 跟...一起 structure correctly"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "⏰"
+      },
+      {
+        "lessonId": "t1_u07_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u07",
+        "tier": 1,
+        "title": {
+          "zh": "约中国朋友周六看电影通关",
+          "th": "Boss Challenge: ชวนเพื่อนชาวจีนไปดูหนังวันเสาร์",
+          "en": "Boss Challenge: Invite Chinese Friend to Movie on Saturday"
+        },
+        "canDo": {
+          "th": "บูรณาการการบอกเวลา วันในสัปดาห์ นัดหมายสถานที่ และชวนเพื่อนไปดูหนังได้อย่างครบวงจร",
+          "en": "Integrate time, day of week, meeting point, and cinema invitations with Chinese friends"
+        },
+        "isBoss": true,
+        "vocabCount": 1,
+        "icon": "⏰"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u08",
+    "unitNumber": 8,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "天气与四季变换",
+      "th": "สภาพอากาศ & ฤดูกาล",
+      "en": "Weather & Seasons"
+    },
+    "description": "วันนี้ร้อนหรือหนาว? ฝนตกหรือหิมะตก ชวนคุยเรื่องสภาพอากาศและเตรียมเสื้อผ้าไปเที่ยวจีน",
+    "category": "survival",
+    "icon": "🌤️",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u08_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u08",
+        "tier": 1,
+        "title": {
+          "zh": "今天天气怎么样",
+          "th": "วันนี้อากาศเป็นอย่างไร?",
+          "en": "How is the Weather Today?"
+        },
+        "canDo": {
+          "th": "สอบถามและอธิบายสภาพอากาศ ร้อน หนาว สบายๆ ได้อย่างเป็นธรรมชาติ",
+          "en": "Ask and describe weather conditions: hot, cold, mild, and comfortable"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🌤️"
+      },
+      {
+        "lessonId": "t1_u08_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u08",
+        "tier": 1,
+        "title": {
+          "zh": "下雨了与带伞",
+          "th": "ฝนตก & หิมะตก",
+          "en": "Raining & Bringing Umbrellas"
+        },
+        "canDo": {
+          "th": "บอกสภาพฝนตก หิมะตก แดดออก ฟ้าครึ้ม เข้าใจการใช้ 了 บอกการเปลี่ยนสภาพ และเตือนให้พกร่ม",
+          "en": "Express rain, snow, sunny, cloudy, understand inchoative 了, and remind bringing umbrellas"
+        },
+        "isBoss": false,
+        "vocabCount": 8,
+        "icon": "🌤️"
+      },
+      {
+        "lessonId": "t1_u08_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u08",
+        "tier": 1,
+        "title": {
+          "zh": "一年四季与穿衣服",
+          "th": "4 ฤดูกาล & เสื้อผ้า",
+          "en": "Four Seasons & Clothing"
+        },
+        "canDo": {
+          "th": "บอกชื่อ 4 ฤดูกาล ฤดูที่ชอบที่สุด และใช้ลักษณนาม 件 กับเสื้อผ้าได้อย่างถูกต้อง",
+          "en": "Name the four seasons, express favorites, and use measure word 件 for clothes"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "🌤️"
+      },
+      {
+        "lessonId": "t1_u08_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u08",
+        "tier": 1,
+        "title": {
+          "zh": "查天气预报准备去哈尔滨通关",
+          "th": "Boss Challenge: ตรวจสภาพอากาศก่อนบินไปฮาร์บิน",
+          "en": "Boss Challenge: Check Weather Before Flying to Harbin"
+        },
+        "canDo": {
+          "th": "บูรณาการสภาพอากาศ อุณหภูมิตัวเลข การแต่งกาย และการเดินทางเตรียมบินไปเที่ยวเมืองหิมะฮาร์บิน",
+          "en": "Integrate weather, temperature numbers, clothing, and transit for a snow trip to Harbin"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "🌤️"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u09",
+    "unitNumber": 9,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "身体不适与就医",
+      "th": "ร่างกาย สุขภาพ & ไม่สบาย",
+      "en": "Health & Body"
+    },
+    "description": "ปวดหัว ปวดท้อง เป็นไข้ หาหมอ ซื้อยาแก้ปวดที่ร้านขายยาในเซี่ยงไฮ้ รอดปลอดภัยเมื่อป่วย",
+    "category": "survival",
+    "icon": "💊",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u09_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u09",
+        "tier": 1,
+        "title": {
+          "zh": "我的身体与眼睛手脚",
+          "th": "ส่วนต่างๆ ของร่างกาย",
+          "en": "My Body: Head, Eyes, Hands & Feet"
+        },
+        "canDo": {
+          "th": "บอกส่วนต่างๆ ของร่างกาย ศีรษะ ดวงตา ท้อง มือ เท้า และถามไถ่สุขภาพร่างกายได้",
+          "en": "Identify body parts: head, eyes, belly, hands, feet, and inquire about health"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💊"
+      },
+      {
+        "lessonId": "t1_u09_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u09",
+        "tier": 1,
+        "title": {
+          "zh": "头疼发烧与有点儿不舒服",
+          "th": "ปวดหัว ไม่สบาย เป็นไข้",
+          "en": "Headache, Fever & Feeling Unwell"
+        },
+        "canDo": {
+          "th": "บอกอาการเจ็บป่วย ปวดหัว ปวดท้อง เป็นไข้ เป็นหวัด และใช้ 有点儿 แสดงอาการได้ถูกต้อง",
+          "en": "Express symptoms: headache, stomachache, fever, cold, and use 有点儿 correctly"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "💊"
+      },
+      {
+        "lessonId": "t1_u09_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u09",
+        "tier": 1,
+        "title": {
+          "zh": "去医院看病与吃药",
+          "th": "ไปโรงพยาบาล & กินยา",
+          "en": "Going to Hospital & Taking Medicine"
+        },
+        "canDo": {
+          "th": "สื่อสารการไปพบแพทย์ที่โรงพยาบาล ใช้คำว่า 吃药 (ห้าม 喝药) และให้คำแนะนำเรื่องน้ำอุ่น",
+          "en": "Communicate visiting doctors, use 吃药 correctly, and give warm water advice"
+        },
+        "isBoss": false,
+        "vocabCount": 7,
+        "icon": "💊"
+      },
+      {
+        "lessonId": "t1_u09_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u09",
+        "tier": 1,
+        "title": {
+          "zh": "在上海药店买感冒药通关",
+          "th": "Boss Challenge: ซื้อยาแก้หวัดที่ร้านขายยาในเซี่ยงไฮ้",
+          "en": "Boss Challenge: Buy Cold Medicine at Shanghai Pharmacy"
+        },
+        "canDo": {
+          "th": "บูรณาการบอกอาการเจ็บป่วย ซื้อยาที่ร้านขายยา ถามราคา และเข้าใจวิธีรับประทานยาอย่างครบวงจร",
+          "en": "Integrate symptom description, buying medicine at pharmacies, pricing, and dosage"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "💊"
+      }
+    ]
+  },
+  {
+    "unitId": "tier1_u10",
+    "unitNumber": 10,
+    "tier": 1,
+    "tierLabel": "Tier 1: เอาตัวรอดในชีวิตประจำวัน",
+    "title": {
+      "zh": "酒店入住与登机试炼",
+      "th": "โรงแรม & เที่ยวบิน",
+      "en": "Hotel Check-in & Flight Boarding"
+    },
+    "description": "เช็กอินโรงแรม ขอรหัส Wi-Fi เช็กอินที่สนามบิน โหลดกระเป๋า พิชิต Tier 1 Grand Boss Quest!",
+    "category": "survival",
+    "icon": "✈️",
+    "hskLevel": "HSK 1 - 2",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t1_u10_l01",
+        "lessonNumber": 1,
+        "unitId": "tier1_u10",
+        "tier": 1,
+        "title": {
+          "zh": "酒店入住与房卡押金",
+          "th": "เช็กอินโรงแรม",
+          "en": "Hotel Check-in & Deposit"
+        },
+        "canDo": {
+          "th": "เช็กอินโรงแรม แสดงหนังสือเดินทาง (พาสปอร์ต) วางเงินมัดจำ และรับคีย์การ์ดได้อย่างคล่องแคล่ว",
+          "en": "Check into hotel, present passport, pay deposit, and receive room keycards"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "✈️"
+      },
+      {
+        "lessonId": "t1_u10_l02",
+        "lessonNumber": 2,
+        "unitId": "tier1_u10",
+        "tier": 1,
+        "title": {
+          "zh": "Wi-Fi密码与空调坏了",
+          "th": "Wi-Fi & สิ่งอำนวยความสะดวกในห้อง",
+          "en": "Wi-Fi Password & Room Amenities"
+        },
+        "canDo": {
+          "th": "ถามรหัส Wi-Fi อ่านเลขห้อง 101 ด้วย yāo และแจ้งอุปกรณ์ในห้องชำรุดเพื่อขอเปลี่ยนห้อง",
+          "en": "Ask for Wi-Fi password, read room 101 as yāo, and report broken amenities"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "✈️"
+      },
+      {
+        "lessonId": "t1_u10_l03",
+        "lessonNumber": 3,
+        "unitId": "tier1_u10",
+        "tier": 1,
+        "title": {
+          "zh": "机场值机与托运行李",
+          "th": "สนามบิน & บอร์ดดิ้งพาส",
+          "en": "Airport Check-in & Boarding Pass"
+        },
+        "canDo": {
+          "th": "เช็กอินที่เคาน์เตอร์สนามบิน รับบอร์ดดิ้งพาส โหลดกระเป๋าสัมภาระ และถามหาเกตขึ้นเครื่องได้",
+          "en": "Check in at airline counters, receive boarding passes, check baggage, and find gates"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "✈️"
+      },
+      {
+        "lessonId": "t1_u10_l04",
+        "lessonNumber": 4,
+        "unitId": "tier1_u10",
+        "tier": 1,
+        "title": {
+          "zh": "挑战：中国三日游大通关",
+          "th": "🏆 Tier 1 Grand Boss Quest: ภารกิจเที่ยวจีน 3 วัน 2 คืน",
+          "en": "Tier 1 Grand Boss Quest: China 3-Day Adventure Odyssey"
+        },
+        "canDo": {
+          "th": "พิชิตมหากาพย์การเดินทาง 3 วัน 2 คืน บูรณาการทักษะภาษาจีนทั้ง 10 Units เอาชีวิตรอดในจีนได้อย่างแท้จริง",
+          "en": "Conquer the 3-day adventure odyssey, integrating all 10 units for real-world survival in China"
+        },
+        "isBoss": true,
+        "vocabCount": 2,
+        "icon": "✈️"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u11",
+    "unitNumber": 11,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "扫码支付",
+      "th": "สแกนจ่ายเงิน & กระเป๋าดิจิทัล",
+      "en": "Scan & Pay: Digital Wallets"
+    },
+    "description": "ใช้ชีวิตไร้เงินสดในจีนอย่างมั่นใจ สแกนจ่าย WeChat Pay, Alipay, เลือกระหว่าง \"ฉันสแกนเธอ\" หรือ \"เธอสแกนฉัน\", โอนเงิน และจัดการเงินทอน",
+    "category": "travel",
+    "icon": "📱",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u11_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u11",
+        "tier": 2,
+        "title": {
+          "zh": "微信与支付宝",
+          "th": "WeChat Pay & Alipay",
+          "en": "WeChat & Alipay"
+        },
+        "canDo": {
+          "th": "ระบุวิธีการจ่ายเงินดิจิทัล WeChat Pay / Alipay เปิดคิวอาร์โค้ด และใช้โครงสร้าง 把 ในการแสดงหน้าจอมือถือ",
+          "en": "Specify WeChat / Alipay payment, open QR codes, and use 把 construction to show mobile screen"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "📱"
+      },
+      {
+        "lessonId": "t2_u11_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u11",
+        "tier": 2,
+        "title": {
+          "zh": "扫我还是我扫你",
+          "th": "สแกนฉันหรือฉันสแกนคุณ?",
+          "en": "Scan Me or I Scan You?"
+        },
+        "canDo": {
+          "th": "แยกระหว่างรหัสรับเงิน (收款码) กับรหัสจ่ายเงิน (付款码) และใช้คำถามทางเลือก \"A 还是 B\"",
+          "en": "Distinguish receive code from payment code and formulate alternative questions with \"A 还是 B\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "📱"
+      },
+      {
+        "lessonId": "t2_u11_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u11",
+        "tier": 2,
+        "title": {
+          "zh": "转账与零钱",
+          "th": "โอนเงิน & เงินทอน",
+          "en": "Transfer & Small Change"
+        },
+        "canDo": {
+          "th": "พูดขอโอนเงิน ตรวจสอบยอดเงินคงเหลือ และจัดการกรณีต้องใช้เงินสดหรือขอเงินทอน",
+          "en": "Discuss money transfer, check balance, and manage cash or small change when necessary"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "📱"
+      },
+      {
+        "lessonId": "t2_u11_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u11",
+        "tier": 2,
+        "title": {
+          "zh": "菜市场扫码通关",
+          "th": "บอสชาเลนจ์: เอาชีวิตรอดตลาดสดเฉิงตู",
+          "en": "Boss Challenge: Chengdu Market Pay"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะการสแกนจ่าย WeChat/Alipay การแก้ปัญหาเน็ตช้า และการขอเงินทอนอย่างราบรื่นในสถานการณ์ตลาดจริง",
+          "en": "Integrate WeChat/Alipay scan & pay, handling network delays, and asking for change smoothly in real market scenarios"
+        },
+        "isBoss": true,
+        "vocabCount": 3,
+        "icon": "📱"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u12",
+    "unitNumber": 12,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "外卖与快递",
+      "th": "เดลิเวอรี่ & รับพัสดุด่วน",
+      "en": "Delivery & Express Courier"
+    },
+    "description": "สั่งอาหารผ่าน Meituan/Eleme ใส่ที่อยู่และบ้านเลขที่อย่างแม่นยำ สื่อสารกับไรเดอร์ และไปรับพัสดุที่ตู้ล็อกเกอร์อัจฉริยะ Cainiao",
+    "category": "travel",
+    "icon": "🛵",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u12_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u12",
+        "tier": 2,
+        "title": {
+          "zh": "点外卖与填地址",
+          "th": "สั่งเดลิเวอรี่ & ระบุที่อยู่จัดส่ง",
+          "en": "Food Delivery Order & Address"
+        },
+        "canDo": {
+          "th": "กดสั่งอาหารในแอปเดลิเวอรี่ ระบุที่อยู่ บ้านเลขที่ และเขียนหมายเหตุพิเศษถึงร้านค้าได้ถูกต้อง",
+          "en": "Order food via delivery apps, input precise addresses/room numbers, and write special merchant notes"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🛵"
+      },
+      {
+        "lessonId": "t2_u12_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u12",
+        "tier": 2,
+        "title": {
+          "zh": "骑手配送中",
+          "th": "ไรเดอร์กำลังจัดส่ง & คำเสริมบอกทิศทาง",
+          "en": "Rider In-Transit & Directional Complements"
+        },
+        "canDo": {
+          "th": "รับสายโทรศัพท์จากไรเดอร์ เข้าใจคำเสริมบอกทิศทาง (送过来 / 拿上去) และติดตามสถานะอาหารได้",
+          "en": "Answer phone calls from delivery riders, understand directional complements (送过来 / 拿上去), and track orders"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🛵"
+      },
+      {
+        "lessonId": "t2_u12_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u12",
+        "tier": 2,
+        "title": {
+          "zh": "菜鸟驿站取快递",
+          "th": "รับพัสดุที่จุดบริการ Cainiao & ตู้ล็อกเกอร์",
+          "en": "Cainiao Station & Smart Express Locker"
+        },
+        "canDo": {
+          "th": "ค้นหารหัสรับพัสดุ (取件码) เดินไปรับพัสดุที่จุดบริการ Cainiao หรือกดเปิดตู้ล็อกเกอร์อัจฉริยะ",
+          "en": "Locate pickup codes, retrieve parcels at Cainiao stations, or operate smart express lockers"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🛵"
+      },
+      {
+        "lessonId": "t2_u12_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u12",
+        "tier": 2,
+        "title": {
+          "zh": "奶茶外卖大作战",
+          "th": "บอสชาเลนจ์: ภารกิจสั่งชานมไข่มุกถึงคอนโด",
+          "en": "Boss Challenge: Condo Bubble Tea Delivery"
+        },
+        "canDo": {
+          "th": "บูรณาการการสั่งอาหารออนไลน์ การบอกรหัสผ่านประตูอาคาร และการประสานงานกับไรเดอร์ได้อย่างราบรื่น 100%",
+          "en": "Integrate online food ordering, communicating building entrance passcodes, and coordinating with riders seamlessly"
+        },
+        "isBoss": true,
+        "vocabCount": 3,
+        "icon": "🛵"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u13",
+    "unitNumber": 13,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "高铁与出行",
+      "th": "รถไฟความเร็วสูง & การเดินทางไกล",
+      "en": "High-Speed Rail & Travel"
+    },
+    "description": "จองตั๋วรถไฟความเร็วสูงผ่าน 12306 เลือกที่นั่งชั้นหนึ่ง/ชั้นสอง ผ่านจุดตรวจตั๋วและสแกนความปลอดภัย รวมถึงการเปลี่ยนตั๋วและขอคืนเงิน",
+    "category": "travel",
+    "icon": "🚄",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u13_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u13",
+        "tier": 2,
+        "title": {
+          "zh": "预订高铁票",
+          "th": "จองตั๋วรถไฟความเร็วสูง & เลือกระดับที่นั่ง",
+          "en": "Booking High-Speed Rail Tickets"
+        },
+        "canDo": {
+          "th": "จองตั๋วรถไฟความเร็วสูง เลือกระหว่างชั้นหนึ่งและชั้นสอง และใช้โครงสร้าง \"不但...而且...\" เพื่อเปรียบเทียบ",
+          "en": "Book high-speed rail tickets, choose seat classes, and use \"不但...而且...\" to make comparisons"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚄"
+      },
+      {
+        "lessonId": "t2_u13_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u13",
+        "tier": 2,
+        "title": {
+          "zh": "进站与安检",
+          "th": "เข้าสถานี ผ่านจุดตรวจตั๋ว & ตรวจความปลอดภัย",
+          "en": "Station Entry, Security & Boarding Gate"
+        },
+        "canDo": {
+          "th": "แสดงพาสปอร์ตผ่านด่านตรวจ สแกนสัมภาระ และมองหาประตูตรวจตั๋ว (检票口) บนป้ายจอ LED",
+          "en": "Present passport at gates, pass security inspection, and locate boarding gates on LED screens"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚄"
+      },
+      {
+        "lessonId": "t2_u13_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u13",
+        "tier": 2,
+        "title": {
+          "zh": "改签与退票",
+          "th": "เลื่อนตั๋ว คืนตั๋ว & ผลลัพธ์กริยา",
+          "en": "Ticket Change, Refund & Resultative Complements"
+        },
+        "canDo": {
+          "th": "ขอเลื่อนตั๋ว ขอคืนเงินเมื่อแผนเปลี่ยน และเข้าใจคำเสริมบอกผลลัพธ์ (改好了 / 没赶上 / 买到了)",
+          "en": "Request ticket modifications/refunds and master resultative complements (改好了 / 没赶上 / 买到了)"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚄"
+      },
+      {
+        "lessonId": "t2_u13_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u13",
+        "tier": 2,
+        "title": {
+          "zh": "北京南站紧急改签",
+          "th": "บอสชาเลนจ์: เลื่อนตั๋วด่วนที่สถานีปักกิ่งใต้",
+          "en": "Boss Challenge: Emergency Ticket Rescheduling"
+        },
+        "canDo": {
+          "th": "บูรณาการการพูดคุยกับเจ้าหน้าที่เคาน์เตอร์ ยื่นพาสปอร์ต เปลี่ยนตั๋วสำเร็จ และวิ่งไปขึ้นรถไฟทันเวลา 100%",
+          "en": "Integrate counter negotiations, passport validation, successful ticket changes, and catching the train on time"
+        },
+        "isBoss": true,
+        "vocabCount": 3,
+        "icon": "🚄"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u14",
+    "unitNumber": 14,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "租房与生活设施",
+      "th": "เช่าห้อง & สิ่งอำนวยความสะดวก",
+      "en": "Renting & Living Utilities"
+    },
+    "description": "ดูห้องพัก เจรจาสัญญาเช่า 押一付三 ชำระค่าน้ำค่าไฟและอินเทอร์เน็ต และติดต่อช่างซ่อมเครื่องใช้ไฟฟ้าในบ้าน",
+    "category": "travel",
+    "icon": "🏢",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u14_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u14",
+        "tier": 2,
+        "title": {
+          "zh": "看房与中介",
+          "th": "ดูห้องพัก เจรจากับนายหน้า & กฎ 押一付三",
+          "en": "Apartment Viewing & Rental Deposit"
+        },
+        "canDo": {
+          "th": "นัดหมายดูห้องพัก สอบถามค่าเช่า และเข้าใจวัฒนธรรมการจ่ายค่าเช่าจีนแบบ 押一付三",
+          "en": "Schedule apartment viewings, inquire rent, and understand Chinese rental terms like 押一付三"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏢"
+      },
+      {
+        "lessonId": "t2_u14_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u14",
+        "tier": 2,
+        "title": {
+          "zh": "水电暖气与网络",
+          "th": "ค่าน้ำค่าไฟ ฮีตเตอร์ & อินเทอร์เน็ตบ้าน",
+          "en": "Utilities, Heating & Home Broadband"
+        },
+        "canDo": {
+          "th": "จ่ายค่าน้ำค่าไฟและแก๊สผ่านแอปมือถือ ตรวจสอบมิเตอร์ และเปิดใช้งานอินเทอร์เน็ตบรอดแบนด์",
+          "en": "Pay utility bills via mobile apps, check meters, and activate home broadband Wi-Fi"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏢"
+      },
+      {
+        "lessonId": "t2_u14_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u14",
+        "tier": 2,
+        "title": {
+          "zh": "家电报修",
+          "th": "แจ้งซ่อมเครื่องใช้ไฟฟ้า & ประโยค 把 และ 被",
+          "en": "Appliance Repair & 把 / 被 Sentences"
+        },
+        "canDo": {
+          "th": "แจ้งซ่อมเครื่องใช้ไฟฟ้า (แอร์, ตู้เย็น, เครื่องซักผ้า) และใช้ประโยค 把 (จัดการสิ่งของ) กับ 被 (สิ่งของถูกกระทำ)",
+          "en": "Report malfunctioning appliances and master 把 (active disposal) and 被 (passive experience) structures"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏢"
+      },
+      {
+        "lessonId": "t2_u14_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u14",
+        "tier": 2,
+        "title": {
+          "zh": "租房谈判与报修",
+          "th": "บอสชาเลนจ์: เจรจาสัญญาเช่า & แจ้งแอร์น้ำหยด",
+          "en": "Boss Challenge: Lease Negotiation & AC Leak"
+        },
+        "canDo": {
+          "th": "บูรณาการการเจรจาสัญญาเช่ากับเจ้าของห้อง ตรวจสอบความพร้อมเครื่องใช้ไฟฟ้า และแจ้งช่างมาแก้ปัญหาแอร์น้ำหยดได้ 100%",
+          "en": "Integrate lease terms negotiation, inspecting appliances, and reporting AC water leak to technician seamlessly"
+        },
+        "isBoss": true,
+        "vocabCount": 3,
+        "icon": "🏢"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u15",
+    "unitNumber": 15,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "餐厅点菜进阶",
+      "th": "อาหารจีนเชิงลึก & รสชาติท้องถิ่น",
+      "en": "Advanced Dining & Regional Flavors"
+    },
+    "description": "ลิ้มลองอาหาร 4 ภาคของจีน ระบุรสชาติเฉพาะตัว แจ้งข้อห้ามและอาการแพ้อาหาร จัดเลี้ยงเพื่อนคนจีน และขอใบเสร็จออกใบกำกับภาษี",
+    "category": "travel",
+    "icon": "🍲",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u15_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u15",
+        "tier": 2,
+        "title": {
+          "zh": "特色风味与招牌菜",
+          "th": "เอกลักษณ์อาหาร 4 ภาค & เมนูซิกเนเจอร์",
+          "en": "Regional Flavors & Signature Dishes"
+        },
+        "canDo": {
+          "th": "แยกความแตกต่างของอาหารเสฉวน (川菜) กับกวางตุ้ง (粤菜) สั่งเมนูเด็ดประจำร้าน และใช้โครงสร้าง \"越...越...\"",
+          "en": "Distinguish Sichuan from Cantonese cuisines, order signature dishes, and use \"越...越...\""
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🍲"
+      },
+      {
+        "lessonId": "t2_u15_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u15",
+        "tier": 2,
+        "title": {
+          "zh": "饮食忌口与特殊要求",
+          "th": "ระบุข้อจำกัดอาหาร & แจ้งอาการแพ้",
+          "en": "Dietary Restrictions & Allergies"
+        },
+        "canDo": {
+          "th": "ระบุรสชาติที่ต้องการ (เผ็ดน้อย, ไม่ใส่ต้นหอม, น้ำมันน้อย, หวานน้อย) และแจ้งอาการแพ้อาหารได้อย่างปลอดภัย 100%",
+          "en": "Specify custom taste (mild spicy, no green onions, less oil/sugar) and communicate food allergies safely"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🍲"
+      },
+      {
+        "lessonId": "t2_u15_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u15",
+        "tier": 2,
+        "title": {
+          "zh": "买单与打包文化",
+          "th": "เช็กบิล ห่อกลับบ้าน & ขอใบเสร็จทางการ",
+          "en": "Bill Settlement, Takeaway & Fapiao"
+        },
+        "canDo": {
+          "th": "เรียกเช็กบิล (买单) ขอห่ออาหารที่ทานไม่หมดกลับบ้าน (打包) และขอใบกำกับภาษีทางการ (发票)",
+          "en": "Ask for the bill (买单), pack leftover food (打包), and request official tax invoices (发票)"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🍲"
+      },
+      {
+        "lessonId": "t2_u15_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u15",
+        "tier": 2,
+        "title": {
+          "zh": "盛宴东道主通关",
+          "th": "บอสชาเลนจ์: เจ้าภาพจัดเลี้ยงอาหาร 4 ภาค",
+          "en": "Boss Challenge: Hosting a Regional Banquet"
+        },
+        "canDo": {
+          "th": "บูรณาการการต้อนรับเพื่อนชาวจีน สั่งอาหารขึ้นชื่อตามรสชาติของแต่ละคน ดูแลมารยาทบนโต๊ะอาหาร และกล่าวคำอวยพรชนแก้ว 100%",
+          "en": "Integrate welcoming Chinese guests, ordering diverse regional specialties, dinner table etiquette, and toast traditions"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🍲"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u16",
+    "unitNumber": 16,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "商场退换货",
+      "th": "ช็อปปิ้ง เปลี่ยน & คืนสินค้า",
+      "en": "Shopping Returns & Exchange"
+    },
+    "description": "ช็อปปิ้งในห้างสรรพสินค้าจีนอย่างมั่นใจ ลองสวมเสื้อผ้า เปรียบเทียบไซส์ เคลมสินค้ามีตำหนิด้วยประโยค 被 คืนสินค้าพร้อมใบเสร็จ และขอคืนเงินส่วนต่าง",
+    "category": "travel",
+    "icon": "🏷️",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u16_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u16",
+        "tier": 2,
+        "title": {
+          "zh": "尺码与试穿",
+          "th": "ขนาดไซส์ & การลองสวม",
+          "en": "Sizes & Fitting"
+        },
+        "canDo": {
+          "th": "สอบถามไซส์เสื้อผ้า ลองสวม และเปรียบเทียบความพอดีโดยใช้โครงสร้าง 比...更... และ 有点儿",
+          "en": "Ask for clothing sizes, try on clothes, and compare fitting using 比...更... and 有点儿"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏷️"
+      },
+      {
+        "lessonId": "t2_u16_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u16",
+        "tier": 2,
+        "title": {
+          "zh": "质量问题与退换",
+          "th": "ปัญหาคุณภาพ & การเปลี่ยนคืน",
+          "en": "Defects & Returns"
+        },
+        "canDo": {
+          "th": "แจ้งปัญหาคุณภาพสินค้า สีตก ซิปแตก และขอเปลี่ยนหรือคืนสินค้าด้วยโครงสร้าง 被 และ 只要...就...",
+          "en": "Report defects like fading or broken zippers, and request return/exchange using 被 and 只要...就..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏷️"
+      },
+      {
+        "lessonId": "t2_u16_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u16",
+        "tier": 2,
+        "title": {
+          "zh": "折扣与质保服务",
+          "th": "ส่วนลด & ประกันคุณภาพ",
+          "en": "Discounts & Warranty"
+        },
+        "canDo": {
+          "th": "คำนวณส่วนลดระบบจีน ขอคืนเงินส่วนต่าง (补差价) และสอบถามเงื่อนไขการรับประกันสินค้า",
+          "en": "Calculate Chinese discounts, request price difference refunds, and inquire about warranty terms"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏷️"
+      },
+      {
+        "lessonId": "t2_u16_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u16",
+        "tier": 2,
+        "title": {
+          "zh": "商场退换货挑战",
+          "th": "ภารกิจเปลี่ยนคืนสินค้าห้างหังโจว",
+          "en": "InTime Mall Showdown"
+        },
+        "canDo": {
+          "th": "เจรจาเปลี่ยนไซส์เสื้อผ้า เคลมตำหนิด้วยประโยค 被 และขอรับเงินส่วนต่างคืนเข้ากระเป๋าดิจิทัลได้อย่างสมบูรณ์แบบ",
+          "en": "Negotiate size exchange, claim defects with 被, and obtain price difference refund smoothly"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🏷️"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u17",
+    "unitNumber": 17,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "看病与买药进阶",
+      "th": "พบแพทย์ & แจ้งอาการละเอียด",
+      "en": "Advanced Clinic & Pharmacy"
+    },
+    "description": "พบแพทย์ที่โรงพยาบาลในจีนอย่างมั่นใจ ทำบัตรคิวตรวจ triage อธิบายอาการป่วยเชิงลึกด้วย Potential Complements (กินไม่ลง/ทนไม่ไหว) และเข้าใจคำแนะนำการทานยาของเภสัชกร",
+    "category": "travel",
+    "icon": "🏥",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u17_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u17",
+        "tier": 2,
+        "title": {
+          "zh": "挂号与科室",
+          "th": "ลงทะเบียนตรวจโรค & แผนกแพทย์",
+          "en": "Registration & Departments"
+        },
+        "canDo": {
+          "th": "ลงทะเบียนทำบัตรตรวจ เลือกแผนกตรวจโรค (内科) และปฏิบัติตามลำดับขั้นตอนด้วยโครงสร้าง 先...然后...",
+          "en": "Register for hospital triage, select medical departments, and follow sequence using 先...然后..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏥"
+      },
+      {
+        "lessonId": "t2_u17_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u17",
+        "tier": 2,
+        "title": {
+          "zh": "描述详细病情",
+          "th": "แจ้งอาการป่วยเชิงลึก",
+          "en": "Nuanced Symptoms"
+        },
+        "canDo": {
+          "th": "อธิบายอาการป่วยอย่างละเอียดโดยใช้ Potential Complements (吃得下/吃不下/好不了/受不了) และ 越来越...",
+          "en": "Describe symptoms in detail using Potential Complements and 越来越..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏥"
+      },
+      {
+        "lessonId": "t2_u17_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u17",
+        "tier": 2,
+        "title": {
+          "zh": "药房取药与医嘱",
+          "th": "รับยาที่ห้องยา & คำสั่งแพทย์",
+          "en": "Pharmacy & Prescriptions"
+        },
+        "canDo": {
+          "th": "นำใบสั่งยาไปรับยาที่ห้องยา อ่านฉลากยา และเข้าใจคำแนะนำความถี่การทานยาและข้อห้าม",
+          "en": "Collect medicine at pharmacy, read prescription labels, and understand dosage instructions"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏥"
+      },
+      {
+        "lessonId": "t2_u17_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u17",
+        "tier": 2,
+        "title": {
+          "zh": "看病进阶急救挑战",
+          "th": "ภารกิจพิชิตโรงพยาบาลเซี่ยงไฮ้",
+          "en": "Ruijin Hospital Quest"
+        },
+        "canDo": {
+          "th": "รับมือสถานการณ์ฉุกเฉินทางการแพทย์ในโรงพยาบาล สื่อสารอาการเชิงลึก ยืนยันประวัติแพ้ยา และรับยาได้อย่างถูกต้อง",
+          "en": "Handle medical emergencies, communicate nuanced symptoms, verify allergy history, and collect prescriptions"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🏥"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u18",
+    "unitNumber": 18,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "银行与通信业务",
+      "th": "เปิดบัญชีธนาคาร & จัดการซิมการ์ด",
+      "en": "Banking & Telecom Services"
+    },
+    "description": "จัดการธุรกรรมการเงินและการสื่อสารในจีนอย่างมืออาชีพ เปิดบัญชีธนาคาร ICBC ด้วยพาสปอร์ต ซื้อแพ็กเกจเน็ตมือถือ 5G แลกเปลี่ยนเงินตรา และผูกบัญชีเข้ากระเป๋าดิจิทัล",
+    "category": "travel",
+    "icon": "💳",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u18_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u18",
+        "tier": 2,
+        "title": {
+          "zh": "开设银行账户",
+          "th": "เปิดบัญชีธนาคาร & พาสปอร์ต",
+          "en": "Opening Bank Accounts"
+        },
+        "canDo": {
+          "th": "ติดต่อเปิดบัญชีธนาคาร แสดงพาสปอร์ตตัวจริง และทำธุรกรรมโดยใช้ไวยากรณ์เงื่อนไขจำเป็น 只有...才...",
+          "en": "Inquire about opening bank accounts, present passports, and use conditional 只有...才..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💳"
+      },
+      {
+        "lessonId": "t2_u18_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u18",
+        "tier": 2,
+        "title": {
+          "zh": "手机套餐与流量",
+          "th": "แพ็กเกจมือถือ & อินเทอร์เน็ต",
+          "en": "SIM Packages & 5G Data"
+        },
+        "canDo": {
+          "th": "เลือกแพ็กเกจซิมการ์ดโทรศัพท์ สอบถามปริมาณอินเทอร์เน็ต (流量) และค่าบริการส่วนเกิน",
+          "en": "Select mobile SIM packages, inquire about data allowances, and extra data charges"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💳"
+      },
+      {
+        "lessonId": "t2_u18_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u18",
+        "tier": 2,
+        "title": {
+          "zh": "汇款与外币兑换",
+          "th": "โอนเงิน & แลกเปลี่ยนเงินตรา",
+          "en": "Remittance & Currency Exchange"
+        },
+        "canDo": {
+          "th": "สอบถามอัตราแลกเปลี่ยน (汇率) แลกเงินบาท/ดอลลาร์เป็นเงินหยวน และสอบถามค่าธรรมเนียม",
+          "en": "Inquire about exchange rates, convert THB/USD to RMB, and ask about transaction fees"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💳"
+      },
+      {
+        "lessonId": "t2_u18_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u18",
+        "tier": 2,
+        "title": {
+          "zh": "银行开户与绑卡挑战",
+          "th": "ภารกิจเปิดบัญชี & ผูกบัตรดิจิทัล",
+          "en": "ICBC Card & Alipay Quest"
+        },
+        "canDo": {
+          "th": "เปิดบัญชีธนาคาร ICBC ซื้อซิมเน็ต China Mobile ยืนยันรหัส OTP และผูกบัญชีเข้า Alipay ได้สำเร็จ",
+          "en": "Open ICBC account, buy China Mobile SIM, verify OTP, and link UnionPay card to Alipay"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "💳"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u19",
+    "unitNumber": 19,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "中国节庆与拜访",
+      "th": "เทศกาลจีน & มารยาทเยี่ยมเยือน",
+      "en": "Festivals & Social Visits"
+    },
+    "description": "สัมผัสประเพณีวัฒนธรรมจีนอันอบอุ่น เทศกาลตรุษจีน ไหว้พระจันทร์ ไหว้บ๊ะจ่าง กล่าวคำอวยพรมงคลสี่คำ มารยาทการไปเป็นแขกเยือนบ้าน และกฎการเปลี่ยนเสียงซื้อของขวัญ (买礼物 mái lǐwù)",
+    "category": "travel",
+    "icon": "🏮",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u19_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u19",
+        "tier": 2,
+        "title": {
+          "zh": "春节与拜年",
+          "th": "ตรุษจีน & อวยพรมงคล",
+          "en": "Spring Festival & New Year Wishes"
+        },
+        "canDo": {
+          "th": "อวยพรปีใหม่จีนด้วยสำนวนมงคลสี่คำ กล่าวทักทายญาติผู้ใหญ่ และรับซองอั่งเปาอย่างนอบน้อม",
+          "en": "Deliver Chinese New Year 4-character auspicious wishes, greet elders, and receive red envelopes politely"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏮"
+      },
+      {
+        "lessonId": "t2_u19_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u19",
+        "tier": 2,
+        "title": {
+          "zh": "中秋与端午",
+          "th": "ไหว้พระจันทร์ & บ๊ะจ่าง",
+          "en": "Mid-Autumn & Dragon Boat"
+        },
+        "canDo": {
+          "th": "อธิบายความหมายเชิงสัญลักษณ์ของขนมไหว้พระจันทร์และบ๊ะจ่างโดยใช้โครงสร้าง 象征着... และ 既...又...",
+          "en": "Explain cultural symbolism of mooncakes and zongzi using 象征着... and 既...又..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏮"
+      },
+      {
+        "lessonId": "t2_u19_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u19",
+        "tier": 2,
+        "title": {
+          "zh": "做客礼仪与送礼",
+          "th": "มารยาทเยือนบ้าน & การมอบของขวัญ",
+          "en": "Guest Etiquette & Gift Sandhi"
+        },
+        "canDo": {
+          "th": "ปฏิบัติตามมารยาทเมื่อไปเยือนบ้านคนจีน มอบของขวัญอย่างถ่อมตน และออกเสียง 3+3 Sandhi ใน 买礼物 (mái lǐwù) ได้ถูกต้อง",
+          "en": "Follow Chinese guest etiquette, present gifts with modesty, and pronounce 3+3 Sandhi in 买礼物 accurately"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏮"
+      },
+      {
+        "lessonId": "t2_u19_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u19",
+        "tier": 2,
+        "title": {
+          "zh": "西安四合院拜年挑战",
+          "th": "ภารกิจสวัสดีปีใหม่เรือนโบราณซีอาน",
+          "en": "Xi’an Courtyard Quest"
+        },
+        "canDo": {
+          "th": "นำของขวัญไปสวัสดีปีใหม่ที่บ้านสี่เหอย่วนของเพื่อนคนจีน กล่าวคำถ่อมตน อวยพรมงคลสี่คำ และรับอั่งเปาอย่างถูกต้องตามธรรมเนียม",
+          "en": "Visit Chinese siheyuan courtyard, present gifts with modesty, deliver 4-character blessings, and receive red envelopes"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🏮"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u20",
+    "unitNumber": 20,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "求助与意外处理",
+      "th": "แจ้งเหตุฉุกเฉิน & ของสูญหาย",
+      "en": "Emergencies & Police Assistance"
+    },
+    "description": "รับมือเหตุไม่คาดฝันในแดนมังกรได้อย่างปลอดภัย แจ้งความของหายที่สถานีตำรวจด้วย 连...都... และ 竟然, แจ้งเคลมประกันอุบัติเหตุด้วยประโยค 被, และติดต่อสถานทูตไทยเพื่อขอเอกสารเดินทางฉุกเฉิน",
+    "category": "travel",
+    "icon": "🚨",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u20_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u20",
+        "tier": 2,
+        "title": {
+          "zh": "物品遗失与报警",
+          "th": "ของสูญหาย & การแจ้งความ",
+          "en": "Lost Property & Police Report"
+        },
+        "canDo": {
+          "th": "โทรแจ้งความ 110 หรือติดต่อสถานีตำรวจ ระบุของหายด้วยโครงสร้าง 连...都... และใช้ 竟然 / 果然 แสดงความรู้สึก",
+          "en": "Call 110 or visit police station, report lost items using 连...都..., and express surprises with 竟然 / 果然"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚨"
+      },
+      {
+        "lessonId": "t2_u20_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u20",
+        "tier": 2,
+        "title": {
+          "zh": "交通事故与理赔",
+          "th": "อุบัติเหตุ & การเคลมประกัน",
+          "en": "Traffic Incidents & Claims"
+        },
+        "canDo": {
+          "th": "แจ้งเหตุอุบัติเหตุจราจร อธิบายความเสียหายด้วยประโยค 被 และติดต่อเคลมประกันภัย",
+          "en": "Report traffic accidents, describe damage with 被 sentences, and handle insurance claims"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚨"
+      },
+      {
+        "lessonId": "t2_u20_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u20",
+        "tier": 2,
+        "title": {
+          "zh": "使领馆求助与证件",
+          "th": "ประสานงานสถานทูต & เอกสารฉุกเฉิน",
+          "en": "Embassy Assistance & Travel Docs"
+        },
+        "canDo": {
+          "th": "ติดต่อสถานทูตไทย แจ้งขอออกเอกสารเดินทางฉุกเฉิน (紧急旅行证) และขอใบแจ้งความจากตำรวจ",
+          "en": "Contact Thai Embassy, request Emergency Travel Certificates, and obtain police loss certificates"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🚨"
+      },
+      {
+        "lessonId": "t2_u20_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u20",
+        "tier": 2,
+        "title": {
+          "zh": "警局报案与使馆求助终极挑战",
+          "th": "ภารกิจพิชิตสถานีตำรวจ & ประสานสถานทูต",
+          "en": "Grand Emergency Quest"
+        },
+        "canDo": {
+          "th": "แจ้งความของหายที่สถานีตำรวจอย่างเป็นระบบ ขอใบรับรองคดี (报警回执) และประสานสถานทูตไทยออกเอกสารเดินทางได้อย่างสมบูรณ์แบบ",
+          "en": "Report lost property systematically, obtain police loss receipts, and coordinate embassy emergency documents"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🚨"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u21",
+    "unitNumber": 21,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "文娱与观影",
+      "th": "สันทนาการ & ชมภาพยนตร์",
+      "en": "Entertainment & Cinema"
+    },
+    "description": "เพลิดเพลินกับกิจกรรมบันเทิงในเมืองจีน ซื้อตั๋วหนัง เลือกที่นั่งแถวโปรด สั่งป๊อปคอร์น จองตั๋วชมนิทรรศการพิเศษพระราชวังโบราณกู้กงผ่านมินิโปรแกรม และแลกเปลี่ยนรีวิวภาพยนตร์อย่างออกรส",
+    "category": "travel",
+    "icon": "🎬",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u21_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u21",
+        "tier": 2,
+        "title": {
+          "zh": "电影院选座与观影",
+          "th": "โรงภาพยนตร์ & การเลือกที่นั่ง",
+          "en": "Cinema & Seat Selection"
+        },
+        "canDo": {
+          "th": "ซื้อตั๋วภาพยนตร์ที่เคาน์เตอร์หรือตู้จำหน่ายอัตโนมัติ เลือกที่นั่ง และเปรียบเทียบโรงภาพยนตร์ด้วยโครงสร้าง A 没有 B 那么...",
+          "en": "Purchase movie tickets, select preferred seats, and compare theaters using A 没有 B 那么..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🎬"
+      },
+      {
+        "lessonId": "t2_u21_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u21",
+        "tier": 2,
+        "title": {
+          "zh": "博物馆与展览",
+          "th": "พิพิธภัณฑ์ & นิทรรศการ",
+          "en": "Museums & Exhibitions"
+        },
+        "canDo": {
+          "th": "ซื้อบัตรเข้าชมพิพิธภัณฑ์ ยืมเครื่องบรรยายเสียงนำชม และเข้าใจป้ายกฎระเบียบเช่น 禁止拍照 และ 请勿大声喧哗",
+          "en": "Buy museum tickets, rent audio guides, and understand rules like no photography and keep quiet"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🎬"
+      },
+      {
+        "lessonId": "t2_u21_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u21",
+        "tier": 2,
+        "title": {
+          "zh": "评论剧情与推荐",
+          "th": "วิจารณ์เนื้อเรื่อง & การบอกต่อ",
+          "en": "Film Reviews & Recommendations"
+        },
+        "canDo": {
+          "th": "พูดคุยแลกเปลี่ยนความคิดเห็นเกี่ยวกับภาพยนตร์ วิจารณ์เนื้อเรื่อง และใช้โครงสร้าง 值得 + กริยา เพื่อแนะนำให้เพื่อนไปชม",
+          "en": "Discuss movie plots, share film critiques, and use 值得 + verb to recommend films to friends"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🎬"
+      },
+      {
+        "lessonId": "t2_u21_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u21",
+        "tier": 2,
+        "title": {
+          "zh": "故宫约票与通关",
+          "th": "จองตั๋วกู้กง & ผ่านด่านบอส",
+          "en": "Palace Museum Booking & Boss Challenge"
+        },
+        "canDo": {
+          "th": "จองบัตรเข้าชมพระราชวังโบราณกู้กงผ่านมินิโปรแกรม ยืนยันตัวตนด้วยระบบชื่อจริง และผ่านด่าน Boss Challenge สันทนาการ",
+          "en": "Book Palace Museum tickets via mini-programs, use real-name verification, and conquer the Entertainment Boss Challenge"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🎬"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u22",
+    "unitNumber": 22,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "健身与户外",
+      "th": "ฟิตเนส & กิจกรรมกลางแจ้ง",
+      "en": "Fitness & Outdoors"
+    },
+    "description": "ออกกำลังกายดูแลสุขภาพในแดนมังกร เข้าฟิตเนส วิ่งลู่ ยกเวท จองคอร์ทตีแบดมินตัน เดินป่าแคมปิ้งท่ามกลางธรรมชาติ และวางแผนตารางเทรนเนอร์ส่วนตัว",
+    "category": "travel",
+    "icon": "🏸",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u22_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u22",
+        "tier": 2,
+        "title": {
+          "zh": "健身房锻炼",
+          "th": "การออกกำลังกายในฟิตเนส",
+          "en": "Gym Workout & Equipment"
+        },
+        "canDo": {
+          "th": "บอกเล่ากิจวัตรการเข้าฟิตเนส ใช้อุปกรณ์ออกกำลังกาย และใช้โครงสร้าง 一边...一边... เพื่อแสดงการทำสองสิ่งพร้อมกัน",
+          "en": "Describe gym workout routines, use fitness equipment, and use 一边...一边... to express simultaneous actions"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏸"
+      },
+      {
+        "lessonId": "t2_u22_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u22",
+        "tier": 2,
+        "title": {
+          "zh": "球类运动与约球",
+          "th": "กีฬาประเภทลูกบอล & การนัดตีคอร์ท",
+          "en": "Ball Sports & Booking Courts"
+        },
+        "canDo": {
+          "th": "จองคอร์ทแบดมินตันหรือโต๊ะปิงปอง ชวนเพื่อนเล่นกีฬา และออกเสียง Tone Sandhi 两个球 (liǎng ge qiú) ได้อย่างถูกต้อง",
+          "en": "Book badminton courts or ping pong tables, invite friends to play, and pronounce Tone Sandhi 两个球 accurately"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏸"
+      },
+      {
+        "lessonId": "t2_u22_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u22",
+        "tier": 2,
+        "title": {
+          "zh": "户外徒步与露营",
+          "th": "เดินป่า & ตั้งแคมป์กลางแจ้ง",
+          "en": "Hiking & Outdoor Camping"
+        },
+        "canDo": {
+          "th": "อธิบายกิจกรรมเดินป่า กางเต็นท์แคมปิ้ง เตรียมอุปกรณ์กลางแจ้ง และใช้ไวยากรณ์ 着 (zhe) แสดงสภาพคงอยู่",
+          "en": "Describe hiking and camping activities, prepare outdoor gear, and use the aspect particle 着 for continuous states"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏸"
+      },
+      {
+        "lessonId": "t2_u22_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u22",
+        "tier": 2,
+        "title": {
+          "zh": "健身私教与挑战",
+          "th": "เทรนเนอร์ส่วนตัว & พิชิตเป้าหมาย",
+          "en": "Personal Trainer & Boss Challenge"
+        },
+        "canDo": {
+          "th": "ปรึกษาเทรนเนอร์ส่วนตัว กำหนดเป้าหมายลดไขมันเสริมกล้ามเนื้อ และพิชิต Boss Challenge ฟิตเนสและสุขภาพ",
+          "en": "Consult personal trainers, set fat loss and muscle gain goals, and complete the Fitness Boss Challenge"
+        },
+        "isBoss": true,
+        "vocabCount": 6,
+        "icon": "🏸"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u23",
+    "unitNumber": 23,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "日常办公初探",
+      "th": "ปฐมนิเทศออฟฟิศจีน",
+      "en": "Workplace Orientation"
+    },
+    "description": "ปรับตัวเข้ากับสภาพแวดล้อมการทำงานในออฟฟิศจีน ใช้อุปกรณ์สำนักงาน ปริ้นต์และสแกนเอกสาร เขียนอีเมลทางการตามธรรมเนียมจีน ประชุมประสานงานข้ามแผนก และเขียนใบลาป่วยพร้อมส่งมอบงาน",
+    "category": "travel",
+    "icon": "💼",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u23_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u23",
+        "tier": 2,
+        "title": {
+          "zh": "办公室日常设施",
+          "th": "อุปกรณ์สำนักงาน & งานเอกสาร",
+          "en": "Office Facilities & Documentation"
+        },
+        "canDo": {
+          "th": "อธิบายการใช้อุปกรณ์ในออฟฟิศ เช่น เครื่องพิมพ์ สแกน ถ่ายเอกสาร และใช้โครงสร้างบอกลำดับขั้นตอน 首先...然后...最后...",
+          "en": "Explain office equipment usage like printing and scanning, and use sequence structures 首先...然后...最后..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💼"
+      },
+      {
+        "lessonId": "t2_u23_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u23",
+        "tier": 2,
+        "title": {
+          "zh": "邮件沟通与请假",
+          "th": "อีเมลงาน & การยื่นใบลาป่วย",
+          "en": "Business Email & Sick Leave"
+        },
+        "canDo": {
+          "th": "เขียนอีเมลการทำงานที่เป็นทางการ ระบุไฟล์แนบ สำเนาถึง (CC) และเขียนคำขอลาป่วยด้วยสำนวนสุภาพ 望领导批准",
+          "en": "Draft formal workplace emails, mention attachments and CC, and write leave requests politely"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💼"
+      },
+      {
+        "lessonId": "t2_u23_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u23",
+        "tier": 2,
+        "title": {
+          "zh": "跨部门协作与会议",
+          "th": "การทำงานข้ามแผนก & การประชุม",
+          "en": "Cross-team Meetings & Deadlines"
+        },
+        "canDo": {
+          "th": "ประสานงานข้ามแผนก นัดหมายการประชุม ยืนยันกำหนดส่งงาน และใช้โครงสร้าง 保证按时交付",
+          "en": "Collaborate across departments, schedule meetings, confirm deadlines, and commit to on-time delivery"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💼"
+      },
+      {
+        "lessonId": "t2_u23_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u23",
+        "tier": 2,
+        "title": {
+          "zh": "突发病假与工作交接",
+          "th": "ลาป่วยด่วน & ส่งมอบงาน",
+          "en": "Sudden Sick Leave & Handover Boss Challenge"
+        },
+        "canDo": {
+          "th": "สื่อสารการขอลาป่วยฉุกเฉิน ยื่นใบรับรองแพทย์ ส่งมอบงานด่วนให้เพื่อนร่วมงาน และผ่านด่าน Boss Challenge ออฟฟิศจีน",
+          "en": "Communicate sudden sick leave, submit medical certificates, hand over urgent tasks, and conquer the Office Boss Challenge"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "💼"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u24",
+    "unitNumber": 24,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "观点与讨论",
+      "th": "แสดงความคิดเห็น & ถกเถียงสุภาพ",
+      "en": "Opinions & Discussion"
+    },
+    "description": "ยกระดับการสนทนาสู่ระดับความคิดเห็นและทัศนคติ แสดงความเห็นด้วยและเห็นต่างอย่างมีวาทศิลป์ ให้คำแนะนำเชิงสร้างสรรค์ ถกประเด็นจังหวะชีวิตและการทำงาน WFH vs เข้าออฟฟิศ และหาจุดร่วมฉันทามติ",
+    "category": "travel",
+    "icon": "💬",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u24_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u24",
+        "tier": 2,
+        "title": {
+          "zh": "表达赞同与反对",
+          "th": "แสดงความเห็นด้วย & คัดค้านอย่างสุภาพ",
+          "en": "Agreeing & Disagreeing Politely"
+        },
+        "canDo": {
+          "th": "แสดงความคิดเห็น สนับสนุนหรือโต้แย้งอย่างสุภาพ และใช้โครงสร้างคู่เชื่อม 尽管...但是... (แม้ว่า...แต่...)",
+          "en": "Express personal opinions, agree or politely dispute viewpoints, and use 尽管...但是..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💬"
+      },
+      {
+        "lessonId": "t2_u24_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u24",
+        "tier": 2,
+        "title": {
+          "zh": "委婉表达与建议",
+          "th": "การแสดงออกอย่างนุ่มนวล & ข้อเสนอแนะ",
+          "en": "Diplomatic Suggestions & Nuance"
+        },
+        "canDo": {
+          "th": "แสดงข้อเสนอแนะอย่างสุภาพนุ่มนวลโดยใช้สำนวน 对我来说... (สำหรับฉันแล้ว...) และ 不妨... (ลองดูสักหน่อย)",
+          "en": "Express polite suggestions diplomatically using 对我来说... and 不妨..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💬"
+      },
+      {
+        "lessonId": "t2_u24_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u24",
+        "tier": 2,
+        "title": {
+          "zh": "探讨生活节奏与热点",
+          "th": "จังหวะชีวิต & ประเด็นสังคม",
+          "en": "Life Pace, Balance & Social Topics"
+        },
+        "canDo": {
+          "th": "ร่วมถกประเด็นสังคมและจังหวะชีวิตคนเมือง เช่น การทำงานล่วงเวลา (加班) สมดุลชีวิต และใช้โครงสร้าง 一方面...另一方面...",
+          "en": "Discuss social topics and city life pace like overtime and work-life balance using 一方面...另一方面..."
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "💬"
+      },
+      {
+        "lessonId": "t2_u24_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u24",
+        "tier": 2,
+        "title": {
+          "zh": "职场模式辩论挑战",
+          "th": "ถกอภิปรายรูปแบบการทำงาน & บรรลุฉันทามติ",
+          "en": "Workplace Debate & Consensus Boss Challenge"
+        },
+        "canDo": {
+          "th": "ร่วมถกอภิปรายประเด็นการทำงาน WFH vs เข้าออฟฟิศ สรุปความคิดเห็น และผ่านด่าน Boss Challenge การแสดงทัศนะและฉันทามติ",
+          "en": "Debate WFH vs Office models, summarize viewpoints, and conquer the Debate & Consensus Boss Challenge"
+        },
+        "isBoss": true,
+        "vocabCount": 6,
+        "icon": "💬"
+      }
+    ]
+  },
+  {
+    "unitId": "tier2_u25",
+    "unitNumber": 25,
+    "tier": 2,
+    "tierLabel": "Tier 2: เที่ยวจีน & ดิจิทัลไลฟ์สไตล์",
+    "title": {
+      "zh": "穿越中国",
+      "th": "Grand Boss: ทริปท่องแดนมังกร 7 วัน",
+      "en": "Grand Boss: 7-Day China Odyssey"
+    },
+    "description": "สุดยอดบททดสอบปิดท้าย Tier 2: นักเดินทาง! แบ็กแพ็กข้าม 4 มหานคร (ปักกิ่ง ➔ ซีอาน ➔ เฉิงตู ➔ เซี่ยงไฮ้) เผชิญ 5 วิกฤตการณ์เฉพาะหน้าด้วยภาษาจีน 100% บูรณาการทุกความรู้ สแกนจ่าย รถไฟความเร็วสูง สั่งอาหาร เจรจาเปลี่ยนตั๋ว และการสื่อสารอย่างลึกซึ้ง",
+    "category": "travel",
+    "icon": "🏆",
+    "hskLevel": "HSK 3 - 4",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t2_u25_l01",
+        "lessonNumber": 1,
+        "unitId": "tier2_u25",
+        "tier": 2,
+        "title": {
+          "zh": "路线规划与启程",
+          "th": "วางแผนเส้นทาง & ออกเดินทาง (ปักกิ่ง ➔ ซีอาน)",
+          "en": "Route Planning & Departure (Beijing to Xi'an)"
+        },
+        "canDo": {
+          "th": "วางแผนการเดินทางข้ามมณฑล จองตั๋วรถไฟความเร็วสูงและตู้นอน และใช้โครงสร้าง 从...出发到... และ 甚至",
+          "en": "Plan cross-provincial trips, book HSR sleeper tickets, and use 从...出发到... and 甚至"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏆"
+      },
+      {
+        "lessonId": "t2_u25_l02",
+        "lessonNumber": 2,
+        "unitId": "tier2_u25",
+        "tier": 2,
+        "title": {
+          "zh": "突发危机与应对",
+          "th": "รับมือวิกฤตเฉพาะหน้า (ซีอาน ➔ เฉิงตู)",
+          "en": "Weather Crisis & Rescheduling (Xi'an to Chengdu)"
+        },
+        "canDo": {
+          "th": "รับมือเหตุการณ์รถไฟดีเลย์จากสภาพอากาศ เจรจาเปลี่ยนตั๋วที่เคาน์เตอร์ และบูรณาการประโยค 把 และ 被 ในสถานการณ์ฉุกเฉิน",
+          "en": "Handle weather-induced train delays, reschedule tickets at counters, and integrate 把 and 被 in emergencies"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏆"
+      },
+      {
+        "lessonId": "t2_u25_l03",
+        "lessonNumber": 3,
+        "unitId": "tier2_u25",
+        "tier": 2,
+        "title": {
+          "zh": "深度体验与交流",
+          "th": "สัมผัสวัฒนธรรม & มิตรภาพท้องถิ่น (เฉิงตู ➔ เซี่ยงไฮ้)",
+          "en": "Cultural Immersion & Local Ties (Chengdu to Shanghai)"
+        },
+        "canDo": {
+          "th": "สนทนาแลกเปลี่ยนวัฒนธรรมกับเจ้าของโฮมสเตย์ อธิบายอาหารและขนบธรรมเนียมท้องถิ่น และใช้สำนวน 一生难忘",
+          "en": "Converse with homestay hosts, describe local traditions and cuisine, and express lasting impressions"
+        },
+        "isBoss": false,
+        "vocabCount": 6,
+        "icon": "🏆"
+      },
+      {
+        "lessonId": "t2_u25_l04",
+        "lessonNumber": 4,
+        "unitId": "tier2_u25",
+        "tier": 2,
+        "title": {
+          "zh": "终极考验：穿越中国大冒险",
+          "th": "มหาศึกปิดท้าย: ท่องทั่วแดนมังกร 7 วัน (Grand Capstone)",
+          "en": "The Grand Capstone: 7-Day China Odyssey"
+        },
+        "canDo": {
+          "th": "พิชิต Grand Boss Quest วิกฤตการณ์ 5 ด่านใน 4 มหานครด้วยภาษาจีน 100% บูรณาการคำศัพท์และไวยากรณ์ทุกบทของ Tier 2",
+          "en": "Conquer the Grand Boss Quest navigating 5 crisis gauntlets across 4 metropolises using 100% Chinese"
+        },
+        "isBoss": true,
+        "vocabCount": 6,
+        "icon": "🏆"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u26",
+    "unitNumber": 26,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "职场沟通",
+      "th": "การสื่อสารในที่ทำงาน",
+      "en": "Workplace Communication"
+    },
+    "description": "ยกระดับการทำงานสู่ความเป็นมืออาชีพ: รายงานผลงานต่อหัวหน้า (汇报), การกระจายงานและติดตามความคืบหน้า (跟进), และศิลปะการให้ฟีดแบ็กอย่างสร้างสรรค์ (反馈)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u26_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u26",
+        "tier": 3,
+        "title": {
+          "zh": "向上汇报工作",
+          "th": "การรายงานผลงานต่อหัวหน้า",
+          "en": "Reporting to Manager"
+        },
+        "canDo": {
+          "th": "รายงานความคืบหน้าและสรุปผลการทำงานด้วยภาษาทางการ ใช้โครงสร้าง 鉴于... และ 据...统计",
+          "en": "Report work progress and summarize results using formal structures like 鉴于... and 据...统计"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u26_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u26",
+        "tier": 3,
+        "title": {
+          "zh": "任务拆解与跟进",
+          "th": "การกระจายงานและติดตามงาน",
+          "en": "Task Breakdown & Tracking"
+        },
+        "canDo": {
+          "th": "อธิบายการแบ่งย่อยเนื้องาน มอบหมายผู้รับผิดชอบ กำหนดหมุดหมาย และใช้สำนวน 脚踏实地",
+          "en": "Explain task decomposition, assign owners, set milestones, and use idiom 脚踏实地"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u26_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u26",
+        "tier": 3,
+        "title": {
+          "zh": "职场情商与反馈",
+          "th": "ความฉลาดทางอารมณ์และฟีดแบ็ก",
+          "en": "Workplace EQ & Feedback"
+        },
+        "canDo": {
+          "th": "ให้ฟีดแบ็กอย่างนุ่มนวลและสร้างสรรค์ ใช้โครงสร้าง 依我看... และ 是否可以考虑...",
+          "en": "Deliver constructive feedback tactfully using 依我看... and 是否可以考虑..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u26_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u26",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 季度业绩复盘汇报",
+          "th": "ภารกิจบอส: รายงานสรุปผลงานประจำไตรมาส",
+          "en": "Boss Challenge: Quarterly Review Report"
+        },
+        "canDo": {
+          "th": "บูรณาการคำศัพท์และวาทกรรมทางการ นำเสนอรายงานผลงานประจำไตรมาสต่อผู้บริหารได้อย่างราบรื่น",
+          "en": "Synthesize formal discourse and vocabulary to present quarterly performance report to executive"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u27",
+    "unitNumber": 27,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "商务谈判",
+      "th": "การเจรจาและต่อรองการค้า",
+      "en": "Business Negotiation"
+    },
+    "description": "ศิลปะการเจรจาธุรกิจระดับมืออาชีพ: การขอใบเสนอราคา (询价与报价), การต่อรองเครดิตเทอมและเงื่อนไขการชำระเงิน (支付条款与账期), และการประนีประนอมเพื่อสร้างผลประโยชน์ร่วมกัน (互利共赢)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u27_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u27",
+        "tier": 3,
+        "title": {
+          "zh": "询价与报价",
+          "th": "การขอใบเสนอราคาและการเสนอราคา",
+          "en": "Inquiry & Quotation"
+        },
+        "canDo": {
+          "th": "ต่อรองราคาสินค้า ต้นทุน และปริมาณสั่งซื้อขั้นต่ำ (MOQ) โดยใช้โครงสร้าง 哪怕...也... และ 绝不能...",
+          "en": "Negotiate price, cost, and MOQ using structures like 哪怕...也... and 绝不能..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u27_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u27",
+        "tier": 3,
+        "title": {
+          "zh": "支付条款与账期",
+          "th": "เงื่อนไขการชำระเงินและเครดิตเทอม",
+          "en": "Payment Terms & Credit"
+        },
+        "canDo": {
+          "th": "อธิบายเงื่อนไขเงินมัดจำ เงินงวดสุดท้าย เครดิตเทอม และใช้สำนวน 讨价还价",
+          "en": "Explain deposit, final balance, credit term, and use idiom 讨价还价"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u27_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u27",
+        "tier": 3,
+        "title": {
+          "zh": "妥协与双赢",
+          "th": "การประนีประนอมและผลประโยชน์ร่วมกัน",
+          "en": "Compromise & Win-Win"
+        },
+        "canDo": {
+          "th": "แสดงจุดยืนและขอบเขตขั้นต่ำ (底线) พร้อมใช้คำเชื่อมสละสลวย 本着互惠互利的原则...",
+          "en": "Express bottom line and compromise using 本着互惠互利的原则..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u27_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u27",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 深圳供应商账期终极攻防",
+          "th": "ภารกิจบอส: ต่อรองเครดิตเทอมซัพพลายเออร์เซินเจิ้น",
+          "en": "Boss Challenge: Credit Term Battle in Shenzhen"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะการเจรจาต่อรองทั้งหมด ขอขยายเครดิตเทอมจาก 30 เป็น 60 วันกับคู่ค้าโรงงานได้อย่างสัมฤทธิผล",
+          "en": "Synthesize all negotiation tactics to successfully extend credit terms from 30 to 60 days"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u28",
+    "unitNumber": 28,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "中国电商生态",
+      "th": "อีคอมเมิร์ซ & ไลฟ์สดจีน",
+      "en": "Chinese E-Commerce Ecosystem"
+    },
+    "description": "เจาะลึกระบบนิเวศอีคอมเมิร์ซที่ทรงพลังที่สุดในโลก: การบริหารทราฟฟิก (平台运营与流量), การไลฟ์ขายของและอินฟลูเอนเซอร์ (直播带货与KOL), ตลอดจนซัพพลายเชนและบริการหลังการขาย (供应链与售后)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u28_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u28",
+        "tier": 3,
+        "title": {
+          "zh": "平台运营与流量",
+          "th": "การบริหารแพลตฟอร์มและทราฟฟิก",
+          "en": "Platform Operations & Traffic"
+        },
+        "canDo": {
+          "th": "อธิบายระบบแพลตฟอร์ม ทราฟฟิก อัตราการซื้อ (Conversion Rate) และการยิงแอด โดยใช้โครงสร้าง 所谓...是指...",
+          "en": "Explain platforms, traffic, conversion rate, and ad spend using 所谓...是指..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u28_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u28",
+        "tier": 3,
+        "title": {
+          "zh": "直播带货与KOL",
+          "th": "ไลฟ์ขายของและอินฟลูเอนเซอร์",
+          "en": "Live Commerce & KOLs"
+        },
+        "canDo": {
+          "th": "สื่อสารการดีลกับอินฟลูเอนเซอร์ ค่าเปิดโต๊ะ (Pit Fee) คอมมิชชัน และใช้สำนวน 货真价实",
+          "en": "Communicate influencer deals, pit fees, commissions, and use idiom 货真价实"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u28_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u28",
+        "tier": 3,
+        "title": {
+          "zh": "供应链与售后",
+          "th": "ซัพพลายเชนและบริการหลังการขาย",
+          "en": "Supply Chain & After-Sales"
+        },
+        "canDo": {
+          "th": "อธิบายการบริหารคลังสินค้า การส่งมอบสินค้า อัตราการคืนของ และอัตราซื้อซ้ำ โดยใช้โครงสร้าง 正是由于...从而导致...",
+          "en": "Explain warehousing, fulfillment, return rate, repurchase rate using 正是由于...从而导致..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u28_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u28",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 抖音双11大促战役总指挥",
+          "th": "ภารกิจบอส: บัญชาการแคมเปญ 11.11 บน Douyin",
+          "en": "Boss Challenge: Directing Douyin Double 11 Campaign"
+        },
+        "canDo": {
+          "th": "บูรณาการศัพท์การตลาด เทคนิคการยิงแอด และการจัดการซัพพลายเชน วางแผนแคมเปญ 11.11 สู่ยอดขายเป้าหมาย",
+          "en": "Synthesize marketing, ad spend, and supply chain tactics to lead Double 11 campaign"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u29",
+    "unitNumber": 29,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "酒桌文化与社交",
+      "th": "วัฒนธรรมโต๊ะสุรา & คอนเนกชัน",
+      "en": "Banquet Culture & Social Networking"
+    },
+    "description": "ถอดรหัสศาสตร์และศิลป์แห่งการสังสรรค์ทางธุรกิจของจีน: ธรรมเนียมการจัดที่นั่งและการชนแก้ว (座次礼仪与敬酒), คำกล่าวชนแก้วและศิลปะคำถ่อมตน (敬酒词与客套话), และการบริหารความสัมพันธ์อย่างมีระดับ (关系维护与尺度)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u29_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u29",
+        "tier": 3,
+        "title": {
+          "zh": "座次礼仪与敬酒",
+          "th": "มารยาทการนั่งและการชนแก้ว",
+          "en": "Seating Etiquette & Toasting"
+        },
+        "canDo": {
+          "th": "อธิบายตำแหน่งที่นั่งของแขกผู้มีเกียรติ มารยาทการลดระดับขอบแก้วเมื่อชนแก้ว และใช้สำนวน 入乡随俗",
+          "en": "Explain VIP seating arrangements, rim-lowering glass etiquette, and use idiom 入乡随俗"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u29_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u29",
+        "tier": 3,
+        "title": {
+          "zh": "敬酒词与客套话",
+          "th": "คำกล่าวชนแก้วและศิลปะคำถ่อมตน",
+          "en": "Toasting Speeches & Courtesies"
+        },
+        "canDo": {
+          "th": "กล่าวสุนทรพจน์ชนแก้วสั้นๆ ใช้คำสุภาพ 借此机会, 感谢关照, 招待不周, และ 赏光",
+          "en": "Deliver short toast speech using courteous terms like 借此机会, 感谢关照, and 招待不周"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u29_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u29",
+        "tier": 3,
+        "title": {
+          "zh": "关系维护与尺度",
+          "th": "การบริหารคอนเนกชันและระยะห่าง",
+          "en": "Networking & Boundaries"
+        },
+        "canDo": {
+          "th": "อธิบายการสร้างคอนเนกชัน (人脉) การรักษากาลเทศะ (分寸) โดยใช้โครงสร้าง 既不失礼貌，又不失分寸",
+          "en": "Explain guanxi, boundaries, and etiquette using 既不失礼貌，又不失分寸"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u29_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u29",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 北京商务晚宴敬酒演说",
+          "th": "ภารกิจบอส: กล่าวสุนทรพจน์งานเลี้ยงต้อนรับปักกิ่ง",
+          "en": "Boss Challenge: Beijing Banquet Toast Speech"
+        },
+        "canDo": {
+          "th": "กล่าวสุนทรพจน์เปิดงานเลี้ยงต้อนรับพันธมิตรธุรกิจปักกิ่ง ผสานสำนวน 远道而来, 鼎力相助, และ 携手共进",
+          "en": "Deliver welcoming banquet speech integrating 远道而来, 鼎力相助, and 携手共进"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u30",
+    "unitNumber": 30,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "合同与法务初步",
+      "th": "ตรวจร่างสัญญาเบื้องต้น",
+      "en": "Contracts & Legal Basics"
+    },
+    "description": "ปูพื้นฐานการอ่านและตรวจสอบสัญญาธุรกิจภาษาจีน: เงื่อนไขสำคัญและค่าปรับ (关键合同条款), สิทธิและหน้าที่ตามกฎหมาย (权利与义务), ตลอดจนกลไกการระงับข้อพิพาทและอนุญาโตตุลาการ (争议解决机制)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u30_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u30",
+        "tier": 3,
+        "title": {
+          "zh": "关键合同条款",
+          "th": "เงื่อนไขสำคัญในสัญญา",
+          "en": "Key Contract Clauses"
+        },
+        "canDo": {
+          "th": "ระบุคู่สัญญา (甲方/乙方) ค่าปรับผิดสัญญา ข้อตกลงความลับ และเหตุสุดวิสัย โดยใช้โครงสร้าง 依照...之规定 / 予以...",
+          "en": "Identify Party A/B, breach damages, NDA, and force majeure using 依照...之规定 / 予以..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u30_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u30",
+        "tier": 3,
+        "title": {
+          "zh": "权利与义务",
+          "th": "สิทธิและหน้าที่ตามสัญญา",
+          "en": "Rights & Obligations"
+        },
+        "canDo": {
+          "th": "อธิบายการส่งมอบตามหน้าที่ การมอบอำนาจ ข้อยกเว้น และใช้สำนวน 一清二楚",
+          "en": "Explain fulfillment, obligations, authorization, and use idiom 一清二楚"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u30_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u30",
+        "tier": 3,
+        "title": {
+          "zh": "争议解决机制",
+          "th": "กลไกการระงับข้อพิพาท",
+          "en": "Dispute Resolution Mechanisms"
+        },
+        "canDo": {
+          "th": "อธิบายขั้นตอนการไกล่เกลี่ย อนุญาโตตุลาการ และเขตอำนาจศาล โดยใช้โครงสร้าง 如发生争议，双方应先行友好协商...",
+          "en": "Explain mediation, arbitration, jurisdiction using 如发生争议，双方应先行友好协商..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u30_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u30",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 采购合同红线审查与法务备忘录",
+          "th": "ภารกิจบอส: ตรวจสัญญาจัดซื้อ & ทำบันทึกท้วงติง",
+          "en": "Boss Challenge: Contract Redline Audit & Legal Memo"
+        },
+        "canDo": {
+          "th": "ตรวจพบเงื่อนไขที่คลุมเครือในสัญญาจัดซื้อระหว่างประเทศ ร่างบันทึกท้วงติง และแก้ไขข้อสัญญาให้รัดกุม",
+          "en": "Identify ambiguous clauses, draft legal redline memo, and optimize contract language"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u31",
+    "unitNumber": 31,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "中国科技与创新",
+      "th": "นวัตกรรมและเทคโนโลยีจีน",
+      "en": "China Tech & Innovation"
+    },
+    "description": "สำรวจคลื่นนวัตกรรมและอุตสาหกรรมแห่งอนาคตของจีน: ยานยนต์พลังงานใหม่และการขับขี่อัตโนมัติ (新能源与智驾), ปัญญาประดิษฐ์และโมเดลภาษาขนาดใหญ่ (人工智能与大模型), และการยกระดับอุตสาหกรรมชิปและเทคโนโลยีขั้นสูง (产业升级与挑战)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u31_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u31",
+        "tier": 3,
+        "title": {
+          "zh": "新能源与智驾",
+          "th": "ยานยนต์พลังงานใหม่และการขับขี่อัตโนมัติ",
+          "en": "New Energy Vehicles & Autonomous Driving"
+        },
+        "canDo": {
+          "th": "อธิบายรถยนต์ไฟฟ้า ระบบขับขี่อัตโนมัติ พลังการคำนวณ (Compute) และระยะทางวิ่ง โดยใช้โครงสร้าง 随着...的飞速发展，从而...",
+          "en": "Explain EV, smart driving, compute, and range using 随着...的飞速发展，从而..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u31_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u31",
+        "tier": 3,
+        "title": {
+          "zh": "人工智能与大模型",
+          "th": "ปัญญาประดิษฐ์และโมเดลภาษาขนาดใหญ่",
+          "en": "AI & Large Language Models"
+        },
+        "canDo": {
+          "th": "สนทนาเรื่องอัลกอริทึม การเทรนโมเดล การประยุกต์ใช้ในอุตสาหกรรมจริง และใช้สำนวน 日新月异",
+          "en": "Discuss algorithms, model training, commercial applications, and use idiom 日新月异"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u31_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u31",
+        "tier": 3,
+        "title": {
+          "zh": "产业升级与挑战",
+          "th": "การยกระดับอุตสาหกรรมและความท้าทาย",
+          "en": "Industrial Upgrading & Challenges"
+        },
+        "canDo": {
+          "th": "อธิบายการวิจัยและพัฒนาชิป การก้าวข้ามคอขวดเทคโนโลยี โดยใช้โครงสร้าง 不仅关乎...更直接影响到...",
+          "en": "Explain chip R&D, overcoming bottlenecks using 不仅关乎...更直接影响到..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u31_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u31",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 中泰电动车与智驾出海蓝皮书",
+          "th": "ภารกิจบอส: สมุดปกขาว EV และระบบช่วยขับขี่สู่อาเซียน",
+          "en": "Boss Challenge: Sino-Thai EV & Smart Mobility Whitepaper"
+        },
+        "canDo": {
+          "th": "ร่างบทวิเคราะห์เปรียบเทียบตลาดรถยนต์ไฟฟ้าในจีนและอาเซียน ผสานศัพท์ 渗透率, 补能体系, 出海, และ 竞争力",
+          "en": "Draft comparative analysis of Chinese & ASEAN EV markets using 渗透率, 补能体系, 出海, and 竞争力"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u32",
+    "unitNumber": 32,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "求职与面试技巧",
+      "th": "สัมภาษณ์งานบริษัทข้ามชาติจีน",
+      "en": "Job Hunting & Interview Skills"
+    },
+    "description": "เตรียมความพร้อมสู่อาชีพในองค์กรชั้นนำของจีน: การนำเสนอจุดเด่นในเรซูเม่ (简历亮点呈现), กลยุทธ์ตอบคำถามสัมภาษณ์เชิงรุกและรับ (面试问答攻防), ตลอดจนการเจรจาโครงสร้างผลตอบแทนและสวัสดิการ (薪酬期望与反问)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u32_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u32",
+        "tier": 3,
+        "title": {
+          "zh": "简历亮点呈现",
+          "th": "การนำเสนอจุดเด่นในเรซูเม่",
+          "en": "Resume Highlights Presentation"
+        },
+        "canDo": {
+          "th": "นำเสนอทักษะการทำงาน ตัวเลขชี้วัดผลงาน และจุดแข็งหลัก โดยใช้โครงสร้าง 具备...能力 / 积累了丰富的实战经验",
+          "en": "Present work skills, quantitative metrics, and core strengths using 具备...能力 / 积累了丰富的实战经验"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u32_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u32",
+        "tier": 3,
+        "title": {
+          "zh": "面试问答攻防",
+          "th": "กลยุทธ์ตอบคำถามสัมภาษณ์",
+          "en": "Interview Q&A Strategy"
+        },
+        "canDo": {
+          "th": "ตอบคำถามเรื่องจุดอ่อน วิกฤตการณ์เฉพาะหน้า แผนการในอนาคต และใช้สำนวน 自告奋勇",
+          "en": "Address weaknesses, crisis handling, future career plans, and use idiom 自告奋勇"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u32_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u32",
+        "tier": 3,
+        "title": {
+          "zh": "薪酬期望与反问",
+          "th": "การต่อรองเงินเดือนและการถามกลับ",
+          "en": "Compensation & Reverse Questions"
+        },
+        "canDo": {
+          "th": "เจรจาโครงสร้างเงินเดือน โบนัสประจำปี ออปชันหุ้น และถามกลับเกี่ยวกับวัฒนธรรมองค์กรและการเลื่อนตำแหน่ง",
+          "en": "Negotiate salary structure, annual bonus, stock options, and ask about culture & promotion"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u32_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u32",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 终面！中国科技巨头BD总监模拟战",
+          "th": "ภารกิจบอส: สัมภาษณ์รอบสุดท้าย ผู้อำนวยการ BD บิ๊กเทคจีน",
+          "en": "Boss Challenge: Final Round Interview with Tech Giant VP"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะสัมภาษณ์ทั้งหมด พิชิตการสัมภาษณ์รอบไฟนอลตำแหน่ง ผู้อำนวยการฝ่ายพัฒนาธุรกิจ (BD Director)",
+          "en": "Synthesize all interview skills to conquer final interview for Overseas BD Director"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u33",
+    "unitNumber": 33,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "中国地理与方言",
+      "th": "ภูมิศาสตร์จีนและสำเนียงท้องถิ่น",
+      "en": "Geography & Dialects of China"
+    },
+    "description": "ท่องแดนมังกรผ่านมิติภูมิศาสตร์และภาษาศาสตร์: ความแตกต่างระหว่างภาคเหนือกับภาคใต้ (南北差异), เสน่ห์ของภาษาถิ่นและสำเนียงท้องถิ่น (方言文化与乡音), ตลอดจนภูมิปัญญา 8 ตระกูลอาหารจีน (八大菜系背后的地理)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u33_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u33",
+        "tier": 3,
+        "title": {
+          "zh": "南北差异大盘点",
+          "th": "สำรวจความต่างเหนือ-ใต้",
+          "en": "North-South Differences Overview"
+        },
+        "canDo": {
+          "th": "อธิบายความต่างด้านสภาพอากาศ การใช้ฮีตเตอร์ วัฒนธรรมอาหารเส้น vs ข้าว โดยใช้โครงสร้าง 固然...然而两地人民各具风采",
+          "en": "Explain climate, heating, noodles vs rice culture using 固然...然而两地人民各具风采"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u33_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u33",
+        "tier": 3,
+        "title": {
+          "zh": "方言文化与乡音",
+          "th": "ภาษาถิ่นและสำเนียงบ้านเกิด",
+          "en": "Dialects Culture & Regional Accents"
+        },
+        "canDo": {
+          "th": "แยกแยะสำเนียงกวางตุ้ง เสฉวน ตะวันออกเฉียงเหนือ (ตงเป่ย) และใช้สำนวน 五湖四海",
+          "en": "Distinguish Cantonese, Sichuanese, Dongbei accents, and use idiom 五湖四海"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u33_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u33",
+        "tier": 3,
+        "title": {
+          "zh": "八大菜系背后的地理",
+          "th": "ภูมิศาสตร์เบื้องหลัง 8 ตระกูลอาหารจีน",
+          "en": "Geography Behind Eight Great Cuisines"
+        },
+        "canDo": {
+          "th": "อธิบายความสัมพันธ์ระหว่างภูมิศาสตร์ สภาพอากาศ และ 8 ตระกูลอาหารจีน โดยใช้โครงสร้าง 得益于优越的地理环境...",
+          "en": "Explain 8 Great Cuisines and geography using 得益于优越的地理环境..."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u33_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u33",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 东西南北中！向世界讲述多元中国",
+          "th": "ภารกิจบอส: เล่าเรื่องความหลากหลายของจีนสู่เวทีโลก",
+          "en": "Boss Challenge: Presenting Diverse China to the World"
+        },
+        "canDo": {
+          "th": "บรรยายความหลากหลายทางภูมิศาสตร์ ภาษาถิ่น วัฒนธรรมเหนือ-ใต้สู่สายตาชาวโลก ผสานคำว่า 地大物博, 包容性, และ 人文风情",
+          "en": "Narrate geographical diversity, dialects, and North-South culture using 地大物博, 包容性, and 人文风情"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u34",
+    "unitNumber": 34,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "教育与内卷现象",
+      "th": "ระบบการศึกษาและภาวะกดดัน",
+      "en": "Education & Involution"
+    },
+    "description": "เข้าใจปรากฏการณ์สังคมจีนร่วมสมัยผ่านเลนส์การศึกษาและจิตวิทยาสังคม: การสอบเกาเข่าและความหวังของครอบครัว (高考与家庭寄托), ภาวะกดดันแข่งขัน \"เน่ย์เจวี่ยน\" และสแลง \"ถั่งผิง\" (内卷、躺平与摆烂), ตลอดจนแนวคิดการเรียนรู้ตลอดชีวิต (终身学习)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u34_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u34",
+        "tier": 3,
+        "title": {
+          "zh": "高考与家庭寄托",
+          "th": "การสอบเกาเข่าและความหวังครอบครัว",
+          "en": "Gaokao & Family Hopes"
+        },
+        "canDo": {
+          "th": "อธิบายระบบการสอบเกาเข่า (高考) การเลือกอันดับมหาวิทยาลัย ความหวังของครอบครัว และใช้สำนวน 望子成龙",
+          "en": "Explain Gaokao, university applications, family aspirations, and use idiom 望子成龙"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u34_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u34",
+        "tier": 3,
+        "title": {
+          "zh": "内卷、躺平与摆烂",
+          "th": "ภาวะกดดัน การนอนเฉย และการเทงาน",
+          "en": "Involution, Tangping & Bailan"
+        },
+        "canDo": {
+          "th": "อธิบายปรากฏการณ์ \"เน่ย์เจวี่ยน (内卷)\", \"ถั่งผิง (躺平)\", และความกดดัน โดยใช้โครงสร้าง 难免带来...以至于引发全社会的广泛思考",
+          "en": "Explain Involution, Tangping, Bailan using 难免带来...以至于引发全社会的广泛思考"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u34_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u34",
+        "tier": 3,
+        "title": {
+          "zh": "职业教育与终身学习",
+          "th": "อาชีวศึกษาและการเรียนรู้ตลอดชีวิต",
+          "en": "Vocational Education & Lifelong Learning"
+        },
+        "canDo": {
+          "th": "อธิบายการฝึกทักษะวิชาชีพ การก้าวข้ามกรอบเดิม (破局) โดยใช้โครงสร้าง 与其盲目焦虑，不如专注自身成长",
+          "en": "Explain vocational skills, breaking deadlocks (破局) using 与其盲目焦虑，不如专注自身成长"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u34_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u34",
+        "tier": 3,
+        "title": {
+          "zh": "Boss Challenge: 亚洲青年教育与职业生态辩论赛",
+          "th": "ภารกิจบอส: โต้วาทีการศึกษาและภาวะกดดันของคนรุ่นใหม่",
+          "en": "Boss Challenge: Debate on Youth Education & Involution in Asia"
+        },
+        "canDo": {
+          "th": "อภิปรายและโต้วาทีเกี่ยวกับปรากฏการณ์การศึกษา ภาวะกดดัน และการพัฒนาที่หลากหลาย ผสาน 良性竞争, 精神内耗, และ 多元发展",
+          "en": "Debate youth education, involution, and diversity using 良性竞争, 精神内耗, and 多元发展"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u35",
+    "unitNumber": 35,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "环境保护与低碳",
+      "th": "การอนุรักษ์สิ่งแวดล้อมและเทคโนโลยีคาร์บอนต่ำ",
+      "en": "Environment & Green Tech"
+    },
+    "description": "เรียนรู้คำศัพท์และมิติเศรษฐกิจสีเขียวของจีนยุคใหม่: ยุทธศาสตร์ \"เป้าหมายคาร์บอนคู่\" (双碳目标), การคัดแยกขยะและไลฟ์สไตล์คาร์บอนต่ำ (垃圾分类与低碳出行), การฟื้นฟูระบบนิเวศและเศรษฐกิจหมุนเวียน (生态治理与循环经济), และการขับเคลื่อนองค์กรสู่ความยั่งยืน (绿色办公与可持续发展)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u35_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u35",
+        "tier": 3,
+        "title": {
+          "zh": "双碳目标与绿色转型",
+          "th": "เป้าหมายคาร์บอนคู่และการเปลี่ยนผ่านสีเขียว",
+          "en": "Dual Carbon Goals & Green Transition"
+        },
+        "canDo": {
+          "th": "อธิบายเป้าหมาย \"คาร์บอนพีค\" และ \"คาร์บอนเป็นกลาง\" (碳达峰、碳中和) รวมถึงแนวคิดพลังงานสะอาดและสำนวน 绿水青山",
+          "en": "Explain carbon peak, carbon neutrality, clean energy, and the proverb 绿水青山"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u35_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u35",
+        "tier": 3,
+        "title": {
+          "zh": "垃圾分类与低碳出行",
+          "th": "การแยกขยะและการเดินทางคาร์บอนต่ำ",
+          "en": "Waste Sorting & Low-Carbon Commute"
+        },
+        "canDo": {
+          "th": "สนทนาเกี่ยวกับกฎระเบียบการแยกขยะในเมือง (垃圾分类), การเดินทางด้วยจักรยานแชร์ริ่ง (共享单车) และการปลูกจิตสำนึกรักษ์โลก",
+          "en": "Discuss urban waste sorting rules, bike-sharing commutes, and cultivating environmental awareness"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u35_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u35",
+        "tier": 3,
+        "title": {
+          "zh": "生态保护与循环经济",
+          "th": "การอนุรักษ์ระบบนิเวศและเศรษฐกิจหมุนเวียน",
+          "en": "Ecological Conservation & Circular Economy"
+        },
+        "canDo": {
+          "th": "อธิบายการปลูกป่า (植树造林) การป้องกันทะเลทราย (荒漠化治理) และแนวคิดเศรษฐกิจหมุนเวียน (循环经济)",
+          "en": "Explain afforestation, desertification control, and circular economy concepts"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u35_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u35",
+        "tier": 3,
+        "title": {
+          "zh": "绿色办公与可持续发展",
+          "th": "ออฟฟิศสีเขียวและการพัฒนาที่ยั่งยืน (Boss Challenge)",
+          "en": "Green Office & Sustainable Development"
+        },
+        "canDo": {
+          "th": "นำเสนอแผนงานออฟฟิศไร้กระดาษ (无纸化办公) ลดต้นทุนเพิ่มประสิทธิภาพ (降本增效) เพื่อขับเคลื่อนการพัฒนาที่ยั่งยืน (可持续发展) ในระดับองค์กร",
+          "en": "Pitch a paperless office and efficiency optimization plan to advance corporate sustainable development"
+        },
+        "isBoss": true,
+        "vocabCount": 4,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u36",
+    "unitNumber": 36,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "心理健康与情感",
+      "th": "สุขภาพจิตและการจัดการอารมณ์",
+      "en": "Mental Health & Emotional Well-being"
+    },
+    "description": "ทำความเข้าใจและสื่อสารสภาวะทางอารมณ์ สุขภาพจิตของคนรุ่นใหม่: แรงกดดันและอาการหมดไฟ (职场倦怠), การเยียวยาจิตใจและการรับฟัง (心理疗愈与倾听), และการปรับสมดุลชีวิตเพื่อความยั่งยืน (工作与生活平衡)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u36_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u36",
+        "tier": 3,
+        "title": {
+          "zh": "情绪与压力",
+          "th": "อารมณ์และแรงกดดัน",
+          "en": "Emotions & Stress"
+        },
+        "canDo": {
+          "th": "บรรยายสภาวะอารมณ์ ความวิตกกังวล และการปลดปล่อยความเครียดได้อย่างชัดเจน",
+          "en": "Describe emotions, anxiety, and stress relief clearly"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u36_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u36",
+        "tier": 3,
+        "title": {
+          "zh": "职场倦怠与透支",
+          "th": "ภาวะหมดไฟในการทำงานและการใช้พลังเกินขีดจำกัด",
+          "en": "Workplace Burnout & Exhaustion"
+        },
+        "canDo": {
+          "th": "อธิบายอาการเหนื่อยล้าสะสม ภาวะ Burnout และการขอเวลาพักหายใจ",
+          "en": "Explain burnout, emotional exhaustion, and taking a breather"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u36_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u36",
+        "tier": 3,
+        "title": {
+          "zh": "心理疗愈与倾听",
+          "th": "การเยียวยาจิตใจและการรับฟังอย่างเข้าใจ",
+          "en": "Psychological Healing & Empathetic Listening"
+        },
+        "canDo": {
+          "th": "ใช้ทักษะการรับฟัง การเห็นอกเห็นใจ และเข้าใจสำนวน 得不偿失",
+          "en": "Practice empathetic listening and understand the idiom 得不偿失"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u36_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u36",
+        "tier": 3,
+        "title": {
+          "zh": "寻求专业帮助与平衡",
+          "th": "การขอรับคำปรึกษาและสร้างสมดุลชีวิต",
+          "en": "Professional Counseling & Work-Life Harmony"
+        },
+        "canDo": {
+          "th": "ขอรับคำปรึกษาทางจิตวิทยาและนำเสนอแนวทางการสร้างสมดุลชีวิตกับการทำงาน",
+          "en": "Seek counseling and advocate work-life harmony"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u37",
+    "unitNumber": 37,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "中国传统艺术",
+      "th": "ศิลปวัฒนธรรมประเพณีจีน",
+      "en": "Chinese Traditional Arts"
+    },
+    "description": "ดื่มด่ำกับมรดกภูมิปัญญาและสุนทรียศาสตร์คลาสสิกของจีน: งิ้วปักกิ่งและหน้ากากสัญลักษณ์ (国粹京剧), ภาพวาดพู่กันจีนและการเว้นพื้นที่ว่าง (水墨丹青与留白), ศิลปะตัดกระดาษและงานหัตถกรรม (非遗剪纸), และมนต์เสน่ห์เครื่องดนตรีโบราณ (古筝与琵琶)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u37_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u37",
+        "tier": 3,
+        "title": {
+          "zh": "国粹京剧与行当",
+          "th": "งิ้วปักกิ่ง มรดกแห่งชาติและบทบาทตัวละคร",
+          "en": "Peking Opera & Traditional Roles"
+        },
+        "canDo": {
+          "th": "อธิบายเอกลักษณ์ของงิ้วปักกิ่ง บทบาท生旦净丑 และลวดลายหน้ากาก脸谱",
+          "en": "Explain Peking Opera features, role types (Sheng, Dan, Jing, Chou), and facial makeups"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u37_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u37",
+        "tier": 3,
+        "title": {
+          "zh": "水墨丹青与留白",
+          "th": "จิตรกรรมพู่กันจีนและสุนทรียภาพแห่งความว่าง",
+          "en": "Ink Wash Painting & Aesthetic Emptiness"
+        },
+        "canDo": {
+          "th": "อธิบายเทคนิคจิตรกรรมพู่กันจีน ปรัชญาการเว้นที่ว่าง (留白) และสุนทรียอารมณ์ (意境)",
+          "en": "Discuss ink wash techniques, the philosophy of negative space (Liubai), and aesthetic mood (Yijing)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u37_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u37",
+        "tier": 3,
+        "title": {
+          "zh": "民间非遗剪纸与匠心",
+          "th": "ศิลปะตัดกระดาษมรดกทางวัฒนธรรมและหัวใจช่างศิลป์",
+          "en": "Folk Paper-Cutting & Craftsmanship"
+        },
+        "canDo": {
+          "th": "อธิบายศิลปะตัดกระดาษจีน การสืบทอดมรดกทางวัฒนธรรม (非遗) และใช้สำนวน 妙不可言",
+          "en": "Explain paper-cutting, intangible heritage inheritance, and use the idiom 妙不可言"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u37_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u37",
+        "tier": 3,
+        "title": {
+          "zh": "传统乐器古筝与琵琶",
+          "th": "เครื่องดนตรีโบราณกู่เจิงและผีผา",
+          "en": "Traditional Instruments: Guzheng & Pipa"
+        },
+        "canDo": {
+          "th": "อธิบายเสียงดนตรีเครื่องสายโบราณกู่เจิงและผีผา และคุณค่าในการขัดเกลาจิตใจ",
+          "en": "Describe traditional string instruments Guzheng and Pipa, and their role in spiritual refinement"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u38",
+    "unitNumber": 38,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "现代医疗与养生",
+      "th": "การแพทย์สมัยใหม่และการดูแลสุขภาพ",
+      "en": "Modern Medicine & Wellness"
+    },
+    "description": "เรียนรู้คำศัพท์และการสื่อสารด้านสุขภาพและการแพทย์จีนยุคใหม่: การตรวจวิเคราะห์ผลเลือดและภาวะกึ่งสุขภาพดี (体检与亚健康), นวัตกรรมยารักษาตรงเป้าหมาย (现代医药与靶向治疗), การแพทย์ผสมผสานตะวันตกและสมดุลหยินหยาง (中西医结合与对症下药), และเวชศาสตร์ป้องกันเพื่ออายุวัฒนะ (预防医学与延年益寿)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u38_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u38",
+        "tier": 3,
+        "title": {
+          "zh": "体检与指标分析",
+          "th": "การตรวจสุขภาพและวิเคราะห์ค่าผลเลือด",
+          "en": "Health Checkup & Lab Metrics"
+        },
+        "canDo": {
+          "th": "อ่านและปรึกษาผลตรวจสุขภาพ ค่าดัชนีเลือด และเข้าใจภาวะกึ่งสุขภาพดี (亚健康)",
+          "en": "Understand medical checkup reports, lab indicators, and sub-health conditions"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u38_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u38",
+        "tier": 3,
+        "title": {
+          "zh": "现代医药与精准治疗",
+          "th": "การแพทย์สมัยใหม่และการรักษาตรงจุด",
+          "en": "Modern Pharmacology & Targeted Therapy"
+        },
+        "canDo": {
+          "th": "อธิบายใบสั่งยา ผลข้างเคียงของยา และแนวคิดการรักษาแบบมุ่งเป้า (靶向治疗)",
+          "en": "Discuss prescriptions, side effects, and targeted therapy concepts"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u38_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u38",
+        "tier": 3,
+        "title": {
+          "zh": "中西医结合与养生之道",
+          "th": "การแพทย์แผนจีนผสมผสานและศาสตร์แห่งการบำรุง",
+          "en": "Integrative Medicine & TCM Balance"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิดหยินหยาง พลังลมปราณ การปรับสมดุลธาตุ และใช้สำนวน 对症下药",
+          "en": "Explain Yin-Yang balance, Qi and blood, TCM conditioning, and the idiom 对症下药"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u38_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u38",
+        "tier": 3,
+        "title": {
+          "zh": "预防医学与健康生活",
+          "th": "เวชศาสตร์ป้องกันและวิถีชีวิตสุขภาพดี",
+          "en": "Preventive Medicine & Longevity Lifestyle"
+        },
+        "canDo": {
+          "th": "อธิบายหลักเวชศาสตร์ป้องกัน การจัดโภชนาการ และการชะลอวัยให้สุขภาพยืนยาว (延年益寿)",
+          "en": "Discuss preventive medicine, balanced diet, and longevity lifestyle habits"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u39",
+    "unitNumber": 39,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "投资与个人理财",
+      "th": "การลงทุนและการบริหารการเงินส่วนบุคคล",
+      "en": "Investment & Wealth Management"
+    },
+    "description": "ปูพื้นฐานและยกระดับทักษะการเงินระดับผู้เชี่ยวชาญ: การจัดสรรสินทรัพย์และการรับมือเงินเฟ้อ (资产配置与抗通胀), การควบคุมความเสี่ยงและพลังทวี (风险分散与杠杆控制), มนต์เสน่ห์ดอกเบี้ยทบต้นและการวางแผนเกษียณ (复利效应与未雨绸缪), และการสร้างกระแสเงินสดสู่อิสรภาพทางการเงิน (现金流与财富自由)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u39_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u39",
+        "tier": 3,
+        "title": {
+          "zh": "理财规划与资产配置",
+          "th": "การวางแผนการเงินและจัดสรรสินทรัพย์",
+          "en": "Financial Planning & Asset Allocation"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิดการจัดพอร์ตสินทรัพย์ ผลตอบแทน การเอาชนะเงินเฟ้อ และรักษาเงินต้น",
+          "en": "Explain asset allocation, investment returns, beating inflation, and capital preservation"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u39_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u39",
+        "tier": 3,
+        "title": {
+          "zh": "风险防范与对冲",
+          "th": "การบริหารความเสี่ยงและการป้องกันการขาดทุน",
+          "en": "Risk Management & Hedging"
+        },
+        "canDo": {
+          "th": "อธิบายการกระจายความเสี่ยง การใช้เลเวอเรจอย่างระมัดระวัง และการตั้งจุดตัดขาดทุน (止损)",
+          "en": "Explain risk diversification, leverage control, market volatility, and stop-loss discipline"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u39_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u39",
+        "tier": 3,
+        "title": {
+          "zh": "养老规划与稳健收益",
+          "th": "การวางแผนเกษียณและผลตอบแทนมั่นคง",
+          "en": "Retirement Planning & Compound Interest"
+        },
+        "canDo": {
+          "th": "อธิบายพลังของดอกเบี้ยทบต้น (复利), การสำรองเงินเกษียณ และใช้สำนวน 未雨绸缪",
+          "en": "Explain compound interest, retirement reserves, and apply the idiom 未雨绸缪"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u39_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u39",
+        "tier": 3,
+        "title": {
+          "zh": "财富自由与长远眼光",
+          "th": "อิสรภาพทางการเงินและวิสัยทัศน์ระยะยาว",
+          "en": "Financial Freedom & Long-term Vision"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิดอิสรภาพทางการเงิน การบริหารกระแสเงินสด และการประเมินผลตอบแทน (ROI)",
+          "en": "Explain financial freedom, cash flow management, and return on investment (ROI)"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u40",
+    "unitNumber": 40,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "中国茶道与禅意",
+      "th": "วิถีแห่งชาจีนและปรัชญาเซน",
+      "en": "Chinese Tea Culture & Zen"
+    },
+    "description": "ดื่มด่ำกับสุนทรียรสและภูมิปัญญาพันปีของวัฒนธรรมชาจีน: ศาสตร์แห่ง 6 ตระกูลชาและกระบวนการหมัก (六大茶类与发酵), พิธีชงชากังฟูและกาดินทรายม่วง (工夫茶艺与紫砂壶), ปรัชญา \"ชาและเซนเป็นหนึ่งเดียว\" สู่สัจธรรมชีวิต (茶禅一味与苦尽甘来), และมารยาทการผูกมิตรด้วยถ้วยชา (以茶会友与待客礼仪)",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u40_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u40",
+        "tier": 3,
+        "title": {
+          "zh": "六大茶类与采摘",
+          "th": "ชา 6 ตระกูลใหญ่และการคัดสรรยอดใบชา",
+          "en": "Six Tea Categories & Harvesting"
+        },
+        "canDo": {
+          "th": "แยกแยะชา 6 ตระกูลใหญ่ของจีน ระดับการหมักบ่ม และการคัดสรรยอดชา",
+          "en": "Distinguish six Chinese tea families, fermentation levels, and tender shoot harvesting"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u40_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u40",
+        "tier": 3,
+        "title": {
+          "zh": "功夫茶艺与器具",
+          "th": "พิธีชงชากังฟูและอุปกรณ์ประณีต",
+          "en": "Gongfu Tea Ceremony & Teaware"
+        },
+        "canDo": {
+          "th": "อธิบายขั้นตอนการชงชากังฟู กาดินเผาจื่อซา และรสสัมผัสชุ่มคอ (回甘)",
+          "en": "Explain Gongfu tea brewing steps, Yixing Zisha teapots, and lingering sweet aftertaste (Huigan)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u40_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u40",
+        "tier": 3,
+        "title": {
+          "zh": "茶禅一味与人生哲理",
+          "th": "ชาและเซนเป็นหนึ่งเดียวกับปรัชญาชีวิต",
+          "en": "Zen Tea Oneness & Life Philosophy"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิด \"茶禅一味\", ความสงบแห่งจิตใจ, การรู้แจ้ง และใช้สำนวน 苦尽甘来",
+          "en": "Explain Zen-Tea oneness, inner tranquility, epiphany, and apply the idiom 苦尽甘来"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u40_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u40",
+        "tier": 3,
+        "title": {
+          "zh": "茶文化与待客之道",
+          "th": "วัฒนธรรมชาและมารยาทการต้อนรับขับสู้",
+          "en": "Tea Hospitality & Cultural Etiquette"
+        },
+        "canDo": {
+          "th": "อธิบายมารยาทการต้อนรับแขกด้วยชา (以茶会友), การรินชา และประวัติศาสตร์อันยาวนานของชาจีน",
+          "en": "Explain tea hospitality (bonding over tea), tea serving etiquette, and China's profound tea history"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u41",
+    "unitNumber": 41,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "网络热梗与流行语",
+      "th": "ศัพท์ฮิตโซเชียลและวัฒนธรรมป๊อปจีน",
+      "en": "Internet Memes & Pop Culture Buzzwords"
+    },
+    "description": "เรียนรู้ภาษาจีนร่วมสมัย ศัพท์สแลงบนโลกออนไลน์ ยุคดิจิทัล และสำนวน 半途而废 เพื่อความเข้าใจในสังคมยุคใหม่",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u41_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u41",
+        "tier": 3,
+        "title": {
+          "zh": "当代年轻人的情绪表达",
+          "th": "การแสดงอารมณ์ของคนรุ่นใหม่ในโลกออนไลน์",
+          "en": "Youth Emotional Expression Online"
+        },
+        "canDo": {
+          "th": "ใช้คำสแลงยอดนิยม เช่น 破防 (สะเทือนใจ/ใจพัง), 绝绝子 (เริ่ดที่สุด/ปังมาก) และ 躺平 (นอนราบ/ไม่ดิ้นรน)",
+          "en": "Use popular online buzzwords like Pofang (break through defenses), Juejuezi (superb), and Tangping (lying flat)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u41_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u41",
+        "tier": 3,
+        "title": {
+          "zh": "社交平台的互动狂欢",
+          "th": "การมีปฏิสัมพันธ์บนแพลตฟอร์มโซเชียลมีเดีย",
+          "en": "Social Media Engagement Buzzwords"
+        },
+        "canDo": {
+          "th": "ใช้คำกริยาโซเชียลมีเดีย เช่น 吐槽 (บ่น/จิกกัด), 种草 (ป้ายยา), 拔草 (ถอนพิษป้ายยา) และ 打卡 (เช็กอิน)",
+          "en": "Use social buzzwords like Tucao (roast/complain), Zhongcao (plant grass/recommend), Bacao (remove desire/pull weed), and Daka (check in)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u41_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u41",
+        "tier": 3,
+        "title": {
+          "zh": "二次元与圈层文化",
+          "th": "วัฒนธรรมย่อยและการสื่อสารแบบดิจิทัล",
+          "en": "Subcultures & Digital Sub-communities"
+        },
+        "canDo": {
+          "th": "เข้าใจคำศัพท์ชุมชนดิจิทัล เช่น 表情包 (มีมสติกเกอร์), 弹幕 (ข้อความลอยบนคลิป), 社恐 (กลัวการเข้าสังคม) และ 社牛 (เซียนเข้าสังคม)",
+          "en": "Understand digital subculture terms like Biaoqingbao (memes/stickers), Danmu (bullet comments), Shekong (social anxiety), and Sheniu (social butterfly)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u41_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u41",
+        "tier": 3,
+        "title": {
+          "zh": "网络素养与半途而废",
+          "th": "มารยาททางไซเบอร์และการไม่ล้มเลิกกลางคัน (半途而废)",
+          "en": "Digital Literacy & Perseverance (Bàntú'érfèi)"
+        },
+        "canDo": {
+          "th": "อธิบายการท่องโลกไซเบอร์อย่างมีสติ การรู้เท่าทันสื่อ และสุภาษิตเตือนใจ 半途而废 (ล้มเลิกกลางคัน)",
+          "en": "Explain digital literacy, rational internet surfing, and the idiom Bàntú'érfèi (giving up halfway)"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u42",
+    "unitNumber": 42,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "城市变迁与历史",
+      "th": "การเปลี่ยนแปลงของเมืองและประวัติศาสตร์",
+      "en": "Urban Transformation & Historical Heritage"
+    },
+    "description": "ศึกษาการพัฒนาของเมืองจีนจากตรอกโบราณสู่มหานครสมัยใหม่ สถาปัตยกรรม และสำนวน 翻天覆地",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u42_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u42",
+        "tier": 3,
+        "title": {
+          "zh": "老城记忆与胡同改造",
+          "th": "ความทรงจำเมืองเก่าและการปรับปรุงหูท่ง",
+          "en": "Old City Memories & Hutong Renovation"
+        },
+        "canDo": {
+          "th": "อธิบายวิถีชีวิตดั้งเดิมในตรอกหูท่ง (胡同), บ้านโบราณสี่ประสาน (四合院) และการปรับปรุงผังเมือง (改造)",
+          "en": "Describe traditional Hutong alley life, Courtyard houses (Siheyuan), and urban renewal"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u42_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u42",
+        "tier": 3,
+        "title": {
+          "zh": "现代都市与天际线",
+          "th": "มหานครสมัยใหม่และเส้นขอบฟ้าตระการตา",
+          "en": "Modern Metropolis & City Skylines"
+        },
+        "canDo": {
+          "th": "อธิบายทัศนียภาพตึกระฟ้า (摩天大楼), แลนด์มาร์ก (地标) และเส้นขอบฟ้าเมือง (天际线)",
+          "en": "Describe skyscrapers, urban landmarks, and city skylines"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u42_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u42",
+        "tier": 3,
+        "title": {
+          "zh": "城市记忆与乡愁寻根",
+          "th": "ความทรงจำของเมืองและการหวนคืนสู่รากเหง้า",
+          "en": "Urban Memory & Nostalgic Roots"
+        },
+        "canDo": {
+          "th": "อธิบายความผูกพันต่อบ้านเกิด (乡愁), การค้นหารากเหง้า (寻根) และโบราณสถาน (遗址)",
+          "en": "Explain nostalgic homesickness (Xiangchou), root-seeking, and historic ruins (Yizhi)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u42_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u42",
+        "tier": 3,
+        "title": {
+          "zh": "翻天覆地的城市奇迹",
+          "th": "การเปลี่ยนแปลงพลิกแผ่นดิน (翻天覆地) สู่เมืองน่าอยู่",
+          "en": "Earth-shaking Miracle & Livable Cities"
+        },
+        "canDo": {
+          "th": "อธิบายการเปลี่ยนแปลงอย่างพลิกฟ้าคว่ำแผ่นดิน (翻天覆地), เมืองน่าอยู่อาศัย (宜居) และความยั่งยืน",
+          "en": "Explain earth-shaking transformation (Fāntiānfùdì), livable cities (Yiju), and sustainable development"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u43",
+    "unitNumber": 43,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "企业危机公关",
+      "th": "การบริหารวิกฤตประชาสัมพันธ์องค์กร",
+      "en": "Corporate Crisis PR & Reputation Management"
+    },
+    "description": "เรียนรู้กลยุทธ์การสื่อสารในภาวะวิกฤต การแถลงข่าว การกอบกู้ศรัทธาแบรนด์ และสำนวน 亡羊补牢",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u43_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u43",
+        "tier": 3,
+        "title": {
+          "zh": "舆情发酵与公关响应",
+          "th": "กระแสสังคมลุกลามและการตอบสนองภาวะวิกฤต",
+          "en": "Public Opinion Fermentation & Crisis Response"
+        },
+        "canDo": {
+          "th": "อธิบายกระแสความคิดเห็นสาธารณะ (舆论), การลุกลามของข่าว (发酵), เทรนด์ฮิต (热搜) และวิกฤตประชาสัมพันธ์ (公关)",
+          "en": "Explain public opinion, news escalation, trending topics (Resou), and PR crisis management"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u43_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u43",
+        "tier": 3,
+        "title": {
+          "zh": "官方声明与责任担当",
+          "th": "แถลงการณ์ทางการและความรับผิดชอบอย่างจริงใจ",
+          "en": "Official Statement & Corporate Accountability"
+        },
+        "canDo": {
+          "th": "ร่างและวิเคราะห์แถลงการณ์อย่างเป็นทางการ (声明), การชี้แจง (澄清), การแสดงความจริงใจ (诚意) และการเยียวยาชดเชย (赔偿)",
+          "en": "Draft and analyze official statements, clarifications, sincerity, and compensation protocols"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u43_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u43",
+        "tier": 3,
+        "title": {
+          "zh": "亡羊补牢与质量隐患",
+          "th": "วัวหายล้อมคอก (亡羊补牢) และการขจัดภัยเงียบด้านคุณภาพ",
+          "en": "Mending the Fold (Wángyángbǔláo) & Quality Audits"
+        },
+        "canDo": {
+          "th": "อธิบายการตรวจสอบความเสี่ยง (隐患), การเรียกคืนสินค้า (召回), การกำกับดูแล (监督) และสำนวน 亡羊补牢 (วัวหายล้อมคอก)",
+          "en": "Explain risk hazards, product recall, supervision, and the idiom Wángyángbǔláo (mending the fold)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u43_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u43",
+        "tier": 3,
+        "title": {
+          "zh": "品牌重塑与信任重建",
+          "th": "การฟื้นฟูแบรนด์และการกอบกู้ศรัทธาความไว้วางใจ",
+          "en": "Brand Rejuvenation & Trust Rebuilding"
+        },
+        "canDo": {
+          "th": "อธิบายการกอบกู้ชื่อเสียงแบรนด์ (品牌), การฟื้นฟูความไว้วางใจ (信任) และการพลิกวิกฤตเป็นโอกาส (契机)",
+          "en": "Explain brand reputation recovery, trust reconstruction, and turning crises into opportunities"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u44",
+    "unitNumber": 44,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "跨文化交流与误解",
+      "th": "การสื่อสารข้ามวัฒนธรรมและการเปิดใจกว้าง",
+      "en": "Cross-Cultural Communication & Open-Mindedness"
+    },
+    "description": "เรียนรู้ทักษะการขจัดอคติทางวัฒนธรรม การแสวงจุดร่วมสงวนจุดต่าง และสำนวน 胸怀大度",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u44_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u44",
+        "tier": 3,
+        "title": {
+          "zh": "破除刻板印象与偏见",
+          "th": "การทำลายภาพจำเหมารวมและอคติทางวัฒนธรรม",
+          "en": "Breaking Stereotypes & Cultural Biases"
+        },
+        "canDo": {
+          "th": "อธิบายภาพจำเหมารวม (刻板印象), อคติ (偏见), ช่องว่างความเข้าใจ (隔阂) และการโอบรับความหลากหลาย (包容)",
+          "en": "Explain stereotypes, cultural biases, estrangement (Gehe), and inclusive tolerance (Baorong)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u44_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u44",
+        "tier": 3,
+        "title": {
+          "zh": "非语言沟通与社交礼节",
+          "th": "อวัจนภาษาและมารยาททางสังคมสากล",
+          "en": "Nonverbal Communication & Social Etiquette"
+        },
+        "canDo": {
+          "th": "อธิบายภาษากาย (肢体语言), การสบสายตา (眼神), ระยะห่างส่วนบุคคล (社交距离) และจารีตประเพณี (礼节)",
+          "en": "Explain body language, eye contact, personal space/social distance, and social etiquette"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u44_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u44",
+        "tier": 3,
+        "title": {
+          "zh": "求同存异与胸怀大度",
+          "th": "แสวงจุดร่วมสงวนจุดต่างและใจกว้างดุจมหาสมุทร (胸怀大度)",
+          "en": "Seeking Common Ground & Magnanimity (Xiōnghuáidàdù)"
+        },
+        "canDo": {
+          "th": "อธิบายปรัชญาการทูต 求同存异 (แสวงจุดร่วมสงวนจุดต่าง), 和而不同 (กลมกลืนแต่คงเอกลักษณ์) และสำนวน 胸怀大度 (ใจกว้างดั่งมหาสมุทร)",
+          "en": "Explain seeking common ground while reserving differences, harmony in diversity, and Xiōnghuáidàdù (magnanimous open-heartedness)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u44_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u44",
+        "tier": 3,
+        "title": {
+          "zh": "文明互鉴与文化使者",
+          "th": "การเรียนรู้ซึ่งกันและกันและทูตวัฒนธรรมโลก",
+          "en": "Mutual Learning Among Civilizations & Cultural Ambassadors"
+        },
+        "canDo": {
+          "th": "อธิบายบทบาทการเป็นสะพานเชื่อมทางวัฒนธรรม (文化桥梁), การแลกเปลี่ยนเรียนรู้ (互鉴) และการหลอมรวมทางอารยธรรม (融合)",
+          "en": "Explain cultural bridges, mutual learning among civilizations, and harmonious fusion"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier3_u45",
+    "unitNumber": 45,
+    "tier": 3,
+    "tierLabel": "Tier 3: ทำงาน สังคม & วัฒนธรรม",
+    "title": {
+      "zh": "硕士论文答辩与学术求索",
+      "th": "การสอบป้องกันวิทยานิพนธ์มหาบัณฑิตและการแสวงหาทางวิชาการ",
+      "en": "Master's Thesis Defense & Academic Pursuit"
+    },
+    "description": "เตรียมความพร้อมและเผชิญหน้ากับการสอบป้องกันวิทยานิพนธ์ระดับปริญญาโทอย่างมั่นใจ ถ่ายทอดตรรกะทางวิชาการ และใช้สำนวน 全力以赴",
+    "category": "master",
+    "icon": "🐉",
+    "hskLevel": "HSK 5 - 6",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t3_u45_l01",
+        "lessonNumber": 1,
+        "unitId": "tier3_u45",
+        "tier": 3,
+        "title": {
+          "zh": "选题与文献综述",
+          "th": "การเลือกหัวข้อวิจัยและการทบทวนวรรณกรรม",
+          "en": "Research Topic & Literature Review"
+        },
+        "canDo": {
+          "th": "อธิบายการกำหนดหัวข้อวิจัย (选题), การทบทวนวรรณกรรม (文献综述), การให้เหตุผลสนับสนุน (论证), จุดเด่นเชิงนวัตกรรม (创新点) และเอกสารอ้างอิง (参考文献)",
+          "en": "Explain topic selection, literature review, theoretical argumentation, research innovations, and references"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u45_l02",
+        "lessonNumber": 2,
+        "unitId": "tier3_u45",
+        "tier": 3,
+        "title": {
+          "zh": "答辩陈述与专家问辩",
+          "th": "การนำเสนอและการตอบข้อซักถามจากคณะกรรมการผู้ทรงคุณวุฒิ",
+          "en": "Defense Presentation & Committee Q&A"
+        },
+        "canDo": {
+          "th": "อธิบายการนำเสนอต่อที่ประชุม (陈述), การสอบป้องกันวิทยานิพนธ์ (答辩), การอธิบายขยายความเชิงลึก (阐述), การตอบข้อสงสัย (答疑) และคณะกรรมการผู้ทรงคุณวุฒิ (评委)",
+          "en": "Master oral presentation, defense, in-depth elaboration, Q&A clarification, and committee evaluations"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u45_l03",
+        "lessonNumber": 3,
+        "unitId": "tier3_u45",
+        "tier": 3,
+        "title": {
+          "zh": "学术严谨与结论展望",
+          "th": "ความเคร่งครัดทางวิชาการและบทสรุปทัศนะสู่อนาคต",
+          "en": "Academic Rigor & Forward Outlook"
+        },
+        "canDo": {
+          "th": "อธิบายความเคร่งครัดรัดกุม (严谨), ตรรกะและเหตุผล (逻辑), ข้อจำกัดของการวิจัย (局限性), คำกล่าวขอบคุณ (致谢) และสำนวน ทุ่มเทสุดกำลัง (全力以赴)",
+          "en": "Master academic rigor, logical reasoning, research limitations, acknowledgments, and idiom Quán Lì Yǐ Fù"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "🐉"
+      },
+      {
+        "lessonId": "t3_u45_l04",
+        "lessonNumber": 4,
+        "unitId": "tier3_u45",
+        "tier": 3,
+        "title": {
+          "zh": "顺利通过与前程似锦",
+          "th": "สอบผ่านอย่างราบรื่นและความสำเร็จสู่อนาคตอันรุ่งโรจน์",
+          "en": "Successful Defense & Bright Future Ahead"
+        },
+        "canDo": {
+          "th": "อธิบายการสำเร็จการศึกษา (毕业), การสอบป้องกันผ่านอย่างราบรื่น (答辩通过), ผลลัพธ์อันอุดมสมบูรณ์ (硕果累累), อนาคตสดใสรุ่งโรจน์ (前程似锦) และการสืบสานองค์ความรู้ (传承)",
+          "en": "Celebrate graduation, passing defense, fruitful achievements, splendid future prospects, and knowledge inheritance"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "🐉"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u46",
+    "unitNumber": 46,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "文言虚词在现代汉语中的沉淀",
+      "th": "คำเชื่อมและอนุภาคภาษาจีนโบราณในภาษาปัจจุบัน (文言虚词)",
+      "en": "Classical Chinese Function Words in Modern Usage"
+    },
+    "description": "ศึกษาคำช่วยและคำเชื่อมไวยากรณ์โบราณ 8 ตัวสำคัญ (之、乎、者、也、以、于、而、其) ที่ยังคงใช้ในภาษาเขียนทางการและสำนวนชั้นสูง",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u46_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u46",
+        "tier": 4,
+        "title": {
+          "zh": "之与乎的文言遗风",
+          "th": "กลิ่นอายโบราณของ 之 (zhī) และ 乎 (hū)",
+          "en": "Echoes of Zhi and Hu in Modern Contexts"
+        },
+        "canDo": {
+          "th": "เข้าใจและใช้คำช่วยโบราณ 之 (แสดงความเป็นเจ้าของ/แทนสรรพนาม) และ 乎 (คำถาม/คำเชื่อม) ในภาษาเขียนทางการได้",
+          "en": "Understand and use classical particles Zhi (possessive/pronoun) and Hu (question/preposition) in formal writing"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u46_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u46",
+        "tier": 4,
+        "title": {
+          "zh": "者与也的判断与定性",
+          "th": "การวินิจฉัยและจำกัดความด้วย 者 (zhě) และ 也 (yě)",
+          "en": "Definition & Judgment with Zhe and Ye"
+        },
+        "canDo": {
+          "th": "ใช้โครงสร้างการนิยามเชิงปรัชญา \"...者，...也\" และจำแนกบทบาทของ 者 ในการสร้างคำเรียกกลุ่มบุคคลได้",
+          "en": "Use classical definition formula \"...zhe, ...ye\" and identify Zhe in categorizing human agents"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u46_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u46",
+        "tier": 4,
+        "title": {
+          "zh": "以与于的介词纽带",
+          "th": "คำบุพบทสะพานเชื่อม 以 (yǐ) และ 于 (yú)",
+          "en": "Prepositional Bridges: Yi and Yu"
+        },
+        "canDo": {
+          "th": "ใช้คำบุพบทโบราณ 以 (ใช้/ยึดถือ) และ 于 (ใน/ต่อ/เทียบกับ) ในบริบทการทำงาน การทูต และการวิเคราะห์",
+          "en": "Master classical prepositions Yi (use/by means of) and Yu (in/at/towards/than) in professional contexts"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u46_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u46",
+        "tier": 4,
+        "title": {
+          "zh": "而与其的承接与转折",
+          "th": "การสมานฉันท์และการหักมุมด้วย 而 (ér) และ 其 (qí)",
+          "en": "Conjunction & Determination: Er and Qi"
+        },
+        "canDo": {
+          "th": "ใช้คำเชื่อม 而 ในการแสดงความสัมพันธ์คล้อยตามหรือขัดแย้ง และใช้คำสรรพนาม 其 ควบคู่กับสำนวนชั้นสูงได้",
+          "en": "Utilize Er for progressive or contrasting transitions and Qi with classical idioms"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u47",
+    "unitNumber": 47,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "《孙子兵法》与商业谋略",
+      "th": "พิชัยสงครามซุนวูกับกลยุทธ์ธุรกิจสมัยใหม่",
+      "en": "Sun Tzu's Art of War & Business Strategies"
+    },
+    "description": "ศึกษาหลักพิชัยสงคราม 13 บทของซุนวู (知己知彼、出其不意、兵贵神速、运筹帷幄) ประยุกต์ใช้ในการวิเคราะห์คู่แข่งและการวางกลยุทธ์ธุรกิจระดับสูง",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u47_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u47",
+        "tier": 4,
+        "title": {
+          "zh": "始计篇：知己知彼与市场调研",
+          "th": "บทเริ่มวางแผน: รู้เขารู้เรา (知己知彼) และการวิจัยตลาด",
+          "en": "Laying Plans: Know Yourself & Competitive Intelligence"
+        },
+        "canDo": {
+          "th": "อธิบายหลักการประเมินสถานการณ์ (始计) และนำสำนวน 知己知彼 ไปใช้ในการวิเคราะห์จุดแข็งจุดอ่อนของธุรกิจได้",
+          "en": "Apply Sun Tzu's laying plans principles and idiom \"Know Yourself and the Enemy\" to business intelligence"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u47_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u47",
+        "tier": 4,
+        "title": {
+          "zh": "虚实篇：出其不意与蓝海战略",
+          "th": "บทจริงเท็จ: เหนือความคาดหมาย (出其不意) และกลยุทธ์น่านน้ำสีคราม",
+          "en": "Weak Points & Strong: Surprise Tactics & Blue Ocean"
+        },
+        "canDo": {
+          "th": "อธิบายกลยุทธ์ 虚实 (จุดแข็งจุดอ่อน/จริงเท็จ) และใช้สำนวน 出其不意 และ 避实击虚 ในการวางแผนเจาะตลาดใหม่",
+          "en": "Explain tactical illusions (Xu-Shi) and use idioms \"Catch Unawares\" and \"Avoid Strength, Strike Weakness\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u47_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u47",
+        "tier": 4,
+        "title": {
+          "zh": "军争篇：兵贵神速与敏捷决策",
+          "th": "บทชิงชัย: ความเร็วคือหัวใจ (兵贵神速) และการตัดสินใจแบบเอไจล์",
+          "en": "Maneuvering: Speed in Strategy & Agile Decision Making"
+        },
+        "canDo": {
+          "th": "อธิบายหลักความรวดเร็วในการช่วงชิงโอกาส (兵贵神速) และใช้สำนวน 势如破竹 ในการขยายธุรกิจได้อย่างมีพลัง",
+          "en": "Articulate speed supremacy in competition (Speed is Essence) and utilize idiom \"Like Splitting Bamboo\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u47_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u47",
+        "tier": 4,
+        "title": {
+          "zh": "谋攻篇：不战而屈人之兵与共赢博弈",
+          "th": "บทรุกด้วยปัญญา: สยบศัตรูโดยมิต้องรบ (百战不殆) และทฤษฎีเกมแห่งชัยชนะร่วม",
+          "en": "Strategic Attack: Win Without Fighting & Win-Win Game Theory"
+        },
+        "canDo": {
+          "th": "อธิบายมโนทัศน์ขั้นสูงสุดของซุนวู \"不战而屈人之兵\" และใช้สำนวน 百战不殆, 运筹帷幄 ในการเจรจาสร้างความร่วมมือ",
+          "en": "Explain Sun Tzu's supreme art \"Subduing Enemy Without Fighting\" and use idioms \"Invincible in 100 Battles\" and \"Mastermind in the Tent\""
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u48",
+    "unitNumber": 48,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "中国古代哲学思想核心",
+      "th": "แก่นปรัชญาจีนโบราณ: ขงจื๊อ เต๋า และนิติธรรม",
+      "en": "Core Chinese Philosophical Traditions: Confucianism, Daoism & Legalism"
+    },
+    "description": "ศึกษาแก่นปรัชญายุคก่อนฉิน (儒家: 仁爱与修身, 道家: 无为与自然, 法家: 制度与法治) และการหลอมรวมภูมิปัญญาเพื่อการบริหารและการพัฒนาตนเองในยุคปัจจุบัน",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u48_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u48",
+        "tier": 4,
+        "title": {
+          "zh": "儒家之道：仁爱与修身齐家",
+          "th": "วิถีแห่งขงจื๊อ: เมตตาธรรม (仁爱) และการฝึกฝนตนเอง (修身)",
+          "en": "Confucianism: Benevolence & Moral Cultivation"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิด 仁爱 (เมตตาธรรม) และ 中庸 (ทางสายกลาง) พร้อมใช้สำนวน 见贤思齐 ในการพัฒนาตนเองได้",
+          "en": "Explain Confucian core values (Ren-ai and Zhongyong) and apply idiom \"Aspire to Equal the Virtuous\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u48_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u48",
+        "tier": 4,
+        "title": {
+          "zh": "道家之哲：无为而治与道法自然",
+          "th": "ปรัชญาแห่งเต๋า: ปกครองโดยไร้การแทรกแซง (无为而治) และความดีดั่งสายน้ำ (上善若水)",
+          "en": "Daoism: Non-Action Governance & Following Nature"
+        },
+        "canDo": {
+          "th": "อธิบายปรัชญาเต๋า (เล่าจื๊อ-จวงจื๊อ) เข้าใจมโนทัศน์ 无为而治 และใช้สำนวน 上善若水, 物极必反 ได้อย่างถูกต้อง",
+          "en": "Explain Daoist philosophy (Laozi-Zhuangzi), Wuwei governance, and idioms \"Supreme Good is Like Water\" & \"Things Turned Opposite\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u48_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u48",
+        "tier": 4,
+        "title": {
+          "zh": "法家之术：法度与制度规范",
+          "th": "กลยุทธ์แห่งนิติธรรม: วินัยกฎเกณฑ์ (法度) และรางวัลลงทัณฑ์ชัดเจน (赏罚分明)",
+          "en": "Legalism: Rule of Law & Institutional Governance"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิดสำนักนิติธรรม (法家) และนำสำนวน 赏罚分明, 法不阿贵 มาประยุกต์ใช้ในการสร้างระบบการทำงานที่มีมาตรฐานได้",
+          "en": "Explain Legalist governance doctrine and apply idioms \"Clear Rewards & Punishments\" and \"Law Does Not Favor Nobility\""
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u48_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u48",
+        "tier": 4,
+        "title": {
+          "zh": "思想融合：古为今用与和而不同",
+          "th": "การหลอมรวมทางปัญญา: นำอดีตรับใช้ปัจจุบัน (古为今用) และกลมเกลียวทว่าคงเอกลักษณ์ (和而不同)",
+          "en": "Philosophical Synthesis: Ancient Wisdom for Modern Times"
+        },
+        "canDo": {
+          "th": "บูรณาการคุณค่าของ 3 สำนักปรัชญาใหญ่ (儒、道、法) และใช้สำนวน 和而不同, 古为今用, 博大精深 ในการสื่อสารระดับสากล",
+          "en": "Synthesize the three great traditions (Confucianism, Daoism, Legalism) and use idioms \"Harmony in Diversity\" & \"Ancient for Present\""
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u49",
+    "unitNumber": 49,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "中国外交修辞与声明文本",
+      "th": "วาทศิลป์ทางการทูตและแถลงการณ์ระหว่างประเทศ",
+      "en": "Chinese Diplomatic Rhetoric & Official Statements"
+    },
+    "description": "ศึกษาภาษาและวาทศิลป์ทางการทูตจีน (和平共处、互利共赢、求同存异、大国担当) รูปแบบแถลงการณ์ร่วม สุนทรพจน์ระดับพหุภาคี และสำนวนโฆษกกระทรวงการต่างประเทศ",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u49_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u49",
+        "tier": 4,
+        "title": {
+          "zh": "和平共处：五项原则与睦邻友好",
+          "th": "อยู่ร่วมกันอย่างสันติ (和平共处): หลัก 5 ประการและมิตรภาพเพื่อนบ้าน",
+          "en": "Peaceful Coexistence: Five Principles & Good Neighborliness"
+        },
+        "canDo": {
+          "th": "อธิบายหลักการ 5 ประการแห่งการอยู่ร่วมกันอย่างสันติ และใช้คำศัพท์ทางการทูต เช่น 主权, 准则, 睦邻 ในการวิเคราะห์แถลงการณ์ได้",
+          "en": "Explain Five Principles of Peaceful Coexistence and use diplomatic terminology like Sovereignty and Norms"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u49_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u49",
+        "tier": 4,
+        "title": {
+          "zh": "互利共赢：战略伙伴与多边合作",
+          "th": "ผลประโยชน์ร่วมกัน (互利共赢): หุ้นส่วนทางยุทธศาสตร์และความร่วมมือพหุภาคี",
+          "en": "Mutual Benefit: Strategic Partnerships & Multilateral Cooperation"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์เกี่ยวกับความร่วมมือระดับสูง เช่น 战略伙伴, 多边, 备忘录, 共识 ในการเขียนรายงานทางเศรษฐกิจการเมืองระหว่างประเทศได้",
+          "en": "Master high-level partnership terminology: Strategic Partner, Multilateralism, MOU, and Consensus"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u49_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u49",
+        "tier": 4,
+        "title": {
+          "zh": "严正立场：外交发言与原则底线",
+          "th": "จุดยืนอันหนักแน่น (严正立场): การแถลงข่าวทางการทูตและเส้นแบ่งแห่งหลักการ",
+          "en": "Principled Stance: Foreign Ministry Spokesperson Statements"
+        },
+        "canDo": {
+          "th": "เข้าใจและใช้วาทศิลป์ของโฆษกกระทรวงการต่างประเทศ (立场, 严正, 坚决, 底线, 交涉) ในการแสดงจุดยืนอย่างมีศิลปะ",
+          "en": "Interpret and employ Foreign Ministry rhetoric (Stance, Stern Demarche, Resolute Opposition, Red Lines)"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u49_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u49",
+        "tier": 4,
+        "title": {
+          "zh": "和谐天下：大国担当与全球治理",
+          "th": "สันติภาพใต้หล้า (和谐天下): ความรับผิดชอบของมหาอำนาจ (大国担当) และแสวงจุดร่วมสงวนจุดต่าง (求同存异)",
+          "en": "Global Harmony: Major Country Responsibility & Global Governance"
+        },
+        "canDo": {
+          "th": "อธิบายแนวคิด 大国担当, 全球治理 และนำสำนวน 求同存异, 斡旋, 共同体 ไปใช้ในการวิเคราะห์สุนทรพจน์ระดับผู้นำโลกได้",
+          "en": "Elucidate Major Power Responsibility, Global Governance, and idioms \"Seek Common Ground\" & \"Community with Shared Future\""
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u50",
+    "unitNumber": 50,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "宏观经济白皮书与政策解读",
+      "th": "สมุดปกขาวเศรษฐกิจมหภาคและการตีความนโยบายรัฐ",
+      "en": "Macroeconomics White Papers & Policy Interpretation"
+    },
+    "description": "เจาะลึกศัพท์เศรษฐศาสตร์มหภาค การอ่านรายงานสมุดปกขาวของรัฐบาล และการทำความเข้าใจทิศทางนโยบายการเงินและการคลังระดับชาติ",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u50_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u50",
+        "tier": 4,
+        "title": {
+          "zh": "宏观调控：基本指标与政策定调",
+          "th": "การควบคุมระดับมหภาค (宏观调控): ดัชนีพื้นฐานและการกำหนดทิศทางนโยบาย",
+          "en": "Macro Regulation: Core Indicators & Policy Tone"
+        },
+        "canDo": {
+          "th": "อธิบายดัชนีชี้วัดเศรษฐกิจมหภาคและทิศทางนโยบาย เช่น 宏观, 调控, 稳中求进 ในการประชุมวิเคราะห์เศรษฐกิจได้",
+          "en": "Explain macroeconomic indicators and policy directions like macro-control and making progress while maintaining stability"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u50_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u50",
+        "tier": 4,
+        "title": {
+          "zh": "货币与财政：流动性与金融工具",
+          "th": "นโยบายการเงินและการคลัง: สภาพคล่องและเครื่องมือทางการเงิน",
+          "en": "Monetary & Fiscal Policy: Liquidity & Financial Instruments"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์เกี่ยวกับนโยบายการเงินและการคลัง เช่น 货币, 财政, 流动性, 利率, 逆周期 ในการเขียนบทความการเงินได้",
+          "en": "Master fiscal and monetary terms: Currency/Monetary, Fiscal, Liquidity, Interest Rate, and Counter-cyclical"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u50_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u50",
+        "tier": 4,
+        "title": {
+          "zh": "产业升级：供给侧与高质量发展",
+          "th": "การยกระดับอุตสาหกรรม (产业升级): ด้านอุปทานและการพัฒนาคุณภาพสูง",
+          "en": "Industrial Upgrading: Supply-Side & High-Quality Development"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางเศรษฐกิจอุตสาหกรรม เช่น 升级, 供给侧, 附加值, 实体经济, 新动能 ในการอภิปรายทิศทางธุรกิจได้",
+          "en": "Discuss industrial strategies using terms: Upgrading, Supply-Side, Added Value, Real Economy, and New Drivers"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u50_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u50",
+        "tier": 4,
+        "title": {
+          "zh": "白皮书解读：韧性潜力与未来展望",
+          "th": "ถอดรหัสสมุดปกขาว: ความยืดหยุ่น ศักยภาพ และการมองไปข้างหน้า",
+          "en": "White Paper Interpretation: Resilience, Potential & Future Outlook"
+        },
+        "canDo": {
+          "th": "อ่านและสรุปใจความสำคัญจากรายงานสมุดปกขาวเศรษฐกิจ โดยใช้คำศัพท์ เช่น 白皮书, 景气, 韧性, 驱动, 稳中向好 ได้อย่างคล่องแคล่ว",
+          "en": "Read and synthesize economic white papers using vocabulary: White Paper, Prosperity/Climate, Resilience, Driven, and Steady Improvement"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u51",
+    "unitNumber": 51,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "知识产权与跨国诉讼法务",
+      "th": "ทรัพย์สินทางปัญญาและการดำเนินคดีข้ามแดน",
+      "en": "Intellectual Property & Cross-Border Litigation"
+    },
+    "description": "เรียนรู้ศัพท์กฎหมายชั้นสูง การจดสิทธิบัตร การปกป้องทรัพย์สินทางปัญญา ข้อพิพาททางกฎหมายข้ามชาติ และกระบวนการอนุญาโตตุลาการสากล",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u51_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u51",
+        "tier": 4,
+        "title": {
+          "zh": "知识产权：专利申请与确权维权",
+          "th": "ทรัพย์สินทางปัญญา: การยื่นขอสิทธิบัตรและการยืนยันสิทธิ์",
+          "en": "Intellectual Property: Patents & Rights Confirmation"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางกฎหมายทรัพย์สินทางปัญญา เช่น 知识产权, 专利, 商标, 侵权, 确权 ในการเจรจาปกป้องผลงานนวัตกรรมได้",
+          "en": "Master IP terms: Intellectual Property, Patent, Trademark, Infringement, and Rights Confirmation"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u51_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u51",
+        "tier": 4,
+        "title": {
+          "zh": "跨国诉讼：管辖权与跨国取证",
+          "th": "การดำเนินคดีข้ามแดน (跨国诉讼): เขตอำนาจศาลและการแสวงหาพยานหลักฐาน",
+          "en": "Cross-Border Litigation: Jurisdiction & Evidence Gathering"
+        },
+        "canDo": {
+          "th": "อธิบายกระบวนการดำเนินคดีในศาลระหว่างประเทศ เช่น 诉讼, 管辖权, 适用法律, 质证, 胜诉 ได้อย่างถูกต้อง",
+          "en": "Master cross-border lawsuit vocabulary: Litigation, Jurisdiction, Applicable Law, Cross-examination, and Winning Suit"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u51_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u51",
+        "tier": 4,
+        "title": {
+          "zh": "商事仲裁：裁决执行与争端和解",
+          "th": "อนุญาโตตุลาการทางการค้า (商事仲裁): การบังคับตามคำชี้ขาดและการประนีประนอม",
+          "en": "Commercial Arbitration: Award Enforcement & Settlement"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางอนุญาโตตุลาการสากล เช่น 仲裁, 裁决, 斡旋, 履约, 和解 ในการบริหารข้อพิพาทสัญญาได้",
+          "en": "Master arbitration terms: Arbitration, Award, Mediation, Performance/Compliance, and Settlement"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u51_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u51",
+        "tier": 4,
+        "title": {
+          "zh": "合规风控：法律救济与防患未然",
+          "th": "การบริหารความเสี่ยงด้านการปฏิบัติตามกฎหมาย (合规风控): การเยียวยาและการป้องกันล่วงหน้า",
+          "en": "Compliance & Risk Control: Legal Remedies & Prevention"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางนิติศาสตร์องค์กร เช่น 合规, 救济, 赔偿, 禁令, 防患未然 ในการวางระบบกำกับดูแลความเสี่ยงของบริษัทได้",
+          "en": "Master corporate compliance terms: Compliance, Legal Remedy, Compensation, Injunction, and Precaution"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u52",
+    "unitNumber": 52,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "唐诗宋词鉴赏与现代引用",
+      "th": "สุนทรียศาสตร์กวีนิพนธ์ถัง-ซ่งและการนำมาประยุกต์ใช้ในยุคปัจจุบัน",
+      "en": "Tang & Song Poetry Appreciation & Modern Citations"
+    },
+    "description": "ดื่มด่ำกวีนิพนธ์ชั้นครูของหลี่ไป๋ ตู้ฝู่ ซูซื่อ หวังอันสือ และเรียนรู้การนำบทกวีอมตะไปอ้างอิงในสุนทรพจน์ระดับผู้นำ สื่อมวลชน และการสร้างแรงบันดาลใจ",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u52_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u52",
+        "tier": 4,
+        "title": {
+          "zh": "盛唐豪情：李白诗境与浪漫意象",
+          "th": "ความองอาจแห่งต้าถัง: มโนทัศน์กวีและความโรแมนติกของหลี่ไป๋ (李白)",
+          "en": "High Tang Splendor: Li Bai & Romantic Imagery"
+        },
+        "canDo": {
+          "th": "อธิบายสุนทรียศาสตร์ของกวีหลี่ไป๋ และนำวรรคทอง เช่น 乘风破浪, 举头望明月, 直挂云帆 ไปใช้อ้างอิงในการพูดสร้างแรงบันดาลใจได้",
+          "en": "Understand Li Bai's poetic style and cite famous verses like Braving Wind and Waves to inspire audiences"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u52_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u52",
+        "tier": 4,
+        "title": {
+          "zh": "忧国忧民：杜甫诗圣与沉郁家国",
+          "th": "ห่วงใยแผ่นดินและราษฎร: ตู้ฝู่ (杜甫) ปราชญ์กวีและจิตวิญญาณแห่งชาติ",
+          "en": "Caring for Nation & People: Du Fu & Patriotic Spirit"
+        },
+        "canDo": {
+          "th": "อธิบายวรรคทองของตู้ฝู่ เช่น 诗圣, 沉郁, 会当凌绝顶, 润物细无声, 忧国忧民 และนำมาใช้กล่าวถึงความรับผิดชอบต่อสังคมได้",
+          "en": "Master Du Fu's poetry and ethos: Poet Sage, Profound Melancholy, Summit Reaching, and Social Responsibility"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u52_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u52",
+        "tier": 4,
+        "title": {
+          "zh": "旷达境界：苏轼词意与人生风雨",
+          "th": "จิตใจอันปลอดโปร่ง: บทเพลงฉือของซูซื่อ (苏轼) และมรสุมชีวิต",
+          "en": "Tranquil Wisdom: Su Shi & Poetic Resilience"
+        },
+        "canDo": {
+          "th": "เข้าใจปรัชญาชีวิตอันเบิกบานของซูซื่อ และใช้วรรคทอง เช่น 千里共婵娟, 也无风雨也无晴, 豁达 ในการปรับสมดุลจิตใจและให้กำลังใจผู้อื่นได้",
+          "en": "Understand Su Shi's open-minded philosophy and cite verses like Sharing the Moon from Afar to provide comfort"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u52_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u52",
+        "tier": 4,
+        "title": {
+          "zh": "登高望远：王安石哲理与现代气象",
+          "th": "ขึ้นสู่ที่สูงมองการไกล: ปรัชญากวีของหวังอันสือ (王安石) และวิสัยทัศน์ร่วมสมัย",
+          "en": "Climbing High: Wang Anshi & Philosophical Vision"
+        },
+        "canDo": {
+          "th": "อธิบายบทกวีเชิงปรัชญาของหวังอันสือ เช่น 登高, 哲理, 不畏浮云遮望眼, 自缘身在最高层, 寄托 และนำไปใช้อธิบายวิสัยทัศน์ทางยุทธศาสตร์ได้",
+          "en": "Interpret Wang Anshi's philosophical poetry and cite \"Fear Not Floating Clouds\" to express strategic vision"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u53",
+    "unitNumber": 53,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "中国近现代文学选读",
+      "th": "วรรณคดีจีนสมัยใหม่และร่วมสมัยคัดสรร",
+      "en": "Selected Readings in Modern & Contemporary Chinese Literature"
+    },
+    "description": "ศึกษาผลงานชิ้นเอกของปรมาจารย์วรรณกรรมจีนสมัยใหม่ เช่น หลู่ซวิ่น เหลาเส่อ ปาจิน เหมาตุ้น พร้อมวิเคราะห์จิตวิญญาณแห่งการตื่นรู้ คุณค่าความเป็นมนุษย์ และการสะท้อนยุคสมัย",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u53_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u53",
+        "tier": 4,
+        "title": {
+          "zh": "呐喊与觉醒：鲁迅的批判精神",
+          "th": "เสียงกู่ก้องและการตื่นรู้: จิตวิญญาณแห่งการวิพากษ์ของหลู่ซวิ่น (鲁迅)",
+          "en": "A Call to Arms: Lu Xun & The Spirit of Social Critique"
+        },
+        "canDo": {
+          "th": "อธิบายวรรณคดีของหลู่ซวิ่น และใช้คำศัพท์ เช่น 觉醒, 呐喊, 批判, 针砭时弊, 骨气 ในการวิเคราะห์ประเด็นสังคมได้อย่างลึกซึ้ง",
+          "en": "Analyze Lu Xun's works and master terms: Awakening, Call to Arms, Critique, Social Diagnosis, and Moral Backbone"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u53_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u53",
+        "tier": 4,
+        "title": {
+          "zh": "市井温情：老舍笔下的京味与平民命运",
+          "th": "ไออุ่นแห่งวิถีชาวบ้าน: กลิ่นอายเป่ยผิง (京味) และชะตากรรมสามัญชนของเหลาเส่อ (老舍)",
+          "en": "Beijing Flavor: Lao She & Common People's Destiny"
+        },
+        "canDo": {
+          "th": "อธิบายวรรณคดีของเหลาเส่อ เช่น 骆驼祥子, 茶馆 และใช้คำศัพท์ เช่น 京味, 市井, 幽默, 苍凉 ในการวิเคราะห์วรรณกรรมสะท้อนชีวิตได้",
+          "en": "Analyze Lao She's realism and master vocabulary: Beijing Flavor, Commoner Life, Humor, and Bleak Pathos"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u53_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u53",
+        "tier": 4,
+        "title": {
+          "zh": "时代巨澜：茅盾与巴金的家族史诗",
+          "th": "มรสุมคลื่นยักษ์แห่งยุคสมัย: มหากาพย์วงศ์ตระกูลของเหมาตุ้น (茅盾) และปาจิน (巴金)",
+          "en": "Turbulent Times: Mao Dun & Ba Jin's Family Epics"
+        },
+        "canDo": {
+          "th": "อธิบายมหากาพย์วรรณกรรมของเหมาตุ้น (子夜) และปาจิน (家) โดยใช้คำศัพท์ เช่น 巨澜, 激流, 宿命, 沉浮, 时代缩影 ได้อย่างคล่องแคล่ว",
+          "en": "Analyze epic family novels of Mao Dun and Ba Jin using terms: Giant Waves, Torrent, Destiny, Ups and Downs, and Epitome"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u53_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u53",
+        "tier": 4,
+        "title": {
+          "zh": "人文关怀：现代文学的永恒共鸣",
+          "th": "ความเอื้ออาทรต่อมนุษยชาติ: เสียงสะท้อนนิรันดร์แห่งวรรณกรรมสมัยใหม่",
+          "en": "Humanitarian Care: Modern Literature's Eternal Resonance"
+        },
+        "canDo": {
+          "th": "สรุปคุณค่าทางปรัชญาและจิตวิญญาณมนุษยธรรมของวรรณกรรมจีนสมัยใหม่ โดยใช้คำศัพท์ เช่น 关怀, 共鸣, 脊梁, 启蒙, 历久弥新 ได้อย่างเชี่ยวชาญ",
+          "en": "Synthesize humanitarian values of modern literature using terms: Compassion, Resonance, Backbone, Enlightenment, and Timeless"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u54",
+    "unitNumber": 54,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "地缘政治与“一带一路”倡议",
+      "th": "ภูมิรัฐศาสตร์และข้อริเริ่ม \"หนึ่งแถบหนึ่งเส้นทาง\" (一带一路)",
+      "en": "Geopolitics & Belt and Road Initiative"
+    },
+    "description": "ศึกษาศัพท์การเมืองระหว่างประเทศ โครงสร้างพื้นฐานระดับทวีป ยุทธศาสตร์หนึ่งแถบหนึ่งเส้นทาง และการสร้างประชาคมที่มีอนาคตร่วมกัน",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u54_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u54",
+        "tier": 4,
+        "title": {
+          "zh": "丝路精神：互联互通与地缘格局",
+          "th": "จิตวิญญาณแห่งเส้นทางสายไหม: การเชื่อมโยงโครงข่ายและภูมิทัศน์ภูมิรัฐศาสตร์",
+          "en": "Silk Road Spirit: Connectivity & Geopolitical Landscape"
+        },
+        "canDo": {
+          "th": "อธิบายจิตวิญญาณเส้นทางสายไหม และใช้คำศัพท์ เช่น 丝路, 互联互通, 走廊, 枢纽, 亚欧大陆 ในการบรรยายความเชื่อมโยงระดับทวีปได้",
+          "en": "Master Silk Road connectivity terms: Silk Road, Connectivity, Corridor, Hub, and Eurasian Continent"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u54_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u54",
+        "tier": 4,
+        "title": {
+          "zh": "基础设施：跨国投融资与绿色基建",
+          "th": "โครงสร้างพื้นฐาน: การระดมทุนข้ามชาติและสิ่งปลูกสร้างสีเขียว",
+          "en": "Infrastructure: Cross-Border Financing & Green Projects"
+        },
+        "canDo": {
+          "th": "อธิบายโครงการการลงทุนโครงสร้างพื้นฐานข้ามแดน เช่น 基础设施, 投融资, 亚投行, 债券, 绿色基建 ในการประชุมวิเคราะห์การลงทุนได้",
+          "en": "Master cross-border finance terms: Infrastructure, Investment & Financing, AIIB, Bonds, and Green Infrastructure"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u54_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u54",
+        "tier": 4,
+        "title": {
+          "zh": "贸易畅通：规则对接与经贸合作区",
+          "th": "การค้าคล่องตัว (贸易畅通): การสอดประสานกฎระเบียบและเขตความร่วมมือทางเศรษฐกิจ",
+          "en": "Unimpeded Trade: Regulatory Alignment & Economic Zones"
+        },
+        "canDo": {
+          "th": "อธิบายการอำนวยความสะดวกทางการค้า เช่น 畅通, 关税, 对接, 沿线, 经贸合作区 ในการประชุมเจรจาการค้าระหว่างประเทศได้",
+          "en": "Master unimpeded trade vocabulary: Unimpeded, Tariffs, Alignment/Docking, Along-the-Route, and Cooperation Zones"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u54_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u54",
+        "tier": 4,
+        "title": {
+          "zh": "民心相通：文明互鉴与人类命运共同体",
+          "th": "มิตรภาพที่ร้อยใจ (民心相通): การแลกเปลี่ยนอารยธรรมและประชาคมที่มีอนาคตร่วมกัน",
+          "en": "People-to-People Bonds: Civilizational Mutual Learning"
+        },
+        "canDo": {
+          "th": "อธิบายวิสัยทัศน์มนุษยธรรมระดับโลก เช่น 民心相通, 互鉴, 减贫, 可持续, 共同繁荣 ในสุนทรพจน์การทูตวัฒนธรรมได้",
+          "en": "Articulate global humanitarian vision using terms: People-to-People Bonds, Mutual Learning, Poverty Reduction, and Common Prosperity"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u55",
+    "unitNumber": 55,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "高层商务谈判与危机公关斡旋",
+      "th": "การเจรจาธุรกิจระดับสูงและการไกล่เกลี่ยวิกฤตประชาสัมพันธ์",
+      "en": "High-Level Business Negotiations & Crisis Mediation"
+    },
+    "description": "เจาะลึกศิลปะการเจรจาการค้าระดับพันล้าน การบริหารแต้มต่อและการรักษาเส้นตาย การทลายทางตัน และการกอบกู้วิกฤตภาพลักษณ์ระดับโลก",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u55_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u55",
+        "tier": 4,
+        "title": {
+          "zh": "战略博弈：谈判筹码与底线把控",
+          "th": "หมากกลยุทธ์: แต้มต่อการเจรจาและการคุมเส้นตายขั้นต่ำ",
+          "en": "Strategic Game: Bargaining Chips & Bottom Lines"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางยุทธศาสตร์การเจรจา เช่น 筹码, 博弈, 底线, 试探, 权衡 ในการประชุมวางแผนดีลธุรกิจระดับสูงได้",
+          "en": "Master negotiation terms: Bargaining Chips, Game Theory, Bottom Line, Probing, and Weighing"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u55_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u55",
+        "tier": 4,
+        "title": {
+          "zh": "僵局破局：斡旋调解与妥协艺术",
+          "th": "ทลายทางตัน (僵局破局): การไกล่เกลี่ยคนกลางและศิลปะแห่งการประนีประนอม",
+          "en": "Breaking Deadlocks: Mediation & The Art of Compromise"
+        },
+        "canDo": {
+          "th": "อธิบายเทคนิคการคลี่คลายข้อพิพาท เช่น 僵局, 破局, 妥协, 让步, 破冰 ในสถานการณ์ที่การเจรจาติดหล่มได้",
+          "en": "Master deadlock-breaking terms: Deadlock, Breakthrough, Compromise, Concession, and Ice-breaking"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u55_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u55",
+        "tier": 4,
+        "title": {
+          "zh": "危机公关：舆论应对与品牌重塑",
+          "th": "การบริหารวิกฤตประชาสัมพันธ์ (危机公关): การรับมือกระแสสังคมและการฟื้นฟูแบรนด์",
+          "en": "Crisis PR: Public Opinion & Brand Restoration"
+        },
+        "canDo": {
+          "th": "ใช้คำศัพท์ทางวิกฤตประชาสัมพันธ์ เช่น 声明, 澄清, 舆论, 溯源, 逆风翻盘 ในการแถลงข่าวและฟื้นฟูชื่อเสียงองค์กรได้",
+          "en": "Master crisis PR terms: Statement, Clarification, Public Opinion, Traceability, and Turning the Tide"
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u55_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u55",
+        "tier": 4,
+        "title": {
+          "zh": "巅峰闭环：协议签署与长远共赢",
+          "th": "ปิดดีลจุดสูงสุด (巅峰闭环): พิธีลงนามสัญญาและชัยชนะร่วมกันระยะยาว",
+          "en": "The Pinnacle Close: Agreement Signing & Long-Term Win-Win"
+        },
+        "canDo": {
+          "th": "อธิบายกระบวนการปิดดีลระดับประวัติศาสตร์ เช่น 签字仪式, 闭环, 战略协同, 赋能, 基业长青 ในพิธีลงนามความร่วมมือได้",
+          "en": "Master deal-closing vocabulary: Signing Ceremony, Closed Loop, Strategic Synergy, Empowerment, and Everlasting Foundation"
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u56",
+    "unitNumber": 56,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "学术论文写作与同行评审",
+      "th": "การเขียนบทความวิจัยเชิงวิชาการและการประเมินโดยผู้ทรงคุณวุฒิ",
+      "en": "Academic Thesis Writing & Peer Review"
+    },
+    "description": "เชี่ยวชาญการสร้างข้อสมมติฐานทางวิชาการ การวิจัยเชิงประจักษ์ การตอบข้อซักถามในการสอบวิทยานิพนธ์ และจริยธรรมการตีพิมพ์ในวารสารชั้นนำ",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u56_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u56",
+        "tier": 4,
+        "title": {
+          "zh": "选题开题与学术假说",
+          "th": "การเลือกหัวข้อโครงร่างวิจัยและสมมติฐานทางวิชาการ",
+          "en": "Research Proposal & Academic Hypotheses"
+        },
+        "canDo": {
+          "th": "อธิบายกระบวนทัศน์ สมมติฐาน และการทบทวนวรรณกรรมเพื่อเริ่มโครงร่างวิทยานิพนธ์ได้",
+          "en": "Explain research paradigms, formulate academic hypotheses, and synthesize literature reviews."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u56_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u56",
+        "tier": 4,
+        "title": {
+          "zh": "研究方法与定量实证",
+          "th": "ระเบียบวิธีวิจัยและการวิจัยเชิงประจักษ์แบบปริมาณ",
+          "en": "Methodology & Quantitative Empirical Testing"
+        },
+        "canDo": {
+          "th": "อธิบายตัวแปร กลุ่มตัวอย่าง การทดสอบความทนทาน และช่วงความเชื่อมั่นในเชิงสถิติได้",
+          "en": "Discuss quantitative methods, control variables, sample sizes, robustness checks, and confidence intervals."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u56_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u56",
+        "tier": 4,
+        "title": {
+          "zh": "同行评审与盲审答辩",
+          "th": "การประเมินโดยผู้ทรงคุณวุฒิและการสอบป้องกันวิทยานิพนธ์",
+          "en": "Peer Review & Dissertation Defense"
+        },
+        "canDo": {
+          "th": "ใช้ภาษาทางวิชาการในการตอบข้อซักถามในการสอบป้องกัน การถกเถียงเชิงวิชาการ และการโต้แย้งอย่างมีวุฒิภาวะได้",
+          "en": "Master academic discourse for thesis defenses, peer review replies, respectful debates, and rigorous rebuttals."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u56_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u56",
+        "tier": 4,
+        "title": {
+          "zh": "学术伦理与顶刊发表",
+          "th": "จริยธรรมทางวิชาการและการตีพิมพ์ในวารสารชั้นนำ",
+          "en": "Academic Ethics & Top Journal Publishing"
+        },
+        "canDo": {
+          "th": "อภิปรายถึงจริยธรรมทางวิชาการ การอ้างอิงเอกสาร การป้องกันการคัดลอกผลงาน และมาตรฐานวารสารระดับโลกได้",
+          "en": "Discuss academic ethics, citations, plagiarism prevention, retraction risks, and rigorous standards of top journals."
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  },
+  {
+    "unitId": "tier4_u57",
+    "unitNumber": 57,
+    "tier": 4,
+    "tierLabel": "Tier 4: วรรณกรรม & การทูต",
+    "title": {
+      "zh": "登峰造极：Legend Grand Capstone",
+      "th": "บรรลุสู่จุดสูงสุด: มหาบททดสอบเกียรติยศระดับตำนาน",
+      "en": "Reach the Pinnacle: Legend Grand Capstone"
+    },
+    "description": "บทสรุปแห่งการเรียนรู้ภาษาและวัฒนธรรมจีนขั้นสูงสุด หลอมรวมวรรณศิลป์ ปรัชญา การทูต ธุรกิจ และวิชาการ สู่ความเป็นเลิศระดับปราชญ์ผู้เชี่ยวชาญ",
+    "category": "legend",
+    "icon": "👑",
+    "hskLevel": "HSK 7 - 9",
+    "totalLessons": 4,
+    "lessons": [
+      {
+        "lessonId": "t4_u57_l01",
+        "lessonNumber": 1,
+        "unitId": "tier4_u57",
+        "tier": 4,
+        "title": {
+          "zh": "登峰造极：学术与思想的最高境界",
+          "th": "บรรลุจุดสูงสุด: ขอบเขตขั้นสูงสุดแห่งวิชาการและภูมิปัญญา",
+          "en": "The Highest Realm of Thought & Mastery"
+        },
+        "canDo": {
+          "th": "ใช้สำนวนชั้นสูง เช่น 登峰造极, 炉火纯青, 出神入化, 泰斗, 独占鳌头 ในการยกย่องความเป็นเลิศระดับปรมาจารย์ได้",
+          "en": "Express peerless mastery and academic supremacy using elite idioms: Peak of Perfection, Pure Mastery, Titan, and Champion."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u57_l02",
+        "lessonNumber": 2,
+        "unitId": "tier4_u57",
+        "tier": 4,
+        "title": {
+          "zh": "博古通今：文史哲的融会贯通",
+          "th": "รอบรู้อดีตและปัจจุบัน: การหลอมรวมวรรณศิลป์ ประวัติศาสตร์ และปรัชญา",
+          "en": "Synthesizing Literature, History & Philosophy"
+        },
+        "canDo": {
+          "th": "ใช้สำนวนภูมิปัญญา เช่น 博古通今, 融会贯通, 经世致用, 触类旁通, 薪火相传 ในการเชื่อมโยงความรู้สู่การประยุกต์ใช้ในสังคมได้",
+          "en": "Synthesize interdisciplinary knowledge using elite idioms: Conversant with Past and Present, Thorough Integration, Practical Application, Analogy, and Torch Legacy."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u57_l03",
+        "lessonNumber": 3,
+        "unitId": "tier4_u57",
+        "tier": 4,
+        "title": {
+          "zh": "大道至简：跨国治理与商战哲理",
+          "th": "สัจธรรมสูงสุดล้วนเรียบง่าย: ธรรมาภิบาลข้ามชาติและปรัชญาสงครามการค้า",
+          "en": "Great Truths are Simple: Global Governance"
+        },
+        "canDo": {
+          "th": "ใช้ปรัชญาการบริหารชั้นสูง เช่น 大道至简, 顺势而为, 润物无声, 举重若轻, 止于至善 ในการตัดสินใจเชิงยุทธศาสตร์ระดับโลกได้",
+          "en": "Apply strategic governance philosophies: Great Truths are Simple, Follow the Trend, Silent Nourishment, Ease in Complexity, and Rest in Highest Good."
+        },
+        "isBoss": false,
+        "vocabCount": 5,
+        "icon": "👑"
+      },
+      {
+        "lessonId": "t4_u57_l04",
+        "lessonNumber": 4,
+        "unitId": "tier4_u57",
+        "tier": 4,
+        "title": {
+          "zh": "破茧成蝶：Legend Mastery Capstone Final",
+          "th": "ลอกคราบผีเสื้อทะยานสู่ฟ้า: มหาบททดสอบไฟนอลระดับตำนาน",
+          "en": "Breaking the Cocoon: Legend Capstone Final"
+        },
+        "canDo": {
+          "th": "บูรณาการทักษะภาษาจีนระดับ C2 ครอบคลุมการสื่อสารขั้นสูง ปรัชญา วรรณกรรม และการวิเคราะห์สถานการณ์โลกได้อย่างสมบูรณ์แบบ",
+          "en": "Achieve total integration of C2-level Chinese mastery across classical thought, advanced diplomacy, literature, and scholarly discourse."
+        },
+        "isBoss": true,
+        "vocabCount": 5,
+        "icon": "👑"
+      }
+    ]
+  }
+]

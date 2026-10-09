@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HeaderBar } from './components/layout';
+import { HeaderBar } from './components/layout/HeaderBar';
 import { useUserState } from './hooks/useUserState';
 import { unlockAudioContext, isInAppBrowser } from './engines/audio/audioEngine';
 import { checkStorageHealth, StorageDiagnostics, loadStrokeCache } from './engines/storage';
@@ -598,6 +598,7 @@ export const App: React.FC = () => {
                 setCurrentView('map');
               } else {
                 setActiveLessonId('t1_u01_l01');
+                setCurrentView('lesson');
               }
             }}
             onOpenVoiceHealth={() => setShowVoiceHealthModal(true)}

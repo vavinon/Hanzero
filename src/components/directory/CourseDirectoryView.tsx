@@ -149,6 +149,7 @@ export const CourseDirectoryView: React.FC<CourseDirectoryViewProps> = ({
           </div>
 
           <button
+            data-testid="lesson-node-t0_u01_l01"
             onClick={() => onSelectLesson('tier0_u01', 't0_u01_l01')}
             style={{
               backgroundColor: '#FEF3C7',
@@ -183,6 +184,7 @@ export const CourseDirectoryView: React.FC<CourseDirectoryViewProps> = ({
           return (
             <button
               key={t.tier}
+              data-testid={`tab-tier${t.tier}`}
               onClick={() => {
                 setActiveTier(t.tier);
                 setSearchQuery('');
@@ -408,6 +410,7 @@ export const CourseDirectoryView: React.FC<CourseDirectoryViewProps> = ({
                     return (
                       <button
                         key={lesson.lessonId}
+                        data-testid={`lesson-node-${lesson.lessonId}`}
                         onClick={() => onSelectLesson(unit.unitId, lesson.lessonId)}
                         title={`${lesson.title.th} (${lesson.title.zh}) - ${lesson.canDo.th}`}
                         style={{
@@ -495,6 +498,7 @@ export const CourseDirectoryView: React.FC<CourseDirectoryViewProps> = ({
                   return (
                     <div
                       key={lesson.lessonId}
+                      data-testid={`lesson-node-${lesson.lessonId}`}
                       onClick={() => onSelectLesson(unit.unitId, lesson.lessonId)}
                       style={{
                         border: isDone ? '1px solid #059669' : '1px solid #E5E7EB',

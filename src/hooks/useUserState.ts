@@ -35,7 +35,50 @@ import {
   calculateDaysBetween,
 } from '../engines/srs/srsEngine';
 import { SRSCardRecord, SRSGrade, SRSQueueStatus, SRSReviewResult } from '../types/srs';
-import unit01Data from '../data/lessons/tier1/unit01_greetings.json';
+
+const DEFAULT_SEED_VOCAB = [
+  {
+    id: 'hsk1_0012',
+    hanzi: '你',
+    pinyin: 'nǐ',
+    meaning_th: 'คุณ, เธอ',
+    meaning_en: 'you',
+    mnemonic: 'มีคน (亻) หนึ่งคนยืนอยู่ตรงหน้าเรา = คุณ',
+  },
+  {
+    id: 'hsk1_0045',
+    hanzi: '好',
+    pinyin: 'hǎo',
+    meaning_th: 'ดี, สบายดี',
+    meaning_en: 'good, well',
+    mnemonic: 'แม่ (女) กอด ลูก (子) = ความสุขและความดีงาม',
+  },
+  {
+    id: 'hsk1_0088',
+    hanzi: '谢谢',
+    pinyin: 'xièxie',
+    meaning_th: 'ขอบคุณ',
+    meaning_en: 'thank you',
+    mnemonic: 'ส่งคำพูดดีๆ (讠) ออกไปด้วยความซาบซึ้งใจ = ขอบคุณ',
+  },
+  {
+    id: 'hsk1_0487',
+    hanzi: '不客气',
+    pinyin: 'bú kèqi',
+    display_pinyin: 'bú kèqi',
+    meaning_th: 'ไม่เป็นไร, ไม่ต้องเกรงใจ',
+    meaning_en: "you're welcome, don't mention it",
+    mnemonic: 'ไม่ (不) ต้องทำตัวเกรงใจเหมือนเป็นแขก (客) = ไม่เป็นไร ด้วยความยินดี',
+  },
+  {
+    id: 'hsk1_0102',
+    hanzi: '再见',
+    pinyin: 'zàijiàn',
+    meaning_th: 'ลาก่อน, พบกันใหม่',
+    meaning_en: 'goodbye, see you again',
+    mnemonic: 'พบ (见) กันอีก (再) ครั้ง = ลาก่อน แล้วพบกันใหม่',
+  },
+];
 
 export interface UseUserStateReturn {
   userState: UserStateSchema;
@@ -90,8 +133,8 @@ export function useUserState(): UseUserStateReturn {
         const coldRecords = await getAllSrsRecords();
         if (isMounted) {
           if (coldRecords.length === 0) {
-            // Seed initial vocabulary from Unit 1 Lesson 1 if cold storage is empty
-            const seedItems = unit01Data.lessons[0].vocabulary.map((v) =>
+            // Seed initial vocabulary if cold storage is empty
+            const seedItems = DEFAULT_SEED_VOCAB.map((v) =>
               createNewCard({
                 card_id: v.id,
                 hanzi: v.hanzi,

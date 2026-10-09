@@ -130,8 +130,14 @@ export default defineConfig({
           if (id.includes('src/data/lessons/tier2')) {
             return 'curriculum-tier2';
           }
+          if (id.includes('manifestData.json')) {
+            return 'curriculum-manifest';
+          }
           if (id.includes('src/data/lessons/tier3')) {
-            return 'curriculum-tier3';
+            if (/unit(2[6-9]|3[0-5])/.test(id)) {
+              return 'curriculum-tier3a';
+            }
+            return 'curriculum-tier3b';
           }
           if (id.includes('src/data/lessons/tier4')) {
             return 'curriculum-tier4';
