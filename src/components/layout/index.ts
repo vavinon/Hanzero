@@ -11,3 +11,4 @@ export * from './VoiceHealthModal';
 export * from './WelcomeModal';
 export * from './MilestonePassportModal';
 export * from './DesktopSidebar';
+export * from './MobileLessonDrawer';

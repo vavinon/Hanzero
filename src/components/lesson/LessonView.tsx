@@ -5,11 +5,10 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react';
-import { BookOpen, PenTool, MessageCircle, Sparkles, ArrowLeft } from 'lucide-react';
+import { BookOpen, PenTool, MessageCircle, Sparkles, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
 import { VocabCard, DialoguePlayer, GrammarBite, QuizContainer, QuizResult } from './index';
-import unit01Data from '../../data/lessons/tier1/unit01_greetings.json';
-import { tier0Units } from '../../data/lessons/tier0';
-import { tier2Units } from '../../data/lessons/tier2';
+import { getFullLessonData, getAdjacentLessons } from '../../data/lessons/lessonLoader';
+import { getManifestUnit } from '../../data/lessons/curriculumManifest';
 import {
   VocabularyItem,
   DialogueLine,
@@ -57,6 +56,7 @@ export interface LessonViewProps {
   onLessonComplete: (lessonId: string, xp: number) => void;
   currentHearts?: number;
   onHeartLost?: () => void;
+  onSelectLesson?: (lessonId: string) => void;
 }
 
 export const LessonView: React.FC<LessonViewProps> = ({
@@ -66,48 +66,12 @@ export const LessonView: React.FC<LessonViewProps> = ({
   onLessonComplete,
   currentHearts,
   onHeartLost,
+  onSelectLesson,
 }) => {
-  // Check if this is a Tier 0 lesson
-  const t0Lesson = tier0Units.flatMap((u) => u.lessons).find((l) => l.lesson_id === lessonId);
-  const isTier0 = Boolean(t0Lesson) || lessonId.startsWith('t0_');
-
-  // Check if this is a Tier 2 lesson
-  const t2Lesson = tier2Units.flatMap((u) => u.lessons).find((l) => l.lesson_id === lessonId);
-
-  // Find lesson data by id or fallback to Tier 1 lesson 0
-  const lessonData = t0Lesson
-    ? {
-        lesson_id: t0Lesson.lesson_id,
-        title: t0Lesson.title,
-        vocabulary: (t0Lesson.vocabulary || []) as unknown as VocabularyItem[],
-        dialogue: [] as DialogueLine[],
-        grammar_bite: {
-          title: t0Lesson.baby_step_goal || 'พื้นฐานเสียงพินอิน',
-          explanation_th: t0Lesson.can_do.th,
-          patterns: [],
-        } as GrammarBiteData,
-        tone_rule: null as ToneRule | null,
-        quizzes: (t0Lesson.quizzes || []) as QuizQuestion[],
-        boss_challenge: undefined as BossChallenge | undefined,
-        cheer_trophy: undefined as CheerTrophy | undefined,
-      }
-    : t2Lesson
-    ? {
-        lesson_id: t2Lesson.lesson_id,
-        title: t2Lesson.title,
-        vocabulary: (t2Lesson.vocabulary || []) as unknown as VocabularyItem[],
-        dialogue: (t2Lesson.dialogue || []) as DialogueLine[],
-        grammar_bite: t2Lesson.grammar_bite || {
-          title: t2Lesson.baby_step_goal || 'ไวยากรณ์ขั้นกลาง',
-          explanation_th: t2Lesson.can_do.th,
-          patterns: [],
-        },
-        tone_rule: (t2Lesson.tone_rule || null) as ToneRule | null,
-        quizzes: (t2Lesson.quizzes || []) as QuizQuestion[],
-        boss_challenge: t2Lesson.boss_challenge as BossChallenge | undefined,
-        cheer_trophy: t2Lesson.cheer_trophy as CheerTrophy | undefined,
-      }
-    : unit01Data.lessons.find((l) => l.lesson_id === lessonId) || unit01Data.lessons[0];
+  // Load full lesson data from universal loader across all 5 tiers
+  const lessonData = getFullLessonData(lessonId) || getFullLessonData('t0_u01_l01')!;
+  const unitInfo = getManifestUnit(lessonData.unit_id);
+  const adjacent = getAdjacentLessons(lessonData.lesson_id);
 
   const vocabList = lessonData.vocabulary as VocabularyItem[];
   const dialogue = lessonData.dialogue as DialogueLine[];
@@ -119,10 +83,19 @@ export const LessonView: React.FC<LessonViewProps> = ({
 
   const [activeTab, setActiveTab] = useState<'vocab' | 'stroke' | 'dialogue' | 'grammar' | 'quiz'>('vocab');
   const [vocabIndex, setVocabIndex] = useState<number>(0);
-  const [strokeChar, setStrokeChar] = useState<string>('你');
+  const [strokeChar, setStrokeChar] = useState<string>(() => vocabList[0]?.hanzi || '你');
   const [isDesktop, setIsDesktop] = useState<boolean>(() =>
     typeof window !== 'undefined' ? window.innerWidth >= 1024 : false
   );
+
+  // Auto-reset state when switching to another lesson
+  useEffect(() => {
+    setVocabIndex(0);
+    setActiveTab('vocab');
+    if (vocabList && vocabList.length > 0) {
+      setStrokeChar(vocabList[0].hanzi);
+    }
+  }, [lessonId]);
   const [canvasSize, setCanvasSize] = useState<number>(() => {
     if (typeof window === 'undefined') return 270;
     if (window.innerWidth >= 1024) return 280;
@@ -178,16 +151,37 @@ export const LessonView: React.FC<LessonViewProps> = ({
           <span>แผนที่</span>
         </button>
 
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '11px', color: 'var(--text-ink-muted)', fontWeight: 600 }}>
-            {isTier0 ? 'Tier 0 · ปูพื้นฐานพินอิน' : `Unit 01 · ${unit01Data.title.th}`}
+        <div style={{ textAlign: 'center', flex: 1, minWidth: 0, padding: '0 8px' }}>
+          <div style={{ fontSize: '11px', color: 'var(--color-jade-deep, #047857)', fontWeight: 700 }}>
+            {unitInfo ? `Tier ${unitInfo.tier} • Unit ${unitInfo.unitNumber}: ${unitInfo.title.th}` : `Tier ${lessonData.tier}`}
           </div>
-          <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-ink-primary)' }}>
-            {lessonData.title.th}
+          <div style={{ fontSize: '15px', fontWeight: 800, color: 'var(--text-ink-primary, #1C1E21)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            {lessonData.title.th} ({lessonData.title.zh})
           </div>
         </div>
 
-        <div style={{ width: '44px' }} />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          {adjacent.prevLessonId && (
+            <button
+              onClick={() => onSelectLesson?.(adjacent.prevLessonId!)}
+              className="btn-tactile-secondary"
+              title="บทก่อนหน้า"
+              style={{ minWidth: '38px', minHeight: '38px', padding: '4px 8px', fontSize: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <ChevronLeft size={16} />
+            </button>
+          )}
+          {adjacent.nextLessonId && (
+            <button
+              onClick={() => onSelectLesson?.(adjacent.nextLessonId!)}
+              className="btn-tactile-secondary"
+              title="บทถัดไป"
+              style={{ minWidth: '38px', minHeight: '38px', padding: '4px 8px', fontSize: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+            >
+              <ChevronRight size={16} />
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Navigation Tabs Pill */}

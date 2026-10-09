@@ -47,7 +47,7 @@
   /* Layout & Responsive Tokens */
   --touch-target-min: 48px;          /* มาตรฐานนิ้วมือถือแตะสะดวกสูงสุด */
   --max-app-width: 440px;            /* Mobile max-width fallback */
-  --sidebar-desktop-width: 256px;    /* Left Sticky Nav on Desktop >= 1024px */
+  --sidebar-desktop-width: 280px;    /* Left Sticky Nav on Desktop >= 1024px */
   --container-study: 1120px;         /* Split-screen study container */
   --container-portal: 1280px;        /* Wide portal & immersion hub */
   --radius-sm: 10px;
@@ -95,9 +95,15 @@ body {
   .desktop-only-sidebar {
     display: none !important;
   }
+  .mobile-course-drawer-btn {
+    display: flex !important;
+  }
 }
 
 @media (min-width: 1024px) {
+  .mobile-course-drawer-btn {
+    display: none !important;
+  }
   .app-shell-desktop {
     display: flex;
     flex-direction: row;

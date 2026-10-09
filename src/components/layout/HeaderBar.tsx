@@ -9,7 +9,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { Flame, Heart, Sparkles, VolumeX, Volume2, Database, Award } from 'lucide-react';
+import { Flame, Heart, Sparkles, VolumeX, Volume2, Database, Award, BookOpen } from 'lucide-react';
 import { ProgressState, PreferencesState } from '../../engines/storage/types';
 import bunnyImg from '../../assets/brand/mascot_bunny.jpg';
 
@@ -21,6 +21,7 @@ export interface HeaderBarProps {
   onOpenDevDrawer: () => void;
   onOpenReviewDeck?: () => void;
   dueCardsCount?: number;
+  onOpenCourseDrawer?: () => void;
 }
 
 export const HeaderBar: React.FC<HeaderBarProps> = ({
@@ -31,6 +32,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   onOpenDevDrawer,
   onOpenReviewDeck,
   dueCardsCount = 0,
+  onOpenCourseDrawer,
 }) => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(() => {
     return typeof window !== 'undefined' ? window.innerWidth <= 380 : false;
@@ -111,6 +113,34 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             Lv.{progress.level} นักสำรวจ
           </span>
         </div>
+
+        {/* Mobile Course Drawer Trigger Button */}
+        {onOpenCourseDrawer && (
+          <button
+            onClick={onOpenCourseDrawer}
+            className="mobile-course-drawer-btn"
+            data-testid="btn-open-course-drawer"
+            title="เปิดสารบัญบทเรียน"
+            style={{
+              padding: '6px 10px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              borderRadius: 'var(--radius-sm, 10px)',
+              backgroundColor: 'var(--color-jade-surface, #ECFDF5)',
+              color: 'var(--color-jade-deep, #047857)',
+              border: '1px solid rgba(5, 150, 105, 0.25)',
+              fontWeight: 700,
+              fontSize: '12px',
+              cursor: 'pointer',
+              marginLeft: '4px',
+            }}
+          >
+            <BookOpen size={16} />
+            <span>สารบัญ</span>
+          </button>
+        )}
       </div>
 
       {/* Stats Cluster: Streak, Hearts, XP */}

@@ -9,6 +9,10 @@ const DesktopSidebar = React.lazy(() =>
   import('./components/layout/DesktopSidebar').then((m) => ({ default: m.DesktopSidebar }))
 );
 
+const MobileLessonDrawer = React.lazy(() =>
+  import('./components/layout/MobileLessonDrawer').then((m) => ({ default: m.MobileLessonDrawer }))
+);
+
 const DevStorageDrawer = React.lazy(() =>
   import('./components/layout/DevStorageDrawer').then((m) => ({ default: m.DevStorageDrawer }))
 );
@@ -119,7 +123,8 @@ export const App: React.FC = () => {
     }
     return 'vocab'; // Start with HSK 3.0 Vocab Library or Course Directory
   });
-  const [activeLessonId, setActiveLessonId] = useState<string>('t1_u01_l01');
+  const [activeLessonId, setActiveLessonId] = useState<string>('t0_u01_l01');
+  const [showMobileCourseDrawer, setShowMobileCourseDrawer] = useState<boolean>(false);
   const [showTestPanel, setShowTestPanel] = useState<boolean>(false);
   const [showDevDrawer, setShowDevDrawer] = useState<boolean>(false);
   const [showInAppAlert, setShowInAppAlert] = useState<boolean>(false);
@@ -230,6 +235,9 @@ export const App: React.FC = () => {
             dueCardsCount={srsQueueStatus.total_due_count}
             onOpenPassport={() => setShowPassportModal(true)}
             onOpenTestPanel={() => setShowTestPanel(true)}
+            activeLessonId={activeLessonId}
+            onSelectLesson={handleSelectLesson}
+            completedLessons={userState.progress.completed_lessons}
           />
         </React.Suspense>
       </div>
@@ -269,6 +277,7 @@ export const App: React.FC = () => {
           onOpenDevDrawer={() => setShowDevDrawer(!showDevDrawer)}
           onOpenReviewDeck={() => setCurrentView('review')}
           dueCardsCount={srsQueueStatus.total_due_count}
+          onOpenCourseDrawer={() => setShowMobileCourseDrawer(true)}
         />
 
         {/* View 0: HSK 3.0 Master Vocabulary Library */}
@@ -331,6 +340,7 @@ export const App: React.FC = () => {
               onHeartLost={() => deductHeart(false)}
               onBackToMap={() => setCurrentView('map')}
               onLessonComplete={handleLessonComplete}
+              onSelectLesson={(newLessonId) => handleSelectLesson('', newLessonId)}
             />
           </React.Suspense>
         </main>
@@ -612,6 +622,21 @@ export const App: React.FC = () => {
             userName="นักเรียนฮั่นซีโร่ 🐰"
             streakCount={userState.progress.streak.count}
             totalXp={userState.progress.xp}
+          />
+        )}
+
+        {/* Mobile Course Tree Drawer */}
+        {showMobileCourseDrawer && (
+          <MobileLessonDrawer
+            isOpen={showMobileCourseDrawer}
+            onClose={() => setShowMobileCourseDrawer(false)}
+            activeLessonId={activeLessonId}
+            onSelectLesson={handleSelectLesson}
+            completedLessons={userState.progress.completed_lessons}
+            onNavigateView={(view) => {
+              setCurrentView(view);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           />
         )}
       </React.Suspense>

@@ -32,6 +32,7 @@ export default defineConfig({
         ]
       },
       workbox: {
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,ico,png,svg,json,woff2}'],
         runtimeCaching: [
           {
@@ -119,6 +120,21 @@ export default defineConfig({
           }
           if (id.includes('src/data/hsk/hsk6')) {
             return 'hsk-6-data';
+          }
+          if (id.includes('src/data/lessons/tier0')) {
+            return 'curriculum-tier0';
+          }
+          if (id.includes('src/data/lessons/tier1')) {
+            return 'curriculum-tier1';
+          }
+          if (id.includes('src/data/lessons/tier2')) {
+            return 'curriculum-tier2';
+          }
+          if (id.includes('src/data/lessons/tier3')) {
+            return 'curriculum-tier3';
+          }
+          if (id.includes('src/data/lessons/tier4')) {
+            return 'curriculum-tier4';
           }
         }
       }
