@@ -5,7 +5,6 @@
 import { act } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { fireEvent } from '@testing-library/react';
 import { DesktopSidebar } from './DesktopSidebar';
 
 (globalThis as unknown as { IS_REACT_ACT_ENVIRONMENT: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
@@ -108,7 +107,12 @@ describe('DesktopSidebar Component (Resilient Desktop Navigation)', () => {
 
     await act(async () => {
       if (searchInput) {
-        fireEvent.change(searchInput, { target: { value: 'วิทยานิพนธ์' } });
+        const nativeSetter = Object.getOwnPropertyDescriptor(
+          window.HTMLInputElement.prototype,
+          'value'
+        )?.set;
+        nativeSetter?.call(searchInput, 'วิทยานิพนธ์');
+        searchInput.dispatchEvent(new Event('input', { bubbles: true }));
       }
     });
 
