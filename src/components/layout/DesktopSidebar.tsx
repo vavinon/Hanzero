@@ -110,12 +110,13 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
         borderRight: '1px solid var(--border-subtle, #EAE5DE)',
         display: 'flex',
         flexDirection: 'column',
-        height: '100vh',
-        position: 'sticky',
-        top: 0,
+        height: '100%',
+        maxHeight: '100%',
+        position: 'relative',
         zIndex: 40,
         flexShrink: 0,
         boxShadow: 'var(--shadow-sm, 0 1px 3px rgba(28, 30, 33, 0.04))',
+        overflow: 'hidden',
       }}
     >
       {/* Brand Header */}
@@ -127,6 +128,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
           alignItems: 'center',
           gap: '10px',
           cursor: 'pointer',
+          flexShrink: 0,
         }}
         onClick={() => onNavigate('map')}
       >
@@ -164,6 +166,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
           flexDirection: 'column',
           gap: '3px',
           borderBottom: '1px solid var(--border-subtle, #EAE5DE)',
+          flexShrink: 0,
         }}
       >
         <button
@@ -251,7 +254,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       </div>
 
       {/* Course Tree Navigator Header */}
-      <div style={{ padding: '12px 12px 6px 12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+      <div style={{ padding: '12px 12px 6px 12px', display: 'flex', flexDirection: 'column', gap: '8px', flexShrink: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <span style={{ fontSize: '11px', fontWeight: 800, color: 'var(--text-ink-muted, #9CA3AF)', letterSpacing: '0.04em' }}>
             📑 สารบัญบทเรียน (กระโดดได้อิสระ)
@@ -353,9 +356,12 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
 
       {/* Course Tree List (Scrollable Area) */}
       <div
+        className="course-tree-scroll-area"
         style={{
           flex: 1,
+          minHeight: 0,
           overflowY: 'auto',
+          overscrollBehavior: 'contain',
           padding: '6px 8px',
           display: 'flex',
           flexDirection: 'column',
@@ -381,6 +387,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
                   border: isExpanded ? '1px solid var(--border-subtle, #EAE5DE)' : '1px solid transparent',
                   overflow: 'hidden',
                   transition: 'background-color 0.15s ease',
+                  flexShrink: 0,
                 }}
               >
                 {/* Unit Accordion Header */}
@@ -515,7 +522,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
       </div>
 
       {/* Advanced Tools Collapsible Section */}
-      <div style={{ borderTop: '1px solid var(--border-subtle, #EAE5DE)', padding: '6px 10px' }}>
+      <div style={{ borderTop: '1px solid var(--border-subtle, #EAE5DE)', padding: '6px 10px', flexShrink: 0 }}>
         <button
           onClick={() => setShowAdvancedTools(!showAdvancedTools)}
           style={{
@@ -636,6 +643,7 @@ export const DesktopSidebar: React.FC<DesktopSidebarProps> = ({
           borderTop: '1px solid var(--border-subtle, #EAE5DE)',
           display: 'flex',
           gap: '4px',
+          flexShrink: 0,
         }}
       >
         {onOpenPassport && (

@@ -184,10 +184,19 @@ export const App: React.FC = () => {
     };
   }, []);
 
+  const workspaceRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToWorkspaceTop = () => {
+    if (workspaceRef.current) {
+      workspaceRef.current.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleSelectLesson = (_unitId: string, lessonId: string) => {
     setActiveLessonId(lessonId);
     setCurrentView('lesson');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    scrollToWorkspaceTop();
   };
 
   const handleLessonComplete = async (lessonId: string, xpReward: number) => {
@@ -217,7 +226,6 @@ export const App: React.FC = () => {
     <div
       className="app-shell-desktop"
       style={{
-        minHeight: '100vh',
         backgroundColor: 'var(--bg-rice-paper)',
         color: 'var(--text-ink-primary)',
         width: '100%',
@@ -230,7 +238,7 @@ export const App: React.FC = () => {
             currentView={currentView}
             onNavigate={(view) => {
               setCurrentView(view);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              scrollToWorkspaceTop();
             }}
             dueCardsCount={srsQueueStatus.total_due_count}
             onOpenPassport={() => setShowPassportModal(true)}
@@ -243,7 +251,7 @@ export const App: React.FC = () => {
       </div>
 
       {/* Main Workspace Area */}
-      <div className="app-main-workspace">
+      <div className="app-main-workspace" ref={workspaceRef}>
         {/* In-App Browser Warning Alert */}
         {showInAppAlert && (
           <div
@@ -636,7 +644,7 @@ export const App: React.FC = () => {
             completedLessons={userState.progress.completed_lessons}
             onNavigateView={(view) => {
               setCurrentView(view);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              scrollToWorkspaceTop();
             }}
           />
         )}
